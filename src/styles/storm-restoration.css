@@ -92,7 +92,7 @@
 }
 
 .storm-pricing-card {
-  contain: content;
+  contain: layout style;
   border: 1px solid #e5e7eb;
   border-radius: 28px;
   background: #ffffff;

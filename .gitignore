@@ -1,3 +1,6 @@
+#dev output
+.astro 
+
 # build output
 dist/
 .wrangler/

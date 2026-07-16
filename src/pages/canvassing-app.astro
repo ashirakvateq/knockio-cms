@@ -121,8 +121,8 @@ const jsonLd = {
   ]}
 >
   <main>
-    <section class="canvassing-hero min-h-[92svh] py-8 md:py-12 xl:py-16">
-      <div class="my-container grid min-h-[82svh] items-center gap-10 lg:grid-cols-[0.85fr_1.15fr]">
+    <section class="canvassing-hero pt-8 md:pt-12 xl:pt-16">
+      <div class="my-container grid items-center gap-10 pt-[50px] lg:grid-cols-[0.85fr_1.15fr]">
         <div class="reveal-up max-lg:text-center">
           <a href="/" aria-label="Knockio home" class="mb-8 inline-block">
             <img
@@ -207,13 +207,13 @@ const jsonLd = {
       </div>
     </section>
 
-    <section aria-labelledby="trusted-heading" class="border-y border-slate-100 bg-white py-10">
+    <section aria-labelledby="trusted-heading" class="trust-section py-8">
       <div class="my-container text-center">
-        <h2 id="trusted-heading" class="text-base font-semibold text-slate-700">
+        <h2 id="trusted-heading">
           Trusted by 1,000+ field sales teams from Roofing and Solar to Pest Control, HVAC, and beyond.
         </h2>
-        <div class="mt-7 flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
-          {trustLogos.map((logo) => <img class="trust-logo" src={logo.src} alt={logo.alt} width="200" height="80" loading="lazy" decoding="async" />)}
+        <div class="trust-logos">
+          {trustLogos.map((logo) => <img class="trust-logo" src={logo.src} alt={logo.alt} width="139" height="56" loading="lazy" decoding="async" />)}
         </div>
       </div>
     </section>
