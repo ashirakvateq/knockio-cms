@@ -1,0 +1,66 @@
+---
+const TALKGENIE_UID = '7ea6979e-c78c-4ec3-a26a-822f2665858b';
+const TALKGENIE_SRC = 'https://unpkg.com/talkgeniejs@latest/talkgeniejs.umd.js';
+const FB_PIXEL_ID = '985418843520178';
+const FB_SCRIPT_SRC = 'https://connect.facebook.net/en_US/fbevents.js';
+---
+
+<script is:inline define:vars={{ TALKGENIE_UID, TALKGENIE_SRC, FB_PIXEL_ID, FB_SCRIPT_SRC }}>
+  (function() {
+    var talkgenieLoaded = false;
+    var fbLoaded = false;
+
+    function loadTalkgenie() {
+      if (talkgenieLoaded) return;
+      talkgenieLoaded = true;
+
+      window.protoSettings = { widgetUid: TALKGENIE_UID };
+
+      var s = document.createElement('script');
+      s.src = TALKGENIE_SRC;
+      s.type = 'text/javascript';
+      s.async = true;
+      document.head.appendChild(s);
+    }
+
+    function loadFacebookPixel() {
+      if (fbLoaded) return;
+      fbLoaded = true;
+
+      !function(f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      }(window, document, 'script', FB_SCRIPT_SRC);
+
+      fbq('init', FB_PIXEL_ID);
+      fbq('track', 'PageView');
+    }
+
+    function loadAll() {
+      loadTalkgenie();
+      loadFacebookPixel();
+    }
+
+    var events = ['pointerdown', 'keydown', 'scroll', 'touchstart'];
+
+    events.forEach(function(eventName) {
+      window.addEventListener(eventName, loadAll, { once: true, passive: true });
+    });
+
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(loadAll, { timeout: 8000 });
+    } else {
+      window.setTimeout(loadAll, 5000);
+    }
+  })();
+</script>

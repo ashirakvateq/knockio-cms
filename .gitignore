@@ -1,0 +1,21 @@
+# build output
+dist/
+.wrangler/
+
+# dependencies
+node_modules/
+
+# environment
+.env
+.env.local
+
+# editor
+.vscode/
+.idea/
+
+# os
+.DS_Store
+Thumbs.db
+
+# bun
+bun.lock

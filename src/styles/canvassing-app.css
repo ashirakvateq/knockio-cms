@@ -1,0 +1,160 @@
+.canvassing-page {
+  background: #ffffff;
+}
+
+.canvassing-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.92) 42%, rgba(255, 255, 255, 0.64) 100%),
+    image-set(url("/assets/canvassing-app/home-hero-background.webp") type("image/webp"));
+  background-position: center;
+  background-size: cover;
+}
+
+.canvassing-hero::after {
+  position: absolute;
+  inset: auto -10% -34% 34%;
+  z-index: -1;
+  height: 46%;
+  content: "";
+  background: radial-gradient(circle, rgba(79, 170, 58, 0.18), transparent 64%);
+}
+
+.section-heading {
+  max-width: 980px;
+  margin-inline: auto;
+  color: #0f172a;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.section-copy {
+  max-width: 780px;
+  margin: 1.25rem auto 0;
+  color: #475569;
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  line-height: 1.8;
+  text-align: center;
+}
+
+.trust-logo {
+  max-height: 42px;
+  width: auto;
+  object-fit: contain;
+  filter: saturate(0.98);
+}
+
+.feature-card,
+.pricing-card,
+.faq-item {
+  contain: content;
+}
+
+.feature-card {
+  border: 1px solid #edf1ed;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.06);
+}
+
+.platform-card {
+  border-radius: 24px;
+  background: linear-gradient(180deg, #4faa3a 0%, #1f7b26 100%);
+  color: #ffffff;
+  box-shadow: 0 22px 50px rgba(46, 125, 50, 0.18);
+}
+
+.work-step {
+  border-radius: 28px;
+  background: #f7faf6;
+}
+
+.pricing-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 28px;
+  background: #ffffff;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(79, 170, 58, 0.5);
+  box-shadow: 0 28px 80px rgba(15, 23, 42, 0.1);
+}
+
+.pricing-card.is-featured {
+  border-color: #0f172a;
+  background: #0f172a;
+  color: #ffffff;
+}
+
+.cal-shell {
+  min-height: 720px;
+  border-radius: 24px;
+  background: #f4f3f0;
+  box-shadow: 0 28px 90px rgba(15, 23, 42, 0.16);
+}
+
+.cal-placeholder {
+  min-height: 680px;
+  border: 1px dashed rgba(15, 23, 42, 0.16);
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgba(79, 170, 58, 0.1), transparent 45%),
+    #ffffff;
+}
+
+.faq-item[open] {
+  border-color: rgba(79, 170, 58, 0.45);
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.06);
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item .faq-minus {
+  display: none;
+}
+
+.faq-item[open] .faq-minus {
+  display: block;
+}
+
+.faq-item[open] .faq-plus {
+  display: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal-up {
+    opacity: 0;
+    transform: translateY(18px);
+    animation: reveal-up 620ms cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+    animation-delay: var(--reveal-delay, 0ms);
+  }
+
+  @keyframes reveal-up {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .canvassing-hero {
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.9) 100%),
+      image-set(url("/assets/canvassing-app/home-hero-background.webp") type("image/webp"));
+  }
+
+  .cal-shell {
+    min-height: 660px;
+    border-radius: 18px;
+  }
+}
