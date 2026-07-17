@@ -307,8 +307,28 @@ function scheduleInit(fn) {
   }
 }
 
+function initAosAnimations() {
+  const elements = document.querySelectorAll('[data-aos]');
+  if (!elements.length || !('IntersectionObserver' in window)) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('aos-animate');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 },
+  );
+
+  elements.forEach((el) => observer.observe(el));
+}
+
 scheduleInit(function() {
   bindCheckoutButtons();
   initLazyCalendar();
   initFaqAnalytics();
+  initAosAnimations();
 });

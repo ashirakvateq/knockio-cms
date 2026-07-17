@@ -1,5 +1,5 @@
-#dev output
-.astro 
+# dev output
+/.astro/
 
 # build output
 dist/
