@@ -1,0 +1,11 @@
+{
+    "schema_version": 2,
+    "commit": "ed04f8290c5d6b888ae3a935387d5fd54af4aeef",
+    "indexed_at": "2026-07-20T21:42:43Z",
+    "project": "home-osama-apps-knockio-cms",
+    "nodes": 283,
+    "edges": 343,
+    "original_size": 2097152,
+    "compressed_size": 129452,
+    "compression_level": 3
+}

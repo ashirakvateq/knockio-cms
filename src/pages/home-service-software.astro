@@ -1,0 +1,242 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/home-service-software.css";
+import revealScript from "../scripts/reveal-on-scroll-green.js?url";
+import calInlineScript from "../scripts/cal-inline.js?url";
+
+const title = "Knockio — Home Service Business Software | CRM, Scheduling & Invoicing";
+const description = "Run your entire home service business on one platform — pipeline, crew scheduling, field updates, timesheets, and invoicing, connected in real time. Set up in a day.";
+---
+
+<BaseLayout title={title} description={description} noHeader noFooter>
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="wordmark" href="#top"><img src="/assets/cfw/knockio-logo.webp" alt="Knockio" width="663" height="100" loading="eager" decoding="async" /></a>
+      <nav class="topnav" aria-label="Page">
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-green" href="#demo">Book a free demo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <span class="hero-badge">Built for home service businesses</span>
+        <h1>Run your entire home service business on <em>one platform</em>.</h1>
+        <p class="sub">Pipeline, estimates, crew scheduling, field updates, timesheets, and invoicing — connected in real time. What the crew does in the field, the office sees instantly.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-green" href="#demo">Book a free demo</a>
+        </div>
+        <p class="hero-note"><b>Set up in a day.</b> $20–$60 per user/month · Every feature on every plan</p>
+      </div>
+    </section>
+
+    <section class="mock-outer" aria-label="Preview of the Knockio dashboard">
+      <div class="wrap">
+        <div class="mock rv">
+          <div class="mock-top">
+            <span class="mock-logo"><span class="dot"></span>Knockio</span>
+            <div class="mock-tabs" aria-hidden="true">
+              <span class="mock-tab">Pipeline</span>
+              <span class="mock-tab on">Schedule</span>
+              <span class="mock-tab">Map</span>
+              <span class="mock-tab">Invoices</span>
+            </div>
+            <span class="mock-sync"><i></i>Synced just now</span>
+          </div>
+          <div class="mock-body">
+            <div class="mock-col">
+              <p class="mock-h">Pipeline — this week</p>
+              <div class="mcard"><b>Alvarez — Full reroof</b><span class="mi">$24,750 · Proposal sent</span><br><span class="chip b">2 days in stage</span></div>
+              <div class="mcard"><b>Okafor — Gutter + siding</b><span class="mi">$9,300 · Inspection booked</span><br><span class="chip g">On track</span></div>
+              <div class="mcard"><b>Riverside Dr — Storm repair</b><span class="mi">$12,900 · Estimate sent</span><br><span class="chip a">21 days — follow up today</span></div>
+            </div>
+            <div class="mock-col">
+              <p class="mock-h">Crew schedule — Tuesday</p>
+              <div class="mrow"><span class="crew">Crew A</span><div class="mtrack"><span class="mjob j1">Henderson — tear-off</span><span class="mjob j2">Nguyen — inspection</span></div></div>
+              <div class="mrow"><span class="crew">Crew B</span><div class="mtrack"><span class="mjob j2">Patel — install day 2</span><span class="mjob j3">Brooks — punch list</span></div></div>
+              <div class="mrow"><span class="crew">Crew C</span><div class="mtrack"><span class="mjob j3">Silva — gutters</span><span class="mjob j1">Wade — siding start</span></div></div>
+              <div class="mrow"><span class="crew">&nbsp;</span><div class="mtrack"><span class="chip g">Drag a won job here to schedule it</span></div></div>
+            </div>
+            <div class="mock-col feedcol">
+              <p class="mock-h">Live from the field</p>
+              <div class="mfeed-row"><span class="t">10:05</span><span>Crew B clocked in — Patel job</span></div>
+              <div class="mfeed-row"><span class="t">10:32</span><span>9 photos uploaded — Henderson</span></div>
+              <div class="mfeed-row"><span class="t">11:14</span><span>Job status → Ready to invoice</span></div>
+              <div class="mfeed-row"><span class="t">11:15</span><span><b>Invoice sent — $18,400</b></span></div>
+            </div>
+          </div>
+          <div class="mock-foot"><span>Today: <b>14 jobs</b></span><span>Unpaid invoices: <b>3</b></span><span>Pipeline value: <b>$186,300</b></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="wrap stat-grid">
+        <div class="stat rv"><b>Same day</b><span>from sign-up to your first scheduled job</span></div>
+        <div class="stat rv"><b>6 tools replaced</b><span>canvassing, CRM, scheduling, timesheets, invoicing, messaging</span></div>
+        <div class="stat rv"><b>Under a minute</b><span>from finished job to sent invoice</span></div>
+      </div>
+    </section>
+
+    <section class="bens" id="how">
+      <div class="wrap">
+        <div class="ben rv">
+          <div>
+            <p class="ben-kicker">Sell</p>
+            <h2>Know exactly where every deal stands.</h2>
+            <p>See where every opportunity is and what needs attention next — so you move work forward instead of wondering what happened to that quote you sent three weeks ago.</p>
+            <ul>
+              <li>Service and production pipelines that match how you sell</li>
+              <li>Stage-aging alerts flag deals going cold</li>
+              <li>Win/loss tracking with reasons</li>
+            </ul>
+          </div>
+          <div class="ben-vis">
+            <div class="mcard"><b>Riverside Dr — Storm repair</b><span class="mi">$12,900 · Estimate sent</span><br><span class="chip a">21 days in stage — going cold</span></div>
+            <div class="mcard"><b>Task created automatically</b><span class="mi">Follow up with Riverside Dr — assigned to Marcus, due today</span><br><span class="chip g">Reminder set</span></div>
+            <p class="cap">Stage aging caught it. <b>The follow-up assigned itself.</b></p>
+          </div>
+        </div>
+
+        <div class="ben rv">
+          <div>
+            <p class="ben-kicker">Work</p>
+            <h2>The field and the office, finally in sync.</h2>
+            <p>Crews log time, capture photos, and update job status from their phones. Everything syncs to the office automatically — no calls, no group texts, no whiteboard.</p>
+            <ul>
+              <li>Visual crew scheduling — drag jobs onto the calendar</li>
+              <li>Photos and hours tied to the job record</li>
+              <li>Job status the office sees in real time</li>
+            </ul>
+          </div>
+          <div class="ben-vis">
+            <div class="mcard"><b>Crew B — Patel install</b><span class="mi">Clocked in 10:05 AM · 9 photos uploaded</span><br><span class="chip g">Status: Ready to invoice</span></div>
+            <div class="mcard"><b>Office view</b><span class="mi">Updated 4 seconds ago — nobody made a phone call</span><br><span class="chip b">Synced automatically</span></div>
+            <p class="cap">One job record, <b>both sides of it live</b>.</p>
+          </div>
+        </div>
+
+        <div class="ben rv">
+          <div>
+            <p class="ben-kicker">Get paid</p>
+            <h2>Invoice in under a minute. Know your margin the whole time.</h2>
+            <p>Track costs in real time against budget, send branded reports and proposals clients actually read, and turn a finished job into a sent invoice before the truck leaves.</p>
+            <ul>
+              <li>Live job costing — labor, materials, vendor bills</li>
+              <li>Invoices, payments, and inventory in one place</li>
+              <li>Branded client reports and proposals</li>
+            </ul>
+          </div>
+          <div class="ben-vis">
+            <div class="mcard"><b>Henderson — Invoice #1847</b><span class="mi">$18,400 · Generated from the job record in 40 seconds</span><br><span class="chip g">Paid online</span></div>
+            <div class="mcard"><b>Job margin</b><span class="mi">Costs tracked live: labor $4,120 · materials $6,880</span><br><span class="chip b">On budget</span></div>
+            <p class="cap">Done at 4:30. <b>Invoiced by 4:31.</b></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="checks" id="features">
+      <div class="wrap">
+        <div class="checks-head rv">
+          <h2>Everything you're paying six tools for. In one.</h2>
+          <p class="sub">If it touches a job, it's in Knockio — and it's included on every plan.</p>
+        </div>
+        <div class="check-grid rv">
+          <div class="check">Canvassing &amp; door knocking</div>
+          <div class="check">Sales pipelines</div>
+          <div class="check">Estimates &amp; proposals</div>
+          <div class="check">Crew scheduling</div>
+          <div class="check">Work orders</div>
+          <div class="check">Timesheets</div>
+          <div class="check">Invoices &amp; payments</div>
+          <div class="check">Inventory &amp; vendor bills</div>
+          <div class="check">Email, SMS &amp; call log</div>
+          <div class="check">Automations &amp; reminders</div>
+          <div class="check">Map view of all jobs</div>
+          <div class="check">Mobile app for crews</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quotes">
+      <div class="wrap">
+        <div class="quotes-head rv">
+          <h2>Contractors run on Knockio.</h2>
+        </div>
+        <div class="quote-grid">
+          <div class="quote rv">
+            <div class="starrow" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>[Placeholder — drop a real customer quote here. Specific numbers beat adjectives: "cut our invoicing from three days to same-day" converts; "great software" doesn't.]</blockquote>
+            <p class="who"><b>[Real name]</b> — [Company], [Trade], [State]</p>
+          </div>
+          <div class="quote rv">
+            <div class="starrow" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>[Placeholder — second real quote. Best angle for this slot: a skeptical owner whose crews actually adopted it. "My guys hate apps and they use this every day."]</blockquote>
+            <p class="who"><b>[Real name]</b> — [Company], [Trade], [State]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="wrap">
+        <div class="faq-head rv">
+          <h2>The questions every owner asks.</h2>
+        </div>
+        <div class="faq-list rv">
+          <details class="faq-item">
+            <summary>Will my crews actually use it?</summary>
+            <p class="a">That's the whole design constraint. Crews get a simple mobile app on the phone they already carry: clock in, take photos, update status. Three taps, no training manual. The complicated stuff — pipelines, costing, reports — lives on the office side.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How long does it take to switch?</summary>
+            <p class="a"><b>You're up and running the same day.</b> Import your customers, invite your team, and schedule your first job before the afternoon's out — not after a six-week implementation.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What does it cost?</summary>
+            <p class="a"><b>$20–$60 per user per month, published right on the site.</b> No custom-quote games, and no feature paywalls — every plan includes the full platform, including automations.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What does it replace?</summary>
+            <p class="a">Typically: a canvassing app, a CRM, a scheduling whiteboard or calendar tool, a timesheet app, an invoicing tool, and the group text. One subscription, one login, one job record from first contact to final payment.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does the office see what happens in the field?</summary>
+            <p class="a">Instantly. When a crew clocks in, uploads photos, or marks a job complete, the office sees it in real time — no end-of-day phone calls, no "text me when you're done."</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final" id="demo">
+      <div class="wrap rv">
+        <h2>See your workflow running on one platform.</h2>
+        <p>A 20-minute demo with your real process — pipeline to crew schedule to invoice. If it doesn't beat your current stack, keep the stack.</p>
+        <div class="cal-shell">
+          <div id="my-cal-inline" class="cal-placeholder">
+            <div class="cal-placeholder-inner">
+              <p>Loading the live demo calendar… Book a 30-minute walkthrough of your real workflow.</p>
+              <button type="button" data-load-cal class="btn btn-green">Load calendar now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-in">
+      <span>© 2026 Knockio</span>
+      <span>One platform — first contact to final payment</span>
+      <a href="https://knockio.com/">knockio.com</a>
+    </div>
+  </footer>
+
+  <script is:inline src={revealScript} defer></script>
+  <script is:inline src={calInlineScript} defer></script>
+</BaseLayout>

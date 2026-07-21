@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/canvassing-app.css";
 import canvassingScript from "../scripts/canvassing-app.js?url";
+import calInlineScript from "../scripts/cal-inline.js?url";
 import {
   ArrowRight,
   BadgeCheck,
@@ -383,7 +384,7 @@ const jsonLd = {
             <ul class="platform-fullstack-list mt-8">
               {fullStackItems.map((item) => <li>{item}</li>)}
             </ul>
-            <div class="my-10">
+            <div class="my-10 table mx-auto">
               <a
                 href="#landing-calender"
                 class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary-500 px-7 py-4 font-bold text-white shadow-lg shadow-primary-500/25 transition hover:bg-primary-600 hover:shadow-primary-500/35"
@@ -406,416 +407,400 @@ const jsonLd = {
       </div>
     </section>
 
-    <section class="work-section-heading py-24 lg:py-36">
-      <div class="my-container">
-        <h2 class="section-heading">Switching to Knockio is easy</h2>
-        <p class="section-copy">
-          It's not one app you are replacing, it is the whole stack. Routing
-          tool. Canvassing app. Photo chats, contracts, and e-sign. A CRM that
-          was never built for the porch. Most teams come from all five, then
-          wish they had switched sooner.
-        </p>
-      </div>
-    </section>
-
-    <section class="work-section-steps">
-      <div class="my-container">
-        <h2 class="section-heading mb-8">Here's how it works</h2>
-
-        <div class="space-y-8">
-          <div class="work-steps-row grid items-center gap-8">
-            <div
-              class="work-step grid items-center gap-8 pt-10 p-5 md:grid-cols-2 lg:pt-14 lg:p-8"
-            >
-              <img
-                src={`${assetBase}/work-img1.webp`}
-                alt=""
-                width="713"
-                height="376"
-                class="work-step-img h-auto w-full rounded-2xl"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="work-wrapper p-2 lg:p-8">
-                Guided onboarding on day one. Most teams are running live
-                campaigns within the hour. We walk you through territory setup,
-                rep accounts, and your first campaign, no consultant needed.
-              </div>
-            </div>
+    <section class="onboarding-section">
+      <div class="container">
+        <div class="editorial-header">
+          <!-- Headline Column -->
+          <div class="headline-column">
+            <h2 class="main-headline">
+              Switching<br />
+              <span class="headline-sub">to Knockio is</span><br />
+              <span class="headline-accent">Easy.</span>
+            </h2>
           </div>
 
-          <div class="work-steps-row grid items-center gap-8">
-            <div
-              class="work-step flex flex-col-reverse items-center gap-8 pt-10 p-5 md:flex-row-reverse lg:pt-14 lg:p-8"
-            >
-              <img
-                src={`${assetBase}/work-img2.webp`}
-                alt=""
-                width="713"
-                height="376"
-                class="work-step-img h-auto w-full rounded-2xl md:w-1/2"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="work-wrapper p-2 lg:p-8 md:w-1/2">
-                Import your existing data. Bring over lead lists, pre-knocked
-                address data, and customer records via CSV or direct migration.
-                Your history doesn't disappear when you switch, and it never
-                gets held hostage.
-              </div>
-            </div>
-          </div>
-
-          <div class="work-steps-row grid items-center gap-8">
-            <div
-              class="work-step grid items-center gap-8 pt-10 p-5 md:grid-cols-2 lg:pt-14 lg:p-8"
-            >
-              <img
-                src={`${assetBase}/work-img3.webp`}
-                alt=""
-                width="713"
-                height="376"
-                class="work-step-img h-auto w-full rounded-2xl"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="work-wrapper p-2 lg:p-8">
-                Real support from real people. Direct access to the team,
-                including the founder. No ticket queues, no offshore tiers, no
-                chatbot. You talk to a person. Most issues resolved same day.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="landing-pricing" class="pricing-section">
-      <div class="my-container max-w-[1330px] mx-auto">
-        <div class="text-center gap-3 mb-12">
-          <h2 class="section-heading">
-            Straightforward Pricing<br /> No Surprises
-          </h2>
-          <p class="section-copy">
-            Start with the plan your team needs now. Add users as you grow,
-            volume discounts apply automatically at 5 users.
-          </p>
-          <div
-            class="pricing-badge mt-8 inline-flex items-center gap-2 rounded-full border border-slate-200 px-5 py-2.5 text-sm font-semibold text-slate-900"
-          >
-            <CheckCircle2
-              size={18}
-              class="text-primary-500"
-              aria-hidden="true"
-            />
-            <span>Pro-rated billing. No setup fee</span>
+          <!-- Intro / Pull-Quote Column -->
+          <div class="intro-column">
+            <p class="pull-quote">
+              It's not one app you are replacing, it is the whole stack. Routing
+              tool. Canvassing app. Photo chats, contracts, and e-sign. A CRM
+              that was never built for the porch. <br /><br />
+              <span class="pull-quote-strong"
+                >Most teams come from all five, then wish they had switched
+                sooner.</span
+              >
+            </p>
           </div>
         </div>
 
-        <div
-          class="grid grid-cols-1 md:grid-cols-3 gap-14 max-xl:gap-7 max-w-[1330px] mx-auto items-stretch"
-        >
-          {
-            pricingPlans.map((plan) => {
-              const Icon = iconMap[plan.icon as keyof typeof iconMap];
-              return (
-                <article
-                  class:list={[
-                    "pricing-card relative flex flex-col",
-                    plan.featured && "is-featured",
-                  ]}
+        <div>
+          <!-- Process Subhead -->
+          <h3 class="process-subhead">Here's how it works</h3>
+
+          <!-- 3-Column Grid for Steps -->
+          <div class="steps-grid">
+            <!-- Step 01 -->
+            <div class="step-card">
+              <div class="step-number">01</div>
+              <h4 class="step-title">Guided Onboarding</h4>
+              <p class="step-description">
+                Most teams are running live campaigns within the hour. We walk
+                you through territory setup, rep accounts, and your first
+                campaign.
+                <span class="step-description-highlight"
+                  >No consultant needed.</span
                 >
-                  {plan.featured && (
-                    <p class="pricing-badge absolute -top-4 left-1/2 -translate-x-1/2 rounded-full border border-white/20 bg-primary-500 px-8 py-1.5 text-sm font-bold text-white">
-                      Recommended
-                    </p>
-                  )}
-                  <div class="pricing-header flex items-center gap-4">
-                    <Icon
-                      class={
-                        plan.featured ? "text-primary-400" : "text-primary-600"
-                      }
-                      size={27}
-                      aria-hidden="true"
-                    />
-                    <h3
-                      class:list={[
-                        "pricing-title text-3xl font-extrabold",
-                        plan.featured ? "text-white" : "text-slate-950",
-                      ]}
-                    >
-                      {plan.title}
-                    </h3>
-                  </div>
-                  <p
-                    class:list={[
-                      "pricing-desc text-base leading-7",
-                      plan.featured ? "text-slate-300" : "text-slate-600",
-                    ]}
-                  >
-                    {plan.description}
-                  </p>
-                  <p
-                    class:list={[
-                      "pricing-price flex items-end text-5xl font-extrabold",
-                      plan.featured ? "text-white" : "text-slate-950",
-                    ]}
-                  >
-                    {plan.price}
-                    <span
-                      class:list={[
-                        "pricing-unit ml-2 pb-1 text-base font-medium",
-                        plan.featured ? "text-slate-400" : "text-slate-500",
-                      ]}
-                    >
-                      /user/mo
-                    </span>
-                  </p>
-                  <p
-                    class:list={[
-                      "pricing-discount text-sm",
-                      plan.featured ? "text-slate-400" : "text-slate-500",
-                    ]}
-                  >
-                    {plan.discountNote}
-                  </p>
-                  <button
-                    type="button"
-                    data-checkout-package={plan.packageId}
-                    class:list={[
-                      "pricing-cta w-full rounded-md px-5 py-3 font-bold transition",
-                      plan.featured
-                        ? "bg-primary-500 text-white hover:bg-primary-600"
-                        : "border border-primary-500 bg-white text-primary-600 hover:bg-primary-500 hover:text-white",
-                    ]}
-                  >
-                    {plan.cta}
-                  </button>
-                  <h4
-                    class:list={[
-                      "pricing-features-heading text-xl font-bold",
-                      plan.featured ? "text-white" : "text-slate-950",
-                    ]}
-                  >
-                    Features Included:
-                  </h4>
-                  <ul class="pricing-features-list flex-1 space-y-3.5">
-                    {plan.features.map((feature) => (
-                      <li
-                        class:list={[
-                          "flex items-start gap-3 text-base leading-7",
-                          plan.featured ? "text-slate-300" : "text-slate-700",
-                        ]}
-                      >
-                        {feature.includes("Engage") ? (
-                          <Phone
-                            class="mt-1 shrink-0 text-primary-500"
-                            size={18}
-                            aria-hidden="true"
-                          />
-                        ) : feature.includes("Zapier") ? (
-                          <Plug
-                            class="mt-1 shrink-0 text-slate-400"
-                            size={18}
-                            aria-hidden="true"
-                          />
-                        ) : (
-                          <Check
-                            class="mt-1 shrink-0 text-primary-500"
-                            size={18}
-                            aria-hidden="true"
-                          />
-                        )}
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </article>
-              );
-            })
-          }
-        </div>
-      </div>
-    </section>
-
-    <section class="calender-section py-24 lg:py-36">
-      <div class="my-container">
-        <h2 class="section-heading">
-          See the Full Door-to-Dollar Cycle in Action
-        </h2>
-        <p class="section-copy">
-          No pitch deck. No scripted walkthrough. No pressure. A live session
-          built around your vertical and team size, so you can see exactly how
-          it handles your workflow before you decide.
-        </p>
-
-        <div class="calender-wrapper mt-8">
-          <div class="calender-wrapper-div">
-            <CalendarDays size={28} class="text-[#74726C]" aria-hidden="true" />
-            <span>Month to Month</span>
-          </div>
-          <div class="calender-wrapper-div">
-            <FileSignature
-              size={28}
-              class="text-[#74726C]"
-              aria-hidden="true"
-            />
-            <span>No contract</span>
-          </div>
-          <div class="calender-wrapper-div">
-            <CalendarX size={28} class="text-[#74726C]" aria-hidden="true" />
-            <span>Cancel anytime</span>
-          </div>
-        </div>
-
-        <div
-          id="landing-calender"
-          class="cal-shell mx-auto mt-12 max-w-5xl p-2 sm:p-3 lg:p-4"
-        >
-          <div
-            id="my-cal-inline"
-            class="cal-placeholder grid place-items-center overflow-hidden"
-            aria-live="polite"
-          >
-            <div class="max-w-md p-6 text-center">
-              <CalendarDays
-                class="mx-auto text-primary-500"
-                size={42}
-                aria-hidden="true"
-              />
-              <p class="mt-4 text-xl font-extrabold text-slate-950">
-                Loading the live demo calendar
               </p>
-              <p class="mt-2 text-sm leading-6 text-slate-600">
-                The scheduler loads only when you reach it, keeping the hero
-                fast for PageSpeed and search visitors.
+            </div>
+
+            <!-- Step 02 -->
+            <div class="step-card">
+              <div class="step-number">02</div>
+              <h4 class="step-title">Import Your Data</h4>
+              <p class="step-description">
+                Bring over lead lists, pre-knocked address data, and customer
+                records via CSV or direct migration. Your history doesn't
+                disappear when you switch, and it
+                <span class="step-italic">never</span> gets held hostage.
               </p>
-              <button
-                type="button"
-                data-load-cal
-                class="mt-5 rounded-xl bg-primary-500 px-5 py-3 text-sm font-bold text-white transition hover:bg-primary-600"
-              >
-                Load calendar now
-              </button>
+            </div>
+
+            <!-- Step 03 -->
+            <div class="step-card">
+              <div class="step-number">03</div>
+              <h4 class="step-title">Handshake Support</h4>
+              <p class="step-description">
+                Direct access to the team, including the founder. No ticket
+                queues, no offshore tiers, no chatbot. You talk to a real
+                person.
+                <span class="step-description-highlight"
+                  >Most issues resolved same day.</span
+                >
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="faq-section py-24 lg:py-36" aria-labelledby="faq-heading">
-      <div class="my-container">
-        <p
-          class="faq-heading-text text-center text-sm font-bold uppercase tracking-[0.18em] text-primary-500 md:text-2xl"
-        >
-          Common Questions
-        </p>
-
-        <div class="faq-container space-y-4">
-          {
-            faqs.map((faq, index) => (
-              <details
-                class="faq-item rounded-2xl border border-slate-200 bg-white transition"
-                data-faq-item={faq.question}
-                open={index === 0}
-              >
-                <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-5 text-left sm:p-6">
-                  <span class="text-lg font-bold text-slate-950 sm:text-xl">
-                    {faq.question}
-                  </span>
-                  <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-primary-50 text-primary-600">
-                    <Plus class="faq-plus" size={20} aria-hidden="true" />
-                    <Minus class="faq-minus" size={20} aria-hidden="true" />
-                  </span>
-                </summary>
-                <div class="px-5 pb-6 text-base leading-8 text-slate-600 sm:px-6">
-                  {faq.answer}
-                </div>
-              </details>
-            ))
-          }
-        </div>
-      </div>
-    </section>
   </main>
 
-  <footer
-    class="relative overflow-hidden border-t border-white/10 bg-[#0d2b0a]"
-  >
-    <div
-      class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary-500/60 to-transparent"
-    >
-    </div>
-    <div class="my-container">
-      <div class="flex flex-col items-center gap-4 py-10 text-center sm:py-12">
-        <a href="/" aria-label="Knockio home">
-          <img
-            src={`${assetBase}/knockio-logo.webp`}
-            alt="Knockio"
-            width="320"
-            height="96"
-            class="mx-auto h-8 w-auto object-contain sm:h-9"
-            loading="lazy"
-            decoding="async"
-          />
-        </a>
-        <p class="max-w-md text-sm leading-6 text-white/50">
-          Door-to-door sales software built for canvassing teams from the first
-          knock to the paid invoice.
+  <section id="landing-pricing" class="pricing-section">
+    <div class="my-container max-w-[1330px] mx-auto">
+      <div class="text-center gap-3 mb-12">
+        <h2 class="section-heading">
+          Straightforward Pricing<br /> No Surprises
+        </h2>
+        <p class="section-copy">
+          Start with the plan your team needs now. Add users as you grow, volume
+          discounts apply automatically at 5 users.
         </p>
-        <a
-          href="mailto:hello@knockio.com"
-          class="text-sm font-medium text-white/70 transition hover:text-primary-400"
-          >hello@knockio.com</a
+        <div
+          class="pricing-badge mt-8 inline-flex items-center gap-2 rounded-full border border-slate-200 px-5 py-2.5 text-sm font-semibold text-slate-900"
         >
+          <CheckCircle2 size={18} class="text-primary-500" aria-hidden="true" />
+          <span>Pro-rated billing. No setup fee</span>
+        </div>
       </div>
 
       <div
-        class="flex flex-col items-center gap-5 border-t border-white/10 py-6 sm:flex-row sm:justify-between"
+        class="grid grid-cols-1 md:grid-cols-3 gap-14 max-xl:gap-7 max-w-[1330px] mx-auto items-stretch"
       >
-        <p class="order-2 text-xs text-white/45 sm:order-1 sm:text-sm">
-          &copy; {currentYear} Knockio. All rights reserved.
-        </p>
-
-        <div
-          class="order-1 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm sm:order-2"
-        >
-          <a
-            href="/privacy-policy/"
-            class="text-white/70 transition hover:text-primary-400"
-            >Privacy Policy</a
-          >
-          <span class="text-white/25" aria-hidden="true">/</span>
-          <a
-            href="/terms-and-conditions/"
-            class="text-white/70 transition hover:text-primary-400"
-            >Terms & Conditions</a
-          >
-        </div>
-
-        <div class="order-3 flex items-center gap-2.5">
-          {
-            [
-              ["https://www.facebook.com/knockioapp", "Facebook", "f"],
-              ["https://www.linkedin.com/company/knockio", "LinkedIn", "in"],
-              ["https://x.com/knockioapp", "X", "x"],
-              ["https://www.youtube.com/@knockioapp", "YouTube", "yt"],
-            ].map(([href, label, text]) => (
-              <a
-                href={href}
-                aria-label={label}
-                class="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-xs font-bold uppercase text-white/70 transition hover:border-primary-500/50 hover:text-primary-400"
-                target="_blank"
-                rel="noopener"
+        {
+          pricingPlans.map((plan) => {
+            const Icon = iconMap[plan.icon as keyof typeof iconMap];
+            return (
+              <article
+                class:list={[
+                  "pricing-card relative flex flex-col",
+                  plan.featured && "is-featured",
+                ]}
               >
-                {text}
-              </a>
-            ))
-          }
+                {plan.featured && (
+                  <p class="pricing-badge absolute -top-4 left-1/2 -translate-x-1/2 rounded-full border border-white/20 bg-primary-500 px-8 py-1.5 text-sm font-bold text-white">
+                    Recommended
+                  </p>
+                )}
+                <div class="pricing-header flex items-center gap-4">
+                  <Icon
+                    class={
+                      plan.featured ? "text-primary-400" : "text-primary-600"
+                    }
+                    size={27}
+                    aria-hidden="true"
+                  />
+                  <h3
+                    class:list={[
+                      "pricing-title text-3xl font-extrabold",
+                      plan.featured ? "text-white" : "text-slate-950",
+                    ]}
+                  >
+                    {plan.title}
+                  </h3>
+                </div>
+                <p
+                  class:list={[
+                    "pricing-desc text-base leading-7",
+                    plan.featured ? "text-slate-300" : "text-slate-600",
+                  ]}
+                >
+                  {plan.description}
+                </p>
+                <p
+                  class:list={[
+                    "pricing-price flex items-end text-5xl font-extrabold",
+                    plan.featured ? "text-white" : "text-slate-950",
+                  ]}
+                >
+                  {plan.price}
+                  <span
+                    class:list={[
+                      "pricing-unit ml-2 pb-1 text-base font-medium",
+                      plan.featured ? "text-slate-400" : "text-slate-500",
+                    ]}
+                  >
+                    /user/mo
+                  </span>
+                </p>
+                <p
+                  class:list={[
+                    "pricing-discount text-sm",
+                    plan.featured ? "text-slate-400" : "text-slate-500",
+                  ]}
+                >
+                  {plan.discountNote}
+                </p>
+                <button
+                  type="button"
+                  data-checkout-package={plan.packageId}
+                  class:list={[
+                    "pricing-cta w-full rounded-md px-5 py-3 font-bold transition",
+                    plan.featured
+                      ? "bg-primary-500 text-white hover:bg-primary-600"
+                      : "border border-primary-500 bg-white text-primary-600 hover:bg-primary-500 hover:text-white",
+                  ]}
+                >
+                  {plan.cta}
+                </button>
+                <h4
+                  class:list={[
+                    "pricing-features-heading text-xl font-bold",
+                    plan.featured ? "text-white" : "text-slate-950",
+                  ]}
+                >
+                  Features Included:
+                </h4>
+                <ul class="pricing-features-list flex-1 space-y-3.5">
+                  {plan.features.map((feature) => (
+                    <li
+                      class:list={[
+                        "flex items-start gap-3 text-base leading-7",
+                        plan.featured ? "text-slate-300" : "text-slate-700",
+                      ]}
+                    >
+                      {feature.includes("Engage") ? (
+                        <Phone
+                          class="mt-1 shrink-0 text-primary-500"
+                          size={18}
+                          aria-hidden="true"
+                        />
+                      ) : feature.includes("Zapier") ? (
+                        <Plug
+                          class="mt-1 shrink-0 text-slate-400"
+                          size={18}
+                          aria-hidden="true"
+                        />
+                      ) : (
+                        <Check
+                          class="mt-1 shrink-0 text-primary-500"
+                          size={18}
+                          aria-hidden="true"
+                        />
+                      )}
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            );
+          })
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="calender-section py-24 lg:py-36">
+    <div class="my-container">
+      <h2 class="section-heading">
+        See the Full Door-to-Dollar Cycle in Action
+      </h2>
+      <p class="section-copy">
+        No pitch deck. No scripted walkthrough. No pressure. A live session
+        built around your vertical and team size, so you can see exactly how it
+        handles your workflow before you decide.
+      </p>
+
+      <div class="calender-wrapper mt-8">
+        <div class="calender-wrapper-div">
+          <CalendarDays size={28} class="text-[#74726C]" aria-hidden="true" />
+          <span>Month to Month</span>
+        </div>
+        <div class="calender-wrapper-div">
+          <FileSignature size={28} class="text-[#74726C]" aria-hidden="true" />
+          <span>No contract</span>
+        </div>
+        <div class="calender-wrapper-div">
+          <CalendarX size={28} class="text-[#74726C]" aria-hidden="true" />
+          <span>Cancel anytime</span>
+        </div>
+      </div>
+
+      <div
+        id="landing-calender"
+        class="cal-shell mx-auto mt-12 max-w-5xl p-2 sm:p-3 lg:p-4"
+      >
+        <div
+          id="my-cal-inline"
+          class="cal-placeholder grid place-items-center overflow-hidden"
+          aria-live="polite"
+        >
+          <div class="max-w-md p-6 text-center">
+            <CalendarDays
+              class="mx-auto text-primary-500"
+              size={42}
+              aria-hidden="true"
+            />
+            <p class="mt-4 text-xl font-extrabold text-slate-950">
+              Loading the live demo calendar
+            </p>
+            <p class="mt-2 text-sm leading-6 text-slate-600">
+              The scheduler loads only when you reach it, keeping the hero fast
+              for PageSpeed and search visitors.
+            </p>
+            <button
+              type="button"
+              data-load-cal
+              class="mt-5 rounded-xl bg-primary-500 px-5 py-3 text-sm font-bold text-white transition hover:bg-primary-600"
+            >
+              Load calendar now
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script is:inline src={canvassingScript} defer></script>
+  <section class="faq-section py-24 lg:py-36" aria-labelledby="faq-heading">
+    <div class="my-container">
+      <p
+        class="faq-heading-text text-center text-sm font-bold uppercase tracking-[0.18em] text-primary-500 md:text-2xl"
+      >
+        Common Questions
+      </p>
+
+      <div class="faq-container space-y-4">
+        {
+          faqs.map((faq, index) => (
+            <details
+              class="faq-item rounded-2xl border border-slate-200 bg-white transition"
+              data-faq-item={faq.question}
+              open={index === 0}
+            >
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-5 text-left sm:p-6">
+                <span class="text-lg font-bold text-slate-950 sm:text-xl">
+                  {faq.question}
+                </span>
+                <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-primary-50 text-primary-600">
+                  <Plus class="faq-plus" size={20} aria-hidden="true" />
+                  <Minus class="faq-minus" size={20} aria-hidden="true" />
+                </span>
+              </summary>
+              <div class="px-5 pb-6 text-base leading-8 text-slate-600 sm:px-6">
+                {faq.answer}
+              </div>
+            </details>
+          ))
+        }
+      </div>
+    </div>
+  </section>
 </BaseLayout>
+
+<footer class="relative overflow-hidden border-t border-white/10 bg-[#0d2b0a]">
+  <div
+    class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary-500/60 to-transparent"
+  >
+  </div>
+  <div class="my-container">
+    <div class="flex flex-col items-center gap-4 py-10 text-center sm:py-12">
+      <a href="/" aria-label="Knockio home">
+        <img
+          src={`${assetBase}/knockio-logo.webp`}
+          alt="Knockio"
+          width="320"
+          height="96"
+          class="mx-auto h-8 w-auto object-contain sm:h-9"
+          loading="lazy"
+          decoding="async"
+        />
+      </a>
+      <p class="max-w-md text-sm leading-6 text-white/50">
+        Door-to-door sales software built for canvassing teams from the first
+        knock to the paid invoice.
+      </p>
+      <a
+        href="mailto:hello@knockio.com"
+        class="text-sm font-medium text-white/70 transition hover:text-primary-400"
+        >hello@knockio.com</a
+      >
+    </div>
+
+    <div
+      class="flex flex-col items-center gap-5 border-t border-white/10 py-6 sm:flex-row sm:justify-between"
+    >
+      <p class="order-2 text-xs text-white/45 sm:order-1 sm:text-sm">
+        &copy; {currentYear} Knockio. All rights reserved.
+      </p>
+
+      <div
+        class="order-1 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm sm:order-2"
+      >
+        <a
+          href="/privacy-policy/"
+          class="text-white/70 transition hover:text-primary-400"
+          >Privacy Policy</a
+        >
+        <span class="text-white/25" aria-hidden="true">/</span>
+        <a
+          href="/terms-and-conditions/"
+          class="text-white/70 transition hover:text-primary-400"
+          >Terms & Conditions</a
+        >
+      </div>
+
+      <div class="order-3 flex items-center gap-2.5">
+        {
+          [
+            ["https://www.facebook.com/knockioapp", "Facebook", "f"],
+            ["https://www.linkedin.com/company/knockio", "LinkedIn", "in"],
+            ["https://x.com/knockioapp", "X", "x"],
+            ["https://www.youtube.com/@knockioapp", "YouTube", "yt"],
+          ].map(([href, label, text]) => (
+            <a
+              href={href}
+              aria-label={label}
+              class="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-xs font-bold uppercase text-white/70 transition hover:border-primary-500/50 hover:text-primary-400"
+              target="_blank"
+              rel="noopener"
+            >
+              {text}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script is:inline src={canvassingScript} defer></script>
+<script is:inline src={calInlineScript} defer></script>

@@ -1,0 +1,247 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/one-platform.css";
+import revealScript from "../scripts/reveal-on-scroll.js?url";
+import calInlineScript from "../scripts/cal-inline.js?url";
+
+const title = "Knockio — One platform for the whole job | Home service software";
+const description = "One connected, real-time platform for home service companies — canvassing, pipeline, estimating, crew scheduling, timesheets, and invoicing. Up and running the same day.";
+---
+
+<BaseLayout title={title} description={description} noHeader noFooter>
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="wordmark" href="#top"><img src="/assets/cfw/knockio-logo.webp" alt="Knockio" width="663" height="100" loading="eager" decoding="async" /></a>
+      <nav class="topnav" aria-label="Page">
+        <a href="#platform">Platform</a>
+        <a href="#pipeline">Pipeline</a>
+        <a href="#features">Features</a>
+        <a href="#sameday">Setup</a>
+        <a class="btn btn-solid" href="#demo">Book a demo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">For home service companies<span class="hide-sm"> — roofing · solar · exteriors · HVAC</span></p>
+          <h1 class="display">Stop running your company out of <span class="cross">six&nbsp;tabs</span>. </h1>
+          <p class="hero-sub">Knockio is one connected, real-time platform for the whole job — canvassing, pipeline, estimating, crew scheduling, timesheets, and invoicing. The field and the office finally see the same thing, at the same time.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-solid" href="#demo">Book a demo</a>
+          </div>
+          <p class="hero-proof">
+            <span>Up and running the same day</span>
+            <span>$20–$60 per user / month</span>
+            <span>No feature paywalls</span>
+          </p>
+        </div>
+
+        <div class="feed" role="img" aria-label="A live Knockio job feed showing one job going from door knock at 8:12 AM to paid at 4:47 PM, all in one record.">
+          <div class="feed-head">
+            <span class="feed-title">JOB #1847 · HENDERSON RESIDENCE</span>
+            <span class="feed-live"><i></i>LIVE</span>
+          </div>
+          <div class="feed-body">
+            <div class="feed-row" style="animation-delay:.2s"><span class="t">8:12 AM</span><span class="e"><strong>Door knocked</strong> — Maple Ave territory, rep Marcus</span><span class="feed-tag">Canvass</span></div>
+            <div class="feed-row" style="animation-delay:.5s"><span class="t">8:31 AM</span><span class="e"><strong>Opportunity created</strong> — roof replacement, $18,400</span><span class="feed-tag">Pipeline</span></div>
+            <div class="feed-row" style="animation-delay:.8s"><span class="t">9:05 AM</span><span class="e"><strong>Estimate sent</strong> — e-signature requested</span><span class="feed-tag">Estimate</span></div>
+            <div class="feed-row" style="animation-delay:1.1s"><span class="t">11:42 AM</span><span class="e"><strong>Signed.</strong> Won → converted to job in one tap</span><span class="feed-tag">Won</span></div>
+            <div class="feed-row" style="animation-delay:1.4s"><span class="t">11:44 AM</span><span class="e"><strong>Crew B scheduled</strong> — Tuesday, 7:00 AM</span><span class="feed-tag">Schedule</span></div>
+            <div class="feed-row" style="animation-delay:1.7s"><span class="t">1:15 PM</span><span class="e"><strong>14 photos + hours logged</strong> from the field — office synced automatically</span><span class="feed-tag">Mobile</span></div>
+            <div class="feed-row paid" style="animation-delay:2s"><span class="t">4:47 PM</span><span class="e"><strong>Invoice sent — paid online</strong></span><span class="feed-tag">Paid</span></div>
+          </div>
+          <div class="feed-foot">ONE JOB RECORD · ZERO RE-TYPING · <b>EVERYTHING IN SYNC</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cancel" id="platform">
+      <div class="wrap">
+        <div class="section-head rv">
+          <p class="eyebrow">The problem, priced monthly</p>
+          <h2 class="display">You're paying five apps to not talk to each other.</h2>
+          <p>Every tool holds one piece of the job hostage. Every handoff between them is re-typing, missed updates, and "let me check and call you back." Knockio replaces the whole stack — so cancel day comes early.</p>
+        </div>
+        <div class="cancel-list">
+          <div class="cancel-row rv"><span class="cancel-app">The door-knocking app</span><p class="cancel-note"><b>Canvassing lives inside Knockio</b> — territories, live rep tracking, and every knock on the same map as your jobs.</p></div>
+          <div class="cancel-row rv"><span class="cancel-app">The generic CRM</span><p class="cancel-note"><b>Pipelines built for service and production</b> — not a sales tool bent out of shape to fit contracting.</p></div>
+          <div class="cancel-row rv"><span class="cancel-app">The scheduling whiteboard</span><p class="cancel-note"><b>Visual crew scheduling</b> — drag a won job onto the calendar and the crew's phones already know.</p></div>
+          <div class="cancel-row rv"><span class="cancel-app">The timesheet app</span><p class="cancel-note"><b>Crews clock in from the phone they already carry</b> — hours land on the job, payroll-ready.</p></div>
+          <div class="cancel-row rv"><span class="cancel-app">The invoicing tool</span><p class="cancel-note"><b>Estimate → work order → invoice → payment</b>, one thread. Generate an invoice in under a minute.</p></div>
+          <div class="cancel-row rv"><span class="cancel-app">The group text</span><p class="cancel-note"><b>Email, SMS, and calls logged on the job record</b> — the whole conversation, wherever it happened.</p></div>
+        </div>
+        <p class="cancel-total rv">SYNC STATUS: 6 TOOLS → 1 PLATFORM · 0 COPY-PASTE HANDOFFS</p>
+      </div>
+    </section>
+
+    <section class="lifecycle">
+      <div class="wrap">
+        <div class="section-head rv">
+          <p class="eyebrow">One connected, real-time platform</p>
+          <h2 class="display">From the first knock to the final payment.</h2>
+          <p>Three stages, one system. No exports, no re-entry — a job moves forward the moment the work does.</p>
+        </div>
+        <div class="stage-grid rv">
+          <div class="stage">
+            <p class="stage-num">STAGE 01 — SELL</p>
+            <h3>Win the work</h3>
+            <p>Manage your pipeline, convert wins to jobs instantly, and schedule crews visually.</p>
+            <ul>
+              <li>Canvass territories with live rep tracking</li>
+              <li>Estimates and proposals with e-signature</li>
+              <li>Won deal → scheduled job in one tap</li>
+            </ul>
+            <span class="stage-arrow" aria-hidden="true">→</span>
+          </div>
+          <div class="stage">
+            <p class="stage-num">STAGE 02 — WORK</p>
+            <h3>Run the field</h3>
+            <p>Crews log time, capture photos, and update job status through mobile. Everything syncs to the office automatically.</p>
+            <ul>
+              <li>Photo capture tied to the job record</li>
+              <li>Time clocked from the field</li>
+              <li>Status the office sees in real time</li>
+            </ul>
+            <span class="stage-arrow" aria-hidden="true">→</span>
+          </div>
+          <div class="stage">
+            <p class="stage-num">STAGE 03 — GET PAID</p>
+            <h3>Close the books</h3>
+            <p>Track costs in real time, create branded client reports and proposals, and generate invoices in under a minute.</p>
+            <ul>
+              <li>Live job costing against budget</li>
+              <li>Branded reports clients actually read</li>
+              <li>Invoice → online payment, same thread</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pipeline" id="pipeline">
+      <div class="wrap pipe-grid">
+        <div class="pipe-copy rv">
+          <p class="eyebrow">Track &amp; convert opportunities</p>
+          <h2 class="display">No deal goes cold without a fight.</h2>
+          <p>See exactly where every opportunity stands and what needs attention next — so you move work forward instead of wondering what happened to that quote you sent three weeks ago.</p>
+          <ul class="pipe-list">
+            <li><strong>Separate service and production pipelines</strong> that match how you actually sell</li>
+            <li><strong>Stage-aging alerts</strong> flag deals going cold before they're gone</li>
+            <li><strong>Task assignment and reminders</strong> so follow-ups never live in someone's head</li>
+            <li><strong>Win/loss tracking with reasons</strong> — learn why you lose, fix it, win more</li>
+            <li><strong>Unified pipeline visibility</strong> — all opportunities, values, and projections in one complete view</li>
+          </ul>
+        </div>
+        <div class="rv">
+          <div class="deal-stack">
+            <div class="deal">
+              <span class="name">Alvarez — Full reroof</span>
+              <span class="val">$24,750</span>
+              <span class="meta">STAGE: PROPOSAL SENT</span>
+              <span class="age">2 DAYS IN STAGE</span>
+            </div>
+            <div class="deal">
+              <span class="name">Okafor — Gutter + siding</span>
+              <span class="val">$9,300</span>
+              <span class="meta">STAGE: INSPECTION BOOKED</span>
+              <span class="age">4 DAYS IN STAGE</span>
+            </div>
+            <div class="deal cold">
+              <span class="name">Riverside Dr — Storm repair</span>
+              <span class="val">$12,900</span>
+              <span class="meta">STAGE: ESTIMATE SENT</span>
+              <span class="age">⚠ 21 DAYS — GOING COLD</span>
+            </div>
+            <p class="deal-caption">Stage aging flagged it. <b>Follow-up task auto-assigned to Marcus, due today.</b></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="wrap">
+        <div class="section-head rv">
+          <p class="eyebrow">Everything under one umbrella</p>
+          <h2 class="display">The full toolbox, already connected.</h2>
+        </div>
+        <div class="feat-grid">
+          <div class="feat rv">
+            <svg class="feat-ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <h3>Canvassing &amp; territories</h3>
+            <p>Door-knocking with territory assignment and live rep tracking — every knock becomes a record, not a memory.</p>
+          </div>
+          <div class="feat rv">
+            <svg class="feat-ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <h3>Every conversation, one record</h3>
+            <p>Email, messages, and calls attached to the customer and the job — no more scrolling four inboxes for one answer.</p>
+          </div>
+          <div class="feat rv">
+            <svg class="feat-ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+            <h3>Automations</h3>
+            <p>Tasks, reminders, follow-up emails, and crew scheduling that fire themselves — the busywork runs while you don't.</p>
+          </div>
+          <div class="feat rv">
+            <svg class="feat-ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+            <h3>Timesheets</h3>
+            <p>Working hours tracked from the field, tied to the job, payroll-ready — without chasing paper on Friday afternoon.</p>
+          </div>
+          <div class="feat rv">
+            <svg class="feat-ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 9h18M8 14h4"/></svg>
+            <h3>Money, handled</h3>
+            <p>Invoices, work orders, estimates, payments, inventory, and vendor bills — the whole money trail in one place.</p>
+          </div>
+          <div class="feat rv">
+            <svg class="feat-ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>
+            <h3>Map view</h3>
+            <p>Every job, crew, and opportunity on one map — see your whole operation the way it actually exists: on the ground.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sameday" id="sameday">
+      <div class="wrap">
+        <div class="rv">
+          <p class="eyebrow">Implementation, without the implementation</p>
+          <h2 class="display">Up and running the same day.</h2>
+          <p class="sameday-lead">No six-week rollout. No onboarding-specialist calendar dance. Import your customers, invite your crew, and knock your first door before the afternoon's out.</p>
+        </div>
+        <div class="clock-line rv">
+          <div class="clock"><p class="t">9:00 AM</p><p class="e">Sign up</p></div>
+          <div class="clock"><p class="t">9:40 AM</p><p class="e">Customers imported</p></div>
+          <div class="clock"><p class="t">10:15 AM</p><p class="e">Crew invited</p></div>
+          <div class="clock"><p class="t">12:00 PM</p><p class="e">First door knocked</p></div>
+        </div>
+      </div>
+    </section>
+
+<section class="final" id="demo">
+      <div class="wrap rv">
+        <h2 class="display">Run tomorrow's jobs on one platform.</h2>
+        <p>Twenty minutes, your real workflow, live on screen. If it doesn't beat your current stack, keep the stack.</p>
+        <div class="cal-shell">
+          <div id="my-cal-inline" class="cal-placeholder">
+            <div class="cal-placeholder-inner">
+              <p>Loading the live demo calendar… Book a 30-minute walkthrough of your real workflow.</p>
+              <button type="button" data-load-cal class="btn btn-solid">Load calendar now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-in">
+      <span>© 2026 KNOCKIO</span>
+      <span>ONE PLATFORM · FIRST KNOCK → FINAL PAYMENT</span>
+      <a href="https://knockio.com/">KNOCKIO.COM</a>
+    </div>
+  </footer>
+
+  <script is:inline src={revealScript} defer></script>
+  <script is:inline src={calInlineScript} defer></script>
+</BaseLayout>

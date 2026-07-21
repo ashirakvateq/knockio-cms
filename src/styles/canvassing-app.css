@@ -3,6 +3,13 @@
   overflow-x: hidden;
   font-family: "Manrope Variable", "Manrope", "Poppins", sans-serif;
   -webkit-font-smoothing: normal;
+  box-sizing: border-box;
+}
+
+.canvassing-page *,
+.canvassing-page *::before,
+.canvassing-page *::after {
+  box-sizing: inherit;
 }
 
 .canvassing-page ::selection {
@@ -114,7 +121,13 @@
 
 .stats-section {
   background-color: #fdfcf9;
-  padding: 5rem 0;
+  padding: 3rem 0;
+}
+
+@media (min-width: 1024px) {
+  .stats-section {
+    padding: 6rem 0;
+  }
 }
 
 .stats-row {
@@ -254,6 +267,13 @@
 
 .testimonial-section {
   background-color: #fdfcf9;
+  padding: 3rem 0;
+}
+
+@media (min-width: 1024px) {
+  .testimonial-section {
+    padding: 6rem 0;
+  }
 }
 
 .testimonial-quote-wrap {
@@ -325,7 +345,20 @@
 
 .platform-section {
   position: relative;
-  padding: 160px 0;
+  padding: 4rem 0;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .platform-section {
+    padding: 6rem 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .platform-section {
+    padding: 10rem 0;
+  }
 }
 
 .platform-section::before {
@@ -346,11 +379,18 @@
   position: absolute;
   background-image: url("/assets/canvassing-app/platform-bg-bottom-scaled.png");
   width: 100%;
-  height: 302px;
-  bottom: -120px;
+  height: 200px;
+  bottom: -60px;
   left: 0;
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .platform-section::after {
+    height: 302px;
+    bottom: -120px;
+  }
 }
 
 .platform-section > * {
@@ -438,7 +478,14 @@ h3.platform-fullstack-heading {
   position: relative;
   color: #74726c;
   font-size: 1.125rem;
-  line-height: 1.89;
+  line-height: 1.6;
+}
+
+@media (max-width: 767px) {
+  .work-wrapper {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
 }
 
 .work-step-img {
@@ -452,12 +499,24 @@ h3.platform-fullstack-heading {
 }
 
 .pricing-section {
-  padding: 144px 1rem;
+  padding: 4rem 1rem;
   background-color: #fdfcf9;
 }
 
+@media (min-width: 768px) {
+  .pricing-section {
+    padding: 5rem 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .pricing-section {
+    padding: 6rem 1rem;
+  }
+}
+
 .pricing-section .section-heading {
-  font-size: 56px;
+  font-size: clamp(1.5rem, 4vw, 3.5rem);
   font-weight: 700;
   color: #1e1d1a;
   line-height: 1.25;
@@ -613,6 +672,22 @@ h3.platform-fullstack-heading {
   width: 8.6875rem;
   max-height: none;
   object-fit: contain;
+}
+
+@media (max-width: 767px) {
+  .trust-logo {
+    width: 6rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .trust-logo {
+    width: 5rem;
+  }
+
+  .trust-logos {
+    gap: 1rem;
+  }
 }
 
 .feature-card,
@@ -1094,6 +1169,11 @@ h3.platform-fullstack-heading {
     padding: 1.25rem 0;
   }
 
+  .work-steps-row .work-step {
+    flex-direction: column !important;
+    gap: 0 !important;
+  }
+
   .faq-container {
     width: 100%;
   }
@@ -1129,6 +1209,10 @@ h3.platform-fullstack-heading {
     line-height: 1.27;
   }
 
+  .pricing-section .section-heading {
+    font-size: clamp(1.375rem, 4vw, 1.875rem);
+  }
+
   .features-section .feature-img {
     height: unset;
   }
@@ -1139,6 +1223,12 @@ h3.platform-fullstack-heading {
 
   .testimonial-quote-wrap p {
     font-size: 0.9375rem;
+  }
+
+  .platform-fullstack-heading,
+  .platform-fullstack-list,
+  .platform-section .my-container img {
+    display: none;
   }
 
 
@@ -1174,4 +1264,208 @@ h3.platform-fullstack-heading {
     min-height: 41.25rem;
     border-radius: 1.125rem;
   }
+}
+
+:root {
+  --color-paper: #fdfcf9;
+  /* Warm, tactile paper-stock tone */
+  --color-ink-dark: #121212;
+  /* High-contrast heavy print ink */
+  --color-ink-muted: #595855;
+  /* Subdued, readable secondary charcoal */
+  --color-rust: #4faa3a;
+  /* Safety vest / brick / job-site rust */
+  --color-border-light: #D1CFC7;
+  /* Subtle divider lines reminiscent of blueprint grids */
+  --color-num-faded: #E4E2DB;
+  /* Muted print grey for large backdrop numbers */
+
+  --font-serif: 'Roboto Slab', serif;
+  --font-sans: 'Inter', sans-serif;
+
+  --max-width: 1152px;
+  /* Standard 6xl equivalent max-width */
+}
+
+/* Section Wrapper */
+.onboarding-section {
+  padding: 96px 24px;
+
+  background-color: var(--color-paper);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Lede / Editorial Header Grid */
+.editorial-header {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  padding-bottom: 64px;
+  margin-bottom: 64px;
+}
+
+/* Responsive Grid for Header at 768px (Tablet / Desktop) */
+@media (min-width: 768px) {
+  .editorial-header {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 64px;
+  }
+  .headline-column {
+    grid-column: span 5;
+  }
+  .intro-column {
+    grid-column: span 7;
+  }
+}
+
+/* Typography Elements */
+.main-headline {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--color-ink-dark);
+}
+
+@media (min-width: 768px) {
+  .main-headline {
+    font-size: 4.5rem;
+  }
+}
+
+.headline-sub {
+  color: var(--color-ink-muted);
+  font-size: 2.25rem;
+}
+
+@media (min-width: 768px) {
+  .headline-sub {
+    font-size: 3.75rem;
+  }
+}
+
+.headline-accent {
+  color: var(--color-rust);
+}
+
+/* Pull-Quote Lede Paragraph */
+.pull-quote {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--color-ink-muted);
+  font-weight: 500;
+  border-left: 4px solid var(--color-rust);
+  padding-left: 24px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+@media (min-width: 768px) {
+  .pull-quote {
+    font-size: 1.375rem;
+    padding-left: 32px;
+  }
+}
+
+.pull-quote-strong {
+  color: var(--color-ink-dark);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 1.125rem;
+  display: block;
+  margin-top: 24px;
+}
+
+/* Process Steps Layout */
+.process-subhead {
+  font-family: var(--font-sans);
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: var(--color-ink-muted);
+  text-transform: uppercase;
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--color-border-light);
+  padding-bottom: 16px;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+
+@media (min-width: 768px) {
+  .steps-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px;
+  }
+}
+
+/* Steps / Typography Cards */
+.step-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.step-number {
+  font-family: var(--font-serif);
+  font-size: 120px;
+  line-height: 1;
+  font-weight: 900;
+  color: var(--color-num-faded);
+  margin-bottom: 8px;
+  letter-spacing: -0.05em;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.step-card:hover .step-number {
+  color: var(--color-rust);
+}
+
+.step-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-ink-dark);
+  border-bottom: 4px solid var(--color-ink-dark);
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  display: inline-block;
+  align-self: flex-start;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.step-description {
+  color: var(--color-ink-muted);
+  line-height: 1.6;
+  font-size: 1.125rem;
+}
+
+.step-description-highlight {
+  color: var(--color-ink-dark);
+  font-weight: 700;
+  display: block;
+  margin-top: 12px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.step-italic {
+  font-weight: 900;
+  color: var(--color-ink-dark);
+  font-style: italic;
+  margin: 0.2rem;
 }
