@@ -1,0 +1,158 @@
+---
+import { ArrowRight, Phone, Mail, MapPin } from "lucide-astro";
+
+const industries = [
+  { href: "https://knockio.com/industry/fiber-internet-sales-software-and-crm/", label: "Fiber Sales Software" },
+  { href: "https://knockio.com/industry/electrical-contractor-software/", label: "Electrical Contractor Software" },
+  { href: "https://knockio.com/industry/home-security-sales-software-and-crm/", label: "Home Security Sales Software" },
+  { href: "https://knockio.com/industry/pool-service-software/", label: "Pool Service Software" },
+  { href: "https://knockio.com/industry/junk-removal-software-and-crm/", label: "Junk Removal Software" },
+  { href: "https://knockio.com/industry/garage-door-service-software/", label: "Garage Door Service Software" },
+  { href: "https://knockio.com/industry/painting-contractor-software-and-crm/", label: "Painting Contractor Software" },
+  { href: "https://knockio.com/industry/window-cleaning-business-software/", label: "Window Cleaning Business Software" },
+  { href: "https://knockio.com/industry/landscaping-business-software/", label: "Landscaping Business Software" },
+  { href: "https://knockio.com/industry/restoration-job-management-software/", label: "Restoration Job Management Software" },
+  { href: "https://knockio.com/industry/hvac-software-and-crm/", label: "HVAC Software and CRM" },
+  { href: "https://knockio.com/industry/pest-control-software/", label: "Pest Control Software" },
+  { href: "https://knockio.com/industry/plumbing-software-and-crm/", label: "Plumbing Software" },
+  { href: "https://knockio.com/industry/roofing-sales-software-and-crm/", label: "Roofing Sales Software" },
+  { href: "https://knockio.com/industry/solar-sales-software-and-crm/", label: "Solar Sales Software" },
+];
+
+const socials = [
+  { href: "https://www.facebook.com/knockioapp", label: "Facebook", path: "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" },
+  { href: "https://www.linkedin.com/company/knockio", label: "LinkedIn", path: "M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" },
+  { href: "https://x.com/knockioapp", label: "X", path: "M4 4l11.7 16h4.3L8.3 4H4zm2.7 0L20 20M20 4L4 20" },
+  { href: "https://www.youtube.com/@knockioapp", label: "YouTube", path: "M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33zM9.75 15.02V8.48l5.75 3.27-5.75 3.27z" },
+];
+---
+
+<section class="kh-download">
+  <div class="kh-download-wrap">
+    <div class="kh-download-card">
+      <div class="kh-download-patterns" aria-hidden="true">
+        <div class="kh-pat kh-pat-col1"></div>
+        <div class="kh-pat kh-pat-col2"></div>
+        <div class="kh-pat kh-pat-col3"></div>
+        <div class="kh-pat kh-pat-col4"></div>
+        <div class="kh-pat kh-pat-col5"></div>
+        <div class="kh-pat kh-pat-circle-tl"></div>
+        <div class="kh-pat kh-pat-circle-tl2"></div>
+        <div class="kh-pat kh-pat-ring-lm"></div>
+        <div class="kh-pat kh-pat-ring-lm2"></div>
+        <div class="kh-pat kh-pat-circle-bl"></div>
+        <div class="kh-pat kh-pat-bar-bl"></div>
+        <div class="kh-pat kh-pat-diamond"></div>
+        <div class="kh-pat kh-pat-diamond-dot"></div>
+        <div class="kh-pat kh-pat-tri"></div>
+        <div class="kh-pat kh-pat-tri-block"></div>
+        <div class="kh-pat kh-pat-tri-bar"></div>
+        <div class="kh-pat kh-pat-mr-zone"></div>
+        <div class="kh-pat kh-pat-mr-inner"></div>
+        <div class="kh-pat kh-pat-circle-tr"></div>
+        <div class="kh-pat kh-pat-circle-tr2"></div>
+        <div class="kh-pat kh-pat-rl-zone"></div>
+        <div class="kh-pat kh-pat-rl-inner"></div>
+        <div class="kh-pat kh-pat-bar-tr"></div>
+      </div>
+
+      <div class="kh-download-content">
+        <div class="kh-download-text">
+          <h2>Download the App</h2>
+          <p>Plan campaigns, capture leads, dispatch crews, manage jobs, and update customers from anywhere. Your canvassing and field service work stays connected in one app.</p>
+          <div class="kh-store-btns">
+            <a href="https://play.google.com/store/apps/details?id=com.knockio.crm&hl=en" target="_blank" rel="noopener">
+              <img src="/assets/cfw/google-play-button.webp" alt="Get it on Google Play" width="520" height="154" decoding="async" />
+            </a>
+            <a href="https://apps.apple.com/pk/app/knockio/id6756485440" target="_blank" rel="noopener">
+              <img src="/assets/cfw/apple-store-button.webp" alt="Download on the App Store" width="520" height="154" decoding="async" />
+            </a>
+          </div>
+        </div>
+        <img src="/assets/cfw/cta-mobile-app-screen.webp" alt="Knockio mobile app screen" width="310" height="620" class="kh-app-screen" decoding="async" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="kh-footer">
+  <div class="kh-footer-container">
+    <div class="kh-connect-row">
+      <h2 class="kh-connect-heading">
+        Let's Connect
+        <span class="kh-connect-arrow"><ArrowRight size={32} aria-hidden="true" /></span>
+      </h2>
+      <a href="https://knockio.com/book-a-demo/" class="kh-connect-btn">
+        <span>Get In Touch <ArrowRight size={16} aria-hidden="true" /></span>
+      </a>
+    </div>
+
+    <div class="kh-divider"></div>
+
+    <div class="kh-footer-grid">
+      <div class="kh-footer-brand">
+        <a href="/" class="kh-footer-logo">
+          <img src="/assets/cfw/knockio-logo.webp" alt="Knockio" width="179" height="36" decoding="async" />
+        </a>
+        <div class="kh-contact-list">
+          <div class="kh-contact-item">
+            <Phone size={16} class="text-primary-500 mt-0.5 shrink-0" aria-hidden="true" />
+            <a href="tel:4044901883">(404) 490-1883</a>
+          </div>
+          <div class="kh-contact-item">
+            <Mail size={16} class="text-primary-500 mt-0.5 shrink-0" aria-hidden="true" />
+            <a href="mailto:hello@knockio.com">hello@knockio.com</a>
+          </div>
+          <div class="kh-contact-item">
+            <MapPin size={16} class="text-primary-500 mt-0.5 shrink-0" aria-hidden="true" />
+            <address>29669 Pelzer, SC, USA</address>
+          </div>
+        </div>
+      </div>
+
+      <div class="kh-footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="https://knockio.com/">Home</a></li>
+          <li><a href="https://knockio.com/pricing/">Pricing</a></li>
+          <li><a href="https://knockio.com/blog/">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="kh-footer-col">
+        <h4>Policies</h4>
+        <ul>
+          <li><a href="https://knockio.com/terms-and-conditions/">Terms and Conditions</a></li>
+          <li><a href="https://knockio.com/privacy-policy/">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="kh-footer-industries">
+        <h4>Industries</h4>
+        <div class="kh-industry-grid">
+          {industries.map(({ href, label }) => (
+            <a href={href}>{label}</a>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div class="kh-divider"></div>
+
+    <div class="kh-footer-bottom">
+      <p>&copy; {new Date().getFullYear()} Knockio. All Rights Reserved</p>
+      <div class="kh-socials">
+        {socials.map(({ href, label, path }) => (
+          <a href={href} aria-label={label} class="kh-social-btn" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d={path} /></svg>
+          </a>
+        ))}
+      </div>
+      <div class="kh-footer-legal">
+        <a href="https://knockio.com/privacy-policy/">Privacy</a>
+        <span aria-hidden="true">/</span>
+        <a href="https://knockio.com/terms-and-conditions/">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>

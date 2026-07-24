@@ -1,0 +1,92 @@
+---
+import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
+import "../../styles/comparisons.css";
+
+const title = "Knockio vs Jobber, SPOTIO, JobNimbus, ServiceTitan and More: Honest Comparisons";
+const description = "Honest, sourced comparisons of Knockio against Jobber, SPOTIO, JobNimbus, ServiceTitan, Housecall Pro, and FieldPulse.";
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://knockio.com/" },
+      { "@type": "ListItem", position: 2, name: "Comparisons", item: "https://knockio.com/comparisons/" },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Knockio comparisons",
+    numberOfItems: 6,
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Knockio vs Jobber", url: "https://knockio.com/comparisons/knockio-vs-jobber/" },
+      { "@type": "ListItem", position: 2, name: "Knockio vs SPOTIO", url: "https://knockio.com/comparisons/knockio-vs-spotio/" },
+      { "@type": "ListItem", position: 3, name: "Knockio vs JobNimbus", url: "https://knockio.com/comparisons/knockio-vs-jobnimbus/" },
+      { "@type": "ListItem", position: 4, name: "Knockio vs ServiceTitan", url: "https://knockio.com/comparisons/knockio-vs-servicetitan/" },
+      { "@type": "ListItem", position: 5, name: "Knockio vs Housecall Pro", url: "https://knockio.com/comparisons/knockio-vs-housecall-pro/" },
+      { "@type": "ListItem", position: 6, name: "Knockio vs FieldPulse", url: "https://knockio.com/comparisons/knockio-vs-fieldpulse/" },
+    ],
+  },
+];
+---
+
+<KnockioHomeLayout title={title} description={description} jsonLd={jsonLd}>
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <span class="kicker">Honest comparisons</span>
+        <h1>How Knockio stacks up.</h1>
+        <p class="lede">Every page below is built from vendor pricing pages and independent review sites, with sources and dates attached. We name what each competitor does well, we say where Knockio wins, and where a vendor hides its pricing we tell you that too.</p>
+        <div class="hub-grid">
+          <a class="hub-card" href="/comparisons/knockio-vs-jobber/">
+            <h2><em>Knockio vs</em>Jobber</h2>
+            <p>A mature tool for inbound work. Knockio adds the canvassing, pipeline, and territory mapping it does not offer.</p>
+            <span class="more">Read the comparison &rarr;</span>
+          </a>
+          <a class="hub-card" href="/comparisons/knockio-vs-spotio/">
+            <h2><em>Knockio vs</em>SPOTIO</h2>
+            <p>A field sales specialist that stops at the sale. Knockio runs the job through to payment.</p>
+            <span class="more">Read the comparison &rarr;</span>
+          </a>
+          <a class="hub-card" href="/comparisons/knockio-vs-jobnimbus/">
+            <h2><em>Knockio vs</em>JobNimbus</h2>
+            <p>A roofing first CRM with quote only pricing. Knockio adds canvassing and publishes its price.</p>
+            <span class="more">Read the comparison &rarr;</span>
+          </a>
+          <a class="hub-card" href="/comparisons/knockio-vs-servicetitan/">
+            <h2><em>Knockio vs</em>ServiceTitan</h2>
+            <p>The enterprise standard for large operations. Knockio serves the teams it prices out.</p>
+            <span class="more">Read the comparison &rarr;</span>
+          </a>
+          <a class="hub-card" href="/comparisons/knockio-vs-housecall-pro/">
+            <h2><em>Knockio vs</em>Housecall Pro</h2>
+            <p>Polished and popular, with paid add ons. Knockio includes the whole platform at one flat price.</p>
+            <span class="more">Read the comparison &rarr;</span>
+          </a>
+          <a class="hub-card" href="/comparisons/knockio-vs-fieldpulse/">
+            <h2><em>Knockio vs</em>FieldPulse</h2>
+            <p>The closest match on core features. Knockio adds the front of the funnel and a public price.</p>
+            <span class="more">Read the comparison &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="notes">
+      <div class="wrap">
+        <h2>How these comparisons are made</h2>
+        <p>Each one is researched from public sources: vendor pricing and product pages plus review platforms such as G2 and Capterra. Every figure carries the date we checked it, every page lists its sources, and anything a vendor does not publish is marked as not publicly disclosed rather than guessed. These pages are published by Knockio, so we have a stake in the outcome. That is exactly why we keep them honest. If you find anything out of date, tell us and we will fix it.</p>
+      </div>
+    </div>
+
+    <section class="cta">
+      <h2>The fastest comparison is a demo.</h2>
+      <p>Twenty minutes with your real workflow on screen beats any table.</p>
+      <div class="cta-buttons">
+        <a class="btn btn-green" href="https://knockio.com/book-a-demo/">Book a demo</a>
+        <a class="btn btn-outline" href="https://knockio.com/pricing/">See pricing</a>
+      </div>
+    </section>
+  </main>
+</KnockioHomeLayout>

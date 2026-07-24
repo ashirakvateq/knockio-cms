@@ -1,0 +1,161 @@
+---
+import KnockioHomeLayout from "../layouts/KnockioHomeLayout.astro";
+
+const title = "Knockio Features: Every Field Sales and Service Tool in One Platform";
+const description = "Explore all fifteen Knockio features: sales pipeline, canvassing, territory management, estimates, invoicing, payments, automations, GPS tracking, and more. Included on every plan.";
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://knockio.com/" },
+      { "@type": "ListItem", position: 2, name: "Features", item: "https://knockio.com/features/" },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Knockio Features",
+    numberOfItems: 15,
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Sales Pipeline", url: "https://knockio.com/features/sales-pipeline-software/" },
+      { "@type": "ListItem", position: 2, name: "Estimates", url: "https://knockio.com/features/estimate-software/" },
+      { "@type": "ListItem", position: 3, name: "Inventory", url: "https://knockio.com/features/inventory-management-software/" },
+      { "@type": "ListItem", position: 4, name: "Invoicing", url: "https://knockio.com/features/invoicing-software/" },
+      { "@type": "ListItem", position: 5, name: "Work Orders", url: "https://knockio.com/features/work-order-management-software/" },
+      { "@type": "ListItem", position: 6, name: "Appointments", url: "https://knockio.com/features/appointment-scheduling-software/" },
+      { "@type": "ListItem", position: 7, name: "Payment Processing", url: "https://knockio.com/features/payment-processing/" },
+      { "@type": "ListItem", position: 8, name: "E-Contracts", url: "https://knockio.com/features/e-contracts-software/" },
+      { "@type": "ListItem", position: 9, name: "Call Text and Email", url: "https://knockio.com/features/business-texting-and-calling-software/" },
+      { "@type": "ListItem", position: 10, name: "User Management", url: "https://knockio.com/features/user-management-software/" },
+      { "@type": "ListItem", position: 11, name: "Territory Management", url: "https://knockio.com/features/territory-management-software/" },
+      { "@type": "ListItem", position: 12, name: "Sales Canvassing", url: "https://knockio.com/features/sales-canvassing-software/" },
+      { "@type": "ListItem", position: 13, name: "GPS Tracking", url: "https://knockio.com/features/gps-tracking-software/" },
+      { "@type": "ListItem", position: 14, name: "Automations", url: "https://knockio.com/features/business-automation-software/" },
+      { "@type": "ListItem", position: 15, name: "Reports and Analytics", url: "https://knockio.com/features/reporting-software/" },
+    ],
+  },
+];
+---
+
+<KnockioHomeLayout title={title} description={description} jsonLd={jsonLd}>
+  <main>
+
+    <section class="hero">
+      <div class="wrap">
+        <span class="kicker">Knockio features</span>
+        <h1>Everything you need to manage field sales and service.</h1>
+        <p class="lede">Fifteen features, one connected platform. Every tool below is included on every Knockio plan, from the first knock at the door to the final payment, with nothing sold separately as an add on.</p>
+        <div class="dir-grid">
+          <a class="dir-card" href="https://knockio.com/features/sales-pipeline-software/">
+            <span class="dir-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18l-7 8v5l-4 2v-7L3 5z"/></svg></span>
+            <h2>Sales Pipeline</h2>
+            <p>See every deal, its stage, and its value in one view, and move work forward before it goes cold.</p>
+            <span class="more">Learn more &rarr;</span>
+          </a>
+          <a class="dir-card" href="https://knockio.com/features/estimate-software/">
+            <span class="dir-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3h6l4 4v14H8z"/><path d="M14 3v4h4"/><path d="M11 12h4M11 16h4"/></svg></span>
+            <h2>Estimates</h2>
+            <p>Build accurate estimates in the field or the office and send them for approval in minutes.</p>
+            <span class="more">Learn more &rarr;</span>
+          </a>
+          <a class="dir-card" href="https://knockio.com/features/inventory-management-software/">
+            <span class="dir-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7l-8-4z"/><path d="M4 7l8 4 8-4"/><path d="M12 11v10"/></svg></span>
+            <h2>Inventory</h2>
+            <p>Track materials and stock against jobs so costs stay real and nothing runs out mid job.</p>
+            <span class="more">Learn more &rarr;</span>
+          </a>
+          <a class="dir-card" href="https://knockio.com/features/invoicing-software/">
+            <span class="dir-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2V3z"/><path d="M9 8h6M9 12h6"/></svg></span>
+            <h2>Invoicing</h2>
+            <p>Turn a finished job into a sent invoice in under a minute, straight from the job record.</p>
+            <span class="more">Learn more &rarr;</span>
+          </a>
+          <a class="dir-card" href="https://knockio.com/features/work-order-management-software/">
+            <span class="dir-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="5" width="14" height="16" rx="2"/><path d="M9 5V3h6v2"/><path d="M9 11h6M9 15h4"/></svg></span>
+            <h2>Work Orders</h2>
+            <p>Give crews clear work orders with scope, notes, and photos attached to every job.</p>
+            <span class="more">Learn more &rarr;</span>
+          </a>
+          <a class="dir-card" href="https://knockio.com/features/appointment-scheduling-software/">
+            <span class="dir-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 10h16"/><path d="M8 3v4M16 3v4"/></svg></span>
+            <h2>Appointments</h2>
+            <p>Book and manage appointments on a shared calendar the field and the office both see.</p>
+            <span class="more">Learn more &rarr;</span>
+          </a>
+          <a class="dir-card" href="https://knockio.com/features/payment-processing/">
+            <span class="dir-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg></span>
+            <h2>Payment Processing</h2>
+            <p>Collect payments online or on site and keep every transaction tied to its job.</p>
+            <span class="more">Learn more &rarr;</span>
+          </a>
+          <a class="dir-card" href="https://knockio.com/features/e-contracts-software/">
+            <span class="dir-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l4-1L19 8l-3-3L5 16l-1 4z"/><path d="M13 6l3 3"/></svg></span>
+            <h2>E-Contracts</h2>
+            <p>Close on the spot with digital contracts and legally binding electronic signatures.</p>
+            <span class="more">Learn more &rarr;</span>
+          </a>
+          <a class="dir-card" href="https://knockio.com/features/business-texting-and-calling-software/">
+            <span class="dir-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 14a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+            <h2>Call Text and Email</h2>
+            <p>Every call, text, and email logged on the customer record, wherever the conversation happens.</p>
+            <span class="more">Learn more &rarr;</span>
+          </a>
+          <a class="dir-card" href="https://knockio.com/features/user-management-software/">
+            <span class="dir-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M4 20c0-3 2-5 5-5s5 2 5 5"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 15c3 0 4.5 2 4.5 5"/></svg></span>
+            <h2>User Management</h2>
+            <p>Control roles, permissions, and access for office staff, reps, and crews from one place.</p>
+            <span class="more">Learn more &rarr;</span>
+          </a>
+          <a class="dir-card" href="https://knockio.com/features/territory-management-software/">
+            <span class="dir-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg></span>
+            <h2>Territory Management</h2>
+            <p>Draw territories on the map, assign reps, and keep coverage clean with no overlap.</p>
+            <span class="more">Learn more &rarr;</span>
+          </a>
+          <a class="dir-card" href="https://knockio.com/features/sales-canvassing-software/">
+            <span class="dir-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="1"/><circle cx="15" cy="12" r="1"/></svg></span>
+            <h2>Sales Canvassing</h2>
+            <p>Log every knock, outcome, and follow up from the doorstep with a mobile first canvassing tool.</p>
+            <span class="more">Learn more &rarr;</span>
+          </a>
+          <a class="dir-card" href="https://knockio.com/features/gps-tracking-software/">
+            <span class="dir-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="7"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><circle cx="12" cy="12" r="2"/></svg></span>
+            <h2>GPS Tracking</h2>
+            <p>See reps and crews on a live map so you always know who is where during the day.</p>
+            <span class="more">Learn more &rarr;</span>
+          </a>
+          <a class="dir-card" href="https://knockio.com/features/business-automation-software/">
+            <span class="dir-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></span>
+            <h2>Automations</h2>
+            <p>Automate tasks, reminders, follow ups, and updates so the busywork runs itself.</p>
+            <span class="more">Learn more &rarr;</span>
+          </a>
+          <a class="dir-card" href="https://knockio.com/features/reporting-software/">
+            <span class="dir-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20v-8M11 20V6M17 20v-9"/><path d="M3 20h18"/></svg></span>
+            <h2>Reports and Analytics</h2>
+            <p>Understand sales, jobs, and team performance with reports built for field businesses.</p>
+            <span class="more">Learn more &rarr;</span>
+          </a>
+        </div>
+        <div class="crossband">
+          <div>
+            <h2>See Knockio for your industry</h2>
+            <p>One platform, first knock to final payment. Everything works together because it was built together.</p>
+          </div>
+          <a class="btn btn-outline" href="/industries/">Browse industries</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>See it all working together.</h2>
+      <p>A 20 minute demo with your real workflow on screen, from the first knock to the final payment.</p>
+      <div class="cta-buttons">
+        <a class="btn btn-green" href="https://knockio.com/book-a-demo/">Book a demo</a>
+        <a class="btn btn-outline" href="https://knockio.com/pricing/">See pricing</a>
+      </div>
+    </section>
+  </main>
+</KnockioHomeLayout>

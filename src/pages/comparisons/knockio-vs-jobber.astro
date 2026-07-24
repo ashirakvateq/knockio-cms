@@ -1,0 +1,209 @@
+---
+import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
+import "../../styles/comparisons.css";
+
+const title = "Knockio vs Jobber (2026): Canvassing Plus Job Management Compared";
+const description = "An honest, sourced comparison of Knockio and Jobber for home service companies: canvassing, pipeline, scheduling, invoicing, and pricing.";
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://knockio.com/" },
+      { "@type": "ListItem", position: 2, name: "Comparisons", item: "https://knockio.com/comparisons/" },
+      { "@type": "ListItem", position: 3, name: "Knockio vs Jobber", item: "https://knockio.com/comparisons/knockio-vs-jobber/" },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Does Jobber have door knocking or canvassing?",
+        acceptedAnswer: { "@type": "Answer", text: "No. Jobber is built for booked, inbound service work. Knockio includes canvassing, territory assignment, and live rep tracking in the same platform as job management." },
+      },
+      {
+        "@type": "Question",
+        name: "Is Knockio cheaper than Jobber?",
+        acceptedAnswer: { "@type": "Answer", text: "It depends on team size. Jobber runs $49 to $499 per month by tier with extra users at $29 each, as of July 2026. Knockio is a flat $20 to $60 per user per month with everything included. Compare on your real user count." },
+      },
+      {
+        "@type": "Question",
+        name: "Does Jobber integrate with QuickBooks?",
+        acceptedAnswer: { "@type": "Answer", text: "Yes, QuickBooks Online sync is one of its stronger points, though some users report fixing sync errors by hand." },
+      },
+      {
+        "@type": "Question",
+        name: "Which is better for a roofing or exterior sales company?",
+        acceptedAnswer: { "@type": "Answer", text: "If you sell at the door and manage production, Knockio fits that motion. Jobber suits recurring residential trades like lawn care and cleaning." },
+      },
+    ],
+  },
+];
+---
+
+<KnockioHomeLayout title={title} description={description} jsonLd={jsonLd}>
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <span class="kicker">Comparison</span>
+        <h1>Knockio vs Jobber</h1>
+        <p class="lede">Jobber is one of the most established field service platforms for small residential companies, and it earns its reputation for inbound, recurring work. <b>Knockio covers the same quote to schedule to invoice workflow and adds what Jobber does not offer: door to door canvassing, sales pipelines, and territory mapping in one system.</b></p>
+        <p class="byline">Last reviewed July 2026 &middot; Written by the Knockio team &middot; Every figure is sourced below</p>
+        <div class="verdict">
+          <h2>The short answer</h2>
+          <p>If you sell in the field, pick Knockio. You get canvassing, pipeline, scheduling, and invoicing on one flat published price. Jobber is the better pick only when your work is entirely inbound and recurring.</p>
+        </div>
+        <div class="choose">
+          <div>
+            <h3>Choose Knockio if</h3>
+            <ul>
+              <li>You knock doors or sell in the field</li>
+              <li>You want pipeline, scheduling, and invoicing in one login</li>
+              <li>You want one flat price with every feature included</li>
+              <li>You want to be live the same day</li>
+            </ul>
+          </div>
+          <div class="them">
+            <h3>Choose Jobber if</h3>
+            <ul>
+              <li>Your work is inbound and recurring, with no field sales</li>
+              <li>You want a long established tool with a big app marketplace</li>
+              <li>You rely on deep QuickBooks Online sync</li>
+              <li>Years of accumulated reviews matter more to you than breadth</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Side by side</h2>
+        <p class="section-note">What each platform covers out of the box. Partial means the capability exists but is limited or costs extra.</p>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr><th>Capability</th><th class="c kn">Knockio</th><th class="c">Jobber</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Canvassing and door knocking</td><td class="c kn"><span class="yes">&#10003;</span></td><td class="c"><span class="no">&#10005;</span></td></tr>
+              <tr><td>Sales pipeline and CRM</td><td class="c kn"><span class="yes">&#10003;</span></td><td class="c"><span class="partial">Partial</span><span class="cell-note">Client manager, not a full pipeline</span></td></tr>
+              <tr><td>Estimates and proposals</td><td class="c kn"><span class="yes">&#10003;</span></td><td class="c"><span class="yes">&#10003;</span></td></tr>
+              <tr><td>Crew and job scheduling</td><td class="c kn"><span class="yes">&#10003;</span></td><td class="c"><span class="yes">&#10003;</span></td></tr>
+              <tr><td>Timesheets and time tracking</td><td class="c kn"><span class="yes">&#10003;</span></td><td class="c"><span class="yes">&#10003;</span></td></tr>
+              <tr><td>Invoicing and payments</td><td class="c kn"><span class="yes">&#10003;</span></td><td class="c"><span class="yes">&#10003;</span></td></tr>
+              <tr><td>Inventory and vendor bills</td><td class="c kn"><span class="yes">&#10003;</span></td><td class="c"><span class="no">&#10005;</span></td></tr>
+              <tr><td>Automations</td><td class="c kn"><span class="yes">&#10003;</span></td><td class="c"><span class="yes">&#10003;</span></td></tr>
+              <tr><td>Map view of jobs</td><td class="c kn"><span class="yes">&#10003;</span></td><td class="c"><span class="yes">&#10003;</span></td></tr>
+              <tr><td>Mobile app for field crews</td><td class="c kn"><span class="yes">&#10003;</span></td><td class="c"><span class="yes">&#10003;</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-foot">Verified from public sources as of July 2026. Sources at the end of this page.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Pricing</h2>
+        <p class="section-note">Prices change. Confirm current figures on each vendor site before you buy.</p>
+        <div class="price-grid">
+          <div class="price-card kn">
+            <h3>Knockio</h3>
+            <p>$20 to $60 per user per month, published, with every feature included on every plan. As of July 2026, knockio.com.</p>
+          </div>
+          <div class="price-card">
+            <h3>Jobber</h3>
+            <p>Published tiers from $49 per month for one user to $499 per month for 15 users, with extra users at $29 each. Annual billing lowers these rates. As of July 2026, getjobber.com.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="read">
+      <div class="wrap">
+        <h2>The honest read</h2>
+        <h3>What Jobber does well</h3>
+        <ul>
+          <li>Mature and widely trusted, used by more than 250,000 home service pros</li>
+          <li>Published pricing you can evaluate without a sales call</li>
+          <li>A polished flow from quote to schedule to invoice to payment</li>
+          <li>Native QuickBooks Online sync and a large app marketplace</li>
+        </ul>
+        <h3>Where it can fall short</h3>
+        <ul>
+          <li>Reporting depth is the most common complaint in reviews</li>
+          <li>Per user fees grow quickly as the team scales</li>
+          <li>Some capabilities sit behind higher tiers or paid add ons</li>
+          <li>No canvassing or territory sales tooling at all</li>
+        </ul>
+        <h3>Why teams pick Knockio instead</h3>
+        <p>The clearest difference is where the work starts. Jobber begins when a job is booked. <b>Knockio begins at the door</b>, then carries the same record through the sale, the schedule, the field, and the invoice. Nothing gets re typed between a sales app and a service tool.</p>
+        <p>Both publish pricing, which counts in both their favor. Jobber bills per plan tier plus per extra user. Knockio is a flat $20 to $60 per user per month with every feature included, which stays predictable as the crew grows.</p>
+        <h3>What to know before choosing Knockio</h3>
+        <p>Knockio is a newer platform, so its integration marketplace and review history are smaller than long established tools. The upside of newer is speed: published pricing, same day setup, and a product that ships quickly. Pressure test everything on a live demo rather than taking our word for it.</p>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="wrap">
+        <h2>Common questions</h2>
+        <details>
+          <summary>Does Jobber have door knocking or canvassing?</summary>
+          <div class="answer">No. Jobber is built for booked, inbound service work. Knockio includes canvassing, territory assignment, and live rep tracking in the same platform as job management.</div>
+        </details>
+        <details>
+          <summary>Is Knockio cheaper than Jobber?</summary>
+          <div class="answer">It depends on team size. Jobber runs $49 to $499 per month by tier with extra users at $29 each, as of July 2026. Knockio is a flat $20 to $60 per user per month with everything included. Compare on your real user count.</div>
+        </details>
+        <details>
+          <summary>Does Jobber integrate with QuickBooks?</summary>
+          <div class="answer">Yes, QuickBooks Online sync is one of its stronger points, though some users report fixing sync errors by hand.</div>
+        </details>
+        <details>
+          <summary>Which is better for a roofing or exterior sales company?</summary>
+          <div class="answer">If you sell at the door and manage production, Knockio fits that motion. Jobber suits recurring residential trades like lawn care and cleaning.</div>
+        </details>
+      </div>
+    </section>
+
+    <div class="notes">
+      <div class="wrap">
+        <h2>How we compared these</h2>
+        <p>This page is built from vendor pricing and product pages plus independent review sites such as G2 and Capterra. Where a vendor does not publish a figure we say so rather than estimate. Knockio publishes this page, so we have a stake in the outcome. That is exactly why we keep it honest, and why we name what Jobber does well. Spot something out of date? Tell us and we will fix it.</p>
+        <ul>
+          <li><a href="https://www.getjobber.com/pricing/" rel="nofollow noopener" target="_blank">Jobber pricing, getjobber.com</a>. Accessed July 2026.</li>
+          <li><a href="https://www.getjobber.com/features/" rel="nofollow noopener" target="_blank">Jobber features, getjobber.com</a>. Accessed July 2026.</li>
+          <li><a href="https://www.capterra.com/p/127994/Jobber/" rel="nofollow noopener" target="_blank">Jobber reviews, Capterra, 4.6 of 5 from about 1,463 reviews</a>. Accessed July 2026.</li>
+          <li><a href="https://www.g2.com/products/jobber/reviews" rel="nofollow noopener" target="_blank">Jobber reviews, G2, 4.6 of 5 from about 478 reviews</a>. Accessed July 2026.</li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="cta">
+      <h2>See Knockio on your own workflow.</h2>
+      <p>Twenty minutes, your real process, live on screen. Then decide with your own eyes.</p>
+      <div class="cta-buttons">
+        <a class="btn btn-green" href="https://knockio.com/book-a-demo/">Book a demo</a>
+        <a class="btn btn-outline" href="https://knockio.com/pricing/">See pricing</a>
+      </div>
+    </section>
+
+    <section class="related">
+      <div class="wrap">
+        <h2>More comparisons</h2>
+        <div class="related-links">
+          <a href="/comparisons/">All comparisons</a>
+          <a href="/comparisons/knockio-vs-spotio/">Knockio vs SPOTIO</a>
+          <a href="/comparisons/knockio-vs-jobnimbus/">Knockio vs JobNimbus</a>
+          <a href="/comparisons/knockio-vs-servicetitan/">Knockio vs ServiceTitan</a>
+          <a href="/comparisons/knockio-vs-housecall-pro/">Knockio vs Housecall Pro</a>
+          <a href="/comparisons/knockio-vs-fieldpulse/">Knockio vs FieldPulse</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</KnockioHomeLayout>

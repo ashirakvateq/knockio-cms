@@ -1,0 +1,63 @@
+---
+import "@fontsource-variable/manrope";
+import "../styles/global.css";
+import "../styles/knockio-home.css";
+import SEO from "../components/SEO.astro";
+import Analytics from "../components/Analytics.astro";
+import KnockioHomeHeader from "../components/KnockioHomeHeader.astro";
+import KnockioHomeFooter from "../components/KnockioHomeFooter.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  jsonLd?: unknown;
+}
+
+const { title, description, ogImage, jsonLd } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/webp"
+      sizes="32x32"
+      href="/assets/canvassing-app/favicon-32.webp"
+    />
+    <link
+      rel="icon"
+      type="image/webp"
+      sizes="192x192"
+      href="/assets/canvassing-app/favicon-192.webp"
+    />
+    <link
+      rel="preconnect"
+      href="https://www.googletagmanager.com"
+      crossorigin
+    />
+    <SEO title={title} description={description} ogImage={ogImage} />
+    {
+      jsonLd && (
+        <script
+          is:inline
+          type="application/ld+json"
+          set:html={JSON.stringify(jsonLd)}
+        />
+      )
+    }
+    <Analytics />
+  </head>
+  <body>
+    <Analytics placement="body" />
+
+    <KnockioHomeHeader />
+
+    <slot />
+
+    <KnockioHomeFooter />
+  </body>
+</html>

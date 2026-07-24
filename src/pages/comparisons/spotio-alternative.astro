@@ -1,0 +1,427 @@
+---
+import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
+import "../../styles/spotio-alternative.css";
+import essentialsScript from "../../scripts/essentials.js?url";
+
+const title = "The Best SPOTIO Alternative for Field Sales & Service Teams | Knockio";
+const description = "See why Knockio is the top SPOTIO alternative — combining premium field routing and territory management with a full service CRM, dispatch, and invoicing in one platform.";
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://knockio.com/" },
+      { "@type": "ListItem", position: 2, name: "SPOTIO Alternative", item: "https://knockio.com/comparisons/spotio-alternative/" },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Is Knockio a good alternative to SPOTIO?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. Knockio is the ideal SPOTIO alternative for sales and service businesses. It provides the same robust territory mapping and live rep tracking, but natively includes the back-office tools (dispatching, estimates, and billing) that SPOTIO lacks.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What does SPOTIO do well?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "SPOTIO focuses strictly on routing and tracking outside sales reps, but that's where their platform ends. Because it is purely a sales tool, teams are forced to manually transfer closed-won deals into a completely separate operational platform just to schedule the job.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Why would a team switch from SPOTIO to Knockio?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Businesses switch to Knockio to consolidate their software expenses and eliminate data entry errors. Instead of paying for a standalone field sales app and a separate service CRM, Knockio provides a true all-in-one environment. A prospect pinned in the field can be sent a digital contract and scheduled for service without ever leaving the Knockio app.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is Knockio better for companies that both sell and deliver services?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. If your company relies on reps to hunt for business in the field and technicians to fulfill the work (like solar, roofing, or HVAC), Knockio is custom-built for your workflow. It perfectly bridges the gap between the initial handshake and the final invoice.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What makes Knockio a stronger alternative to SPOTIO?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "SPOTIO caters only to the front lines, meaning it stops working the moment the contract is signed. Knockio is stronger because it carries the baton all the way to the finish line, combining elite prospecting features with a complete operational CRM.",
+        },
+      },
+    ],
+  },
+];
+---
+
+<KnockioHomeLayout title={title} description={description} jsonLd={jsonLd}>
+  <main>
+    <!-- Hero Section -->
+    <section class="sa-hero">
+      <div class="my-container">
+        <div class="sa-hero-text">
+          <h1>The SPOTIO Alternative That Doesn't Stop at the Pitch</h1>
+          <p class="sa-hero-desc">
+            SPOTIO is built purely to track field activity, but it abandons your operations team the moment a deal actually closes. Stop forcing your reps to bridge the gap with disconnected apps. Knockio seamlessly combines premium field routing and territory management with a heavy-duty service CRM, bringing your field reps and back office into one unified system.
+          </p>
+          <div class="sa-hero-btns">
+            <a href="#cal-sec" class="sa-btn sa-btn-green">Schedule a Demo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- G2 Badges + Comparison Table -->
+    <section class="sa-compare">
+      <div class="my-container">
+        <!-- Badges -->
+        <div class="sa-badges">
+          <img src="/assets/cfw/spotio/g2-leader-badge-1.webp" alt="G2 Leader Badge" class="sa-badge" />
+          <img src="/assets/cfw/spotio/g2-high-performer-badge-1.webp" alt="G2 High Performer Badge" class="sa-badge" />
+          <img src="/assets/cfw/spotio/g2-best-support-badge-1.webp" alt="G2 Best Support Badge" class="sa-badge" />
+          <img src="/assets/cfw/spotio/g2-best-roi-badge-1.webp" alt="G2 Best ROI Badge" class="sa-badge" />
+        </div>
+
+        <!-- Header -->
+        <div class="sa-compare-header">
+          <h2>Knockio <span class="sa-text-green">vs</span> Spotio</h2>
+          <p>Don't sacrifice your field tools. See how Knockio delivers the high-level territory mapping your outside reps demand, while completely eliminating the need for expensive, third-party CRM integrations</p>
+        </div>
+
+        <!-- Desktop / Tablet Table -->
+        <div class="sa-table-wrap">
+          <table class="sa-table">
+            <thead>
+              <tr class="sa-table-head">
+                <th class="sa-th-feature">MAIN FEATURE COMPARISON</th>
+                <th class="sa-th-brand">Knockio</th>
+                <th class="sa-th-brand">Spotio</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="sa-row-white">
+                <td>Door to door sales CRM</td>
+                <td class="sa-td-center"><svg class="sa-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="sa-td-center"><svg class="sa-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+              <tr class="sa-row-green">
+                <td>Territory management</td>
+                <td class="sa-td-center"><svg class="sa-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="sa-td-center"><svg class="sa-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+              <tr class="sa-row-white">
+                <td>Route optimization</td>
+                <td class="sa-td-center"><svg class="sa-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="sa-td-center"><svg class="sa-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+              <tr class="sa-row-green">
+                <td>Lead management</td>
+                <td class="sa-td-center"><svg class="sa-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="sa-td-center"><svg class="sa-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+              <tr class="sa-row-white">
+                <td>Real time rep activity tracking</td>
+                <td class="sa-td-center"><svg class="sa-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="sa-td-center"><svg class="sa-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+              <tr class="sa-row-green">
+                <td>Digital proposals</td>
+                <td class="sa-td-center"><svg class="sa-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="sa-td-center"><svg class="sa-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+              <tr class="sa-row-white">
+                <td>E contracts and e signatures</td>
+                <td class="sa-td-center"><svg class="sa-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="sa-td-center"><svg class="sa-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+              <tr class="sa-row-green">
+                <td>Invoicing and payment tracking</td>
+                <td class="sa-td-center"><svg class="sa-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="sa-td-center"><svg class="sa-icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td>
+              </tr>
+              <tr class="sa-row-white">
+                <td>Sales to service handoff</td>
+                <td class="sa-td-center"><svg class="sa-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="sa-td-center"><svg class="sa-icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td>
+              </tr>
+              <tr class="sa-row-green">
+                <td>Field service CRM</td>
+                <td class="sa-td-center"><svg class="sa-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="sa-td-center"><svg class="sa-icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td>
+              </tr>
+              <tr class="sa-row-white">
+                <td>Notification preferences</td>
+                <td class="sa-td-center"><svg class="sa-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="sa-td-center"><svg class="sa-icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td>
+              </tr>
+              <tr class="sa-row-green">
+                <td>From Sales Lead to Job Completion</td>
+                <td class="sa-td-center"><svg class="sa-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="sa-td-center"><svg class="sa-icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td>
+              </tr>
+              <tr class="sa-row-white">
+                <td>Setup Fee</td>
+                <td class="sa-td-center"><svg class="sa-icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td>
+                <td class="sa-td-center"><svg class="sa-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+              <tr class="sa-row-green">
+                <td>Prorated Billing</td>
+                <td class="sa-td-center"><svg class="sa-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td class="sa-td-center"><svg class="sa-icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td>
+              </tr>
+              <tr class="sa-row-white">
+                <td>Minimum User Requirement</td>
+                <td class="sa-td-center"><svg class="sa-icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></td>
+                <td class="sa-td-center"><svg class="sa-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Mobile Table Cards -->
+        <div class="sa-mobile-table">
+          <div class="sa-mobile-card">
+            <div class="sa-mobile-header">
+              <span>MAIN FEATURE COMPARISON</span>
+              <span class="sa-mobile-brand">Knockio</span>
+              <span class="sa-mobile-brand">Spotio</span>
+            </div>
+            <div class="sa-mobile-rows">
+              <div class="sa-mobile-row sa-mr-white">
+                <span>Door to door sales CRM</span>
+                <span class="sa-mobile-ic"><svg class="sa-icon-check-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span class="sa-mobile-ic"><svg class="sa-icon-check-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              </div>
+              <div class="sa-mobile-row sa-mr-green">
+                <span>Territory management</span>
+                <span class="sa-mobile-ic"><svg class="sa-icon-check-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span class="sa-mobile-ic"><svg class="sa-icon-check-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              </div>
+              <div class="sa-mobile-row sa-mr-white">
+                <span>Route optimization</span>
+                <span class="sa-mobile-ic"><svg class="sa-icon-check-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span class="sa-mobile-ic"><svg class="sa-icon-check-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              </div>
+              <div class="sa-mobile-row sa-mr-green">
+                <span>Lead management</span>
+                <span class="sa-mobile-ic"><svg class="sa-icon-check-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span class="sa-mobile-ic"><svg class="sa-icon-check-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              </div>
+              <div class="sa-mobile-row sa-mr-white">
+                <span>Real time rep activity tracking</span>
+                <span class="sa-mobile-ic"><svg class="sa-icon-check-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span class="sa-mobile-ic"><svg class="sa-icon-check-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              </div>
+              <div class="sa-mobile-row sa-mr-green">
+                <span>Digital proposals</span>
+                <span class="sa-mobile-ic"><svg class="sa-icon-check-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span class="sa-mobile-ic"><svg class="sa-icon-check-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              </div>
+              <div class="sa-mobile-row sa-mr-white">
+                <span>E contracts and e signatures</span>
+                <span class="sa-mobile-ic"><svg class="sa-icon-check-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span class="sa-mobile-ic"><svg class="sa-icon-check-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              </div>
+              <div class="sa-mobile-row sa-mr-green">
+                <span>Invoicing and payment tracking</span>
+                <span class="sa-mobile-ic"><svg class="sa-icon-check-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span class="sa-mobile-ic"><svg class="sa-icon-x-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+              </div>
+              <div class="sa-mobile-row sa-mr-white">
+                <span>Sales to service handoff</span>
+                <span class="sa-mobile-ic"><svg class="sa-icon-check-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span class="sa-mobile-ic"><svg class="sa-icon-x-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+              </div>
+              <div class="sa-mobile-row sa-mr-green">
+                <span>Field service CRM</span>
+                <span class="sa-mobile-ic"><svg class="sa-icon-check-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span class="sa-mobile-ic"><svg class="sa-icon-x-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+              </div>
+              <div class="sa-mobile-row sa-mr-white">
+                <span>Notification preferences</span>
+                <span class="sa-mobile-ic"><svg class="sa-icon-check-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span class="sa-mobile-ic"><svg class="sa-icon-x-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+              </div>
+              <div class="sa-mobile-row sa-mr-green">
+                <span>From Sales Lead to Job Completion</span>
+                <span class="sa-mobile-ic"><svg class="sa-icon-check-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span class="sa-mobile-ic"><svg class="sa-icon-x-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+              </div>
+              <div class="sa-mobile-row sa-mr-white">
+                <span>Setup Fee</span>
+                <span class="sa-mobile-ic"><svg class="sa-icon-x-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+                <span class="sa-mobile-ic"><svg class="sa-icon-check-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              </div>
+              <div class="sa-mobile-row sa-mr-green">
+                <span>Prorated Billing</span>
+                <span class="sa-mobile-ic"><svg class="sa-icon-check-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span class="sa-mobile-ic"><svg class="sa-icon-x-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+              </div>
+              <div class="sa-mobile-row sa-mr-white">
+                <span>Minimum User Requirement</span>
+                <span class="sa-mobile-ic"><svg class="sa-icon-x-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+                <span class="sa-mobile-ic"><svg class="sa-icon-check-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dark Route Section -->
+    <section class="sa-dark">
+      <div class="my-container">
+        <div class="sa-dark-grid">
+          <!-- Left Content -->
+          <div class="sa-dark-content">
+            <p class="sa-section-label">Sales Mapping & Lead Generation</p>
+            <h2>Go Beyond Just Dropping Pins</h2>
+            <p class="sa-dark-desc">
+              SPOTIO was built to optimize routes and track field reps. But for growing service businesses, dropping a pin is only step one. Knockio provides the same elite GPS routing and territory cutting you are used to, but connects those field visits directly to your customer records, digital contracts, and invoicing tools. You get the prospecting power of a dedicated field app without the bottleneck of a disconnected pipeline.
+            </p>
+            <div class="sa-features">
+              <div class="sa-feature-item">
+                <div class="sa-feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><circle cx="12" cy="12" r="3"/></svg>
+                </div>
+                <div>
+                  <h3>Find the Next Best Opportunity</h3>
+                  <p>Plan routes, manage territories, view nearby leads, track rep activity, and help each team member focus on the right prospects without jumping between disconnected tools.</p>
+                </div>
+              </div>
+              <div class="sa-feature-item">
+                <div class="sa-feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="19" r="3"/></svg>
+                </div>
+                <div>
+                  <h3>Turn Field Visits Into Sales</h3>
+                  <p>Create proposals on-site, send digital contracts, update lead status, and keep customer details attached to the same workflow so your team can close deals with less delay.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Right Image -->
+          <div class="sa-dark-img">
+            <img src="/assets/cfw/spotio/lead-detail-mobile-full.webp" alt="Lead Detail Mobile Screen" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Move Beyond Section -->
+    <section class="sa-light">
+      <div class="my-container">
+        <div class="sa-light-grid">
+          <!-- Left Image -->
+          <div class="sa-light-img">
+            <img src="/assets/cfw/spotio/route-midpoint-mobile-full.webp" alt="Midpoints Selection Mobile Screen" />
+          </div>
+          <!-- Spacer -->
+          <div class="sa-light-spacer"></div>
+          <!-- Right Content -->
+          <div class="sa-light-content">
+            <p class="sa-section-label">Advanced CRM & Workflow Control</p>
+            <h2>Stop Paying the "Integration Tax"</h2>
+            <p class="sa-light-desc">
+              If you use SPOTIO, you are likely paying a premium per-user fee, plus the cost of a Zapier account or API integration, plus another $80/month per user for an operational CRM to actually schedule the work. This "Duct-Tape Tax" drains your profit margins and causes data leaks between sales and service. Knockio replaces that entire fragile stack. Your whole team operates on one native database, slashing your software overhead by up to 40%.
+            </p>
+            <div class="sa-features">
+              <div class="sa-feature-item">
+                <div class="sa-feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><circle cx="12" cy="12" r="3"/></svg>
+                </div>
+                <div>
+                  <h3>Manage more in one place</h3>
+                  <p>Track territories, reps, leads, follow ups, customer records, invoices, and job progress in one connected workflow built for growing sales teams.</p>
+                </div>
+              </div>
+              <div class="sa-feature-item">
+                <div class="sa-feature-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="19" r="3"/></svg>
+                </div>
+                <div>
+                  <h3>Scale without extra tools</h3>
+                  <p>With no setup fee, prorated billing, and more functionality across CRM and service workflows, Knockio gives teams room to grow without adding more software.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="sa-faq">
+      <div class="my-container">
+        <div class="sa-faq-grid">
+          <!-- Left Side: Content -->
+          <div class="sa-faq-left">
+            <p class="sa-section-label">Common Questions</p>
+            <h2>Spotio Alternative FAQs</h2>
+          </div>
+          <!-- Right Side: Accordion -->
+          <div class="sa-faq-right">
+            <details class="sa-faq-item">
+              <summary>
+                <span>Is Knockio a good alternative to SPOTIO?</span>
+                <svg class="sa-faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </summary>
+              <div class="sa-faq-answer">
+                Yes. Knockio is the ideal SPOTIO alternative for sales and service businesses. It provides the same robust territory mapping and live rep tracking, but natively includes the back-office tools (dispatching, estimates, and billing) that SPOTIO lacks.
+              </div>
+            </details>
+            <details class="sa-faq-item">
+              <summary>
+                <span>What does SPOTIO do well?</span>
+                <svg class="sa-faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </summary>
+              <div class="sa-faq-answer">
+                SPOTIO focuses strictly on routing and tracking outside sales reps, but that's where their platform ends. Because it is purely a sales tool, teams are forced to manually transfer closed-won deals into a completely separate operational platform just to schedule the job.
+              </div>
+            </details>
+            <details class="sa-faq-item">
+              <summary>
+                <span>Why would a team switch from SPOTIO to Knockio?</span>
+                <svg class="sa-faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </summary>
+              <div class="sa-faq-answer">
+                Businesses switch to Knockio to consolidate their software expenses and eliminate data entry errors. Instead of paying for a standalone field sales app and a separate service CRM, Knockio provides a true all-in-one environment. A prospect pinned in the field can be sent a digital contract and scheduled for service without ever leaving the Knockio app.
+              </div>
+            </details>
+            <details class="sa-faq-item">
+              <summary>
+                <span>Is Knockio better for companies that both sell and deliver services?</span>
+                <svg class="sa-faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </summary>
+              <div class="sa-faq-answer">
+                Yes. If your company relies on reps to hunt for business in the field and technicians to fulfill the work (like solar, roofing, or HVAC), Knockio is custom-built for your workflow. It perfectly bridges the gap between the initial handshake and the final invoice.
+              </div>
+            </details>
+            <details class="sa-faq-item">
+              <summary>
+                <span>What makes Knockio a stronger alternative to SPOTIO?</span>
+                <svg class="sa-faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </summary>
+              <div class="sa-faq-answer">
+                SPOTIO caters only to the front lines, meaning it stops working the moment the contract is signed. Knockio is stronger because it carries the baton all the way to the finish line, combining elite prospecting features with a complete operational CRM.
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script is:inline src={essentialsScript} defer></script>
+</KnockioHomeLayout>
+
+

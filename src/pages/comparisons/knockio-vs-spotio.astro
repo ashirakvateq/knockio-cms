@@ -1,0 +1,209 @@
+---
+import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
+import "../../styles/comparisons.css";
+
+const title = "Knockio vs SPOTIO (2026): Field Sales Tool vs the Whole Job";
+const description = "A sourced comparison of Knockio and SPOTIO. Both handle canvassing, but SPOTIO stops at the sale while Knockio runs the job to the final payment.";
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://knockio.com/" },
+      { "@type": "ListItem", position: 2, name: "Comparisons", item: "https://knockio.com/comparisons/" },
+      { "@type": "ListItem", position: 3, name: "Knockio vs SPOTIO", item: "https://knockio.com/comparisons/knockio-vs-spotio/" },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What is the main difference between Knockio and SPOTIO?",
+        acceptedAnswer: { "@type": "Answer", text: "SPOTIO is a field sales specialist that ends at the sale. Knockio covers canvassing and then the whole job that follows, including scheduling, field updates, and invoicing." },
+      },
+      {
+        "@type": "Question",
+        name: "Does SPOTIO handle invoicing or scheduling?",
+        acceptedAnswer: { "@type": "Answer", text: "No. Those need a separate platform. Knockio includes them." },
+      },
+      {
+        "@type": "Question",
+        name: "How much does SPOTIO cost?",
+        acceptedAnswer: { "@type": "Answer", text: "SPOTIO does not publish prices. Plans are quote only with a five user minimum, as of July 2026. Knockio publishes $20 to $60 per user per month." },
+      },
+      {
+        "@type": "Question",
+        name: "Do I still need a CRM with SPOTIO?",
+        acceptedAnswer: { "@type": "Answer", text: "Often yes. SPOTIO is frequently layered on Salesforce or HubSpot. Knockio is built to be the system of record itself." },
+      },
+    ],
+  },
+];
+---
+
+<KnockioHomeLayout title={title} description={description} jsonLd={jsonLd}>
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <span class="kicker">Comparison</span>
+        <h1>Knockio vs SPOTIO</h1>
+        <p class="lede">SPOTIO is a strong field sales specialist: territories, rep tracking, and sales analytics, often layered on top of a CRM. It stops at the sale, so estimates, scheduling, and invoicing need a second system. <b>Knockio covers the same canvassing ground and then runs the job all the way to the final payment in one platform.</b></p>
+        <p class="byline">Last reviewed July 2026 &middot; Written by the Knockio team &middot; Every figure is sourced below</p>
+        <div class="verdict">
+          <h2>The short answer</h2>
+          <p>If you need to run the job after you close it, pick Knockio. SPOTIO fits teams that only sell, with fulfillment handled somewhere else.</p>
+        </div>
+        <div class="choose">
+          <div>
+            <h3>Choose Knockio if</h3>
+            <ul>
+              <li>You want the knock and the job that follows it in one system</li>
+              <li>You would rather not buy a CRM and a service tool behind a canvassing app</li>
+              <li>You want published, flat pricing with no user minimums</li>
+              <li>You want the office to see field work in real time</li>
+            </ul>
+          </div>
+          <div class="them">
+            <h3>Choose SPOTIO if</h3>
+            <ul>
+              <li>Your team only sells, and another system fulfills the work</li>
+              <li>You already run Salesforce or HubSpot and want a canvassing layer</li>
+              <li>You want deep territory analytics and rep leaderboards</li>
+              <li>You have five or more reps focused purely on selling</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Side by side</h2>
+        <p class="section-note">What each platform covers out of the box. Partial means the capability exists but is limited or costs extra.</p>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr><th>Capability</th><th class="c kn">Knockio</th><th class="c">SPOTIO</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Canvassing and door knocking</td><td class="c kn"><span class="yes">&#10003;</span></td><td class="c"><span class="yes">&#10003;</span><span class="cell-note">A real strength on both sides</span></td></tr>
+              <tr><td>Sales pipeline and CRM</td><td class="c kn"><span class="yes">&#10003;</span></td><td class="c"><span class="partial">Partial</span><span class="cell-note">Often paired with a separate CRM</span></td></tr>
+              <tr><td>Estimates and proposals</td><td class="c kn"><span class="yes">&#10003;</span></td><td class="c"><span class="no">&#10005;</span><span class="cell-note">Digital contracts add on only</span></td></tr>
+              <tr><td>Crew and job scheduling</td><td class="c kn"><span class="yes">&#10003;</span></td><td class="c"><span class="no">&#10005;</span></td></tr>
+              <tr><td>Timesheets and time tracking</td><td class="c kn"><span class="yes">&#10003;</span></td><td class="c"><span class="partial">Partial</span><span class="cell-note">GPS activity, no payroll timesheets</span></td></tr>
+              <tr><td>Invoicing and payments</td><td class="c kn"><span class="yes">&#10003;</span></td><td class="c"><span class="no">&#10005;</span></td></tr>
+              <tr><td>Inventory and vendor bills</td><td class="c kn"><span class="yes">&#10003;</span></td><td class="c"><span class="no">&#10005;</span></td></tr>
+              <tr><td>Automations</td><td class="c kn"><span class="yes">&#10003;</span></td><td class="c"><span class="yes">&#10003;</span></td></tr>
+              <tr><td>Map view of jobs</td><td class="c kn"><span class="yes">&#10003;</span></td><td class="c"><span class="yes">&#10003;</span><span class="cell-note">Territories and routing</span></td></tr>
+              <tr><td>Mobile app for field crews</td><td class="c kn"><span class="yes">&#10003;</span></td><td class="c"><span class="yes">&#10003;</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-foot">Verified from public sources as of July 2026. Sources at the end of this page.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Pricing</h2>
+        <p class="section-note">Prices change. Confirm current figures on each vendor site before you buy.</p>
+        <div class="price-grid">
+          <div class="price-card kn">
+            <h3>Knockio</h3>
+            <p>$20 to $60 per user per month, published, with every feature included on every plan. As of July 2026, knockio.com.</p>
+          </div>
+          <div class="price-card">
+            <h3>SPOTIO</h3>
+            <p>Not publicly disclosed. Quote only, per user plans with a five user minimum and paid add ons. As of July 2026, spotio.com.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="read">
+      <div class="wrap">
+        <h2>The honest read</h2>
+        <h3>What SPOTIO does well</h3>
+        <ul>
+          <li>Territory creation and mapping is a genuine core strength</li>
+          <li>GPS verified, one tap lead capture at the door</li>
+          <li>Leaderboards and activity tracking keep reps accountable</li>
+          <li>A mobile first app that field reps consistently like</li>
+        </ul>
+        <h3>Where it can fall short</h3>
+        <ul>
+          <li>Nothing after the sale: no scheduling, estimates, or invoicing</li>
+          <li>Offline sync problems are the most reported issue</li>
+          <li>Some reviewers question reporting accuracy</li>
+          <li>Quote only pricing with minimums makes cost hard to predict</li>
+        </ul>
+        <h3>Why teams pick Knockio instead</h3>
+        <p>SPOTIO and Knockio overlap on the front half of the job. They part at the signature. SPOTIO hands the closed deal to another system. <b>Knockio keeps it</b>, turning a won deal into a scheduled job, field updates, and an invoice without changing apps.</p>
+        <p>That shapes the real cost too. A SPOTIO stack usually means SPOTIO plus a CRM plus an invoicing tool. Knockio covers the whole chain at a published $20 to $60 per user per month.</p>
+        <h3>What to know before choosing Knockio</h3>
+        <p>Knockio is a newer platform, so its integration marketplace and review history are smaller than long established tools. The upside of newer is speed: published pricing, same day setup, and a product that ships quickly. Pressure test everything on a live demo rather than taking our word for it.</p>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="wrap">
+        <h2>Common questions</h2>
+        <details>
+          <summary>What is the main difference between Knockio and SPOTIO?</summary>
+          <div class="answer">SPOTIO is a field sales specialist that ends at the sale. Knockio covers canvassing and then the whole job that follows, including scheduling, field updates, and invoicing.</div>
+        </details>
+        <details>
+          <summary>Does SPOTIO handle invoicing or scheduling?</summary>
+          <div class="answer">No. Those need a separate platform. Knockio includes them.</div>
+        </details>
+        <details>
+          <summary>How much does SPOTIO cost?</summary>
+          <div class="answer">SPOTIO does not publish prices. Plans are quote only with a five user minimum, as of July 2026. Knockio publishes $20 to $60 per user per month.</div>
+        </details>
+        <details>
+          <summary>Do I still need a CRM with SPOTIO?</summary>
+          <div class="answer">Often yes. SPOTIO is frequently layered on Salesforce or HubSpot. Knockio is built to be the system of record itself.</div>
+        </details>
+      </div>
+    </section>
+
+    <div class="notes">
+      <div class="wrap">
+        <h2>How we compared these</h2>
+        <p>This page is built from vendor pricing and product pages plus independent review sites such as G2 and Capterra. Where a vendor does not publish a figure we say so rather than estimate. Knockio publishes this page, so we have a stake in the outcome. That is exactly why we keep it honest, and why we name what SPOTIO does well. Spot something out of date? Tell us and we will fix it.</p>
+        <ul>
+          <li><a href="https://spotio.com/plans/" rel="nofollow noopener" target="_blank">SPOTIO plans, spotio.com</a>. Accessed July 2026.</li>
+          <li><a href="https://spotio.com/platform/" rel="nofollow noopener" target="_blank">SPOTIO platform, spotio.com</a>. Accessed July 2026.</li>
+          <li><a href="https://www.capterra.com/p/157701/SPOTIO/" rel="nofollow noopener" target="_blank">SPOTIO reviews, Capterra, 4.3 of 5 from about 78 reviews</a>. Accessed July 2026.</li>
+          <li><a href="https://www.g2.com/products/spotio/reviews" rel="nofollow noopener" target="_blank">SPOTIO reviews, G2, about 4.5 of 5 from about 387 reviews</a>. Accessed July 2026.</li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="cta">
+      <h2>See Knockio on your own workflow.</h2>
+      <p>Twenty minutes, your real process, live on screen. Then decide with your own eyes.</p>
+      <div class="cta-buttons">
+        <a class="btn btn-green" href="https://knockio.com/book-a-demo/">Book a demo</a>
+        <a class="btn btn-outline" href="https://knockio.com/pricing/">See pricing</a>
+      </div>
+    </section>
+
+    <section class="related">
+      <div class="wrap">
+        <h2>More comparisons</h2>
+        <div class="related-links">
+          <a href="/comparisons/">All comparisons</a>
+          <a href="/comparisons/knockio-vs-jobber/">Knockio vs Jobber</a>
+          <a href="/comparisons/knockio-vs-jobnimbus/">Knockio vs JobNimbus</a>
+          <a href="/comparisons/knockio-vs-servicetitan/">Knockio vs ServiceTitan</a>
+          <a href="/comparisons/knockio-vs-housecall-pro/">Knockio vs Housecall Pro</a>
+          <a href="/comparisons/knockio-vs-fieldpulse/">Knockio vs FieldPulse</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</KnockioHomeLayout>

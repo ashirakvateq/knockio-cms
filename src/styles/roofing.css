@@ -1,0 +1,953 @@
+:root {
+  /* Updated Brand Palette */
+  --color-bg-dark: #0d2b0a;
+  /* The very dark green background */
+  --color-text-main: #FFFFFF;
+  /* Pure white for maximum legibility */
+  --color-text-muted: #A3B8A1;
+  /* Soft, muted green-grey for secondary text */
+  --color-accent: #22C55E;
+  /* Vibrant brand green (Tailwind green-500 equivalent) for highlights */
+  --color-border-dark: #1F451B;
+  /* Barely visible large background numbers */
+  --font-main: "Manrope Variable", "Manrope", sans-serif;
+
+  font-family: var(--font-main);
+}
+
+body *{
+  font-family: var(--font-main);
+}
+
+.operations-section {
+  /* border-top: 8px solid var(--color-accent);
+        border-bottom: 8px solid var(--color-accent);
+        /* background-color: var(--color-bg-dark); */
+  /* background-color: #0d2b0a; */
+  padding: 10rem 0;
+  position: relative;
+}
+
+
+.operations-section :is(h1, h2, h3, h4, h5, h6) {
+  font-weight: 700 !important;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.editorial-header {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  border-bottom: 2px solid var(--color-border-dark);
+  padding-bottom: 64px;
+  margin-bottom: 80px;
+}
+
+@media (min-width: 992px) {
+  .editorial-header {
+    grid-template-columns: repeat(12, 1fr);
+    gap: 64px;
+    align-items: center;
+  }
+
+  .headline-column {
+    grid-column: span 6;
+  }
+
+  .intro-column {
+    grid-column: span 6;
+  }
+}
+
+.section-kicker {
+  font-size: 0.875rem;
+  font-weight: 900;
+  letter-spacing: 0.25em;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.operations-headline {
+
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--color-text-main);
+}
+
+@media (min-width: 768px) {
+  .operations-headline {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .operations-headline {
+    font-size: 2.8rem;
+  }
+}
+
+.operations-pull-quote {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--color-text-main);
+  font-weight: 500;
+  border-left: 4px solid var(--color-accent);
+  padding-left: 24px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+@media (min-width: 768px) {
+  .operations-pull-quote {
+    font-size: 1.5rem;
+    padding-left: 32px;
+  }
+}
+
+.columns-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 64px;
+}
+
+@media (min-width: 992px) {
+  .columns-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+  }
+}
+
+.category-column {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.category-header {
+  position: relative;
+  padding-bottom: 24px;
+  margin-bottom: 32px;
+  border-bottom: 2px solid var(--color-text-main);
+  z-index: 2;
+}
+
+.category-title {
+
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-text-main);
+  letter-spacing: 0.02em;
+}
+
+.category-number {
+  font-family: sans !important;
+  position: absolute;
+  top: -50px;
+  right: 0;
+  font-size: 120px;
+  line-height: 1;
+  font-weight: 900;
+  color: hsl(115.5deg 52.63% 14.9%);
+  z-index: -1;
+  user-select: none;
+}
+
+.feature-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.feature-item {
+  position: relative;
+  padding-left: 20px;
+}
+
+/* The vertical "blueprint" line next to each feature */
+.feature-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--color-border-dark);
+  transition: background-color 0.3s ease;
+}
+
+.feature-item:hover::before {
+  background-color: var(--color-accent);
+}
+
+.feature-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.feature-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+/* Subtle highlight effect on hover for legibility */
+.feature-item:hover .feature-title {
+  color: var(--color-accent);
+  transition: color 0.3s ease;
+}
+
+.feature-item:hover .feature-desc {
+  color: var(--color-text-main);
+  transition: color 0.3s ease;
+}
+
+
+
+.storm-page {
+  background: #ffffff;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+.storm-page *,
+.storm-page *::before,
+.storm-page *::after {
+  box-sizing: inherit;
+}
+
+.storm-page ::selection {
+  background: #4faa3a;
+  color: #fff;
+}
+
+/* Typography Elements */
+.onboarding-main-headline {
+
+  font-size: 3rem !important;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--color-ink-dark);
+}
+
+@media (min-width: 768px) {
+  .onboarding-main-headline {
+    font-size: 4.5rem;
+  }
+}
+
+/* Pull-Quote Lede Paragraph */
+.onboarding-pull-quote {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--color-ink-muted);
+  font-weight: 500;
+  border-left: 4px solid var(--color-rust);
+  padding-left: 24px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+@media (min-width: 768px) {
+  .onboarding-pull-quote {
+    font-size: 1.375rem;
+    padding-left: 32px;
+  }
+}
+
+.onboarding-pull-quote-strong {
+  color: var(--color-ink-dark);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 1.125rem;
+  display: block;
+  margin-top: 24px;
+}
+
+
+
+/* Typography Elements */
+.onboarding-operations-headline {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--color-ink-white);
+}
+
+@media (min-width: 768px) {
+  .onboarding-operations-headline {
+    font-size: 4.5rem;
+  }
+}
+
+
+.storm-page h1,
+.storm-page h2,
+.storm-page h3,
+.storm-page h4,
+.storm-page h6 {
+  font-weight: 800;
+  padding: 0;
+  letter-spacing: -0.025em;
+}
+
+.storm-hero {
+  position: relative;
+  background: #ffffff;
+  padding: 2rem 0 0;
+}
+
+.storm-hero-heading {
+  font-size: 3.375rem;
+  font-weight: 800;
+  color: #1e1d1a;
+  line-height: 1.11;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.025em;
+}
+
+.storm-hero-subtitle {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #7a7872;
+  line-height: 1.78;
+  margin-bottom: 1.5625rem;
+}
+
+.storm-hero-checklist li span {
+  color: #7a7872;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.storm-hero-img-wrap {
+  width: 88%;
+  margin: 0 auto;
+  margin-right: 0;
+}
+
+.storm-trust-section {
+  background: #f4f3f0;
+  padding: 2.2rem 0;
+  box-shadow: 0 4px 4px 4px rgba(0, 0, 0, 0.19);
+}
+
+.storm-trust-section h2 {
+  color: #1e1d1a;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+}
+
+.storm-trust-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.875rem;
+  margin-top: 1.875rem;
+  flex-wrap: wrap;
+}
+
+.storm-trust-logo {
+  width: 8.6875rem;
+  max-height: none;
+  object-fit: contain;
+}
+
+.storm-cycle-section {
+  background: #fdfcf9;
+  padding: 4rem 0;
+}
+
+.storm-cycle-card {
+  contain: content;
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  text-align: center;
+}
+
+.storm-cycle-card img {
+  height: 15.75rem;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 1.25rem;
+}
+
+.storm-cycle-card h3 {
+  text-align: center;
+  color: #1e1d1a;
+  font-weight: 800;
+  font-size: 1.25rem;
+  padding-bottom: 0.5rem;
+}
+
+.storm-cycle-card p {
+  color: #1e1d1a;
+  font-weight: 300;
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  min-height: 5.0625rem;
+}
+
+.storm-testimonial-section {
+  background: #fdfcf9;
+  padding: 3rem 0;
+}
+
+.storm-testimonial-quote-wrap {
+  background: #f4f3f0;
+  color: #1e1d1a;
+  padding: 1.875rem;
+  border-radius: 1.875rem;
+  position: relative;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.storm-testimonial-quote-wrap p {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 300;
+  margin: 0 auto;
+}
+
+.storm-testimonial-quote-wrap::before {
+  content: "";
+  position: absolute;
+  background-image: url("/assets/canvassing-app/comma.png");
+  width: 6.25rem;
+  height: 3.375rem;
+  right: -2.5rem;
+  bottom: -1.25rem;
+  background-size: 80%;
+  background-repeat: no-repeat;
+}
+
+.storm-testimonial-quote-wrap::after {
+  content: "";
+  position: absolute;
+  background-image: url("/assets/canvassing-app/comma.png");
+  width: 6.25rem;
+  height: 3.375rem;
+  top: -1.875rem;
+  left: -1.25rem;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  transform: scaleX(-1);
+}
+
+.storm-testimonial-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.storm-testimonial-author img {
+  width: 5rem;
+}
+
+.storm-testimonial-author div {
+  padding-left: 0.75rem;
+}
+
+.storm-testimonial-author h6 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  padding-bottom: 0.25rem;
+  color: #1e1d1a;
+}
+
+.storm-testimonial-author p {
+  font-size: 1rem;
+  color: #74726c;
+}
+
+.storm-platform-section {
+  position: relative;
+  padding: 4rem 0;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .storm-platform-section {
+    padding: 6rem 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .storm-platform-section {
+    padding: 10rem 0;
+  }
+}
+
+
+.operations-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+.operations-section::before {
+  content: "";
+  position: absolute;
+  background-image: url("/assets/storm-restoration-roofing/platform-bg-new1.png");
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.operations-section::after {
+  content: "";
+  position: absolute;
+  background-image: url("/assets/storm-restoration-roofing/platform-bg-bottom-scaled.png");
+  width: 100%;
+  height: 200px;
+  bottom: -120px;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .storm-platform-section::after {
+    height: 302px;
+  }
+}
+
+.storm-platform-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+.storm-platform-section .storm-section-heading {
+  color: #fff;
+}
+
+.storm-platform-section .storm-section-copy {
+  color: #fdfcf9;
+}
+
+.storm-workflow-card {
+  contain: content;
+  border-radius: 12px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  padding: 0.875rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  transition: background 200ms ease, border-color 200ms ease;
+}
+
+.storm-workflow-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(79, 170, 58, 0.4);
+}
+
+.storm-workflow-card .workflow-icon-wrap {
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: grid;
+  place-items: center;
+  background: #4faa3a;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.storm-workflow-card .workflow-icon-wrap svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.storm-workflow-card .workflow-text h4 {
+  font-weight: 700;
+  color: #fdfcf9;
+  line-height: 1.4;
+  font-size: 1rem;
+  margin-bottom: 0.125rem;
+}
+
+.storm-workflow-card .workflow-text p {
+  font-size: 0.875rem;
+  color: #fdfcf9;
+  line-height: 1.4;
+  opacity: 0.85;
+}
+
+.storm-workflow-group-heading {
+  color: #fdfcf9;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.storm-section-heading {
+  max-width: 61.25rem;
+  margin-inline: auto;
+  color: #1e1d1a;
+  font-size: clamp(1.875rem, 4vw, 2.8125rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  text-align: center;
+}
+
+.storm-section-heading--light {
+  color: #fdfcf9;
+}
+
+.storm-section-copy {
+  max-width: 70%;
+  margin: 1.125rem auto 0;
+  color: #74726c;
+  font-size: 1.125rem;
+  line-height: 1.78;
+  font-weight: 400;
+  text-align: center;
+}
+
+.storm-section-copy--light {
+  color: #fdfcf9;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .storm-reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    animation: storm-reveal 620ms cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+    animation-delay: var(--reveal-delay, 0ms);
+  }
+
+  @keyframes storm-reveal {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  .storm-hero-heading {
+    font-size: 3rem;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+
+  .storm-hero-subtitle {
+    font-size: 1.0625rem;
+    line-height: 1.76;
+    margin-bottom: 1.125rem;
+  }
+
+  .storm-hero-checklist li span {
+    font-size: 1.0625rem;
+  }
+
+  .storm-section-heading {
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  }
+
+  .storm-cycle-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .storm-cycle-card p {
+    font-size: 1.0625rem;
+  }
+
+  .storm-testimonial-quote-wrap p {
+    font-size: 1.375rem;
+  }
+
+  .storm-section-copy {
+    font-size: 1.0625rem;
+    line-height: 1.76;
+  }
+
+  .storm-workflow-group-heading {
+    font-size: clamp(1.375rem, 2.5vw, 2rem);
+  }
+}
+
+@media (max-width: 1440px) {
+  .storm-hero-heading {
+    font-size: 2.6875rem;
+    line-height: 1.1;
+    margin-bottom: 0.625rem;
+  }
+
+  .storm-hero-subtitle {
+    font-size: 1rem;
+    line-height: 1.75;
+    margin-bottom: 0.9375rem;
+  }
+
+  .storm-hero-checklist li span {
+    font-size: 1rem;
+  }
+
+  .storm-section-heading {
+    font-size: clamp(1.625rem, 3vw, 2.375rem);
+  }
+
+  .storm-cycle-card h3 {
+    font-size: 1.1875rem;
+  }
+
+  .storm-cycle-card p {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .storm-testimonial-quote-wrap p {
+    font-size: 1.25rem;
+  }
+
+  .storm-section-copy {
+    font-size: 1rem;
+    line-height: 1.75;
+    max-width: 80%;
+  }
+
+  .storm-trust-section h2 {
+    font-size: 1.375rem;
+  }
+}
+
+@media (max-width: 1279px) {
+  .storm-hero-heading {
+    font-size: 2.125rem;
+    line-height: 1.12;
+    margin-bottom: 0.625rem;
+  }
+
+  .storm-hero-subtitle {
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    margin-bottom: 0.9375rem;
+  }
+
+  .storm-hero-checklist li span {
+    font-size: 1rem;
+  }
+
+  .storm-section-heading {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+  }
+
+  .storm-cycle-card h3 {
+    font-size: 1.0625rem;
+  }
+
+  .storm-cycle-card p {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    min-height: unset;
+  }
+
+  .storm-cycle-card img {
+    height: 12rem;
+  }
+
+  .storm-testimonial-quote-wrap p {
+    font-size: 1.0625rem;
+  }
+
+  .storm-testimonial-author h6 {
+    font-size: 1.125rem;
+  }
+
+  .storm-testimonial-author p {
+    font-size: 0.875rem;
+  }
+
+  .storm-testimonial-author img {
+    width: 3.4375rem;
+  }
+
+  .storm-section-copy {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    max-width: 100%;
+    margin-top: 0.625rem;
+  }
+
+  .storm-trust-section h2 {
+    font-size: 1.125rem;
+  }
+
+  .storm-trust-logos {
+    gap: 1.5625rem;
+    margin-top: 1.25rem;
+  }
+
+  .storm-workflow-group-heading {
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+  }
+}
+
+@media (max-width: 980px) {
+
+  .operations-section {
+    padding: 10rem 1rem;
+  }
+  
+  .storm-hero-heading {
+    font-size: 2.625rem;
+    line-height: 1.19;
+  }
+
+  .storm-hero-heading br {
+    display: none;
+  }
+
+  .storm-hero-heading span {
+    margin-inline: 0.5rem;
+  }
+
+  .storm-hero-img-wrap {
+    margin: 0 auto;
+  }
+
+  .storm-section-heading {
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    line-height: 1.22;
+  }
+
+  .storm-testimonial-quote-wrap::after {
+    width: 3.125rem;
+    height: 2.75rem;
+    top: -1.25rem;
+  }
+
+  .storm-testimonial-quote-wrap::before {
+    width: 3.125rem;
+    height: 1.875rem;
+    bottom: -1.25rem;
+    right: -1.25rem;
+  }
+
+  .storm-testimonial-section {
+    padding: 1.875rem 0;
+  }
+
+  .storm-platform-section::before {
+    display: none;
+  }
+
+  .storm-platform-section::after {
+    display: none;
+  }
+
+  .storm-platform-section {
+    background: #0d2b0a;
+    padding: 3.75rem 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .storm-hero {
+    padding: 1rem 0 0;
+  }
+
+  .storm-hero-heading {
+    font-size: 2.25rem;
+    line-height: 1.22;
+  }
+
+  .storm-trust-logos {
+    flex-wrap: wrap;
+  }
+
+  .storm-trust-logo {
+    width: 6rem;
+  }
+
+  .storm-section-heading {
+    line-height: 1.27;
+  }
+
+  .storm-cycle-section {
+    padding: 2.5rem 0;
+  }
+
+  .storm-cycle-card img {
+    height: auto;
+    max-width: 14rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .storm-testimonial-quote-wrap {
+    padding: 1.25rem;
+    width: 100%;
+  }
+
+  .storm-testimonial-quote-wrap p {
+    font-size: 0.9375rem;
+  }
+
+  .storm-testimonial-quote-wrap::before {
+    width: 3.125rem;
+    height: 1.875rem;
+    right: -1.25rem;
+    bottom: -1.25rem;
+  }
+
+  .storm-testimonial-quote-wrap::after {
+    width: 3.125rem;
+    height: 2.75rem;
+    top: -1.25rem;
+    left: -0.625rem;
+  }
+
+  .storm-platform-section {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .storm-trust-logo {
+    width: 5rem;
+  }
+
+  .storm-reveal-cta {
+    align-content: center;
+    flex-wrap: wrap;
+  }
+
+
+  .storm-trust-logos {
+    gap: 1rem;
+  }
+}

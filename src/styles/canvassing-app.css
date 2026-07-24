@@ -24,6 +24,7 @@
 .canvassing-page h6 {
   font-family: "Manrope Variable", "Manrope", sans-serif;
   font-weight: 800;
+  font-size: 30px;
   padding: 0;
 }
 
@@ -44,7 +45,7 @@
 }
 
 .hero-h1 {
-  font-size: clamp(2rem, 5vw, 3.375rem);
+  font-size: clamp(2rem, 5vw, 3.375rem) !important;
   font-weight: 800;
   color: #1e1d1a;
   line-height: 1.1;
@@ -110,7 +111,7 @@
 }
 
 .section-copy {
-  color: #74726c;
+  color: #595855;
   text-align: center;
   font-size: 1.125rem;
   line-height: 1.78;
@@ -223,7 +224,6 @@
 
 .features-section .feature-img {
   height: auto;
-  max-height: clamp(12rem, 25vw, 22rem);
   object-fit: contain;
   width: 100%;
 }
@@ -260,7 +260,6 @@
 
 .features-section .feature-img {
   height: auto;
-  max-height: clamp(12rem, 25vw, 22rem);
   object-fit: contain;
   width: 100%;
 }
@@ -382,7 +381,7 @@
   height: 200px;
   bottom: -60px;
   left: 0;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -486,6 +485,9 @@ h3.platform-fullstack-heading {
     font-size: 1rem;
     line-height: 1.5;
   }
+  .stats-row{
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .work-step-img {
@@ -516,8 +518,6 @@ h3.platform-fullstack-heading {
 }
 
 .pricing-section .section-heading {
-  font-size: clamp(1.5rem, 4vw, 3.5rem);
-  font-weight: 700;
   color: #1e1d1a;
   line-height: 1.25;
 }
@@ -610,7 +610,7 @@ h3.platform-fullstack-heading {
 
 .calender-wrapper span {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 60000;
   color: #74726c;
 }
 
@@ -837,7 +837,7 @@ h3.platform-fullstack-heading {
   }
 
   .features-section .feature-heading {
-    font-size: clamp(1.125rem, 2vw, 1.625rem);
+    font-size: clamp(1.125rem, 2vw, 2rem);
     padding-bottom: 0.625rem;
   }
 
@@ -980,8 +980,8 @@ h3.platform-fullstack-heading {
   }
 
   .hero-subtitle {
-    font-size: 0.9375rem;
-    line-height: 1.73;
+    font-size: 1.25rem;
+    line-height: 1.5;
     margin-bottom: 0.9375rem;
   }
 
@@ -1007,7 +1007,7 @@ h3.platform-fullstack-heading {
   }
 
   .features-section .feature-heading {
-    font-size: clamp(0.9375rem, 1.5vw, 1.25rem);
+    font-size: clamp(1.5rem, 1.5vw, 1.25rem);
     padding-bottom: 0.5rem;
   }
 
@@ -1030,8 +1030,8 @@ h3.platform-fullstack-heading {
   }
 
   .section-copy {
-    font-size: 0.9375rem;
-    line-height: 1.73;
+    font-size: 1.15rem;
+    line-height: 1.6;
     width: 100%;
     margin-top: 0.625rem;
   }
@@ -1050,7 +1050,7 @@ h3.platform-fullstack-heading {
   }
 
   .features-section .feature-img {
-    height: 13.75rem;
+    height: 16rem;
   }
 
   .platform-wrapper {
@@ -1058,7 +1058,7 @@ h3.platform-fullstack-heading {
   }
 
   .platform-wrapper span {
-    font-size: 0.8125rem;
+    font-size: 1.15rem;
     line-height: 1.25;
   }
 
@@ -1110,7 +1110,8 @@ h3.platform-fullstack-heading {
   }
 
   .hero-h1 {
-    font-size: clamp(1.75rem, 4vw, 2.625rem);
+    font-size: 30px;
+    /* font-size: clamp(1.75rem, 4vw, 2.625rem); */
     line-height: 1.19;
   }
 
@@ -1205,16 +1206,17 @@ h3.platform-fullstack-heading {
   }
 
   .section-heading {
-    font-size: clamp(1.375rem, 4vw, 1.875rem);
     line-height: 1.27;
   }
 
-  .pricing-section .section-heading {
-    font-size: clamp(1.375rem, 4vw, 1.875rem);
+
+  .features-section .feature-card {
+    max-width: 100%;
   }
 
   .features-section .feature-img {
-    height: unset;
+    width: 90vw;
+    height: auto;
   }
 
   .testimonial-section {
@@ -1229,6 +1231,10 @@ h3.platform-fullstack-heading {
   .platform-fullstack-list,
   .platform-section .my-container img {
     display: none;
+  }
+
+  .platform-book-demo-btn {
+    margin-inline: auto;
   }
 
 
@@ -1280,7 +1286,7 @@ h3.platform-fullstack-heading {
   --color-num-faded: #E4E2DB;
   /* Muted print grey for large backdrop numbers */
 
-  --font-serif: 'Roboto Slab', serif;
+  --font-serif: "Manrope Variable", "Manrope", sans-serif;
   --font-sans: 'Inter', sans-serif;
 
   --max-width: 1152px;
@@ -1307,6 +1313,8 @@ h3.platform-fullstack-heading {
   gap: 40px;
   padding-bottom: 64px;
   margin-bottom: 64px;
+  position: relative;
+  z-index: 1;
 }
 
 /* Responsive Grid for Header at 768px (Tablet / Desktop) */
@@ -1325,9 +1333,8 @@ h3.platform-fullstack-heading {
 
 /* Typography Elements */
 .main-headline {
-  font-family: var(--font-serif);
-  font-size: 3rem;
-  font-weight: 900;
+
+  font-size: 3rem !important;
   line-height: 1.05;
   letter-spacing: -0.02em;
   text-transform: uppercase;
@@ -1347,7 +1354,7 @@ h3.platform-fullstack-heading {
 
 @media (min-width: 768px) {
   .headline-sub {
-    font-size: 3.75rem;
+    font-size: 2.75rem;
   }
 }
 
@@ -1435,7 +1442,7 @@ h3.platform-fullstack-heading {
 
 .step-title {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
+  font-size: 1.25rem !important;
   font-weight: 700;
   color: var(--color-ink-dark);
   border-bottom: 4px solid var(--color-ink-dark);

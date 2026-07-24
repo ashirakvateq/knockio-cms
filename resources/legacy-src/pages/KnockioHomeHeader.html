@@ -1,0 +1,564 @@
+
+<style>
+  /*! CSS Used from: Embedded */
+a,div,i,img,li,p,span,ul{margin:0;padding:0;border:0;outline:0;font-size:100%;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;vertical-align:baseline;background:transparent;}
+ul{list-style:none;}
+:focus{outline:0;}
+header,nav{display:block;}
+a{color:#2ea3f2;}
+a,a:hover{text-decoration:none;}
+p{padding-bottom:1em;}
+p:not(.has-background):last-of-type{padding-bottom:0;}
+i{font-style:italic;}
+button{font-family:inherit;}
+img{max-width:100%;height:auto;}
+.et-l--header ul{list-style-type:disc;padding:0 0 23px 1em;line-height:26px;}
+*{-webkit-box-sizing:border-box;box-sizing:border-box;}
+/*! CSS Used from: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css */
+.fa-solid{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:var(--fa-display,inline-block);font-style:normal;font-variant:normal;line-height:1;text-rendering:auto;}
+.fa-solid{font-family:"Font Awesome 6 Free";}
+.fa-comments:before{content:"\f086";}
+.fa-clipboard-list:before{content:"\f46d";}
+.fa-truck-ramp-box:before{content:"\f4de";}
+.fa-bars:before{content:"\f0c9";}
+.fa-house-flood-water:before{content:"\e50e";}
+.fa-temperature-half:before{content:"\f2c9";}
+.fa-chart-simple:before{content:"\e473";}
+.fa-spray-can-sparkles:before{content:"\f5d0";}
+.fa-file-invoice-dollar:before{content:"\f571";}
+.fa-person-walking:before{content:"\f554";}
+.fa-map-location-dot:before{content:"\f5a0";}
+.fa-shield-halved:before{content:"\f3ed";}
+.fa-file-signature:before{content:"\f573";}
+.fa-leaf:before{content:"\f06c";}
+.fa-chart-line:before{content:"\f201";}
+.fa-solar-panel:before{content:"\f5ba";}
+.fa-faucet-drip:before{content:"\e006";}
+.fa-house-chimney:before{content:"\e3af";}
+.fa-location-crosshairs:before{content:"\f601";}
+.fa-calendar-check:before{content:"\f274";}
+.fa-network-wired:before{content:"\f6ff";}
+.fa-bolt:before{content:"\f0e7";}
+.fa-bug:before{content:"\f188";}
+.fa-credit-card:before{content:"\f09d";}
+.fa-paint-roller:before{content:"\f5aa";}
+.fa-boxes-stacked:before{content:"\f468";}
+.fa-receipt:before{content:"\f543";}
+.fa-chevron-down:before{content:"\f078";}
+.fa-user-shield:before{content:"\f505";}
+.fa-gears:before{content:"\f085";}
+.fa-warehouse:before{content:"\f494";}
+.fa-water-ladder:before{content:"\f5c5";}
+.fa-solid{font-weight:900;}
+/*! CSS Used from: https://knockio.com/wp-content/et-cache/2238/et-core-unified-2238.min.css?ver=1784639501 */
+p{padding:0;margin:0;}
+ul{padding:0!important;}
+::selection{background:#4faa3a;color:#fff;}
+.my-container{width:90%;max-width:1680px;margin:0 auto;}
+/*! CSS Used from: Embedded */
+*,::before,::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-scroll-snap-strictness:proximity;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;}
+*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb;}
+::after,::before{--tw-content:'';}
+a{color:inherit;text-decoration:inherit;}
+button{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0;}
+button{text-transform:none;}
+button{-webkit-appearance:button;background-color:transparent;background-image:none;}
+p{margin:0;}
+ul{list-style:none;margin:0;padding:0;}
+button{cursor:pointer;}
+:disabled{cursor:default;}
+img{display:block;vertical-align:middle;}
+img{max-width:100%;height:auto;}
+.pointer-events-none{pointer-events:none;}
+.invisible{visibility:hidden;}
+.fixed{position:fixed;}
+.absolute{position:absolute;}
+.relative{position:relative;}
+.inset-x-0{left:0px;right:0px;}
+.left-1\/2{left:50%;}
+.top-0{top:0px;}
+.top-full{top:100%;}
+.z-50{z-index:50;}
+.z-\[60\]{z-index:60;}
+.m-0{margin:0px;}
+.mx-auto{margin-left:auto;margin-right:auto;}
+.mb-3{margin-bottom:0.75rem;}
+.mt-1{margin-top:0.25rem;}
+.block{display:block;}
+.flex{display:flex;}
+.inline-flex{display:inline-flex;}
+.grid{display:grid;}
+.hidden{display:none;}
+.h-10{height:2.5rem;}
+.h-11{height:2.75rem;}
+.h-9{height:2.25rem;}
+.max-h-\[65vh\]{max-height:65vh;}
+.min-h-\[44px\]{min-height:44px;}
+.min-h-\[68px\]{min-height:68px;}
+.min-h-\[72px\]{min-height:72px;}
+.w-10{width:2.5rem;}
+.w-11{width:2.75rem;}
+.w-56{width:14rem;}
+.w-\[min\(1080px\2c calc\(100vw-40px\)\)\]{width:min(1080px,calc(100vw - 40px));}
+.w-\[min\(920px\2c calc\(100vw-40px\)\)\]{width:min(920px,calc(100vw - 40px));}
+.w-full{width:100%;}
+.min-w-\[116px\]{min-width:116px;}
+.min-w-\[136px\]{min-width:136px;}
+.shrink-0{flex-shrink:0;}
+.-translate-x-\[34\%\]{--tw-translate-x:-34%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}
+.-translate-x-\[42\%\]{--tw-translate-x:-42%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}
+.translate-y-2{--tw-translate-y:0.5rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}
+.\!list-none{list-style-type:none!important;}
+.grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr));}
+.items-center{align-items:center;}
+.justify-center{justify-content:center;}
+.justify-between{justify-content:space-between;}
+.gap-1{gap:0.25rem;}
+.gap-2{gap:0.5rem;}
+.gap-3{gap:0.75rem;}
+.gap-6{gap:1.5rem;}
+.overflow-hidden{overflow:hidden;}
+.overflow-y-auto{overflow-y:auto;}
+.rounded-2xl{border-radius:1rem;}
+.rounded-lg{border-radius:0.5rem;}
+.rounded-xl{border-radius:0.75rem;}
+.border{border-width:1px;}
+.border-b{border-bottom-width:1px;}
+.border-solid{border-style:solid;}
+.border-neutral-100{--tw-border-opacity:1;border-color:rgb(245 245 245 / var(--tw-border-opacity, 1));}
+.border-neutral-200{--tw-border-opacity:1;border-color:rgb(229 229 229 / var(--tw-border-opacity, 1));}
+.border-transparent{border-color:transparent;}
+.border-white\/20{border-color:rgb(255 255 255 / 0.2);}
+.border-white\/25{border-color:rgb(255 255 255 / 0.25);}
+.\!bg-transparent{background-color:transparent!important;}
+.bg-\[\#EEF7EB\]{--tw-bg-opacity:1;background-color:rgb(238 247 235 / var(--tw-bg-opacity, 1));}
+.bg-primary-500{--tw-bg-opacity:1;background-color:rgb(79 170 58 / var(--tw-bg-opacity, 1));}
+.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1));}
+.bg-white\/10{background-color:rgb(255 255 255 / 0.1);}
+.bg-\[linear-gradient\(180deg\2c rgba\(0\2c 0\2c 0\2c 0\.92\)_0\%\2c rgba\(0\2c 0\2c 0\2c 0\.42\)_58\%\2c rgba\(0\2c 0\2c 0\2c 0\)_100\%\)\]{background-image:linear-gradient(180deg,rgba(0,0,0,0.92) 0%,rgba(0,0,0,0.42) 58%,rgba(0,0,0,0) 100%);}
+.object-contain{object-fit:contain;}
+.\!p-0{padding:0px!important;}
+.p-3{padding:0.75rem;}
+.p-4{padding:1rem;}
+.px-2{padding-left:0.5rem;padding-right:0.5rem;}
+.px-3{padding-left:0.75rem;padding-right:0.75rem;}
+.px-5{padding-left:1.25rem;padding-right:1.25rem;}
+.py-2{padding-top:0.5rem;padding-bottom:0.5rem;}
+.py-5{padding-top:1.25rem;padding-bottom:1.25rem;}
+.pb-3{padding-bottom:0.75rem;}
+.pr-1{padding-right:0.25rem;}
+.pt-4{padding-top:1rem;}
+.text-\[10px\]{font-size:10px;}
+.text-\[15px\]{font-size:15px;}
+.text-base{font-size:1rem;line-height:1.5rem;}
+.text-lg{font-size:1.125rem;line-height:1.75rem;}
+.text-sm{font-size:0.875rem;line-height:1.25rem;}
+.text-xs{font-size:0.75rem;line-height:1rem;}
+.font-bold{font-weight:700;}
+.font-semibold{font-weight:600;}
+.uppercase{text-transform:uppercase;}
+.leading-5{line-height:1.25rem;}
+.tracking-\[0\.12em\]{letter-spacing:0.12em;}
+.text-neutral-500{--tw-text-opacity:1;color:rgb(115 115 115 / var(--tw-text-opacity, 1));}
+.text-neutral-900{--tw-text-opacity:1;color:rgb(23 23 23 / var(--tw-text-opacity, 1));}
+.text-primary-600{--tw-text-opacity:1;color:rgb(67 160 71 / var(--tw-text-opacity, 1));}
+.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1));}
+.opacity-0{opacity:0;}
+.shadow-\[0_26px_75px_-22px_rgba\(15\2c 23\2c 42\2c 0\.42\)\]{--tw-shadow:0 26px 75px -22px rgba(15,23,42,0.42);--tw-shadow-colored:0 26px 75px -22px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);}
+.ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);}
+.ring-black\/5{--tw-ring-color:rgb(0 0 0 / 0.05);}
+.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);}
+.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;}
+.transition-\[background-color\2c padding\2c box-shadow\2c backdrop-filter\]{transition-property:background-color,padding,box-shadow,-webkit-backdrop-filter;transition-property:background-color,padding,box-shadow,backdrop-filter;transition-property:background-color,padding,box-shadow,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;}
+.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;}
+.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;}
+.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;}
+.duration-200{transition-duration:200ms;}
+.duration-300{transition-duration:300ms;}
+.ease-out{transition-timing-function:cubic-bezier(0, 0, 0.2, 1);}
+.hover\:border-\[\#D8EFD2\]:hover{--tw-border-opacity:1;border-color:rgb(216 239 210 / var(--tw-border-opacity, 1));}
+.hover\:border-primary-500:hover{--tw-border-opacity:1;border-color:rgb(79 170 58 / var(--tw-border-opacity, 1));}
+.hover\:bg-\[\#F4FAF2\]:hover{--tw-bg-opacity:1;background-color:rgb(244 250 242 / var(--tw-bg-opacity, 1));}
+.hover\:bg-primary-500:hover{--tw-bg-opacity:1;background-color:rgb(79 170 58 / var(--tw-bg-opacity, 1));}
+.hover\:bg-primary-600:hover{--tw-bg-opacity:1;background-color:rgb(67 160 71 / var(--tw-bg-opacity, 1));}
+.hover\:bg-white\/10:hover{background-color:rgb(255 255 255 / 0.1);}
+.hover\:bg-white\/20:hover{background-color:rgb(255 255 255 / 0.2);}
+.hover\:text-primary-400:hover{--tw-text-opacity:1;color:rgb(102 187 106 / var(--tw-text-opacity, 1));}
+.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1));}
+.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px;}
+.group\/item:hover .group-hover\/item\:bg-primary-500{--tw-bg-opacity:1;background-color:rgb(79 170 58 / var(--tw-bg-opacity, 1));}
+.group\/item:hover .group-hover\/item\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1));}
+@media (max-width: 1280px){
+.max-\[1280px\]\:w-48{width:12rem;}
+}
+@media (max-width: 1100px){
+.max-\[1100px\]\:w-44{width:11rem;}
+}
+@media (max-width: 1024px){
+.max-\[1024px\]\:inline-flex{display:inline-flex;}
+.max-\[1024px\]\:hidden{display:none;}
+.max-\[1024px\]\:py-3{padding-top:0.75rem;padding-bottom:0.75rem;}
+}
+/*! CSS Used from: Embedded */
+#mainNavbar{transition-property:transform,             opacity,             background-color,             padding,             box-shadow,             backdrop-filter!important;transition-duration:300ms!important;transition-timing-function:ease-out!important;will-change:transform, opacity;}
+@media (prefers-reduced-motion: reduce){
+#mainNavbar{transition-duration:0.01ms!important;}
+}
+/*! CSS Used from: Embedded */
+#mainNavbar{isolation:isolate;}
+#mainNavbar .nav-link-active{background:rgba(255, 255, 255, 0.12);color:#7fc96f;}
+.desktop-dropdown:hover > .desktop-mega-menu{visibility:visible;pointer-events:auto;opacity:1;}
+.desktop-dropdown:hover > .desktop-mega-menu > .desktop-mega-menu-panel{transform:translateY(0);}
+.desktop-dropdown:hover > .desktop-menu-trigger .dropdown-chevron{transform:rotate(180deg);}
+#mainNavbar p{margin:0;}
+.knockio-scrollbar{scrollbar-width:thin;scrollbar-color:#b9cfb4 transparent;}
+.knockio-scrollbar::-webkit-scrollbar{width:6px;}
+.knockio-scrollbar::-webkit-scrollbar-track{background:transparent;}
+.knockio-scrollbar::-webkit-scrollbar-thumb{border-radius:999px;background:#b9cfb4;}
+body.admin-bar #mainNavbar{top:32px;}
+@media (max-width: 782px){
+body.admin-bar #mainNavbar{top:46px;}
+}
+@media (prefers-reduced-motion: reduce){
+#mainNavbar,#mainNavbar *{transition-duration:0.01ms!important;scroll-behavior:auto!important;}
+}
+/*! CSS Used fontfaces */
+@font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:400;font-display:block;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-regular-400.woff2) format("woff2"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-regular-400.ttf) format("truetype");}
+@font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:900;font-display:block;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2) format("woff2"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.ttf) format("truetype");}
+
+</style>
+
+<header id="mainNavbar" class="fixed inset-x-0 top-0 z-[60] w-full bg-[linear-gradient(180deg,rgba(0,0,0,0.92)_0%,rgba(0,0,0,0.42)_58%,rgba(0,0,0,0)_100%)] py-5 transition-[background-color,padding,box-shadow,backdrop-filter] duration-300 ease-out max-[1024px]:py-3">
+  <div class="my-container mx-auto flex items-center justify-between gap-6">
+    <!-- LOGO -->
+    <a style="background:transparent!important" href="https://knockio.com/" class="inline-flex shrink-0 items-center !bg-transparent nav-link-active" aria-label="Knockio home" aria-current="page">
+      <img decoding="async" src="https://knockio.com/wp-content/uploads/2026/05/knockio-logo.webp" alt="Knockio" class="h-9 w-56 object-contain max-[1280px]:w-48 max-[1100px]:w-44">
+    </a>
+
+    <!-- DESKTOP NAVIGATION -->
+    <nav class="max-[1024px]:hidden" aria-label="Main navigation">
+      <ul class="m-0 flex !list-none items-center gap-1 !p-0">
+        <!-- FEATURES -->
+        <li class="desktop-dropdown relative">
+          <button type="button" class="desktop-menu-trigger flex items-center gap-2 rounded-lg px-3 py-2 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-white/10 hover:text-primary-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400" aria-expanded="false" aria-controls="featuresMegaMenu">
+            <span>Features</span>
+            <i class="dropdown-chevron fa-solid fa-chevron-down text-[10px] transition-transform duration-200" aria-hidden="true"></i>
+          </button>
+
+          <div id="featuresMegaMenu" class="desktop-mega-menu invisible pointer-events-none absolute left-1/2 top-full z-50 w-[min(920px,calc(100vw-40px))] -translate-x-[34%] pt-4 opacity-0 transition-all duration-200 ease-out" role="region" aria-label="Features menu">
+            <div class="desktop-mega-menu-panel translate-y-2 overflow-hidden rounded-2xl border border-solid border-neutral-200 bg-white p-4 shadow-[0_26px_75px_-22px_rgba(15,23,42,0.42)] ring-1 ring-black/5 transition-transform duration-200">
+              <div class="mb-3 flex items-center justify-between gap-6 border-b border-solid border-neutral-100 px-2 pb-3">
+<div>
+                  <p class="text-xs font-bold uppercase tracking-[0.12em] text-primary-600">
+                    Knockio Features
+                  </p> 
+                  <p class="mt-1 text-sm leading-5 text-neutral-500">
+                    Everything you need to manage field sales and service.
+                  </p> 
+                </div>
+              </div>
+
+              <div class="grid grid-cols-3 gap-2">
+                <a href="https://knockio.com/features/sales-pipeline-software/" class="group/item flex min-h-[72px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2] focus:outline-none focus-visible:border-primary-500 focus-visible:ring-2 focus-visible:ring-primary-100">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-base text-primary-600 transition duration-200 group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-chart-line"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold leading-5 text-neutral-900">
+                    Sales Pipeline
+                  </span>
+                </a>
+
+                <a href="https://knockio.com/features/estimate-software/" class="group/item flex min-h-[72px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2] focus:outline-none focus-visible:border-primary-500 focus-visible:ring-2 focus-visible:ring-primary-100">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-base text-primary-600 transition duration-200 group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold leading-5 text-neutral-900">
+                    Estimates
+                  </span>
+                </a>
+
+                <a href="https://knockio.com/features/inventory-management-software/" class="group/item flex min-h-[72px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2] focus:outline-none focus-visible:border-primary-500 focus-visible:ring-2 focus-visible:ring-primary-100">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-base text-primary-600 transition duration-200 group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold leading-5 text-neutral-900">
+                    Inventory
+                  </span>
+                </a>
+
+                <a href="https://knockio.com/features/invoicing-software/" class="group/item flex min-h-[72px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2] focus:outline-none focus-visible:border-primary-500 focus-visible:ring-2 focus-visible:ring-primary-100">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-base text-primary-600 transition duration-200 group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-receipt"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold leading-5 text-neutral-900">
+                    Invoicing
+                  </span>
+                </a>
+
+                <a href="https://knockio.com/features/work-order-management-software/" class="group/item flex min-h-[72px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2] focus:outline-none focus-visible:border-primary-500 focus-visible:ring-2 focus-visible:ring-primary-100">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-base text-primary-600 transition duration-200 group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold leading-5 text-neutral-900">
+                    Work Orders
+                  </span>
+                </a>
+
+                <a href="https://knockio.com/features/appointment-scheduling-software/" class="group/item flex min-h-[72px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2] focus:outline-none focus-visible:border-primary-500 focus-visible:ring-2 focus-visible:ring-primary-100">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-base text-primary-600 transition duration-200 group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-calendar-check"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold leading-5 text-neutral-900">
+                    Appointments
+                  </span>
+                </a>
+
+                <a href="https://knockio.com/features/payment-processing/" class="group/item flex min-h-[72px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2] focus:outline-none focus-visible:border-primary-500 focus-visible:ring-2 focus-visible:ring-primary-100">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-base text-primary-600 transition duration-200 group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-credit-card"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold leading-5 text-neutral-900">
+                    Payment Processing
+                  </span>
+                </a>
+
+                <a href="https://knockio.com/features/e-contracts-software/" class="group/item flex min-h-[72px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2] focus:outline-none focus-visible:border-primary-500 focus-visible:ring-2 focus-visible:ring-primary-100">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-base text-primary-600 transition duration-200 group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-file-signature"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold leading-5 text-neutral-900">
+                    E-Contracts
+                  </span>
+                </a>
+
+                <a href="https://knockio.com/features/business-texting-and-calling-software/" class="group/item flex min-h-[72px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2] focus:outline-none focus-visible:border-primary-500 focus-visible:ring-2 focus-visible:ring-primary-100">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-base text-primary-600 transition duration-200 group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-comments"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold leading-5 text-neutral-900">
+                    Call Text and Email
+                  </span>
+                </a>
+
+                <a href="https://knockio.com/features/user-management-software/" class="group/item flex min-h-[72px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2] focus:outline-none focus-visible:border-primary-500 focus-visible:ring-2 focus-visible:ring-primary-100">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-base text-primary-600 transition duration-200 group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-user-shield"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold leading-5 text-neutral-900">
+                    User Management
+                  </span>
+                </a>
+
+                <a href="https://knockio.com/features/territory-management-software/" class="group/item flex min-h-[72px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2] focus:outline-none focus-visible:border-primary-500 focus-visible:ring-2 focus-visible:ring-primary-100">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-base text-primary-600 transition duration-200 group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold leading-5 text-neutral-900">
+                    Territory Management
+                  </span>
+                </a>
+
+                <a href="https://knockio.com/features/sales-canvassing-software/" class="group/item flex min-h-[72px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2] focus:outline-none focus-visible:border-primary-500 focus-visible:ring-2 focus-visible:ring-primary-100">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-base text-primary-600 transition duration-200 group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-person-walking"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold leading-5 text-neutral-900">
+                    Sales Canvassing
+                  </span>
+                </a>
+
+                <a href="https://knockio.com/features/gps-tracking-software/" class="group/item flex min-h-[72px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2] focus:outline-none focus-visible:border-primary-500 focus-visible:ring-2 focus-visible:ring-primary-100">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-base text-primary-600 transition duration-200 group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-location-crosshairs"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold leading-5 text-neutral-900">
+                    GPS Tracking
+                  </span>
+                </a>
+
+                <a href="https://knockio.com/features/business-automation-software/" class="group/item flex min-h-[72px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2] focus:outline-none focus-visible:border-primary-500 focus-visible:ring-2 focus-visible:ring-primary-100">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-base text-primary-600 transition duration-200 group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-gears"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold leading-5 text-neutral-900">
+                    Automations
+                  </span>
+                </a>
+
+                <a href="https://knockio.com/features/reporting-software/" class="group/item flex min-h-[72px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2] focus:outline-none focus-visible:border-primary-500 focus-visible:ring-2 focus-visible:ring-primary-100">
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-base text-primary-600 transition duration-200 group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-chart-simple"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold leading-5 text-neutral-900">
+                    Reports and Analytics
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- INDUSTRIES -->
+        <li class="desktop-dropdown relative">
+          <button type="button" class="desktop-menu-trigger flex items-center gap-2 rounded-lg px-3 py-2 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-white/10 hover:text-primary-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400" aria-expanded="false" aria-controls="industriesMegaMenu">
+            <span>Industries</span>
+            <i class="dropdown-chevron fa-solid fa-chevron-down text-[10px] transition-transform duration-200" aria-hidden="true"></i>
+          </button>
+
+          <div id="industriesMegaMenu" class="desktop-mega-menu invisible pointer-events-none absolute left-1/2 top-full z-50 w-[min(1080px,calc(100vw-40px))] -translate-x-[42%] pt-4 opacity-0 transition-all duration-200 ease-out" role="region" aria-label="Industries menu">
+            <div class="desktop-mega-menu-panel translate-y-2 overflow-hidden rounded-2xl border border-solid border-neutral-200 bg-white p-4 shadow-[0_26px_75px_-22px_rgba(15,23,42,0.42)] ring-1 ring-black/5 transition-transform duration-200">
+<div class="mb-3 border-b border-solid border-neutral-100 px-2 pb-3">
+                <p class="text-xs font-bold uppercase tracking-[0.12em] text-primary-600">
+                  Industries
+                </p> 
+                <p class="mt-1 text-sm leading-5 text-neutral-500">
+                  Built for field sales and service businesses.
+                </p> 
+              </div>
+
+              <div class="knockio-scrollbar grid max-h-[65vh] grid-cols-3 gap-2 overflow-y-auto pr-1">
+                <a href="https://knockio.com/industry/fiber-internet-sales-software-and-crm/" class="group/item flex min-h-[68px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2]">
+                  <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-primary-600 transition group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-network-wired"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold text-neutral-900">Fiber Internet</span>
+                </a>
+
+                <a href="https://knockio.com/industry/electrical-contractor-software/" class="group/item flex min-h-[68px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2]">
+                  <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-primary-600 transition group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-bolt"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold text-neutral-900">Electrical</span>
+                </a>
+
+                <a href="https://knockio.com/industry/home-security-sales-software-and-crm/" class="group/item flex min-h-[68px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2]">
+                  <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-primary-600 transition group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-shield-halved"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold text-neutral-900">Home Security</span>
+                </a>
+
+                <a href="https://knockio.com/industry/pool-service-software/" class="group/item flex min-h-[68px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2]">
+                  <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-primary-600 transition group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-water-ladder"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold text-neutral-900">Pool Service</span>
+                </a>
+
+                <a href="https://knockio.com/industry/junk-removal-software-and-crm/" class="group/item flex min-h-[68px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2]">
+                  <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-primary-600 transition group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-truck-ramp-box"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold text-neutral-900">Junk Removal</span>
+                </a>
+
+                <a href="https://knockio.com/industry/garage-door-service-software/" class="group/item flex min-h-[68px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2]">
+                  <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-primary-600 transition group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-warehouse"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold text-neutral-900">Garage Door</span>
+                </a>
+
+                <a href="https://knockio.com/industry/painting-contractor-software-and-crm/" class="group/item flex min-h-[68px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2]">
+                  <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-primary-600 transition group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-paint-roller"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold text-neutral-900">Painting</span>
+                </a>
+
+                <a href="https://knockio.com/industry/window-cleaning-business-software/" class="group/item flex min-h-[68px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2]">
+                  <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-primary-600 transition group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-spray-can-sparkles"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold text-neutral-900">Window Cleaning</span>
+                </a>
+
+                <a href="https://knockio.com/industry/landscaping-business-software/" class="group/item flex min-h-[68px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2]">
+                  <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-primary-600 transition group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-leaf"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold text-neutral-900">Landscaping</span>
+                </a>
+
+                <a href="https://knockio.com/industry/restoration-job-management-software/" class="group/item flex min-h-[68px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2]">
+                  <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-primary-600 transition group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-house-flood-water"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold text-neutral-900">Restoration</span>
+                </a>
+
+                <a href="https://knockio.com/industry/hvac-software-and-crm/" class="group/item flex min-h-[68px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2]">
+                  <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-primary-600 transition group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-temperature-half"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold text-neutral-900">HVAC</span>
+                </a>
+
+                <a href="https://knockio.com/industry/pest-control-software/" class="group/item flex min-h-[68px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2]">
+                  <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-primary-600 transition group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-bug"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold text-neutral-900">Pest Control</span>
+                </a>
+
+                <a href="https://knockio.com/industry/plumbing-software-and-crm/" class="group/item flex min-h-[68px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2]">
+                  <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-primary-600 transition group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-faucet-drip"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold text-neutral-900">Plumbing</span>
+                </a>
+
+                <a href="https://knockio.com/industry/roofing-sales-software-and-crm/" class="group/item flex min-h-[68px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2]">
+                  <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-primary-600 transition group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-house-chimney"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold text-neutral-900">Roofing</span>
+                </a>
+
+                <a href="https://knockio.com/industry/solar-sales-software-and-crm/" class="group/item flex min-h-[68px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2]">
+                  <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-primary-600 transition group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-solar-panel"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold text-neutral-900">Solar</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <a href="https://knockio.com/pricing/" class="block rounded-lg px-3 py-2 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-white/10 hover:text-primary-400">
+            Pricing
+          </a>
+        </li>
+
+        <li>
+          <a href="https://knockio.com/blog/" class="block rounded-lg px-3 py-2 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-white/10 hover:text-primary-400">
+            Blog
+          </a>
+        </li>
+
+        <li>
+          <a href="https://knockio.com/roofing-canvassing-guide-2026/" class="block rounded-lg px-3 py-2 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-white/10 hover:text-primary-400">
+            Roofing Guide
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- ACTIONS -->
+    <div class="flex shrink-0 items-center gap-3">
+      <button id="mobileMenuButton" type="button" class="hidden h-11 w-11 items-center justify-center rounded-xl border border-solid border-white/20 bg-white/10 text-white backdrop-blur-md transition hover:bg-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 max-[1024px]:inline-flex" aria-label="Open navigation menu" aria-controls="mobileSidebar" aria-expanded="false">
+        <i class="fa-solid fa-bars text-lg"></i>
+      </button>
+
+      <a href="https://app.knockio.com/" class="inline-flex min-h-[44px] min-w-[116px] items-center justify-center rounded-lg border border-solid border-white/25 bg-white px-5 text-[15px] font-semibold text-primary-600 transition hover:border-primary-500 hover:bg-primary-500 hover:text-white max-[1024px]:hidden">
+        Sign in
+      </a>
+
+      <a href="https://knockio.com/book-a-demo/" class="inline-flex min-h-[44px] min-w-[136px] items-center justify-center rounded-lg bg-primary-500 px-5 text-[15px] font-semibold text-white transition hover:bg-primary-600 max-[1024px]:hidden">
+        Book a demo
+      </a>
+    </div>
+  </div>
+</header>

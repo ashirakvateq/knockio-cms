@@ -1,0 +1,208 @@
+---
+import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
+import "../../styles/comparisons.css";
+
+const title = "Knockio vs JobNimbus (2026): Roofing CRM Comparison";
+const description = "An honest, sourced comparison of Knockio and JobNimbus for roofing and exterior contractors: canvassing, production boards, integrations, and pricing.";
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://knockio.com/" },
+      { "@type": "ListItem", position: 2, name: "Comparisons", item: "https://knockio.com/comparisons/" },
+      { "@type": "ListItem", position: 3, name: "Knockio vs JobNimbus", item: "https://knockio.com/comparisons/knockio-vs-jobnimbus/" },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Does JobNimbus have door knocking or canvassing?",
+        acceptedAnswer: { "@type": "Answer", text: "No. Leads live in CRM boards, not on a knocking map. Knockio includes canvassing, territories, and live rep tracking with the same CRM features." },
+      },
+      {
+        "@type": "Question",
+        name: "How much does JobNimbus cost?",
+        acceptedAnswer: { "@type": "Answer", text: "It does not publish prices; the pricing page is a request form, as of July 2026. Knockio publishes $20 to $60 per user per month." },
+      },
+      {
+        "@type": "Question",
+        name: "Which is better for roofing?",
+        acceptedAnswer: { "@type": "Answer", text: "Both serve roofers. Knockio adds canvassing and a published price. JobNimbus has deeper roofing specific integrations. Choose by which matters more to how you sell." },
+      },
+      {
+        "@type": "Question",
+        name: "Does JobNimbus integrate with QuickBooks and aerial measurement?",
+        acceptedAnswer: { "@type": "Answer", text: "Yes. QuickBooks, EagleView, HOVER, and supplier ordering are among its stronger integrations." },
+      },
+    ],
+  },
+];
+---
+
+<KnockioHomeLayout title={title} description={description} jsonLd={jsonLd}>
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <span class="kicker">Comparison</span>
+        <h1>Knockio vs JobNimbus</h1>
+        <p class="lede">JobNimbus is a roofing first CRM known for visual production boards and roofing integrations such as aerial measurement. It has no door to door canvassing and does not publish pricing. <b>Knockio covers the same pipeline to invoice chain, adds canvassing and territory mapping, and shows its price right on the site.</b></p>
+        <p class="byline">Last reviewed July 2026 &middot; Written by the Knockio team &middot; Every figure is sourced below</p>
+        <div class="verdict">
+          <h2>The short answer</h2>
+          <p>Roofers who knock doors will get more from Knockio: sales and production in one system with a published price. Pick JobNimbus if aerial measurement and supplier integrations outweigh canvassing for your business.</p>
+        </div>
+        <div class="choose">
+          <div>
+            <h3>Choose Knockio if</h3>
+            <ul>
+              <li>Your leads come from knocking as well as referrals</li>
+              <li>You want a price you can read before any sales call</li>
+              <li>You want sales and production in one system</li>
+              <li>You want a live map of reps and jobs together</li>
+            </ul>
+          </div>
+          <div class="them">
+            <h3>Choose JobNimbus if</h3>
+            <ul>
+              <li>You lean on aerial measurement tools like EagleView and HOVER</li>
+              <li>You want board driven workflows tuned to roofing stages</li>
+              <li>You track insurance claims and adjusters in your pipeline</li>
+              <li>You want a roofing focused tool with a long trade record</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Side by side</h2>
+        <p class="section-note">What each platform covers out of the box. Partial means the capability exists but is limited or costs extra.</p>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr><th>Capability</th><th class="c kn">Knockio</th><th class="c">JobNimbus</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Canvassing and door knocking</td><td class="c kn"><span class="yes">&#10003;</span></td><td class="c"><span class="no">&#10005;</span></td></tr>
+              <tr><td>Sales pipeline and CRM</td><td class="c kn"><span class="yes">&#10003;</span></td><td class="c"><span class="yes">&#10003;</span></td></tr>
+              <tr><td>Estimates and proposals</td><td class="c kn"><span class="yes">&#10003;</span></td><td class="c"><span class="yes">&#10003;</span></td></tr>
+              <tr><td>Crew and job scheduling</td><td class="c kn"><span class="yes">&#10003;</span></td><td class="c"><span class="yes">&#10003;</span></td></tr>
+              <tr><td>Timesheets and time tracking</td><td class="c kn"><span class="yes">&#10003;</span></td><td class="c"><span class="partial">Partial</span><span class="cell-note">Basic time tracking</span></td></tr>
+              <tr><td>Invoicing and payments</td><td class="c kn"><span class="yes">&#10003;</span></td><td class="c"><span class="yes">&#10003;</span></td></tr>
+              <tr><td>Inventory and vendor bills</td><td class="c kn"><span class="yes">&#10003;</span></td><td class="c"><span class="partial">Partial</span><span class="cell-note">Supplier ordering only</span></td></tr>
+              <tr><td>Automations</td><td class="c kn"><span class="yes">&#10003;</span></td><td class="c"><span class="yes">&#10003;</span></td></tr>
+              <tr><td>Map view of jobs</td><td class="c kn"><span class="yes">&#10003;</span></td><td class="c"><span class="yes">&#10003;</span></td></tr>
+              <tr><td>Mobile app for field crews</td><td class="c kn"><span class="yes">&#10003;</span></td><td class="c"><span class="yes">&#10003;</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-foot">Verified from public sources as of July 2026. Sources at the end of this page.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Pricing</h2>
+        <p class="section-note">Prices change. Confirm current figures on each vendor site before you buy.</p>
+        <div class="price-grid">
+          <div class="price-card kn">
+            <h3>Knockio</h3>
+            <p>$20 to $60 per user per month, published, with every feature included on every plan. As of July 2026, knockio.com.</p>
+          </div>
+          <div class="price-card">
+            <h3>JobNimbus</h3>
+            <p>Not publicly disclosed. The pricing page is a request form. Third party breakdowns describe a base fee plus per user fees plus paid add ons such as texting. As of July 2026.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="read">
+      <div class="wrap">
+        <h2>The honest read</h2>
+        <h3>What JobNimbus does well</h3>
+        <ul>
+          <li>Drag and drop production boards that roofers find intuitive</li>
+          <li>Strong roofing integrations: aerial measurement, suppliers, QuickBooks</li>
+          <li>Insurance claim and adjuster tracking for storm restoration</li>
+          <li>A capable automation engine for follow ups and stage triggers</li>
+        </ul>
+        <h3>Where it can fall short</h3>
+        <ul>
+          <li>No published pricing, and the layered model is hard to estimate</li>
+          <li>The built in email tool draws recurring complaints</li>
+          <li>Reviews flag mobile app stability issues</li>
+          <li>Reporting depth is thin for some users</li>
+        </ul>
+        <h3>Why teams pick Knockio instead</h3>
+        <p>Both platforms give roofers a pipeline, estimates, scheduling, and invoicing. The gap is the front of the funnel. JobNimbus expects the lead to exist. <b>Knockio can create it at the door</b> and move it through the same boards into production.</p>
+        <p>On transparency, Knockio publishes a flat $20 to $60 per user per month with everything included. JobNimbus is quote only. If deep roofing integrations matter more to you than canvassing and a public price, JobNimbus is still worth a look.</p>
+        <h3>What to know before choosing Knockio</h3>
+        <p>Knockio is a newer platform, so its integration marketplace and review history are smaller than long established tools. The upside of newer is speed: published pricing, same day setup, and a product that ships quickly. Pressure test everything on a live demo rather than taking our word for it.</p>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="wrap">
+        <h2>Common questions</h2>
+        <details>
+          <summary>Does JobNimbus have door knocking or canvassing?</summary>
+          <div class="answer">No. Leads live in CRM boards, not on a knocking map. Knockio includes canvassing, territories, and live rep tracking with the same CRM features.</div>
+        </details>
+        <details>
+          <summary>How much does JobNimbus cost?</summary>
+          <div class="answer">It does not publish prices; the pricing page is a request form, as of July 2026. Knockio publishes $20 to $60 per user per month.</div>
+        </details>
+        <details>
+          <summary>Which is better for roofing?</summary>
+          <div class="answer">Both serve roofers. Knockio adds canvassing and a published price. JobNimbus has deeper roofing specific integrations. Choose by which matters more to how you sell.</div>
+        </details>
+        <details>
+          <summary>Does JobNimbus integrate with QuickBooks and aerial measurement?</summary>
+          <div class="answer">Yes. QuickBooks, EagleView, HOVER, and supplier ordering are among its stronger integrations.</div>
+        </details>
+      </div>
+    </section>
+
+    <div class="notes">
+      <div class="wrap">
+        <h2>How we compared these</h2>
+        <p>This page is built from vendor pricing and product pages plus independent review sites such as G2 and Capterra. Where a vendor does not publish a figure we say so rather than estimate. Knockio publishes this page, so we have a stake in the outcome. That is exactly why we keep it honest, and why we name what JobNimbus does well. Spot something out of date? Tell us and we will fix it.</p>
+        <ul>
+          <li><a href="https://www.jobnimbus.com/pricing" rel="nofollow noopener" target="_blank">JobNimbus pricing page, request form only</a>. Accessed July 2026.</li>
+          <li><a href="https://www.capterra.com/p/126797/JobNimbus/" rel="nofollow noopener" target="_blank">JobNimbus reviews, Capterra, 4.6 of 5 from about 482 reviews</a>. Accessed July 2026.</li>
+          <li><a href="https://myquoteiq.com/jobnimbus-pricing-breakdown-2025/" rel="nofollow noopener" target="_blank">JobNimbus pricing breakdown, MyQuoteIQ, third party estimate</a>. Accessed July 2026.</li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="cta">
+      <h2>See Knockio on your own workflow.</h2>
+      <p>Twenty minutes, your real process, live on screen. Then decide with your own eyes.</p>
+      <div class="cta-buttons">
+        <a class="btn btn-green" href="https://knockio.com/book-a-demo/">Book a demo</a>
+        <a class="btn btn-outline" href="https://knockio.com/pricing/">See pricing</a>
+      </div>
+    </section>
+
+    <section class="related">
+      <div class="wrap">
+        <h2>More comparisons</h2>
+        <div class="related-links">
+          <a href="/comparisons/">All comparisons</a>
+          <a href="/comparisons/knockio-vs-jobber/">Knockio vs Jobber</a>
+          <a href="/comparisons/knockio-vs-spotio/">Knockio vs SPOTIO</a>
+          <a href="/comparisons/knockio-vs-servicetitan/">Knockio vs ServiceTitan</a>
+          <a href="/comparisons/knockio-vs-housecall-pro/">Knockio vs Housecall Pro</a>
+          <a href="/comparisons/knockio-vs-fieldpulse/">Knockio vs FieldPulse</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</KnockioHomeLayout>

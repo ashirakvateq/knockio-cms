@@ -1,39 +1,67 @@
 ---
 import LandingPagesLayout from "../layouts/LandingPagesLayout.astro";
+import "../styles/roofing.css";
 import "../styles/canvassing-app.css";
 import canvassingScript from "../scripts/canvassing-app.js?url";
 import calInlineScript from "../scripts/cal-inline.js?url";
 import {
   ArrowRight,
   BadgeCheck,
+  BarChart3,
   Boxes,
   CalendarDays,
   CalendarX,
+  Camera,
   ChartLine,
   Check,
   CheckCircle2,
+  ClipboardList,
+  CreditCard,
+  DollarSign,
   FileSignature,
+  FolderOpen,
+  LayoutDashboard,
   Map,
+  MapPin,
+  MessageSquare,
   Minus,
   Phone,
   Plug,
   Plus,
+  Radio,
+  TrendingDown,
 } from "lucide-astro";
 import {
-  assetBase,
-  faqs,
-  featureCards,
-  fullStackItems,
-  platformColumns,
-  pricingPlans,
-  stats,
-  trustLogos,
-} from "../data/canvassingApp";
+  roofingCycleCards,
+  roofingFaqs,
+  roofingHero,
+  roofingPricingPlans,
+  roofingTestimonial,
+  roofingTrustLogos,
+  roofingWorkSteps,
+  workflowGroups,
+} from "../data/roofingFieldSales";
 
-const title = "Canvassing App for Door-to-Door Sales Teams | Knockio";
+const title = "Roofing Sales Software & CRM for Field Teams | Knockio";
 const description =
-  "Territory, live tracking, door logging, and payments in one platform. Built for door-to-door sales teams, first knock to collected payment.";
-const iconMap = { Map, ChartLine, Boxes };
+  "Territory, live tracking, and payments for retail and insurance roofing jobs. One platform, first knock to collected payment. No contract.";
+
+const iconMap = { Map, ChartLine, Boxes } as const;
+const workflowIconMap = {
+  MapPin,
+  Radio,
+  BarChart3,
+  MessageSquare,
+  Camera,
+  FileSignature,
+  ClipboardList,
+  FolderOpen,
+  DollarSign,
+  TrendingDown,
+  LayoutDashboard,
+  CreditCard,
+} as const;
+
 const currentYear = new Date().getFullYear();
 
 const jsonLd = {
@@ -44,7 +72,7 @@ const jsonLd = {
       "@id": "https://knockio.com/#organization",
       name: "Knockio",
       url: "https://knockio.com/",
-      logo: "https://knockio.com/assets/canvassing-app/knockio-logo.webp",
+      logo: "https://knockio.com/assets/cfw/knockio-logo.webp",
       sameAs: [
         "https://www.facebook.com/knockioapp",
         "https://www.linkedin.com/company/knockio",
@@ -53,37 +81,25 @@ const jsonLd = {
       ],
     },
     {
-      "@type": "SoftwareApplication",
-      "@id": "https://knockio.com/canvassing-app/#software",
-      name: "Knockio Canvassing App",
-      applicationCategory: "BusinessApplication",
-      operatingSystem: "Web, iOS, Android",
-      description,
-      image: "https://knockio.com/assets/canvassing-app/hero-img-new-1280.webp",
-      brand: { "@id": "https://knockio.com/#organization" },
-      offers: pricingPlans.map((plan) => ({
-        "@type": "Offer",
-        name: plan.title,
-        price: plan.price.replace("$", ""),
-        priceCurrency: "USD",
-        category: "subscription",
-      })),
+      "@type": "WebPage",
+      "@id": "https://knockio.com/roofing-field-sales/#webpage",
+      url: "https://knockio.com/roofing-field-sales/",
+      name: "Roofing Sales Software & CRM for Field Teams | Knockio",
+      isPartOf: { "@id": "https://knockio.com/#website" },
+      inLanguage: "en-US",
     },
     {
       "@type": "FAQPage",
-      "@id": "https://knockio.com/canvassing-app/#faq",
-      mainEntity: faqs.map((faq) => ({
+      "@id": "https://knockio.com/roofing-field-sales/#faq",
+      mainEntity: roofingFaqs.map((faq) => ({
         "@type": "Question",
         name: faq.question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: faq.answer,
-        },
+        acceptedAnswer: { "@type": "Answer", text: faq.answer },
       })),
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://knockio.com/canvassing-app/#breadcrumb",
+      "@id": "https://knockio.com/roofing-field-sales/#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
@@ -94,8 +110,8 @@ const jsonLd = {
         {
           "@type": "ListItem",
           position: 2,
-          name: "Canvassing App",
-          item: "https://knockio.com/canvassing-app/",
+          name: "Roofing Field Sales",
+          item: "https://knockio.com/roofing-field-sales/",
         },
       ],
     },
@@ -106,51 +122,52 @@ const jsonLd = {
 <LandingPagesLayout
   title={title}
   description={description}
-  ogImage={`${assetBase}/capterra.webp`}
-  bodyClass="canvassing-page"
+  ogImage="/assets/canvassing-app/capterra.webp"
+  bodyClass="storm-page"
   jsonLd={jsonLd}
   robots="noindex, follow"
   noHeader
   noFooter
   preloadImages={[
     {
-      href: `${assetBase}/hero-img-new-1280.webp`,
-      imagesrcset: `${assetBase}/hero-img-new-480.webp 480w, ${assetBase}/hero-img-new-1280.webp 1280w`,
+      href: `${roofingHero.image}`,
+      imagesrcset: `/assets/storm-restoration-roofing/restoration-hero-480.webp 480w, /assets/storm-restoration-roofing/restoration-hero-1280.webp 1280w`,
       imagesizes: "(max-width: 767px) 92vw, 56vw",
     },
-    { href: `${assetBase}/green-name-1280.png` },
+    { href: "/assets/canvassing-app/green-name-1280.png" },
   ]}
 >
   <main>
-    <section class="canvassing-hero pt-8 md:pt-12 xl:pt-16">
+    <section class="storm-hero">
       <div
         class="my-container grid items-center gap-10 pt-[50px] lg:grid-cols-[0.85fr_1.15fr]"
       >
-        <div class="reveal-up max-lg:text-center">
-          <a
-            href="/"
-            aria-label="Knockio home"
-            class="hero-logo mb-6 inline-block"
-          >
+        <div class="storm-reveal max-lg:text-center">
+          <a href="/" aria-label="Knockio home" class="mb-6 inline-block">
             <img
-              src={`${assetBase}/green-name-1280.png`}
+              src="/assets/canvassing-app/green-name-1280.png"
               alt="Knockio"
               width="1280"
               height="193"
+              class="h-auto w-56 sm:w-72 xl:w-80"
               decoding="async"
             />
           </a>
 
-          <h1 class="hero-h1">
-            The Canvassing<br /> App Built for <br />Door to Door Teams
+          <h1 class="storm-hero-heading">
+            {roofingHero.title}<br class="hidden sm:block" />
+            <span class="text-primary-600">{roofingHero.titleBreak1}</span><br
+              class="hidden sm:block"
+            />
+            {roofingHero.titleBreak2}
           </h1>
 
-          <p class="hero-subtitle">
-            {description}
+          <p class="storm-hero-subtitle">
+            {roofingHero.description}
           </p>
 
           <div
-            class="mt-8 flex flex-col gap-3 sm:flex-row max-lg:justify-center"
+            class="storm-reveal-cta mt-8 flex flex-col gap-3 sm:flex-row max-lg:justify-center"
           >
             <a
               href="#landing-pricing"
@@ -169,7 +186,7 @@ const jsonLd = {
           </div>
 
           <ul
-            class="hero-checklist mt-7 space-y-3 text-left max-lg:mx-auto max-lg:max-w-xl"
+            class="storm-hero-checklist mt-7 space-y-3 text-left max-lg:mx-auto max-lg:max-w-xl"
           >
             <li class="flex items-start gap-3">
               <CheckCircle2
@@ -178,7 +195,7 @@ const jsonLd = {
                 aria-hidden="true"
               />
               <span
-                >No contract, Cancel anytime or book a demo if you'd like a
+                >No contract, cancel anytime or book a demo if you'd like a
                 walkthrough first.</span
               >
             </li>
@@ -193,12 +210,12 @@ const jsonLd = {
               class="shadow-md transition hover:opacity-90"
             >
               <img
-                src={`${assetBase}/google-play-button.webp`}
+                src="/assets/cfw/google-play-button.webp"
                 alt="Get it on Google Play"
                 width="520"
                 height="154"
                 class="h-auto w-36 xl:w-44 lg:w-[145px]"
-                loading="eager"
+                loading="lazy"
                 decoding="async"
               />
             </a>
@@ -210,31 +227,34 @@ const jsonLd = {
               class="shadow-md transition hover:opacity-90"
             >
               <img
-                src={`${assetBase}/apple-store-button.webp`}
+                src="/assets/cfw/apple-store-button.webp"
                 alt="Download on the App Store"
                 width="520"
                 height="154"
                 class="h-auto w-36 xl:w-44 lg:w-[145px]"
-                loading="eager"
+                loading="lazy"
                 decoding="async"
               />
             </a>
           </div>
         </div>
 
-        <div class="reveal-up hero-img-wrap" style="--reveal-delay: 120ms">
+        <div
+          class="storm-reveal storm-hero-img-wrap"
+          style="--reveal-delay: 120ms"
+        >
           <picture>
             <source
-              srcset={`${assetBase}/hero-img-new-480.webp`}
+              srcset="/assets/storm-restoration-roofing/restoration-hero-480.webp"
               media="(max-width: 767px)"
             />
             <img
-              src={`${assetBase}/hero-img-new-1280.webp`}
-              alt="Knockio canvassing dashboard and mobile field app screens"
-              width="1280"
-              height="1077"
+              src="/assets/storm-restoration-roofing/restoration-hero-1280.webp"
+              alt={roofingHero.imageAlt}
+              width={roofingHero.imageWidth}
+              height={roofingHero.imageHeight}
               fetchpriority="high"
-              loading="eager"
+              loading="lazy"
               decoding="async"
               class="mx-auto h-auto w-full max-w-5xl"
             />
@@ -243,17 +263,17 @@ const jsonLd = {
       </div>
     </section>
 
-    <section aria-labelledby="trusted-heading" class="trust-section">
+    <section aria-labelledby="trusted-heading" class="storm-trust-section">
       <div class="my-container text-center">
         <h2 id="trusted-heading">
           Trusted by 1,000+ field sales teams from Roofing and Solar to Pest
           Control, HVAC, and beyond.
         </h2>
-        <div class="trust-logos">
+        <div class="storm-trust-logos">
           {
-            trustLogos.map((logo) => (
+            roofingTrustLogos.map((logo) => (
               <img
-                class="trust-logo"
+                class="storm-trust-logo"
                 src={logo.src}
                 alt={logo.alt}
                 width="139"
@@ -267,46 +287,25 @@ const jsonLd = {
       </div>
     </section>
 
-    <section class="stats-section lg:py-36">
+    <section class="storm-cycle-section">
       <div class="my-container">
-        <h2 class="section-heading">Why D2D Teams Choose Knockio?</h2>
-        <div class="stats-row grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-          {
-            stats.map(([value, label]) => (
-              <article class="stat-blurb">
-                <div>
-                  <h4>
-                    <span>{value}</span>
-                  </h4>
-                  <p>{label}</p>
-                </div>
-              </article>
-            ))
-          }
-        </div>
-      </div>
-    </section>
-
-    <section class="features-section">
-      <div class="my-container">
-        <h2 class="section-heading">
-          The Best Canvassing Software For Field Teams
+        <h2 class="storm-section-heading">
+          Built for the Full Roofing Sales Cycle
         </h2>
-        <div class="features-grid">
+        <div class="mt-14 grid gap-7 sm:grid-cols-2 xl:grid-cols-4">
           {
-            featureCards.map((feature) => (
-              <article class="feature-card" data-aos="fade-up">
+            roofingCycleCards.map((card) => (
+              <article class="storm-cycle-card">
                 <img
-                  src={feature.image}
+                  src={card.image}
                   alt=""
-                  width={feature.width}
-                  height={feature.height}
-                  class="feature-img"
+                  width={card.width}
+                  height={card.height}
                   loading="lazy"
                   decoding="async"
                 />
-                <h3 class="feature-heading">{feature.title}</h3>
-                <p class="feature-desc">{feature.copy}</p>
+                <h3>{card.title}</h3>
+                <p>{card.copy}</p>
               </article>
             ))
           }
@@ -314,30 +313,168 @@ const jsonLd = {
       </div>
     </section>
 
-    <section class="testimonial-section py-20 lg:py-32">
+    <section class="storm-testimonial-section">
       <div class="my-container">
-        <div class="testimonial-quote-wrap">
+        <div class="mt-5 mb-10 flex justify-center">
+          <a
+            href="#landing-calender"
+            class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary-500 px-7 py-4 font-bold text-white shadow-lg shadow-primary-500/25 transition hover:bg-primary-600 hover:shadow-primary-500/35"
+          >
+            Book a Free Demo
+            <ArrowRight size={18} aria-hidden="true" />
+          </a>
+        </div>
+        <div class="storm-testimonial-quote-wrap mt-8">
           <p>
-            Tracking leads has never been simpler. We can see real time updates,
-            assign follow-ups instantly, and never worry about losing
-            information. The mapping feature is a game changer it helps us plan
-            routes smarter and cover more ground in less time.
+            &ldquo;{roofingTestimonial.quote}&rdquo;
           </p>
         </div>
-        <div class="testi-wrapper mt-8">
+        <div class="storm-testimonial-author">
           <img
-            src={`${assetBase}/testi.png`}
+            src={roofingTestimonial.image}
             alt=""
             width="80"
             loading="lazy"
             decoding="async"
           />
           <div>
-            <h6>Michael Palmer</h6>
-            <p>Sales Manager - Modern Roofing</p>
+            <h6>{roofingTestimonial.name}</h6>
+            <p>{roofingTestimonial.role}</p>
           </div>
         </div>
-        <div class="mt-9 flex justify-center">
+      </div>
+    </section>
+
+    <section class="operations-section">
+      <div class="container">
+        <div class="editorial-header">
+          <div class="headline-column">
+            <h2 class="operations-headline">
+              Everything Your<br />
+              Roofing Operation<br />
+              Runs On
+            </h2>
+          </div>
+
+          <div class="intro-column">
+            <p class="operations-pull-quote">
+              Three parts of your operation. One platform. Nothing handed off to
+              a separate tool.
+            </p>
+          </div>
+        </div>
+
+        <div class="columns-grid">
+          <div class="category-column">
+            <div class="category-header">
+              <div class="category-number">I</div>
+              <h3 class="category-title">Field Sales</h3>
+            </div>
+
+            <ul class="feature-list">
+              <li class="feature-item">
+                <h4 class="feature-title">Territory Assignment</h4>
+                <p class="feature-desc">
+                  Assign streets and neighborhoods before your reps leave the
+                  lot.
+                </p>
+              </li>
+              <li class="feature-item">
+                <h4 class="feature-title">Live Rep Tracking</h4>
+                <p class="feature-desc">
+                  See every rep's real-time location and activity on the map.
+                </p>
+              </li>
+              <li class="feature-item">
+                <h4 class="feature-title">Rep Performance</h4>
+                <p class="feature-desc">
+                  Measure doors knocked, leads, conversations, and jobs.
+                </p>
+              </li>
+              <li class="feature-item">
+                <h4 class="feature-title">Communications</h4>
+                <p class="feature-desc">
+                  Text, call, and email homeowners from one place. All
+                  conversations are logged.
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="category-column">
+            <div class="category-header">
+              <div class="category-number">II</div>
+              <h3 class="category-title">Completion</h3>
+            </div>
+
+            <ul class="feature-list">
+              <li class="feature-item">
+                <h4 class="feature-title">Damage & Roof Doc.</h4>
+                <p class="feature-desc">
+                  Capture photos, videos, notes, and homeowner details in
+                  seconds.
+                </p>
+              </li>
+              <li class="feature-item">
+                <h4 class="feature-title">Contracts & Signing</h4>
+                <p class="feature-desc">
+                  Legally binding e-signatures captured on-site, even offline.
+                  Retail contracts or insurance contingencies.
+                </p>
+              </li>
+              <li class="feature-item">
+                <h4 class="feature-title">Work Order Creation</h4>
+                <p class="feature-desc">
+                  Convert signed agreements into work orders and jobs with one
+                  tap.
+                </p>
+              </li>
+              <li class="feature-item">
+                <h4 class="feature-title">Document Storage</h4>
+                <p class="feature-desc">
+                  Store photos, contracts, invoices, and all job files tied to
+                  one record.
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="category-column">
+            <div class="category-header">
+              <div class="category-number">III</div>
+              <h3 class="category-title">Business Control</h3>
+            </div>
+
+            <ul class="feature-list">
+              <li class="feature-item">
+                <h4 class="feature-title">Estimates & Invoicing</h4>
+                <p class="feature-desc">
+                  Build branded estimates and send invoices from the field.
+                </p>
+              </li>
+              <li class="feature-item">
+                <h4 class="feature-title">Insurance Payment Tracking</h4>
+                <p class="feature-desc">
+                  Track ACV and depreciation separately on insurance jobs.
+                </p>
+              </li>
+              <li class="feature-item">
+                <h4 class="feature-title">Campaign Reporting</h4>
+                <p class="feature-desc">
+                  Dashboards show what's winning. Campaigns, reps, markets.
+                </p>
+              </li>
+              <li class="feature-item">
+                <h4 class="feature-title">Payment Processing</h4>
+                <p class="feature-desc">
+                  Pay vendors. Collect payments. Every transaction tied to the
+                  job.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-12 table mx-auto">
           <a
             href="#landing-calender"
             class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary-500 px-7 py-4 font-bold text-white shadow-lg shadow-primary-500/25 transition hover:bg-primary-600 hover:shadow-primary-500/35"
@@ -349,71 +486,12 @@ const jsonLd = {
       </div>
     </section>
 
-    <section class="platform-section">
-      <div class="my-container">
-        <h2 class="section-heading">
-          One Platform. The Full Door-to-Dollar Cycle
-        </h2>
-        <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-          {
-            platformColumns.map((column) => (
-              <div class="platform-wrapper">
-                <span class="platform-wrapper-heading">{column.title}</span>
-                <ul class="mb-5 space-y-3">
-                  {column.items.map((item) => (
-                    <li class="flex items-center gap-2.5">
-                      <Check
-                        class="mt-0.5 shrink-0 text-white"
-                        size={17}
-                        aria-hidden="true"
-                      />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))
-          }
-        </div>
-
-        <div class="mt-16 grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-          <div>
-            <h3 class="platform-fullstack-heading">
-              Stop duct-taping tools together. Here's everything your field team
-              needs in one place:
-            </h3>
-            <ul class="platform-fullstack-list mt-8">
-              {fullStackItems.map((item) => <li>{item}</li>)}
-            </ul>
-            <div class="platform-book-demo-btn my-10 table">
-              <a
-                href="#landing-calender"
-                class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary-500 px-7 py-4 font-bold text-white shadow-lg shadow-primary-500/25 transition hover:bg-primary-600 hover:shadow-primary-500/35"
-              >
-                Book a Free Demo
-                <ArrowRight size={18} aria-hidden="true" />
-              </a>
-            </div>
-          </div>
-          <img
-            src={`${assetBase}/platform-img.webp`}
-            alt="Knockio platform workflow screen"
-            width="759"
-            height="520"
-            class="mx-auto h-auto w-full max-w-2xl"
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
-      </div>
-    </section>
-
     <section class="onboarding-section">
       <div class="container">
         <div class="editorial-header">
           <!-- Headline Column -->
           <div class="headline-column">
-            <h2 class="main-headline">
+            <h2 class="onboarding-main-headline">
               Switching<br />
               <span class="headline-sub">to Knockio is</span><br />
               <span class="headline-accent">Easy.</span>
@@ -422,13 +500,13 @@ const jsonLd = {
 
           <!-- Intro / Pull-Quote Column -->
           <div class="intro-column">
-            <p class="pull-quote">
-              It's not one app you are replacing, it is the whole stack. Routing
-              tool. Canvassing app. Photo chats, contracts, and e-sign. A CRM
-              that was never built for the porch. <br /><br />
+            <p class="onboarding-pull-quote">
+              Most roofing teams come from JobNimbus, AccuLynx, or a patchwork
+              of canvassing tools, spreadsheets, and WhatsApp threads. <br /><br
+              />
               <span class="pull-quote-strong"
-                >Most teams come from all five, then wish they had switched
-                sooner.</span
+                >Knockio replaces the whole stack, starting at the door, not the
+                office</span
               >
             </p>
           </div>
@@ -440,45 +518,15 @@ const jsonLd = {
 
           <!-- 3-Column Grid for Steps -->
           <div class="steps-grid">
-            <!-- Step 01 -->
-            <div class="step-card">
-              <div class="step-number">01</div>
-              <h4 class="step-title">Guided Onboarding</h4>
-              <p class="step-description">
-                Most teams are running live campaigns within the hour. We walk
-                you through territory setup, rep accounts, and your first
-                campaign.
-                <span class="step-description-highlight"
-                  >No consultant needed.</span
-                >
-              </p>
-            </div>
-
-            <!-- Step 02 -->
-            <div class="step-card">
-              <div class="step-number">02</div>
-              <h4 class="step-title">Import Your Data</h4>
-              <p class="step-description">
-                Bring over lead lists, pre-knocked address data, and customer
-                records via CSV or direct migration. Your history doesn't
-                disappear when you switch, and it
-                <span class="step-italic">never</span> gets held hostage.
-              </p>
-            </div>
-
-            <!-- Step 03 -->
-            <div class="step-card">
-              <div class="step-number">03</div>
-              <h4 class="step-title">Handshake Support</h4>
-              <p class="step-description">
-                Direct access to the team, including the founder. No ticket
-                queues, no offshore tiers, no chatbot. You talk to a real
-                person.
-                <span class="step-description-highlight"
-                  >Most issues resolved same day.</span
-                >
-              </p>
-            </div>
+            {
+              roofingWorkSteps.map((step, index) => (
+                <div class="step-card">
+                  <div class="step-number">0{index + 1}</div>
+                  <h4 class="step-title">{step.title}</h4>
+                  <p class="step-description">{step.copy}</p>
+                </div>
+              ))
+            }
           </div>
         </div>
       </div>
@@ -507,7 +555,7 @@ const jsonLd = {
         class="grid grid-cols-1 md:grid-cols-3 gap-14 max-xl:gap-7 max-w-[1330px] mx-auto items-stretch"
       >
         {
-          pricingPlans.map((plan) => {
+          roofingPricingPlans.map((plan) => {
             const Icon = iconMap[plan.icon as keyof typeof iconMap];
             return (
               <article
@@ -632,12 +680,12 @@ const jsonLd = {
   <section class="calender-section py-24 lg:py-36">
     <div class="my-container">
       <h2 class="section-heading">
-        See the Full Door-to-Dollar Cycle in Action
+        See how Knockio runs the full roofing sales cycle
       </h2>
       <p class="section-copy">
-        No pitch deck. No scripted walkthrough. No pressure. A live session
-        built around your vertical and team size, so you can see exactly how it
-        handles your workflow before you decide.
+        A live walkthrough built around your team size, your markets, and
+        whether you run retail, insurance, or both. No pitch deck. No recorded
+        video. No pressure.
       </p>
 
       <div class="calender-wrapper mt-8">
@@ -700,26 +748,28 @@ const jsonLd = {
 
       <div class="faq-container space-y-4">
         {
-          faqs.map((faq, index) => (
-            <details
-              class="faq-item rounded-2xl border border-slate-200 bg-white transition"
-              data-faq-item={faq.question}
-              open={index === 0}
-            >
-              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-5 text-left sm:p-6">
-                <span class="text-lg font-bold text-slate-950 sm:text-xl">
-                  {faq.question}
-                </span>
-                <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-primary-50 text-primary-600">
-                  <Plus class="faq-plus" size={20} aria-hidden="true" />
-                  <Minus class="faq-minus" size={20} aria-hidden="true" />
-                </span>
-              </summary>
-              <div class="px-5 pb-6 text-base leading-8 text-slate-600 sm:px-6">
-                {faq.answer}
-              </div>
-            </details>
-          ))
+          roofingFaqs.map(
+            (faq: { question: string; answer: string }, index: number) => (
+              <details
+                class="faq-item rounded-2xl border border-slate-200 bg-white transition"
+                data-faq-item={faq.question}
+                open={index === 0}
+              >
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-5 text-left sm:p-6">
+                  <span class="text-lg font-bold text-slate-950 sm:text-xl">
+                    {faq.question}
+                  </span>
+                  <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-primary-50 text-primary-600">
+                    <Plus class="faq-plus" size={20} aria-hidden="true" />
+                    <Minus class="faq-minus" size={20} aria-hidden="true" />
+                  </span>
+                </summary>
+                <div class="px-5 pb-6 text-base leading-8 text-slate-600 sm:px-6">
+                  {faq.answer}
+                </div>
+              </details>
+            ),
+          )
         }
       </div>
     </div>
@@ -735,7 +785,7 @@ const jsonLd = {
     <div class="flex flex-col items-center gap-4 py-10 text-center sm:py-12">
       <a href="/" aria-label="Knockio home">
         <img
-          src={`${assetBase}/knockio-logo.webp`}
+          src="/assets/cfw/knockio-logo.webp"
           alt="Knockio"
           width="320"
           height="96"

@@ -4,14 +4,16 @@ interface Props {
   description: string;
   ogImage?: string;
   type?: 'website' | 'article';
+  robots?: string;
 }
 
-const { title, description, ogImage, type = 'website' } = Astro.props;
+const { title, description, ogImage, type = 'website', robots } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <title>{title}</title>
 <meta name="description" content={description} />
+{robots && <meta name="robots" content={robots} />}
 <link rel="canonical" href={canonicalURL} />
 
 <meta property="og:type" content={type} />

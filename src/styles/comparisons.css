@@ -1,0 +1,516 @@
+/* ═══════════════════════════════════════════════
+   COMPARISON PAGES — SHARED STYLES
+   ═══════════════════════════════════════════════ */
+
+.byline {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  margin: 0 0 2rem;
+}
+
+/* ── VERDICT ──────────────────────────────────── */
+
+.verdict {
+  padding: 1.5rem 2rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  margin-bottom: 2rem;
+}
+
+.verdict h2 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.5rem;
+}
+
+.verdict p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #334155;
+  margin: 0;
+}
+
+/* ── CHOOSE (side by side) ────────────────────── */
+
+.choose {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.choose > div {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+}
+
+.choose > div:first-child {
+  border-color: #4faa3a;
+  background: #f0fdf4;
+}
+
+.choose h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.75rem;
+}
+
+.choose ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.choose li {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #475569;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.choose > div:first-child li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #4faa3a;
+  font-weight: 700;
+}
+
+.choose > div.them li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: #94a3b8;
+  font-weight: 700;
+}
+
+/* ── SECTION NOTE ─────────────────────────────── */
+
+.section-note {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0 0 1.5rem;
+}
+
+/* ── COMPARISON TABLE ─────────────────────────── */
+
+section + section {
+  padding: 3rem 0;
+}
+
+section h2 {
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.75rem;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 0.75rem;
+}
+
+.table-scroll table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+
+.table-scroll thead {
+  background: #f8fafc;
+}
+
+.table-scroll th {
+  padding: 0.875rem 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  text-align: left;
+  border-bottom: 2px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+.table-scroll th.c {
+  text-align: center;
+}
+
+.table-scroll th.kn {
+  color: #4faa3a;
+}
+
+.table-scroll td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #f1f5f9;
+  color: #334155;
+  vertical-align: top;
+}
+
+.table-scroll td.c {
+  text-align: center;
+}
+
+.table-scroll td.kn {
+  background: #f0fdf4;
+}
+
+.table-scroll tbody tr:hover {
+  background: #f8fafc;
+}
+
+.table-scroll tbody tr:hover td.kn {
+  background: #e8f5e9;
+}
+
+.yes {
+  color: #4faa3a;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.no {
+  color: #ef4444;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.partial {
+  color: #f59e0b;
+  font-weight: 600;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cell-note {
+  display: block;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-top: 0.25rem;
+  font-weight: 400;
+}
+
+.table-foot {
+  font-size: 0.8125rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+/* ── PRICING ──────────────────────────────────── */
+
+.price-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.price-card {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+}
+
+.price-card.kn {
+  border-color: #4faa3a;
+  background: #f0fdf4;
+}
+
+.price-card h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.75rem;
+}
+
+.price-card.kn h3 {
+  color: #4faa3a;
+}
+
+.price-card p {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: #475569;
+  margin: 0;
+}
+
+/* ── THE HONEST READ ──────────────────────────── */
+
+.read {
+  padding: 3rem 0;
+}
+
+.read h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 1.5rem 0 0.75rem;
+}
+
+.read h3:first-of-type {
+  margin-top: 0.5rem;
+}
+
+.read ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.read li {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #475569;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.read li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #94a3b8;
+}
+
+.read p {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: #475569;
+  margin: 0 0 1rem;
+}
+
+.read p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── FAQ ──────────────────────────────────────── */
+
+.faq {
+  padding: 3rem 0;
+}
+
+.faq details {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.faq details:first-of-type {
+  border-top: 1px solid #e2e8f0;
+}
+
+.faq summary {
+  padding: 1rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f172a;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq summary::after {
+  content: "+";
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #94a3b8;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.faq details[open] summary::after {
+  content: "–";
+}
+
+.faq .answer {
+  padding: 0 0 1rem;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: #475569;
+}
+
+/* ── NOTES / SOURCES ──────────────────────────── */
+
+.notes {
+  padding: 3rem 0;
+  background: #f8fafc;
+}
+
+.notes h2 {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.75rem;
+}
+
+.notes p {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: #475569;
+  margin: 0 0 1rem;
+}
+
+.notes ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.notes li {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #64748b;
+}
+
+.notes a {
+  color: #4faa3a;
+  text-decoration: none;
+}
+
+.notes a:hover {
+  text-decoration: underline;
+}
+
+/* ── RELATED COMPARISONS ──────────────────────── */
+
+.related {
+  padding: 3rem 0;
+}
+
+.related-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.related-links a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e2e8f0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #475569;
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s, background-color 0.2s;
+}
+
+.related-links a:hover {
+  border-color: #4faa3a;
+  color: #4faa3a;
+  background: #f0fdf4;
+}
+
+/* ── HUB PAGE (index) ─────────────────────────── */
+
+.hub-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  margin-top: 2rem;
+}
+
+.hub-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.hub-card:hover {
+  border-color: #4faa3a;
+  box-shadow: 0 4px 16px rgba(79, 170, 58, 0.1);
+  transform: translateY(-2px);
+}
+
+.hub-card h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.hub-card h2 em {
+  font-style: normal;
+  color: #64748b;
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.hub-card p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.hub-card .more {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #4faa3a;
+  margin-top: auto;
+}
+
+/* ── RESPONSIVE ───────────────────────────────── */
+
+@media (max-width: 768px) {
+  .choose {
+    grid-template-columns: 1fr;
+  }
+
+  .price-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hub-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .related-links {
+    flex-direction: column;
+  }
+
+  .related-links a {
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .verdict {
+    padding: 1.25rem;
+  }
+
+  .choose > div {
+    padding: 1.25rem;
+  }
+
+  .price-card {
+    padding: 1.25rem;
+  }
+}

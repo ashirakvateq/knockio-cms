@@ -1,3 +1,4 @@
+export const assetBaseGlob = '/assets/cfw';
 export const assetBase = '/assets/canvassing-app';
 
 export const trustLogos = [
@@ -18,28 +19,28 @@ export const featureCards = [
   {
     title: 'No Overlapping Routes. Ever.',
     copy: 'Assign streets before reps leave the lot. When a rep moves on, every door they knocked stays with you.',
-    image: `${assetBase}/canvassing-blurb1.webp`,
+    image: `${assetBaseGlob}/01_1.webp`,
     width: 603,
     height: 527,
   },
   {
     title: 'Full Field Visibility',
     copy: "See every rep's exact location in real time. Know who's working and who's sitting in their car, without picking up the phone.",
-    image: `${assetBase}/canvassing-blurb2.webp`,
+    image: `${assetBaseGlob}/03_1.webp`,
     width: 843,
     height: 561,
   },
   {
     title: 'Every Door Gets a Record',
-    copy: "Outcome, photo, notes logged in under 10 seconds. No leads falling through the cracks because a rep’s notes lived in their phone.",
-    image: `${assetBase}/canvassing-blurb3.webp`,
+    copy: "Outcome, photo, notes logged in under 10 seconds. No leads falling through the cracks because a rep's notes lived in their phone.",
+    image: `${assetBaseGlob}/04_1.webp`,
     width: 718,
     height: 553,
   },
   {
     title: 'Estimates, Invoicing, and Payment',
     copy: 'Estimate from the driveway. Signature on the porch. Payment before you leave the block. Not five tools duct-taped together.',
-    image: `${assetBase}/canvassing-blurb4.webp`,
+    image: `${assetBaseGlob}/07_1.webp`,
     width: 634,
     height: 459,
   },

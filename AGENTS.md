@@ -317,6 +317,7 @@ knockio-cms/
 - Files in `public/` are copied as-is (no processing)
 - Images needing optimization go in `src/assets/`
 - Static images (favicons, OG) go in `public/assets/`
+- **Shared images** (used across multiple pages) go in `public/assets/cfw/` — this includes logos, app store buttons, and any asset referenced by more than one page. Always source from `/assets/cfw/`, never duplicate shared images into per-page asset folders.
 
 ---
 
@@ -414,13 +415,14 @@ Before shipping ANY page, verify:
 
 ### Asset Anti-Patterns
 
-| Anti-Pattern | Why It's Bad | Do This |
+| Anti-Pattern | Why It's Bad | MUST Do This |
 |-------------|-------------|---------|
 | All images in `public/` | No optimization | Store in `src/assets/`, use `<Image />` |
 | `<img>` without width/height | CLS (layout shift) | Use `<Image />` |
 | External URLs in CSS `background-image` | Can break, no optimization | Download to `src/assets/` |
 | Self-hosting video files | Huge payload | Use Cloudflare Stream, Mux, YouTube |
 | Loading all font weights | Unnecessary payload | Specify only weights used |
+| Duplicating shared images per-page | Wasted bytes, stale copies | Store in `public/assets/cfw/`, source from `/assets/cfw/` |
 
 ---
 
