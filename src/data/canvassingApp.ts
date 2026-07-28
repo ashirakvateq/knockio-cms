@@ -2,10 +2,10 @@ export const assetBaseGlob = '/assets/cfw';
 export const assetBase = '/assets/canvassing-app';
 
 export const trustLogos = [
-  { src: `${assetBase}/google.png`, alt: 'Google reviews' },
-  { src: `${assetBase}/capterra.webp`, alt: 'Capterra reviews' },
-  { src: `${assetBase}/advice.webp`, alt: 'Software Advice reviews' },
-  { src: `${assetBase}/review.webp`, alt: 'Review platform rating' },
+  { src: `${assetBaseGlob}/google.webp`, alt: 'Google reviews' },
+  { src: `${assetBaseGlob}/capterra.webp`, alt: 'Capterra reviews' },
+  { src: `${assetBaseGlob}/advice.webp`, alt: 'Software Advice reviews' },
+  { src: `${assetBaseGlob}/review.webp`, alt: 'Review platform rating' },
 ];
 
 export const stats = [
@@ -19,7 +19,7 @@ export const featureCards = [
   {
     title: 'No Overlapping Routes. Ever.',
     copy: 'Assign streets before reps leave the lot. When a rep moves on, every door they knocked stays with you.',
-    image: `${assetBaseGlob}/01_1.webp`,
+    image: `${assetBaseGlob}/011.webp`,
     width: 603,
     height: 527,
   },

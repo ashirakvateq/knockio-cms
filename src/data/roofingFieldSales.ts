@@ -1,5 +1,7 @@
+
 const base = '/assets/storm-restoration-roofing';
 const shared = '/assets/canvassing-app';
+const baseGlob = '/assets/cfw';
 
 export const roofingHero = {
   title: 'The Field Sales',
@@ -14,38 +16,38 @@ export const roofingHero = {
 };
 
 export const roofingTrustLogos = [
-  { src: `${shared}/google.png`, alt: 'Google reviews' },
-  { src: `${shared}/capterra.webp`, alt: 'Capterra reviews' },
-  { src: `${shared}/advice.webp`, alt: 'Software Advice reviews' },
-  { src: `${shared}/review.webp`, alt: 'Review platform rating' },
+  { src: `${baseGlob}/google.webp`, alt: 'Google reviews' },
+  { src: `${baseGlob}/capterra.webp`, alt: 'Capterra reviews' },
+  { src: `${baseGlob}/advice.webp`, alt: 'Software Advice reviews' },
+  { src: `${baseGlob}/review.webp`, alt: 'Review platform rating' },
 ];
 
 export const roofingCycleCards = [
   {
     title: 'Territory Intelligence',
     copy: 'Know which streets to knock before reps leave the lot. Assign boundaries. Eliminate overlap. Put every rep exactly where the opportunity is. When a rep moves on, every door they knocked stays with you.',
-    image: `${base}/storm-territory.webp`,
+    image: `${baseGlob}/022.webp`,
     width: 365,
     height: 285,
   },
   {
     title: 'Door-to-Commitment Speed',
     copy: 'Log the door and capture damage photos. Secure the signed agreement, a retail estimate or a contingency, before another contractor knocks tomorrow. The window between yes and gone is shorter than most teams think.',
-    image: `${base}/storm-document.webp`,
+    image: `${baseGlob}/04_3.webp`,
     width: 290,
     height: 272,
   },
   {
     title: 'Full Team Visibility',
     copy: 'Every rep live on the map. Every door logged. Every follow-up tracked. Know who\'s working and who\'s sitting in their car. No need to pick up the phone.',
-    image: `${base}/storm-contract.webp`,
+    image: `${baseGlob}/03_1.webp`,
     width: 325,
     height: 254,
   },
   {
     title: 'Track Payments / Completion',
     copy: 'Retail invoice or split insurance payment, both tracked against the same job, start to finish. ACV received, depreciation pending. Because the second check doesn\'t release itself.',
-    image: `${base}/storm-payment.webp`,
+    image: `${baseGlob}/09.webp`,
     width: 300,
     height: 245,
   },

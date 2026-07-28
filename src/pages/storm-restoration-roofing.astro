@@ -38,9 +38,12 @@ import {
   stormPricingPlans,
   stormTestimonial,
   stormTrustLogos,
-  stormWorkSteps,
   workflowGroups,
 } from "../data/stormRestoration";
+
+import {
+  stats
+} from "../data/canvassingApp";
 
 const title = "Storm Restoration Roofing Sales Software | Knockio";
 const description =
@@ -122,7 +125,7 @@ const jsonLd = {
 <LandingPagesLayout
   title={title}
   description={description}
-  ogImage="/assets/canvassing-app/capterra.webp"
+  ogImage="/assets/cfw/capterra.webp"
   bodyClass="storm-page"
   jsonLd={jsonLd}
   robots="noindex, follow"
@@ -287,25 +290,46 @@ const jsonLd = {
       </div>
     </section>
 
-    <section class="storm-cycle-section">
+    <section class="stats-section lg:py-36">
       <div class="my-container">
-        <h2 class="storm-section-heading">
-          Built for the Full Storm Sales Cycle
-        </h2>
-        <div class="mt-14 grid gap-7 sm:grid-cols-2 xl:grid-cols-4">
+        <h2 class="section-heading">Why Restoration Teams Choose Knockio?</h2>
+        <div class="stats-row grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {
-            stormCycleCards.map((card) => (
-              <article class="storm-cycle-card">
+            stats.map(([value, label]) => (
+              <article class="stat-blurb">
+                <div>
+                  <h4>
+                    <span>{value}</span>
+                  </h4>
+                  <p>{label}</p>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="features-section">
+      <div class="my-container">
+        <h2 class="section-heading">
+          The Best Canvassing Software For Field Teams
+        </h2>
+        <div class="features-grid">
+          {
+            stormCycleCards.map((feature) => (
+              <article class="feature-card" data-aos="fade-up">
                 <img
-                  src={card.image}
+                  src={feature.image}
                   alt=""
-                  width={card.width}
-                  height={card.height}
+                  width={feature.width}
+                  height={feature.height}
+                  class="feature-img"
                   loading="lazy"
                   decoding="async"
                 />
-                <h3>{card.title}</h3>
-                <p>{card.copy}</p>
+                <h3 class="feature-heading">{feature.title}</h3>
+                <p class="feature-desc">{feature.copy}</p>
               </article>
             ))
           }

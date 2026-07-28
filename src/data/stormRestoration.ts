@@ -1,5 +1,5 @@
+const baseGlob = '/assets/cfw';
 const base = '/assets/storm-restoration-roofing';
-const shared = '/assets/canvassing-app';
 
 export const stormHero = {
   title: 'Close More Storm Jobs',
@@ -14,38 +14,38 @@ export const stormHero = {
 };
 
 export const stormTrustLogos = [
-  { src: `${shared}/google.png`, alt: 'Google reviews' },
-  { src: `${shared}/capterra.webp`, alt: 'Capterra reviews' },
-  { src: `${shared}/advice.webp`, alt: 'Software Advice reviews' },
-  { src: `${shared}/review.webp`, alt: 'Review platform rating' },
+  { src: `${baseGlob}/google.webp`, alt: 'Google reviews' },
+  { src: `${baseGlob}/capterra.webp`, alt: 'Capterra reviews' },
+  { src: `${baseGlob}/advice.webp`, alt: 'Software Advice reviews' },
+  { src: `${baseGlob}/review.webp`, alt: 'Review platform rating' },
 ];
 
 export const stormCycleCards = [
   {
     title: 'Territory',
     copy: 'Assign streets before reps leave the lot. Zero overlap, any neighborhood, any storm market. When a rep moves on, every door they knocked stays with you.',
-    image: `${base}/storm-territory.webp`,
+    image: `${baseGlob}/011.webp`,
     width: 365,
     height: 285,
   },
   {
     title: 'Damage Documentation',
     copy: 'Photos, notes, and door outcome logged in seconds tied to the lead, not a camera roll or a WhatsApp thread.',
-    image: `${base}/storm-document.webp`,
+    image: `${baseGlob}/05_1.webp`,
     width: 290,
     height: 272,
   },
   {
     title: 'Sign the Contingency',
     copy: 'Contingency agreed and signed at the door, before the homeowner cools down.',
-    image: `${base}/storm-contract.webp`,
+    image: `${baseGlob}/10.webp`,
     width: 325,
     height: 254,
   },
   {
     title: 'Track Payments / Completion',
     copy: 'ACV received. Depreciation pending. Know exactly where every dollar stands without a spreadsheet on the side.',
-    image: `${base}/storm-payment.webp`,
+    image: `${baseGlob}/09.webp`,
     width: 300,
     height: 245,
   },
@@ -86,30 +86,6 @@ export const workflowGroups = [
       { icon: 'LayoutDashboard', title: 'Campaign Reporting', copy: 'Dashboards. See what\u2019s winning campaigns, reps, markets.' },
       { icon: 'CreditCard', title: 'Payment Processing', copy: 'Pay vendors. Collect payments. Every transaction tied to the job.' },
     ],
-  },
-];
-
-export const stormWorkSteps = [
-  {
-    image: `${shared}/work-img1.webp`,
-    title: 'Guided onboarding on day one',
-    copy: 'Most teams are running live campaigns within the hour. We walk you through territory setup, rep accounts, and your first campaign, no consultant needed.',
-    width: 713,
-    height: 376,
-  },
-  {
-    image: `${shared}/work-img2.webp`,
-    title: 'Import your existing data',
-    copy: "Bring over lead lists, pre-knocked address data, and customer records via CSV or direct migration. Your history doesn\u2019t disappear when you switch, and it\u2019s never held hostage.",
-    width: 713,
-    height: 376,
-  },
-  {
-    image: `${shared}/work-img3.webp`,
-    title: 'Real support from real people',
-    copy: 'Direct access to the team, including the founder. No ticket queues, no offshore tiers, no chatbot. You talk to a person. Most issues are resolved the same day.',
-    width: 713,
-    height: 376,
   },
 ];
 
