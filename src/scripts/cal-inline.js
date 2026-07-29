@@ -109,11 +109,15 @@ function ensureCalQueue() {
 function getTrackingQuery() {
   const params = new URLSearchParams();
   const customGclid = getParamCaseInsensitive(['gclid', 'GCLID', 'custom_gclid']);
+  const customFbclid = getParamCaseInsensitive(['fbclid', 'custom_fbclid']);
+  const customMsclkid = getParamCaseInsensitive(['msclkid', 'custom_msclkid']);
   const utmSource = getParamCaseInsensitive(['utm_source']);
   const utmMedium = getParamCaseInsensitive(['utm_medium']);
   const utmCampaign = getParamCaseInsensitive(['utm_campaign']);
 
   if (customGclid) params.set('custom_gclid', customGclid);
+  if (customFbclid) params.set('custom_fbclid', customFbclid);
+  if (customMsclkid) params.set('custom_msclkid', customMsclkid);
   if (utmSource) params.set('utm_source', utmSource);
   if (utmMedium) params.set('utm_medium', utmMedium);
   if (utmCampaign) params.set('utm_campaign', utmCampaign);
