@@ -1,7 +1,8 @@
 ---
-import "@fontsource-variable/manrope";
+import { Font } from "astro:assets";
 import "../styles/global.css";
 import "../styles/knockio-home.css";
+import "../styles/homepage.css";
 import SEO from "../components/SEO.astro";
 import Analytics from "../components/Analytics.astro";
 import KnockioHomeHeader from "../components/KnockioHomeHeader.astro";
@@ -12,9 +13,10 @@ interface Props {
   description: string;
   ogImage?: string;
   jsonLd?: unknown;
+  fAwsm?: boolean
 }
 
-const { title, description, ogImage, jsonLd } = Astro.props;
+const { title, description, ogImage, jsonLd, fAwsm=false } = Astro.props;
 ---
 
 <!doctype html>
@@ -22,6 +24,7 @@ const { title, description, ogImage, jsonLd } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <Font cssVariable="--font-manrope" preload />
     <link
       rel="icon"
       type="image/webp"
@@ -39,6 +42,19 @@ const { title, description, ogImage, jsonLd } = Astro.props;
       href="https://www.googletagmanager.com"
       crossorigin
     />
+    {
+      fAwsm && (
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+          integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+
+      )
+
+    }
     <SEO title={title} description={description} ogImage={ogImage} />
     {
       jsonLd && (

@@ -117,7 +117,7 @@
 @media (min-width: 1024px) { .sa-reviews-header { margin-bottom: 5rem; } }
 
 .sa-reviews-header h2 {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-manrope);
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 700;
   letter-spacing: -0.025em;

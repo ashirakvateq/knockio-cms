@@ -1,0 +1,440 @@
+/* ═══════════════════════════════════════════════
+   HOMEPAGE — Hero Background
+   ═══════════════════════════════════════════════ */
+
+.hero-background {
+  background: url("/assets/cfw/home-hero-background.webp") center/cover no-repeat;
+}
+
+/* ═══════════════════════════════════════════════
+   HOMEPAGE — Product Demo Styles (L2-157)
+   ═══════════════════════════════════════════════ */
+
+.kio-product-demo * {
+  box-sizing: border-box;
+}
+
+.kio-demo-tab-panel {
+  display: none;
+  height: 100%;
+  min-height: 0;
+}
+
+.kio-demo-tab-panel.is-active {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  animation: kioPanelReveal 0.52s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+@keyframes kioPanelReveal {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.994);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes kioProgress {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+@keyframes kioMarkerIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -80%) scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -100%) scale(1);
+  }
+}
+
+@keyframes kioRouteMove {
+  to { stroke-dashoffset: -26; }
+}
+
+.kio-demo-tab-panel.is-active > .flex {
+  flex: 1;
+  min-height: 0;
+}
+
+.kio-demo-tab.is-active {
+  background: #fff;
+  color: #171717;
+  border-radius: 9999px;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.24);
+}
+
+.kio-demo-tab.is-active svg {
+  color: #43a047;
+}
+
+.kio-progress-bar {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #7ddc6a, #43a047);
+  animation: kioProgress 5000ms linear forwards;
+}
+
+.kio-map-marker {
+  position: absolute;
+  z-index: 8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translate(-50%, -100%);
+  animation: kioMarkerIn 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+.kio-pin {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 10px;
+  box-shadow: 0 10px 18px rgba(15, 23, 42, 0.18);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.kio-pin::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 9px;
+  height: 9px;
+  transform: translateX(-50%) rotate(45deg);
+  background: inherit;
+  border-radius: 2px;
+}
+
+.kio-pin:hover,
+.kio-pin.is-active {
+  transform: translateY(-5px) scale(1.08);
+  box-shadow: 0 16px 28px rgba(15, 23, 42, 0.24);
+  z-index: 15;
+}
+
+.kio-route-path {
+  stroke-dasharray: 13;
+  animation: kioRouteMove 1.45s linear infinite;
+}
+
+.kio-toast {
+  transform: translate(-50%, 18px);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.28s ease;
+}
+
+.kio-toast.is-visible {
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
+
+.kio-drop-active {
+  background: rgba(67, 160, 71, 0.08) !important;
+  outline: 2px dashed rgba(67, 160, 71, 0.35);
+}
+
+.kio-dragging {
+  opacity: 0.45;
+  transform: scale(0.98);
+}
+
+.kio-test-highlight {
+  box-shadow: 0 0 0 3px rgba(67, 160, 71, 0.45) !important;
+  transform: scale(1.02);
+}
+
+.pin-green { background: #29ad61; }
+.pin-red { background: #dc3545; }
+.pin-orange { background: #fb923c; }
+.pin-yellow { background: #f5c833; }
+.pin-blue { background: #22a7f0; }
+
+
+/* ═══════════════════════════════════════════════
+   HOMEPAGE — Platform Capabilities Styles (L2383-2543)
+   ═══════════════════════════════════════════════ */
+
+.hpTabs1_content {
+  transition: opacity 0.3s ease, visibility 0.3s;
+}
+
+.hp-cap-card {
+  transition: opacity 0.3s cubic-bezier(0.22, 0.61, 0.36, 1),
+              transform 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* ═══════════════════════════════════════════════
+   HOMEPAGE — Workflow Styles (L2390-2543)
+   ═══════════════════════════════════════════════ */
+
+#workflow-section {
+  --wf-sticky-top: 5rem;
+  --wf-stage-height: calc(100dvh - var(--wf-sticky-top));
+  --wf-panel-height: min(600px, calc(100dvh - var(--wf-sticky-top) - 1.5rem));
+}
+
+@supports not (height: 100dvh) {
+  #workflow-section {
+    --wf-stage-height: calc(100vh - var(--wf-sticky-top));
+    --wf-panel-height: min(600px, calc(100vh - var(--wf-sticky-top) - 1.5rem));
+  }
+}
+
+#workflow-section #workflowPanels {
+  height: var(--wf-panel-height);
+  max-height: var(--wf-panel-height);
+}
+
+#workflow-section .workflow-step-panel {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  overflow: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s, box-shadow 0.4s ease;
+}
+
+#workflow-section .workflow-step-panel.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  position: relative;
+  box-shadow: 0 24px 64px -16px color-mix(in srgb, var(--step-border) 40%, transparent);
+}
+
+#workflow-section .wf-step-text,
+#workflow-section .wf-step-media {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+#workflow-section .wf-step-text.wf-in,
+#workflow-section .wf-step-media.wf-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#workflow-section .workflow-step-panel .wf-step-media img {
+  max-height: 100%;
+  object-fit: contain;
+  object-position: right bottom;
+}
+
+#workflow-scroll-stage {
+  --wf-header-progress: 0;
+  height: var(--wf-stage-height);
+  min-height: var(--wf-stage-height);
+  justify-content: center;
+}
+
+#workflow-scroll-stage.is-header-hidden #workflowHeaderSticky {
+  position: absolute;
+  width: 1px;
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+#workflow-section #workflowHeaderSticky {
+  flex-shrink: 0;
+  overflow: hidden;
+  opacity: calc(1 - var(--wf-header-progress));
+  transform: translateY(calc(-28px * var(--wf-header-progress)));
+  max-height: calc(520px * (1 - var(--wf-header-progress)));
+  margin-bottom: calc(1.5rem * (1 - var(--wf-header-progress)));
+  filter: blur(calc(3px * var(--wf-header-progress)));
+}
+
+#workflow-scroll-stage .workflow-steps-row {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+#workflow-section .step-item {
+  position: relative;
+  list-style: none;
+  padding: 0.75rem 0.875rem 0.75rem 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-left: 3px solid transparent;
+  color: #737373;
+  opacity: 0.75;
+  transition: all 0.3s ease;
+}
+
+#workflow-section .step-item:hover {
+  opacity: 1;
+  background: #fff;
+  border-color: #f5f5f5;
+}
+
+#workflow-section .step-item.is-nav-active {
+  opacity: 1;
+  background: #fff;
+  color: #171717;
+  font-weight: 500;
+  border-left-color: var(--step-accent);
+  border-color: color-mix(in srgb, var(--step-accent) 22%, #fff);
+  box-shadow: 0 4px 20px -6px color-mix(in srgb, var(--step-accent) 25%, transparent);
+}
+
+#workflow-section .step-item.is-nav-active .wf-nav-icon {
+  color: var(--step-accent);
+}
+
+#workflow-section .wf-step-num {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--step-accent);
+  margin-bottom: 0.15rem;
+}
+
+#workflow-section .wf-nav-label {
+  font-size: 0.9375rem;
+  line-height: 1.3;
+}
+
+@media (max-height: 800px) {
+  #workflow-section .workflow-step-panel {
+    padding-top: 2rem;
+    gap: 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #workflow-section .workflow-step-panel,
+  #workflow-section .wf-step-text,
+  #workflow-section .wf-step-media {
+    transition: none;
+  }
+
+  #workflow-scroll-stage.is-header-hidden #workflowHeaderSticky {
+    display: none;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════
+   HOMEPAGE — Testimonial Marquee
+   ═══════════════════════════════════════════════ */
+
+.testimonial-track-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.testimonial-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  width: max-content;
+}
+
+.card-set {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+.animate-marquee-left {
+  animation: marquee-left 40s linear infinite;
+}
+
+.animate-marquee-right {
+  animation: marquee-right 40s linear infinite;
+}
+
+.hover\:pause:hover {
+  animation-play-state: paused;
+}
+
+
+/* ═══════════════════════════════════════════════
+   HOMEPAGE — FAQ Accordion
+   ═══════════════════════════════════════════════ */
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.faq-item[data-open] .faq-content {
+  max-height: 500px;
+}
+
+.faq-item .icon-minus {
+  display: none;
+}
+
+.faq-item[data-open] .icon-plus {
+  display: none;
+}
+
+.faq-item[data-open] .icon-minus {
+  display: block;
+}
+
+
+/* ═══════════════════════════════════════════════
+   HOMEPAGE — Misc Animations (used by JS)
+   ═══════════════════════════════════════════════ */
+
+@keyframes kioBranch {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-kio-branch {
+  animation: kioBranch 0.35s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+@keyframes kioPaid {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.animate-kio-paid {
+  animation: kioPaid 0.4s ease;
+}

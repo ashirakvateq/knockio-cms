@@ -1,179 +1,177 @@
----
-import KnockioHomeLayout from "../layouts/KnockioHomeLayout.astro";
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://knockio.com/#organization",
-      "name": "Knockio",
-      "url": "https://knockio.com/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://knockio.com/wp-content/uploads/2026/05/knockio-logo.webp"
-      },
-      "sameAs": [
-        "https://apps.apple.com/us/app/knockio-field-service-crm/id6756485440",
-        "https://play.google.com/store/apps/details?id=com.knockio.crm&hl=en_US",
-        "https://www.linkedin.com/company/knockio",
-        "https://www.facebook.com/knockioapp/",
-        "https://www.instagram.com/knockioapp/",
-        "https://x.com/knockioapp",
-        "https://www.youtube.com/@knockioapp",
-        "https://www.g2.com/products/knockio-by-knockio",
-        "https://www.capterra.com/p/10018264/Knockio/",
-        "https://www.softwareadvice.com/field-sales/knockio-profile/",
-        "https://www.gartner.com/reviews/product/knockio-1907844446",
-        "https://www.crunchbase.com/organization/knockio"
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://knockio.com/#website",
-      "url": "https://knockio.com/",
-      "name": "Knockio",
-      "publisher": { "@id": "https://knockio.com/#organization" },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://knockio.com/?s={search_term_string}",
-        "query-input": "required name=search_term_string"
+<style>
+      .kio-product-demo * {
+        box-sizing: border-box;
       }
-    },
-    {
-      "@type": "WebApplication",
-      "@id": "https://knockio.com/#software",
-      "name": "Knockio",
-      "url": "https://knockio.com/",
-      "applicationCategory": "BusinessApplication",
-      "applicationSubCategory": "Field Sales Software, Field Service CRM",
-      "operatingSystem": "Web, iOS, Android",
-      "description": "Knockio is an integrated field service management and door-to-door sales platform that consolidates territory mapping, routing, and lead capture with job scheduling, dispatching, estimates, invoicing, workorders & payments.",
-      "provider": { "@id": "https://knockio.com/#organization" },
-      "availableOnDevice": ["Desktop", "Mobile", "Tablet"],
-      "hasPart": [
-        {
-          "@type": "SoftwareApplication",
-          "name": "Knockio iOS App",
-          "operatingSystem": "iOS",
-          "applicationCategory": "BusinessApplication",
-          "downloadUrl": "https://apps.apple.com/us/app/knockio-field-service-crm/id6756485440",
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "ratingCount": "40"
-          }
-        },
-        {
-          "@type": "SoftwareApplication",
-          "name": "Knockio Android App",
-          "operatingSystem": "Android",
-          "applicationCategory": "BusinessApplication",
-          "downloadUrl": "https://play.google.com/store/apps/details?id=com.knockio.crm&hl=en_US"
-        },
-        { "@id": "https://knockio.com/canvassing/#software" },
-        { "@id": "https://knockio.com/field-service-crm/#software" }
-      ],
-      "offers": {
-        "@type": "AggregateOffer",
-        "lowPrice": "20.00",
-        "highPrice": "60.00",
-        "priceCurrency": "USD",
-        "url": "https://knockio.com/pricing/"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.3",
-        "ratingCount": "9"
+
+      .kio-demo-tab-panel {
+        display: none;
+        height: 100%;
+        min-height: 0;
       }
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://knockio.com/#webpage",
-      "url": "https://knockio.com/",
-      "name": "Knockio | All-In-One Field Sales & Service Platform",
-      "description": "Stop taping your software together. Knockio is the unified field service management platform that connects your front-line sales to your back-office operations.",
-      "isPartOf": { "@id": "https://knockio.com/#website" },
-      "about": { "@id": "https://knockio.com/#software" }
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://knockio.com/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is Knockio?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Knockio is a field sales and field service platform. It handles door-to-door canvassing, territory mapping, route planning, and lead capture on the sales side, and job scheduling, dispatching, estimates, and invoicing on the service side. Most teams juggle a separate tool for each; Knockio keeps them in one workflow."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Who is Knockio built for?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Field sales and service teams in roofing, solar, HVAC, pest control, fiber, and other home-services industries — anyone managing reps or crews in the field, from the first door knock to the final invoice."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much does Knockio cost?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Plans start at $25/user/month, with volume discounts at 5+ users, no long-term contracts, and no setup fee. Prospect (canvassing / door-to-door sales) is $25/user/mo, or $20/user/mo with 5+ users. Organize (field service CRM) is $35/user/mo, or $30/user/mo with 5+ users. Growth (all-in-one sales + service) is $60/user/mo, or $45/user/mo with 5+ users."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does Knockio replace multiple tools, or add another one?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Knockio is built to replace the canvassing app and service CRM you're currently running separately, or just one of them, whichever your team needs. Choose both with the Growth plan, and leads captured in the field move straight into scheduling, estimates, and invoicing without re-entering data anywhere."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does Knockio work on mobile?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes — reps and crews can use the Knockio Android and iOS apps in the field to capture leads, update job statuses, add notes or photos in real time, and also send invoices, collect payments, and email customers directly from the app."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use just the canvassing side, or just the CRM side?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Teams can run Knockio's canvassing app on its own, the field service CRM on its own, or both together as one connected platform."
-          }
+
+      .kio-demo-tab-panel.is-active {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        min-height: 0;
+        animation: kioPanelReveal 0.52s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+      }
+
+      @keyframes kioPanelReveal {
+        from {
+          opacity: 0;
+          transform: translateY(12px) scale(0.994);
+          filter: blur(4px);
         }
-      ]
-    }
-  ]
-};
----
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+          filter: blur(0);
+        }
+      }
 
-<KnockioHomeLayout
-  title="Knockio | All-In-One Field Sales & Service Platform"
-  description="Stop taping your software together. Knockio is the unified field service management platform that connects your front-line sales to your back-office operations."
-  jsonLd={jsonLd}
-  fAwsm={true}
+      @keyframes kioProgress {
+        from { width: 0%; }
+        to { width: 100%; }
+      }
+
+      @keyframes kioMarkerIn {
+        from {
+          opacity: 0;
+          transform: translate(-50%, -80%) scale(0.7);
+        }
+        to {
+          opacity: 1;
+          transform: translate(-50%, -100%) scale(1);
+        }
+      }
+
+      @keyframes kioRouteMove {
+        to { stroke-dashoffset: -26; }
+      }
+
+      .kio-demo-tab-panel.is-active > .flex {
+        flex: 1;
+        min-height: 0;
+      }
+
+      .kio-demo-tab.is-active {
+        background: #fff;
+        color: #171717;
+        border-radius: 9999px;
+        box-shadow: 0 16px 35px rgba(0, 0, 0, 0.24);
+      }
+
+      .kio-demo-tab.is-active i {
+        color: #43a047;
+      }
+
+      .kio-progress-bar {
+        width: 0;
+        height: 100%;
+        background: linear-gradient(90deg, #7ddc6a, #43a047);
+        animation: kioProgress 5000ms linear forwards;
+      }
+
+      .kio-map-marker {
+        position: absolute;
+        z-index: 8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translate(-50%, -100%);
+        animation: kioMarkerIn 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+      }
+
+      .kio-pin {
+        position: relative;
+        width: 26px;
+        height: 26px;
+        border-radius: 8px;
+        display: grid;
+        place-items: center;
+        color: #fff;
+        font-size: 10px;
+        box-shadow: 0 10px 18px rgba(15, 23, 42, 0.18);
+        cursor: pointer;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .kio-pin::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -5px;
+        width: 9px;
+        height: 9px;
+        transform: translateX(-50%) rotate(45deg);
+        background: inherit;
+        border-radius: 2px;
+      }
+
+      .kio-pin:hover,
+      .kio-pin.is-active {
+        transform: translateY(-5px) scale(1.08);
+        box-shadow: 0 16px 28px rgba(15, 23, 42, 0.24);
+        z-index: 15;
+      }
+
+      .kio-route-path {
+        stroke-dasharray: 13;
+        animation: kioRouteMove 1.45s linear infinite;
+      }
+
+      .kio-toast {
+        transform: translate(-50%, 18px);
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.28s ease;
+      }
+
+      .kio-toast.is-visible {
+        transform: translate(-50%, 0);
+        opacity: 1;
+      }
+
+      .kio-drop-active {
+        background: rgba(67, 160, 71, 0.08) !important;
+        outline: 2px dashed rgba(67, 160, 71, 0.35);
+      }
+
+      .kio-dragging {
+        opacity: 0.45;
+        transform: scale(0.98);
+      }
+
+      .kio-test-highlight {
+        box-shadow: 0 0 0 3px rgba(67, 160, 71, 0.45) !important;
+        transform: scale(1.02);
+      }
+
+      .pin-green { background: #29ad61; }
+      .pin-red { background: #dc3545; }
+      .pin-orange { background: #fb923c; }
+      .pin-yellow { background: #f5c833; }
+      .pin-blue { background: #22a7f0; }
+</style>
+    <!-- Hero + Interactive Product Demo -->
+<section
+    class="hero-background text-white pt-36 max-md:pt-40 max-lg:pb-24 max-md:pb-40 flex flex-col items-center justify-center text-center relative z-0"
 >
-  <!-- SECTION 1: Hero + Product Demo -->
-<!-- Hero + Interactive Product Demo -->
-<section class="hero-background text-white pt-36 max-md:pt-40 max-lg:pb-24 max-md:pb-40 flex flex-col items-center justify-center text-center relative z-0">
     <div class="my-container">
     <div>
         <div
         class="flex items-center gap-3 justify-center mb-3 max-md:flex-col max-md:gap-1"
+        data-aos="fade-up"
+        data-aos-delay="600"
         >
         <div>
-            <i class="fa-solid fa-star text-yellow-400"></i>
-            <i class="fa-solid fa-star text-yellow-400"></i>
-            <i class="fa-solid fa-star text-yellow-400"></i>
-            <i class="fa-solid fa-star text-yellow-400"></i>
-            <i class="fa-solid fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
+            <i class="fas fa-star text-yellow-400"></i>
         </div>
         <div>
             <span class="text-base max-md:text-base text-neutral-200"
@@ -183,25 +181,32 @@ const jsonLd = {
         </div>
         <h1
         class="text-[64px] max-2xl:text-6xl max-xl:text-5xl max-md:text-3xl max-md:max-w-full max-w-5xl mx-auto text-white font-extrabold leading-[76px] mb-3"
+        data-aos="fade-up"
+        data-aos-delay="700"
         >
         The All-In-One Field Sales and Service Platform
         </h1>
         <p
         class="text-lg max-xl:text-base max-md:text-sm text-neutral-200 mb-8 max-w-5xl font-normal leading-8 mx-auto"
+        data-aos="fade-up"
+        data-aos-delay="800"
         >
         Knockio unifies your entire operation. Equip your outside sales team with elite <a href="https://knockio.com/canvassing">door to door canvassing software</a>, and give your back office a powerful <a href="https://knockio.com/field-service-crm/">field service CRM</a> to dispatch crews and collect payments, all in one connected contractor platform.
         </p>
-        <div
+        <div data-aos="fade-up"
+        data-aos-delay="800"
             class="my-6 flex flex-wrap justify-center gap-3 sm:gap-4">
             <a href="https://play.google.com/store/apps/details?id=com.knockio.crm&hl=en" target="_blank" class="shadow-md hover:opacity-90 transition-opacity">
-            <img decoding="async" src="/assets/cfw/google-play-button.webp" alt="Google Play" class="h-auto w-36 xl:w-44 lg:w-[145px]" />
+            <img decoding="async" src="https://knockio.com/wp-content/uploads/2026/05/google-play-button.webp" alt="Google Play" class="h-auto w-36 xl:w-44 lg:w-[145px]">
             </a>
             <a href="https://apps.apple.com/us/app/knockio/id6756485440" target="_blank" class="shadow-md hover:opacity-90 transition-opacity">
-            <img decoding="async" src="/assets/cfw/apple-store-button.webp" alt="App Store" class="h-auto w-36 xl:w-44 lg:w-[145px]" />
+            <img decoding="async" src="https://knockio.com/wp-content/uploads/2026/05/apple-store-button.webp" alt="App Store" class="h-auto w-36 xl:w-44 lg:w-[145px]">
             </a>
         </div>
         <div
         class="flex items-center max-md:flex-col justify-center gap-8 max-md:gap-5"
+        data-aos="fade-up"
+        data-aos-delay="900"
         >
         <a
             href="#cal-sec"
@@ -224,7 +229,8 @@ const jsonLd = {
         data-kio-tab="leads"
         class="kio-demo-tab is-active flex shrink-0 items-center rounded-full px-6 py-2.5 text-base font-medium text-white transition-all hover:bg-white/30"
         >
-        <i class="fa-solid fa-user-group"></i><span class="ml-2">Leads</span>
+        <i class="fa-solid fa-user-group"></i
+        ><span class="ml-2">Leads</span>
         </button>
         <button
         type="button"
@@ -245,14 +251,16 @@ const jsonLd = {
         data-kio-tab="invoices"
         class="kio-demo-tab flex shrink-0 items-center rounded-full px-6 py-2.5 text-base font-medium text-white transition-all hover:bg-white/30"
         >
-        <i class="fa-solid fa-file-invoice-dollar"></i><span class="ml-2">Invoices</span>
+        <i class="fa-solid fa-file-invoice-dollar"></i
+        ><span class="ml-2">Invoices</span>
         </button>
         <button
         type="button"
         data-kio-tab="automations"
         class="kio-demo-tab flex shrink-0 items-center rounded-full px-6 py-2.5 text-base font-medium text-white transition-all hover:bg-white/30"
         >
-        <i class="fa-solid fa-sync-alt"></i><span class="ml-2">Automations</span>
+        <i class="fa-solid fa-sync-alt"></i
+        ><span class="ml-2">Automations</span>
         </button>
     </div>
     <!-- Product Window -->
@@ -356,7 +364,9 @@ const jsonLd = {
                         data-kio-map-host
                     >
                         <div class="absolute left-1/2 top-3.5 z-20 flex w-[min(420px,72%)] -translate-x-1/2 items-center gap-2 rounded-[10px] border border-solid border-neutral-200 bg-white px-3.5 py-2.5 shadow-lg">
-                            <i class="fa-solid fa-magnifying-glass text-[11px] text-neutral-400"></i>
+                            <i
+                            class="fa-solid fa-magnifying-glass text-[11px] text-neutral-400"
+                            ></i>
                             <input
                             class="w-full bg-transparent text-[12px] font-medium outline-none placeholder:text-neutral-400"
                             placeholder="Search Location"
@@ -566,7 +576,9 @@ const jsonLd = {
                             class="flex items-center justify-between rounded-[8px] border border-solid border-black/10 bg-black/[0.025] px-[12px] py-[10px]"
                         >
                             <div class="flex items-center gap-[9px]">
-                            <i class="fa-solid fa-chevron-right text-[10px] text-neutral-500"></i>
+                            <i
+                                class="fa-solid fa-chevron-right text-[10px] text-neutral-500"
+                            ></i>
                             <span
                                 class="text-[13px] font-semibold text-neutral-900"
                                 >Roof Inspection</span
@@ -644,7 +656,9 @@ const jsonLd = {
                     <div class="mb-5 flex items-center justify-between">
                         <h3 class="text-[28px] font-bold leading-tight tracking-tight text-neutral-900">
                         Sales Board
-                        <i class="fa-solid fa-chevron-down ml-1 text-[13px]"></i>
+                        <i
+                            class="fa-solid fa-chevron-down ml-1 text-[13px]"
+                        ></i>
                         </h3>
                         <p class="text-[13px] font-medium text-neutral-600">
                         Drag cards between stages
@@ -677,8 +691,12 @@ const jsonLd = {
                             <div
                                 class="flex items-center gap-[14px] text-neutral-500"
                             >
-                                <i class="fa-solid fa-chevron-left text-[11px]"></i>
-                                <i class="fa-solid fa-ellipsis text-[12px]"></i>
+                                <i
+                                class="fa-solid fa-chevron-left text-[11px]"
+                                ></i>
+                                <i
+                                class="fa-solid fa-ellipsis text-[12px]"
+                                ></i>
                                 <i class="fa-solid fa-plus text-[12px]"></i>
                             </div>
                             </div>
@@ -712,7 +730,7 @@ const jsonLd = {
                                 <p
                                 class="max-w-[230px] text-[12px] font-semibold leading-[18px] tracking-[-0.02em] text-neutral-700"
                                 >
-                                1340–139 Taylor St, San Francisco, CA 94108,
+                                1340â€“139 Taylor St, San Francisco, CA 94108,
                                 USA
                                 </p>
                                 <div
@@ -740,7 +758,9 @@ const jsonLd = {
                                     <button
                                     class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
                                     >
-                                    <i class="fa-regular fa-note-sticky"></i>
+                                    <i
+                                        class="fa-regular fa-note-sticky"
+                                    ></i>
                                     </button>
                                 </div>
                                 </div>
@@ -794,7 +814,9 @@ const jsonLd = {
                                     <button
                                     class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
                                     >
-                                    <i class="fa-regular fa-note-sticky"></i>
+                                    <i
+                                        class="fa-regular fa-note-sticky"
+                                    ></i>
                                     </button>
                                 </div>
                                 </div>
@@ -848,7 +870,9 @@ const jsonLd = {
                                     <button
                                     class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
                                     >
-                                    <i class="fa-regular fa-note-sticky"></i>
+                                    <i
+                                        class="fa-regular fa-note-sticky"
+                                    ></i>
                                     </button>
                                 </div>
                                 </div>
@@ -876,8 +900,12 @@ const jsonLd = {
                             <div
                                 class="flex items-center gap-[14px] text-neutral-500"
                             >
-                                <i class="fa-solid fa-chevron-left text-[11px]"></i>
-                                <i class="fa-solid fa-ellipsis text-[12px]"></i>
+                                <i
+                                class="fa-solid fa-chevron-left text-[11px]"
+                                ></i>
+                                <i
+                                class="fa-solid fa-ellipsis text-[12px]"
+                                ></i>
                                 <i class="fa-solid fa-plus text-[12px]"></i>
                             </div>
                             </div>
@@ -939,7 +967,9 @@ const jsonLd = {
                                     <button
                                     class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
                                     >
-                                    <i class="fa-regular fa-note-sticky"></i>
+                                    <i
+                                        class="fa-regular fa-note-sticky"
+                                    ></i>
                                     </button>
                                 </div>
                                 </div>
@@ -992,7 +1022,9 @@ const jsonLd = {
                                     <button
                                     class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
                                     >
-                                    <i class="fa-regular fa-note-sticky"></i>
+                                    <i
+                                        class="fa-regular fa-note-sticky"
+                                    ></i>
                                     </button>
                                 </div>
                                 </div>
@@ -1039,8 +1071,12 @@ const jsonLd = {
                             <div
                                 class="flex items-center gap-[14px] text-neutral-500"
                             >
-                                <i class="fa-solid fa-chevron-left text-[11px]"></i>
-                                <i class="fa-solid fa-ellipsis text-[12px]"></i>
+                                <i
+                                class="fa-solid fa-chevron-left text-[11px]"
+                                ></i>
+                                <i
+                                class="fa-solid fa-ellipsis text-[12px]"
+                                ></i>
                                 <i class="fa-solid fa-plus text-[12px]"></i>
                             </div>
                             </div>
@@ -1101,7 +1137,9 @@ const jsonLd = {
                                     <button
                                     class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
                                     >
-                                    <i class="fa-regular fa-note-sticky"></i>
+                                    <i
+                                        class="fa-regular fa-note-sticky"
+                                    ></i>
                                     </button>
                                 </div>
                                 </div>
@@ -1129,8 +1167,12 @@ const jsonLd = {
                             <div
                                 class="flex items-center gap-[14px] text-neutral-500"
                             >
-                                <i class="fa-solid fa-chevron-left text-[11px]"></i>
-                                <i class="fa-solid fa-ellipsis text-[12px]"></i>
+                                <i
+                                class="fa-solid fa-chevron-left text-[11px]"
+                                ></i>
+                                <i
+                                class="fa-solid fa-ellipsis text-[12px]"
+                                ></i>
                                 <i class="fa-solid fa-plus text-[12px]"></i>
                             </div>
                             </div>
@@ -1192,7 +1234,9 @@ const jsonLd = {
                                     <button
                                     class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
                                     >
-                                    <i class="fa-regular fa-note-sticky"></i>
+                                    <i
+                                        class="fa-regular fa-note-sticky"
+                                    ></i>
                                     </button>
                                 </div>
                                 </div>
@@ -1246,7 +1290,9 @@ const jsonLd = {
                                     <button
                                     class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
                                     >
-                                    <i class="fa-regular fa-note-sticky"></i>
+                                    <i
+                                        class="fa-regular fa-note-sticky"
+                                    ></i>
                                     </button>
                                 </div>
                                 </div>
@@ -1341,7 +1387,7 @@ const jsonLd = {
                         <div class="mb-5 flex justify-between">
                             <div>
                             <img
-                                src="/assets/cfw/knockio-logo.webp"
+                                src="https://knockio.com/wp-content/uploads/2026/05/knockio-logo.webp"
                                 alt="Knockio"
                                 class="mb-4 h-6 w-auto object-contain"
                             />
@@ -1737,22 +1783,29 @@ const jsonLd = {
         </div>
     </div>
     </div>
+    <!--
+    <div class="mx-auto mt-6 max-w-lg rounded-2xl border border-solid border-white/15 bg-white/10 p-8 text-center backdrop-blur-xl lg:hidden">
+        <i class="fa-solid fa-desktop mb-3 text-2xl text-primary-400"></i>
+        <p class="text-sm font-medium text-neutral-200">Open on a desktop screen (1024px or wider) to explore the interactive product demo.</p>
+    </div> -->
     </div>
 </section>
 
-  <!-- SECTION 2: The Problem -->
-<!-- The Problem section -->
+
 <section class="py-36 max-xl:py-28 max-lg:py-20 max-md:py-16">
     <div class="my-container">
         <!-- Header Section -->
         <div class="text-center mb-10 max-md:mb-7">
-            <h3 class="text-primary-500 text-2xl max-2xl:text-xl max-xl:text-lg max-md:text-sm font-medium mb-0">
+            <h3 class="text-primary-500 text-2xl max-2xl:text-xl max-xl:text-lg max-md:text-sm font-medium mb-0"
+                data-aos="fade-up">
                 The Problem
             </h3>
-            <h2 class="text-[56px] max-2xl:text-5xl max-xl:text-4xl max-md:text-3xl font-bold text-neutral-900 leading-[68px] mb-4 max-md:mb-2 max-w-3xl mx-auto">
+            <h2 class="text-[56px] max-2xl:text-5xl max-xl:text-4xl max-md:text-3xl font-bold text-neutral-900 leading-[68px] mb-4 max-md:mb-2 max-w-3xl mx-auto"
+                data-aos="fade-up" data-aos-delay="100">
                 Field Teams Are Stuck Juggling Too Many Tools
             </h2>
-            <p class="text-lg max-xl:text-base max-md:text-sm font-normal text-neutral-600 max-w-2xl mx-auto">
+            <p class="text-lg max-xl:text-base max-md:text-sm font-normal text-neutral-600 max-w-2xl mx-auto"
+                data-aos="fade-up" data-aos-delay="200">
                 Most field teams do not lose work because of team inefficiency. They lose work because they do not have
                 a smart process.
             </p>
@@ -1780,7 +1833,7 @@ const jsonLd = {
                         </p>
                     </div>
 
-                    <img src="/assets/cfw/no-shared-job-record.webp"
+                    <img src="https://knockio.com/wp-content/uploads/2026/07/no-shared-job-record.webp"
                         alt="Disconnected roofing job records and notes"
                         class="pointer-events-none absolute bottom-0 right-0 hidden h-full w-auto max-w-[52%] object-contain object-right-bottom lg:block"
                         loading="lazy" />
@@ -1804,7 +1857,7 @@ const jsonLd = {
                         </p>
                     </div>
 
-                    <img src="/assets/cfw/weak-field-visibility.webp"
+                    <img src="https://knockio.com/wp-content/uploads/2026/07/weak-field-visibility.webp"
                         alt="Map showing incomplete work and uncovered field areas"
                         class="pointer-events-none absolute bottom-0 right-0 hidden h-full w-auto max-w-[52%] object-contain object-right-bottom lg:block"
                         loading="lazy" />
@@ -1828,7 +1881,7 @@ const jsonLd = {
                         </p>
                     </div>
 
-                    <img src="/assets/cfw/missed-follow-ups.webp"
+                    <img src="https://knockio.com/wp-content/uploads/2026/07/missed-follow-ups.webp"
                         alt="Missed calls and lead follow-up status"
                         class="pointer-events-none absolute bottom-0 right-0 hidden h-full w-auto max-w-[52%] object-contain object-right-bottom lg:block"
                         loading="lazy" />
@@ -1852,7 +1905,7 @@ const jsonLd = {
                         </p>
                     </div>
 
-                    <img src="/assets/cfw/slow-billing.webp"
+                    <img src="https://knockio.com/wp-content/uploads/2026/07/slow-billing.webp"
                         alt="Pending approvals and delayed job payment"
                         class="pointer-events-none absolute bottom-0 right-0 hidden h-full w-auto max-w-[52%] object-contain object-right-bottom lg:block"
                         loading="lazy" />
@@ -1864,25 +1917,28 @@ const jsonLd = {
     </div>
 </section>
 
-  <!-- SECTION 3: Platform Capabilities -->
+
 <!-- Platform Capabilities section -->
 <section id="platform-capabilities" class="py-20 max-xl:py-24 max-lg:py-16 max-md:py-12">
     <div class="my-container">
         <!-- Header Section -->
         <div class="text-center mb-10 max-md:mb-7">
-            <h3 class="text-primary-500 text-2xl max-2xl:text-xl max-xl:text-lg max-md:text-sm font-medium mb-0">
+            <h3 class="text-primary-500 text-2xl max-2xl:text-xl max-xl:text-lg max-md:text-sm font-medium mb-0"
+                data-aos="fade-down">
                 Platform Capabilities
             </h3>
-            <h2 class="text-[56px] max-2xl:text-5xl max-xl:text-4xl max-md:text-3xl font-bold text-neutral-900 leading-[68px] mb-4 max-w-4xl mx-auto">
-                Core Field Sales and <br> Service Tools, Connected
+            <h2 class="text-[56px] max-2xl:text-5xl max-xl:text-4xl max-md:text-3xl font-bold text-neutral-900 leading-[68px] mb-4 max-w-2xl mx-auto"
+                data-aos="fade-down" data-aos-delay="100">
+                Core Field Sales and Service Tools, Connected
             </h2>
-            <p class="text-lg max-xl:text-base max-md:text-sm font-normal text-neutral-600 max-w-2xl mx-auto">
+            <p class="text-lg max-xl:text-base max-md:text-sm font-normal text-neutral-600 max-w-2xl mx-auto"
+                data-aos="fade-up" data-aos-delay="200">
                 Knockio includes integrations with GoHighLevel, Salesforce, HubSpot, Google Calendar, and thousands of
                 apps through <a class="text-primary-500" href="https://www.flowchef.io/">Flow Chef</a> and Zapier.
             </p>
         </div>
         <!-- Platform scroll scrolly -->
-        <div class="">
+        <div class="" data-aos="fade-up" data-aos-delay="200">
             <div id="hpCapScrollTrack"
                 class="h-[calc(100vh+(var(--scroll-steps,5)-1)*45vh)] max-lg:h-auto motion-reduce:h-auto"
                 style="--scroll-steps: 5">
@@ -1940,7 +1996,7 @@ const jsonLd = {
                                             </p>
                                         </div>
                                         <img class="pointer-events-none z-0 max-md:hidden max-lg:mt-auto max-lg:ml-auto max-lg:mr-0 max-lg:block max-lg:self-end max-lg:max-h-[min(42vh,340px)] max-lg:w-[96%] max-lg:object-contain max-lg:object-right-bottom lg:max-[1439px]:relative lg:max-[1439px]:mt-auto lg:max-[1439px]:ml-auto lg:max-[1439px]:mr-0 lg:max-[1439px]:h-auto lg:max-[1439px]:max-h-[68%] lg:max-[1439px]:w-[96%] lg:max-[1439px]:max-w-full lg:max-[1439px]:object-contain lg:max-[1439px]:object-right-bottom min-[1440px]:absolute min-[1440px]:-bottom-3 min-[1440px]:-right-5 min-[1440px]:h-[80%] min-[1440px]:w-auto min-[1440px]:max-w-[680px] min-[1440px]:object-contain min-[1440px]:object-right-bottom 2xl:h-[78%] 2xl:max-w-[720px] 2xl:w-[110%]"
-                                            src="/assets/cfw/platform-capabilities-capture-leads-tab-door-to-door-canvassing.webp"
+                                            src="https://knockio.com/wp-content/uploads/2026/05/platform-capabilities-capture-leads-tab-door-to-door-canvassing.webp"
                                             alt="Knockio door-to-door canvassing screen showing territory map and lead capture in the field" />
                                     </div>
                                     <div
@@ -1958,7 +2014,7 @@ const jsonLd = {
                                             </p>
                                         </div>
                                         <img class="mx-auto mt-auto block w-auto max-w-full shrink-0 object-contain object-bottom max-md:hidden max-lg:mt-auto max-lg:w-[92%] max-lg:max-w-[420px] max-lg:object-center max-lg:max-h-[min(38vh,300px)] lg:max-h-[58%] lg:max-[1439px]:max-h-[65%]"
-                                            src="/assets/cfw/platform-capabilities-capture-leads-tab-lead-management.webp"
+                                            src="https://knockio.com/wp-content/uploads/2026/05/platform-capabilities-capture-leads-tab-lead-management.webp"
                                             alt="Knockio lead management screen listing captured leads with assigned tasks details & dates" />
                                     </div>
                                     <div
@@ -1974,7 +2030,7 @@ const jsonLd = {
                                             </p>
                                         </div>
                                         <img class="mx-auto mt-auto block w-auto max-w-full shrink-0 object-contain object-bottom max-md:hidden max-lg:mt-auto max-lg:w-[92%] max-lg:max-w-[420px] max-lg:object-center max-lg:max-h-[min(38vh,300px)] lg:max-h-[58%] lg:max-[1439px]:max-h-[65%]"
-                                            src="/assets/cfw/platform-capabilities-capture-leads-tab-sales-pipeline.webp"
+                                            src="https://knockio.com/wp-content/uploads/2026/05/platform-capabilities-capture-leads-tab-sales-pipeline.webp"
                                             alt="Knockio Kanban-style sales pipeline board tracking leads through each sales stage & status" />
                                     </div>
                                     <div
@@ -1995,7 +2051,7 @@ const jsonLd = {
                                             </p>
                                         </div>
                                         <img class="pointer-events-none z-0 max-md:hidden max-lg:mt-auto max-lg:ml-auto max-lg:mr-0 max-lg:block max-lg:self-end max-lg:max-h-[min(42vh,340px)] max-lg:w-[96%] max-lg:object-contain max-lg:object-right-bottom lg:max-[1439px]:relative lg:max-[1439px]:mt-auto lg:max-[1439px]:ml-auto lg:max-[1439px]:mr-0 lg:max-[1439px]:h-auto lg:max-[1439px]:max-h-[68%] lg:max-[1439px]:w-[96%] lg:max-[1439px]:max-w-full lg:max-[1439px]:object-contain lg:max-[1439px]:object-right-bottom min-[1440px]:absolute min-[1440px]:-bottom-3 min-[1440px]:-right-5 min-[1440px]:h-[80%] min-[1440px]:w-auto min-[1440px]:max-w-[680px] min-[1440px]:object-contain min-[1440px]:object-right-bottom 2xl:h-[78%] 2xl:max-w-[720px] 2xl:w-[110%]"
-                                            src="/assets/cfw/platform-capabilities-capture-leads-tab-rep-tracking.webp"
+                                            src="https://knockio.com/wp-content/uploads/2026/05/platform-capabilities-capture-leads-tab-rep-tracking.webp"
                                             alt="Knockio rep tracking map showing live location and activity of field sales reps and a screen showing rep history" />
                                     </div>
                                 </div>
@@ -2021,7 +2077,7 @@ const jsonLd = {
                                             </p>
                                         </div>
                                         <img class="pointer-events-none z-0 max-md:hidden max-lg:mt-auto max-lg:ml-auto max-lg:mr-0 max-lg:block max-lg:self-end max-lg:max-h-[min(42vh,340px)] max-lg:w-[96%] max-lg:object-contain max-lg:object-right-bottom lg:max-[1439px]:relative lg:max-[1439px]:mt-auto lg:max-[1439px]:ml-auto lg:max-[1439px]:mr-0 lg:max-[1439px]:h-auto lg:max-[1439px]:max-h-[68%] lg:max-[1439px]:w-[96%] lg:max-[1439px]:max-w-full lg:max-[1439px]:object-contain lg:max-[1439px]:object-right-bottom min-[1440px]:absolute min-[1440px]:-bottom-3 min-[1440px]:-right-5 min-[1440px]:h-[80%] min-[1440px]:w-auto min-[1440px]:max-w-[680px] min-[1440px]:object-contain min-[1440px]:object-right-bottom 2xl:h-[78%] 2xl:max-w-[720px] 2xl:w-[110%]"
-                                            src="/assets/cfw/platform-capabilities-cover-territory-tab-route-planning.webp"
+                                            src="https://knockio.com/wp-content/uploads/2026/05/platform-capabilities-cover-territory-tab-route-planning.webp"
                                             alt="Knockio route planning screen with an optimized route mapped with multiple stops across a sales territory" />
                                     </div>
                                     <div
@@ -2039,7 +2095,7 @@ const jsonLd = {
                                             </p>
                                         </div>
                                         <img class="mx-auto mt-auto block w-auto max-w-full shrink-0 object-contain object-bottom max-md:hidden max-lg:mt-auto max-lg:w-[92%] max-lg:max-w-[420px] max-lg:object-center max-lg:max-h-[min(38vh,300px)] lg:max-h-[58%] lg:max-[1439px]:max-h-[65%]"
-                                            src="/assets/cfw/platform-capabilities-cover-territory-tab-territiry-management.webp"
+                                            src="https://knockio.com/wp-content/uploads/2026/05/platform-capabilities-cover-territory-tab-territiry-management.webp"
                                             alt="Knockio territory management screen dividing a sales area into assigned zones" />
                                     </div>
                                     <div
@@ -2055,7 +2111,7 @@ const jsonLd = {
                                             </p>
                                         </div>
                                         <img class="mx-auto mt-auto block w-auto max-w-full shrink-0 object-contain object-bottom max-md:hidden max-lg:mt-auto max-lg:w-[92%] max-lg:max-w-[420px] max-lg:object-center max-lg:max-h-[min(38vh,300px)] lg:max-h-[58%] lg:max-[1439px]:max-h-[65%]"
-                                            src="/assets/cfw/platform-capabilities-cover-territory-tab-real-time-navigation.webp"
+                                            src="https://knockio.com/wp-content/uploads/2026/05/platform-capabilities-cover-territory-tab-real-time-navigation.webp"
                                             alt="Knockio field activity log showing real-time rep check-ins and navigation history" />
                                     </div>
                                     <div
@@ -2073,7 +2129,7 @@ const jsonLd = {
                                             </p>
                                         </div>
                                         <img class="pointer-events-none z-0 max-md:hidden max-lg:mt-auto max-lg:ml-auto max-lg:mr-0 max-lg:block max-lg:self-end max-lg:max-h-[min(42vh,340px)] max-lg:w-[96%] max-lg:object-contain max-lg:object-right-bottom lg:max-[1439px]:relative lg:max-[1439px]:mt-auto lg:max-[1439px]:ml-auto lg:max-[1439px]:mr-0 lg:max-[1439px]:h-auto lg:max-[1439px]:max-h-[68%] lg:max-[1439px]:w-[96%] lg:max-[1439px]:max-w-full lg:max-[1439px]:object-contain lg:max-[1439px]:object-right-bottom min-[1440px]:absolute min-[1440px]:-bottom-3 min-[1440px]:-right-5 min-[1440px]:h-[80%] min-[1440px]:w-auto min-[1440px]:max-w-[680px] min-[1440px]:object-contain min-[1440px]:object-right-bottom 2xl:h-[78%] 2xl:max-w-[720px] 2xl:w-[110%]"
-                                            src="/assets/cfw/platform-capabilities-cover-territory-tab-map-based-lead-view.webp"
+                                            src="https://knockio.com/wp-content/uploads/2026/05/platform-capabilities-cover-territory-tab-map-based-lead-view.webp"
                                             alt="Knockio map-based lead view showing color-coded lead statuses by address" />
                                     </div>
                                 </div>
@@ -2098,7 +2154,7 @@ const jsonLd = {
                                             </p>
                                         </div>
                                         <img class="pointer-events-none z-0 max-md:hidden max-lg:mt-auto max-lg:ml-auto max-lg:mr-0 max-lg:block max-lg:self-end max-lg:max-h-[min(42vh,340px)] max-lg:w-[96%] max-lg:object-contain max-lg:object-right-bottom lg:max-[1439px]:relative lg:max-[1439px]:mt-auto lg:max-[1439px]:ml-auto lg:max-[1439px]:mr-0 lg:max-[1439px]:h-auto lg:max-[1439px]:max-h-[68%] lg:max-[1439px]:w-[96%] lg:max-[1439px]:max-w-full lg:max-[1439px]:object-contain lg:max-[1439px]:object-right-bottom min-[1440px]:absolute min-[1440px]:-bottom-3 min-[1440px]:-right-5 min-[1440px]:h-[80%] min-[1440px]:w-auto min-[1440px]:max-w-[680px] min-[1440px]:object-contain min-[1440px]:object-right-bottom 2xl:h-[78%] 2xl:max-w-[720px] 2xl:w-[110%]"
-                                            src="/assets/cfw/platform-capabilities-manage-jobs-tab-job-management.webp"
+                                            src="https://knockio.com/wp-content/uploads/2026/05/platform-capabilities-manage-jobs-tab-job-management.webp"
                                             alt="Knockio job management screen showing contact details and notes added by reps" />
                                     </div>
                                     <div
@@ -2114,7 +2170,7 @@ const jsonLd = {
                                             </p>
                                         </div>
                                         <img class="mx-auto mt-auto block w-auto max-w-full shrink-0 object-contain object-bottom max-md:hidden max-lg:mt-auto max-lg:w-[92%] max-lg:max-w-[420px] max-lg:object-center max-lg:max-h-[min(38vh,300px)] lg:max-h-[58%] lg:max-[1439px]:max-h-[65%]"
-                                            src="/assets/cfw/platform-capabilities-manage-jobs-tab-technician-dispatching.webp"
+                                            src="https://knockio.com/wp-content/uploads/2026/05/platform-capabilities-manage-jobs-tab-technician-dispatching.webp"
                                             alt="Knockio lead activity showing who created the lead, who was added & crew dispatching against that lead" />
                                     </div>
                                     <div
@@ -2131,7 +2187,7 @@ const jsonLd = {
                                             </p>
                                         </div>
                                         <img class="mx-auto mt-auto block w-auto max-w-full shrink-0 object-contain object-bottom max-md:hidden max-lg:mt-auto max-lg:w-[92%] max-lg:max-w-[420px] max-lg:object-center max-lg:max-h-[min(38vh,300px)] lg:max-h-[58%] lg:max-[1439px]:max-h-[65%]"
-                                            src="/assets/cfw/platform-capabilities-manage-jobs-tab-work-order.webp"
+                                            src="https://knockio.com/wp-content/uploads/2026/05/platform-capabilities-manage-jobs-tab-work-order.webp"
                                             alt="Knockio work order screen detailing job tasks, materials, and assigned crew" />
                                     </div>
                                     <div
@@ -2150,7 +2206,7 @@ const jsonLd = {
                                             </p>
                                         </div>
                                         <img class="pointer-events-none z-0 max-md:hidden max-lg:mt-auto max-lg:ml-auto max-lg:mr-0 max-lg:block max-lg:self-end max-lg:max-h-[min(42vh,340px)] max-lg:w-[96%] max-lg:object-contain max-lg:object-right-bottom lg:max-[1439px]:relative lg:max-[1439px]:mt-auto lg:max-[1439px]:ml-auto lg:max-[1439px]:mr-0 lg:max-[1439px]:h-auto lg:max-[1439px]:max-h-[68%] lg:max-[1439px]:w-[96%] lg:max-[1439px]:max-w-full lg:max-[1439px]:object-contain lg:max-[1439px]:object-right-bottom min-[1440px]:absolute min-[1440px]:-bottom-3 min-[1440px]:-right-5 min-[1440px]:h-[80%] min-[1440px]:w-auto min-[1440px]:max-w-[680px] min-[1440px]:object-contain min-[1440px]:object-right-bottom 2xl:h-[78%] 2xl:max-w-[720px] 2xl:w-[110%]"
-                                            src="/assets/cfw/platform-capabilities-manage-jobs-tab-appointment-scheduling.webp"
+                                            src="https://knockio.com/wp-content/uploads/2026/05/platform-capabilities-manage-jobs-tab-appointment-scheduling.webp"
                                             alt="Knockio appointment scheduling calendar for booking field service visits" />
                                     </div>
                                 </div>
@@ -2175,7 +2231,7 @@ const jsonLd = {
                                             </p>
                                         </div>
                                         <img class="pointer-events-none z-0 max-md:hidden max-lg:mt-auto max-lg:ml-auto max-lg:mr-0 max-lg:block max-lg:self-end max-lg:max-h-[min(42vh,340px)] max-lg:w-[96%] max-lg:object-contain max-lg:object-right-bottom lg:max-[1439px]:relative lg:max-[1439px]:mt-auto lg:max-[1439px]:ml-auto lg:max-[1439px]:mr-0 lg:max-[1439px]:h-auto lg:max-[1439px]:max-h-[68%] lg:max-[1439px]:w-[96%] lg:max-[1439px]:max-w-full lg:max-[1439px]:object-contain lg:max-[1439px]:object-right-bottom min-[1440px]:absolute min-[1440px]:-bottom-3 min-[1440px]:-right-5 min-[1440px]:h-[80%] min-[1440px]:w-auto min-[1440px]:max-w-[680px] min-[1440px]:object-contain min-[1440px]:object-right-bottom 2xl:h-[78%] 2xl:max-w-[720px] 2xl:w-[110%]"
-                                            src="/assets/cfw/new-platform-capabilities-quote-and-get-paid-tab-smart-estimates.webp"
+                                            src="https://knockio.com/wp-content/uploads/2026/05/new-platform-capabilities-quote-and-get-paid-tab-smart-estimates.webp"
                                             alt="Knockio smart estimates screen generating a customer quote with line-item pricing" />
                                     </div>
                                     <div
@@ -2193,7 +2249,7 @@ const jsonLd = {
                                             </p>
                                         </div>
                                         <img class="mx-auto mt-auto block w-auto max-w-full shrink-0 object-contain object-bottom max-md:hidden max-lg:mt-auto max-lg:w-[92%] max-lg:max-w-[420px] max-lg:object-center max-lg:max-h-[min(38vh,300px)] lg:max-h-[58%] lg:max-[1439px]:max-h-[65%]"
-                                            src="/assets/cfw/platform-capabilities-quote-and-get-paid-tab-proposals.webp"
+                                            src="https://knockio.com/wp-content/uploads/2026/05/platform-capabilities-quote-and-get-paid-tab-proposals.webp"
                                             alt="Knockio proposal screen presenting a formatted customer proposal for approval" />
                                     </div>
                                     <div
@@ -2211,7 +2267,7 @@ const jsonLd = {
                                             </p>
                                         </div>
                                         <img class="mx-auto mt-auto block w-auto max-w-full shrink-0 object-contain object-bottom max-md:hidden max-lg:mt-auto max-lg:w-[92%] max-lg:max-w-[420px] max-lg:object-center max-lg:max-h-[min(38vh,300px)] lg:max-h-[58%] lg:max-[1439px]:max-h-[65%]"
-                                            src="/assets/cfw/platform-capabilities-quote-and-get-paid-tab-digital-contract.webp"
+                                            src="https://knockio.com/wp-content/uploads/2026/05/platform-capabilities-quote-and-get-paid-tab-digital-contract.webp"
                                             alt="Knockio digital contract screen showing an e-signature request for a customer" />
                                     </div>
                                     <div
@@ -2231,7 +2287,7 @@ const jsonLd = {
                                             </p>
                                         </div>
                                         <img class="pointer-events-none z-0 max-md:hidden max-lg:mt-auto max-lg:ml-auto max-lg:mr-0 max-lg:block max-lg:self-end max-lg:max-h-[min(42vh,340px)] max-lg:w-[96%] max-lg:object-contain max-lg:object-right-bottom lg:max-[1439px]:relative lg:max-[1439px]:mt-auto lg:max-[1439px]:ml-auto lg:max-[1439px]:mr-0 lg:max-[1439px]:h-auto lg:max-[1439px]:max-h-[68%] lg:max-[1439px]:w-[96%] lg:max-[1439px]:max-w-full lg:max-[1439px]:object-contain lg:max-[1439px]:object-right-bottom min-[1440px]:absolute min-[1440px]:-bottom-3 min-[1440px]:-right-5 min-[1440px]:h-[80%] min-[1440px]:w-auto min-[1440px]:max-w-[680px] min-[1440px]:object-contain min-[1440px]:object-right-bottom 2xl:h-[78%] 2xl:max-w-[720px] 2xl:w-[110%]"
-                                            src="/assets/cfw/platform-capabilities-quote-and-get-paid-tab-invoices-and-payments.webp"
+                                            src="https://knockio.com/wp-content/uploads/2026/05/platform-capabilities-quote-and-get-paid-tab-invoices-and-payments.webp"
                                             alt="Knockio financials screen showing an invoice with online payment collections with details" />
                                     </div>
                                 </div>
@@ -2256,7 +2312,7 @@ const jsonLd = {
                                             </p>
                                         </div>
                                         <img class="pointer-events-none z-0 max-md:hidden max-lg:mt-auto max-lg:ml-auto max-lg:mr-0 max-lg:block max-lg:self-end max-lg:max-h-[min(42vh,340px)] max-lg:w-[96%] max-lg:object-contain max-lg:object-right-bottom lg:max-[1439px]:relative lg:max-[1439px]:mt-auto lg:max-[1439px]:ml-auto lg:max-[1439px]:mr-0 lg:max-[1439px]:h-auto lg:max-[1439px]:max-h-[68%] lg:max-[1439px]:w-[96%] lg:max-[1439px]:max-w-full lg:max-[1439px]:object-contain lg:max-[1439px]:object-right-bottom min-[1440px]:absolute min-[1440px]:-bottom-3 min-[1440px]:-right-5 min-[1440px]:h-[80%] min-[1440px]:w-auto min-[1440px]:max-w-[680px] min-[1440px]:object-contain min-[1440px]:object-right-bottom 2xl:h-[78%] 2xl:max-w-[720px] 2xl:w-[110%]"
-                                            src="/assets/cfw/platform-capabilities-document-and-media-tab-video-and-file-storage.webp"
+                                            src="https://knockio.com/wp-content/uploads/2026/05/platform-capabilities-document-and-media-tab-video-and-file-storage.webp"
                                             alt="Knockio image, video and file storage screen attaching job media to a customer record" />
                                     </div>
                                     <div
@@ -2273,7 +2329,7 @@ const jsonLd = {
                                             </p>
                                         </div>
                                         <img class="mx-auto mt-auto block w-auto max-w-full shrink-0 object-contain object-bottom max-md:hidden max-lg:mt-auto max-lg:w-[92%] max-lg:max-w-[420px] max-lg:object-center max-lg:max-h-[min(38vh,300px)] lg:max-h-[58%] lg:max-[1439px]:max-h-[65%]"
-                                            src="/assets/cfw/platform-capabilities-document-and-media-tab-photo-upload.webp"
+                                            src="https://knockio.com/wp-content/uploads/2026/05/platform-capabilities-document-and-media-tab-photo-upload.webp"
                                             alt="Knockio photo upload screen for capturing before-and-after job site photos" />
                                     </div>
                                     <div
@@ -2290,7 +2346,7 @@ const jsonLd = {
                                             </p>
                                         </div>
                                         <img class="mx-auto mt-auto block w-auto max-w-full shrink-0 object-contain object-bottom max-md:hidden max-lg:mt-auto max-lg:w-[92%] max-lg:max-w-[420px] max-lg:object-center max-lg:max-h-[min(38vh,300px)] lg:max-h-[58%] lg:max-[1439px]:max-h-[65%]"
-                                            src="/assets/cfw/platform-capabilities-document-and-media-tab-service-report.webp"
+                                            src="https://knockio.com/wp-content/uploads/2026/05/platform-capabilities-document-and-media-tab-service-report.webp"
                                             alt="Knockio service report screen summarizing completed work for a customer" />
                                     </div>
                                     <div
@@ -2309,7 +2365,7 @@ const jsonLd = {
                                             </p>
                                         </div>
                                         <img class="pointer-events-none z-0 max-md:hidden max-lg:mt-auto max-lg:ml-auto max-lg:mr-0 max-lg:block max-lg:self-end max-lg:max-h-[min(42vh,340px)] max-lg:w-[96%] max-lg:object-contain max-lg:object-right-bottom lg:max-[1439px]:relative lg:max-[1439px]:mt-auto lg:max-[1439px]:ml-auto lg:max-[1439px]:mr-0 lg:max-[1439px]:h-auto lg:max-[1439px]:max-h-[68%] lg:max-[1439px]:w-[96%] lg:max-[1439px]:max-w-full lg:max-[1439px]:object-contain lg:max-[1439px]:object-right-bottom min-[1440px]:absolute min-[1440px]:-bottom-3 min-[1440px]:-right-5 min-[1440px]:h-[80%] min-[1440px]:w-auto min-[1440px]:max-w-[680px] min-[1440px]:object-contain min-[1440px]:object-right-bottom 2xl:h-[78%] 2xl:max-w-[720px] 2xl:w-[110%]"
-                                            src="/assets/cfw/platform-capabilities-document-and-media-tab-customer-document.webp"
+                                            src="https://knockio.com/wp-content/uploads/2026/05/platform-capabilities-document-and-media-tab-customer-document.webp"
                                             alt="Knockio customer document screen attached to a lead storing signed forms and job paperwork" />
                                     </div>
                                 </div>
@@ -2322,8 +2378,170 @@ const jsonLd = {
     </div>
 </section>
 
-  <!-- SECTION 4: Workflow -->
-<!-- Workflow section -->
+
+
+<script> 
+    
+    (function () { var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches; var compactQuery = window.matchMedia("(max-width: 1023px)"); function isCompact() { return compactQuery.matches; } function getTrackMetrics(track) { var rect = track.getBoundingClientRect(); var trackTop = window.scrollY + rect.top; var scrollable = Math.max(0, track.offsetHeight - window.innerHeight); return { trackTop: trackTop, scrollable: scrollable }; } function getScrollStepIndex(track, steps) { if (!track || steps < 1) return 0; var metrics = getTrackMetrics(track); if (metrics.scrollable <= 0) return 0; var start = metrics.trackTop; var end = metrics.trackTop + metrics.scrollable; var y = window.scrollY; if (y <= start) return 0; if (y >= end) return steps - 1; var progress = (y - start) / metrics.scrollable; return Math.min(steps - 1, Math.round(progress * (steps - 1))); } function scrollToTrackStep(track, steps, index) { if (!track || steps < 1) return; var metrics = getTrackMetrics(track); if (metrics.scrollable <= 0) return; var stepSize = metrics.scrollable / Math.max(1, steps - 1); var target = metrics.trackTop + stepSize * index; window.scrollTo({ top: target, behavior: reducedMotion ? "auto" : "smooth" }); } function hpTabs1MoveIndicator(btn) { var nav = document.getElementById("hpTabs1Nav"); var indicator = document.getElementById("hpTabs1Indicator"); if (!nav || !indicator || !btn) return; var navRect = nav.getBoundingClientRect(); var btnRect = btn.getBoundingClientRect(); indicator.style.width = btnRect.width + "px"; indicator.style.height = btnRect.height + "px"; indicator.style.transform = "translate(" + (btnRect.left - navRect.left + nav.scrollLeft) + "px, " + (btnRect.top - navRect.top) + "px)"; } function centerActiveTabInNav(btn) { if (!btn || !isCompact()) return; var nav = document.getElementById("hpTabs1Nav"); if (!nav) return; var scrollLeft = btn.offsetLeft - nav.clientWidth / 2 + btn.offsetWidth / 2; nav.scrollTo({ left: scrollLeft, behavior: reducedMotion ? "auto" : "smooth" }); } function setPanelVisible(panel, visible) { if (!panel) return; panel.classList.toggle("opacity-100", visible); panel.classList.toggle("visible", visible); panel.classList.toggle("pointer-events-auto", visible); panel.classList.toggle("opacity-0", !visible); panel.classList.toggle("invisible", !visible); panel.classList.toggle("pointer-events-none", !visible); } function setCardVisible(card, visible) { if (!card) return; card.classList.toggle("opacity-100", visible); card.classList.toggle("translate-y-0", visible); card.classList.toggle("opacity-0", !visible); card.classList.toggle("translate-y-3", !visible); } function setTabButtonState(btn, isActive) { if (!btn) return; btn.classList.toggle("text-primary-500", isActive); btn.classList.toggle("text-neutral-700", !isActive); btn.classList.toggle("border-dashed", !isActive); btn.classList.toggle("border-neutral-300", !isActive); btn.classList.toggle("border-transparent", isActive); } function animateCards(panel) { if (!panel) return; panel.querySelectorAll(".hp-cap-card").forEach(function (card) { setCardVisible(card, false); }); panel.querySelectorAll(".hp-cap-card").forEach(function (card, index) { setTimeout(function () { setCardVisible(card, true); }, index * 60); }); } function getCompactTabIndex(panels) { var nav = document.getElementById("hpTabs1Nav"); var offset = (nav ? nav.offsetHeight : 0) + 24; var marker = window.scrollY + offset; var active = 0; panels.forEach(function (panel, i) { var top = window.scrollY + panel.getBoundingClientRect().top; var bottom = top + panel.offsetHeight; if (marker >= top && marker < bottom) { active = i; } }); var lastPanel = panels[panels.length - 1]; if (lastPanel) { var lastBottom = window.scrollY + lastPanel.getBoundingClientRect().top + lastPanel.offsetHeight; if (marker >= lastBottom) { active = panels.length - 1; } } return active; } function scrollToCompactPanel(panel) { if (!panel) return; var nav = document.getElementById("hpTabs1Nav"); var offset = (nav ? nav.offsetHeight : 0) + 16; var top = window.scrollY + panel.getBoundingClientRect().top - offset; window.scrollTo({ top: top, behavior: reducedMotion ? "auto" : "smooth" }); } function initPlatformScrollScrolly() { var track = document.getElementById("hpCapScrollTrack"); if (!track) return; var panels = track.querySelectorAll(".hpTabs1_content"); var navItems = document.querySelectorAll("#hpTabs1Nav .hpTabs1_btn"); var steps = panels.length; var currentIndex = -1; var compactMode = isCompact() && !reducedMotion; function setTabOnly(index) { if (index < 0 || index >= steps || index === currentIndex) return; currentIndex = index; navItems.forEach(function (btn, i) { setTabButtonState(btn, i === index); }); hpTabs1MoveIndicator(navItems[index]); centerActiveTabInNav(navItems[index]); } function setDesktopStep(index) { if (index < 0 || index >= steps || index === currentIndex) return; currentIndex = index; panels.forEach(function (panel, i) { setPanelVisible(panel, i === index); }); navItems.forEach(function (btn, i) { setTabButtonState(btn, i === index); }); hpTabs1MoveIndicator(navItems[index]); animateCards(panels[index]); } function updateDesktop() { setDesktopStep(getScrollStepIndex(track, steps)); } function updateCompact() { setTabOnly(getCompactTabIndex(panels)); } function update() { if (compactMode) { updateCompact(); } else if (!reducedMotion) { updateDesktop(); } } if (reducedMotion) { panels.forEach(function (panel) { setPanelVisible(panel, true); panel.querySelectorAll(".hp-cap-card").forEach(function (card) { setCardVisible(card, true); }); }); navItems.forEach(function (btn, i) { setTabButtonState(btn, i === 0); }); hpTabs1MoveIndicator(navItems[0]); return; } if (compactMode) { panels.forEach(function (panel) { setPanelVisible(panel, true); panel.querySelectorAll(".hp-cap-card").forEach(function (card) { setCardVisible(card, true); }); }); } navItems.forEach(function (btn) { btn.addEventListener("click", function () { var index = parseInt(btn.getAttribute("data-hp-scroll-step"), 10); if (isNaN(index)) return; if (compactMode) { currentIndex = index; setTabButtonState(btn, true); navItems.forEach(function (other, i) { if (i !== index) setTabButtonState(other, false); }); hpTabs1MoveIndicator(btn); centerActiveTabInNav(btn); scrollToCompactPanel(panels[index]); } else { scrollToTrackStep(track, steps, index); } }); }); var ticking = false; function onScroll() { if (ticking) return; ticking = true; requestAnimationFrame(function () { update(); ticking = false; }); } window.addEventListener("scroll", onScroll, { passive: true }); window.addEventListener("resize", function () { var wasCompact = compactMode; compactMode = isCompact() && !reducedMotion; if (compactMode) { panels.forEach(function (panel) { setPanelVisible(panel, true); panel.querySelectorAll(".hp-cap-card").forEach(function (card) { setCardVisible(card, true); }); }); } else if (wasCompact) { panels.forEach(function (panel, i) { setPanelVisible(panel, i === 0); }); currentIndex = -1; } onScroll(); var activeBtn = navItems[currentIndex >= 0 ? currentIndex : 0]; hpTabs1MoveIndicator(activeBtn); centerActiveTabInNav(activeBtn); }); update(); if (compactMode) { setTabOnly(0); centerActiveTabInNav(navItems[0]); } else { hpTabs1MoveIndicator(navItems[0]); } } if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded", initPlatformScrollScrolly); } else { initPlatformScrollScrolly(); } })(); 
+
+</script>
+
+
+<style>
+    #workflow-section {
+        --wf-sticky-top: 5rem;
+        --wf-stage-height: calc(100dvh - var(--wf-sticky-top));
+        --wf-panel-height: min(600px, calc(100dvh - var(--wf-sticky-top) - 1.5rem));
+    }
+
+    @supports not (height: 100dvh) {
+        #workflow-section {
+            --wf-stage-height: calc(100vh - var(--wf-sticky-top));
+            --wf-panel-height: min(600px, calc(100vh - var(--wf-sticky-top) - 1.5rem));
+        }
+    }
+
+    #workflow-section #workflowPanels {
+        height: var(--wf-panel-height);
+        max-height: var(--wf-panel-height);
+    }
+
+    #workflow-section .workflow-step-panel {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        overflow: hidden;
+        transition: opacity 0.4s ease, visibility 0.4s, box-shadow 0.4s ease;
+    }
+
+    #workflow-section .workflow-step-panel.is-active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        box-shadow: 0 24px 64px -16px color-mix(in srgb, var(--step-border) 40%, transparent);
+    }
+
+    #workflow-section .wf-step-text,
+    #workflow-section .wf-step-media {
+        opacity: 0;
+        transform: translateY(12px);
+        transition: opacity 0.45s ease, transform 0.45s ease;
+    }
+
+    #workflow-section .wf-step-text.wf-in,
+    #workflow-section .wf-step-media.wf-in {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    #workflow-section .workflow-step-panel .wf-step-media img {
+        max-height: 100%;
+        object-fit: contain;
+        object-position: right bottom;
+    }
+
+    #workflow-scroll-stage {
+        --wf-header-progress: 0;
+        height: var(--wf-stage-height);
+        min-height: var(--wf-stage-height);
+        justify-content: center;
+    }
+
+    #workflow-scroll-stage.is-header-hidden #workflowHeaderSticky {
+        position: absolute;
+        width: 1px;
+        height: 0;
+        overflow: hidden;
+        margin: 0;
+        pointer-events: none;
+        visibility: hidden;
+    }
+
+    #workflow-section #workflowHeaderSticky {
+        flex-shrink: 0;
+        overflow: hidden;
+        opacity: calc(1 - var(--wf-header-progress));
+        transform: translateY(calc(-28px * var(--wf-header-progress)));
+        max-height: calc(520px * (1 - var(--wf-header-progress)));
+        margin-bottom: calc(1.5rem * (1 - var(--wf-header-progress)));
+        filter: blur(calc(3px * var(--wf-header-progress)));
+    }
+
+    #workflow-scroll-stage .workflow-steps-row {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    #workflow-section .step-item {
+        position: relative;
+        list-style: none;
+        padding: 0.75rem 0.875rem 0.75rem 1rem;
+        border-radius: 1rem;
+        cursor: pointer;
+        border: 1px solid transparent;
+        border-left: 3px solid transparent;
+        color: #737373;
+        opacity: 0.75;
+        transition: all 0.3s ease;
+    }
+
+    #workflow-section .step-item:hover {
+        opacity: 1;
+        background: #fff;
+        border-color: #f5f5f5;
+    }
+
+    #workflow-section .step-item.is-nav-active {
+        opacity: 1;
+        background: #fff;
+        color: #171717;
+        font-weight: 500;
+        border-left-color: var(--step-accent);
+        border-color: color-mix(in srgb, var(--step-accent) 22%, #fff);
+        box-shadow: 0 4px 20px -6px color-mix(in srgb, var(--step-accent) 25%, transparent);
+    }
+
+    #workflow-section .step-item.is-nav-active .wf-nav-icon {
+        color: var(--step-accent);
+    }
+
+    #workflow-section .wf-step-num {
+        display: block;
+        font-size: 0.6875rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        color: var(--step-accent);
+        margin-bottom: 0.15rem;
+    }
+
+    #workflow-section .wf-nav-label {
+        font-size: 0.9375rem;
+        line-height: 1.3;
+    }
+
+    @media (max-height: 800px) {
+        #workflow-section .workflow-step-panel {
+            padding-top: 2rem;
+            gap: 1.25rem;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+        #workflow-section .workflow-step-panel,
+        #workflow-section .wf-step-text,
+        #workflow-section .wf-step-media {
+            transition: none;
+        }
+
+        #workflow-scroll-stage.is-header-hidden #workflowHeaderSticky {
+            display: none;
+        }
+    }
+</style>
+
 <section id="workflow-section" class="relative py-36 max-xl:py-28 max-lg:py-20">
     <div class="my-container">
         <div id="workflowHeader" class="text-left mb-10 lg:hidden">
@@ -2356,7 +2574,8 @@ const jsonLd = {
                                 class="workflow-step-panel content-card is-active flex h-full min-h-0 items-stretch gap-10 pt-14 max-xl:pt-8 max-xl:gap-5 mb-0 bg-[#EDF6FF] border border-[#9ACFFF] border-solid rounded-3xl"
                                 style="--step-border: #9ACFFF">
                                 <div class="wf-step-text pl-11 max-xl:pl-6 max-w-lg max-2xl:max-w-sm max-xl:max-w-xs">
-                                    <span class="text-[#9ACFFF] text-3xl max-xl:text-2xl mb-4 block"><i class="fa-solid fa-thumbtack"></i></span>
+                                    <span class="text-[#9ACFFF] text-3xl max-xl:text-2xl mb-4 block"><i
+                                            class="fa-solid fa-thumbtack"></i></span>
                                     <h4
                                         class="text-4xl max-2xl:text-2xl max-xl:text-xl font-semibold mb-4 text-neutral-900">
                                         Capture the Lead or Service Request</h4>
@@ -2365,7 +2584,7 @@ const jsonLd = {
                                         notes, photos, and source info.</p>
                                 </div>
                                 <div class="wf-step-media w-full flex min-h-0 flex-1 items-end">
-                                    <img src="/assets/cfw/workflow-capture-the-lead-or-service-request.webp"
+                                    <img src="https://knockio.com/wp-content/uploads/2026/05/workflow-capture-the-lead-or-service-request.webp"
                                         alt="Lead capture" class="max-w-full w-full rounded-br-[26px]" />
                                 </div>
                             </div>
@@ -2373,7 +2592,8 @@ const jsonLd = {
                                 class="workflow-step-panel content-card flex h-full min-h-0 items-stretch gap-10 pt-14 max-xl:pt-8 max-xl:gap-5 mb-0 bg-[#F9EBEB] border border-[#FF7272] border-solid rounded-3xl"
                                 style="--step-border: #FF7272">
                                 <div class="wf-step-text pl-11 max-xl:pl-6 max-w-lg max-2xl:max-w-sm max-xl:max-w-xs">
-                                    <span class="text-[#FF7272] text-3xl max-xl:text-2xl mb-4 block"><i class="fa-solid fa-hard-hat"></i></span>
+                                    <span class="text-[#FF7272] text-3xl max-xl:text-2xl mb-4 block"><i
+                                            class="fa-solid fa-hard-hat"></i></span>
                                     <h4
                                         class="text-4xl max-2xl:text-2xl max-xl:text-xl font-semibold mb-4 text-neutral-900">
                                         Schedule the Job and Dispatch a Technician</h4>
@@ -2382,7 +2602,7 @@ const jsonLd = {
                                         happens next.</p>
                                 </div>
                                 <div class="wf-step-media w-full flex min-h-0 flex-1 items-end">
-                                    <img src="/assets/cfw/workflow-schedule-the-job-and-dispatch-a-technician.webp"
+                                    <img src="https://knockio.com/wp-content/uploads/2026/05/workflow-schedule-the-job-and-dispatch-a-technician.webp"
                                         alt="Schedule" class="max-w-full w-full rounded-br-[26px]" />
                                 </div>
                             </div>
@@ -2390,7 +2610,8 @@ const jsonLd = {
                                 class="workflow-step-panel content-card flex h-full min-h-0 items-stretch gap-10 pt-14 max-xl:pt-8 max-xl:gap-5 mb-0 bg-[#E7F6E0] border border-[#76C551] border-solid rounded-3xl"
                                 style="--step-border: #76C551">
                                 <div class="wf-step-text pl-11 max-xl:pl-6 max-w-lg max-2xl:max-w-sm max-xl:max-w-xs">
-                                    <span class="text-[#76C551] text-3xl max-xl:text-2xl mb-4 block"><i class="fa-solid fa-route"></i></span>
+                                    <span class="text-[#76C551] text-3xl max-xl:text-2xl mb-4 block"><i
+                                            class="fa-solid fa-route"></i></span>
                                     <h4
                                         class="text-4xl max-2xl:text-2xl max-xl:text-xl font-semibold mb-4 text-neutral-900">
                                         Navigate to the Job with Optimized Routing</h4>
@@ -2399,7 +2620,7 @@ const jsonLd = {
                                         visibility.</p>
                                 </div>
                                 <div class="wf-step-media w-full flex min-h-0 flex-1 items-end">
-                                    <img src="/assets/cfw/workflow-navigate-to-the-job-with-optimized-routing.webp"
+                                    <img src="https://knockio.com/wp-content/uploads/2026/05/workflow-navigate-to-the-job-with-optimized-routing.webp"
                                         alt="Routing" class="max-w-full w-full rounded-br-[26px]" />
                                 </div>
                             </div>
@@ -2407,7 +2628,8 @@ const jsonLd = {
                                 class="workflow-step-panel content-card flex h-full min-h-0 items-stretch gap-10 pt-14 max-xl:pt-8 max-xl:gap-5 mb-0 bg-[#DFE3FF] border border-[#6979F8] border-solid rounded-3xl"
                                 style="--step-border: #6979F8">
                                 <div class="wf-step-text pl-11 max-xl:pl-6 max-w-lg max-2xl:max-w-sm max-xl:max-w-xs">
-                                    <span class="text-[#6979F8] text-3xl max-xl:text-2xl mb-4 block"><i class="fa-solid fa-signature"></i></span>
+                                    <span class="text-[#6979F8] text-3xl max-xl:text-2xl mb-4 block"><i
+                                            class="fa-solid fa-signature"></i></span>
                                     <h4
                                         class="text-4xl max-2xl:text-2xl max-xl:text-xl font-semibold mb-4 text-neutral-900">
                                         Execute the Job, Capture Photos, Get Signature</h4>
@@ -2416,7 +2638,7 @@ const jsonLd = {
                                         completed.</p>
                                 </div>
                                 <div class="wf-step-media w-full flex min-h-0 flex-1 items-end">
-                                    <img src="/assets/cfw/workflow-execute-the-job-capture-photos-get-signature.webp"
+                                    <img src="https://knockio.com/wp-content/uploads/2026/05/workflow-execute-the-job-capture-photos-get-signature.webp"
                                         alt="Job proof" class="max-w-full w-full rounded-br-[26px]" />
                                 </div>
                             </div>
@@ -2424,7 +2646,8 @@ const jsonLd = {
                                 class="workflow-step-panel content-card flex h-full min-h-0 items-stretch gap-10 pt-14 max-xl:pt-8 max-xl:gap-5 mb-0 bg-[#F9EBEB] border border-[#FF7272] border-solid rounded-3xl"
                                 style="--step-border: #FF7272">
                                 <div class="wf-step-text pl-11 max-xl:pl-6 max-w-lg max-2xl:max-w-sm max-xl:max-w-xs">
-                                    <span class="text-[#FF7272] text-3xl max-xl:text-2xl mb-4 block"><i class="fa-solid fa-file-invoice"></i></span>
+                                    <span class="text-[#FF7272] text-3xl max-xl:text-2xl mb-4 block"><i
+                                            class="fa-solid fa-file-invoice"></i></span>
                                     <h4
                                         class="text-4xl max-2xl:text-2xl max-xl:text-xl font-semibold mb-4 text-neutral-900">
                                         Send the Invoice and Collect Payment</h4>
@@ -2433,7 +2656,7 @@ const jsonLd = {
                                         customer and job record.</p>
                                 </div>
                                 <div class="wf-step-media w-full flex min-h-0 flex-1 items-end">
-                                    <img src="/assets/cfw/workflow-send-the-invoice-and-collect-payment.webp"
+                                    <img src="https://knockio.com/wp-content/uploads/2026/05/workflow-send-the-invoice-and-collect-payment.webp"
                                         alt="Invoice" class="max-w-full w-full rounded-br-[26px]" />
                                 </div>
                             </div>
@@ -2445,25 +2668,30 @@ const jsonLd = {
                         <ul class="space-y-3 !list-none !pl-0 !m-0">
                             <li id="step-1" data-hp-scroll-step="0" class="step-item" style="--step-accent: #9ACFFF">
                                 <span class="wf-step-num">01</span>
-                                <span class="wf-nav-label"><i class="fa-solid fa-thumbtack wf-nav-icon mr-1.5 text-neutral-400"></i>Lead
+                                <span class="wf-nav-label"><i
+                                        class="fa-solid fa-thumbtack wf-nav-icon mr-1.5 text-neutral-400"></i>Lead
                                     Capture</span>
                             </li>
                             <li id="step-2" data-hp-scroll-step="1" class="step-item" style="--step-accent: #FF7272">
                                 <span class="wf-step-num">02</span>
-                                <span class="wf-nav-label"><i class="fa-solid fa-hard-hat wf-nav-icon mr-1.5 text-neutral-400"></i>Schedule</span>
+                                <span class="wf-nav-label"><i
+                                        class="fa-solid fa-hard-hat wf-nav-icon mr-1.5 text-neutral-400"></i>Schedule</span>
                             </li>
                             <li id="step-3" data-hp-scroll-step="2" class="step-item" style="--step-accent: #76C551">
                                 <span class="wf-step-num">03</span>
-                                <span class="wf-nav-label"><i class="fa-solid fa-route wf-nav-icon mr-1.5 text-neutral-400"></i>Routing</span>
+                                <span class="wf-nav-label"><i
+                                        class="fa-solid fa-route wf-nav-icon mr-1.5 text-neutral-400"></i>Routing</span>
                             </li>
                             <li id="step-4" data-hp-scroll-step="3" class="step-item" style="--step-accent: #6979F8">
                                 <span class="wf-step-num">04</span>
-                                <span class="wf-nav-label"><i class="fa-solid fa-signature wf-nav-icon mr-1.5 text-neutral-400"></i>Job
+                                <span class="wf-nav-label"><i
+                                        class="fa-solid fa-signature wf-nav-icon mr-1.5 text-neutral-400"></i>Job
                                     Proof</span>
                             </li>
                             <li id="step-5" data-hp-scroll-step="4" class="step-item" style="--step-accent: #FF7272">
                                 <span class="wf-step-num">05</span>
-                                <span class="wf-nav-label"><i class="fa-solid fa-file-invoice wf-nav-icon mr-1.5 text-neutral-400"></i>Invoice</span>
+                                <span class="wf-nav-label"><i
+                                        class="fa-solid fa-file-invoice wf-nav-icon mr-1.5 text-neutral-400"></i>Invoice</span>
                             </li>
                         </ul>
                     </aside>
@@ -2479,7 +2707,7 @@ const jsonLd = {
                     <p class="text-sm text-neutral-700">Capture leads with contact details, notes, photos, and source
                         info.</p>
                 </div>
-                <img src="/assets/cfw/workflow-capture-the-lead-or-service-request.webp"
+                <img src="https://knockio.com/wp-content/uploads/2026/05/workflow-capture-the-lead-or-service-request.webp"
                     alt="Screenshot of captured leads & service requests in the field on map view"
                     class="w-full rounded-br-xl" />
             </div>
@@ -2489,7 +2717,7 @@ const jsonLd = {
                     <h4 class="text-2xl font-semibold text-neutral-900 mb-2">Schedule</h4>
                     <p class="text-sm text-neutral-700">Book appointments, assign crews, and set reminders.</p>
                 </div>
-                <img src="/assets/cfw/workflow-schedule-the-job-and-dispatch-a-technician.webp"
+                <img src="https://knockio.com/wp-content/uploads/2026/05/workflow-schedule-the-job-and-dispatch-a-technician.webp"
                     alt="Screenshot of Knockio lead detailed view scheduling a job and dispatching a technician"
                     class="w-full rounded-br-xl" />
             </div>
@@ -2499,7 +2727,7 @@ const jsonLd = {
                     <h4 class="text-2xl font-semibold text-neutral-900 mb-2">Routing</h4>
                     <p class="text-sm text-neutral-700">Route planning, territory mapping, and field visibility.</p>
                 </div>
-                <img src="/assets/cfw/workflow-navigate-to-the-job-with-optimized-routing.webp"
+                <img src="https://knockio.com/wp-content/uploads/2026/05/workflow-navigate-to-the-job-with-optimized-routing.webp"
                     alt="Screenshot of Knockio navigating to a job site with optimized routing"
                     class="w-full rounded-br-xl" />
             </div>
@@ -2509,7 +2737,7 @@ const jsonLd = {
                     <h4 class="text-2xl font-semibold text-neutral-900 mb-2">Job proof</h4>
                     <p class="text-sm text-neutral-700">Photos, signatures, and job updates on site.</p>
                 </div>
-                <img src="/assets/cfw/workflow-execute-the-job-capture-photos-get-signature.webp"
+                <img src="https://knockio.com/wp-content/uploads/2026/05/workflow-execute-the-job-capture-photos-get-signature.webp"
                     alt="Screenshot of Knockio job execution screen capturing photos and keeping the conversation in the lead/job itself"
                     class="w-full rounded-br-xl" />
             </div>
@@ -2518,7 +2746,7 @@ const jsonLd = {
                     <h4 class="text-2xl font-semibold text-neutral-900 mb-2">Invoice</h4>
                     <p class="text-sm text-neutral-700">Send invoices, track payments, and follow up faster.</p>
                 </div>
-                <img src="/assets/cfw/workflow-send-the-invoice-and-collect-payment.webp"
+                <img src="https://knockio.com/wp-content/uploads/2026/05/workflow-send-the-invoice-and-collect-payment.webp"
                     alt="Screenshot of Knockio sending an invoice and collecting payment"
                     class="w-full rounded-br-xl" />
             </div>
@@ -2526,7 +2754,7 @@ const jsonLd = {
     </div>
 </section>
 
-  <!-- SECTION 5: Testimonials -->
+
 <!-- TESTIMONIAL SECTION -->
 <section class=" bg-white overflow-x-hidden">
     <div class="my-container mx-auto mb-10 lg:mb-16 text-center">
@@ -2541,7 +2769,7 @@ const jsonLd = {
         </h2>
 
         <!-- Google Review Badge -->
-        <img src="/assets/cfw/google-5-star.webp" alt="google review badge"
+        <img src="https://knockio.com/wp-content/uploads/2026/05/google-5-star.webp" alt="google review badge"
             class="mx-auto h-auto w-[150px] sm:w-[183px]" />
     </div>
 
@@ -2564,7 +2792,7 @@ const jsonLd = {
 
                         </p>
                         <div class="flex items-center gap-4 relative z-10">
-                            <img src="/assets/cfw/avatar-lacey-jackson.webp"
+                            <img src="https://lh3.googleusercontent.com/a/ACg8ocId1IkoE1t-ar3lqC29ee12_WQLVvnZek_ySrpB9ZIoQGXHcLQ=w40-h40-c-rp-mo-ba3-br100"
                                 alt="Lacey Jackson"
                                 class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all" />
                             <div>
@@ -2572,7 +2800,8 @@ const jsonLd = {
                                 <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
                             </div>
                         </div>
-                        <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
+                        <i
+                            class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
                     </div>
                     <!-- Card 2 -->
                     <div
@@ -2583,7 +2812,7 @@ const jsonLd = {
                             is responsive and fixes issues immediately. Highly recommend!
                         </p>
                         <div class="flex items-center gap-4 relative z-10">
-                            <img src="/assets/cfw/avatar-ben-loveland.webp"
+                            <img src="https://lh3.googleusercontent.com/a/ACg8ocLlweG5QsNIRodIE_qY6_wcpgZAmhOueKzzroi4T8ZCumGjcg=w40-h40-c-rp-mo-br100"
                                 alt="Ben Loveland"
                                 class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all" />
                             <div>
@@ -2591,7 +2820,8 @@ const jsonLd = {
                                 <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
                             </div>
                         </div>
-                        <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
+                        <i
+                            class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
                     </div>
                     <!-- Card 3 -->
                     <div
@@ -2602,7 +2832,7 @@ const jsonLd = {
                             as well!
                         </p>
                         <div class="flex items-center gap-4 relative z-10">
-                            <img src="/assets/cfw/avatar-bar-galanti.webp"
+                            <img src="https://lh3.googleusercontent.com/a/ACg8ocK_WvRfKm7Y7oUvEBypx1mjvcMFptvWvTQ0jX9WGAg-h-Atdw=w40-h40-c-rp-mo-ba2-br100"
                                 alt="Bar Galanti"
                                 class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all" />
                             <div>
@@ -2610,71 +2840,12 @@ const jsonLd = {
                                 <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
                             </div>
                         </div>
-                        <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
+                        <i
+                            class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
                     </div>
                 </div>
                 <!-- Duplicate Set for loop -->
-                <div class="flex gap-4 sm:gap-6 card-set" aria-hidden="true">
-                    <!-- Card 1 Duplicate -->
-                    <div
-                        class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group">
-                        <p
-                            class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]">
-                            This app is the best thing that has happened to our company! Asad is absolutely amazing! He
-                            is so responsive, it doesn't matter what time of day he is on it! I highly recommend this
-                            company add this app!
-
-                        </p>
-                        <div class="flex items-center gap-4 relative z-10">
-                            <img src="/assets/cfw/avatar-lacey-jackson.webp"
-                                alt="Lacey Jackson"
-                                class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all" />
-                            <div>
-                                <h5 class="font-bold text-neutral-950 mb-1">Lacey Jackson</h5>
-                                <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
-                            </div>
-                        </div>
-                        <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
-                    </div>
-                    <!-- Card 2 Duplicate -->
-                    <div
-                        class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group">
-                        <p
-                            class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]">
-                            Knockio is a great product! We use it for our roofing sales canvassing. Their support team
-                            is responsive and fixes issues immediately. Highly recommend!
-                        </p>
-                        <div class="flex items-center gap-4 relative z-10">
-                            <img src="/assets/cfw/avatar-ben-loveland.webp"
-                                alt="Ben Loveland"
-                                class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all" />
-                            <div>
-                                <h5 class="font-bold text-neutral-950 mb-1">Ben Loveland</h5>
-                                <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
-                            </div>
-                        </div>
-                        <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
-                    </div>
-                    <!-- Card 3 Duplicate -->
-                    <div
-                        class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group">
-                        <p
-                            class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]">
-                            The support team is awesome. The live tracking feature is very useful. The pricing is fair
-                            as well!
-                        </p>
-                        <div class="flex items-center gap-4 relative z-10">
-                            <img src="/assets/cfw/avatar-bar-galanti.webp"
-                                alt="Bar Galanti"
-                                class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all" />
-                            <div>
-                                <h5 class="font-bold text-neutral-950 mb-1">Bar Galanti</h5>
-                                <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
-                            </div>
-                        </div>
-                        <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
-                    </div>
-                </div>
+                <div class="flex gap-4 sm:gap-6 card-set" aria-hidden="true"></div>
             </div>
         </div>
 
@@ -2693,7 +2864,7 @@ const jsonLd = {
                             Thanks Knockio!
                         </p>
                         <div class="flex items-center gap-4 relative z-10">
-                            <img src="/assets/cfw/avatar-georgia-hancocks.webp"
+                            <img src="https://lh3.googleusercontent.com/a/ACg8ocKA66zdCpxUw0n7RVizkZ0gCKF609Xpo-GCGgfWmti73l6h3w=w40-h40-c-rp-mo-br100"
                                 alt="Georgia Hancocks"
                                 class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all" />
                             <div>
@@ -2701,7 +2872,8 @@ const jsonLd = {
                                 <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
                             </div>
                         </div>
-                        <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
+                        <i
+                            class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
                     </div>
                     <!-- Card 5 -->
                     <div
@@ -2713,7 +2885,7 @@ const jsonLd = {
                             people face to face.
                         </p>
                         <div class="flex items-center gap-4 relative z-10">
-                            <img src="/assets/cfw/avatar-sarah-bennett.webp"
+                            <img src="https://lh3.googleusercontent.com/a/ACg8ocKSJsnf9lwFYUjQbnhFVtIrJ0XYdi6v5K_6tiTg_bec0n3C=w40-h40-c-rp-mo-br100"
                                 alt="Sarah Bennett"
                                 class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all" />
                             <div>
@@ -2721,7 +2893,8 @@ const jsonLd = {
                                 <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
                             </div>
                         </div>
-                        <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
+                        <i
+                            class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
                     </div>
                     <!-- Card 6 -->
                     <div
@@ -2734,7 +2907,7 @@ const jsonLd = {
 
                         </p>
                         <div class="flex items-center gap-4 relative z-10">
-                            <img src="/assets/cfw/avatar-ayana-hall.webp"
+                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjVUHu6ErzBhJd6Hyz_HgEivECY33TPOT3RLHCHu54k0L_ayj-B-=w40-h40-c-rp-mo-ba2-br100"
                                 alt="Ayana Hall"
                                 class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all" />
                             <div>
@@ -2742,95 +2915,37 @@ const jsonLd = {
                                 <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
                             </div>
                         </div>
-                        <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
+                        <i
+                            class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
                     </div>
                 </div>
                 <!-- Duplicate Set for loop -->
-                <div class="flex gap-4 sm:gap-6 card-set" aria-hidden="true">
-                    <!-- Card 4 Duplicate -->
-                    <div
-                        class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group">
-                        <p
-                            class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]">
-                            Knockio is the best! My team and I absolutely love using it - it is so user friendly and
-                            simple. Support is brilliant too, nothing is ever too much trouble. The best on the market.
-                            Thanks Knockio!
-                        </p>
-                        <div class="flex items-center gap-4 relative z-10">
-                            <img src="/assets/cfw/avatar-georgia-hancocks.webp"
-                                alt="Georgia Hancocks"
-                                class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all" />
-                            <div>
-                                <h5 class="font-bold text-neutral-950 mb-1">Georgia Hancocks</h5>
-                                <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
-                            </div>
-                        </div>
-                        <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
-                    </div>
-                    <!-- Card 5 Duplicate -->
-                    <div
-                        class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group">
-                        <p
-                            class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]">
-                            We love Knockio so far! It is solving a lot of the issues of the other canvassing apps. The
-                            team have worked with us providing excellent fast support. Highly recommend if you're seeing
-                            people face to face.
-                        </p>
-                        <div class="flex items-center gap-4 relative z-10">
-                            <img src="/assets/cfw/avatar-sarah-bennett.webp"
-                                alt="Sarah Bennett"
-                                class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all" />
-                            <div>
-                                <h5 class="font-bold text-neutral-950 mb-1">Sarah Bennett</h5>
-                                <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
-                            </div>
-                        </div>
-                        <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
-                    </div>
-                    <!-- Card 6 Duplicate -->
-                    <div
-                        class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group">
-                        <p
-                            class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]">
-                            Amazing app! Definitely has helped out my team a whole lot from our previous canvassing
-                            software. They identified what we were struggling with and needed, and everything has been
-                            addressed. Highly recommend.
-
-                        </p>
-                        <div class="flex items-center gap-4 relative z-10">
-                            <img src="/assets/cfw/avatar-ayana-hall.webp"
-                                alt="Ayana Hall"
-                                class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all" />
-                            <div>
-                                <h5 class="font-bold text-neutral-950 mb-1">Ayana Hall</h5>
-                                <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
-                            </div>
-                        </div>
-                        <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
-                    </div>
-                </div>
+                <div class="flex gap-4 sm:gap-6 card-set" aria-hidden="true"></div>
             </div>
         </div>
     </div>
 </section>
 
-  <!-- SECTION 6: How We Compare -->
+
 <!-- How We Compare section -->
 <section class="py-36 max-xl:py-28 max-lg:py-20 max-md:py-16">
     <div class="my-container">
         <!-- Header Section -->
         <div class="text-center mb-10 max-md:mb-7">
-            <h3 class="text-primary-500 text-2xl max-2xl:text-xl max-xl:text-lg max-md:text-sm font-medium mb-0">
+            <h3 class="text-primary-500 text-2xl max-2xl:text-xl max-xl:text-lg max-md:text-sm font-medium mb-0"
+                data-aos="fade-down">
                 How We Compare
             </h3>
 
-            <h2 class="text-[56px] max-2xl:text-5xl max-xl:text-4xl max-md:text-3xl font-bold text-neutral-900 leading-[68px] max-2xl:leading-[58px] max-xl:leading-[48px] max-md:leading-[38px] mb-0 max-w-2xl mx-auto">
+            <h2 class="text-[56px] max-2xl:text-5xl max-xl:text-4xl max-md:text-3xl font-bold text-neutral-900 leading-[68px] max-2xl:leading-[58px] max-xl:leading-[48px] max-md:leading-[38px] mb-0 max-w-2xl mx-auto"
+                data-aos="fade-down" data-aos-delay="100">
                 Knockio vs Other Field Service Platforms
             </h2>
         </div>
 
         <!-- Desktop / Tablet Large Grid -->
-        <div class="hidden lg:block bg-white rounded-xl border border-neutral-200 border-solid max-w-5xl mx-auto overflow-hidden">
+        <div class="hidden lg:block bg-white rounded-xl border border-neutral-200 border-solid max-w-5xl mx-auto overflow-hidden"
+            data-aos="fade-up" data-aos-delay="150">
             <!-- Header Row -->
             <div class="grid grid-cols-[1.75fr_1fr_1fr] border-b border-neutral-200 border-solid">
                 <div class="py-4 px-6 text-left text-xl font-semibold text-neutral-900 tracking-wider">
@@ -2854,7 +2969,7 @@ const jsonLd = {
                 </div>
 
                 <div class="py-4 px-6 text-center font-light text-base text-primary-600 bg-primary-50/55">
-                    <i class="fa-solid fa-check mr-2"></i>Included
+                    <i class="fas fa-check mr-2"></i>Included
                 </div>
 
                 <div class="py-4 px-6 text-center font-light text-base text-neutral-600">
@@ -2869,7 +2984,7 @@ const jsonLd = {
                 </div>
 
                 <div class="py-4 px-6 text-center font-light text-base text-primary-600 bg-primary-50/55">
-                    <i class="fa-solid fa-check mr-2"></i>Built in
+                    <i class="fas fa-check mr-2"></i>Built in
                 </div>
 
                 <div class="py-4 px-6 text-center font-light text-base text-red-600">
@@ -2884,7 +2999,7 @@ const jsonLd = {
                 </div>
 
                 <div class="py-4 px-6 text-center font-light text-base text-primary-600 bg-primary-50/55">
-                    <i class="fa-solid fa-check mr-2"></i>Real time
+                    <i class="fas fa-check mr-2"></i>Real time
                 </div>
 
                 <div class="py-4 px-6 text-center font-light text-base text-red-600">
@@ -2899,7 +3014,7 @@ const jsonLd = {
                 </div>
 
                 <div class="py-4 px-6 text-center font-light text-base text-primary-600 bg-primary-50/55">
-                    <i class="fa-solid fa-check mr-2"></i>Both
+                    <i class="fas fa-check mr-2"></i>Both
                 </div>
 
                 <div class="py-4 px-6 text-center font-light text-base text-neutral-600">
@@ -2914,7 +3029,7 @@ const jsonLd = {
                 </div>
 
                 <div class="py-4 px-6 text-center font-light text-base text-primary-600 bg-primary-50/55">
-                    <i class="fa-solid fa-check mr-2"></i>Built in
+                    <i class="fas fa-check mr-2"></i>Built in
                 </div>
 
                 <div class="py-4 px-6 text-center font-light text-base text-neutral-600">
@@ -2929,7 +3044,7 @@ const jsonLd = {
                 </div>
 
                 <div class="py-4 px-6 text-center font-light text-base text-primary-600 bg-primary-50/55">
-                    <i class="fa-solid fa-check mr-2"></i>No-code
+                    <i class="fas fa-check mr-2"></i>No-code
                 </div>
 
                 <div class="py-4 px-6 text-center font-light text-base text-red-600">
@@ -2939,7 +3054,8 @@ const jsonLd = {
         </div>
 
         <!-- Mobile / Small Tablet Grid -->
-        <div class="lg:hidden bg-white rounded-xl border border-neutral-200 border-solid overflow-hidden max-w-[420px] mx-auto">
+        <div class="lg:hidden bg-white rounded-xl border border-neutral-200 border-solid overflow-hidden max-w-[420px] mx-auto"
+            data-aos="fade-up" data-aos-delay="150">
             <!-- Features List -->
             <div>
                 <div class="py-4 px-7 text-xl font-semibold text-neutral-900 border-b border-neutral-200 border-solid">
@@ -2986,7 +3102,7 @@ const jsonLd = {
                 <!-- Row 1 -->
                 <div
                     class="py-3.5 px-7 text-base font-light text-primary-600 bg-primary-50/55 border-b border-neutral-200 border-solid">
-                    <i class="fa-solid fa-check mr-2"></i>Included
+                    <i class="fas fa-check mr-2"></i>Included
                 </div>
 
                 <div class="py-3.5 px-7 text-base font-light text-neutral-600 border-b border-neutral-200 border-solid">
@@ -2996,7 +3112,7 @@ const jsonLd = {
                 <!-- Row 2 -->
                 <div
                     class="py-3.5 px-7 text-base font-light text-primary-600 bg-primary-50/55 border-b border-neutral-200 border-solid">
-                    <i class="fa-solid fa-check mr-2"></i>Built in
+                    <i class="fas fa-check mr-2"></i>Built in
                 </div>
 
                 <div class="py-3.5 px-7 text-base font-light text-red-600 border-b border-neutral-200 border-solid">
@@ -3006,7 +3122,7 @@ const jsonLd = {
                 <!-- Row 3 -->
                 <div
                     class="py-3.5 px-7 text-base font-light text-primary-600 bg-primary-50/55 border-b border-neutral-200 border-solid">
-                    <i class="fa-solid fa-check mr-2"></i>Real time
+                    <i class="fas fa-check mr-2"></i>Real time
                 </div>
 
                 <div class="py-3.5 px-7 text-base font-light text-red-600 border-b border-neutral-200 border-solid">
@@ -3016,7 +3132,7 @@ const jsonLd = {
                 <!-- Row 4 -->
                 <div
                     class="py-3.5 px-7 text-base font-light text-primary-600 bg-primary-50/55 border-b border-neutral-200 border-solid">
-                    <i class="fa-solid fa-check mr-2"></i>Both
+                    <i class="fas fa-check mr-2"></i>Both
                 </div>
 
                 <div class="py-3.5 px-7 text-base font-light text-neutral-600 border-b border-neutral-200 border-solid">
@@ -3026,7 +3142,7 @@ const jsonLd = {
                 <!-- Row 5 -->
                 <div
                     class="py-3.5 px-7 text-base font-light text-primary-600 bg-primary-50/55 border-b border-neutral-200 border-solid">
-                    <i class="fa-solid fa-check mr-2"></i>Built in
+                    <i class="fas fa-check mr-2"></i>Built in
                 </div>
 
                 <div class="py-3.5 px-7 text-base font-light text-neutral-600 border-b border-neutral-200 border-solid">
@@ -3035,7 +3151,7 @@ const jsonLd = {
 
                 <!-- Row 6 -->
                 <div class="py-3.5 px-7 text-base font-light text-primary-600 bg-primary-50/55">
-                    <i class="fa-solid fa-check mr-2"></i>No-code
+                    <i class="fas fa-check mr-2"></i>No-code
                 </div>
 
                 <div class="py-3.5 px-7 text-base font-light text-red-600">
@@ -3046,18 +3162,21 @@ const jsonLd = {
     </div>
 </section>
 
-  <!-- SECTION 7: Industries -->
+
+
 <!-- Industries Served Section -->
 <section class="py-16 sm:py-20 lg:py-24">
     <div class="my-container">
 
         <!-- Header -->
         <div class="mb-10 text-center max-md:mb-7">
-            <h3 class="mb-0 text-2xl font-medium text-primary-500 max-2xl:text-xl max-xl:text-lg max-md:text-sm">
+            <h3 class="mb-0 text-2xl font-medium text-primary-500 max-2xl:text-xl max-xl:text-lg max-md:text-sm"
+                data-aos="fade-down">
                 Industries We Serve
             </h3>
 
-            <h2 class="mx-auto mb-0 max-w-3xl text-[56px] font-bold leading-[68px] text-neutral-900 max-2xl:text-5xl max-xl:text-4xl max-md:text-3xl max-md:leading-tight">
+            <h2 class="mx-auto mb-0 max-w-3xl text-[56px] font-bold leading-[68px] text-neutral-900 max-2xl:text-5xl max-xl:text-4xl max-md:text-3xl max-md:leading-tight"
+                data-aos="fade-down" data-aos-delay="100">
                 Built for Field Service Businesses Across Every Trade
             </h2>
         </div>
@@ -3068,7 +3187,8 @@ const jsonLd = {
 
             <!-- Roofing -->
             <a href="https://knockio.com/industry/roofing-sales-software-and-crm/"
-                class="group flex min-h-[125px] flex-col items-center justify-center rounded-[20px] border border-solid border-neutral-200 bg-neutral-100/60 px-6 py-5 text-center transition-all duration-200 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-primary-500/5 max-2xl:px-5 max-md:min-h-[110px] max-md:rounded-xl max-md:px-3 max-md:py-4 max-[380px]:min-h-[100px] max-[380px]:px-2">
+                class="group flex min-h-[125px] flex-col items-center justify-center rounded-[20px] border border-solid border-neutral-200 bg-neutral-100/60 px-6 py-5 text-center transition-all duration-200 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-primary-500/5 max-2xl:px-5 max-md:min-h-[110px] max-md:rounded-xl max-md:px-3 max-md:py-4 max-[380px]:min-h-[100px] max-[380px]:px-2"
+                data-aos="fade-up" data-aos-delay="200">
                 <span
                     class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-xl text-primary-500 transition-colors duration-200 group-hover:bg-primary-500 group-hover:text-white max-md:h-10 max-md:w-10 max-md:text-lg">
                     <i class="fa-solid fa-house-chimney"></i>
@@ -3082,7 +3202,8 @@ const jsonLd = {
 
             <!-- Solar -->
             <a href="https://knockio.com/industry/solar-sales-software-and-crm/"
-                class="group flex min-h-[125px] flex-col items-center justify-center rounded-[20px] border border-solid border-neutral-200 bg-neutral-100/60 px-6 py-5 text-center transition-all duration-200 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-primary-500/5 max-2xl:px-5 max-md:min-h-[110px] max-md:rounded-xl max-md:px-3 max-md:py-4 max-[380px]:min-h-[100px] max-[380px]:px-2">
+                class="group flex min-h-[125px] flex-col items-center justify-center rounded-[20px] border border-solid border-neutral-200 bg-neutral-100/60 px-6 py-5 text-center transition-all duration-200 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-primary-500/5 max-2xl:px-5 max-md:min-h-[110px] max-md:rounded-xl max-md:px-3 max-md:py-4 max-[380px]:min-h-[100px] max-[380px]:px-2"
+                data-aos="fade-up" data-aos-delay="250">
                 <span
                     class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-xl text-primary-500 transition-colors duration-200 group-hover:bg-primary-500 group-hover:text-white max-md:h-10 max-md:w-10 max-md:text-lg">
                     <i class="fa-solid fa-solar-panel"></i>
@@ -3096,7 +3217,8 @@ const jsonLd = {
 
             <!-- HVAC -->
             <a href="https://knockio.com/industry/hvac-software-and-crm/"
-                class="group flex min-h-[125px] flex-col items-center justify-center rounded-[20px] border border-solid border-neutral-200 bg-neutral-100/60 px-6 py-5 text-center transition-all duration-200 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-primary-500/5 max-2xl:px-5 max-md:min-h-[110px] max-md:rounded-xl max-md:px-3 max-md:py-4 max-[380px]:min-h-[100px] max-[380px]:px-2">
+                class="group flex min-h-[125px] flex-col items-center justify-center rounded-[20px] border border-solid border-neutral-200 bg-neutral-100/60 px-6 py-5 text-center transition-all duration-200 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-primary-500/5 max-2xl:px-5 max-md:min-h-[110px] max-md:rounded-xl max-md:px-3 max-md:py-4 max-[380px]:min-h-[100px] max-[380px]:px-2"
+                data-aos="fade-up" data-aos-delay="300">
                 <span
                     class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-xl text-primary-500 transition-colors duration-200 group-hover:bg-primary-500 group-hover:text-white max-md:h-10 max-md:w-10 max-md:text-lg">
                     <i class="fa-solid fa-temperature-half"></i>
@@ -3110,7 +3232,8 @@ const jsonLd = {
 
             <!-- Plumbing -->
             <a href="https://knockio.com/industry/plumbing-software-and-crm/"
-                class="group flex min-h-[125px] flex-col items-center justify-center rounded-[20px] border border-solid border-neutral-200 bg-neutral-100/60 px-6 py-5 text-center transition-all duration-200 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-primary-500/5 max-2xl:px-5 max-md:min-h-[110px] max-md:rounded-xl max-md:px-3 max-md:py-4 max-[380px]:min-h-[100px] max-[380px]:px-2">
+                class="group flex min-h-[125px] flex-col items-center justify-center rounded-[20px] border border-solid border-neutral-200 bg-neutral-100/60 px-6 py-5 text-center transition-all duration-200 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-primary-500/5 max-2xl:px-5 max-md:min-h-[110px] max-md:rounded-xl max-md:px-3 max-md:py-4 max-[380px]:min-h-[100px] max-[380px]:px-2"
+                data-aos="fade-up" data-aos-delay="350">
                 <span
                     class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-xl text-primary-500 transition-colors duration-200 group-hover:bg-primary-500 group-hover:text-white max-md:h-10 max-md:w-10 max-md:text-lg">
                     <i class="fa-solid fa-faucet-drip"></i>
@@ -3124,7 +3247,8 @@ const jsonLd = {
 
             <!-- Electrical -->
             <a href="https://knockio.com/industry/electrical-contractor-software/"
-                class="group flex min-h-[125px] flex-col items-center justify-center rounded-[20px] border border-solid border-neutral-200 bg-neutral-100/60 px-6 py-5 text-center transition-all duration-200 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-primary-500/5 max-2xl:px-5 max-md:min-h-[110px] max-md:rounded-xl max-md:px-3 max-md:py-4 max-[380px]:min-h-[100px] max-[380px]:px-2">
+                class="group flex min-h-[125px] flex-col items-center justify-center rounded-[20px] border border-solid border-neutral-200 bg-neutral-100/60 px-6 py-5 text-center transition-all duration-200 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-primary-500/5 max-2xl:px-5 max-md:min-h-[110px] max-md:rounded-xl max-md:px-3 max-md:py-4 max-[380px]:min-h-[100px] max-[380px]:px-2"
+                data-aos="fade-up" data-aos-delay="400">
                 <span
                     class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-xl text-primary-500 transition-colors duration-200 group-hover:bg-primary-500 group-hover:text-white max-md:h-10 max-md:w-10 max-md:text-lg">
                     <i class="fa-solid fa-bolt"></i>
@@ -3138,7 +3262,8 @@ const jsonLd = {
 
             <!-- Fiber -->
             <a href="https://knockio.com/industry/fiber-internet-sales-software-and-crm/"
-                class="group flex min-h-[125px] flex-col items-center justify-center rounded-[20px] border border-solid border-neutral-200 bg-neutral-100/60 px-6 py-5 text-center transition-all duration-200 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-primary-500/5 max-2xl:px-5 max-md:min-h-[110px] max-md:rounded-xl max-md:px-3 max-md:py-4 max-[380px]:min-h-[100px] max-[380px]:px-2">
+                class="group flex min-h-[125px] flex-col items-center justify-center rounded-[20px] border border-solid border-neutral-200 bg-neutral-100/60 px-6 py-5 text-center transition-all duration-200 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-primary-500/5 max-2xl:px-5 max-md:min-h-[110px] max-md:rounded-xl max-md:px-3 max-md:py-4 max-[380px]:min-h-[100px] max-[380px]:px-2"
+                data-aos="fade-up" data-aos-delay="200">
                 <span
                     class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-xl text-primary-500 transition-colors duration-200 group-hover:bg-primary-500 group-hover:text-white max-md:h-10 max-md:w-10 max-md:text-lg">
                     <i class="fa-solid fa-network-wired"></i>
@@ -3152,7 +3277,8 @@ const jsonLd = {
 
             <!-- Pool Service -->
             <a href="https://knockio.com/industry/pool-service-software/"
-                class="group flex min-h-[125px] flex-col items-center justify-center rounded-[20px] border border-solid border-neutral-200 bg-neutral-100/60 px-6 py-5 text-center transition-all duration-200 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-primary-500/5 max-2xl:px-5 max-md:min-h-[110px] max-md:rounded-xl max-md:px-3 max-md:py-4 max-[380px]:min-h-[100px] max-[380px]:px-2">
+                class="group flex min-h-[125px] flex-col items-center justify-center rounded-[20px] border border-solid border-neutral-200 bg-neutral-100/60 px-6 py-5 text-center transition-all duration-200 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-primary-500/5 max-2xl:px-5 max-md:min-h-[110px] max-md:rounded-xl max-md:px-3 max-md:py-4 max-[380px]:min-h-[100px] max-[380px]:px-2"
+                data-aos="fade-up" data-aos-delay="250">
                 <span
                     class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-xl text-primary-500 transition-colors duration-200 group-hover:bg-primary-500 group-hover:text-white max-md:h-10 max-md:w-10 max-md:text-lg">
                     <i class="fa-solid fa-water-ladder"></i>
@@ -3166,7 +3292,8 @@ const jsonLd = {
 
             <!-- Painting -->
             <a href="https://knockio.com/industry/painting-contractor-software-and-crm/"
-                class="group flex min-h-[125px] flex-col items-center justify-center rounded-[20px] border border-solid border-neutral-200 bg-neutral-100/60 px-6 py-5 text-center transition-all duration-200 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-primary-500/5 max-2xl:px-5 max-md:min-h-[110px] max-md:rounded-xl max-md:px-3 max-md:py-4 max-[380px]:min-h-[100px] max-[380px]:px-2">
+                class="group flex min-h-[125px] flex-col items-center justify-center rounded-[20px] border border-solid border-neutral-200 bg-neutral-100/60 px-6 py-5 text-center transition-all duration-200 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-primary-500/5 max-2xl:px-5 max-md:min-h-[110px] max-md:rounded-xl max-md:px-3 max-md:py-4 max-[380px]:min-h-[100px] max-[380px]:px-2"
+                data-aos="fade-up" data-aos-delay="300">
                 <span
                     class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-xl text-primary-500 transition-colors duration-200 group-hover:bg-primary-500 group-hover:text-white max-md:h-10 max-md:w-10 max-md:text-lg">
                     <i class="fa-solid fa-paint-roller"></i>
@@ -3180,7 +3307,8 @@ const jsonLd = {
 
             <!-- Pest Control -->
             <a href="https://knockio.com/industry/pest-control-software/"
-                class="group flex min-h-[125px] flex-col items-center justify-center rounded-[20px] border border-solid border-neutral-200 bg-neutral-100/60 px-6 py-5 text-center transition-all duration-200 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-primary-500/5 max-2xl:px-5 max-md:min-h-[110px] max-md:rounded-xl max-md:px-3 max-md:py-4 max-[380px]:min-h-[100px] max-[380px]:px-2">
+                class="group flex min-h-[125px] flex-col items-center justify-center rounded-[20px] border border-solid border-neutral-200 bg-neutral-100/60 px-6 py-5 text-center transition-all duration-200 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-primary-500/5 max-2xl:px-5 max-md:min-h-[110px] max-md:rounded-xl max-md:px-3 max-md:py-4 max-[380px]:min-h-[100px] max-[380px]:px-2"
+                data-aos="fade-up" data-aos-delay="350">
                 <span
                     class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-xl text-primary-500 transition-colors duration-200 group-hover:bg-primary-500 group-hover:text-white max-md:h-10 max-md:w-10 max-md:text-lg">
                     <i class="fa-solid fa-bug"></i>
@@ -3194,7 +3322,8 @@ const jsonLd = {
 
             <!-- Window Cleaning -->
             <a href="https://knockio.com/industry/window-cleaning-business-software/"
-                class="group flex min-h-[125px] flex-col items-center justify-center rounded-[20px] border border-solid border-neutral-200 bg-neutral-100/60 px-6 py-5 text-center transition-all duration-200 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-primary-500/5 max-2xl:px-5 max-md:min-h-[110px] max-md:rounded-xl max-md:px-3 max-md:py-4 max-[380px]:min-h-[100px] max-[380px]:px-2">
+                class="group flex min-h-[125px] flex-col items-center justify-center rounded-[20px] border border-solid border-neutral-200 bg-neutral-100/60 px-6 py-5 text-center transition-all duration-200 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-primary-500/5 max-2xl:px-5 max-md:min-h-[110px] max-md:rounded-xl max-md:px-3 max-md:py-4 max-[380px]:min-h-[100px] max-[380px]:px-2"
+                data-aos="fade-up" data-aos-delay="400">
                 <span
                     class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-xl text-primary-500 transition-colors duration-200 group-hover:bg-primary-500 group-hover:text-white max-md:h-10 max-md:w-10 max-md:text-lg">
                     <i class="fa-solid fa-spray-can-sparkles"></i>
@@ -3208,7 +3337,8 @@ const jsonLd = {
 
             <!-- Landscaping -->
             <a href="https://knockio.com/industry/landscaping-business-software/"
-                class="group flex min-h-[125px] flex-col items-center justify-center rounded-[20px] border border-solid border-neutral-200 bg-neutral-100/60 px-6 py-5 text-center transition-all duration-200 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-primary-500/5 max-2xl:px-5 max-md:min-h-[110px] max-md:rounded-xl max-md:px-3 max-md:py-4 max-[380px]:min-h-[100px] max-[380px]:px-2">
+                class="group flex min-h-[125px] flex-col items-center justify-center rounded-[20px] border border-solid border-neutral-200 bg-neutral-100/60 px-6 py-5 text-center transition-all duration-200 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-primary-500/5 max-2xl:px-5 max-md:min-h-[110px] max-md:rounded-xl max-md:px-3 max-md:py-4 max-[380px]:min-h-[100px] max-[380px]:px-2"
+                data-aos="fade-up" data-aos-delay="200">
                 <span
                     class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-xl text-primary-500 transition-colors duration-200 group-hover:bg-primary-500 group-hover:text-white max-md:h-10 max-md:w-10 max-md:text-lg">
                     <i class="fa-solid fa-leaf"></i>
@@ -3222,7 +3352,8 @@ const jsonLd = {
 
             <!-- Home Security -->
             <a href="https://knockio.com/industry/home-security-sales-software-and-crm/"
-                class="group flex min-h-[125px] flex-col items-center justify-center rounded-[20px] border border-solid border-neutral-200 bg-neutral-100/60 px-6 py-5 text-center transition-all duration-200 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-primary-500/5 max-2xl:px-5 max-md:min-h-[110px] max-md:rounded-xl max-md:px-3 max-md:py-4 max-[380px]:min-h-[100px] max-[380px]:px-2">
+                class="group flex min-h-[125px] flex-col items-center justify-center rounded-[20px] border border-solid border-neutral-200 bg-neutral-100/60 px-6 py-5 text-center transition-all duration-200 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-primary-500/5 max-2xl:px-5 max-md:min-h-[110px] max-md:rounded-xl max-md:px-3 max-md:py-4 max-[380px]:min-h-[100px] max-[380px]:px-2"
+                data-aos="fade-up" data-aos-delay="250">
                 <span
                     class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-xl text-primary-500 transition-colors duration-200 group-hover:bg-primary-500 group-hover:text-white max-md:h-10 max-md:w-10 max-md:text-lg">
                     <i class="fa-solid fa-shield-halved"></i>
@@ -3236,7 +3367,8 @@ const jsonLd = {
 
             <!-- Garage Door -->
             <a href="https://knockio.com/industry/garage-door-service-software/"
-                class="group flex min-h-[125px] flex-col items-center justify-center rounded-[20px] border border-solid border-neutral-200 bg-neutral-100/60 px-6 py-5 text-center transition-all duration-200 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-primary-500/5 max-2xl:px-5 max-md:min-h-[110px] max-md:rounded-xl max-md:px-3 max-md:py-4 max-[380px]:min-h-[100px] max-[380px]:px-2">
+                class="group flex min-h-[125px] flex-col items-center justify-center rounded-[20px] border border-solid border-neutral-200 bg-neutral-100/60 px-6 py-5 text-center transition-all duration-200 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-primary-500/5 max-2xl:px-5 max-md:min-h-[110px] max-md:rounded-xl max-md:px-3 max-md:py-4 max-[380px]:min-h-[100px] max-[380px]:px-2"
+                data-aos="fade-up" data-aos-delay="300">
                 <span
                     class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-xl text-primary-500 transition-colors duration-200 group-hover:bg-primary-500 group-hover:text-white max-md:h-10 max-md:w-10 max-md:text-lg">
                     <i class="fa-solid fa-warehouse"></i>
@@ -3250,7 +3382,8 @@ const jsonLd = {
 
             <!-- Junk Removal -->
             <a href="https://knockio.com/industry/junk-removal-software-and-crm/"
-                class="group flex min-h-[125px] flex-col items-center justify-center rounded-[20px] border border-solid border-neutral-200 bg-neutral-100/60 px-6 py-5 text-center transition-all duration-200 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-primary-500/5 max-2xl:px-5 max-md:min-h-[110px] max-md:rounded-xl max-md:px-3 max-md:py-4 max-[380px]:min-h-[100px] max-[380px]:px-2">
+                class="group flex min-h-[125px] flex-col items-center justify-center rounded-[20px] border border-solid border-neutral-200 bg-neutral-100/60 px-6 py-5 text-center transition-all duration-200 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-primary-500/5 max-2xl:px-5 max-md:min-h-[110px] max-md:rounded-xl max-md:px-3 max-md:py-4 max-[380px]:min-h-[100px] max-[380px]:px-2"
+                data-aos="fade-up" data-aos-delay="350">
                 <span
                     class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-xl text-primary-500 transition-colors duration-200 group-hover:bg-primary-500 group-hover:text-white max-md:h-10 max-md:w-10 max-md:text-lg">
                     <i class="fa-solid fa-truck-ramp-box"></i>
@@ -3264,7 +3397,8 @@ const jsonLd = {
 
             <!-- Restoration -->
             <a href="https://knockio.com/industry/restoration-job-management-software/"
-                class="group flex min-h-[125px] flex-col items-center justify-center rounded-[20px] border border-solid border-neutral-200 bg-neutral-100/60 px-6 py-5 text-center transition-all duration-200 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-primary-500/5 max-2xl:px-5 max-md:min-h-[110px] max-md:rounded-xl max-md:px-3 max-md:py-4 max-[380px]:min-h-[100px] max-[380px]:px-2">
+                class="group flex min-h-[125px] flex-col items-center justify-center rounded-[20px] border border-solid border-neutral-200 bg-neutral-100/60 px-6 py-5 text-center transition-all duration-200 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-primary-500/5 max-2xl:px-5 max-md:min-h-[110px] max-md:rounded-xl max-md:px-3 max-md:py-4 max-[380px]:min-h-[100px] max-[380px]:px-2"
+                data-aos="fade-up" data-aos-delay="400">
                 <span
                     class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-xl text-primary-500 transition-colors duration-200 group-hover:bg-primary-500 group-hover:text-white max-md:h-10 max-md:w-10 max-md:text-lg">
                     <i class="fa-solid fa-house-flood-water"></i>
@@ -3280,43 +3414,46 @@ const jsonLd = {
     </div>
 </section>
 
-  <!-- SECTION 8: Pricing -->
+
 <!-- Pricing section -->
 <section class="py-36 max-xl:py-28 max-lg:py-20 max-md:py-16 overflow-x-hidden">
     <div class="my-container">
         <div class="text-center mb-10 max-md:mb-7">
-            <h2 class="text-[56px] max-2xl:text-5xl max-xl:text-4xl max-md:text-3xl font-bold text-neutral-900 leading-tight mb-4 max-w-3xl mx-auto font-inter">
+            <h2 class="text-[56px] max-2xl:text-5xl max-xl:text-4xl max-md:text-3xl font-bold text-neutral-900 leading-tight mb-4 max-w-3xl mx-auto font-inter"
+                data-aos="fade-down" data-aos-delay="100">
                 Straightforward Pricing. No Surprises.
             </h2>
 
-            <p class="text-lg max-xl:text-base text-neutral-600 max-w-xl mx-auto">
+            <p class="text-lg max-xl:text-base text-neutral-600 max-w-xl mx-auto" data-aos="fade-down"
+                data-aos-delay="200">
                 Start with the plan your team needs now. Add users as you grow, volume discounts apply automatically
                 at 5 users.
             </p>
         </div>
 
-        <div class="flex flex-wrap items-center justify-center gap-3 mb-12">
+        <div class="flex flex-wrap items-center justify-center gap-3 mb-12" data-aos="fade-up">
             <div
                 class="flex items-center text-sm text-neutral-900 px-5 py-2.5 border border-solid border-neutral-200 rounded-full">
-                <i class="fa-solid fa-check mr-2 text-primary-500"></i>
+                <i class="fas fa-check mr-2 text-primary-500"></i>
                 <span>Pro-rated billing. No setup fee</span>
             </div>
-            <!--
-            <a
-                href="#pricing-compare"
-                class="flex items-center text-sm text-primary-600 font-medium px-5 py-2.5 border border-solid border-primary-200 rounded-full hover:bg-primary-50 transition-colors"
-            >
-                Compare plans in detail
-                <i class="fa-solid fa-arrow-down ml-2 text-xs"></i>
-            </a> -->
+            <!--   
+        <a
+          href="#pricing-compare"
+          class="flex items-center text-sm text-primary-600 font-medium px-5 py-2.5 border border-solid border-primary-200 rounded-full hover:bg-primary-50 transition-colors"
+        >
+          Compare plans in detail
+          <i class="fa-solid fa-arrow-down ml-2 text-xs"></i>
+        </a> -->
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-14 max-xl:gap-7 max-w-[1330px] mx-auto items-stretch">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-14 max-xl:gap-7 max-w-[1330px] mx-auto items-stretch"
+            data-aos="fade-up" data-aos-delay="100">
             <!-- Prospect -->
             <div
                 class="flex flex-col rounded-3xl border border-solid border-neutral-200 p-8 max-md:p-6 transition duration-150 ease-out hover:scale-[1.03]">
                 <div class="flex items-center gap-4 mb-3">
-                    <i class="fa-solid fa-map text-xl text-blue-600"></i>
+                    <i class="fas fa-map text-xl text-blue-600"></i>
                     <h3 class="text-3xl max-xl:text-2xl font-bold text-neutral-900">Prospect</h3>
                 </div>
 
@@ -3343,31 +3480,31 @@ const jsonLd = {
 
                 <ul class="space-y-3.5 text-neutral-700 flex-1">
                     <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-                        <i class="fa-solid fa-check text-primary-500 mr-3 mt-1 shrink-0"></i>
+                        <i class="fas fa-check text-primary-500 mr-3 mt-1 shrink-0"></i>
                         <span>Unlimited Territories & Campaigns</span>
                     </li>
                     <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-                        <i class="fa-solid fa-check text-primary-500 mr-3 mt-1 shrink-0"></i>
+                        <i class="fas fa-check text-primary-500 mr-3 mt-1 shrink-0"></i>
                         <span>Route Planning & Optimization</span>
                     </li>
                     <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-                        <i class="fa-solid fa-check text-primary-500 mr-3 mt-1 shrink-0"></i>
+                        <i class="fas fa-check text-primary-500 mr-3 mt-1 shrink-0"></i>
                         <span>Pre-Knocked Data (15¢ per address)</span>
                     </li>
                     <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-                        <i class="fa-solid fa-check text-primary-500 mr-3 mt-1 shrink-0"></i>
+                        <i class="fas fa-check text-primary-500 mr-3 mt-1 shrink-0"></i>
                         <span>Presentations & Real-time Tracking</span>
                     </li>
                     <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-                        <i class="fa-solid fa-check text-primary-500 mr-3 mt-1 shrink-0"></i>
+                        <i class="fas fa-check text-primary-500 mr-3 mt-1 shrink-0"></i>
                         <span>Digital Contracts & E-Signature</span>
                     </li>
                     <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-                        <i class="fa-solid fa-phone text-primary-500 mr-3 mt-1 shrink-0"></i>
+                        <i class="fas fa-phone text-primary-500 mr-3 mt-1 shrink-0"></i>
                         <span>Engage Add-On <span class="text-neutral-500">($15/number/mo)</span></span>
                     </li>
                     <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-                        <i class="fa-solid fa-plug text-neutral-400 mr-3 mt-1 shrink-0"></i>
+                        <i class="fas fa-plug text-neutral-400 mr-3 mt-1 shrink-0"></i>
                         <span class="text-neutral-500">Zapier & FlowChef integrations</span>
                     </li>
                 </ul>
@@ -3382,7 +3519,7 @@ const jsonLd = {
                 </div>
 
                 <div class="flex items-center gap-4 mb-3 mt-2">
-                    <i class="fa-solid fa-chart-line text-xl text-primary-500"></i>
+                    <i class="fas fa-chart-line text-xl text-primary-500"></i>
                     <h3 class="text-3xl max-xl:text-2xl font-bold text-white">Growth</h3>
                 </div>
 
@@ -3408,31 +3545,31 @@ const jsonLd = {
 
                 <ul class="space-y-3.5 text-neutral-300 flex-1">
                     <li class="flex items-start text-base leading-7 max-md:text-[15px] font-semibold">
-                        <i class="fa-solid fa-check text-primary-500 mr-3 mt-1 shrink-0"></i>
+                        <i class="fas fa-check text-primary-500 mr-3 mt-1 shrink-0"></i>
                         <span>Full sales-to-payment workflow</span>
                     </li>
                     <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-                        <i class="fa-solid fa-check text-primary-500 mr-3 mt-1 shrink-0"></i>
+                        <i class="fas fa-check text-primary-500 mr-3 mt-1 shrink-0"></i>
                         <span>Unlimited workspaces</span>
                     </li>
                     <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-                        <i class="fa-solid fa-check text-primary-500 mr-3 mt-1 shrink-0"></i>
+                        <i class="fas fa-check text-primary-500 mr-3 mt-1 shrink-0"></i>
                         <span>Prospect + full CRM in one platform</span>
                     </li>
                     <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-                        <i class="fa-solid fa-check text-primary-500 mr-3 mt-1 shrink-0"></i>
+                        <i class="fas fa-check text-primary-500 mr-3 mt-1 shrink-0"></i>
                         <span>Estimates, invoices & vendor billing</span>
                     </li>
                     <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-                        <i class="fa-solid fa-user-tie text-primary-500 mr-3 mt-1 shrink-0"></i>
+                        <i class="fas fa-user-tie text-primary-500 mr-3 mt-1 shrink-0"></i>
                         <span>Dedicated success manager</span>
                     </li>
                     <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-                        <i class="fa-solid fa-phone text-primary-500 mr-3 mt-1 shrink-0"></i>
+                        <i class="fas fa-phone text-primary-500 mr-3 mt-1 shrink-0"></i>
                         <span>Engage Add-On <span class="text-neutral-500">($15/number/mo)</span></span>
                     </li>
                     <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-                        <i class="fa-solid fa-plug text-neutral-500 mr-3 mt-1 shrink-0"></i>
+                        <i class="fas fa-plug text-neutral-500 mr-3 mt-1 shrink-0"></i>
                         <span class="text-neutral-500">Zapier & FlowChef integrations</span>
                     </li>
                 </ul>
@@ -3442,7 +3579,7 @@ const jsonLd = {
             <div
                 class="flex flex-col rounded-3xl border border-solid border-neutral-200 p-8 max-md:p-6 transition duration-150 ease-out hover:scale-[1.03]">
                 <div class="flex items-center gap-4 mb-3">
-                    <i class="fa-solid fa-boxes text-xl text-orange-600"></i>
+                    <i class="fas fa-boxes text-xl text-orange-600"></i>
                     <h3 class="text-3xl max-xl:text-2xl font-bold text-neutral-900">Organize</h3>
                 </div>
 
@@ -3470,31 +3607,31 @@ const jsonLd = {
 
                 <ul class="space-y-3.5 text-neutral-700 flex-1">
                     <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-                        <i class="fa-solid fa-check text-primary-500 mr-3 mt-1 shrink-0"></i>
+                        <i class="fas fa-check text-primary-500 mr-3 mt-1 shrink-0"></i>
                         <span>Pipelines & Lead Management</span>
                     </li>
                     <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-                        <i class="fa-solid fa-check text-primary-500 mr-3 mt-1 shrink-0"></i>
+                        <i class="fas fa-check text-primary-500 mr-3 mt-1 shrink-0"></i>
                         <span>Estimates & Work Orders</span>
                     </li>
                     <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-                        <i class="fa-solid fa-check text-primary-500 mr-3 mt-1 shrink-0"></i>
+                        <i class="fas fa-check text-primary-500 mr-3 mt-1 shrink-0"></i>
                         <span>Invoices & Payments</span>
                     </li>
                     <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-                        <i class="fa-solid fa-check text-primary-500 mr-3 mt-1 shrink-0"></i>
+                        <i class="fas fa-check text-primary-500 mr-3 mt-1 shrink-0"></i>
                         <span>Digital Contracts & E-Signature</span>
                     </li>
                     <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-                        <i class="fa-solid fa-check text-primary-500 mr-3 mt-1 shrink-0"></i>
+                        <i class="fas fa-check text-primary-500 mr-3 mt-1 shrink-0"></i>
                         <span>Email Communication & Permissions</span>
                     </li>
                     <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-                        <i class="fa-solid fa-phone text-primary-500 mr-3 mt-1 shrink-0"></i>
+                        <i class="fas fa-phone text-primary-500 mr-3 mt-1 shrink-0"></i>
                         <span>Engage Add-On <span class="text-neutral-500">($15/number/mo)</span></span>
                     </li>
                     <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-                        <i class="fa-solid fa-plug text-neutral-400 mr-3 mt-1 shrink-0"></i>
+                        <i class="fas fa-plug text-neutral-400 mr-3 mt-1 shrink-0"></i>
                         <span class="text-neutral-500">Zapier & FlowChef integrations</span>
                     </li>
                 </ul>
@@ -3503,12 +3640,14 @@ const jsonLd = {
     </div>
 </section>
 
-  <!-- SECTION 9: Calculator -->
+
+
 <!-- Quick estimate calculator -->
 <section class="pb-12 max-xl:pb-10">
     <div class="my-container">
         <div data-kio-calc
-            class="relative overflow-hidden rounded-[2rem] border border-solid border-neutral-200 bg-white p-5 shadow-xl shadow-neutral-900/5 sm:p-6 lg:p-8 max-w-5xl mx-auto">
+            class="relative overflow-hidden rounded-[2rem] border border-solid border-neutral-200 bg-white p-5 shadow-xl shadow-neutral-900/5 sm:p-6 lg:p-8 max-w-5xl mx-auto"
+            data-aos="fade-up">
             <div class="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-primary-500/10"></div>
             <div class="pointer-events-none absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-neutral-100"></div>
 
@@ -3648,14 +3787,117 @@ const jsonLd = {
     </div>
 </section>
 
-  <!-- SECTION 10: FAQ -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        function getParam(name) {
+            var params = new URLSearchParams(window.location.search);
+            return params.get(name);
+        }
+        function getSource() {
+            var source = getParam("source");
+            var utmSource = getParam("utm_source");
+            if (source) return source;
+            if (utmSource) return utmSource;
+            return "direct";
+        }
+        function buildCheckoutUrl(packageId) {
+            var url = new URL("https://checkout.knockio.com/");
+            var gclid = getParam("gclid");
+            var source = getSource();
+            url.searchParams.set("users", "5");
+            if (packageId) {
+                url.searchParams.set("package", packageId);
+            }
+            if (gclid) {
+                url.searchParams.set("gclid", gclid);
+            }
+            if (source) {
+                url.searchParams.set("source", source);
+            }
+            return url.toString();
+        }
+        document.addEventListener("click", function (e) {
+            var button = e.target.closest(".knockio-checkout-btn");
+            if (!button) return;
+            e.preventDefault();
+            var packageId = button.getAttribute("data-package");
+            window.location.href = buildCheckoutUrl(packageId);
+        });
+    });
+</script>
+
+<script>
+    (function () {
+        var RATES = {
+            prospect: { rate_1_4: 25, rate_5p: 20 },
+            organise: { rate_1_4: 35, rate_5p: 30 },
+            growth: { rate_1_4: 60, rate_5p: 45 },
+        };
+
+        var ENGAGE_RATE = 15;
+
+        function fmt(n) {
+            return "$" + (Math.round(n * 100) / 100).toLocaleString("en-US", {
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 2
+            });
+        }
+
+        function calculateCalculator(calcEl) {
+            var usersInput = calcEl.querySelector("[data-kio-users]");
+            var planInput = calcEl.querySelector("[data-kio-plan]");
+            var linesInput = calcEl.querySelector("[data-kio-lines]");
+            var totalEl = calcEl.querySelector("[data-kio-total]");
+            var breakdownEl = calcEl.querySelector("[data-kio-breakdown]");
+
+            if (!usersInput || !planInput || !linesInput || !totalEl || !breakdownEl) return;
+
+            var users = Math.max(1, parseInt(usersInput.value, 10) || 1);
+            var lines = Math.max(0, parseInt(linesInput.value, 10) || 0);
+            var plan = planInput.value;
+
+            usersInput.value = users;
+            linesInput.value = lines;
+
+            var rate = users >= 5 ? RATES[plan].rate_5p : RATES[plan].rate_1_4;
+            var total = users * rate + lines * ENGAGE_RATE;
+
+            totalEl.textContent = fmt(total) + " / mo";
+
+            var breakdown = users + " user" + (users === 1 ? "" : "s") + " × " + fmt(rate);
+
+            if (lines > 0) {
+                breakdown += " + " + lines + " phone number" + (lines === 1 ? "" : "s") + " × " + fmt(ENGAGE_RATE);
+            }
+
+            breakdownEl.textContent = breakdown;
+        }
+
+        function initCalculator(calcEl) {
+            calcEl.querySelectorAll("[data-kio-users], [data-kio-plan], [data-kio-lines]").forEach(function (field) {
+                field.addEventListener("input", function () {
+                    calculateCalculator(calcEl);
+                });
+
+                field.addEventListener("change", function () {
+                    calculateCalculator(calcEl);
+                });
+            });
+
+            calculateCalculator(calcEl);
+        }
+
+        document.querySelectorAll("[data-kio-calc]").forEach(initCalculator);
+    })();
+</script>
+
 <!-- FAQ SECTION -->
-<section class="bg-white overflow-x-hidden pb-36 max-xl:pb-28 max-lg:pb-20 max-md:pb-16">
+<section class="bg-white overflow-x-hidden">
     <div class="my-container mx-auto">
         <div class="grid gap-10 lg:grid-cols-2 lg:gap-20">
 
             <!-- Left Side: Content -->
-            <div>
+            <div data-aos="fade-right">
                 <p class="text-primary-500 text-sm md:text-2xl leading-7 font-inter mb-4">
                     Common Questions
                 </p>
@@ -3663,7 +3905,8 @@ const jsonLd = {
                     class="text-3xl leading-tight sm:text-4xl lg:text-[42px] xl:text-5xl 2xl:text-[56px] lg:leading-none font-bold text-neutral-950 mb-8 w-full max-w-3xl">
                     Everything Field Teams Ask Before Switching to Knockio
                 </h2>
-                <p class="text-lg max-xl:text-base max-md:text-sm font-normal text-neutral-600 max-w-3xl mb-4">
+                <p class="text-lg max-xl:text-base max-md:text-sm font-normal text-neutral-600 max-w-3xl mb-4"
+                    data-aos="fade-up" data-aos-delay="200">
                     Choosing the right field software depends on your team’s workflow, budget, industry, and growth
                     plans. Some
                     tools are stronger for door-to-door sales. Some are built more for service jobs. Knockio brings both
@@ -3673,7 +3916,7 @@ const jsonLd = {
             </div>
 
             <!-- Right Side: Accordion -->
-            <div class="space-y-4">
+            <div class="space-y-4" data-aos="fade-left">
 
                 <!-- FAQ Item 1 -->
                 <div
@@ -3925,26 +4168,714 @@ const jsonLd = {
     </div>
 </section>
 
-<!-- Book a Demo / Calendly CTA Section -->
-<section id="cal-sec" class="py-36 max-xl:py-28 max-lg:py-20 max-md:py-16">
-  <div class="my-container">
-    <div class="mx-auto max-w-[1440px] rounded-3xl bg-[linear-gradient(90deg,#0b1f12_0%,#0f2a17_100%)] px-6 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28 xl:px-16">
-      <!-- Heading Content -->
-      <div class="mx-auto mb-10 max-w-3xl text-center max-md:mb-8">
-        <p class="mb-3 text-sm font-medium leading-7 text-primary-500 md:text-2xl">
-          See Knockio In Action
-        </p>
-        <h2 class="mb-0 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]">
-          Book a Demo Now!
-        </h2>
-      </div>
-      <!-- Cal.com Calendar Embed -->
-      <div id="my-cal-inline" class="mx-auto max-w-5xl rounded-2xl bg-white p-4 sm:p-6"></div>
-    </div>
-  </div>
-</section>
 
-</KnockioHomeLayout>
-<script src="../scripts/home.js"></script>
-<script src="../scripts/cal-inline.js"></script>
-<script src="../scripts/calendar-cta.js"></script>
+<script>
+    (function () {
+        "use strict";
+
+        var TAB_DURATION = 5000;
+        var MAP_ASSET_URL = "https://knockio.com/wp-content/uploads/2026/06/map-walnut-creek.webp";
+
+        function renderMapSvg(suffix) {
+            var s = suffix || "a";
+            return (
+                '<svg class="pointer-events-none absolute inset-0 z-0 h-full w-full" viewBox="0 0 1200 650" preserveAspectRatio="xMidYMid slice" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">' +
+                "<defs>" +
+                '<linearGradient id="kio-sky-' +
+                s +
+                '" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#eef3f8"/><stop offset="100%" stop-color="#e4ebe6"/></linearGradient>' +
+                '<linearGradient id="kio-park-' +
+                s +
+                '" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#c8e6c9"/><stop offset="100%" stop-color="#a5d6a7"/></linearGradient>' +
+                '<linearGradient id="kio-water-' +
+                s +
+                '" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#81d4fa"/><stop offset="100%" stop-color="#4fc3f7"/></linearGradient>' +
+                "</defs>" +
+                '<rect width="1200" height="650" fill="url(#kio-sky-' +
+                s +
+                ')"/>' +
+                '<rect width="1200" height="650" fill="#ebe8e0" opacity="0.55"/>' +
+                '<path d="M-20 80 Q200 40 420 70 T820 55 T1220 75 L1220 220 Q960 250 700 230 T280 240 T-20 210 Z" fill="url(#kio-park-' +
+                s +
+                ')" opacity="0.85"/>' +
+                '<path d="M0 520 Q300 490 600 510 T1200 500 L1200 650 L0 650 Z" fill="url(#kio-park-' +
+                s +
+                ')" opacity="0.75"/>' +
+                '<path d="M920 520 Q1020 500 1120 530 L1200 540 L1200 650 L880 650 Q900 590 920 520 Z" fill="url(#kio-water-' +
+                s +
+                ')" opacity="0.5"/>' +
+                '<path d="M0 560 Q180 545 360 555 T720 548 T1200 558 L1200 620 Q800 635 400 625 T0 610 Z" fill="url(#kio-water-' +
+                s +
+                ')" opacity="0.4"/>' +
+                '<g fill="#d5cfc4" opacity="0.9">' +
+                '<rect x="180" y="140" width="55" height="40" rx="2"/><rect x="245" y="155" width="40" height="30" rx="2"/>' +
+                '<rect x="420" y="120" width="70" height="50" rx="2"/><rect x="500" y="135" width="45" height="35" rx="2"/>' +
+                '<rect x="680" y="150" width="60" height="45" rx="2"/><rect x="750" y="165" width="50" height="35" rx="2"/>' +
+                '<rect x="320" y="280" width="65" height="48" rx="2"/><rect x="395" y="295" width="48" height="38" rx="2"/>' +
+                '<rect x="560" y="270" width="72" height="52" rx="2"/><rect x="640" y="285" width="55" height="40" rx="2"/>' +
+                "</g>" +
+                '<g stroke="#ffffff" stroke-width="14" stroke-linecap="round" fill="none" opacity="0.95">' +
+                '<path d="M0 250 L1200 250"/><path d="M600 0 L600 650"/>' +
+                "</g>" +
+                '<g stroke="#f9e076" stroke-width="9" stroke-linecap="round" fill="none" opacity="0.92">' +
+                '<path d="M-20 360 L1220 360"/><path d="M280 0 L320 650"/>' +
+                "</g>" +
+                '<g stroke="#ffffff" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.88">' +
+                '<path d="M0 180 L1200 195"/><path d="M150 0 L170 650"/><path d="M450 0 L430 650"/><path d="M850 0 L870 650"/>' +
+                "</g>" +
+                '<g stroke="#d0d5d8" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.75">' +
+                '<path d="M0 100 L1200 115"/><path d="M80 0 L95 650"/><path d="M380 0 L365 650"/><path d="M720 0 L735 650"/><path d="M980 0 L965 650"/>' +
+                "</g>" +
+                '<text x="540" y="242" font-family="Inter,Arial,sans-serif" font-size="11" fill="#737373" opacity="0.7">Mt Diablo Blvd</text>' +
+                '<text x="615" y="120" font-family="Inter,Arial,sans-serif" font-size="10" fill="#737373" opacity="0.65" transform="rotate(90 615 120)">North Main St</text>' +
+                '<text x="260" y="240" font-family="Inter,Arial,sans-serif" font-size="11" fill="#737373" opacity="0.65">Walnut Creek</text>' +
+                "</svg>"
+            );
+        }
+
+        function renderMapLayer(index) {
+            return (
+                '<div class="absolute inset-0 z-0 overflow-hidden">' +
+                renderMapSvg(String(index)) +
+                '<img class="kio-map-tile pointer-events-none absolute inset-0 z-[1] h-full w-full object-cover opacity-0 transition-opacity duration-300" src="' +
+                MAP_ASSET_URL +
+                '" alt="" aria-hidden="true" loading="lazy"/>' +
+                '<div class="pointer-events-none absolute inset-0 z-[2] bg-gradient-to-b from-white/[0.06] via-transparent to-white/[0.04]" aria-hidden="true"></div>' +
+                "</div>"
+            );
+        }
+
+        function renderSidebar(active) {
+            function item(key, icon, label, opts) {
+                opts = opts || {};
+                var isActive = key === active;
+                var regularIcons = {
+                    calendar: true,
+                    comments: true,
+                    compass: true,
+                    "chart-bar": true,
+                    star: true,
+                };
+                var faStyle = regularIcons[icon] ? "fa-regular" : "fa-solid";
+                var linkCls =
+                    "group flex h-[42px] items-center gap-3 rounded-[10px] px-3 text-[14px] font-medium transition " +
+                    (isActive
+                        ? "bg-primary-600 text-white"
+                        : "text-neutral-700 hover:bg-neutral-50");
+                var iconCls =
+                    "w-[18px] shrink-0 text-center text-[15px] " +
+                    (isActive ? "text-white" : "text-primary-600 group-hover:text-primary-700");
+                var badgeCls =
+                    "shrink-0 rounded px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wide " +
+                    (isActive ? "bg-white/20 text-white" : "bg-primary-50 text-primary-700");
+                var chevronCls =
+                    "shrink-0 text-[10px] " +
+                    (isActive ? "text-neutral-200" : "text-neutral-400");
+                var trail = "";
+                if (opts.badge) {
+                    trail += '<span class="' + badgeCls + '">' + opts.badge + "</span>";
+                }
+                if (opts.chevron) {
+                    trail +=
+                        '<i class="fa-solid fa-chevron-down ' +
+                        chevronCls +
+                        (opts.badge ? " ml-1" : "") +
+                        '"></i>';
+                }
+                return (
+                    '<a href="javascript:void(0)" data-nav="' +
+                    key +
+                    '" class="' +
+                    linkCls +
+                    '"><i class="' +
+                    faStyle +
+                    " fa-" +
+                    icon +
+                    " " +
+                    iconCls +
+                    '"></i><span class="kio-nav-label min-w-0 flex-1 truncate">' +
+                    label +
+                    "</span>" +
+                    (trail
+                        ? '<span class="ml-auto flex shrink-0 items-center gap-1">' + trail + "</span>"
+                        : "") +
+                    "</a>"
+                );
+            }
+            return (
+                '<div class="flex h-[72px] shrink-0 items-center justify-between border-b border-solid border-neutral-200 bg-white px-5">' +
+                '<img class="h-7 w-auto object-contain" src="https://knockio.com/wp-content/uploads/2026/05/knockio-logo.webp" alt="Knockio"/>' +
+                '<button type="button" class="grid h-7 w-7 place-items-center rounded-lg text-neutral-400 transition hover:bg-neutral-100 hover:text-neutral-600" data-toast-message="Sidebar collapsed" aria-label="Collapse sidebar">' +
+                '<i class="fa-solid fa-angles-left text-[11px]"></i></button>' +
+                "</div>" +
+                '<div class="flex-1 overflow-y-auto overflow-x-hidden px-4 py-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">' +
+                '<p class="mb-3 text-[11px] font-medium uppercase tracking-[0.12em] text-neutral-400">Main menu</p>' +
+                '<nav class="flex flex-col gap-0.5">' +
+                item("dashboard", "house", "Dashboard") +
+                item("financials", "wallet", "Financials", { chevron: true }) +
+                item("automations", "bolt", "Automations") +
+                item("territories", "earth-americas", "Territories") +
+                item("campaigns", "bullhorn", "Campaigns") +
+                item("communications", "comments", "Communications") +
+                item("leads", "filter", "Leads", { chevron: true }) +
+                item("reporting", "chart-bar", "Reporting") +
+                item("boards", "table-columns", "Boards") +
+                item("appointments", "calendar", "Appointments", { chevron: true }) +
+                item("tracking", "compass", "Tracking") +
+                item("routes", "route", "Routes") +
+                item("leaderboard", "star", "Leaderboard") +
+                "</nav>" +
+                "</div>" +
+                '<div class="shrink-0 border-t border-solid border-neutral-200 bg-white p-4">' +
+                '<button type="button" class="flex h-11 w-full items-center justify-center gap-2 rounded-xl bg-primary-600 text-sm font-medium text-white transition hover:bg-primary-700" data-toast-message="Support chat opened"><i class="fa-solid fa-headset"></i> Support</button>' +
+                "</div>"
+            );
+        }
+
+        function mountSidebars(root, showToast) {
+            root.querySelectorAll("[data-kio-sidebar]").forEach(function (el) {
+                var active = el.getAttribute("data-sidebar-active") || "leads";
+                el.innerHTML = renderSidebar(active);
+                el.querySelectorAll("[data-nav]").forEach(function (link) {
+                    link.addEventListener("click", function () {
+                        var labelEl = link.querySelector(".kio-nav-label");
+                        showToast("Opening " + (labelEl ? labelEl.textContent.trim() : link.textContent.trim()));
+                    });
+                });
+            });
+        }
+
+        function mountMaps(root) {
+            root.querySelectorAll("[data-kio-map-host]").forEach(function (host, index) {
+                host.insertAdjacentHTML("afterbegin", renderMapLayer(index));
+                var tile = host.querySelector(".kio-map-tile");
+                if (tile) {
+                    tile.addEventListener("error", function () {
+                        tile.remove();
+                    });
+                    tile.addEventListener("load", function () {
+                        tile.classList.remove("opacity-0");
+                        tile.classList.add("opacity-100");
+                    });
+                }
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var root = document.querySelector(".kio-product-demo");
+            if (!root) return;
+
+            var tabs = Array.from(root.querySelectorAll("[data-kio-tab]"));
+            var panels = Array.from(root.querySelectorAll("[data-kio-panel]"));
+            var progress = root.querySelector(".kio-progress-bar");
+            var toast = root.querySelector("[data-toast]");
+            var tabBar = root.querySelector("[data-kio-demo-tabs]");
+            var appViewport = root.querySelector(".kio-app-viewport");
+            var activeIndex = 0;
+            var progressTimer = null;
+            var isPaused = false;
+            var draggedCard = null;
+
+            function showToast(message) {
+                if (!toast) return;
+                toast.textContent = message;
+                toast.classList.add("is-visible");
+                setTimeout(function () {
+                    toast.classList.remove("is-visible");
+                }, 1700);
+            }
+
+            mountSidebars(root, showToast);
+            mountMaps(root);
+
+            function restartProgress() {
+                if (!progress) return;
+                progress.style.animation = "none";
+                progress.offsetHeight;
+                progress.style.animation = "kioProgress " + TAB_DURATION + "ms linear forwards";
+                progress.style.animationPlayState = isPaused ? "paused" : "running";
+            }
+
+            function activateTab(index) {
+                activeIndex = index;
+                var target = tabs[index].getAttribute("data-kio-tab");
+                tabs.forEach(function (tab) {
+                    tab.classList.remove("is-active");
+                });
+                panels.forEach(function (panel) {
+                    panel.classList.remove("is-active");
+                });
+                tabs[index].classList.add("is-active");
+                var activePanel = root.querySelector('[data-kio-panel="' + target + '"]');
+                if (activePanel) {
+                    activePanel.classList.add("is-active");
+                    activePanel.querySelectorAll(".kio-flow-branch").forEach(function (el, i) {
+                        el.style.animationDelay = i * 0.12 + "s";
+                        el.classList.add("animate-kio-branch");
+                    });
+                }
+                restartProgress();
+            }
+
+            function scheduleNextTab() {
+                clearTimeout(progressTimer);
+                if (isPaused) return;
+                progressTimer = setTimeout(function () {
+                    activateTab((activeIndex + 1) % tabs.length);
+                    scheduleNextTab();
+                }, TAB_DURATION);
+            }
+
+            function pauseDemo() {
+                isPaused = true;
+                clearTimeout(progressTimer);
+                if (progress) progress.style.animationPlayState = "paused";
+            }
+
+            function resumeDemo() {
+                isPaused = false;
+                if (progress) progress.style.animationPlayState = "running";
+                scheduleNextTab();
+            }
+
+            tabs.forEach(function (tab, index) {
+                tab.addEventListener("click", function () {
+                    activateTab(index);
+                    scheduleNextTab();
+                });
+                tab.addEventListener("mouseenter", pauseDemo);
+            });
+
+            if (tabBar) {
+                tabBar.addEventListener("mouseenter", pauseDemo);
+            }
+
+            if (appViewport) {
+                appViewport.addEventListener("mouseenter", pauseDemo);
+            }
+
+            root.addEventListener("mouseleave", resumeDemo);
+
+            root.querySelectorAll(".kio-pin[data-name]").forEach(function (pin) {
+                pin.addEventListener("click", function () {
+                    root.querySelectorAll(".kio-pin[data-name]").forEach(function (item) {
+                        item.classList.remove("is-active");
+                    });
+                    pin.classList.add("is-active");
+                    var leadName = root.querySelector("[data-lead-name]");
+                    var leadAddress = root.querySelector("[data-lead-address]");
+                    if (leadName) leadName.textContent = pin.getAttribute("data-name");
+                    if (leadAddress) leadAddress.textContent = pin.getAttribute("data-address");
+                    showToast("Lead preview updated");
+                });
+            });
+
+            root.querySelectorAll(".kio-board-card").forEach(function (card) {
+                card.addEventListener("dragstart", function () {
+                    draggedCard = card;
+                    card.classList.add("kio-dragging");
+                });
+                card.addEventListener("dragend", function () {
+                    card.classList.remove("kio-dragging");
+                    draggedCard = null;
+                });
+            });
+
+            root.querySelectorAll("[data-dropzone]").forEach(function (zone) {
+                zone.addEventListener("dragover", function (event) {
+                    event.preventDefault();
+                    zone.classList.add("kio-drop-active");
+                });
+                zone.addEventListener("dragleave", function () {
+                    zone.classList.remove("kio-drop-active");
+                });
+                zone.addEventListener("drop", function () {
+                    zone.classList.remove("kio-drop-active");
+                    if (!draggedCard) return;
+                    var holder = zone.querySelector(".kio-card-stack");
+                    if (holder) {
+                        holder.appendChild(draggedCard);
+                        showToast("Lead moved to new stage");
+                    }
+                });
+            });
+
+            var payButton = root.querySelector("[data-pay-invoice]");
+            if (payButton) {
+                payButton.addEventListener("click", function () {
+                    var paidAmount = root.querySelector("[data-paid-amount]");
+                    var balanceAmount = root.querySelector("[data-balance-amount]");
+                    var invoiceStatus = root.querySelector("[data-invoice-status]");
+                    var historyList = root.querySelector("[data-history-list]");
+                    if (paidAmount) paidAmount.textContent = "$1,880.00";
+                    if (balanceAmount) balanceAmount.textContent = "$0.00";
+                    if (invoiceStatus) {
+                        invoiceStatus.textContent = "Paid";
+                        invoiceStatus.classList.remove("border-orange-300", "bg-orange-50", "text-orange-500");
+                        invoiceStatus.classList.add("border-primary-300", "bg-primary-50", "text-primary-600", "animate-kio-paid");
+                    }
+                    if (historyList) {
+                        var item = document.createElement("div");
+                        item.className = "relative pl-8 animate-kio-branch";
+                        item.innerHTML =
+                            '<span class="absolute left-0 top-1 h-3.5 w-3.5 rounded-full border-2 border-solid border-primary-600 bg-white"></span>' +
+                            '<h4 class="text-[13px] font-medium text-neutral-900">Payment Added</h4>' +
+                            '<p class="text-[11px] font-medium text-neutral-500">Just now</p>';
+                        historyList.appendChild(item);
+                    }
+                    showToast("Payment added successfully");
+                });
+            }
+
+            root.querySelectorAll("[data-toast-message]").forEach(function (button) {
+                button.addEventListener("click", function () {
+                    showToast(button.getAttribute("data-toast-message"));
+                });
+            });
+
+            root.querySelectorAll("[data-add-action]").forEach(function (button) {
+                button.addEventListener("click", function () {
+                    var branch = button.closest(".kio-flow-branch");
+                    if (!branch) {
+                        showToast("Action added");
+                        return;
+                    }
+                    var emptyState = button.closest(".border-dashed.border-violet-300");
+                    if (emptyState) {
+                        emptyState.classList.add("hidden");
+                    }
+                    var insertBeforeEl =
+                        button.closest(".flex.flex-col.items-center") || emptyState || button;
+                    var block = document.createElement("div");
+                    block.className = "flex w-full flex-col items-center animate-kio-branch";
+                    block.innerHTML =
+                        '<div class="relative w-full rounded-lg border border-solid border-neutral-200 bg-white p-3 shadow-sm">' +
+                        '<span class="mb-1 inline-flex items-center gap-1 rounded bg-blue-500 px-2 py-0.5 text-[9px] font-medium text-white"><i class="fa-regular fa-square-check text-[8px]"></i> Action</span>' +
+                        '<h4 class="text-[12px] font-semibold text-neutral-900">Create Task</h4>' +
+                        '<p class="mt-1 text-[10px] font-medium text-neutral-500">Follow up with <span class="rounded-full bg-violet-600 px-1.5 py-0.5 text-[9px] text-white">@ Name</span></p>' +
+                        '<button type="button" class="absolute right-2 top-2 text-neutral-400"><i class="fa-solid fa-ellipsis-vertical text-xs"></i></button>' +
+                        "</div>" +
+                        '<div class="flex flex-col items-center">' +
+                        '<div class="h-4 w-0.5 bg-violet-400"></div>' +
+                        "</div>";
+                    branch.insertBefore(block, insertBeforeEl);
+                    showToast("Automation action added");
+                });
+            });
+
+            var testRunBtn = root.querySelector("[data-test-run]");
+            if (testRunBtn) {
+                testRunBtn.addEventListener("click", function () {
+                    root.querySelectorAll(".kio-flow-card, .kio-flow-branch").forEach(function (el, i) {
+                        setTimeout(function () {
+                            el.classList.add("kio-test-highlight");
+                            setTimeout(function () {
+                                el.classList.remove("kio-test-highlight");
+                            }, 600);
+                        }, i * 200);
+                    });
+                    showToast("Test run completed — 6 steps executed");
+                });
+            }
+
+            var mapListToggle = root.querySelector("[data-map-list-toggle]");
+            var mapView = root.querySelector("[data-leads-map-view]");
+            var listView = root.querySelector("[data-leads-list-view]");
+            if (mapListToggle && mapView && listView) {
+                mapListToggle.addEventListener("click", function () {
+                    var showingMap = !mapView.classList.contains("hidden");
+                    mapView.classList.toggle("hidden", showingMap);
+                    listView.classList.toggle("hidden", !showingMap);
+                    mapListToggle.innerHTML = showingMap
+                        ? '<i class="fa-solid fa-map mr-1"></i> Map'
+                        : '<i class="fa-solid fa-list mr-1"></i> List';
+                    showToast(showingMap ? "Switched to list view" : "Switched to map view");
+                });
+            }
+
+            activateTab(0);
+            scheduleNextTab();
+        });
+    })();
+
+</script>
+
+
+
+<!-- Workflow scroll scrolly -->
+<script>
+    (function () {
+        var track = document.getElementById("workflowScrollTrack");
+        if (!track) return;
+        var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        var mobileQuery = window.matchMedia("(max-width: 1023px)");
+        var panels = track.querySelectorAll(".workflow-step-panel");
+        var navItems = document.querySelectorAll("#workflowStepsNav .step-item");
+        var stage = document.getElementById("workflow-scroll-stage");
+        var header = document.getElementById("workflowHeaderSticky");
+        var steps = panels.length;
+        var currentIndex = -1;
+        var HEADER_HIDE_RANGE = 320;
+
+        function isMobile() { return mobileQuery.matches; }
+        function resetScrollyState() {
+            currentIndex = -1;
+            if (stage) { stage.style.setProperty("--wf-header-progress", "0"); stage.classList.remove("is-intro-done", "is-header-hidden"); }
+            if (header) { header.style.visibility = "visible"; header.setAttribute("aria-hidden", "false"); }
+        }
+        function getTrackMetrics() {
+            var rect = track.getBoundingClientRect();
+            return { trackTop: window.scrollY + rect.top, scrollable: Math.max(0, track.offsetHeight - window.innerHeight) };
+        }
+        function getScrollStepIndex() {
+            if (steps < 1) return 0;
+            var m = getTrackMetrics();
+            if (m.scrollable <= 0) return 0;
+            var y = window.scrollY;
+            if (y <= m.trackTop) return 0;
+            if (y >= m.trackTop + m.scrollable) return steps - 1;
+            return Math.min(steps - 1, Math.round(((y - m.trackTop) / m.scrollable) * (steps - 1)));
+        }
+        function scrollToTrackStep(index) {
+            var m = getTrackMetrics();
+            if (m.scrollable <= 0) return;
+            window.scrollTo({ top: m.trackTop + (m.scrollable / Math.max(1, steps - 1)) * index, behavior: reducedMotion ? "auto" : "smooth" });
+        }
+        function setNavItemActive(item, active) {
+            if (!item) return;
+            item.classList.toggle("is-nav-active", active);
+            item.setAttribute("aria-current", active ? "step" : "false");
+        }
+        function animatePanel(panel) {
+            if (!panel) return;
+            var parts = panel.querySelectorAll(".wf-step-text, .wf-step-media");
+            if (reducedMotion) { parts.forEach(function (el) { el.classList.add("wf-in"); }); return; }
+            parts.forEach(function (el) { el.classList.remove("wf-in"); });
+            parts.forEach(function (el, i) { setTimeout(function () { el.classList.add("wf-in"); }, i * 80); });
+        }
+        function setStep(index) {
+            if (index < 0 || index >= steps || index === currentIndex) return;
+            currentIndex = index;
+            panels.forEach(function (panel, i) {
+                panel.classList.toggle("is-active", i === index);
+                if (i !== index) panel.querySelectorAll(".wf-step-text, .wf-step-media").forEach(function (el) { el.classList.remove("wf-in"); });
+            });
+            navItems.forEach(function (item, i) { setNavItemActive(item, i === index); });
+            animatePanel(panels[index]);
+        }
+        function updateHeaderState() {
+            if (!stage || !header) return;
+            if (isMobile()) {
+                stage.style.setProperty("--wf-header-progress", "0");
+                header.style.visibility = "visible";
+                stage.classList.remove("is-intro-done", "is-header-hidden");
+                return;
+            }
+            var m = getTrackMetrics();
+            var y = window.scrollY;
+            var inSection = y >= m.trackTop && y <= m.trackTop + m.scrollable + window.innerHeight * 0.1;
+            var progress = !inSection ? (y < m.trackTop ? 0 : 1) : (reducedMotion ? (y > m.trackTop + 120 ? 1 : 0) : Math.min(1, Math.max(0, (y - m.trackTop) / HEADER_HIDE_RANGE)));
+            stage.style.setProperty("--wf-header-progress", String(progress));
+            var hidden = progress >= 0.995;
+            header.style.visibility = hidden ? "hidden" : "visible";
+            header.setAttribute("aria-hidden", hidden ? "true" : "false");
+            stage.classList.toggle("is-header-hidden", hidden);
+        }
+        function update() {
+            if (reducedMotion || isMobile()) return;
+            updateHeaderState();
+            setStep(getScrollStepIndex());
+        }
+        if (reducedMotion || isMobile()) {
+            resetScrollyState();
+            panels.forEach(function (p, i) {
+                p.classList.add("is-active");
+                p.querySelectorAll(".wf-step-text, .wf-step-media").forEach(function (el) { el.classList.add("wf-in"); });
+                setNavItemActive(navItems[i], i === 0);
+            });
+            return;
+        }
+        navItems.forEach(function (item) {
+            item.addEventListener("click", function () {
+                var index = parseInt(item.getAttribute("data-hp-scroll-step"), 10);
+                if (!isNaN(index)) scrollToTrackStep(index);
+            });
+        });
+        mobileQuery.addEventListener("change", function () { resetScrollyState(); if (!isMobile() && !reducedMotion) { setStep(0); update(); } });
+        var ticking = false;
+        window.addEventListener("scroll", function () { if (ticking) return; ticking = true; requestAnimationFrame(function () { update(); ticking = false; }); }, { passive: true });
+        window.addEventListener("resize", function () { if (isMobile()) resetScrollyState(); update(); });
+        resetScrollyState(); setStep(0); update();
+    })();
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://knockio.com/#organization",
+      "name": "Knockio",
+      "url": "https://knockio.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://knockio.com/wp-content/uploads/2026/05/knockio-logo.webp"
+      },
+      "sameAs": [
+        "https://apps.apple.com/us/app/knockio-field-service-crm/id6756485440",
+        "https://play.google.com/store/apps/details?id=com.knockio.crm&hl=en_US",
+        "https://www.linkedin.com/company/knockio",
+        "https://www.facebook.com/knockioapp/",
+        "https://www.instagram.com/knockioapp/",
+        "https://x.com/knockioapp",
+        "https://www.youtube.com/@knockioapp",
+        "https://www.g2.com/products/knockio-by-knockio",
+        "https://www.capterra.com/p/10018264/Knockio/",
+        "https://www.softwareadvice.com/field-sales/knockio-profile/",
+        "https://www.gartner.com/reviews/product/knockio-1907844446",
+        "https://www.crunchbase.com/organization/knockio"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://knockio.com/#website",
+      "url": "https://knockio.com/",
+      "name": "Knockio",
+      "publisher": {
+        "@id": "https://knockio.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://knockio.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://knockio.com/#software",
+      "name": "Knockio",
+      "url": "https://knockio.com/",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Field Sales Software, Field Service CRM",
+      "operatingSystem": "Web, iOS, Android",
+      "description": "Knockio is an integrated field service management and door-to-door sales platform that consolidates territory mapping, routing, and lead capture with job scheduling, dispatching, estimates, invoicing, workorders & payments.",
+      "provider": {
+        "@id": "https://knockio.com/#organization"
+      },
+      "availableOnDevice": [
+        "Desktop",
+        "Mobile",
+        "Tablet"
+      ],
+      "hasPart": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "Knockio iOS App",
+          "operatingSystem": "iOS",
+          "applicationCategory": "BusinessApplication",
+          "downloadUrl": "https://apps.apple.com/us/app/knockio-field-service-crm/id6756485440",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "40"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Knockio Android App",
+          "operatingSystem": "Android",
+          "applicationCategory": "BusinessApplication",
+          "downloadUrl": "https://play.google.com/store/apps/details?id=com.knockio.crm&hl=en_US"
+        },
+        {
+          "@id": "https://knockio.com/canvassing/#software"
+        },
+        {
+          "@id": "https://knockio.com/field-service-crm/#software"
+        }
+      ],
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "20.00",
+        "highPrice": "60.00",
+        "priceCurrency": "USD",
+        "url": "https://knockio.com/pricing/"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.3",
+        "ratingCount": "9"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://knockio.com/#webpage",
+      "url": "https://knockio.com/",
+      "name": "Knockio | All-In-One Field Sales & Service Platform",
+      "description": "Stop taping your software together. Knockio is the unified field service management platform that connects your front-line sales to your back-office operations.",
+      "isPartOf": {
+        "@id": "https://knockio.com/#website"
+      },
+      "about": {
+        "@id": "https://knockio.com/#software"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://knockio.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Knockio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Knockio is a field sales and field service platform. It handles door-to-door canvassing, territory mapping, route planning, and lead capture on the sales side, and job scheduling, dispatching, estimates, and invoicing on the service side. Most teams juggle a separate tool for each; Knockio keeps them in one workflow."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is Knockio built for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Field sales and service teams in roofing, solar, HVAC, pest control, fiber, and other home-services industries — anyone managing reps or crews in the field, from the first door knock to the final invoice."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does Knockio cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Plans start at $25/user/month, with volume discounts at 5+ users, no long-term contracts, and no setup fee. Prospect (canvassing / door-to-door sales) is $25/user/mo, or $20/user/mo with 5+ users. Organize (field service CRM) is $35/user/mo, or $30/user/mo with 5+ users. Growth (all-in-one sales + service) is $60/user/mo, or $45/user/mo with 5+ users."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Knockio replace multiple tools, or add another one?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Knockio is built to replace the canvassing app and service CRM you're currently running separately, or just one of them, whichever your team needs. Choose both with the Growth plan, and leads captured in the field move straight into scheduling, estimates, and invoicing without re-entering data anywhere."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Knockio work on mobile?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — reps and crews can use the Knockio Android and iOS apps in the field to capture leads, update job statuses, add notes or photos in real time, and also send invoices, collect payments, and email customers directly from the app."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use just the canvassing side, or just the CRM side?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Teams can run Knockio's canvassing app on its own, the field service CRM on its own, or both together as one connected platform."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>

@@ -4,6 +4,43 @@
 
 ---
 
+## ⚠️ MANDATORY FIRST STEP: Codebase Knowledge Graph (codebase-memory-mcp)
+
+> **BEFORE writing a single line of code, BEFORE reading any file, BEFORE making any changes — you MUST orient yourself using the codebase knowledge graph.**
+
+When starting a **new session** (no prior conversation history), you MUST run these MCP tools **in this exact order** before doing anything else:
+
+1. **`get_architecture`** — understand the project structure, clusters, entry points, and hotspots at a glance
+2. **`search_graph`** — find the functions, components, layouts, pages, and patterns relevant to your task
+3. **`trace_path`** — understand who calls what, what depends on what, before touching any file
+4. **`get_code_snippet`** — read the actual source of key functions/components to learn conventions
+
+**Why this is non-negotiable:**
+- Prevents duplicating existing components or patterns
+- Reveals the real dependency graph (not just folder structure)
+- Surfaces hotspots, dead code, and refactor candidates immediately
+- Ensures you follow existing conventions instead of inventing new ones
+
+**Example — before migrating a page:**
+```
+1. get_architecture(project="knockio-cms")           → see all clusters, entry points
+2. search_graph(query="BaseLayout", project=...)     → find the layout component
+3. search_graph(query="Header Footer", project=...)  → find shared components
+4. trace_path(function_name="BaseLayout", ...)       → see what it imports/calls
+5. get_code_snippet(qualified_name="BaseLayout")     → read the actual code
+```
+
+**Example — before adding a new component:**
+```
+1. search_graph(query="similar component name")      → check if it already exists
+2. search_graph(label="Function", query="...")       → find related functions
+3. get_code_snippet(...)                             → study existing patterns
+```
+
+> **NEVER skip this step. NEVER assume you know the codebase from file names alone. The graph is the source of truth.**
+
+---
+
 ## Project Identity
 
 **Knockio.com** — marketing site and CMS for a field service software platform.
@@ -323,6 +360,8 @@ knockio-cms/
 
 ## Migration Workflow: WordPress → Astro
 
+> **STOP — Have you queried the knowledge graph yet?** Before migrating ANY page, you MUST run `get_architecture` and `search_graph` to find existing layouts, components, and patterns. Skipping this causes duplicated code and broken conventions.
+
 ### Source Files Location
 
 ```
@@ -428,11 +467,13 @@ Before shipping ANY page, verify:
 
 ## Key Conventions
 
+> **Remember:** Use `search_graph` and `get_code_snippet` to discover existing patterns BEFORE implementing new features. The knowledge graph prevents reinventing the wheel.
+
 - **Trailing slash always on**: `trailingSlash: 'always'` in `astro.config.mjs`. Every internal link must end with `/`.
 - **Package manager is Bun**: Lockfile is `bun.lock`. Never generate `package-lock.json` or `yarn.lock`.
 - **Tailwind CSS v4**: Via `@tailwindcss/vite` plugin. Import `@import "tailwindcss"` in a CSS file.
 - **Icons**: `lucide-astro` — import individual icons, not the whole set.
-- **Fonts**: `@fontsource-variable/manrope` imported in `BaseLayout.astro`.
+- **Fonts**: Astro Fonts API — families registered in `astro.config.mjs` (`fonts:`), rendered via `<Font cssVariable="--font-manrope" preload />` in every layout's `<head>`. Reference in CSS as `var(--font-manrope)`. Never `import "@fontsource/*"` directly (that defers `@font-face` into external CSS and causes FOUT).
 - **Draft pages**: Set `draft: true` in frontmatter to exclude from production build.
 - **CSS images**: The css can have set images for backgrounds using  "URLs" as property values. e.g. "background-image:url(<https://knockio.com/wp-content/uploads/2026/07/blurb-bg-new.png>)" backegrounds, YOU MUST DOWNLOAD those files to the relevant per page assets folder, and use it from there, OLD urls for images cant be used !!
 ---
@@ -504,6 +545,20 @@ When asked to create a sprint walkthrough:
 5. **Accessible** (alt text, ARIA labels, keyboard navigation)
 
 If your code doesn't serve these goals, **don't write it.**
+
+---
+
+## ⚠️ REMINDER: Always Start with the Knowledge Graph
+
+**Every new session MUST begin with codebase-memory-mcp queries.** This is not optional. This is not a suggestion. This is required.
+
+Before you:
+- Write any code → `search_graph` to find existing patterns
+- Read any file → `get_architecture` to understand context first
+- Migrate any page → `trace_path` to understand dependencies
+- Add any component → `search_graph` to check if it already exists
+
+**The knowledge graph is your map. Never navigate blind.**
 
 ---
 

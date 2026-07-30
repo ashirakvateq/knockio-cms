@@ -10,7 +10,7 @@
   /* Vibrant brand green (Tailwind green-500 equivalent) for highlights */
   --color-border-dark: #1F451B;
   /* Barely visible large background numbers */
-  --font-main: "Manrope Variable", "Manrope", sans-serif;
+  --font-main: var(--font-manrope);
 
   font-family: var(--font-main);
 }

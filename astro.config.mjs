@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig, fontProviders } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
@@ -10,6 +10,26 @@ export default defineConfig({
   site: "https://knockio.com",
   trailingSlash: "always",
   integrations: [sitemap()],
+  fonts: [
+    {
+      provider: fontProviders.fontsource(),
+      name: "Manrope",
+      cssVariable: "--font-manrope",
+      weights: ["200 800"],
+      styles: ["normal"],
+      subsets: ["latin"],
+      fallbacks: ["ui-sans-serif", "system-ui", "sans-serif"],
+    },
+    {
+      provider: fontProviders.fontsource(),
+      name: "Poppins",
+      cssVariable: "--font-poppins",
+      weights: [300, 400],
+      styles: ["normal"],
+      subsets: ["latin"],
+      fallbacks: ["Helvetica", "Arial", "sans-serif"],
+    },
+  ],
   vite: {
     plugins: [tailwindcss()],
     server: {

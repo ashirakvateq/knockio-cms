@@ -8,7 +8,7 @@
 	--green-dark: #0d7a4b;
 	--green-soft: #e6f5ee;
 	--amber: #f59e0b;
-	--font: "Manrope", "Segoe UI", Arial, sans-serif;
+	--font: var(--font-manrope);
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }

@@ -1,7 +1,7 @@
 .canvassing-page {
   background: #ffffff;
   overflow-x: hidden;
-  font-family: "Manrope Variable", "Manrope", "Poppins", sans-serif;
+  font-family: var(--font-manrope);
   -webkit-font-smoothing: normal;
   box-sizing: border-box;
 }
@@ -21,7 +21,7 @@
 .canvassing-page h3,
 .canvassing-page h4,
 .canvassing-page h6 {
-  font-family: "Manrope Variable", "Manrope", sans-serif;
+  font-family: var(--font-manrope);
   font-weight: 800;
   font-size: 30px;
   padding: 0;
@@ -282,7 +282,6 @@
   position: relative;
   width: 85%;
   margin: 0 auto;
-  font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
 }
 
 .testimonial-quote-wrap p {
@@ -451,7 +450,7 @@ h3.platform-fullstack-heading {
   padding-left: 1.875rem;
   font-weight: 300;
   list-style: none;
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-manrope);
 }
 
 .platform-fullstack-list li::before {
@@ -1285,8 +1284,8 @@ h3.platform-fullstack-heading {
   --color-num-faded: #E4E2DB;
   /* Muted print grey for large backdrop numbers */
 
-  --font-serif: "Manrope Variable", "Manrope", sans-serif;
-  --font-sans: 'Inter', sans-serif;
+  --font-serif: var(--font-manrope);
+  --font-sans: var(--font-manrope);
 
   --max-width: 1152px;
   /* Standard 6xl equivalent max-width */
