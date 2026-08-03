@@ -1,17 +1,24 @@
 ---
 import {
-  TrendingUp, Receipt, Package, ClipboardList, CalendarCheck,
+  TrendingUp, DollarSign, Package, Receipt, ClipboardList, CalendarCheck,
   CreditCard, FileSignature, MessageSquare, ShieldCheck, MapPin,
   Footprints, Crosshair, Settings, BarChart3,
   Network, Zap, Shield, Waves, Truck, Warehouse,
   Paintbrush, Sparkles, Leaf, Droplets, Thermometer,
   Bug, Droplet, Home, Sun,
-  ChevronDown, Menu,
+  Boxes, Wrench, Layers, Megaphone, Headphones, Bot, Filter,
+  CloudLightning, Building2, BookOpen, Newspaper,
+  ChevronDown, Menu, X, ArrowRight,
 } from "lucide-astro";
+
+const products = [
+  { href: "https://knockio.com/canvassing/", icon: Footprints, label: "Door to Door Canvassing Software" },
+  { href: "https://knockio.com/field-service-crm/", icon: Wrench, label: "Field Service CRM" },
+];
 
 const features = [
   { href: "https://knockio.com/features/sales-pipeline-software/", icon: TrendingUp, label: "Sales Pipeline" },
-  { href: "https://knockio.com/features/estimate-software/", icon: Receipt, label: "Estimates" },
+  { href: "https://knockio.com/features/estimate-software/", icon: DollarSign, label: "Estimates" },
   { href: "https://knockio.com/features/inventory-management-software/", icon: Package, label: "Inventory" },
   { href: "https://knockio.com/features/invoicing-software/", icon: Receipt, label: "Invoicing" },
   { href: "https://knockio.com/features/work-order-management-software/", icon: ClipboardList, label: "Work Orders" },
@@ -44,6 +51,17 @@ const industries = [
   { href: "https://knockio.com/industry/roofing-sales-software-and-crm/", icon: Home, label: "Roofing" },
   { href: "https://knockio.com/industry/solar-sales-software-and-crm/", icon: Sun, label: "Solar" },
 ];
+
+const marketing = [
+  { icon: Headphones, label: "AI Receptionist" },
+  { icon: Bot, label: "AI Chatbot" },
+  { icon: Filter, label: "Lead Generation" },
+];
+
+const resources = [
+  { href: "https://knockio.com/storm-playbook/", icon: CloudLightning, label: "Storm Playbook" },
+  { href: "https://knockio.com/roofing-canvassing-guide-2026/", icon: Home, label: "Roofing Canvassing Guide" },
+];
 ---
 
 <header id="mainNavbar" class="kh-header">
@@ -55,18 +73,20 @@ const industries = [
     <nav class="kh-desktop-nav" aria-label="Main navigation">
       <ul>
         <li class="kh-dropdown">
-          <button type="button" class="kh-nav-trigger" aria-expanded="false">
-            <span>Features</span>
+          <button type="button" class="kh-nav-trigger" aria-expanded="false" aria-controls="productsMegaMenu">
+            <span>Products</span>
             <ChevronDown size={10} class="kh-chevron" aria-hidden="true" />
           </button>
-          <div class="kh-mega-menu kh-mega-features" role="region" aria-label="Features menu">
+          <div id="productsMegaMenu" class="kh-mega-menu" role="region" aria-label="Products menu">
             <div class="kh-mega-panel">
               <div class="kh-mega-head">
-                <p class="kh-mega-kicker">Knockio Features</p>
-                <p class="kh-mega-sub">Everything you need to manage field sales and service.</p>
+                <div class="kh-mega-head-text">
+                  <p class="kh-mega-kicker">Knockio Products</p>
+                  <p class="kh-mega-sub">Choose the workflow built for your team.</p>
+                </div>
               </div>
-              <div class="kh-mega-grid">
-                {features.map(({ href, icon: Icon, label }) => (
+              <div class="kh-mega-grid" style="grid-template-columns: repeat(2, 1fr);">
+                {products.map(({ href, icon: Icon, label }) => (
                   <a href={href} class="kh-mega-link">
                     <span class="kh-mega-ic"><Icon size={18} aria-hidden="true" /></span>
                     <span class="kh-mega-label">{label}</span>
@@ -78,15 +98,67 @@ const industries = [
         </li>
 
         <li class="kh-dropdown">
-          <button type="button" class="kh-nav-trigger" aria-expanded="false">
+          <button type="button" class="kh-nav-trigger" aria-expanded="false" aria-controls="featuresMegaMenu">
+            <span>Features</span>
+            <ChevronDown size={10} class="kh-chevron" aria-hidden="true" />
+          </button>
+          <div id="featuresMegaMenu" class="kh-mega-menu kh-mega-features" role="region" aria-label="Features menu">
+            <div class="kh-mega-panel">
+              <div class="kh-mega-head">
+                <div class="kh-mega-head-text">
+                  <p class="kh-mega-kicker">Knockio Features</p>
+                  <p class="kh-mega-sub">Everything you need to manage field sales and service.</p>
+                </div>
+                <a href="https://knockio.com/features/" class="kh-mega-cta-btn">
+                  View all features
+                  <ArrowRight size={14} aria-hidden="true" />
+                </a>
+              </div>
+              <div class="kh-features-layout">
+                <div class="kh-features-grid">
+                  {features.map(({ href, icon: Icon, label }) => (
+                    <a href={href} class="kh-mega-link">
+                      <span class="kh-mega-ic"><Icon size={18} aria-hidden="true" /></span>
+                      <span class="kh-mega-label">{label}</span>
+                    </a>
+                  ))}
+                </div>
+                <aside class="kh-marketing-column">
+                  <div class="kh-marketing-header">
+                    <span class="kh-mega-ic"><Megaphone size={18} aria-hidden="true" /></span>
+                    <p class="kh-marketing-label">Marketing</p>
+                  </div>
+                  <div class="kh-marketing-items">
+                    {marketing.map(({ icon: Icon, label }) => (
+                      <span class="kh-coming-soon-link">
+                        <span class="kh-mega-ic"><Icon size={18} aria-hidden="true" /></span>
+                        <span class="kh-mega-label">{label}</span>
+                        <span class="kh-coming-soon-badge">Coming soon</span>
+                      </span>
+                    ))}
+                  </div>
+                </aside>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="kh-dropdown">
+          <button type="button" class="kh-nav-trigger" aria-expanded="false" aria-controls="industriesMegaMenu">
             <span>Industries</span>
             <ChevronDown size={10} class="kh-chevron" aria-hidden="true" />
           </button>
-          <div class="kh-mega-menu kh-mega-industries" role="region" aria-label="Industries menu">
+          <div id="industriesMegaMenu" class="kh-mega-menu kh-mega-industries" role="region" aria-label="Industries menu">
             <div class="kh-mega-panel">
               <div class="kh-mega-head">
-                <p class="kh-mega-kicker">Industries</p>
-                <p class="kh-mega-sub">Built for field sales and service businesses.</p>
+                <div class="kh-mega-head-text">
+                  <p class="kh-mega-kicker">Industries</p>
+                  <p class="kh-mega-sub">Built for field sales and service businesses.</p>
+                </div>
+                <a href="https://knockio.com/industries/" class="kh-mega-cta-btn">
+                  View all industries
+                  <ArrowRight size={14} aria-hidden="true" />
+                </a>
               </div>
               <div class="kh-mega-grid kh-mega-scroll">
                 {industries.map(({ href, icon: Icon, label }) => (
@@ -102,12 +174,36 @@ const industries = [
 
         <li><a href="https://knockio.com/pricing/" class="kh-nav-link">Pricing</a></li>
         <li><a href="https://knockio.com/blog/" class="kh-nav-link">Blog</a></li>
-        <li><a href="https://knockio.com/roofing-canvassing-guide-2026/" class="kh-nav-link">Roofing Guide</a></li>
+
+        <li class="kh-dropdown">
+          <button type="button" class="kh-nav-trigger" aria-expanded="false" aria-controls="resourcesMegaMenu">
+            <span>Resources</span>
+            <ChevronDown size={10} class="kh-chevron" aria-hidden="true" />
+          </button>
+          <div id="resourcesMegaMenu" class="kh-mega-menu" role="region" aria-label="Resources menu">
+            <div class="kh-mega-panel">
+              <div class="kh-mega-head">
+                <div class="kh-mega-head-text">
+                  <p class="kh-mega-kicker">Knockio Resources</p>
+                  <p class="kh-mega-sub">Practical guides for roofing sales and storm campaigns.</p>
+                </div>
+              </div>
+              <div class="kh-mega-grid" style="grid-template-columns: repeat(2, 1fr);">
+                {resources.map(({ href, icon: Icon, label }) => (
+                  <a href={href} class="kh-mega-link">
+                    <span class="kh-mega-ic"><Icon size={18} aria-hidden="true" /></span>
+                    <span class="kh-mega-label">{label}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </li>
       </ul>
     </nav>
 
     <div class="kh-actions">
-      <button id="mobileMenuBtn" type="button" class="kh-mobile-toggle" aria-label="Open navigation menu" aria-expanded="false">
+      <button id="mobileMenuBtn" type="button" class="kh-mobile-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileSidebar">
         <Menu size={20} aria-hidden="true" />
       </button>
       <a href="https://app.knockio.com/" class="kh-btn-signin">Sign in</a>
@@ -116,55 +212,375 @@ const industries = [
   </div>
 </header>
 
-<div id="mobileSidebar" class="kh-sidebar">
-  <div class="kh-sidebar-backdrop"></div>
-  <div class="kh-sidebar-panel">
+<div id="mobileMenuOverlay" class="kh-mobile-overlay" aria-hidden="true"></div>
+
+<aside id="mobileSidebar" class="kh-sidebar" aria-hidden="true" aria-label="Mobile navigation">
+  <div class="kh-sidebar-inner">
     <div class="kh-sidebar-head">
-      <img src="/assets/cfw/knockio-logo.webp" alt="Knockio" width="120" height="24" decoding="async" />
+      <a href="/" class="kh-logo" aria-label="Knockio home">
+        <img src="/assets/cfw/knockio-logo.webp" alt="Knockio" width="120" height="36" decoding="async" />
+      </a>
       <button id="mobileCloseBtn" type="button" class="kh-sidebar-close" aria-label="Close menu">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        <X size={20} aria-hidden="true" />
       </button>
     </div>
-    <nav class="kh-sidebar-nav">
-      <a href="/features/">Features</a>
-      <a href="/industries/">Industries</a>
-      <a href="https://knockio.com/pricing/">Pricing</a>
-      <a href="https://knockio.com/blog/">Blog</a>
-      <a href="https://knockio.com/roofing-canvassing-guide-2026/">Roofing Guide</a>
-    </nav>
-    <div class="kh-sidebar-actions">
-      <a href="https://app.knockio.com/" class="kh-btn-signin">Sign in</a>
-      <a href="https://knockio.com/book-a-demo/" class="kh-btn-demo">Book a demo</a>
+
+    <div class="kh-sidebar-scroll">
+      <div class="kh-mobile-section">
+        <button type="button" class="kh-mobile-accordion-toggle" aria-expanded="false" data-target="mobileProductsSubmenu">
+          <span class="kh-mobile-accordion-left">
+            <span class="kh-mobile-accordion-icon"><Boxes size={18} aria-hidden="true" /></span>
+            <span class="kh-mobile-accordion-title">
+              <span>Products</span>
+              <span>Choose your Knockio workflow</span>
+            </span>
+          </span>
+          <ChevronDown size={12} class="kh-mobile-accordion-chevron" aria-hidden="true" />
+        </button>
+        <div id="mobileProductsSubmenu" class="kh-mobile-submenu" aria-hidden="true">
+          <div class="kh-mobile-submenu-grid">
+            {products.map(({ href, icon: Icon, label }) => (
+              <a href={href} class="kh-mobile-submenu-link">
+                <Icon size={16} aria-hidden="true" />
+                <span>{label}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div class="kh-mobile-section">
+        <button type="button" class="kh-mobile-accordion-toggle" aria-expanded="false" data-target="mobileFeaturesSubmenu">
+          <span class="kh-mobile-accordion-left">
+            <span class="kh-mobile-accordion-icon"><Layers size={18} aria-hidden="true" /></span>
+            <span class="kh-mobile-accordion-title">
+              <span>Features</span>
+              <span>Explore Knockio tools</span>
+            </span>
+          </span>
+          <ChevronDown size={12} class="kh-mobile-accordion-chevron" aria-hidden="true" />
+        </button>
+        <div id="mobileFeaturesSubmenu" class="kh-mobile-submenu" aria-hidden="true">
+          <div class="kh-mobile-submenu-grid">
+            <a href="https://knockio.com/features/" class="kh-mobile-view-all">
+              <span class="kh-mobile-view-all-left">
+                <BookOpen size={16} aria-hidden="true" />
+                <span>View All Features</span>
+              </span>
+              <ArrowRight size={14} aria-hidden="true" />
+            </a>
+            {features.map(({ href, icon: Icon, label }) => (
+              <a href={href} class="kh-mobile-submenu-link">
+                <Icon size={16} aria-hidden="true" />
+                <span>{label}</span>
+              </a>
+            ))}
+            <div class="kh-mobile-marketing-divider">
+              <div class="kh-marketing-header">
+                <span class="kh-mobile-accordion-icon"><Megaphone size={16} aria-hidden="true" /></span>
+                <p class="kh-marketing-label">Marketing</p>
+              </div>
+              <div class="kh-mobile-submenu-grid">
+                {marketing.map(({ icon: Icon, label }) => (
+                  <span class="kh-mobile-submenu-link kh-coming-soon-link" style="cursor: default;">
+                    <span style="display: flex; align-items: center; gap: 0.75rem; min-width: 0;">
+                      <Icon size={16} aria-hidden="true" />
+                      <span style="min-width: 0;">{label}</span>
+                    </span>
+                    <span class="kh-coming-soon-badge">Coming soon</span>
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="kh-mobile-section">
+        <button type="button" class="kh-mobile-accordion-toggle" aria-expanded="false" data-target="mobileIndustriesSubmenu">
+          <span class="kh-mobile-accordion-left">
+            <span class="kh-mobile-accordion-icon"><Building2 size={18} aria-hidden="true" /></span>
+            <span class="kh-mobile-accordion-title">
+              <span>Industries</span>
+              <span>Solutions by business type</span>
+            </span>
+          </span>
+          <ChevronDown size={12} class="kh-mobile-accordion-chevron" aria-hidden="true" />
+        </button>
+        <div id="mobileIndustriesSubmenu" class="kh-mobile-submenu" aria-hidden="true">
+          <div class="kh-mobile-submenu-grid">
+            <a href="https://knockio.com/industries/" class="kh-mobile-view-all" style="grid-column: 1 / -1;">
+              <span class="kh-mobile-view-all-left">
+                <BookOpen size={16} aria-hidden="true" />
+                <span>View All Industries</span>
+              </span>
+              <ArrowRight size={14} aria-hidden="true" />
+            </a>
+          </div>
+          <div class="kh-mobile-industries-grid" style="margin-top: 0.5rem;">
+            {industries.map(({ href, label }) => (
+              <a href={href} class="kh-mobile-submenu-link">
+                <span>{label}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div class="kh-mobile-simple-links">
+        <a href="https://knockio.com/pricing/" class="kh-mobile-simple-link">
+          <span class="kh-mobile-simple-icon"><DollarSign size={18} aria-hidden="true" /></span>
+          <span>Pricing</span>
+        </a>
+        <a href="https://knockio.com/blog/" class="kh-mobile-simple-link">
+          <span class="kh-mobile-simple-icon"><Newspaper size={18} aria-hidden="true" /></span>
+          <span>Blog</span>
+        </a>
+      </div>
+
+      <div class="kh-mobile-section" style="margin-top: 0.75rem;">
+        <button type="button" class="kh-mobile-accordion-toggle" aria-expanded="false" data-target="mobileResourcesSubmenu">
+          <span class="kh-mobile-accordion-left">
+            <span class="kh-mobile-accordion-icon"><BookOpen size={18} aria-hidden="true" /></span>
+            <span class="kh-mobile-accordion-title">
+              <span>Resources</span>
+              <span>Guides and playbooks</span>
+            </span>
+          </span>
+          <ChevronDown size={12} class="kh-mobile-accordion-chevron" aria-hidden="true" />
+        </button>
+        <div id="mobileResourcesSubmenu" class="kh-mobile-submenu" aria-hidden="true">
+          <div class="kh-mobile-submenu-grid">
+            {resources.map(({ href, icon: Icon, label }) => (
+              <a href={href} class="kh-mobile-submenu-link">
+                <Icon size={16} aria-hidden="true" />
+                <span>{label}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div class="kh-mobile-ctas">
+        <div class="kh-mobile-ctas-grid">
+          <a href="https://app.knockio.com/" class="kh-btn-signin">Sign in</a>
+          <a href="https://knockio.com/book-a-demo/" class="kh-btn-demo">Book a demo</a>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</aside>
 
 <script>
-  const nav = document.getElementById("mainNavbar");
+  const DESKTOP_BREAKPOINT = 1180;
+  const navbar = document.getElementById("mainNavbar");
   const mobileBtn = document.getElementById("mobileMenuBtn");
   const closeBtn = document.getElementById("mobileCloseBtn");
   const sidebar = document.getElementById("mobileSidebar");
+  const overlay = document.getElementById("mobileMenuOverlay");
+  const desktopDropdowns = document.querySelectorAll(".kh-dropdown");
+  const accordionBtns = document.querySelectorAll(".kh-mobile-accordion-toggle");
+  let lastFocused: Element | null = null;
 
-  if (nav) {
-    const onScroll = () => {
-      nav.classList.toggle("kh-scrolled", window.scrollY > 40);
-    };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
+  function normalizePath(v: string) {
+    try {
+      const u = new URL(v, window.location.origin);
+      return decodeURIComponent(u.pathname || "/").replace(/\/{2,}/g, "/").replace(/\/$/, "") || "/";
+    } catch { return ""; }
   }
 
-  const openSidebar = () => {
-    sidebar?.classList.add("is-open");
-    mobileBtn?.setAttribute("aria-expanded", "true");
-    document.body.style.overflow = "hidden";
-  };
-  const closeSidebar = () => {
-    sidebar?.classList.remove("is-open");
-    mobileBtn?.setAttribute("aria-expanded", "false");
-    document.body.style.overflow = "";
-  };
+  function isSamePage(el: HTMLAnchorElement) {
+    if (!el || !el.getAttribute("href")) return false;
+    const h = el.getAttribute("href")!;
+    if (h === "#" || h.startsWith("javascript:")) return false;
+    try {
+      const u = new URL(h, window.location.origin);
+      return u.origin === window.location.origin && normalizePath(u.href) === normalizePath(window.location.href);
+    } catch { return false; }
+  }
 
-  mobileBtn?.addEventListener("click", openSidebar);
-  closeBtn?.addEventListener("click", closeSidebar);
-  sidebar?.querySelector(".kh-sidebar-backdrop")?.addEventListener("click", closeSidebar);
+  function setActiveNav() {
+    document.querySelectorAll("#mainNavbar a[href], #mobileSidebar a[href]").forEach((link) => {
+      const a = link as HTMLAnchorElement;
+      a.classList.remove("kh-nav-active", "kh-mega-link-active", "kh-mobile-link-active");
+      if (!isSamePage(a)) return;
+      if (a.closest("#mobileSidebar")) {
+        a.classList.add("kh-mobile-link-active");
+      } else if (a.closest(".kh-mega-menu")) {
+        a.classList.add("kh-mega-link-active");
+      } else {
+        a.classList.add("kh-nav-active");
+      }
+    });
+
+    desktopDropdowns.forEach((dd) => {
+      const trigger = dd.querySelector(".kh-nav-trigger");
+      if (!trigger) return;
+      if (dd.querySelector(".kh-mega-link-active")) {
+        trigger.classList.add("kh-trigger-active");
+      } else {
+        trigger.classList.remove("kh-trigger-active");
+      }
+    });
+
+    accordionBtns.forEach((btn) => {
+      const targetId = btn.getAttribute("data-target");
+      const target = targetId ? document.getElementById(targetId) : null;
+      if (!target) return;
+      if (target.querySelector(".kh-mobile-link-active")) {
+        btn.classList.add("kh-mobile-active", "is-open");
+        btn.setAttribute("aria-expanded", "true");
+        target.classList.add("is-open");
+        target.setAttribute("aria-hidden", "false");
+        const chev = btn.querySelector(".kh-mobile-accordion-chevron");
+        if (chev) chev.classList.add("is-rotated");
+      }
+    });
+  }
+
+  function updateOnScroll() {
+    if (!navbar) return;
+    navbar.classList.toggle("kh-scrolled", window.scrollY > 12);
+  }
+
+  function closeAllDropdowns(except?: Element) {
+    desktopDropdowns.forEach((dd) => {
+      if (dd === except) return;
+      const t = dd.querySelector(".kh-nav-trigger");
+      if (t) t.setAttribute("aria-expanded", "false");
+    });
+  }
+
+  function toggleDropdown(dd: Element) {
+    const trigger = dd.querySelector(".kh-nav-trigger");
+    if (!trigger) return;
+    const open = trigger.getAttribute("aria-expanded") !== "true";
+    closeAllDropdowns(dd);
+    trigger.setAttribute("aria-expanded", String(open));
+  }
+
+  function toggleAccordion(btn: Element) {
+    const targetId = btn.getAttribute("data-target");
+    const target = targetId ? document.getElementById(targetId) : null;
+    if (!target) return;
+    const open = btn.getAttribute("aria-expanded") !== "true";
+
+    accordionBtns.forEach((other) => {
+      if (other === btn) return;
+      const oId = other.getAttribute("data-target");
+      const oTarget = oId ? document.getElementById(oId) : null;
+      other.setAttribute("aria-expanded", "false");
+      other.classList.remove("is-open");
+      if (oTarget) {
+        oTarget.classList.remove("is-open");
+        oTarget.setAttribute("aria-hidden", "true");
+      }
+    });
+
+    btn.setAttribute("aria-expanded", String(open));
+    btn.classList.toggle("is-open", open);
+    target.classList.toggle("is-open", open);
+    target.setAttribute("aria-hidden", String(!open));
+  }
+
+  function openMobile() {
+    if (!sidebar || !overlay || !mobileBtn) return;
+    lastFocused = document.activeElement as Element | null;
+    sidebar.classList.add("is-open");
+    sidebar.setAttribute("aria-hidden", "false");
+    overlay.classList.add("is-open");
+    overlay.setAttribute("aria-hidden", "false");
+    mobileBtn.setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden";
+    setTimeout(() => closeBtn?.focus(), 50);
+  }
+
+  function closeMobile() {
+    if (!sidebar || !overlay || !mobileBtn) return;
+    sidebar.classList.remove("is-open");
+    sidebar.setAttribute("aria-hidden", "true");
+    overlay.classList.remove("is-open");
+    overlay.setAttribute("aria-hidden", "true");
+    mobileBtn.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+    if (lastFocused) (lastFocused as HTMLElement).focus();
+  }
+
+  desktopDropdowns.forEach((dd) => {
+    const trigger = dd.querySelector(".kh-nav-trigger");
+    if (!trigger) return;
+    trigger.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleDropdown(dd);
+    });
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!(e.target as Element).closest(".kh-dropdown")) {
+      closeAllDropdowns();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeAllDropdowns();
+      if (sidebar && sidebar.getAttribute("aria-hidden") === "false") closeMobile();
+    }
+    if (e.key === "Tab" && sidebar && sidebar.getAttribute("aria-hidden") === "false") {
+      const focusable = Array.from(
+        sidebar.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')
+      ).filter((el) => (el as HTMLElement).offsetParent !== null);
+      if (!focusable.length) return;
+      const first = focusable[0] as HTMLElement;
+      const last = focusable[focusable.length - 1] as HTMLElement;
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+  });
+
+  accordionBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleAccordion(btn);
+    });
+  });
+
+  if (mobileBtn) mobileBtn.addEventListener("click", openMobile);
+  if (closeBtn) closeBtn.addEventListener("click", closeMobile);
+  if (overlay) overlay.addEventListener("click", closeMobile);
+
+  if (sidebar) {
+    sidebar.addEventListener("click", (e) => {
+      const accBtn = (e.target as Element).closest(".kh-mobile-accordion-toggle");
+      if (accBtn && sidebar.contains(accBtn)) {
+        e.preventDefault();
+        e.stopPropagation();
+        toggleAccordion(accBtn);
+        return;
+      }
+      const link = (e.target as Element).closest('a[href]:not([href="#"])');
+      if (link && !link.closest(".kh-coming-soon-link")) {
+        closeMobile();
+      }
+    });
+  }
+
+  window.addEventListener("scroll", updateOnScroll, { passive: true });
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > DESKTOP_BREAKPOINT) {
+      closeMobile();
+    } else {
+      closeAllDropdowns();
+    }
+  });
+
+  updateOnScroll();
+  setActiveNav();
 </script>
