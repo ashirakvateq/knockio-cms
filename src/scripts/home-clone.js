@@ -1,5 +1,4 @@
 import Lenis from "lenis";
-import { labelDemoControls } from "./demo-accessibility.js";
 
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -252,7 +251,6 @@ if (!reducedMotion) {
 
     mountSidebars(root, showToast);
     mountMaps(root);
-    labelDemoControls(root);
 
     function restartProgress() {
       if (!progress) return;

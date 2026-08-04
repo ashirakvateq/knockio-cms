@@ -11,7 +11,6 @@
 // import "./smoothscroll.js";
 
 import Lenis from "lenis";
-import { labelDemoControls } from "./demo-accessibility.js";
 
 
 const lenis = new Lenis({
@@ -193,7 +192,6 @@ requestAnimationFrame(raf);
 
     mountSidebars(root, showToast);
     mountMaps(root);
-    labelDemoControls(root);
 
     function restartProgress() {
       if (!progress) return;

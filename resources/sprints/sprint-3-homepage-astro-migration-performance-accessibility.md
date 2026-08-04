@@ -159,7 +159,7 @@ Two fast paths remain deliberately enabled:
 
 Pages that use the shared calendar script but do not have the homepage's direct top-level section structure retain the safe idle fallback. This makes the homepage optimisation reusable without silently breaking an existing booking page.
 
-### 4. Semantic demo navigation and accessible icon controls
+### 4. Semantic demo navigation
 
 The product demo is a visual simulation of the app. Its sidebar previously generated many anchors whose destination was `javascript:void(0)`. That creates three problems:
 
@@ -169,18 +169,7 @@ The product demo is a visual simulation of the app. Its sidebar previously gener
 
 The generated items are now buttons because they perform an in-place demo action. Existing event listeners already target `[data-nav]`, so changing the element type preserves the visual behaviour and click handler while removing the false URL.
 
-The shared [demo-accessibility.js](../../src/scripts/demo-accessibility.js) gives the demo's icon-only controls meaningful names. It covers, among others:
-
-- notifications and search;
-- lead-map pins, using the lead name when available;
-- map layer, satellite, centring, and fullscreen controls;
-- call, email, and note controls, including the relevant card subject;
-- activity history, close-panel, more-actions, and add-action controls;
-- the one-letter account avatar and compact display selector.
-
-The helper runs once for the initial demo markup and again after the demo script creates its sidebar. It does not attach a perpetual observer, a scroll handler, or a polling timer.
-
-For a new page, prefer putting the accessible name directly in HTML:
+Do not add a runtime page-wide control scanner to compensate for missing labels. Scanning every control, reading its text, and writing attributes after the page has rendered can force layout work and harm performance. For a new page, put the accessible name directly in HTML:
 
 ```astro
 <button type="button" aria-label="Open map layers">
@@ -188,7 +177,7 @@ For a new page, prefer putting the accessible name directly in HTML:
 </button>
 ```
 
-The helper is appropriate here because this existing demo creates some controls dynamically. It is not permission to rely on client JavaScript for ordinary page semantics.
+For dynamically constructed controls, render the `aria-label` alongside the control in the function that creates it. Do not make accessibility depend on a second pass over the rendered DOM.
 
 ### 5. Deferred third-party widgets
 
@@ -361,7 +350,6 @@ These are not cosmetic concerns. Any one of them can make scores vary from one r
 | `src/components/FbAnalytics.astro` | Dedicated deferred Facebook Pixel ownership. |
 | `src/scripts/cal-inline.js` | One-time second-section calendar gate, direct CTA fast path, Cal embed initialisation, and booking event handling. |
 | `src/scripts/home.js` | Homepage demo/workflow/calculator/FAQ behaviour; also contains technical debt that must be split and lifecycle-controlled. |
-| `src/scripts/demo-accessibility.js` | Shared accessible names for icon-only, dynamically generated demo controls. |
 | `src/styles/global.css` | Site-wide styling foundations. |
 | `src/styles/knockio-home.css` | Shared homepage-layout styles. |
 | `src/styles/homepage.css` | Homepage-specific visual behaviour. |

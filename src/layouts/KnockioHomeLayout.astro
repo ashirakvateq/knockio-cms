@@ -5,6 +5,8 @@ import "../styles/knockio-home.css";
 import "../styles/homepage.css";
 import SEO from "../components/SEO.astro";
 import Analytics from "../components/Analytics.astro";
+import ThirdPartyWidgets from "../components/ThirdPartyWidgets.astro";
+import FbAnalytics from "../components/FbAnalytics.astro";
 import KnockioHomeHeader from "../components/KnockioHomeHeader.astro";
 import KnockioHomeFooter from "../components/KnockioHomeFooter.astro";
 
@@ -15,9 +17,18 @@ interface Props {
   jsonLd?: unknown;
   fAwsm?: boolean;
   whiteBg?: boolean;
+  robots?: string;
 }
 
-const { title, description, ogImage, jsonLd, fAwsm=false, whiteBg=false } = Astro.props;
+const {
+  title,
+  description,
+  ogImage,
+  jsonLd,
+  fAwsm = false,
+  whiteBg = false,
+  robots,
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -52,11 +63,14 @@ const { title, description, ogImage, jsonLd, fAwsm=false, whiteBg=false } = Astr
           crossorigin="anonymous"
           referrerpolicy="no-referrer"
         />
-
       )
-
     }
-    <SEO title={title} description={description} ogImage={ogImage} />
+    <SEO
+      title={title}
+      description={description}
+      ogImage={ogImage}
+      robots={robots}
+    />
     {
       jsonLd && (
         <script
@@ -69,14 +83,16 @@ const { title, description, ogImage, jsonLd, fAwsm=false, whiteBg=false } = Astr
     <Analytics />
   </head>
   <body class="">
-    
-    <KnockioHomeHeader whiteBg={whiteBg} />
-    
-    <slot />
-    
-    <KnockioHomeFooter />
     <Analytics placement="body" />
-    <script src="../scripts/home.js"></script>
+
+    <KnockioHomeHeader whiteBg={whiteBg} />
+
+    <slot />
+
+    <KnockioHomeFooter />
+
+    <ThirdPartyWidgets />
+    <FbAnalytics />
     <script src="../scripts/cal-inline.js"></script>
     <script src="../scripts/calendar-cta.js"></script>
   </body>

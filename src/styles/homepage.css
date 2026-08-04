@@ -462,3 +462,14 @@
 svg.lucide {
   vertical-align: -0.125em;
 }
+
+
+.how-we-compare .pros-cell {
+      display: flex;
+      /* align-content: center; */
+      align-items: baseline;
+      justify-content: flex-start;
+      gap: 1rem;
+      padding-left: 5rem;
+      flex-wrap: nowrap;
+}

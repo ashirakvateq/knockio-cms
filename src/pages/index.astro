@@ -1,5 +1,75 @@
 ---
 import KnockioHomeLayout from "../layouts/KnockioHomeLayout.astro";
+import {
+  ArrowDown,
+  Bell,
+  Boxes,
+  BriefcaseBusiness,
+  Bug,
+  Calculator,
+  ChartLine,
+  Check,
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  CircleUserRound,
+  Copy,
+  CreditCard,
+  Download,
+  Droplets,
+  Ellipsis,
+  EllipsisVertical,
+  FileText,
+  Flag,
+  Funnel,
+  GitBranch,
+  HardHat,
+  History,
+  House,
+  Layers,
+  Leaf,
+  List,
+  ListChecks,
+  LocateFixed,
+  Mail,
+  Map,
+  Maximize,
+  MessageCircle,
+  Network,
+  PaintRoller,
+  Phone,
+  PhoneCall,
+  Pin,
+  Play,
+  Plug,
+  Plus,
+  Quote,
+  Receipt,
+  RefreshCw,
+  Reply,
+  Route,
+  Rows3,
+  Satellite,
+  Save,
+  Search,
+  Shield,
+  Signature,
+  SolarPanel,
+  SprayCan,
+  SquareCheck,
+  Star,
+  StickyNote,
+  Thermometer,
+  Truck,
+  Upload,
+  UserCheck,
+  Users,
+  Warehouse,
+  Waves,
+  WavesLadder,
+  X,
+  Zap,
+} from "lucide-astro";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -162,7 +232,6 @@ const jsonLd = {
   title="Knockio | All-In-One Field Sales & Service Platform"
   description="Stop taping your software together. Knockio is the unified field service management platform that connects your front-line sales to your back-office operations."
   jsonLd={jsonLd}
-  fAwsm={true}
 >
   <!-- SECTION 1: Hero + Product Demo -->
   <!-- Hero + Interactive Product Demo -->
@@ -174,12 +243,12 @@ const jsonLd = {
         <div
           class="flex items-center gap-3 justify-center mb-3 max-md:flex-col max-md:gap-1"
         >
-          <div>
-            <i class="fa-solid fa-star text-yellow-400"></i>
-            <i class="fa-solid fa-star text-yellow-400"></i>
-            <i class="fa-solid fa-star text-yellow-400"></i>
-            <i class="fa-solid fa-star text-yellow-400"></i>
-            <i class="fa-solid fa-star text-yellow-400"></i>
+          <div class="flex">
+            <Star size="1.25em" fill="currentColor" class="text-yellow-400" aria-hidden="true" />
+            <Star size="1.25em" fill="currentColor" class="text-yellow-400" aria-hidden="true" />
+            <Star size="1.25em" fill="currentColor" class="text-yellow-400" aria-hidden="true" />
+            <Star size="1.25em" fill="currentColor" class="text-yellow-400" aria-hidden="true" />
+            <Star size="1.25em" fill="currentColor" class="text-yellow-400" aria-hidden="true" />
           </div>
           <div>
             <span class="text-base max-md:text-base text-neutral-200"
@@ -249,7 +318,7 @@ const jsonLd = {
             data-kio-tab="leads"
             class="kio-demo-tab is-active flex shrink-0 items-center rounded-full px-6 py-2.5 text-base font-medium text-white transition-all hover:bg-white/30"
           >
-            <i class="fa-solid fa-user-group"></i><span class="ml-2">Leads</span
+            <Users size="1em" aria-hidden="true" /><span class="ml-2">Leads</span
             >
           </button>
           <button
@@ -257,21 +326,21 @@ const jsonLd = {
             data-kio-tab="routes"
             class="kio-demo-tab flex shrink-0 items-center rounded-full px-6 py-2.5 text-base font-medium text-white transition-all hover:bg-white/30"
           >
-            <i class="fa-solid fa-route"></i><span class="ml-2">Routes</span>
+            <Route size="1em" aria-hidden="true" /><span class="ml-2">Routes</span>
           </button>
           <button
             type="button"
             data-kio-tab="boards"
             class="kio-demo-tab flex shrink-0 items-center rounded-full px-6 py-2.5 text-base font-medium text-white transition-all hover:bg-white/30"
           >
-            <i class="fa-solid fa-th-list"></i><span class="ml-2">Boards</span>
+            <Rows3 size="1em" aria-hidden="true" /><span class="ml-2">Boards</span>
           </button>
           <button
             type="button"
             data-kio-tab="invoices"
             class="kio-demo-tab flex shrink-0 items-center rounded-full px-6 py-2.5 text-base font-medium text-white transition-all hover:bg-white/30"
           >
-            <i class="fa-solid fa-file-invoice-dollar"></i><span class="ml-2"
+            <Receipt size="1em" aria-hidden="true" /><span class="ml-2"
               >Invoices</span
             >
           </button>
@@ -280,7 +349,7 @@ const jsonLd = {
             data-kio-tab="automations"
             class="kio-demo-tab flex shrink-0 items-center rounded-full px-6 py-2.5 text-base font-medium text-white transition-all hover:bg-white/30"
           >
-            <i class="fa-solid fa-sync-alt"></i><span class="ml-2"
+            <RefreshCw size="1em" aria-hidden="true" /><span class="ml-2"
               >Automations</span
             >
           </button>
@@ -309,8 +378,8 @@ const jsonLd = {
                 app.knockio.com / workspace
               </div>
               <div class="flex items-center gap-3 text-sm text-neutral-300">
-                <i class="fa-regular fa-bell"></i>
-                <i class="fa-regular fa-circle-user"></i>
+                <Bell size="1em" aria-hidden="true" />
+                <CircleUserRound size="1em" aria-hidden="true" />
               </div>
             </div>
             <div class="h-[3px] bg-white/15">
@@ -340,32 +409,36 @@ const jsonLd = {
                           class="inline-flex h-[34px] items-center gap-2 rounded-full bg-neutral-100 px-3 text-xs font-semibold text-neutral-500"
                         >
                           Leads
-                          <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                          <ChevronRight size="1em" class="text-[9px]" aria-hidden="true" />
                           Leads Map
                         </div>
                         <div class="flex items-center gap-2">
-                          <button
+<button
                             class="relative inline-flex h-[34px] w-[34px] items-center justify-center rounded-lg bg-neutral-100 text-sm text-neutral-600 transition hover:-translate-y-px hover:shadow-md"
-                          >
-                            <i class="fa-regular fa-bell"></i>
+                          
+                            aria-label="View notifications">
+                            <Bell size="1em" aria-hidden="true" />
                             <span
                               class="absolute right-0.5 top-0.5 h-1.5 w-1.5 rounded-full border border-solid border-white bg-red-500"
                             ></span>
                           </button>
-                          <button
+<button
                             class="inline-flex h-[34px] w-[34px] items-center justify-center rounded-lg bg-neutral-100 text-sm text-neutral-600 transition hover:-translate-y-px hover:shadow-md"
-                          >
-                            <i class="fa-solid fa-magnifying-glass"></i>
+                          
+                            aria-label="Search">
+                            <Search size="1em" aria-hidden="true" />
                           </button>
-                          <button
+<button
                             class="inline-flex h-[34px] items-center justify-center gap-1.5 rounded-lg bg-neutral-100 px-4 text-sm font-medium text-neutral-600 transition hover:-translate-y-px hover:shadow-md"
-                          >
+                          
+                            aria-label="Choose display">
                             <span class="hidden xl:inline">Smart tv</span>
-                            <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                            <ChevronDown size="1em" class="text-[10px]" aria-hidden="true" />
                           </button>
-                          <button
+<button
                             class="grid h-[34px] w-[34px] place-items-center overflow-hidden rounded-full bg-primary-50"
-                          >
+                          
+                            aria-label="Open account menu">
                             <span
                               class="grid h-[28px] w-[28px] place-items-center rounded-full bg-primary-500 text-[11px] font-medium text-white"
                               >S</span
@@ -380,14 +453,14 @@ const jsonLd = {
                             class="inline-flex h-[34px] items-center rounded-lg bg-primary-600 px-3.5 text-xs font-semibold text-white shadow-md shadow-primary-600/25 transition hover:-translate-y-px"
                             data-map-list-toggle
                           >
-                            <i class="fa-solid fa-list mr-1"></i> List View
+                            <List size="1em" class="mr-1" aria-hidden="true" /> List View
                           </button>
                           <button
                             type="button"
                             class="inline-flex h-[34px] items-center rounded-lg bg-primary-600 px-3.5 text-xs font-semibold text-white shadow-md shadow-primary-600/25 transition hover:-translate-y-px"
                             data-toast-message="Filters opened"
                           >
-                            <i class="fa-solid fa-filter mr-1"></i> Filters
+                            <Funnel size="1em" class="mr-1" aria-hidden="true" /> Filters
                           </button>
                         </div>
                         <div
@@ -398,9 +471,7 @@ const jsonLd = {
                           <div
                             class="absolute left-1/2 top-3.5 z-20 flex w-[min(420px,72%)] -translate-x-1/2 items-center gap-2 rounded-[10px] border border-solid border-neutral-200 bg-white px-3.5 py-2.5 shadow-lg"
                           >
-                            <i
-                              class="fa-solid fa-magnifying-glass text-[11px] text-neutral-400"
-                            ></i>
+                            <Search size="1em" class="text-[11px] text-neutral-400" aria-hidden="true" />
                             <input
                               class="w-full bg-transparent text-[12px] font-medium outline-none placeholder:text-neutral-400"
                               placeholder="Search Location"
@@ -410,11 +481,12 @@ const jsonLd = {
                             class="kio-map-marker left-[24%] top-[38%]"
                             style="animation-delay:0.05s"
                           >
-                            <button
+<button
                               class="kio-pin pin-green is-active"
                               data-name="Daniel Thomas"
                               data-address="1340 Taylor St, San Francisco, CA"
-                              ><i class="fa-solid fa-star"></i></button
+                              
+                            aria-label="View lead details for Daniel Thomas"><Star size="1em" fill="currentColor" aria-hidden="true" /></button
                             >
                             <span
                               class="mt-1 whitespace-nowrap rounded-md bg-white px-2 py-0.5 text-[10px] font-semibold text-neutral-900 shadow-md"
@@ -429,11 +501,12 @@ const jsonLd = {
                             class="kio-map-marker left-[38%] top-[28%]"
                             style="animation-delay:0.1s"
                           >
-                            <button
+<button
                               class="kio-pin pin-red"
                               data-name="Savannah Nguyen"
                               data-address="1200 Geary Road, Walnut Creek, CA"
-                              ><i class="fa-solid fa-bolt"></i></button
+                              
+                            aria-label="View lead details for Savannah Nguyen"><Zap size="1em" aria-hidden="true" /></button
                             >
                             <span
                               class="mt-1 whitespace-nowrap rounded-md bg-white px-2 py-0.5 text-[10px] font-semibold text-neutral-900 shadow-md"
@@ -444,11 +517,12 @@ const jsonLd = {
                             class="kio-map-marker left-[52%] top-[38%]"
                             style="animation-delay:0.15s"
                           >
-                            <button
+<button
                               class="kio-pin pin-orange"
                               data-name="Courtney Henry"
                               data-address="4517 Washington Ave, Manchester"
-                              ><i class="fa-solid fa-reply"></i></button
+                              
+                            aria-label="View lead details for Courtney Henry"><Reply size="1em" aria-hidden="true" /></button
                             >
                             <span
                               class="mt-1 whitespace-nowrap rounded-md bg-white px-2 py-0.5 text-[10px] font-semibold text-neutral-900 shadow-md"
@@ -459,11 +533,12 @@ const jsonLd = {
                             class="kio-map-marker left-[68%] top-[38%]"
                             style="animation-delay:0.2s"
                           >
-                            <button
+<button
                               class="kio-pin pin-green"
                               data-name="Brooklyn Simmons"
                               data-address="2118 Thornridge Cir, Syracuse"
-                              ><i class="fa-solid fa-star"></i></button
+                              
+                            aria-label="View lead details for Brooklyn Simmons"><Star size="1em" fill="currentColor" aria-hidden="true" /></button
                             >
                             <span
                               class="mt-1 whitespace-nowrap rounded-md bg-white px-2 py-0.5 text-[10px] font-semibold text-neutral-900 shadow-md"
@@ -474,11 +549,12 @@ const jsonLd = {
                             class="kio-map-marker left-[50%] top-[55%]"
                             style="animation-delay:0.25s"
                           >
-                            <button
+<button
                               class="kio-pin pin-green"
                               data-name="Marvin McKinney"
                               data-address="3891 Ranchview Dr, Richardson"
-                              ><i class="fa-solid fa-star"></i></button
+                              
+                            aria-label="View lead details for Marvin McKinney"><Star size="1em" fill="currentColor" aria-hidden="true" /></button
                             >
                             <span
                               class="mt-1 whitespace-nowrap rounded-md bg-white px-2 py-0.5 text-[10px] font-semibold text-neutral-900 shadow-md"
@@ -489,11 +565,12 @@ const jsonLd = {
                             class="kio-map-marker left-[47%] top-[32%]"
                             style="animation-delay:0.3s"
                           >
-                            <button
+<button
                               class="kio-pin pin-red"
                               data-name="Dianne Russell"
                               data-address="2715 Ash Dr, San Jose"
-                              ><i class="fa-solid fa-bolt"></i></button
+                              
+                            aria-label="View lead details for Dianne Russell"><Zap size="1em" aria-hidden="true" /></button
                             >
                             <span
                               class="mt-1 whitespace-nowrap rounded-md bg-white px-2 py-0.5 text-[10px] font-semibold text-neutral-900 shadow-md"
@@ -515,30 +592,33 @@ const jsonLd = {
                           <div
                             class="absolute right-3 top-1/2 z-20 flex -translate-y-1/2 flex-col gap-1.5"
                           >
-                            <button
+<button
                               type="button"
                               class="grid h-[38px] w-[38px] place-items-center rounded-[10px] bg-primary-600 text-sm text-white shadow-md shadow-primary-600/30 transition hover:scale-105"
                               data-toast-message="Layers toggled"
-                              ><i class="fa-solid fa-layer-group"></i></button
+                              
+                            aria-label="Toggle map layers"><Layers size="1em" aria-hidden="true" /></button
                             >
-                            <button
+<button
                               type="button"
                               class="grid h-[38px] w-[38px] place-items-center rounded-[10px] bg-primary-600 text-sm text-white shadow-md shadow-primary-600/30 transition hover:scale-105"
                               data-toast-message="Satellite view"
-                              ><i class="fa-solid fa-satellite"></i></button
+                              
+                            aria-label="Show satellite map"><Satellite size="1em" aria-hidden="true" /></button
                             >
-                            <button
+<button
                               type="button"
                               class="grid h-[38px] w-[38px] place-items-center rounded-[10px] bg-primary-600 text-sm text-white shadow-md shadow-primary-600/30 transition hover:scale-105"
                               data-toast-message="Center on location"
-                              ><i class="fa-solid fa-location-crosshairs"
-                              ></i></button
+                              
+                            aria-label="Center map on location"><LocateFixed size="1em" aria-hidden="true" /></button
                             >
-                            <button
+<button
                               type="button"
                               class="grid h-[38px] w-[38px] place-items-center rounded-[10px] bg-primary-600 text-sm text-white shadow-md shadow-primary-600/30 transition hover:scale-105"
                               data-toast-message="Fullscreen"
-                              ><i class="fa-solid fa-expand"></i></button
+                              
+                            aria-label="Open map in fullscreen"><Maximize size="1em" aria-hidden="true" /></button
                             >
                           </div>
                           <div
@@ -567,18 +647,20 @@ const jsonLd = {
                               1340 Taylor St, San Francisco, CA
                             </p>
                             <div class="mt-3 flex items-center gap-2">
-                              <button
+<button
                                 class="grid h-[28px] w-[28px] place-items-center rounded border border-solid border-black/10 text-[11px] text-neutral-500"
-                                ><i class="fa-solid fa-phone"></i></button
+                                
+                            aria-label="Call contact"><Phone size="1em" aria-hidden="true" /></button
                               >
-                              <button
+<button
                                 class="grid h-[28px] w-[28px] place-items-center rounded border border-solid border-black/10 text-[11px] text-neutral-500"
-                                ><i class="fa-regular fa-envelope"></i></button
+                                
+                            aria-label="Email contact"><Mail size="1em" aria-hidden="true" /></button
                               >
-                              <button
+<button
                                 class="grid h-[28px] w-[28px] place-items-center rounded border border-solid border-black/10 text-[11px] text-neutral-500"
-                                ><i class="fa-regular fa-note-sticky"
-                                ></i></button
+                                
+                            aria-label="View contact notes"><StickyNote size="1em" aria-hidden="true" /></button
                               >
                             </div>
                           </div>
@@ -661,25 +743,26 @@ const jsonLd = {
                             class="inline-flex h-[34px] items-center gap-2 rounded-full bg-neutral-100 px-3 text-xs font-semibold text-neutral-500"
                           >
                             Routes
-                            <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                            <ChevronRight size="1em" class="text-[9px]" aria-hidden="true" />
                             Route Builder
                           </div>
                           <div class="flex items-center gap-2">
-                            <button
+<button
                               class="relative inline-flex h-[34px] w-[34px] items-center justify-center rounded-lg bg-neutral-100 text-sm text-neutral-600 transition hover:-translate-y-px hover:shadow-md"
-                              ><i class="fa-regular fa-bell"></i><span
+                              
+                            aria-label="View notifications"><Bell size="1em" aria-hidden="true" /><span
                                 class="absolute right-0.5 top-0.5 h-1.5 w-1.5 rounded-full border border-solid border-white bg-red-500"
                               ></span></button
                             >
-                            <button
+<button
                               class="inline-flex h-[34px] items-center justify-center gap-1.5 rounded-lg bg-neutral-100 px-4 text-sm font-medium text-neutral-600 transition hover:-translate-y-px hover:shadow-md"
-                              ><span class="hidden xl:inline">Smart tv </span><i
-                                class="fa-solid fa-chevron-down text-[10px]"
-                              ></i></button
+                              
+                            aria-label="Choose display"><span class="hidden xl:inline">Smart tv </span><ChevronDown size="1em" class="text-[10px]" aria-hidden="true" /></button
                             >
-                            <button
+<button
                               class="grid h-[34px] w-[34px] place-items-center overflow-hidden rounded-full bg-primary-50"
-                              ><span
+                              
+                            aria-label="Open account menu"><span
                                 class="grid h-[28px] w-[28px] place-items-center rounded-full bg-primary-500 text-[11px] font-medium text-white"
                                 >S</span
                               ></button
@@ -693,9 +776,7 @@ const jsonLd = {
                           <div
                             class="absolute left-1/2 top-3.5 z-20 flex w-[min(420px,72%)] -translate-x-1/2 items-center gap-2 rounded-[10px] border border-solid border-neutral-200 bg-white px-3.5 py-2.5 shadow-lg"
                           >
-                            <i
-                              class="fa-solid fa-magnifying-glass text-[11px] text-neutral-400"
-                            ></i>
+                            <Search size="1em" class="text-[11px] text-neutral-400" aria-hidden="true" />
                             <input
                               class="w-full bg-transparent text-[12px] font-medium outline-none placeholder:text-neutral-400"
                               placeholder="Search Location"
@@ -798,18 +879,19 @@ const jsonLd = {
                           <div
                             class="absolute right-3 top-1/2 z-20 flex -translate-y-1/2 flex-col gap-1.5"
                           >
-                            <button
+<button
                               type="button"
                               class="grid h-[38px] w-[38px] place-items-center rounded-[10px] bg-primary-600 text-sm text-white shadow-md shadow-primary-600/30 transition hover:scale-105"
                               data-toast-message="Layers toggled"
-                              ><i class="fa-solid fa-layer-group"></i></button
+                              
+                            aria-label="Toggle map layers"><Layers size="1em" aria-hidden="true" /></button
                             >
-                            <button
+<button
                               type="button"
                               class="grid h-[38px] w-[38px] place-items-center rounded-[10px] bg-primary-600 text-sm text-white shadow-md shadow-primary-600/30 transition hover:scale-105"
                               data-toast-message="Center on route"
-                              ><i class="fa-solid fa-location-crosshairs"
-                              ></i></button
+                              
+                            aria-label="Center map on route"><LocateFixed size="1em" aria-hidden="true" /></button
                             >
                           </div>
                         </div>
@@ -893,7 +975,7 @@ const jsonLd = {
                               <span
                                 class="grid h-[36px] w-[36px] place-items-center rounded-[8px] bg-black/[0.04] text-[13px] text-neutral-500"
                               >
-                                <i class="fa-solid fa-flag"></i>
+                                <Flag size="1em" aria-hidden="true" />
                               </span>
                               <div class="flex-1">
                                 <span
@@ -910,23 +992,22 @@ const jsonLd = {
                               class="flex items-center justify-between rounded-[8px] border border-solid border-black/10 bg-black/[0.025] px-[12px] py-[10px]"
                             >
                               <div class="flex items-center gap-[9px]">
-                                <i
-                                  class="fa-solid fa-chevron-right text-[10px] text-neutral-500"
-                                ></i>
+                                <ChevronRight size="1em" class="text-[10px] text-neutral-500" aria-hidden="true" />
                                 <span
                                   class="text-[13px] font-semibold text-neutral-900"
                                   >Roof Inspection</span
                                 >
                               </div>
-                              <button class="text-[13px] text-red-500">
-                                <i class="fa-solid fa-xmark"></i>
+<button class="text-[13px] text-red-500"
+                            aria-label="Close panel">
+                                <X size="1em" aria-hidden="true" />
                               </button>
                             </div>
                             <div class="flex items-center gap-[10px]">
                               <span
                                 class="grid h-[36px] w-[36px] place-items-center rounded-[8px] bg-black/[0.04] text-[13px] text-neutral-500"
                               >
-                                <i class="fa-solid fa-flag-checkered"></i>
+                                <Flag size="1em" aria-hidden="true" />
                               </span>
                               <div class="flex-1">
                                 <span
@@ -975,10 +1056,10 @@ const jsonLd = {
                         <div
                           class="inline-flex h-[34px] items-center gap-2 rounded-full bg-neutral-100 px-3 text-xs font-semibold text-neutral-500"
                         >
-                          <i class="fa-solid fa-house"></i> Workspace
-                          <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                          <House size="1em" aria-hidden="true" /> Workspace
+                          <ChevronRight size="1em" class="text-[9px]" aria-hidden="true" />
                           Boards
-                          <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                          <ChevronRight size="1em" class="text-[9px]" aria-hidden="true" />
                           Sales Board
                         </div>
                         <div class="flex items-center gap-2">
@@ -994,16 +1075,18 @@ const jsonLd = {
                             class="inline-flex h-[34px] items-center justify-center gap-1.5 rounded-lg bg-neutral-100 px-4 text-sm font-medium text-neutral-600 transition hover:-translate-y-px hover:shadow-md"
                             >Sort By</button
                           >
-                          <button
+<button
                             class="inline-flex h-[34px] w-[180px] items-center justify-start gap-1.5 rounded-lg bg-neutral-100 px-4 text-sm font-medium text-neutral-600 transition hover:-translate-y-px hover:shadow-md"
-                          >
-                            <i class="fa-solid fa-magnifying-glass"></i>
+                          
+                            aria-label="Search">
+                            <Search size="1em" aria-hidden="true" />
                             Search...
                           </button>
-                          <button
+<button
                             class="inline-flex h-[34px] w-[34px] items-center justify-center rounded-lg bg-neutral-100 text-sm text-neutral-600 transition hover:-translate-y-px hover:shadow-md"
-                          >
-                            <i class="fa-solid fa-ellipsis"></i>
+                          
+                            aria-label="More actions">
+                            <Ellipsis size="1em" aria-hidden="true" />
                           </button>
                         </div>
                       </div>
@@ -1015,8 +1098,7 @@ const jsonLd = {
                             class="text-[28px] font-bold leading-tight tracking-tight text-neutral-900"
                           >
                             Sales Board
-                            <i class="fa-solid fa-chevron-down ml-1 text-[13px]"
-                            ></i>
+                            <ChevronDown size="1em" class="ml-1 text-[13px]" aria-hidden="true" />
                           </h3>
                           <p class="text-[13px] font-medium text-neutral-600">
                             Drag cards between stages
@@ -1049,12 +1131,9 @@ const jsonLd = {
                                 <div
                                   class="flex items-center gap-[14px] text-neutral-500"
                                 >
-                                  <i
-                                    class="fa-solid fa-chevron-left text-[11px]"
-                                  ></i>
-                                  <i class="fa-solid fa-ellipsis text-[12px]"
-                                  ></i>
-                                  <i class="fa-solid fa-plus text-[12px]"></i>
+                                  <ChevronLeft size="1em" class="text-[11px]" aria-hidden="true" />
+                                  <Ellipsis size="1em" class="text-[12px]" aria-hidden="true" />
+                                  <Plus size="1em" class="text-[12px]" aria-hidden="true" />
                                 </div>
                               </div>
                               <p
@@ -1078,10 +1157,11 @@ const jsonLd = {
                                     >
                                       Savannah Nguyen
                                     </h4>
-                                    <button
+<button
                                       class="grid h-[22px] w-[22px] place-items-center rounded-full border border-solid border-black/10 text-[10px] text-neutral-400"
-                                    >
-                                      <i class="fa-solid fa-ellipsis"></i>
+                                    
+                            aria-label="More actions">
+                                      <Ellipsis size="1em" aria-hidden="true" />
                                     </button>
                                   </div>
                                   <p
@@ -1102,21 +1182,23 @@ const jsonLd = {
                                         class="grid h-[22px] w-[22px] place-items-center rounded-full bg-sky-100 text-[10px] font-semibold text-sky-600"
                                         >DT</span
                                       >
-                                      <button
+<button
                                         class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
-                                      >
-                                        <i class="fa-solid fa-phone"></i>
+                                      
+                            aria-label="Call contact">
+                                        <Phone size="1em" aria-hidden="true" />
                                       </button>
-                                      <button
+<button
                                         class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
-                                      >
-                                        <i class="fa-regular fa-envelope"></i>
+                                      
+                            aria-label="Email contact">
+                                        <Mail size="1em" aria-hidden="true" />
                                       </button>
-                                      <button
+<button
                                         class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
-                                      >
-                                        <i class="fa-regular fa-note-sticky"
-                                        ></i>
+                                      
+                            aria-label="View contact notes">
+                                        <StickyNote size="1em" aria-hidden="true" />
                                       </button>
                                     </div>
                                   </div>
@@ -1133,10 +1215,11 @@ const jsonLd = {
                                     >
                                       Leslie Alexander
                                     </h4>
-                                    <button
+<button
                                       class="grid h-[22px] w-[22px] place-items-center rounded-full border border-solid border-black/10 text-[10px] text-neutral-400"
-                                    >
-                                      <i class="fa-solid fa-ellipsis"></i>
+                                    
+                            aria-label="More actions">
+                                      <Ellipsis size="1em" aria-hidden="true" />
                                     </button>
                                   </div>
                                   <p
@@ -1157,21 +1240,23 @@ const jsonLd = {
                                         class="grid h-[22px] w-[22px] place-items-center rounded-full bg-sky-100 text-[10px] font-semibold text-sky-600"
                                         >DT</span
                                       >
-                                      <button
+<button
                                         class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
-                                      >
-                                        <i class="fa-solid fa-phone"></i>
+                                      
+                            aria-label="Call contact">
+                                        <Phone size="1em" aria-hidden="true" />
                                       </button>
-                                      <button
+<button
                                         class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
-                                      >
-                                        <i class="fa-regular fa-envelope"></i>
+                                      
+                            aria-label="Email contact">
+                                        <Mail size="1em" aria-hidden="true" />
                                       </button>
-                                      <button
+<button
                                         class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
-                                      >
-                                        <i class="fa-regular fa-note-sticky"
-                                        ></i>
+                                      
+                            aria-label="View contact notes">
+                                        <StickyNote size="1em" aria-hidden="true" />
                                       </button>
                                     </div>
                                   </div>
@@ -1188,10 +1273,11 @@ const jsonLd = {
                                     >
                                       Courtney Henry
                                     </h4>
-                                    <button
+<button
                                       class="grid h-[22px] w-[22px] place-items-center rounded-full border border-solid border-black/10 text-[10px] text-neutral-400"
-                                    >
-                                      <i class="fa-solid fa-ellipsis"></i>
+                                    
+                            aria-label="More actions">
+                                      <Ellipsis size="1em" aria-hidden="true" />
                                     </button>
                                   </div>
                                   <p
@@ -1212,21 +1298,23 @@ const jsonLd = {
                                         class="grid h-[22px] w-[22px] place-items-center rounded-full bg-sky-100 text-[10px] font-semibold text-sky-600"
                                         >DT</span
                                       >
-                                      <button
+<button
                                         class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
-                                      >
-                                        <i class="fa-solid fa-phone"></i>
+                                      
+                            aria-label="Call contact">
+                                        <Phone size="1em" aria-hidden="true" />
                                       </button>
-                                      <button
+<button
                                         class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
-                                      >
-                                        <i class="fa-regular fa-envelope"></i>
+                                      
+                            aria-label="Email contact">
+                                        <Mail size="1em" aria-hidden="true" />
                                       </button>
-                                      <button
+<button
                                         class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
-                                      >
-                                        <i class="fa-regular fa-note-sticky"
-                                        ></i>
+                                      
+                            aria-label="View contact notes">
+                                        <StickyNote size="1em" aria-hidden="true" />
                                       </button>
                                     </div>
                                   </div>
@@ -1254,12 +1342,9 @@ const jsonLd = {
                                 <div
                                   class="flex items-center gap-[14px] text-neutral-500"
                                 >
-                                  <i
-                                    class="fa-solid fa-chevron-left text-[11px]"
-                                  ></i>
-                                  <i class="fa-solid fa-ellipsis text-[12px]"
-                                  ></i>
-                                  <i class="fa-solid fa-plus text-[12px]"></i>
+                                  <ChevronLeft size="1em" class="text-[11px]" aria-hidden="true" />
+                                  <Ellipsis size="1em" class="text-[12px]" aria-hidden="true" />
+                                  <Plus size="1em" class="text-[12px]" aria-hidden="true" />
                                 </div>
                               </div>
                               <p
@@ -1283,10 +1368,11 @@ const jsonLd = {
                                     >
                                       Marvin McKinney
                                     </h4>
-                                    <button
+<button
                                       class="grid h-[22px] w-[22px] place-items-center rounded-full border border-solid border-black/10 text-[10px] text-neutral-400"
-                                    >
-                                      <i class="fa-solid fa-ellipsis"></i>
+                                    
+                            aria-label="More actions">
+                                      <Ellipsis size="1em" aria-hidden="true" />
                                     </button>
                                   </div>
                                   <p
@@ -1307,21 +1393,23 @@ const jsonLd = {
                                         class="grid h-[22px] w-[22px] place-items-center rounded-full bg-sky-100 text-[10px] font-semibold text-sky-600"
                                         >DT</span
                                       >
-                                      <button
+<button
                                         class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
-                                      >
-                                        <i class="fa-solid fa-phone"></i>
+                                      
+                            aria-label="Call contact">
+                                        <Phone size="1em" aria-hidden="true" />
                                       </button>
-                                      <button
+<button
                                         class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
-                                      >
-                                        <i class="fa-regular fa-envelope"></i>
+                                      
+                            aria-label="Email contact">
+                                        <Mail size="1em" aria-hidden="true" />
                                       </button>
-                                      <button
+<button
                                         class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
-                                      >
-                                        <i class="fa-regular fa-note-sticky"
-                                        ></i>
+                                      
+                            aria-label="View contact notes">
+                                        <StickyNote size="1em" aria-hidden="true" />
                                       </button>
                                     </div>
                                   </div>
@@ -1338,10 +1426,11 @@ const jsonLd = {
                                     >
                                       Dianne Russell
                                     </h4>
-                                    <button
+<button
                                       class="grid h-[22px] w-[22px] place-items-center rounded-full border border-solid border-black/10 text-[10px] text-neutral-400"
-                                    >
-                                      <i class="fa-solid fa-ellipsis"></i>
+                                    
+                            aria-label="More actions">
+                                      <Ellipsis size="1em" aria-hidden="true" />
                                     </button>
                                   </div>
                                   <p
@@ -1361,21 +1450,23 @@ const jsonLd = {
                                         class="grid h-[22px] w-[22px] place-items-center rounded-full bg-sky-100 text-[10px] font-semibold text-sky-600"
                                         >DT</span
                                       >
-                                      <button
+<button
                                         class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
-                                      >
-                                        <i class="fa-solid fa-phone"></i>
+                                      
+                            aria-label="Call contact">
+                                        <Phone size="1em" aria-hidden="true" />
                                       </button>
-                                      <button
+<button
                                         class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
-                                      >
-                                        <i class="fa-regular fa-envelope"></i>
+                                      
+                            aria-label="Email contact">
+                                        <Mail size="1em" aria-hidden="true" />
                                       </button>
-                                      <button
+<button
                                         class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
-                                      >
-                                        <i class="fa-regular fa-note-sticky"
-                                        ></i>
+                                      
+                            aria-label="View contact notes">
+                                        <StickyNote size="1em" aria-hidden="true" />
                                       </button>
                                     </div>
                                   </div>
@@ -1422,12 +1513,9 @@ const jsonLd = {
                                 <div
                                   class="flex items-center gap-[14px] text-neutral-500"
                                 >
-                                  <i
-                                    class="fa-solid fa-chevron-left text-[11px]"
-                                  ></i>
-                                  <i class="fa-solid fa-ellipsis text-[12px]"
-                                  ></i>
-                                  <i class="fa-solid fa-plus text-[12px]"></i>
+                                  <ChevronLeft size="1em" class="text-[11px]" aria-hidden="true" />
+                                  <Ellipsis size="1em" class="text-[12px]" aria-hidden="true" />
+                                  <Plus size="1em" class="text-[12px]" aria-hidden="true" />
                                 </div>
                               </div>
                               <p
@@ -1451,10 +1539,11 @@ const jsonLd = {
                                     >
                                       Courtney Henry
                                     </h4>
-                                    <button
+<button
                                       class="grid h-[22px] w-[22px] place-items-center rounded-full border border-solid border-black/10 text-[10px] text-neutral-400"
-                                    >
-                                      <i class="fa-solid fa-ellipsis"></i>
+                                    
+                            aria-label="More actions">
+                                      <Ellipsis size="1em" aria-hidden="true" />
                                     </button>
                                   </div>
                                   <p
@@ -1474,21 +1563,23 @@ const jsonLd = {
                                         class="grid h-[22px] w-[22px] place-items-center rounded-full bg-sky-100 text-[10px] font-semibold text-sky-600"
                                         >DT</span
                                       >
-                                      <button
+<button
                                         class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
-                                      >
-                                        <i class="fa-solid fa-phone"></i>
+                                      
+                            aria-label="Call contact">
+                                        <Phone size="1em" aria-hidden="true" />
                                       </button>
-                                      <button
+<button
                                         class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
-                                      >
-                                        <i class="fa-regular fa-envelope"></i>
+                                      
+                            aria-label="Email contact">
+                                        <Mail size="1em" aria-hidden="true" />
                                       </button>
-                                      <button
+<button
                                         class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
-                                      >
-                                        <i class="fa-regular fa-note-sticky"
-                                        ></i>
+                                      
+                            aria-label="View contact notes">
+                                        <StickyNote size="1em" aria-hidden="true" />
                                       </button>
                                     </div>
                                   </div>
@@ -1516,12 +1607,9 @@ const jsonLd = {
                                 <div
                                   class="flex items-center gap-[14px] text-neutral-500"
                                 >
-                                  <i
-                                    class="fa-solid fa-chevron-left text-[11px]"
-                                  ></i>
-                                  <i class="fa-solid fa-ellipsis text-[12px]"
-                                  ></i>
-                                  <i class="fa-solid fa-plus text-[12px]"></i>
+                                  <ChevronLeft size="1em" class="text-[11px]" aria-hidden="true" />
+                                  <Ellipsis size="1em" class="text-[12px]" aria-hidden="true" />
+                                  <Plus size="1em" class="text-[12px]" aria-hidden="true" />
                                 </div>
                               </div>
                               <p
@@ -1545,10 +1633,11 @@ const jsonLd = {
                                     >
                                       Esther Howard
                                     </h4>
-                                    <button
+<button
                                       class="grid h-[22px] w-[22px] place-items-center rounded-full border border-solid border-black/10 text-[10px] text-neutral-400"
-                                    >
-                                      <i class="fa-solid fa-ellipsis"></i>
+                                    
+                            aria-label="More actions">
+                                      <Ellipsis size="1em" aria-hidden="true" />
                                     </button>
                                   </div>
                                   <p
@@ -1569,21 +1658,23 @@ const jsonLd = {
                                         class="grid h-[22px] w-[22px] place-items-center rounded-full bg-sky-100 text-[10px] font-semibold text-sky-600"
                                         >DT</span
                                       >
-                                      <button
+<button
                                         class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
-                                      >
-                                        <i class="fa-solid fa-phone"></i>
+                                      
+                            aria-label="Call contact">
+                                        <Phone size="1em" aria-hidden="true" />
                                       </button>
-                                      <button
+<button
                                         class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
-                                      >
-                                        <i class="fa-regular fa-envelope"></i>
+                                      
+                            aria-label="Email contact">
+                                        <Mail size="1em" aria-hidden="true" />
                                       </button>
-                                      <button
+<button
                                         class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
-                                      >
-                                        <i class="fa-regular fa-note-sticky"
-                                        ></i>
+                                      
+                            aria-label="View contact notes">
+                                        <StickyNote size="1em" aria-hidden="true" />
                                       </button>
                                     </div>
                                   </div>
@@ -1600,10 +1691,11 @@ const jsonLd = {
                                     >
                                       Cameron Williamson
                                     </h4>
-                                    <button
+<button
                                       class="grid h-[22px] w-[22px] place-items-center rounded-full border border-solid border-black/10 text-[10px] text-neutral-400"
-                                    >
-                                      <i class="fa-solid fa-ellipsis"></i>
+                                    
+                            aria-label="More actions">
+                                      <Ellipsis size="1em" aria-hidden="true" />
                                     </button>
                                   </div>
                                   <p
@@ -1624,21 +1716,23 @@ const jsonLd = {
                                         class="grid h-[22px] w-[22px] place-items-center rounded-full bg-sky-100 text-[10px] font-semibold text-sky-600"
                                         >DT</span
                                       >
-                                      <button
+<button
                                         class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
-                                      >
-                                        <i class="fa-solid fa-phone"></i>
+                                      
+                            aria-label="Call contact">
+                                        <Phone size="1em" aria-hidden="true" />
                                       </button>
-                                      <button
+<button
                                         class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
-                                      >
-                                        <i class="fa-regular fa-envelope"></i>
+                                      
+                            aria-label="Email contact">
+                                        <Mail size="1em" aria-hidden="true" />
                                       </button>
-                                      <button
+<button
                                         class="grid h-[22px] w-[22px] place-items-center rounded border border-solid border-black/10 text-[10px] text-neutral-500"
-                                      >
-                                        <i class="fa-regular fa-note-sticky"
-                                        ></i>
+                                      
+                            aria-label="View contact notes">
+                                        <StickyNote size="1em" aria-hidden="true" />
                                       </button>
                                     </div>
                                   </div>
@@ -1668,18 +1762,20 @@ const jsonLd = {
                         class="flex h-14 shrink-0 items-center justify-between border-b border-solid border-neutral-200 bg-white px-4 xl:px-6"
                       >
                         <div class="flex items-center gap-4">
-                          <button class="text-[15px] text-neutral-800">
-                            <i class="fa-solid fa-xmark"></i>
+<button class="text-[15px] text-neutral-800"
+                            aria-label="Close panel">
+                            <X size="1em" aria-hidden="true" />
                           </button>
                           <p class="text-[13px] font-medium text-neutral-900">
                             Invoice #
                             <span class="ml-2 font-semibold">EST-105</span>
                           </p>
                           <span class="h-7 w-px bg-black/10"></span>
-                          <button
+<button
                             class="grid h-8 w-8 place-items-center rounded-lg border border-solid border-primary-300 bg-primary-50 text-[12px] text-primary-600"
-                          >
-                            <i class="fa-solid fa-clock-rotate-left"></i>
+                          
+                            aria-label="View activity history">
+                            <History size="1em" aria-hidden="true" />
                           </button>
                         </div>
                         <div class="flex items-center gap-3">
@@ -1924,8 +2020,9 @@ const jsonLd = {
                             >
                               Activity History
                             </h3>
-                            <button class="text-neutral-500">
-                              <i class="fa-solid fa-xmark"></i>
+<button class="text-neutral-500"
+                            aria-label="Close panel">
+                              <X size="1em" aria-hidden="true" />
                             </button>
                           </div>
                           <div
@@ -2018,51 +2115,57 @@ const jsonLd = {
                           class="inline-flex h-[34px] min-w-0 max-w-[min(100%,480px)] items-center gap-2 truncate rounded-full bg-neutral-100 px-3 text-xs font-semibold text-neutral-500"
                         >
                           Automations
-                          <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                          <ChevronRight size="1em" class="text-[9px]" aria-hidden="true" />
                           <span class="truncate text-neutral-700"
                             >Welcome new leads from quote</span
                           >
                         </div>
                         <div class="flex shrink-0 items-center gap-2">
-                          <button
+<button
                             type="button"
                             class="inline-flex h-[34px] items-center gap-1.5 rounded-lg border border-solid border-primary-600 bg-white px-3 text-sm font-medium text-primary-800 transition hover:-translate-y-px hover:shadow-md xl:px-4"
                             data-test-run
-                            ><i class="fa-solid fa-play"></i><span
+                            
+                            aria-label="Test run"><Play size="1em" aria-hidden="true" /><span
                               class="hidden xl:inline">Test run</span
                             ></button
                           >
-                          <button
+<button
                             type="button"
                             class="inline-flex h-[34px] items-center justify-center gap-1.5 rounded-lg bg-neutral-100 px-3 text-sm font-medium text-neutral-600 xl:px-4"
-                            ><i class="fa-solid fa-download"></i><span
+                            
+                            aria-label="Logs"><Download size="1em" aria-hidden="true" /><span
                               class="hidden xl:inline">Logs</span
                             ></button
                           >
-                          <button
+<button
                             type="button"
                             class="inline-flex h-[34px] items-center gap-1.5 rounded-lg bg-primary-600 px-3 text-sm font-medium text-white xl:px-4"
-                            ><i class="fa-solid fa-floppy-disk"></i><span
+                            
+                            aria-label="Save"><Save size="1em" aria-hidden="true" /><span
                               class="hidden xl:inline">Save</span
                             ></button
                           >
-                          <button
+<button
                             type="button"
                             class="inline-flex h-[34px] items-center gap-1.5 rounded-lg bg-neutral-900 px-3 text-sm font-medium text-white xl:px-4"
-                            ><i class="fa-solid fa-upload"></i><span
+                            
+                            aria-label="Publish"><Upload size="1em" aria-hidden="true" /><span
                               class="hidden xl:inline">Publish</span
                             ></button
                           >
-                          <button
+<button
                             type="button"
                             class="relative inline-flex h-[34px] w-[34px] items-center justify-center rounded-lg bg-neutral-100 text-neutral-600"
-                            ><i class="fa-regular fa-bell"></i><span
+                            
+                            aria-label="View notifications"><Bell size="1em" aria-hidden="true" /><span
                               class="absolute right-0.5 top-0.5 h-1.5 w-1.5 rounded-full border border-solid border-white bg-red-500"
                             ></span></button
                           >
-                          <button
+<button
                             class="grid h-[34px] w-[34px] place-items-center overflow-hidden rounded-full bg-primary-50"
-                            ><span
+                            
+                            aria-label="Open account menu"><span
                               class="grid h-[28px] w-[28px] place-items-center rounded-full bg-primary-500 text-[11px] font-medium text-white"
                               >S</span
                             ></button
@@ -2102,8 +2205,7 @@ const jsonLd = {
                             >
                               <span
                                 class="mb-1.5 inline-flex rounded bg-violet-600 px-2 py-0.5 text-[9px] font-semibold text-white"
-                                ><i class="fa-solid fa-bolt mr-1"
-                                ></i>Trigger</span
+                                ><Zap size="1em" class="mr-1" aria-hidden="true" />Trigger</span
                               >
                               <h4
                                 class="text-[13px] font-semibold text-neutral-900"
@@ -2115,19 +2217,20 @@ const jsonLd = {
                               >
                                 Leads
                               </p>
-                              <button
+<button
                                 type="button"
                                 class="absolute right-3 top-3 text-neutral-400 hover:text-neutral-600"
-                                ><i class="fa-solid fa-ellipsis-vertical"
-                                ></i></button
+                                
+                            aria-label="More actions"><EllipsisVertical size="1em" aria-hidden="true" /></button
                               >
                             </div>
                             <div class="h-5 w-0.5 bg-violet-400"></div>
-                            <button
+<button
                               type="button"
                               class="grid h-[22px] w-[22px] place-items-center rounded-full border-2 border-solid border-violet-400 bg-white text-[10px] text-violet-500 shadow-sm hover:bg-violet-50"
                               data-toast-message="Add step"
-                              ><i class="fa-solid fa-plus"></i></button
+                              
+                            aria-label="Add step"><Plus size="1em" aria-hidden="true" /></button
                             >
                             <div class="h-5 w-0.5 bg-violet-400"></div>
                             <div
@@ -2150,19 +2253,20 @@ const jsonLd = {
                                   >@ Name</span
                                 >...
                               </p>
-                              <button
+<button
                                 type="button"
                                 class="absolute right-3 top-3 text-neutral-400 hover:text-neutral-600"
-                                ><i class="fa-solid fa-ellipsis-vertical"
-                                ></i></button
+                                
+                            aria-label="More actions"><EllipsisVertical size="1em" aria-hidden="true" /></button
                               >
                             </div>
                             <div class="h-5 w-0.5 bg-violet-400"></div>
-                            <button
+<button
                               type="button"
                               class="grid h-[22px] w-[22px] place-items-center rounded-full border-2 border-solid border-violet-400 bg-white text-[10px] text-violet-500 shadow-sm hover:bg-violet-50"
                               data-toast-message="Add step"
-                              ><i class="fa-solid fa-plus"></i></button
+                              
+                            aria-label="Add step"><Plus size="1em" aria-hidden="true" /></button
                             >
                             <div class="h-5 w-0.5 bg-violet-400"></div>
                             <div
@@ -2170,8 +2274,7 @@ const jsonLd = {
                             >
                               <span
                                 class="mb-1.5 inline-flex items-center gap-1 rounded bg-amber-400 px-2 py-0.5 text-[9px] font-semibold text-neutral-900"
-                                ><i class="fa-solid fa-code-branch text-[8px]"
-                                ></i> Paths</span
+                                ><GitBranch size="1em" class="text-[8px]" aria-hidden="true" /> Paths</span
                               >
                               <h4
                                 class="text-[13px] font-semibold text-neutral-900"
@@ -2183,19 +2286,20 @@ const jsonLd = {
                               >
                                 Splits into 3 paths
                               </p>
-                              <button
+<button
                                 type="button"
                                 class="absolute right-3 top-3 text-neutral-400 hover:text-neutral-600"
-                                ><i class="fa-solid fa-ellipsis-vertical"
-                                ></i></button
+                                
+                            aria-label="More actions"><EllipsisVertical size="1em" aria-hidden="true" /></button
                               >
                             </div>
                             <div class="h-5 w-0.5 bg-violet-400"></div>
-                            <button
+<button
                               type="button"
                               class="grid h-[22px] w-[22px] place-items-center rounded-full border-2 border-solid border-violet-400 bg-white text-[10px] text-violet-500 shadow-sm hover:bg-violet-50"
                               data-toast-message="Add step"
-                              ><i class="fa-solid fa-plus"></i></button
+                              
+                            aria-label="Add step"><Plus size="1em" aria-hidden="true" /></button
                             >
                             <div class="h-5 w-0.5 bg-violet-400"></div>
                           </div>
@@ -2236,9 +2340,7 @@ const jsonLd = {
                                   class="relative w-full rounded-lg border border-solid border-neutral-200 bg-white px-3 py-2.5 shadow-sm"
                                 >
                                   <div class="flex items-start gap-2 pr-4">
-                                    <i
-                                      class="fa-solid fa-code-branch mt-0.5 text-sm text-amber-500"
-                                    ></i>
+                                    <GitBranch size="1em" class="mt-0.5 text-sm text-amber-500" aria-hidden="true" />
                                     <div class="min-w-0">
                                       <p
                                         class="text-[12px] font-semibold text-neutral-900"
@@ -2250,21 +2352,21 @@ const jsonLd = {
                                       </p>
                                     </div>
                                   </div>
-                                  <button
+<button
                                     type="button"
                                     class="absolute right-2 top-2 text-neutral-400"
-                                    ><i
-                                      class="fa-solid fa-ellipsis-vertical text-xs"
-                                    ></i></button
+                                    
+                            aria-label="More actions"><EllipsisVertical size="1em" class="text-xs" aria-hidden="true" /></button
                                   >
                                 </div>
                                 <div class="flex flex-col items-center">
                                   <div class="h-4 w-0.5 bg-violet-400"></div>
-                                  <button
+<button
                                     type="button"
                                     class="grid h-[22px] w-[22px] place-items-center rounded-full border-2 border-solid border-violet-400 bg-white text-[10px] text-violet-500 shadow-sm"
                                     data-toast-message="Add action"
-                                    ><i class="fa-solid fa-plus"></i></button
+                                    
+                            aria-label="Add action"><Plus size="1em" aria-hidden="true" /></button
                                   >
                                   <div class="h-4 w-0.5 bg-violet-400"></div>
                                 </div>
@@ -2273,9 +2375,7 @@ const jsonLd = {
                                 >
                                   <span
                                     class="mb-1 inline-flex items-center gap-1 rounded bg-blue-500 px-2 py-0.5 text-[9px] font-medium text-white"
-                                    ><i
-                                      class="fa-regular fa-envelope text-[8px]"
-                                    ></i> Action</span
+                                    ><Mail size="1em" class="text-[8px]" aria-hidden="true" /> Action</span
                                   >
                                   <h4
                                     class="text-[12px] font-semibold text-neutral-900"
@@ -2287,21 +2387,21 @@ const jsonLd = {
                                   >
                                     Your quote from Knockio Roofing — ...
                                   </p>
-                                  <button
+<button
                                     type="button"
                                     class="absolute right-2 top-2 text-neutral-400"
-                                    ><i
-                                      class="fa-solid fa-ellipsis-vertical text-xs"
-                                    ></i></button
+                                    
+                            aria-label="More actions"><EllipsisVertical size="1em" class="text-xs" aria-hidden="true" /></button
                                   >
                                 </div>
                                 <div class="flex flex-col items-center">
                                   <div class="h-4 w-0.5 bg-violet-400"></div>
-                                  <button
+<button
                                     type="button"
                                     class="grid h-[22px] w-[22px] place-items-center rounded-full border-2 border-solid border-violet-400 bg-white text-[10px] text-violet-500 shadow-sm"
                                     data-toast-message="Add action"
-                                    ><i class="fa-solid fa-plus"></i></button
+                                    
+                            aria-label="Add action"><Plus size="1em" aria-hidden="true" /></button
                                   >
                                   <div class="h-4 w-0.5 bg-violet-400"></div>
                                 </div>
@@ -2310,9 +2410,7 @@ const jsonLd = {
                                 >
                                   <span
                                     class="mb-1 inline-flex items-center gap-1 rounded bg-blue-500 px-2 py-0.5 text-[9px] font-medium text-white"
-                                    ><i
-                                      class="fa-regular fa-square-check text-[8px]"
-                                    ></i> Action</span
+                                    ><SquareCheck size="1em" class="text-[8px]" aria-hidden="true" /> Action</span
                                   >
                                   <h4
                                     class="text-[12px] font-semibold text-neutral-900"
@@ -2327,22 +2425,22 @@ const jsonLd = {
                                       >@ Name</span
                                     >
                                   </p>
-                                  <button
+<button
                                     type="button"
                                     class="absolute right-2 top-2 text-neutral-400"
-                                    ><i
-                                      class="fa-solid fa-ellipsis-vertical text-xs"
-                                    ></i></button
+                                    
+                            aria-label="More actions"><EllipsisVertical size="1em" class="text-xs" aria-hidden="true" /></button
                                   >
                                 </div>
                                 <div class="flex flex-col items-center">
                                   <div class="h-4 w-0.5 bg-violet-400"></div>
-                                  <button
+<button
                                     type="button"
                                     class="grid h-[22px] w-[22px] place-items-center rounded-full border-2 border-solid border-violet-400 bg-white text-[10px] text-violet-500 shadow-sm"
                                     data-add-action
                                     data-toast-message="Action added"
-                                    ><i class="fa-solid fa-plus"></i></button
+                                    
+                            aria-label="Add action"><Plus size="1em" aria-hidden="true" /></button
                                   >
                                 </div>
                               </div>
@@ -2355,9 +2453,7 @@ const jsonLd = {
                                   class="relative w-full rounded-lg border border-solid border-neutral-200 bg-white px-3 py-2.5 shadow-sm"
                                 >
                                   <div class="flex items-start gap-2 pr-4">
-                                    <i
-                                      class="fa-solid fa-code-branch mt-0.5 text-sm text-amber-500"
-                                    ></i>
+                                    <GitBranch size="1em" class="mt-0.5 text-sm text-amber-500" aria-hidden="true" />
                                     <div class="min-w-0">
                                       <p
                                         class="truncate text-[12px] font-semibold text-neutral-900"
@@ -2371,21 +2467,21 @@ const jsonLd = {
                                       </p>
                                     </div>
                                   </div>
-                                  <button
+<button
                                     type="button"
                                     class="absolute right-2 top-2 text-neutral-400"
-                                    ><i
-                                      class="fa-solid fa-ellipsis-vertical text-xs"
-                                    ></i></button
+                                    
+                            aria-label="More actions"><EllipsisVertical size="1em" class="text-xs" aria-hidden="true" /></button
                                   >
                                 </div>
                                 <div class="flex flex-col items-center">
                                   <div class="h-4 w-0.5 bg-violet-400"></div>
-                                  <button
+<button
                                     type="button"
                                     class="grid h-[22px] w-[22px] place-items-center rounded-full border-2 border-solid border-violet-400 bg-white text-[10px] text-violet-500 shadow-sm"
                                     data-toast-message="Add action"
-                                    ><i class="fa-solid fa-plus"></i></button
+                                    
+                            aria-label="Add action"><Plus size="1em" aria-hidden="true" /></button
                                   >
                                   <div class="h-4 w-0.5 bg-violet-400"></div>
                                 </div>
@@ -2394,8 +2490,7 @@ const jsonLd = {
                                 >
                                   <span
                                     class="mb-1 inline-flex items-center gap-1 rounded bg-blue-500 px-2 py-0.5 text-[9px] font-medium text-white"
-                                    ><i class="fa-regular fa-comment text-[8px]"
-                                    ></i> Action</span
+                                    ><MessageCircle size="1em" class="text-[8px]" aria-hidden="true" /> Action</span
                                   >
                                   <h4
                                     class="text-[12px] font-semibold text-neutral-900"
@@ -2410,22 +2505,22 @@ const jsonLd = {
                                       >@ Name</span
                                     >! Reach ...
                                   </p>
-                                  <button
+<button
                                     type="button"
                                     class="absolute right-2 top-2 text-neutral-400"
-                                    ><i
-                                      class="fa-solid fa-ellipsis-vertical text-xs"
-                                    ></i></button
+                                    
+                            aria-label="More actions"><EllipsisVertical size="1em" class="text-xs" aria-hidden="true" /></button
                                   >
                                 </div>
                                 <div class="flex flex-col items-center">
                                   <div class="h-4 w-0.5 bg-violet-400"></div>
-                                  <button
+<button
                                     type="button"
                                     class="grid h-[22px] w-[22px] place-items-center rounded-full border-2 border-solid border-violet-400 bg-white text-[10px] text-violet-500 shadow-sm"
                                     data-add-action
                                     data-toast-message="Action added"
-                                    ><i class="fa-solid fa-plus"></i></button
+                                    
+                            aria-label="Add action"><Plus size="1em" aria-hidden="true" /></button
                                   >
                                 </div>
                               </div>
@@ -2438,9 +2533,7 @@ const jsonLd = {
                                   class="relative w-full rounded-lg border border-solid border-neutral-200 bg-white px-3 py-2.5 shadow-sm"
                                 >
                                   <div class="flex items-start gap-2 pr-4">
-                                    <i
-                                      class="fa-solid fa-code-branch mt-0.5 shrink-0 text-sm text-amber-500"
-                                    ></i>
+                                    <GitBranch size="1em" class="mt-0.5 shrink-0 text-sm text-amber-500" aria-hidden="true" />
                                     <div class="min-w-0">
                                       <p
                                         class="text-[12px] font-semibold text-neutral-900"
@@ -2459,32 +2552,33 @@ const jsonLd = {
                                       </div>
                                     </div>
                                   </div>
-                                  <button
+<button
                                     type="button"
                                     class="absolute right-2 top-2 text-neutral-400"
-                                    ><i
-                                      class="fa-solid fa-ellipsis-vertical text-xs"
-                                    ></i></button
+                                    
+                            aria-label="More actions"><EllipsisVertical size="1em" class="text-xs" aria-hidden="true" /></button
                                   >
                                 </div>
                                 <div class="flex flex-col items-center">
                                   <div class="h-4 w-0.5 bg-violet-400"></div>
-                                  <button
+<button
                                     type="button"
                                     class="grid h-[22px] w-[22px] place-items-center rounded-full border-2 border-solid border-violet-400 bg-white text-[10px] text-violet-500 shadow-sm"
                                     data-toast-message="Add action"
-                                    ><i class="fa-solid fa-plus"></i></button
+                                    
+                            aria-label="Add action"><Plus size="1em" aria-hidden="true" /></button
                                   >
                                   <div class="h-4 w-0.5 bg-violet-400"></div>
                                 </div>
                                 <div
                                   class="w-full rounded-lg border-2 border-dashed border-violet-300 bg-violet-50/40 p-5 text-center"
                                 >
-                                  <button
+<button
                                     type="button"
                                     class="mx-auto mb-2 grid h-7 w-7 place-items-center rounded-full border-2 border-solid border-violet-400 bg-white text-[10px] text-violet-500"
                                     data-add-action
-                                    ><i class="fa-solid fa-plus"></i></button
+                                    
+                            aria-label="Add action"><Plus size="1em" aria-hidden="true" /></button
                                   >
                                   <h4
                                     class="text-[12px] font-semibold text-neutral-900"
@@ -2497,10 +2591,11 @@ const jsonLd = {
                                     Add what should happen when this path
                                     matches.
                                   </p>
-                                  <button
+<button
                                     type="button"
                                     class="mt-2 text-[11px] font-medium text-violet-600 hover:text-violet-700"
-                                    data-add-action>Add first action</button
+                                    data-add-action
+                            aria-label="Add action">Add first action</button
                                   >
                                 </div>
                               </div>
@@ -2526,11 +2621,12 @@ const jsonLd = {
                                 stroke-linejoin="round"></path>
                             </svg>
                             <div class="flex flex-col items-center">
-                              <button
+<button
                                 type="button"
                                 class="grid h-[22px] w-[22px] place-items-center rounded-full border-2 border-solid border-violet-400 bg-white text-[10px] text-violet-500 shadow-sm hover:bg-violet-50"
                                 data-toast-message="Add step"
-                                ><i class="fa-solid fa-plus"></i></button
+                                
+                            aria-label="Add step"><Plus size="1em" aria-hidden="true" /></button
                               >
                             </div>
                           </div>
@@ -2588,7 +2684,7 @@ const jsonLd = {
               <div
                 class="mb-5 flex h-8 w-8 items-center justify-center text-2xl text-primary-500"
               >
-                <i class="fa-solid fa-clone"></i>
+                <Copy size="1em" aria-hidden="true" />
               </div>
 
               <h3
@@ -2621,7 +2717,7 @@ const jsonLd = {
               <div
                 class="mb-5 flex h-8 w-8 items-center justify-center text-2xl text-primary-500"
               >
-                <i class="fa-solid fa-location-crosshairs"></i>
+                <LocateFixed size="1em" aria-hidden="true" />
               </div>
 
               <h3
@@ -2654,7 +2750,7 @@ const jsonLd = {
               <div
                 class="mb-5 flex h-8 w-8 items-center justify-center text-2xl text-primary-500"
               >
-                <i class="fa-solid fa-list-check"></i>
+                <ListChecks size="1em" aria-hidden="true" />
               </div>
 
               <h3
@@ -2687,7 +2783,7 @@ const jsonLd = {
               <div
                 class="mb-5 flex h-8 w-8 items-center justify-center text-2xl text-primary-500"
               >
-                <i class="fa-solid fa-file-invoice-dollar"></i>
+                <Receipt size="1em" aria-hidden="true" />
               </div>
 
               <h3
@@ -3429,7 +3525,7 @@ const jsonLd = {
                   >
                     <span
                       class="text-[#9ACFFF] text-3xl max-xl:text-2xl mb-4 block"
-                      ><i class="fa-solid fa-thumbtack"></i></span
+                      ><Pin size="1em" aria-hidden="true" /></span
                     >
                     <h4
                       class="text-4xl max-2xl:text-2xl max-xl:text-xl font-semibold mb-4 text-neutral-900"
@@ -3464,7 +3560,7 @@ const jsonLd = {
                   >
                     <span
                       class="text-[#FF7272] text-3xl max-xl:text-2xl mb-4 block"
-                      ><i class="fa-solid fa-hard-hat"></i></span
+                      ><HardHat size="1em" aria-hidden="true" /></span
                     >
                     <h4
                       class="text-4xl max-2xl:text-2xl max-xl:text-xl font-semibold mb-4 text-neutral-900"
@@ -3498,7 +3594,7 @@ const jsonLd = {
                   >
                     <span
                       class="text-[#76C551] text-3xl max-xl:text-2xl mb-4 block"
-                      ><i class="fa-solid fa-route"></i></span
+                      ><Route size="1em" aria-hidden="true" /></span
                     >
                     <h4
                       class="text-4xl max-2xl:text-2xl max-xl:text-xl font-semibold mb-4 text-neutral-900"
@@ -3533,7 +3629,7 @@ const jsonLd = {
                   >
                     <span
                       class="text-[#6979F8] text-3xl max-xl:text-2xl mb-4 block"
-                      ><i class="fa-solid fa-signature"></i></span
+                      ><Signature size="1em" aria-hidden="true" /></span
                     >
                     <h4
                       class="text-4xl max-2xl:text-2xl max-xl:text-xl font-semibold mb-4 text-neutral-900"
@@ -3567,7 +3663,7 @@ const jsonLd = {
                   >
                     <span
                       class="text-[#FF7272] text-3xl max-xl:text-2xl mb-4 block"
-                      ><i class="fa-solid fa-file-invoice"></i></span
+                      ><FileText size="1em" aria-hidden="true" /></span
                     >
                     <h4
                       class="text-4xl max-2xl:text-2xl max-xl:text-xl font-semibold mb-4 text-neutral-900"
@@ -3608,9 +3704,7 @@ const jsonLd = {
                 >
                   <span class="wf-step-num">01</span>
                   <span class="wf-nav-label"
-                    ><i
-                      class="fa-solid fa-thumbtack wf-nav-icon mr-1.5 text-neutral-400"
-                    ></i>Lead Capture</span
+                    ><Pin size="1em" class="wf-nav-icon mr-1.5 text-neutral-400" aria-hidden="true" />Lead Capture</span
                   >
                 </li>
                 <li
@@ -3621,9 +3715,7 @@ const jsonLd = {
                 >
                   <span class="wf-step-num">02</span>
                   <span class="wf-nav-label"
-                    ><i
-                      class="fa-solid fa-hard-hat wf-nav-icon mr-1.5 text-neutral-400"
-                    ></i>Schedule</span
+                    ><HardHat size="1em" class="wf-nav-icon mr-1.5 text-neutral-400" aria-hidden="true" />Schedule</span
                   >
                 </li>
                 <li
@@ -3634,9 +3726,7 @@ const jsonLd = {
                 >
                   <span class="wf-step-num">03</span>
                   <span class="wf-nav-label"
-                    ><i
-                      class="fa-solid fa-route wf-nav-icon mr-1.5 text-neutral-400"
-                    ></i>Routing</span
+                    ><Route size="1em" class="wf-nav-icon mr-1.5 text-neutral-400" aria-hidden="true" />Routing</span
                   >
                 </li>
                 <li
@@ -3647,9 +3737,7 @@ const jsonLd = {
                 >
                   <span class="wf-step-num">04</span>
                   <span class="wf-nav-label"
-                    ><i
-                      class="fa-solid fa-signature wf-nav-icon mr-1.5 text-neutral-400"
-                    ></i>Job Proof</span
+                    ><Signature size="1em" class="wf-nav-icon mr-1.5 text-neutral-400" aria-hidden="true" />Job Proof</span
                   >
                 </li>
                 <li
@@ -3660,9 +3748,7 @@ const jsonLd = {
                 >
                   <span class="wf-step-num">05</span>
                   <span class="wf-nav-label"
-                    ><i
-                      class="fa-solid fa-file-invoice wf-nav-icon mr-1.5 text-neutral-400"
-                    ></i>Invoice</span
+                    ><FileText size="1em" class="wf-nav-icon mr-1.5 text-neutral-400" aria-hidden="true" />Invoice</span
                   >
                 </li>
               </ul>
@@ -3677,7 +3763,7 @@ const jsonLd = {
         >
           <div>
             <span class="text-[#9ACFFF] text-2xl block mb-2"
-              ><i class="fa-solid fa-thumbtack"></i></span
+              ><Pin size="1em" aria-hidden="true" /></span
             >
             <h4 class="text-2xl font-semibold text-neutral-900 mb-2">
               Capture the lead
@@ -3698,7 +3784,7 @@ const jsonLd = {
         >
           <div>
             <span class="text-[#FF7272] text-2xl block mb-2"
-              ><i class="fa-solid fa-hard-hat"></i></span
+              ><HardHat size="1em" aria-hidden="true" /></span
             >
             <h4 class="text-2xl font-semibold text-neutral-900 mb-2">
               Schedule
@@ -3718,7 +3804,7 @@ const jsonLd = {
         >
           <div>
             <span class="text-[#76C551] text-2xl block mb-2"
-              ><i class="fa-solid fa-route"></i></span
+              ><Route size="1em" aria-hidden="true" /></span
             >
             <h4 class="text-2xl font-semibold text-neutral-900 mb-2">
               Routing
@@ -3738,7 +3824,7 @@ const jsonLd = {
         >
           <div>
             <span class="text-[#6979F8] text-2xl block mb-2"
-              ><i class="fa-solid fa-signature"></i></span
+              ><Signature size="1em" aria-hidden="true" /></span
             >
             <h4 class="text-2xl font-semibold text-neutral-900 mb-2">
               Job proof
@@ -3758,7 +3844,7 @@ const jsonLd = {
         >
           <div>
             <span class="text-[#FF7272] text-2xl block mb-2"
-              ><i class="fa-solid fa-file-invoice"></i></span
+              ><FileText size="1em" aria-hidden="true" /></span
             >
             <h4 class="text-2xl font-semibold text-neutral-900 mb-2">
               Invoice
@@ -3832,9 +3918,7 @@ const jsonLd = {
                   <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
                 </div>
               </div>
-              <i
-                class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"
-              ></i>
+              <Quote size="1em" class="absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10" aria-hidden="true" />
             </div>
             <!-- Card 2 -->
             <div
@@ -3858,9 +3942,7 @@ const jsonLd = {
                   <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
                 </div>
               </div>
-              <i
-                class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"
-              ></i>
+              <Quote size="1em" class="absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10" aria-hidden="true" />
             </div>
             <!-- Card 3 -->
             <div
@@ -3883,9 +3965,7 @@ const jsonLd = {
                   <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
                 </div>
               </div>
-              <i
-                class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"
-              ></i>
+              <Quote size="1em" class="absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10" aria-hidden="true" />
             </div>
           </div>
           <!-- Duplicate Set for loop -->
@@ -3913,9 +3993,7 @@ const jsonLd = {
                   <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
                 </div>
               </div>
-              <i
-                class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"
-              ></i>
+              <Quote size="1em" class="absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10" aria-hidden="true" />
             </div>
             <!-- Card 2 Duplicate -->
             <div
@@ -3939,9 +4017,7 @@ const jsonLd = {
                   <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
                 </div>
               </div>
-              <i
-                class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"
-              ></i>
+              <Quote size="1em" class="absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10" aria-hidden="true" />
             </div>
             <!-- Card 3 Duplicate -->
             <div
@@ -3964,9 +4040,7 @@ const jsonLd = {
                   <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
                 </div>
               </div>
-              <i
-                class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"
-              ></i>
+              <Quote size="1em" class="absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10" aria-hidden="true" />
             </div>
           </div>
         </div>
@@ -4004,9 +4078,7 @@ const jsonLd = {
                   <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
                 </div>
               </div>
-              <i
-                class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"
-              ></i>
+              <Quote size="1em" class="absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10" aria-hidden="true" />
             </div>
             <!-- Card 5 -->
             <div
@@ -4031,9 +4103,7 @@ const jsonLd = {
                   <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
                 </div>
               </div>
-              <i
-                class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"
-              ></i>
+              <Quote size="1em" class="absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10" aria-hidden="true" />
             </div>
             <!-- Card 6 -->
             <div
@@ -4058,9 +4128,7 @@ const jsonLd = {
                   <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
                 </div>
               </div>
-              <i
-                class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"
-              ></i>
+              <Quote size="1em" class="absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10" aria-hidden="true" />
             </div>
           </div>
           <!-- Duplicate Set for loop -->
@@ -4090,9 +4158,7 @@ const jsonLd = {
                   <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
                 </div>
               </div>
-              <i
-                class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"
-              ></i>
+              <Quote size="1em" class="absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10" aria-hidden="true" />
             </div>
             <!-- Card 5 Duplicate -->
             <div
@@ -4117,9 +4183,7 @@ const jsonLd = {
                   <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
                 </div>
               </div>
-              <i
-                class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"
-              ></i>
+              <Quote size="1em" class="absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10" aria-hidden="true" />
             </div>
             <!-- Card 6 Duplicate -->
             <div
@@ -4144,9 +4208,7 @@ const jsonLd = {
                   <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
                 </div>
               </div>
-              <i
-                class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"
-              ></i>
+              <Quote size="1em" class="absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10" aria-hidden="true" />
             </div>
           </div>
         </div>
@@ -4156,7 +4218,7 @@ const jsonLd = {
 
   <!-- SECTION 6: How We Compare -->
   <!-- How We Compare section -->
-  <section class="py-36 max-xl:py-28 max-lg:py-20 max-md:py-16">
+  <section class="how-we-compare py-36 max-xl:py-28 max-lg:py-20 max-md:py-16">
     <div class="my-container">
       <!-- Header Section -->
       <div class="text-center mb-10 max-md:mb-7">
@@ -4209,9 +4271,9 @@ const jsonLd = {
           </div>
 
           <div
-            class="py-4 px-6 text-center font-light text-base text-primary-600 bg-primary-50/55"
+            class="pros-cell py-4 font-light text-base text-primary-600 bg-primary-50/55"
           >
-            <i class="fa-solid fa-check mr-2"></i>Included
+            <Check size="1em" class="inline-block ml-1" aria-hidden="true" />Included
           </div>
 
           <div
@@ -4230,9 +4292,9 @@ const jsonLd = {
           </div>
 
           <div
-            class="py-4 px-6 text-center font-light text-base text-primary-600 bg-primary-50/55"
+            class="pros-cell py-4 font-light text-base text-primary-600 bg-primary-50/55"
           >
-            <i class="fa-solid fa-check mr-2"></i>Built in
+            <Check size="1em" class="inline-block ml-1" aria-hidden="true" />Built in
           </div>
 
           <div class="py-4 px-6 text-center font-light text-base text-red-600">
@@ -4249,9 +4311,9 @@ const jsonLd = {
           </div>
 
           <div
-            class="py-4 px-6 text-center font-light text-base text-primary-600 bg-primary-50/55"
+            class="pros-cell py-4 font-light text-base text-primary-600 bg-primary-50/55"
           >
-            <i class="fa-solid fa-check mr-2"></i>Real time
+            <Check size="1em" class="inline-block ml-1" aria-hidden="true" />Real time
           </div>
 
           <div class="py-4 px-6 text-center font-light text-base text-red-600">
@@ -4268,9 +4330,9 @@ const jsonLd = {
           </div>
 
           <div
-            class="py-4 px-6 text-center font-light text-base text-primary-600 bg-primary-50/55"
+            class="pros-cell py-4 font-light text-base text-primary-600 bg-primary-50/55"
           >
-            <i class="fa-solid fa-check mr-2"></i>Both
+            <Check size="1em" class="inline-block ml-1" aria-hidden="true" />Both
           </div>
 
           <div
@@ -4289,9 +4351,9 @@ const jsonLd = {
           </div>
 
           <div
-            class="py-4 px-6 text-center font-light text-base text-primary-600 bg-primary-50/55"
+            class="pros-cell py-4 font-light text-base text-primary-600 bg-primary-50/55"
           >
-            <i class="fa-solid fa-check mr-2"></i>Built in
+            <Check size="1em" class="inline-block ml-1" aria-hidden="true" />Built in
           </div>
 
           <div
@@ -4308,9 +4370,9 @@ const jsonLd = {
           </div>
 
           <div
-            class="py-4 px-6 text-center font-light text-base text-primary-600 bg-primary-50/55"
+            class="pros-cell py-4  font-light text-base text-primary-600 bg-primary-50/55"
           >
-            <i class="fa-solid fa-check mr-2"></i>No-code
+            <Check size="1em" class="inline-block ml-1" aria-hidden="true" />No-code
           </div>
 
           <div class="py-4 px-6 text-center font-light text-base text-red-600">
@@ -4387,7 +4449,7 @@ const jsonLd = {
           <div
             class="py-3.5 px-7 text-base font-light text-primary-600 bg-primary-50/55 border-b border-neutral-200 border-solid"
           >
-            <i class="fa-solid fa-check mr-2"></i>Included
+            <Check size="1em" class="mr-2" aria-hidden="true" />Included
           </div>
 
           <div
@@ -4400,7 +4462,7 @@ const jsonLd = {
           <div
             class="py-3.5 px-7 text-base font-light text-primary-600 bg-primary-50/55 border-b border-neutral-200 border-solid"
           >
-            <i class="fa-solid fa-check mr-2"></i>Built in
+            <Check size="1em" class="mr-2" aria-hidden="true" />Built in
           </div>
 
           <div
@@ -4413,7 +4475,7 @@ const jsonLd = {
           <div
             class="py-3.5 px-7 text-base font-light text-primary-600 bg-primary-50/55 border-b border-neutral-200 border-solid"
           >
-            <i class="fa-solid fa-check mr-2"></i>Real time
+            <Check size="1em" class="mr-2" aria-hidden="true" />Real time
           </div>
 
           <div
@@ -4426,7 +4488,7 @@ const jsonLd = {
           <div
             class="py-3.5 px-7 text-base font-light text-primary-600 bg-primary-50/55 border-b border-neutral-200 border-solid"
           >
-            <i class="fa-solid fa-check mr-2"></i>Both
+            <Check size="1em" class="mr-2" aria-hidden="true" />Both
           </div>
 
           <div
@@ -4439,7 +4501,7 @@ const jsonLd = {
           <div
             class="py-3.5 px-7 text-base font-light text-primary-600 bg-primary-50/55 border-b border-neutral-200 border-solid"
           >
-            <i class="fa-solid fa-check mr-2"></i>Built in
+            <Check size="1em" class="mr-2" aria-hidden="true" />Built in
           </div>
 
           <div
@@ -4452,7 +4514,7 @@ const jsonLd = {
           <div
             class="py-3.5 px-7 text-base font-light text-primary-600 bg-primary-50/55"
           >
-            <i class="fa-solid fa-check mr-2"></i>No-code
+            <Check size="1em" class="mr-2" aria-hidden="true" />No-code
           </div>
 
           <div class="py-3.5 px-7 text-base font-light text-red-600">
@@ -4494,7 +4556,7 @@ const jsonLd = {
           <span
             class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-xl text-primary-500 transition-colors duration-200 group-hover:bg-primary-500 group-hover:text-white max-md:h-10 max-md:w-10 max-md:text-lg"
           >
-            <i class="fa-solid fa-house-chimney"></i>
+            <House size="1em" aria-hidden="true" />
           </span>
 
           <h6
@@ -4512,7 +4574,7 @@ const jsonLd = {
           <span
             class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-xl text-primary-500 transition-colors duration-200 group-hover:bg-primary-500 group-hover:text-white max-md:h-10 max-md:w-10 max-md:text-lg"
           >
-            <i class="fa-solid fa-solar-panel"></i>
+            <SolarPanel size="1em" aria-hidden="true" />
           </span>
 
           <h6
@@ -4530,7 +4592,7 @@ const jsonLd = {
           <span
             class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-xl text-primary-500 transition-colors duration-200 group-hover:bg-primary-500 group-hover:text-white max-md:h-10 max-md:w-10 max-md:text-lg"
           >
-            <i class="fa-solid fa-temperature-half"></i>
+            <Thermometer size="1em" aria-hidden="true" />
           </span>
 
           <h6
@@ -4548,7 +4610,7 @@ const jsonLd = {
           <span
             class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-xl text-primary-500 transition-colors duration-200 group-hover:bg-primary-500 group-hover:text-white max-md:h-10 max-md:w-10 max-md:text-lg"
           >
-            <i class="fa-solid fa-faucet-drip"></i>
+            <Droplets size="1em" aria-hidden="true" />
           </span>
 
           <h6
@@ -4566,7 +4628,7 @@ const jsonLd = {
           <span
             class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-xl text-primary-500 transition-colors duration-200 group-hover:bg-primary-500 group-hover:text-white max-md:h-10 max-md:w-10 max-md:text-lg"
           >
-            <i class="fa-solid fa-bolt"></i>
+            <Zap size="1em" aria-hidden="true" />
           </span>
 
           <h6
@@ -4584,7 +4646,7 @@ const jsonLd = {
           <span
             class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-xl text-primary-500 transition-colors duration-200 group-hover:bg-primary-500 group-hover:text-white max-md:h-10 max-md:w-10 max-md:text-lg"
           >
-            <i class="fa-solid fa-network-wired"></i>
+            <Network size="1em" aria-hidden="true" />
           </span>
 
           <h6
@@ -4602,7 +4664,7 @@ const jsonLd = {
           <span
             class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-xl text-primary-500 transition-colors duration-200 group-hover:bg-primary-500 group-hover:text-white max-md:h-10 max-md:w-10 max-md:text-lg"
           >
-            <i class="fa-solid fa-water-ladder"></i>
+            <WavesLadder size="1em" aria-hidden="true" />
           </span>
 
           <h6
@@ -4620,7 +4682,7 @@ const jsonLd = {
           <span
             class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-xl text-primary-500 transition-colors duration-200 group-hover:bg-primary-500 group-hover:text-white max-md:h-10 max-md:w-10 max-md:text-lg"
           >
-            <i class="fa-solid fa-paint-roller"></i>
+            <PaintRoller size="1em" aria-hidden="true" />
           </span>
 
           <h6
@@ -4638,7 +4700,7 @@ const jsonLd = {
           <span
             class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-xl text-primary-500 transition-colors duration-200 group-hover:bg-primary-500 group-hover:text-white max-md:h-10 max-md:w-10 max-md:text-lg"
           >
-            <i class="fa-solid fa-bug"></i>
+            <Bug size="1em" aria-hidden="true" />
           </span>
 
           <h6
@@ -4656,7 +4718,7 @@ const jsonLd = {
           <span
             class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-xl text-primary-500 transition-colors duration-200 group-hover:bg-primary-500 group-hover:text-white max-md:h-10 max-md:w-10 max-md:text-lg"
           >
-            <i class="fa-solid fa-spray-can-sparkles"></i>
+            <SprayCan size="1em" aria-hidden="true" />
           </span>
 
           <h6
@@ -4674,7 +4736,7 @@ const jsonLd = {
           <span
             class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-xl text-primary-500 transition-colors duration-200 group-hover:bg-primary-500 group-hover:text-white max-md:h-10 max-md:w-10 max-md:text-lg"
           >
-            <i class="fa-solid fa-leaf"></i>
+            <Leaf size="1em" aria-hidden="true" />
           </span>
 
           <h6
@@ -4692,7 +4754,7 @@ const jsonLd = {
           <span
             class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-xl text-primary-500 transition-colors duration-200 group-hover:bg-primary-500 group-hover:text-white max-md:h-10 max-md:w-10 max-md:text-lg"
           >
-            <i class="fa-solid fa-shield-halved"></i>
+            <Shield size="1em" aria-hidden="true" />
           </span>
 
           <h6
@@ -4710,7 +4772,7 @@ const jsonLd = {
           <span
             class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-xl text-primary-500 transition-colors duration-200 group-hover:bg-primary-500 group-hover:text-white max-md:h-10 max-md:w-10 max-md:text-lg"
           >
-            <i class="fa-solid fa-warehouse"></i>
+            <Warehouse size="1em" aria-hidden="true" />
           </span>
 
           <h6
@@ -4728,7 +4790,7 @@ const jsonLd = {
           <span
             class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-xl text-primary-500 transition-colors duration-200 group-hover:bg-primary-500 group-hover:text-white max-md:h-10 max-md:w-10 max-md:text-lg"
           >
-            <i class="fa-solid fa-truck-ramp-box"></i>
+            <Truck size="1em" aria-hidden="true" />
           </span>
 
           <h6
@@ -4746,7 +4808,7 @@ const jsonLd = {
           <span
             class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-500/10 text-xl text-primary-500 transition-colors duration-200 group-hover:bg-primary-500 group-hover:text-white max-md:h-10 max-md:w-10 max-md:text-lg"
           >
-            <i class="fa-solid fa-house-flood-water"></i>
+            <Waves size="1em" aria-hidden="true" />
           </span>
 
           <h6
@@ -4782,7 +4844,7 @@ const jsonLd = {
         <div
           class="flex items-center text-sm text-neutral-900 px-5 py-2.5 border border-solid border-neutral-200 rounded-full"
         >
-          <i class="fa-solid fa-check mr-2 text-primary-500"></i>
+          <Check size="1em" class="mr-2 text-primary-500" aria-hidden="true" />
           <span>Pro-rated billing. No setup fee</span>
         </div>
         <!--
@@ -4791,7 +4853,7 @@ const jsonLd = {
                 class="flex items-center text-sm text-primary-600 font-medium px-5 py-2.5 border border-solid border-primary-200 rounded-full hover:bg-primary-50 transition-colors"
             >
                 Compare plans in detail
-                <i class="fa-solid fa-arrow-down ml-2 text-xs"></i>
+                <ArrowDown size="1em" class="ml-2 text-xs" aria-hidden="true" />
             </a> -->
       </div>
 
@@ -4803,7 +4865,7 @@ const jsonLd = {
           class="flex flex-col rounded-3xl border border-solid border-neutral-200 p-8 max-md:p-6 transition duration-150 ease-out hover:scale-[1.03]"
         >
           <div class="flex items-center gap-4 mb-3">
-            <i class="fa-solid fa-map text-xl text-blue-600"></i>
+            <Map size="1em" class="text-xl text-blue-600" aria-hidden="true" />
             <h3 class="text-3xl max-xl:text-2xl font-bold text-neutral-900">
               Prospect
             </h3>
@@ -4844,33 +4906,27 @@ const jsonLd = {
 
           <ul class="space-y-3.5 text-neutral-700 flex-1">
             <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-              <i class="fa-solid fa-check text-primary-500 mr-3 mt-1 shrink-0"
-              ></i>
+              <Check size="1em" class="text-primary-500 mr-3 mt-1 shrink-0" aria-hidden="true" />
               <span>Unlimited Territories & Campaigns</span>
             </li>
             <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-              <i class="fa-solid fa-check text-primary-500 mr-3 mt-1 shrink-0"
-              ></i>
+              <Check size="1em" class="text-primary-500 mr-3 mt-1 shrink-0" aria-hidden="true" />
               <span>Route Planning & Optimization</span>
             </li>
             <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-              <i class="fa-solid fa-check text-primary-500 mr-3 mt-1 shrink-0"
-              ></i>
+              <Check size="1em" class="text-primary-500 mr-3 mt-1 shrink-0" aria-hidden="true" />
               <span>Pre-Knocked Data (15¢ per address)</span>
             </li>
             <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-              <i class="fa-solid fa-check text-primary-500 mr-3 mt-1 shrink-0"
-              ></i>
+              <Check size="1em" class="text-primary-500 mr-3 mt-1 shrink-0" aria-hidden="true" />
               <span>Presentations & Real-time Tracking</span>
             </li>
             <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-              <i class="fa-solid fa-check text-primary-500 mr-3 mt-1 shrink-0"
-              ></i>
+              <Check size="1em" class="text-primary-500 mr-3 mt-1 shrink-0" aria-hidden="true" />
               <span>Digital Contracts & E-Signature</span>
             </li>
             <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-              <i class="fa-solid fa-phone text-primary-500 mr-3 mt-1 shrink-0"
-              ></i>
+              <Phone size="1em" class="text-primary-500 mr-3 mt-1 shrink-0" aria-hidden="true" />
               <span
                 >Engage Add-On <span class="text-neutral-500"
                   >($15/number/mo)</span
@@ -4878,8 +4934,7 @@ const jsonLd = {
               >
             </li>
             <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-              <i class="fa-solid fa-plug text-neutral-400 mr-3 mt-1 shrink-0"
-              ></i>
+              <Plug size="1em" class="text-neutral-400 mr-3 mt-1 shrink-0" aria-hidden="true" />
               <span class="text-neutral-500"
                 >Zapier & FlowChef integrations</span
               >
@@ -4898,7 +4953,7 @@ const jsonLd = {
           </div>
 
           <div class="flex items-center gap-4 mb-3 mt-2">
-            <i class="fa-solid fa-chart-line text-xl text-primary-500"></i>
+            <ChartLine size="1em" class="text-xl text-primary-500" aria-hidden="true" />
             <h3 class="text-3xl max-xl:text-2xl font-bold text-white">
               Growth
             </h3>
@@ -4941,34 +4996,27 @@ const jsonLd = {
             <li
               class="flex items-start text-base leading-7 max-md:text-[15px] font-semibold"
             >
-              <i class="fa-solid fa-check text-primary-500 mr-3 mt-1 shrink-0"
-              ></i>
+              <Check size="1em" class="text-primary-500 mr-3 mt-1 shrink-0" aria-hidden="true" />
               <span>Full sales-to-payment workflow</span>
             </li>
             <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-              <i class="fa-solid fa-check text-primary-500 mr-3 mt-1 shrink-0"
-              ></i>
+              <Check size="1em" class="text-primary-500 mr-3 mt-1 shrink-0" aria-hidden="true" />
               <span>Unlimited workspaces</span>
             </li>
             <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-              <i class="fa-solid fa-check text-primary-500 mr-3 mt-1 shrink-0"
-              ></i>
+              <Check size="1em" class="text-primary-500 mr-3 mt-1 shrink-0" aria-hidden="true" />
               <span>Prospect + full CRM in one platform</span>
             </li>
             <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-              <i class="fa-solid fa-check text-primary-500 mr-3 mt-1 shrink-0"
-              ></i>
+              <Check size="1em" class="text-primary-500 mr-3 mt-1 shrink-0" aria-hidden="true" />
               <span>Estimates, invoices & vendor billing</span>
             </li>
             <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-              <i
-                class="fa-solid fa-user-tie text-primary-500 mr-3 mt-1 shrink-0"
-              ></i>
+              <BriefcaseBusiness size="1em" class="text-primary-500 mr-3 mt-1 shrink-0" aria-hidden="true" />
               <span>Dedicated success manager</span>
             </li>
             <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-              <i class="fa-solid fa-phone text-primary-500 mr-3 mt-1 shrink-0"
-              ></i>
+              <Phone size="1em" class="text-primary-500 mr-3 mt-1 shrink-0" aria-hidden="true" />
               <span
                 >Engage Add-On <span class="text-neutral-500"
                   >($15/number/mo)</span
@@ -4976,8 +5024,7 @@ const jsonLd = {
               >
             </li>
             <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-              <i class="fa-solid fa-plug text-neutral-500 mr-3 mt-1 shrink-0"
-              ></i>
+              <Plug size="1em" class="text-neutral-500 mr-3 mt-1 shrink-0" aria-hidden="true" />
               <span class="text-neutral-500"
                 >Zapier & FlowChef integrations</span
               >
@@ -4990,7 +5037,7 @@ const jsonLd = {
           class="flex flex-col rounded-3xl border border-solid border-neutral-200 p-8 max-md:p-6 transition duration-150 ease-out hover:scale-[1.03]"
         >
           <div class="flex items-center gap-4 mb-3">
-            <i class="fa-solid fa-boxes text-xl text-orange-600"></i>
+            <Boxes size="1em" class="text-xl text-orange-600" aria-hidden="true" />
             <h3 class="text-3xl max-xl:text-2xl font-bold text-neutral-900">
               Organize
             </h3>
@@ -5031,33 +5078,27 @@ const jsonLd = {
 
           <ul class="space-y-3.5 text-neutral-700 flex-1">
             <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-              <i class="fa-solid fa-check text-primary-500 mr-3 mt-1 shrink-0"
-              ></i>
+              <Check size="1em" class="text-primary-500 mr-3 mt-1 shrink-0" aria-hidden="true" />
               <span>Pipelines & Lead Management</span>
             </li>
             <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-              <i class="fa-solid fa-check text-primary-500 mr-3 mt-1 shrink-0"
-              ></i>
+              <Check size="1em" class="text-primary-500 mr-3 mt-1 shrink-0" aria-hidden="true" />
               <span>Estimates & Work Orders</span>
             </li>
             <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-              <i class="fa-solid fa-check text-primary-500 mr-3 mt-1 shrink-0"
-              ></i>
+              <Check size="1em" class="text-primary-500 mr-3 mt-1 shrink-0" aria-hidden="true" />
               <span>Invoices & Payments</span>
             </li>
             <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-              <i class="fa-solid fa-check text-primary-500 mr-3 mt-1 shrink-0"
-              ></i>
+              <Check size="1em" class="text-primary-500 mr-3 mt-1 shrink-0" aria-hidden="true" />
               <span>Digital Contracts & E-Signature</span>
             </li>
             <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-              <i class="fa-solid fa-check text-primary-500 mr-3 mt-1 shrink-0"
-              ></i>
+              <Check size="1em" class="text-primary-500 mr-3 mt-1 shrink-0" aria-hidden="true" />
               <span>Email Communication & Permissions</span>
             </li>
             <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-              <i class="fa-solid fa-phone text-primary-500 mr-3 mt-1 shrink-0"
-              ></i>
+              <Phone size="1em" class="text-primary-500 mr-3 mt-1 shrink-0" aria-hidden="true" />
               <span
                 >Engage Add-On <span class="text-neutral-500"
                   >($15/number/mo)</span
@@ -5065,8 +5106,7 @@ const jsonLd = {
               >
             </li>
             <li class="flex items-start text-base leading-7 max-md:text-[15px]">
-              <i class="fa-solid fa-plug text-neutral-400 mr-3 mt-1 shrink-0"
-              ></i>
+              <Plug size="1em" class="text-neutral-400 mr-3 mt-1 shrink-0" aria-hidden="true" />
               <span class="text-neutral-500"
                 >Zapier & FlowChef integrations</span
               >
@@ -5102,7 +5142,7 @@ const jsonLd = {
               <span
                 class="mb-3 inline-flex items-center gap-2 rounded-full bg-[#0f172a] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-white"
               >
-                <i class="fa-solid fa-calculator text-primary-400"></i>
+                <Calculator size="1em" class="text-primary-400" aria-hidden="true" />
                 Quick Estimate
               </span>
 
@@ -5121,7 +5161,7 @@ const jsonLd = {
             <div
               class="hidden h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary-500 text-white sm:flex"
             >
-              <i class="fa-solid fa-chart-line text-xl"></i>
+              <ChartLine size="1em" class="text-xl" aria-hidden="true" />
             </div>
           </div>
 
@@ -5150,7 +5190,7 @@ const jsonLd = {
                 <span
                   class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-neutral-400"
                 >
-                  <i class="fa-solid fa-users text-sm"></i>
+                  <Users size="1em" class="text-sm" aria-hidden="true" />
                 </span>
               </div>
             </div>
@@ -5203,7 +5243,7 @@ const jsonLd = {
                 <span
                   class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-neutral-400"
                 >
-                  <i class="fa-solid fa-phone text-sm"></i>
+                  <Phone size="1em" class="text-sm" aria-hidden="true" />
                 </span>
               </div>
 
@@ -5261,7 +5301,7 @@ const jsonLd = {
                 <span
                   class="flex h-9 w-9 items-center justify-center rounded-xl bg-primary-500/15 text-primary-400"
                 >
-                  <i class="fa-solid fa-user-check text-sm"></i>
+                  <UserCheck size="1em" class="text-sm" aria-hidden="true" />
                 </span>
                 <span class="text-sm text-neutral-300"
                   >Volume discount starts at <span
@@ -5276,7 +5316,7 @@ const jsonLd = {
                 <span
                   class="flex h-9 w-9 items-center justify-center rounded-xl bg-primary-500/15 text-primary-400"
                 >
-                  <i class="fa-solid fa-phone-volume text-sm"></i>
+                  <PhoneCall size="1em" class="text-sm" aria-hidden="true" />
                 </span>
                 <span class="text-sm text-neutral-300"
                   >Engage phone numbers are optional</span
@@ -5287,7 +5327,7 @@ const jsonLd = {
                 <span
                   class="flex h-9 w-9 items-center justify-center rounded-xl bg-primary-500/15 text-primary-400"
                 >
-                  <i class="fa-solid fa-credit-card text-sm"></i>
+                  <CreditCard size="1em" class="text-sm" aria-hidden="true" />
                 </span>
                 <span class="text-sm text-neutral-300"
                   >Estimate before taxes or discounts</span
@@ -5786,4 +5826,6 @@ const jsonLd = {
       </div>
     </div>
   </section>
+
+  <script src="../scripts/home.js"></script>
 </KnockioHomeLayout>
