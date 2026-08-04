@@ -1,12 +1,16 @@
-/* ═══════════════════════════════════════════════
+/* ═════════════════════════════════════════════
    HOMEPAGE — Consolidated Scripts
+   0. Smooth Scroll (Divi smoothscroll.js)
    1. Product Demo (tabs, sidebar, map, drag-drop, toast)
    2. Platform Capabilities Scroll Tabs
    3. Workflow Scroll Steps
    4. Calculator + Checkout
-   ═══════════════════════════════════════════════ */
+   ══════════════════════════════════════════════ */
 
-// ── 1. Product Demo ──────────────────────────────────────────────────────────
+// ── 0. Smooth Scroll (legacy Divi smoothscroll.js) ──────────────────────────
+import "./smoothscroll.js";
+
+// ── 1. Product Demo ─────────────────────────────────────────────────────────
 (function () {
   var TAB_DURATION = 5000;
   var MAP_ASSET_URL = "/assets/cfw/map-walnut-creek.webp";
@@ -356,14 +360,14 @@
     return { trackTop: window.scrollY + rect.top, scrollable: Math.max(0, track.offsetHeight - window.innerHeight) };
   }
 
-  function getScrollStepIndex(track, steps) {
+  function getScrollStepRaw(track, steps) {
     if (!track || steps < 1) return 0;
     var m = getTrackMetrics(track);
     if (m.scrollable <= 0) return 0;
     var y = window.scrollY;
     if (y <= m.trackTop) return 0;
     if (y >= m.trackTop + m.scrollable) return steps - 1;
-    return Math.min(steps - 1, Math.round(((y - m.trackTop) / m.scrollable) * (steps - 1)));
+    return Math.max(0, Math.min(steps - 1, ((y - m.trackTop) / m.scrollable) * (steps - 1)));
   }
 
   function scrollToTrackStep(track, steps, index) {
@@ -464,6 +468,9 @@
     var compactMode = isCompact() && !reducedMotion;
     var header = document.querySelector(".kh-header");
     var HEADER_HIDE_OFFSET = 68;
+    var lerpTarget = 0;
+    var lerpCurrent = 0;
+    var LERP_FACTOR = 0.12;
 
     function manageHeaderVisibility() {
       if (!header) return;
@@ -495,7 +502,18 @@
       animateCards(panels[index]);
     }
 
-    function updateDesktop() { setDesktopStep(getScrollStepIndex(track, steps)); }
+    function updateDesktop() {
+      lerpTarget = getScrollStepRaw(track, steps);
+      var diff = lerpTarget - lerpCurrent;
+      if (Math.abs(diff) < 0.01) {
+        lerpCurrent = lerpTarget;
+      } else {
+        lerpCurrent += diff * LERP_FACTOR;
+      }
+      var roundedIndex = Math.round(lerpCurrent);
+      setDesktopStep(roundedIndex);
+    }
+
     function updateCompact() { setTabOnly(getCompactTabIndex(panels)); }
     function update() { if (compactMode) updateCompact(); else if (!reducedMotion) updateDesktop(); }
 
@@ -522,18 +540,32 @@
         if (isNaN(index)) return;
         if (compactMode) {
           currentIndex = index;
+          lerpTarget = index;
+          lerpCurrent = index;
           setTabButtonState(btn, true);
           navItems.forEach(function (other, i) { if (i !== index) setTabButtonState(other, false); });
           hpTabs1MoveIndicator(btn);
           centerActiveTabInNav(btn);
           scrollToCompactPanel(panels[index]);
         } else {
+          lerpTarget = index;
+          lerpCurrent = index;
           scrollToTrackStep(track, steps, index);
         }
       });
     });
 
     var ticking = false;
+    var animFrameId = null;
+    function lerpTick() {
+      var diff = lerpTarget - lerpCurrent;
+      if (Math.abs(diff) >= 0.01) {
+        lerpCurrent += diff * LERP_FACTOR;
+        var roundedIndex = Math.round(lerpCurrent);
+        setDesktopStep(roundedIndex);
+      }
+      animFrameId = requestAnimationFrame(lerpTick);
+    }
     function onScroll() { if (ticking) return; ticking = true; requestAnimationFrame(function () { update(); manageHeaderVisibility(); ticking = false; }); }
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", function () {
@@ -556,7 +588,7 @@
     update();
     manageHeaderVisibility();
     if (compactMode) { setTabOnly(0); centerActiveTabInNav(navItems[0]); }
-    else { hpTabs1MoveIndicator(navItems[0]); }
+    else { hpTabs1MoveIndicator(navItems[0]); lerpCurrent = 0; lerpTarget = 0; animFrameId = requestAnimationFrame(lerpTick); }
   }
 
   if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded", initPlatformScrollScrolly); }
@@ -739,11 +771,20 @@
     var breakdownEl = calcEl.querySelector("[data-kio-breakdown]");
     if (!usersInput || !planInput || !linesInput || !totalEl || !breakdownEl) return;
 
-    var users = Math.max(1, parseInt(usersInput.value, 10) || 1);
-    var lines = Math.max(0, parseInt(linesInput.value, 10) || 0);
+    var usersRaw = usersInput.value.trim();
+    var linesRaw = linesInput.value.trim();
     var plan = planInput.value;
-    usersInput.value = users;
-    linesInput.value = lines;
+
+    var usersEmpty = usersRaw === "";
+    var linesEmpty = linesRaw === "";
+    var users = usersEmpty ? 0 : Math.max(0, parseInt(usersRaw, 10) || 0);
+    var lines = linesEmpty ? 0 : Math.max(0, parseInt(linesRaw, 10) || 0);
+
+    if (usersEmpty) {
+      totalEl.textContent = "$25 / mo";
+      breakdownEl.textContent = "1 user × $25";
+      return;
+    }
 
     var rate = users >= 5 ? RATES[plan].rate_5p : RATES[plan].rate_1_4;
     var total = users * rate + lines * ENGAGE_RATE;

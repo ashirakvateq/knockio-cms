@@ -17,29 +17,29 @@ export const stats = [
 
 export const featureCards = [
   {
-    title: 'No Overlapping Routes. Ever.',
-    copy: 'Assign streets before reps leave the lot. When a rep moves on, every door they knocked stays with you.',
+    title: 'No Overlapping Territory. Ever',
+    copy: 'Draw unlimited territories and assign streets before reps leave the lot. Run one market or ten from the same account. When a rep moves on, every door they knocked stays with you.',
     image: `${assetBaseGlob}/011.webp`,
     width: 603,
     height: 527,
   },
   {
-    title: 'Full Field Visibility',
-    copy: "See every rep's exact location in real time. Know who's working and who's sitting in their car, without picking up the phone.",
+    title: 'Full Field Visibility. Down to the Foot',
+    copy: "See every rep's exact location in real time. Every lead shows how far the rep was from the door when they logged it. Know who's working and who's sitting in their car, without picking up the phone.",
     image: `${assetBaseGlob}/03_1.webp`,
     width: 843,
     height: 561,
   },
   {
     title: 'Every Door Gets a Record',
-    copy: "Outcome, photo, notes logged in under 10 seconds. No leads falling through the cracks because a rep's notes lived in their phone.",
+    copy: "Outcome, photo, notes logged in under 10 seconds. Not home becomes a scheduled callback before the rep steps off the porch. If the rep forgets, the system doesn't.",
     image: `${assetBaseGlob}/04_1.webp`,
     width: 718,
     height: 553,
   },
   {
-    title: 'Estimates, Invoicing, and Payment',
-    copy: 'Estimate from the driveway. Signature on the porch. Payment before you leave the block. Not five tools duct-taped together.',
+    title: 'Get It Signed at the Door',
+    copy: 'Estimate built at the door. Agreement signed on the phone before the rep leaves. The deal is locked while a competitor is still knocking.',
     image: `${assetBaseGlob}/07_1.webp`,
     width: 634,
     height: 459,
@@ -49,32 +49,32 @@ export const featureCards = [
 export const platformColumns = [
   {
     title: 'Canvass',
-    items: ['Custom territory boundaries', 'Unlimited campaigns', 'Pre-knocked data import', 'Route assignment per rep'],
+    items: ['Unlimited territories and campaigns', 'Custom boundaries, multiple markets, one account', 'Pre-knocked data import', 'Territory assignment per rep or team'],
   },
   {
     title: 'Capture',
-    items: ['Outcome logging in under 10 seconds', 'Photo capture at the door', 'Automatic follow-up task creation', 'Team visibility into open leads'],
+    items: ['Outcome logging in under 10 seconds', 'Photo capture at the door', 'Not-homes become scheduled callbacks','Follow-up runs automatically on every lead'],
   },
   {
     title: 'Track',
-    items: ['Live GPS rep tracking and real-time map fill-in', 'Daily rep performance summary', 'Manager dashboard'],
+    items: ['Live GPS rep tracking on a shared map', 'Color-coded statuses you define', 'Lead proximity in feet on every lead', 'Custom reports and granular permissions'],
   },
   {
     title: 'Close',
-    items: ['Branded estimate builder and mobile digital signature', 'Work order auto-generation', 'On-site and remote payment collection'],
+    items: ['Branded estimate builder, sent from the driveway', 'Digital contracts signed, at the door', 'Collect on-site & remote payments', 'Invoices & payment status, Every job'],
   },
 ];
 
 export const fullStackItems = [
   'Assign and manage unlimited territories from the admin dashboard',
-  'Track reps live on a shared map, no check-in calls needed.',
-  'Log door outcomes, photos, and notes from the field app in seconds.',
-  'Send branded estimates from the driveway before you move to the next house.',
-  'Auto-generate work orders when a job is won, no re-entry.',
-  'Collect payment on-site or send a payment link from your phone.',
-  'Set permissions for reps, team leads, and office admins separately.',
-  'Run performance reports by rep, territory, or campaign.',
-  'Your data stays with your company, not with your reps.',
+  'Track reps live on a shared map, no check-in calls needed',
+  'See how far a rep was from the door on every lead they log',
+  'Log door outcomes, photos, and notes from the field app in seconds',
+  'Turn a not-home into a scheduled callback before the rep walks away',
+  'Trigger tasks, texts, and emails automatically when a lead moves stage',
+  'Send branded estimates from the driveway before you move to the next house',
+  'Collect payment on-site or send a payment link from your phon',
+  'Set permissions for reps, team leads, and office admins separately',
 ];
 
 export const workSteps = [
@@ -179,14 +179,22 @@ export const faqs = [
   },
   {
     question: 'How is Knockio different from SalesRabbit or SPOTIO?',
-    answer: 'SalesRabbit and SPOTIO stop at the knock. Knockio continues through estimates, work orders, invoices, and payment in the same platform, with no annual contract trap.',
+    answer: 'SalesRabbit and SPOTIO stop at the knock. Knockio continues through estimates, contracts, invoices, and payment in the same platform, with no annual contract trap.',
   },
   {
     question: 'What happens to my data if I ever leave?',
     answer: 'It is yours. Export contacts, door records, lead history, and photos at any time. No fees. No runaround.',
   },
   {
-    question: 'Can I see it before committing?',
-    answer: 'Yes. Book a live demo: a real session built around your vertical and team size, not a slide deck or recorded walkthrough.',
+    question: 'We already have a CRM. Why switch?',
+    answer: 'Most CRMs were never built for reps knocking doors. They have no canvassing, no in-app photos, no signature on the porch. Knockio is the whole thing, not a CRM with field tools bolted on.',
   },
+  {
+    question: 'Is $20 per user worth it?',
+    answer: 'One job that doesn\'t slip is worth more than a year of seats. Your rep got the agreement signed on the porch instead of chasing it for a week.',
+  },
+  {
+    question: 'Can I upgrade to a different plan later?',
+    answer: 'Yes. Start with Prospect and move to Growth whenever your team is ready. Nothing locks you into your first choice.',
+  }
 ];

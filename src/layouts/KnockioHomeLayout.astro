@@ -67,7 +67,7 @@ const { title, description, ogImage, jsonLd, fAwsm=false } = Astro.props;
     }
     <Analytics />
   </head>
-  <body>
+  <body class="et_smooth_scroll">
     <Analytics placement="body" />
 
     <KnockioHomeHeader />
@@ -75,5 +75,8 @@ const { title, description, ogImage, jsonLd, fAwsm=false } = Astro.props;
     <slot />
 
     <KnockioHomeFooter />
+    <script src="../scripts/home.js"></script>
+    <script src="../scripts/cal-inline.js"></script>
+    <script src="../scripts/calendar-cta.js"></script>
   </body>
 </html>

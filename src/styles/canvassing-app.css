@@ -23,7 +23,7 @@
 .canvassing-page h6 {
   font-family: var(--font-manrope);
   font-weight: 800;
-  font-size: 30px;
+  font-size: 3rem;
   padding: 0;
 }
 
@@ -36,7 +36,7 @@
 .canvassing-hero {
   position: relative;
   isolation: isolate;
-  background: #ffffff;
+  background: var(--color-paper);
 }
 
 .hero-logo img {
@@ -99,7 +99,7 @@
 }
 
 .section-heading {
-  max-width: 61.25rem;
+  max-width: 80rem;
   margin-inline: auto;
   color: #1e1d1a;
   font-size: clamp(1.875rem, 4vw, 2.8125rem);
@@ -120,7 +120,7 @@
 }
 
 .stats-section {
-  background-color: #fdfcf9;
+  background-color: var(--color-paper);
   padding: 3rem 0;
 }
 
@@ -164,7 +164,7 @@
 
 .features-section {
   padding: 4rem 0 5rem;
-  background-color: #fdfcf9;
+  background-color: var(--color-paper);
 }
 
 .features-section .features-grid {
@@ -264,7 +264,7 @@
 }
 
 .testimonial-section {
-  background-color: #fdfcf9;
+  background-color: var(--color-paper);
   padding: 3rem 0;
 }
 
@@ -344,6 +344,7 @@
   position: relative;
   padding: 4rem 0;
   overflow: hidden;
+  background-color: var(--color-paper);
 }
 
 @media (min-width: 768px) {
@@ -414,12 +415,12 @@
   display: block;
   margin-bottom: 0.625rem;
   color: #fff;
-  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-size: 1.25rem !important;
   font-weight: 800;
 }
 
 .platform-wrapper span {
-  font-size: 0.9375rem;
+  font-size: 1.125rem;
   color: #fff;
 }
 
@@ -500,7 +501,7 @@ h3.platform-fullstack-heading {
 
 .pricing-section {
   padding: 4rem 1rem;
-  background-color: #fdfcf9;
+  background-color: var(--color-paper);
 }
 
 @media (min-width: 768px) {
@@ -595,7 +596,7 @@ h3.platform-fullstack-heading {
 }
 
 .calender-section {
-  background-color: #fdfcf9;
+  background-color: var(--color-paper);
   padding-top: 0;
 }
 
@@ -624,7 +625,7 @@ h3.platform-fullstack-heading {
 }
 
 .faq-section {
-  background-color: #fdfcf9;
+  background-color: var(--color-paper);
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -716,6 +717,10 @@ h3.platform-fullstack-heading {
   background: #ffffff;
   padding: 1.5rem;
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.pricing-card h3,h4 {
+  font-size: 2rem !important;
 }
 
 @media (min-width: 1024px) {

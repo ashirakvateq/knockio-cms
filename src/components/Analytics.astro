@@ -1,4 +1,6 @@
 ---
+import QueryForwarder from './QueryForwarder.astro';
+
 interface Props {
   placement?: 'head' | 'body';
 }
@@ -7,9 +9,11 @@ const { placement = 'head' } = Astro.props;
 const gtmId = import.meta.env.PUBLIC_GTM_ID || 'GTM-MG8F3DS9';
 ---
 
-{gtmId && placement === 'head' && (
+{placement === 'head' && (
   <>
-    <script is:inline define:vars={{ gtmId }}>
+    <QueryForwarder />
+    {gtmId && (
+      <script is:inline define:vars={{ gtmId }}>
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({ 'gtm.start': Date.now(), event: 'gtm.js' });
 
@@ -44,6 +48,7 @@ const gtmId = import.meta.env.PUBLIC_GTM_ID || 'GTM-MG8F3DS9';
         }
       })(window, document, 'script', 'dataLayer', gtmId);
     </script>
+    )}
   </>
 )}
 

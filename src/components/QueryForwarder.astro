@@ -1,0 +1,59 @@
+<script is:inline>
+  (function() {
+    var COOKIE_NAME = 'knockio_query';
+    var COOKIE_DAYS = 90;
+
+    function getCookie(name) {
+      var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+      return match ? match[2] : null;
+    }
+
+    function setCookie(name, value, days) {
+      var expires = new Date();
+      expires.setDate(expires.getDate() + days);
+      document.cookie = name + '=' + encodeURIComponent(value) + '; expires=' + expires.toUTCString() + '; path=/; SameSite=Lax';
+    }
+
+    function forwardQuery() {
+      var currentQuery = window.location.search.slice(1);
+
+      if (currentQuery) {
+        setCookie(COOKIE_NAME, currentQuery, COOKIE_DAYS);
+      }
+
+      var queryToForward = currentQuery || getCookie(COOKIE_NAME);
+      if (!queryToForward) return;
+
+      var decodedQuery = decodeURIComponent(queryToForward);
+      var newParams = new URLSearchParams(decodedQuery);
+
+      document.querySelectorAll('a[href]').forEach(function(link) {
+        var href = link.getAttribute('href');
+        if (!href) return;
+
+        if (href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('javascript:')) {
+          return;
+        }
+
+        try {
+          var url = new URL(href, window.location.origin);
+          var existingParams = url.searchParams;
+
+          newParams.forEach(function(value, key) {
+            existingParams.set(key, value);
+          });
+
+          url.search = existingParams.toString();
+          link.setAttribute('href', url.toString());
+        } catch (e) {
+        }
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', forwardQuery);
+    } else {
+      forwardQuery();
+    }
+  })();
+</script>

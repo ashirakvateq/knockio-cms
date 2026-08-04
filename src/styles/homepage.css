@@ -387,6 +387,14 @@
    HOMEPAGE — FAQ Accordion
    ═══════════════════════════════════════════════ */
 
+.faq-item {
+  cursor: pointer;
+}
+
+.faq-item[data-open] {
+  border-color: #43a047 !important;
+}
+
 .faq-content {
   max-height: 0;
   overflow: hidden;
