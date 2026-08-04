@@ -5,6 +5,8 @@ import "../styles/knockio-home.css";
 import "../styles/homepage.css";
 import SEO from "../components/SEO.astro";
 import Analytics from "../components/Analytics.astro";
+import ThirdPartyWidgets from "../components/ThirdPartyWidgets.astro";
+import FbAnalytics from "../components/FbAnalytics.astro";
 import KnockioHomeHeader from "../components/KnockioHomeHeader.astro";
 import KnockioHomeFooter from "../components/KnockioHomeFooter.astro";
 
@@ -13,11 +15,11 @@ interface Props {
   description: string;
   ogImage?: string;
   jsonLd?: unknown;
-  fAwsm?: boolean;
   whiteBg?: boolean;
+  robots?: string;
 }
 
-const { title, description, ogImage, jsonLd, fAwsm=false, whiteBg=false } = Astro.props;
+const { title, description, ogImage, jsonLd, robots, whiteBg = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -43,20 +45,7 @@ const { title, description, ogImage, jsonLd, fAwsm=false, whiteBg=false } = Astr
       href="https://www.googletagmanager.com"
       crossorigin
     />
-    {
-      fAwsm && (
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
-          integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
-          crossorigin="anonymous"
-          referrerpolicy="no-referrer"
-        />
-
-      )
-
-    }
-    <SEO title={title} description={description} ogImage={ogImage} />
+    <SEO title={title} description={description} ogImage={ogImage} robots={robots} />
     {
       jsonLd && (
         <script
@@ -66,6 +55,7 @@ const { title, description, ogImage, jsonLd, fAwsm=false, whiteBg=false } = Astr
         />
       )
     }
+    <Analytics />
   </head>
   <body class="">
     <Analytics placement="body" />
@@ -75,6 +65,8 @@ const { title, description, ogImage, jsonLd, fAwsm=false, whiteBg=false } = Astr
     <slot />
 
     <KnockioHomeFooter />
-    <script src="../scripts/home.js"></script>
+
+    <ThirdPartyWidgets />
+    <FbAnalytics />
   </body>
 </html>

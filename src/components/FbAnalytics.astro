@@ -1,0 +1,51 @@
+---
+const FB_PIXEL_ID = "985418843520178";
+const FB_SCRIPT_SRC = "https://connect.facebook.net/en_US/fbevents.js";
+---
+
+<script is:inline define:vars={{ FB_PIXEL_ID, FB_SCRIPT_SRC }}>
+  (function () {
+    var loaded = false;
+
+    function loadPixel() {
+      if (loaded) return;
+      loaded = true;
+
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, "script", FB_SCRIPT_SRC);
+
+      fbq("init", FB_PIXEL_ID);
+      fbq("track", "PageView");
+    }
+
+    function afterRender() {
+      if ("requestIdleCallback" in window) {
+        window.requestIdleCallback(loadPixel, { timeout: 5000 });
+      } else {
+        window.setTimeout(loadPixel, 3000);
+      }
+    }
+
+    if (document.readyState === "complete") {
+      afterRender();
+    } else {
+      window.addEventListener("load", afterRender, { once: true });
+    }
+  })();
+</script>

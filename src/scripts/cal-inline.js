@@ -249,6 +249,46 @@ function initCalInline() {
 
   manualButton?.addEventListener('click', loadCalendar, { once: true });
 
+  // The page content is rendered as direct body children by the home layouts.
+  // Use its second top-level section, rather than a page-specific data marker,
+  // so every future homepage gets the same lazy-loading behavior automatically.
+  const topLevelSections = Array.from(document.body.children).filter(
+    (element) => element.tagName === 'SECTION',
+  );
+  const secondSection = topLevelSections[1];
+
+  if (secondSection && 'IntersectionObserver' in window) {
+    // Observe the end of the second section, not its start. A 1px marker avoids
+    // a scroll listener and does not affect the visual layout.
+    const boundary = document.createElement('span');
+    boundary.setAttribute('aria-hidden', 'true');
+    boundary.style.cssText = 'display:block;height:1px;width:1px;margin-top:-1px;overflow:hidden;';
+    secondSection.after(boundary);
+
+    const observer = new IntersectionObserver((entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return;
+
+      observer.disconnect();
+      loadCalendar();
+    }, { threshold: 0.01 });
+
+    observer.observe(boundary);
+
+    // Hero CTAs jump directly to the booking section, which may bypass the
+    // second-section observer. Load in that case so the destination is ready.
+    document.querySelectorAll('a[href="#cal-sec"]').forEach((link) => {
+      link.addEventListener('click', loadCalendar, { once: true });
+    });
+
+    if (window.location.hash === '#cal-sec') {
+      loadCalendar();
+    }
+
+    return;
+  }
+
+  // Preserve the current eager-on-idle behavior for the non-homepage pages
+  // that use this shared calendar script but do not opt into the scroll gate.
   if ('requestIdleCallback' in window) {
     window.requestIdleCallback(loadCalendar, { timeout: 2000 });
   } else {

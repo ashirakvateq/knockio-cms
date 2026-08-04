@@ -9,3 +9,6 @@
 
 /one-platform/
   X-Robots-Tag: noindex
+
+/home-clone/
+  X-Robots-Tag: noindex

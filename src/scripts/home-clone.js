@@ -1,37 +1,85 @@
-/* ═════════════════════════════════════════════
-   HOMEPAGE — Consolidated Scripts
-   0. Smooth Scroll (Divi smoothscroll.js)
-   1. Product Demo (tabs, sidebar, map, drag-drop, toast)
-   2. Platform Capabilities Scroll Tabs
-   3. Workflow Scroll Steps
-   4. Calculator + Checkout
-   ══════════════════════════════════════════════ */
-
-// ── 0. Smooth Scroll (legacy Divi smoothscroll.js) ──────────────────────────
-// import "./smoothscroll.js";
-
 import Lenis from "lenis";
 import { labelDemoControls } from "./demo-accessibility.js";
 
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-const lenis = new Lenis({
-  duration: 1.2, // higher = slower/smoother
-  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-  smoothWheel: true,
-  wheelMultiplier: 0.3, // tune this for "how much per swipe"
-  touchMultiplier: 0.3,
-});
+if (!reducedMotion) {
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smoothWheel: true,
+    wheelMultiplier: 0.3,
+    touchMultiplier: 0.3,
+  });
 
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
+  let smoothRunning = false;
+  function smoothTick(time) {
+    lenis.raf(time);
+    if (lenis.isScrolling !== false) {
+      requestAnimationFrame(smoothTick);
+    } else {
+      smoothRunning = false;
+    }
+  }
+  function wakeSmooth() {
+    if (!smoothRunning) {
+      smoothRunning = true;
+      requestAnimationFrame(smoothTick);
+    }
+  }
+  window.addEventListener("wheel", wakeSmooth, { passive: true });
+  window.addEventListener("touchmove", wakeSmooth, { passive: true });
+  window.addEventListener("scroll", wakeSmooth, { passive: true });
+  document.addEventListener(
+    "click",
+    function (e) {
+      if (e.target.closest && e.target.closest('a[href*="#"]')) wakeSmooth();
+    },
+    { passive: true, capture: true }
+  );
 }
-requestAnimationFrame(raf);
 
-// ── 1. Product Demo ─────────────────────────────────────────────────────────
+// ── 1. Product Demo (desktop only, IO-gated rotation) ───────────────────────
 (function () {
   var TAB_DURATION = 5000;
   var MAP_ASSET_URL = "/assets/cfw/map-walnut-creek.webp";
+
+  var I = function (name, cls) {
+    var P = {
+      house: '<path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>',
+      wallet: '<path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/>',
+      zap: '<path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/>',
+      globe: '<circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/>',
+      megaphone: '<path d="M11 6a13 13 0 0 0 8.4-2.8A1 1 0 0 1 21 4v12a1 1 0 0 1-1.6.8A13 13 0 0 0 11 14H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/><path d="M6 14a12 12 0 0 0 2.4 7.2 2 2 0 0 0 3.2-2.4A8 8 0 0 1 10 14"/><path d="M8 6v8"/>',
+      messagesSquare: '<path d="M16 10a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 14.286V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/><path d="M20 9a2 2 0 0 1 2 2v10.286a.71.71 0 0 1-1.212.502l-2.202-2.202A2 2 0 0 0 17.172 19H10a2 2 0 0 1-2-2v-1"/>',
+      funnel: '<path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"/>',
+      barChart3: '<path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/>',
+      columns3: '<rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/><path d="M15 3v18"/>',
+      calendarDays: '<path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/>',
+      compass: '<path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/><circle cx="12" cy="12" r="10"/>',
+      route: '<circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/>',
+      star: '<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/>',
+      headset: '<path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/><path d="M21 16v2a4 4 0 0 1-4 4h-5"/>',
+      chevronsLeft: '<path d="m11 17-5-5 5-5"/><path d="m18 17-5-5 5-5"/>',
+      chevronDown: '<path d="m6 9 6 6 6-6"/>',
+      map: '<path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/><path d="M15 5.764v15"/><path d="M9 3.236v15"/>',
+      list: '<path d="M3 5h.01"/><path d="M3 12h.01"/><path d="M3 19h.01"/><path d="M8 5h13"/><path d="M8 12h13"/><path d="M8 19h13"/>',
+      squareCheck: '<rect width="18" height="18" x="3" y="3" rx="2"/><path d="m9 12 2 2 4-4"/>',
+      ellipsisVertical: '<circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/>',
+    };
+    var attrs =
+      'xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"';
+    return (
+      "<svg " +
+      attrs +
+      ' class="lucide lucide-' +
+      name +
+      (cls ? " " + cls : "") +
+      '">' +
+      (P[name] || "") +
+      "</svg>"
+    );
+  };
 
   function renderMapSvg(suffix) {
     var s = suffix || "a";
@@ -87,7 +135,7 @@ requestAnimationFrame(raf);
   }
 
   function renderSidebar(active) {
-    function item(key, iconCls, label, opts) {
+    function item(key, iconName, label, opts) {
       opts = opts || {};
       var isActive = key === active;
       var linkCls =
@@ -103,10 +151,10 @@ requestAnimationFrame(raf);
         "shrink-0 text-[10px] " + (isActive ? "text-neutral-200" : "text-neutral-400");
       var trail = "";
       if (opts.badge) trail += '<span class="' + badgeCls + '">' + opts.badge + "</span>";
-      if (opts.chevron) trail += '<i class="fa-solid fa-chevron-down ' + chevronCls + (opts.badge ? " ml-1" : "") + '"></i>';
+      if (opts.chevron) trail += I("chevronDown", chevronCls + (opts.badge ? " ml-1" : ""));
       return (
         '<button type="button" data-nav="' + key + '" class="' + linkCls + '">' +
-        '<i class="' + iconCls + " " + iconColorCls + '"></i>' +
+        I(iconName, iconColorCls) +
         '<span class="kio-nav-label min-w-0 flex-1 truncate">' + label + "</span>" +
         (trail ? '<span class="ml-auto flex shrink-0 items-center gap-1">' + trail + "</span>" : "") +
         "</button>"
@@ -116,28 +164,31 @@ requestAnimationFrame(raf);
       '<div class="flex h-[72px] shrink-0 items-center justify-between border-b border-solid border-neutral-200 bg-white px-5">' +
       '<img class="h-7 w-auto object-contain" src="/assets/cfw/knockio-logo.webp" alt="Knockio"/>' +
       '<button type="button" class="grid h-7 w-7 place-items-center rounded-lg text-neutral-400 transition hover:bg-neutral-100 hover:text-neutral-600" data-toast-message="Sidebar collapsed" aria-label="Collapse sidebar">' +
-      '<i class="fa-solid fa-angles-left text-[11px]"></i></button>' +
+      I("chevronsLeft", "text-[11px]") +
+      "</button>" +
       "</div>" +
       '<div class="flex-1 overflow-y-auto overflow-x-hidden px-4 py-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">' +
       '<p class="mb-3 text-[11px] font-medium uppercase tracking-[0.12em] text-neutral-400">Main menu</p>' +
       '<nav class="flex flex-col gap-0.5">' +
-      item("dashboard", "fa-solid fa-house", "Dashboard") +
-      item("financials", "fa-solid fa-wallet", "Financials", { chevron: true }) +
-      item("automations", "fa-solid fa-bolt", "Automations") +
-      item("territories", "fa-solid fa-earth-americas", "Territories") +
-      item("campaigns", "fa-solid fa-bullhorn", "Campaigns") +
-      item("communications", "fa-regular fa-comments", "Communications") +
-      item("leads", "fa-solid fa-filter", "Leads", { chevron: true }) +
-      item("reporting", "fa-regular fa-chart-bar", "Reporting") +
-      item("boards", "fa-solid fa-table-columns", "Boards") +
-      item("appointments", "fa-regular fa-calendar", "Appointments", { chevron: true }) +
-      item("tracking", "fa-regular fa-compass", "Tracking") +
-      item("routes", "fa-solid fa-route", "Routes") +
-      item("leaderboard", "fa-regular fa-star", "Leaderboard") +
+      item("dashboard", "house", "Dashboard") +
+      item("financials", "wallet", "Financials", { chevron: true }) +
+      item("automations", "zap", "Automations") +
+      item("territories", "globe", "Territories") +
+      item("campaigns", "megaphone", "Campaigns") +
+      item("communications", "messagesSquare", "Communications") +
+      item("leads", "funnel", "Leads", { chevron: true }) +
+      item("reporting", "barChart3", "Reporting") +
+      item("boards", "columns3", "Boards") +
+      item("appointments", "calendarDays", "Appointments", { chevron: true }) +
+      item("tracking", "compass", "Tracking") +
+      item("routes", "route", "Routes") +
+      item("leaderboard", "star", "Leaderboard") +
       "</nav>" +
       "</div>" +
       '<div class="shrink-0 border-t border-solid border-neutral-200 bg-white p-4">' +
-      '<button type="button" class="flex h-11 w-full items-center justify-center gap-2 rounded-xl bg-primary-600 text-sm font-medium text-white transition hover:bg-primary-700" data-toast-message="Support chat opened"><i class="fa-solid fa-headset"></i> Support</button>' +
+      '<button type="button" class="flex h-11 w-full items-center justify-center gap-2 rounded-xl bg-primary-600 text-sm font-medium text-white transition hover:bg-primary-700" data-toast-message="Support chat opened">' +
+      I("headset") +
+      " Support</button>" +
       "</div>"
     );
   }
@@ -169,9 +220,14 @@ requestAnimationFrame(raf);
     });
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
+  var desktopQuery = window.matchMedia("(min-width: 1024px)");
+  var demoInitialized = false;
+
+  function initProductDemo() {
+    if (demoInitialized) return;
     var root = document.querySelector(".kio-product-demo");
     if (!root) return;
+    demoInitialized = true;
 
     var tabs = Array.from(root.querySelectorAll("[data-kio-tab]"));
     var panels = Array.from(root.querySelectorAll("[data-kio-panel]"));
@@ -181,8 +237,11 @@ requestAnimationFrame(raf);
     var appViewport = root.querySelector(".kio-app-viewport");
     var activeIndex = 0;
     var progressTimer = null;
-    var isPaused = false;
+    var hoverPaused = false;
+    var offscreenPaused = true;
     var draggedCard = null;
+
+    function paused() { return hoverPaused || offscreenPaused; }
 
     function showToast(message) {
       if (!toast) return;
@@ -200,7 +259,7 @@ requestAnimationFrame(raf);
       progress.style.animation = "none";
       progress.offsetHeight;
       progress.style.animation = "kioProgress " + TAB_DURATION + "ms linear forwards";
-      progress.style.animationPlayState = isPaused ? "paused" : "running";
+      progress.style.animationPlayState = paused() ? "paused" : "running";
     }
 
     function activateTab(index) {
@@ -222,7 +281,7 @@ requestAnimationFrame(raf);
 
     function scheduleNextTab() {
       clearTimeout(progressTimer);
-      if (isPaused) return;
+      if (paused()) return;
       progressTimer = setTimeout(function () {
         activateTab((activeIndex + 1) % tabs.length);
         scheduleNextTab();
@@ -230,13 +289,14 @@ requestAnimationFrame(raf);
     }
 
     function pauseDemo() {
-      isPaused = true;
+      hoverPaused = true;
       clearTimeout(progressTimer);
       if (progress) progress.style.animationPlayState = "paused";
     }
 
     function resumeDemo() {
-      isPaused = false;
+      hoverPaused = false;
+      if (offscreenPaused) return;
       if (progress) progress.style.animationPlayState = "running";
       scheduleNextTab();
     }
@@ -322,10 +382,14 @@ requestAnimationFrame(raf);
         block.className = "flex w-full flex-col items-center animate-kio-branch";
         block.innerHTML =
           '<div class="relative w-full rounded-lg border border-solid border-neutral-200 bg-white p-3 shadow-sm">' +
-          '<span class="mb-1 inline-flex items-center gap-1 rounded bg-blue-500 px-2 py-0.5 text-[9px] font-medium text-white"><i class="fa-regular fa-square-check text-[8px]"></i> Action</span>' +
+          '<span class="mb-1 inline-flex items-center gap-1 rounded bg-blue-500 px-2 py-0.5 text-[9px] font-medium text-white">' +
+          I("squareCheck", "text-[8px]") +
+          ' Action</span>' +
           '<h4 class="text-[12px] font-semibold text-neutral-900">Create Task</h4>' +
           '<p class="mt-1 text-[10px] font-medium text-neutral-500">Follow up with <span class="rounded-full bg-violet-600 px-1.5 py-0.5 text-[9px] text-white">@ Name</span></p>' +
-          '<button type="button" class="absolute right-2 top-2 text-neutral-400"><i class="fa-solid fa-ellipsis-vertical text-xs"></i></button>' +
+          '<button type="button" class="absolute right-2 top-2 text-neutral-400">' +
+          I("ellipsisVertical", "text-xs") +
+          "</button>" +
           "</div>" +
           '<div class="flex flex-col items-center"><div class="h-4 w-0.5 bg-violet-400"></div></div>';
         branch.insertBefore(block, insertBeforeEl);
@@ -355,21 +419,40 @@ requestAnimationFrame(raf);
         mapView.classList.toggle("hidden", showingMap);
         listView.classList.toggle("hidden", !showingMap);
         mapListToggle.innerHTML = showingMap
-          ? '<i class="fa-solid fa-map mr-1"></i> Map'
-          : '<i class="fa-solid fa-list mr-1"></i> List';
+          ? I("map", "mr-1") + " Map"
+          : I("list", "mr-1") + " List";
         showToast(showingMap ? "Switched to list view" : "Switched to map view");
       });
     }
 
+    var io = new IntersectionObserver(
+      function (entries) {
+        offscreenPaused = !entries[0].isIntersecting;
+        if (!offscreenPaused && !hoverPaused) {
+          if (progress) progress.style.animationPlayState = "running";
+          scheduleNextTab();
+        } else {
+          clearTimeout(progressTimer);
+          if (progress) progress.style.animationPlayState = "paused";
+        }
+      },
+      { threshold: 0.15 }
+    );
+    io.observe(root);
+
     activateTab(0);
-    scheduleNextTab();
-  });
+  }
+
+  function maybeInitDemo() {
+    if (!desktopQuery.matches) return;
+    initProductDemo();
+  }
+  maybeInitDemo();
+  desktopQuery.addEventListener("change", maybeInitDemo);
 })();
 
-
-// ── 2. Platform Capabilities Scroll Tabs ─────────────────────────────────────
+// ── 2. Platform Capabilities Scroll Tabs (on-demand lerp) ────────────────────
 (function () {
-  var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var compactQuery = window.matchMedia("(max-width: 1023px)");
 
   function isCompact() { return compactQuery.matches; }
@@ -490,13 +573,13 @@ requestAnimationFrame(raf);
     var lerpTarget = 0;
     var lerpCurrent = 0;
     var LERP_FACTOR = 0.12;
+    var lerpRunning = false;
 
     function manageHeaderVisibility() {
       if (!header) return;
       var trackRect = track.getBoundingClientRect();
       var trackTop = trackRect.top;
       var trackBottom = trackRect.bottom;
-      var viewportHeight = window.innerHeight;
       if (trackTop <= HEADER_HIDE_OFFSET && trackBottom > 0) {
         header.classList.add("kh-header-hidden");
       } else {
@@ -521,16 +604,28 @@ requestAnimationFrame(raf);
       animateCards(panels[index]);
     }
 
-    function updateDesktop() {
-      lerpTarget = getScrollStepRaw(track, steps);
+    function lerpTick() {
       var diff = lerpTarget - lerpCurrent;
       if (Math.abs(diff) < 0.01) {
         lerpCurrent = lerpTarget;
-      } else {
-        lerpCurrent += diff * LERP_FACTOR;
+        setDesktopStep(Math.round(lerpCurrent));
+        lerpRunning = false;
+        return;
       }
-      var roundedIndex = Math.round(lerpCurrent);
-      setDesktopStep(roundedIndex);
+      lerpCurrent += diff * LERP_FACTOR;
+      setDesktopStep(Math.round(lerpCurrent));
+      requestAnimationFrame(lerpTick);
+    }
+    function wakeLerp() {
+      if (!lerpRunning) {
+        lerpRunning = true;
+        requestAnimationFrame(lerpTick);
+      }
+    }
+
+    function updateDesktop() {
+      var t = getScrollStepRaw(track, steps);
+      if (t !== lerpTarget) { lerpTarget = t; wakeLerp(); }
     }
 
     function updateCompact() { setTabOnly(getCompactTabIndex(panels)); }
@@ -575,16 +670,6 @@ requestAnimationFrame(raf);
     });
 
     var ticking = false;
-    var animFrameId = null;
-    function lerpTick() {
-      var diff = lerpTarget - lerpCurrent;
-      if (Math.abs(diff) >= 0.01) {
-        lerpCurrent += diff * LERP_FACTOR;
-        var roundedIndex = Math.round(lerpCurrent);
-        setDesktopStep(roundedIndex);
-      }
-      animFrameId = requestAnimationFrame(lerpTick);
-    }
     function onScroll() { if (ticking) return; ticking = true; requestAnimationFrame(function () { update(); manageHeaderVisibility(); ticking = false; }); }
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", function () {
@@ -607,19 +692,16 @@ requestAnimationFrame(raf);
     update();
     manageHeaderVisibility();
     if (compactMode) { setTabOnly(0); centerActiveTabInNav(navItems[0]); }
-    else { hpTabs1MoveIndicator(navItems[0]); lerpCurrent = 0; lerpTarget = 0; animFrameId = requestAnimationFrame(lerpTick); }
+    else { hpTabs1MoveIndicator(navItems[0]); lerpCurrent = 0; lerpTarget = 0; }
   }
 
-  if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded", initPlatformScrollScrolly); }
-  else { initPlatformScrollScrolly(); }
+  initPlatformScrollScrolly();
 })();
-
 
 // ── 3. Workflow Scroll Steps ─────────────────────────────────────────────────
 (function () {
   var track = document.getElementById("workflowScrollTrack");
   if (!track) return;
-  var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var mobileQuery = window.matchMedia("(max-width: 1023px)");
   var panels = track.querySelectorAll(".workflow-step-panel");
   var navItems = document.querySelectorAll("#workflowStepsNav .step-item");
@@ -732,12 +814,8 @@ requestAnimationFrame(raf);
   resetScrollyState(); setStep(0); update();
 })();
 
-
 // ── 4. Calculator + Checkout ─────────────────────────────────────────────────
 (function () {
-  "use strict";
-
-  // Checkout
   function getParam(name) {
     var params = new URLSearchParams(window.location.search);
     return params.get(name);
@@ -767,7 +845,6 @@ requestAnimationFrame(raf);
     window.location.href = buildCheckoutUrl(packageId);
   });
 
-  // Calculator
   var RATES = {
     prospect: { rate_1_4: 25, rate_5p: 20 },
     organise: { rate_1_4: 35, rate_5p: 30 },
@@ -825,11 +902,8 @@ requestAnimationFrame(raf);
   document.querySelectorAll("[data-kio-calc]").forEach(initCalculator);
 })();
 
-
 // ── 5. FAQ Accordion ─────────────────────────────────────────────────────────
 (function () {
-  "use strict";
-
   document.querySelectorAll(".faq-item").forEach(function (item) {
     var button = item.querySelector(".faq-button");
     if (!button) return;
@@ -837,14 +911,12 @@ requestAnimationFrame(raf);
     button.addEventListener("click", function () {
       var isOpen = item.hasAttribute("data-open");
 
-      // Close all FAQ items
       document.querySelectorAll(".faq-item").forEach(function (other) {
         other.removeAttribute("data-open");
         var content = other.querySelector(".faq-content");
         if (content) content.style.maxHeight = null;
       });
 
-      // Open clicked item if it was closed
       if (!isOpen) {
         item.setAttribute("data-open", "");
         var content = item.querySelector(".faq-content");

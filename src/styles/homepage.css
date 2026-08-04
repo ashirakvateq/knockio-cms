@@ -458,3 +458,7 @@
 .animate-kio-paid {
   animation: kioPaid 0.4s ease;
 }
+
+svg.lucide {
+  vertical-align: -0.125em;
+}
