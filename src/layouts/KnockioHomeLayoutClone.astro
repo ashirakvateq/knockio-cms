@@ -66,18 +66,15 @@ const { title, description, ogImage, jsonLd, fAwsm=false, whiteBg=false } = Astr
         />
       )
     }
-    <Analytics />
   </head>
   <body class="">
-    
-    <KnockioHomeHeader whiteBg={whiteBg} />
-    
-    <slot />
-    
-    <KnockioHomeFooter />
     <Analytics placement="body" />
+
+    <KnockioHomeHeader whiteBg={whiteBg} />
+
+    <slot />
+
+    <KnockioHomeFooter />
     <script src="../scripts/home.js"></script>
-    <script src="../scripts/cal-inline.js"></script>
-    <script src="../scripts/calendar-cta.js"></script>
   </body>
 </html>

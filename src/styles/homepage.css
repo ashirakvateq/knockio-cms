@@ -3,7 +3,10 @@
    ═══════════════════════════════════════════════ */
 
 .hero-background {
-  background: url("/assets/cfw/home-hero-background.webp") center/cover no-repeat;
+  background-image: url("/assets/cfw/home-hero-background.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* ═══════════════════════════════════════════════
@@ -322,6 +325,15 @@
     padding-top: 2rem;
     gap: 1.25rem;
   }
+}
+
+@media (max-width: 769px){
+  .hero-background {
+      background-image: url("/assets/cfw/home-hero-background.webp");
+      background-position:unset;
+      background-size: auto;
+      background-repeat: no-repeat;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {

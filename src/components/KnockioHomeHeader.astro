@@ -1,55 +1,225 @@
 ---
 import {
-  TrendingUp, DollarSign, Package, Receipt, ClipboardList, CalendarCheck,
-  CreditCard, FileSignature, MessageSquare, ShieldCheck, MapPin,
-  Footprints, Crosshair, Settings, BarChart3,
-  Network, Zap, Shield, Waves, Truck, Warehouse,
-  Paintbrush, Sparkles, Leaf, Droplets, Thermometer,
-  Bug, Droplet, Home, Sun,
-  Boxes, Wrench, Layers, Megaphone, Headphones, Bot, Filter,
-  CloudLightning, Building2, BookOpen, Newspaper,
-  ChevronDown, Menu, X, ArrowRight,
+  TrendingUp,
+  DollarSign,
+  Package,
+  Receipt,
+  ClipboardList,
+  CalendarCheck,
+  CreditCard,
+  FileSignature,
+  MessageSquare,
+  ShieldCheck,
+  MapPin,
+  Footprints,
+  Crosshair,
+  Settings,
+  BarChart3,
+  Network,
+  Zap,
+  Shield,
+  Waves,
+  Truck,
+  Warehouse,
+  Paintbrush,
+  Sparkles,
+  Leaf,
+  Droplets,
+  Thermometer,
+  Bug,
+  Droplet,
+  Home,
+  Sun,
+  Boxes,
+  Wrench,
+  Layers,
+  Megaphone,
+  Headphones,
+  Bot,
+  Filter,
+  CloudLightning,
+  Building2,
+  BookOpen,
+  Newspaper,
+  ChevronDown,
+  Menu,
+  X,
+  ArrowRight,
 } from "lucide-astro";
 
+interface Props {
+  whiteBg?: boolean;
+}
+
+const { whiteBg = false } = Astro.props;
+
 const products = [
-  { href: "https://knockio.com/canvassing/", icon: Footprints, label: "Door to Door Canvassing Software" },
-  { href: "https://knockio.com/field-service-crm/", icon: Wrench, label: "Field Service CRM" },
+  {
+    href: "https://knockio.com/canvassing/",
+    icon: Footprints,
+    label: "Door to Door Canvassing Software",
+  },
+  {
+    href: "https://knockio.com/field-service-crm/",
+    icon: Wrench,
+    label: "Field Service CRM",
+  },
 ];
 
 const features = [
-  { href: "https://knockio.com/features/sales-pipeline-software/", icon: TrendingUp, label: "Sales Pipeline" },
-  { href: "https://knockio.com/features/estimate-software/", icon: DollarSign, label: "Estimates" },
-  { href: "https://knockio.com/features/inventory-management-software/", icon: Package, label: "Inventory" },
-  { href: "https://knockio.com/features/invoicing-software/", icon: Receipt, label: "Invoicing" },
-  { href: "https://knockio.com/features/work-order-management-software/", icon: ClipboardList, label: "Work Orders" },
-  { href: "https://knockio.com/features/appointment-scheduling-software/", icon: CalendarCheck, label: "Appointments" },
-  { href: "https://knockio.com/features/payment-processing/", icon: CreditCard, label: "Payment Processing" },
-  { href: "https://knockio.com/features/e-contracts-software/", icon: FileSignature, label: "E-Contracts" },
-  { href: "https://knockio.com/features/business-texting-and-calling-software/", icon: MessageSquare, label: "Call Text and Email" },
-  { href: "https://knockio.com/features/user-management-software/", icon: ShieldCheck, label: "User Management" },
-  { href: "https://knockio.com/features/territory-management-software/", icon: MapPin, label: "Territory Management" },
-  { href: "https://knockio.com/features/sales-canvassing-software/", icon: Footprints, label: "Sales Canvassing" },
-  { href: "https://knockio.com/features/gps-tracking-software/", icon: Crosshair, label: "GPS Tracking" },
-  { href: "https://knockio.com/features/business-automation-software/", icon: Settings, label: "Automations" },
-  { href: "https://knockio.com/features/reporting-software/", icon: BarChart3, label: "Reports and Analytics" },
+  {
+    href: "https://knockio.com/features/sales-pipeline-software/",
+    icon: TrendingUp,
+    label: "Sales Pipeline",
+  },
+  {
+    href: "https://knockio.com/features/estimate-software/",
+    icon: DollarSign,
+    label: "Estimates",
+  },
+  {
+    href: "https://knockio.com/features/inventory-management-software/",
+    icon: Package,
+    label: "Inventory",
+  },
+  {
+    href: "https://knockio.com/features/invoicing-software/",
+    icon: Receipt,
+    label: "Invoicing",
+  },
+  {
+    href: "https://knockio.com/features/work-order-management-software/",
+    icon: ClipboardList,
+    label: "Work Orders",
+  },
+  {
+    href: "https://knockio.com/features/appointment-scheduling-software/",
+    icon: CalendarCheck,
+    label: "Appointments",
+  },
+  {
+    href: "https://knockio.com/features/payment-processing/",
+    icon: CreditCard,
+    label: "Payment Processing",
+  },
+  {
+    href: "https://knockio.com/features/e-contracts-software/",
+    icon: FileSignature,
+    label: "E-Contracts",
+  },
+  {
+    href: "https://knockio.com/features/business-texting-and-calling-software/",
+    icon: MessageSquare,
+    label: "Call Text and Email",
+  },
+  {
+    href: "https://knockio.com/features/user-management-software/",
+    icon: ShieldCheck,
+    label: "User Management",
+  },
+  {
+    href: "https://knockio.com/features/territory-management-software/",
+    icon: MapPin,
+    label: "Territory Management",
+  },
+  {
+    href: "https://knockio.com/features/sales-canvassing-software/",
+    icon: Footprints,
+    label: "Sales Canvassing",
+  },
+  {
+    href: "https://knockio.com/features/gps-tracking-software/",
+    icon: Crosshair,
+    label: "GPS Tracking",
+  },
+  {
+    href: "https://knockio.com/features/business-automation-software/",
+    icon: Settings,
+    label: "Automations",
+  },
+  {
+    href: "https://knockio.com/features/reporting-software/",
+    icon: BarChart3,
+    label: "Reports and Analytics",
+  },
 ];
 
 const industries = [
-  { href: "https://knockio.com/industry/fiber-internet-sales-software-and-crm/", icon: Network, label: "Fiber Internet" },
-  { href: "https://knockio.com/industry/electrical-contractor-software/", icon: Zap, label: "Electrical" },
-  { href: "https://knockio.com/industry/home-security-sales-software-and-crm/", icon: Shield, label: "Home Security" },
-  { href: "https://knockio.com/industry/pool-service-software/", icon: Waves, label: "Pool Service" },
-  { href: "https://knockio.com/industry/junk-removal-software-and-crm/", icon: Truck, label: "Junk Removal" },
-  { href: "https://knockio.com/industry/garage-door-service-software/", icon: Warehouse, label: "Garage Door" },
-  { href: "https://knockio.com/industry/painting-contractor-software-and-crm/", icon: Paintbrush, label: "Painting" },
-  { href: "https://knockio.com/industry/window-cleaning-business-software/", icon: Sparkles, label: "Window Cleaning" },
-  { href: "https://knockio.com/industry/landscaping-business-software/", icon: Leaf, label: "Landscaping" },
-  { href: "https://knockio.com/industry/restoration-job-management-software/", icon: Droplets, label: "Restoration" },
-  { href: "https://knockio.com/industry/hvac-software-and-crm/", icon: Thermometer, label: "HVAC" },
-  { href: "https://knockio.com/industry/pest-control-software/", icon: Bug, label: "Pest Control" },
-  { href: "https://knockio.com/industry/plumbing-software-and-crm/", icon: Droplet, label: "Plumbing" },
-  { href: "https://knockio.com/industry/roofing-sales-software-and-crm/", icon: Home, label: "Roofing" },
-  { href: "https://knockio.com/industry/solar-sales-software-and-crm/", icon: Sun, label: "Solar" },
+  {
+    href: "https://knockio.com/industry/fiber-internet-sales-software-and-crm/",
+    icon: Network,
+    label: "Fiber Internet",
+  },
+  {
+    href: "https://knockio.com/industry/electrical-contractor-software/",
+    icon: Zap,
+    label: "Electrical",
+  },
+  {
+    href: "https://knockio.com/industry/home-security-sales-software-and-crm/",
+    icon: Shield,
+    label: "Home Security",
+  },
+  {
+    href: "https://knockio.com/industry/pool-service-software/",
+    icon: Waves,
+    label: "Pool Service",
+  },
+  {
+    href: "https://knockio.com/industry/junk-removal-software-and-crm/",
+    icon: Truck,
+    label: "Junk Removal",
+  },
+  {
+    href: "https://knockio.com/industry/garage-door-service-software/",
+    icon: Warehouse,
+    label: "Garage Door",
+  },
+  {
+    href: "https://knockio.com/industry/painting-contractor-software-and-crm/",
+    icon: Paintbrush,
+    label: "Painting",
+  },
+  {
+    href: "https://knockio.com/industry/window-cleaning-business-software/",
+    icon: Sparkles,
+    label: "Window Cleaning",
+  },
+  {
+    href: "https://knockio.com/industry/landscaping-business-software/",
+    icon: Leaf,
+    label: "Landscaping",
+  },
+  {
+    href: "https://knockio.com/industry/restoration-job-management-software/",
+    icon: Droplets,
+    label: "Restoration",
+  },
+  {
+    href: "https://knockio.com/industry/hvac-software-and-crm/",
+    icon: Thermometer,
+    label: "HVAC",
+  },
+  {
+    href: "https://knockio.com/industry/pest-control-software/",
+    icon: Bug,
+    label: "Pest Control",
+  },
+  {
+    href: "https://knockio.com/industry/plumbing-software-and-crm/",
+    icon: Droplet,
+    label: "Plumbing",
+  },
+  {
+    href: "https://knockio.com/industry/roofing-sales-software-and-crm/",
+    icon: Home,
+    label: "Roofing",
+  },
+  {
+    href: "https://knockio.com/industry/solar-sales-software-and-crm/",
+    icon: Sun,
+    label: "Solar",
+  },
 ];
 
 const marketing = [
@@ -59,55 +229,104 @@ const marketing = [
 ];
 
 const resources = [
-  { href: "https://knockio.com/storm-playbook/", icon: CloudLightning, label: "Storm Playbook" },
-  { href: "https://knockio.com/roofing-canvassing-guide-2026/", icon: Home, label: "Roofing Canvassing Guide" },
+  {
+    href: "https://knockio.com/storm-playbook/",
+    icon: CloudLightning,
+    label: "Storm Playbook",
+  },
+  {
+    href: "https://knockio.com/roofing-canvassing-guide-2026/",
+    icon: Home,
+    label: "Roofing Canvassing Guide",
+  },
 ];
 ---
 
-<header id="mainNavbar" class="kh-header">
+<header
+  id="mainNavbar"
+  class:list={["kh-header", whiteBg && "kh-scrolled"]}
+  data-white-bg={whiteBg ? "true" : undefined}
+>
   <div class="kh-header-inner">
     <a href="/" class="kh-logo" aria-label="Knockio home">
-      <img src="/assets/cfw/knockio-logo.webp" alt="Knockio" width="179" height="36" decoding="async" />
+      <img
+        src="/assets/cfw/knockio-logo.webp"
+        alt="Knockio"
+        width="179"
+        height="36"
+        decoding="async"
+      />
     </a>
 
     <nav class="kh-desktop-nav" aria-label="Main navigation">
       <ul>
         <li class="kh-dropdown">
-          <button type="button" class="kh-nav-trigger" aria-expanded="false" aria-controls="productsMegaMenu">
+          <button
+            type="button"
+            class="kh-nav-trigger"
+            aria-expanded="false"
+            aria-controls="productsMegaMenu"
+          >
             <span>Products</span>
             <ChevronDown size={10} class="kh-chevron" aria-hidden="true" />
           </button>
-          <div id="productsMegaMenu" class="kh-mega-menu" role="region" aria-label="Products menu">
+          <div
+            id="productsMegaMenu"
+            class="kh-mega-menu"
+            role="region"
+            aria-label="Products menu"
+          >
             <div class="kh-mega-panel">
               <div class="kh-mega-head">
                 <div class="kh-mega-head-text">
                   <p class="kh-mega-kicker">Knockio Products</p>
-                  <p class="kh-mega-sub">Choose the workflow built for your team.</p>
+                  <p class="kh-mega-sub">
+                    Choose the workflow built for your team.
+                  </p>
                 </div>
               </div>
-              <div class="kh-mega-grid" style="grid-template-columns: repeat(2, 1fr);">
-                {products.map(({ href, icon: Icon, label }) => (
-                  <a href={href} class="kh-mega-link">
-                    <span class="kh-mega-ic"><Icon size={18} aria-hidden="true" /></span>
-                    <span class="kh-mega-label">{label}</span>
-                  </a>
-                ))}
+              <div
+                class="kh-mega-grid"
+                style="grid-template-columns: repeat(2, 1fr);"
+              >
+                {
+                  products.map(({ href, icon: Icon, label }) => (
+                    <a href={href} class="kh-mega-link">
+                      <span class="kh-mega-ic">
+                        <Icon size={18} aria-hidden="true" />
+                      </span>
+                      <span class="kh-mega-label">{label}</span>
+                    </a>
+                  ))
+                }
               </div>
             </div>
           </div>
         </li>
 
         <li class="kh-dropdown">
-          <button type="button" class="kh-nav-trigger" aria-expanded="false" aria-controls="featuresMegaMenu">
+          <button
+            type="button"
+            class="kh-nav-trigger"
+            aria-expanded="false"
+            aria-controls="featuresMegaMenu"
+          >
             <span>Features</span>
             <ChevronDown size={10} class="kh-chevron" aria-hidden="true" />
           </button>
-          <div id="featuresMegaMenu" class="kh-mega-menu kh-mega-features" role="region" aria-label="Features menu">
+          <div
+            id="featuresMegaMenu"
+            class="kh-mega-menu kh-mega-features"
+            role="region"
+            aria-label="Features menu"
+          >
             <div class="kh-mega-panel">
               <div class="kh-mega-head">
                 <div class="kh-mega-head-text">
                   <p class="kh-mega-kicker">Knockio Features</p>
-                  <p class="kh-mega-sub">Everything you need to manage field sales and service.</p>
+                  <p class="kh-mega-sub">
+                    Everything you need to manage field sales and service.
+                  </p>
                 </div>
                 <a href="https://knockio.com/features/" class="kh-mega-cta-btn">
                   View all features
@@ -116,26 +335,36 @@ const resources = [
               </div>
               <div class="kh-features-layout">
                 <div class="kh-features-grid">
-                  {features.map(({ href, icon: Icon, label }) => (
-                    <a href={href} class="kh-mega-link">
-                      <span class="kh-mega-ic"><Icon size={18} aria-hidden="true" /></span>
-                      <span class="kh-mega-label">{label}</span>
-                    </a>
-                  ))}
+                  {
+                    features.map(({ href, icon: Icon, label }) => (
+                      <a href={href} class="kh-mega-link">
+                        <span class="kh-mega-ic">
+                          <Icon size={18} aria-hidden="true" />
+                        </span>
+                        <span class="kh-mega-label">{label}</span>
+                      </a>
+                    ))
+                  }
                 </div>
                 <aside class="kh-marketing-column">
                   <div class="kh-marketing-header">
-                    <span class="kh-mega-ic"><Megaphone size={18} aria-hidden="true" /></span>
+                    <span class="kh-mega-ic"
+                      ><Megaphone size={18} aria-hidden="true" /></span
+                    >
                     <p class="kh-marketing-label">Marketing</p>
                   </div>
                   <div class="kh-marketing-items">
-                    {marketing.map(({ icon: Icon, label }) => (
-                      <span class="kh-coming-soon-link">
-                        <span class="kh-mega-ic"><Icon size={18} aria-hidden="true" /></span>
-                        <span class="kh-mega-label">{label}</span>
-                        <span class="kh-coming-soon-badge">Coming soon</span>
-                      </span>
-                    ))}
+                    {
+                      marketing.map(({ icon: Icon, label }) => (
+                        <span class="kh-coming-soon-link">
+                          <span class="kh-mega-ic">
+                            <Icon size={18} aria-hidden="true" />
+                          </span>
+                          <span class="kh-mega-label">{label}</span>
+                          <span class="kh-coming-soon-badge">Coming soon</span>
+                        </span>
+                      ))
+                    }
                   </div>
                 </aside>
               </div>
@@ -144,57 +373,99 @@ const resources = [
         </li>
 
         <li class="kh-dropdown">
-          <button type="button" class="kh-nav-trigger" aria-expanded="false" aria-controls="industriesMegaMenu">
+          <button
+            type="button"
+            class="kh-nav-trigger"
+            aria-expanded="false"
+            aria-controls="industriesMegaMenu"
+          >
             <span>Industries</span>
             <ChevronDown size={10} class="kh-chevron" aria-hidden="true" />
           </button>
-          <div id="industriesMegaMenu" class="kh-mega-menu kh-mega-industries" role="region" aria-label="Industries menu">
+          <div
+            id="industriesMegaMenu"
+            class="kh-mega-menu kh-mega-industries"
+            role="region"
+            aria-label="Industries menu"
+          >
             <div class="kh-mega-panel">
               <div class="kh-mega-head">
                 <div class="kh-mega-head-text">
                   <p class="kh-mega-kicker">Industries</p>
-                  <p class="kh-mega-sub">Built for field sales and service businesses.</p>
+                  <p class="kh-mega-sub">
+                    Built for field sales and service businesses.
+                  </p>
                 </div>
-                <a href="https://knockio.com/industries/" class="kh-mega-cta-btn">
+                <a
+                  href="https://knockio.com/industries/"
+                  class="kh-mega-cta-btn"
+                >
                   View all industries
                   <ArrowRight size={14} aria-hidden="true" />
                 </a>
               </div>
               <div class="kh-mega-grid kh-mega-scroll">
-                {industries.map(({ href, icon: Icon, label }) => (
-                  <a href={href} class="kh-mega-link">
-                    <span class="kh-mega-ic kh-mega-ic-sm"><Icon size={16} aria-hidden="true" /></span>
-                    <span class="kh-mega-label">{label}</span>
-                  </a>
-                ))}
+                {
+                  industries.map(({ href, icon: Icon, label }) => (
+                    <a href={href} class="kh-mega-link">
+                      <span class="kh-mega-ic kh-mega-ic-sm">
+                        <Icon size={16} aria-hidden="true" />
+                      </span>
+                      <span class="kh-mega-label">{label}</span>
+                    </a>
+                  ))
+                }
               </div>
             </div>
           </div>
         </li>
 
-        <li><a href="https://knockio.com/pricing/" class="kh-nav-link">Pricing</a></li>
-        <li><a href="https://knockio.com/blog/" class="kh-nav-link">Blog</a></li>
+        <li>
+          <a href="https://knockio.com/pricing/" class="kh-nav-link">Pricing</a>
+        </li>
+        <li>
+          <a href="https://knockio.com/blog/" class="kh-nav-link">Blog</a>
+        </li>
 
         <li class="kh-dropdown">
-          <button type="button" class="kh-nav-trigger" aria-expanded="false" aria-controls="resourcesMegaMenu">
+          <button
+            type="button"
+            class="kh-nav-trigger"
+            aria-expanded="false"
+            aria-controls="resourcesMegaMenu"
+          >
             <span>Resources</span>
             <ChevronDown size={10} class="kh-chevron" aria-hidden="true" />
           </button>
-          <div id="resourcesMegaMenu" class="kh-mega-menu" role="region" aria-label="Resources menu">
+          <div
+            id="resourcesMegaMenu"
+            class="kh-mega-menu"
+            role="region"
+            aria-label="Resources menu"
+          >
             <div class="kh-mega-panel">
               <div class="kh-mega-head">
                 <div class="kh-mega-head-text">
                   <p class="kh-mega-kicker">Knockio Resources</p>
-                  <p class="kh-mega-sub">Practical guides for roofing sales and storm campaigns.</p>
+                  <p class="kh-mega-sub">
+                    Practical guides for roofing sales and storm campaigns.
+                  </p>
                 </div>
               </div>
-              <div class="kh-mega-grid" style="grid-template-columns: repeat(2, 1fr);">
-                {resources.map(({ href, icon: Icon, label }) => (
-                  <a href={href} class="kh-mega-link">
-                    <span class="kh-mega-ic"><Icon size={18} aria-hidden="true" /></span>
-                    <span class="kh-mega-label">{label}</span>
-                  </a>
-                ))}
+              <div
+                class="kh-mega-grid"
+                style="grid-template-columns: repeat(2, 1fr);"
+              >
+                {
+                  resources.map(({ href, icon: Icon, label }) => (
+                    <a href={href} class="kh-mega-link">
+                      <span class="kh-mega-ic">
+                        <Icon size={18} aria-hidden="true" />
+                      </span>
+                      <span class="kh-mega-label">{label}</span>
+                    </a>
+                  ))
+                }
               </div>
             </div>
           </div>
@@ -203,64 +474,121 @@ const resources = [
     </nav>
 
     <div class="kh-actions">
-      <button id="mobileMenuBtn" type="button" class="kh-mobile-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileSidebar">
+      <button
+        id="mobileMenuBtn"
+        type="button"
+        class="kh-mobile-toggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobileSidebar"
+      >
         <Menu size={20} aria-hidden="true" />
       </button>
       <a href="https://app.knockio.com/" class="kh-btn-signin">Sign in</a>
-      <a href="https://knockio.com/book-a-demo/" class="kh-btn-demo">Book a demo</a>
+      <a href="https://knockio.com/book-a-demo/" class="kh-btn-demo"
+        >Book a demo</a
+      >
     </div>
   </div>
 </header>
 
 <div id="mobileMenuOverlay" class="kh-mobile-overlay" aria-hidden="true"></div>
 
-<aside id="mobileSidebar" class="kh-sidebar" aria-hidden="true" aria-label="Mobile navigation">
+<aside
+  id="mobileSidebar"
+  class="kh-sidebar"
+  aria-hidden="true"
+  aria-label="Mobile navigation"
+>
   <div class="kh-sidebar-inner">
     <div class="kh-sidebar-head">
       <a href="/" class="kh-logo" aria-label="Knockio home">
-        <img src="/assets/cfw/knockio-logo.webp" alt="Knockio" width="120" height="36" decoding="async" />
+        <img
+          src="/assets/cfw/knockio-logo.webp"
+          alt="Knockio"
+          width="120"
+          height="36"
+          decoding="async"
+        />
       </a>
-      <button id="mobileCloseBtn" type="button" class="kh-sidebar-close" aria-label="Close menu">
+      <button
+        id="mobileCloseBtn"
+        type="button"
+        class="kh-sidebar-close"
+        aria-label="Close menu"
+      >
         <X size={20} aria-hidden="true" />
       </button>
     </div>
 
     <div class="kh-sidebar-scroll">
       <div class="kh-mobile-section">
-        <button type="button" class="kh-mobile-accordion-toggle" aria-expanded="false" data-target="mobileProductsSubmenu">
+        <button
+          type="button"
+          class="kh-mobile-accordion-toggle"
+          aria-expanded="false"
+          data-target="mobileProductsSubmenu"
+        >
           <span class="kh-mobile-accordion-left">
-            <span class="kh-mobile-accordion-icon"><Boxes size={18} aria-hidden="true" /></span>
+            <span class="kh-mobile-accordion-icon"
+              ><Boxes size={18} aria-hidden="true" /></span
+            >
             <span class="kh-mobile-accordion-title">
               <span>Products</span>
               <span>Choose your Knockio workflow</span>
             </span>
           </span>
-          <ChevronDown size={12} class="kh-mobile-accordion-chevron" aria-hidden="true" />
+          <ChevronDown
+            size={12}
+            class="kh-mobile-accordion-chevron"
+            aria-hidden="true"
+          />
         </button>
-        <div id="mobileProductsSubmenu" class="kh-mobile-submenu" aria-hidden="true">
+        <div
+          id="mobileProductsSubmenu"
+          class="kh-mobile-submenu"
+          aria-hidden="true"
+        >
           <div class="kh-mobile-submenu-grid">
-            {products.map(({ href, icon: Icon, label }) => (
-              <a href={href} class="kh-mobile-submenu-link">
-                <Icon size={16} aria-hidden="true" />
-                <span>{label}</span>
-              </a>
-            ))}
+            {
+              products.map(({ href, icon: Icon, label }) => (
+                <a href={href} class="kh-mobile-submenu-link">
+                  <Icon size={16} aria-hidden="true" />
+                  <span>{label}</span>
+                </a>
+              ))
+            }
           </div>
         </div>
       </div>
 
       <div class="kh-mobile-section">
-        <button type="button" class="kh-mobile-accordion-toggle" aria-expanded="false" data-target="mobileFeaturesSubmenu">
+        <button
+          type="button"
+          class="kh-mobile-accordion-toggle"
+          aria-expanded="false"
+          data-target="mobileFeaturesSubmenu"
+        >
           <span class="kh-mobile-accordion-left">
-            <span class="kh-mobile-accordion-icon"><Layers size={18} aria-hidden="true" /></span>
+            <span class="kh-mobile-accordion-icon"
+              ><Layers size={18} aria-hidden="true" /></span
+            >
             <span class="kh-mobile-accordion-title">
               <span>Features</span>
               <span>Explore Knockio tools</span>
             </span>
           </span>
-          <ChevronDown size={12} class="kh-mobile-accordion-chevron" aria-hidden="true" />
+          <ChevronDown
+            size={12}
+            class="kh-mobile-accordion-chevron"
+            aria-hidden="true"
+          />
         </button>
-        <div id="mobileFeaturesSubmenu" class="kh-mobile-submenu" aria-hidden="true">
+        <div
+          id="mobileFeaturesSubmenu"
+          class="kh-mobile-submenu"
+          aria-hidden="true"
+        >
           <div class="kh-mobile-submenu-grid">
             <a href="https://knockio.com/features/" class="kh-mobile-view-all">
               <span class="kh-mobile-view-all-left">
@@ -269,27 +597,36 @@ const resources = [
               </span>
               <ArrowRight size={14} aria-hidden="true" />
             </a>
-            {features.map(({ href, icon: Icon, label }) => (
-              <a href={href} class="kh-mobile-submenu-link">
-                <Icon size={16} aria-hidden="true" />
-                <span>{label}</span>
-              </a>
-            ))}
+            {
+              features.map(({ href, icon: Icon, label }) => (
+                <a href={href} class="kh-mobile-submenu-link">
+                  <Icon size={16} aria-hidden="true" />
+                  <span>{label}</span>
+                </a>
+              ))
+            }
             <div class="kh-mobile-marketing-divider">
               <div class="kh-marketing-header">
-                <span class="kh-mobile-accordion-icon"><Megaphone size={16} aria-hidden="true" /></span>
+                <span class="kh-mobile-accordion-icon"
+                  ><Megaphone size={16} aria-hidden="true" /></span
+                >
                 <p class="kh-marketing-label">Marketing</p>
               </div>
               <div class="kh-mobile-submenu-grid">
-                {marketing.map(({ icon: Icon, label }) => (
-                  <span class="kh-mobile-submenu-link kh-coming-soon-link" style="cursor: default;">
-                    <span style="display: flex; align-items: center; gap: 0.75rem; min-width: 0;">
-                      <Icon size={16} aria-hidden="true" />
-                      <span style="min-width: 0;">{label}</span>
+                {
+                  marketing.map(({ icon: Icon, label }) => (
+                    <span
+                      class="kh-mobile-submenu-link kh-coming-soon-link"
+                      style="cursor: default;"
+                    >
+                      <span style="display: flex; align-items: center; gap: 0.75rem; min-width: 0;">
+                        <Icon size={16} aria-hidden="true" />
+                        <span style="min-width: 0;">{label}</span>
+                      </span>
+                      <span class="kh-coming-soon-badge">Coming soon</span>
                     </span>
-                    <span class="kh-coming-soon-badge">Coming soon</span>
-                  </span>
-                ))}
+                  ))
+                }
               </div>
             </div>
           </div>
@@ -297,19 +634,38 @@ const resources = [
       </div>
 
       <div class="kh-mobile-section">
-        <button type="button" class="kh-mobile-accordion-toggle" aria-expanded="false" data-target="mobileIndustriesSubmenu">
+        <button
+          type="button"
+          class="kh-mobile-accordion-toggle"
+          aria-expanded="false"
+          data-target="mobileIndustriesSubmenu"
+        >
           <span class="kh-mobile-accordion-left">
-            <span class="kh-mobile-accordion-icon"><Building2 size={18} aria-hidden="true" /></span>
+            <span class="kh-mobile-accordion-icon"
+              ><Building2 size={18} aria-hidden="true" /></span
+            >
             <span class="kh-mobile-accordion-title">
               <span>Industries</span>
               <span>Solutions by business type</span>
             </span>
           </span>
-          <ChevronDown size={12} class="kh-mobile-accordion-chevron" aria-hidden="true" />
+          <ChevronDown
+            size={12}
+            class="kh-mobile-accordion-chevron"
+            aria-hidden="true"
+          />
         </button>
-        <div id="mobileIndustriesSubmenu" class="kh-mobile-submenu" aria-hidden="true">
+        <div
+          id="mobileIndustriesSubmenu"
+          class="kh-mobile-submenu"
+          aria-hidden="true"
+        >
           <div class="kh-mobile-submenu-grid">
-            <a href="https://knockio.com/industries/" class="kh-mobile-view-all" style="grid-column: 1 / -1;">
+            <a
+              href="https://knockio.com/industries/"
+              class="kh-mobile-view-all"
+              style="grid-column: 1 / -1;"
+            >
               <span class="kh-mobile-view-all-left">
                 <BookOpen size={16} aria-hidden="true" />
                 <span>View All Industries</span>
@@ -318,45 +674,68 @@ const resources = [
             </a>
           </div>
           <div class="kh-mobile-industries-grid" style="margin-top: 0.5rem;">
-            {industries.map(({ href, label }) => (
-              <a href={href} class="kh-mobile-submenu-link">
-                <span>{label}</span>
-              </a>
-            ))}
+            {
+              industries.map(({ href, label }) => (
+                <a href={href} class="kh-mobile-submenu-link">
+                  <span>{label}</span>
+                </a>
+              ))
+            }
           </div>
         </div>
       </div>
 
       <div class="kh-mobile-simple-links">
         <a href="https://knockio.com/pricing/" class="kh-mobile-simple-link">
-          <span class="kh-mobile-simple-icon"><DollarSign size={18} aria-hidden="true" /></span>
+          <span class="kh-mobile-simple-icon"
+            ><DollarSign size={18} aria-hidden="true" /></span
+          >
           <span>Pricing</span>
         </a>
         <a href="https://knockio.com/blog/" class="kh-mobile-simple-link">
-          <span class="kh-mobile-simple-icon"><Newspaper size={18} aria-hidden="true" /></span>
+          <span class="kh-mobile-simple-icon"
+            ><Newspaper size={18} aria-hidden="true" /></span
+          >
           <span>Blog</span>
         </a>
       </div>
 
       <div class="kh-mobile-section" style="margin-top: 0.75rem;">
-        <button type="button" class="kh-mobile-accordion-toggle" aria-expanded="false" data-target="mobileResourcesSubmenu">
+        <button
+          type="button"
+          class="kh-mobile-accordion-toggle"
+          aria-expanded="false"
+          data-target="mobileResourcesSubmenu"
+        >
           <span class="kh-mobile-accordion-left">
-            <span class="kh-mobile-accordion-icon"><BookOpen size={18} aria-hidden="true" /></span>
+            <span class="kh-mobile-accordion-icon"
+              ><BookOpen size={18} aria-hidden="true" /></span
+            >
             <span class="kh-mobile-accordion-title">
               <span>Resources</span>
               <span>Guides and playbooks</span>
             </span>
           </span>
-          <ChevronDown size={12} class="kh-mobile-accordion-chevron" aria-hidden="true" />
+          <ChevronDown
+            size={12}
+            class="kh-mobile-accordion-chevron"
+            aria-hidden="true"
+          />
         </button>
-        <div id="mobileResourcesSubmenu" class="kh-mobile-submenu" aria-hidden="true">
+        <div
+          id="mobileResourcesSubmenu"
+          class="kh-mobile-submenu"
+          aria-hidden="true"
+        >
           <div class="kh-mobile-submenu-grid">
-            {resources.map(({ href, icon: Icon, label }) => (
-              <a href={href} class="kh-mobile-submenu-link">
-                <Icon size={16} aria-hidden="true" />
-                <span>{label}</span>
-              </a>
-            ))}
+            {
+              resources.map(({ href, icon: Icon, label }) => (
+                <a href={href} class="kh-mobile-submenu-link">
+                  <Icon size={16} aria-hidden="true" />
+                  <span>{label}</span>
+                </a>
+              ))
+            }
           </div>
         </div>
       </div>
@@ -364,7 +743,9 @@ const resources = [
       <div class="kh-mobile-ctas">
         <div class="kh-mobile-ctas-grid">
           <a href="https://app.knockio.com/" class="kh-btn-signin">Sign in</a>
-          <a href="https://knockio.com/book-a-demo/" class="kh-btn-demo">Book a demo</a>
+          <a href="https://knockio.com/book-a-demo/" class="kh-btn-demo"
+            >Book a demo</a
+          >
         </div>
       </div>
     </div>
@@ -379,14 +760,22 @@ const resources = [
   const sidebar = document.getElementById("mobileSidebar");
   const overlay = document.getElementById("mobileMenuOverlay");
   const desktopDropdowns = document.querySelectorAll(".kh-dropdown");
-  const accordionBtns = document.querySelectorAll(".kh-mobile-accordion-toggle");
+  const accordionBtns = document.querySelectorAll(
+    ".kh-mobile-accordion-toggle",
+  );
   let lastFocused: Element | null = null;
 
   function normalizePath(v: string) {
     try {
       const u = new URL(v, window.location.origin);
-      return decodeURIComponent(u.pathname || "/").replace(/\/{2,}/g, "/").replace(/\/$/, "") || "/";
-    } catch { return ""; }
+      return (
+        decodeURIComponent(u.pathname || "/")
+          .replace(/\/{2,}/g, "/")
+          .replace(/\/$/, "") || "/"
+      );
+    } catch {
+      return "";
+    }
   }
 
   function isSamePage(el: HTMLAnchorElement) {
@@ -395,23 +784,34 @@ const resources = [
     if (h === "#" || h.startsWith("javascript:")) return false;
     try {
       const u = new URL(h, window.location.origin);
-      return u.origin === window.location.origin && normalizePath(u.href) === normalizePath(window.location.href);
-    } catch { return false; }
+      return (
+        u.origin === window.location.origin &&
+        normalizePath(u.href) === normalizePath(window.location.href)
+      );
+    } catch {
+      return false;
+    }
   }
 
   function setActiveNav() {
-    document.querySelectorAll("#mainNavbar a[href], #mobileSidebar a[href]").forEach((link) => {
-      const a = link as HTMLAnchorElement;
-      a.classList.remove("kh-nav-active", "kh-mega-link-active", "kh-mobile-link-active");
-      if (!isSamePage(a)) return;
-      if (a.closest("#mobileSidebar")) {
-        a.classList.add("kh-mobile-link-active");
-      } else if (a.closest(".kh-mega-menu")) {
-        a.classList.add("kh-mega-link-active");
-      } else {
-        a.classList.add("kh-nav-active");
-      }
-    });
+    document
+      .querySelectorAll("#mainNavbar a[href], #mobileSidebar a[href]")
+      .forEach((link) => {
+        const a = link as HTMLAnchorElement;
+        a.classList.remove(
+          "kh-nav-active",
+          "kh-mega-link-active",
+          "kh-mobile-link-active",
+        );
+        if (!isSamePage(a)) return;
+        if (a.closest("#mobileSidebar")) {
+          a.classList.add("kh-mobile-link-active");
+        } else if (a.closest(".kh-mega-menu")) {
+          a.classList.add("kh-mega-link-active");
+        } else {
+          a.classList.add("kh-nav-active");
+        }
+      });
 
     desktopDropdowns.forEach((dd) => {
       const trigger = dd.querySelector(".kh-nav-trigger");
@@ -440,6 +840,10 @@ const resources = [
 
   function updateOnScroll() {
     if (!navbar) return;
+    if (navbar.getAttribute("data-white-bg") === "true") {
+      navbar.classList.add("kh-scrolled");
+      return;
+    }
     navbar.classList.toggle("kh-scrolled", window.scrollY > 12);
   }
 
@@ -525,11 +929,18 @@ const resources = [
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       closeAllDropdowns();
-      if (sidebar && sidebar.getAttribute("aria-hidden") === "false") closeMobile();
+      if (sidebar && sidebar.getAttribute("aria-hidden") === "false")
+        closeMobile();
     }
-    if (e.key === "Tab" && sidebar && sidebar.getAttribute("aria-hidden") === "false") {
+    if (
+      e.key === "Tab" &&
+      sidebar &&
+      sidebar.getAttribute("aria-hidden") === "false"
+    ) {
       const focusable = Array.from(
-        sidebar.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')
+        sidebar.querySelectorAll(
+          'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
+        ),
       ).filter((el) => (el as HTMLElement).offsetParent !== null);
       if (!focusable.length) return;
       const first = focusable[0] as HTMLElement;
@@ -558,7 +969,9 @@ const resources = [
 
   if (sidebar) {
     sidebar.addEventListener("click", (e) => {
-      const accBtn = (e.target as Element).closest(".kh-mobile-accordion-toggle");
+      const accBtn = (e.target as Element).closest(
+        ".kh-mobile-accordion-toggle",
+      );
       if (accBtn && sidebar.contains(accBtn)) {
         e.preventDefault();
         e.stopPropagation();
