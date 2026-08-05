@@ -1,6 +1,6 @@
 ---
 import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
-import "../../styles/estimate-software.css";
+import "../../styles/work-order-management-software.css";
 import {
   ArrowRight,
   Bell,
@@ -16,133 +16,129 @@ import {
   RefreshCw,
 } from "lucide-astro";
 
-const title = "Estimate Software for Contractors and Home Service | Knockio";
+const title = "Work Order Management Software for Home Services | Knockio";
 const description =
-  "Build estimates that win jobs with e-signatures, online approvals, and change orders. See why contractors choose Knockio over Jobber and ServiceTitan.";
+  "Run tasks, budgets, materials, and crews from one work order. See why contractors move job costing from spreadsheets and ServiceTitan to Knockio fast.";
 
 const asset = (name: string) => `/assets/cfw/${name}`;
 
 const proposalGroups = [
   {
     key: "digital",
-    title: "Build Estimates That Win Jobs",
+    title: "Plan the Job From the Ground Up",
     icon: "clipboard" as const,
     items: [
       {
-        label: "Professional Proposals",
-        title: "Branded Digital Estimates",
-        text: "Send polished, on brand estimates by email or text that customers can open and review on any device. No paper, no fax machine, no excuses.",
+        label: "Clear Direction",
+        title: "Tasks and Checklists for Every Job",
+        text: "Break a job into clear, assignable tasks so crews and subcontractors know exactly what needs to happen and in what order.",
         image: asset(
-          "inner-estimate-build-estimates-that-win-jobs-professional-proposals.webp",
+          "inner-work-order-plan-the-job-from-the-ground-up-clear-direction-new.webp",
         ),
       },
       {
-        label: "Higher Average Job Value",
-        title: "Optional Line Items for Upsells",
-        text: "Let homeowners add upgrades like gutter guards on a roofing job or a smart thermostat on an HVAC install, right inside the estimate.",
+        label: "Time Management",
+        title: "Built In Scheduling",
+        text: "Assign dates and time slots to tasks and crews directly inside the work order, keeping the whole job on one visible timeline.",
         image: asset(
-          "inner-estimate-build-estimates-that-win-jobs-higher-average-job-value.webp",
+          "inner-work-order-plan-the-job-from-the-ground-up-time-management.webp",
         ),
       },
       {
-        label: "Speed and Consistency",
-        title: "Templates and a Product or Service Catalog",
-        text: "Pull from a library of priced services and products so every estimate goes out fast, accurate, and consistent across your team.",
+        label: "Total Flexibility",
+        title: "Assign to Internal Crews or Subcontractors",
+        text: "Work orders support both in house teams and subcontractors, so you can run jobs however your business is actually staffed.",
         image: asset(
-          "inner-estimate-build-estimates-that-win-jobs-speed-and-consistency.webp",
+          "inner-work-order-plan-the-job-from-the-ground-up-total-flexibility.webp",
         ),
       },
     ],
   },
   {
     key: "pricing",
-    title: "Make Approval Effortless",
+    title: "Protect Your Margins",
     icon: "dollar" as const,
     items: [
       {
-        label: "Sign Anywhere",
-        title: "Digital Signatures",
-        text: "Customers approve estimates with a legally binding e signature from their phone. No printing, scanning, or waiting around for someone to be home.",
+        label: "Job Costing",
+        title: "Detailed Budgets and Line Items",
+        text: "Break down labor, materials, and subcontractor costs so you know your real margin on every job, not just an optimistic guess from the estimate.",
+        image: asset("inner-work-order-protect-your-margins-job-costing.webp"),
+      },
+      {
+        label: "Profitability Tracking",
+        title: "Real Time Budget vs Actual View",
+        text: "Compare planned costs to actual spend as the job moves forward, so you catch overruns before they wreck your profit.",
         image: asset(
-          "inner-estimate-make-approval-effortless-sign-anywhere.webp",
+          "inner-work-order-protect-your-margins-profitability-tracking.webp",
         ),
       },
       {
-        label: "Self Serve Approval",
-        title: "Online Customer Acceptance Portal",
-        text: "Give clients a dedicated portal to review pricing, photos, and scope, then accept the job whenever it works for them.",
-        image: asset(
-          "inner-estimate-make-approval-effortless-self-serve-approval.webp",
-        ),
-      },
-      {
-        label: "Transparent Pricing",
-        title: "Itemized Cost Breakdown",
-        text: "Show customers exactly what they are paying for with clear line items. That builds confidence and cuts down on back and forth questions.",
-        image: asset(
-          "inner-estimate-make-approval-effortless-transparent-pricing.webp",
-        ),
+        label: "No Surprises",
+        title: "Vendor Bills Linked to the Job",
+        text: "Attach vendor bills directly to the relevant work order, so every cost shows up in the job's total picture.",
+        image: asset("inner-work-order-protect-your-margins-no-surprises.webp"),
       },
     ],
   },
   {
     key: "tracking",
-    title: "Handle Changes Without the Chaos",
+    title: "Keep Materials Moving",
     icon: "file" as const,
     items: [
       {
-        label: "Scope Changes Made Easy",
-        title: "Built In Change Orders",
-        text: "When the job grows mid project, create a change order linked to the original estimate so pricing and approvals stay organized.",
+        label: "Accurate Planning",
+        title: "Material Takeoffs From the Work Order",
+        text: "Generate a material takeoff straight from the job's scope, so you know exactly what is needed before the crew shows up.",
         image: asset(
-          "inner-estimate-handle-changes-without-the-chaos-scope-changes-made-easy.webp",
+          "inner-work-order-keep-materials-moving-accurate-planning.webp",
         ),
       },
       {
-        label: "Connected Records",
-        title: "Estimates Linked to Jobs and Work Orders",
-        text: "Every estimate ties to the job record, so approved pricing flows into work orders and invoices automatically.",
+        label: "Inventory Sync",
+        title: "Takeoffs Linked to Inventory",
+        text: "Connect takeoffs to your product catalog to see instantly what is in stock and what needs to be ordered.",
         image: asset(
-          "inner-estimate-handle-changes-without-the-chaos-connected-records.webp",
+          "inner-work-order-keep-materials-moving-inventory-sync.webp",
         ),
       },
       {
-        label: "Clean Audit Trail",
-        title: "Full Estimate History per Job",
-        text: "Track every version, revision, and change order tied to a job, all in one place for easy reference down the road.",
+        label: "Fast Procurement",
+        title: "Create Purchase Orders for Shortages",
+        text: "When a takeoff shows a shortage, generate a purchase order right from the work order to keep the job moving.",
         image: asset(
-          "inner-estimate-handle-changes-without-the-chaos-clean-audit-trail.webp",
+          "inner-work-order-keep-materials-moving-fast-procurement.webp",
         ),
       },
     ],
   },
   {
     key: "followup",
-    title: "Close More, Follow Up Less",
+    title: "Give Crews Full Job Context",
     icon: "bell" as const,
     items: [
       {
-        label: "Automated Nudges",
-        title: "Estimate Follow Up Reminders",
-        text: "Automatically remind customers about pending estimates by email or text, so your sales team is not stuck chasing 'still thinking about it' leads forever.",
+        label: "Field Communication",
+        title: "Notes and Job Site Photos",
+        text: "Drop notes and upload photos directly to the work order, so crews and subcontractors have full context without a separate text thread.",
         image: asset(
-          "inner-estimate-close-more-follow-up-less-automated-nudges.webp",
+          "inner-work-order-give-crews-full-job-context-field-communication.webp",
         ),
       },
       {
-        label: "Real Time Edits",
-        title: "Live Pricing Updates",
-        text: "Adjust line items, discounts, or pricing during an in home conversation and the customer sees the updated total right away.",
+        label: "Connected Records",
+        title: "Tied to Estimates, Invoices, and Inventory",
+        text: "Work orders are not floating documents. They connect to the job's estimate, invoice, and inventory for a complete picture.",
         image: asset(
-          "inner-estimate-close-more-follow-up-less-real-time-edits.webp",
+          "inner-work-order-give-crews-full-job-context-connected-records.webp",
         ),
       },
       {
-        label: "From Quote to Job",
-        title: "One Click Conversion to Work Orders and Invoices",
-        text: "Turn an approved estimate straight into a work order or invoice, keeping your pipeline moving without manual handoffs.",
+        label: "Accountability",
+        title: "Full Activity History per Work Order",
+        text: "Track every update, task completion, and note tied to the work order, giving owners a clear record of how the job actually went.",
         image: asset(
-          "inner-estimate-close-more-follow-up-less-from-quote-to-job.webp",
+          "inner-work-order-give-crews-full-job-context-accountability.webp",
         ),
       },
     ],
@@ -180,20 +176,20 @@ const trustBadges = [
 
 const faqs = [
   {
-    q: "Can customers approve and sign estimates online?",
-    a: "Yes. Knockio includes a customer acceptance portal with digital signature support, so homeowners and commercial clients can review and approve estimates from any device.",
+    q: "Can work orders be assigned to subcontractors as well as internal crews?",
+    a: "Yes. Work orders support both internal crews and subcontractors or vendors, giving you flexibility no matter how your business is staffed.",
   },
   {
-    q: "Does Knockio support change orders?",
-    a: "Yes. If the scope of work changes after an estimate is approved, you can create a change order linked to the original job and estimate, keeping pricing and approvals organized.",
+    q: "What can a work order include?",
+    a: "A work order can include tasks, a detailed budget, materials and material takeoffs, notes, photos, a schedule, linked purchase orders, and vendor bills, everything needed to run the job from start to finish.",
   },
   {
-    q: "Can I offer optional add ons in an estimate?",
-    a: "Yes. Estimates support optional line items, letting customers choose upgrades or extras, which is a simple way to increase average job value for roofing, HVAC, solar, and remodeling jobs.",
+    q: "Can I create a purchase order directly from a work order?",
+    a: "Yes. If a material takeoff shows a shortage, you can generate a purchase order directly from the work order to restock inventory or order materials for the job.",
   },
   {
-    q: "Can I save estimate templates for common jobs?",
-    a: "Yes. Knockio supports estimate templates and a product or service catalog, so your team can build accurate, consistent quotes quickly for repeatable job types.",
+    q: "Are work orders connected to invoicing and payments?",
+    a: "Yes. Work orders are part of Knockio's connected job workflow, so costs, materials, and progress tracked on a work order tie directly into your estimates, invoices, and payment tracking.",
   },
 ];
 
@@ -244,8 +240,9 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://knockio.com/features/estimate-software/#webpage",
-      url: "https://knockio.com/features/estimate-software/",
+      "@id":
+        "https://knockio.com/features/work-order-management-software/#webpage",
+      url: "https://knockio.com/features/work-order-management-software/",
       name: title,
       description,
       isPartOf: { "@id": "https://knockio.com/#website" },
@@ -253,7 +250,8 @@ const jsonLd = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://knockio.com/features/estimate-software/#breadcrumb",
+      "@id":
+        "https://knockio.com/features/work-order-management-software/#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
@@ -270,14 +268,15 @@ const jsonLd = {
         {
           "@type": "ListItem",
           position: 3,
-          name: "Estimate Software",
-          item: "https://knockio.com/features/estimate-software/",
+          name: "Work Order Management Software",
+          item: "https://knockio.com/features/work-order-management-software/",
         },
       ],
     },
     {
       "@type": "FAQPage",
-      "@id": "https://knockio.com/features/estimate-software/#faq",
+      "@id":
+        "https://knockio.com/features/work-order-management-software/#faq",
       mainEntity: faqs.map((faq) => ({
         "@type": "Question",
         name: faq.q,
@@ -294,11 +293,11 @@ const tabIconClass =
 <KnockioHomeLayout
   title={title}
   description={description}
-  ogImage={asset("inner-estimate-hero.webp")}
+  ogImage={asset("inner-work-order-hero.webp")}
   jsonLd={jsonLd}
   whiteBg={true}
 >
-  <main id="estimate-software-page">
+  <main id="work-order-management-page">
     <!-- ========== Hero ========== -->
     <section
       class="overflow-hidden border-b border-solid border-[#7fc271] bg-white pt-[72px]"
@@ -313,18 +312,17 @@ const tabIconClass =
             <h1
               class="mb-7 text-[32px] font-bold leading-[38px] text-neutral-950 sm:text-[38px] sm:leading-[44px] xl:text-[48px] xl:leading-[54px] 2xl:text-[56px] 2xl:leading-[60px]"
             >
-              Estimate Software for Contractors<br class="hidden sm:block" />
+              Work Order Management Software<br class="hidden sm:block" />
             </h1>
             <p
               class="mb-10 max-w-[710px] text-base font-medium text-neutral-600 lg:text-lg"
             >
-              Most contractors lose jobs not because their price is wrong, but
-              because the estimate looks unprofessional, takes too long to send,
-              or sits in someone's inbox with no follow up. Knockio gives you
-              branded, easy to approve estimates with digital signatures and
-              online acceptance built in. Create a consistent, professional
-              estimating experience across every representative, crew, branch,
-              service line, and customer interaction.
+              If your crews are working off a text message, a phone call, and a
+              notepad, you are leaving money on the table every single week.
+              Knockio's work orders bring tasks, budgets, materials, schedules,
+              and crew assignments into one place, so your office and your field
+              teams are always working from the exact same playbook, whether you
+              run your own crews, subcontractors, or both.
             </p>
             <a
               href="#cal-sec"
@@ -341,21 +339,20 @@ const tabIconClass =
             <h3
               class="mb-4 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
-              What should I look for in estimate software for contractors?
+              What should work order management software include for
+              contractors?
             </h3>
             <p
               class="max-w-[720px] text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
-              Good estimate software for contractors should let you build
-              branded, itemized quotes fast, support digital signatures and
-              online approval so customers can accept from any device, handle
-              change orders when scope shifts mid job, and connect directly to
-              your invoicing and inventory. Knockio includes all of this out of
-              the box, plus optional line items for upsells and a reusable
-              product and service catalog. Knockio connects estimate templates,
-              optional line items, digital approvals, change orders, products,
-              services, work orders, invoices, payments, and job history in one
-              workflow.
+              Work order management software for contractors should let you
+              assign tasks and schedules to crews or subcontractors, track a
+              detailed job budget against actual spend, generate material
+              takeoffs linked to inventory, create purchase orders for
+              shortages, and attach notes, photos, and vendor bills, all tied to
+              the same job. Knockio brings every one of these into a single
+              connected work order, which is more depth than most platforms
+              offer without an expensive add on tier.
             </p>
           </div>
 
@@ -382,10 +379,10 @@ const tabIconClass =
           class="hero-estimate-visual relative flex min-h-[320px] items-end justify-center overflow-hidden px-4 sm:min-h-[400px] lg:min-h-full lg:px-0"
         >
           <img
-            src={asset("inner-estimate-hero.webp")}
-            alt="Roofing estimate preview"
-            width="858"
-            height="644"
+            src={asset("inner-work-order-hero.webp")}
+            alt="Work order management preview"
+            width="688"
+            height="637"
             decoding="async"
             loading="eager"
             fetchpriority="high"
@@ -582,7 +579,7 @@ const tabIconClass =
       </div>
     </section>
 
-    <!-- ========== Manage Proposals ========== -->
+    <!-- ========== Manage Production ========== -->
     <section
       class="relative overflow-hidden bg-white py-24 sm:py-28 lg:py-[150px]"
     >
@@ -596,15 +593,15 @@ const tabIconClass =
           <h2
             class="mb-6 text-center text-[31px] font-bold leading-[39px] text-neutral-950 sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
           >
-            Manage Proposals From the First Estimate to the Final Job
+            Manage Production From the First Task to the Final Walkthrough
           </h2>
           <p
             class="mx-auto max-w-[800px] text-base leading-6 text-neutral-700 sm:text-lg sm:leading-6"
           >
-            Stop letting quotes get lost in someone's inbox. Knockio moves every
-            opportunity, from the first estimate to a signed job, a change
-            order, and a final invoice, through one connected pipeline so
-            nothing falls through the cracks.
+            Knockio connects work orders to the rest of the job, including
+            estimates, invoices, inventory, and payments, so production teams
+            and office staff are always looking at the exact same information,
+            no matter how complex the project gets.
           </p>
         </div>
 
@@ -626,14 +623,14 @@ const tabIconClass =
             <h3
               class="relative mb-5 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
-              Instant Estimate Updates
+              Instant Job Progress Visibility
             </h3>
             <p
               class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
-              Adjust pricing, add products, or apply discounts and the customer
-              sees the updated estimate in real time. Great for in home sales
-              conversations where decisions happen on the spot.
+              Owners and project managers can see exactly where every work order
+              stands, including tasks completed, budget spent, and materials
+              ordered, without calling the field for an update.
             </p>
             <ul
               class="relative mt-7 hidden grid gap-3 border-t border-solid border-neutral-200 pt-6"
@@ -674,14 +671,15 @@ const tabIconClass =
             <h3
               class="relative mb-5 text-[21px] font-semibold leading-[27px] text-white sm:text-2xl sm:leading-7"
             >
-              Estimate Follow Up Automation
+              Crew and Subcontractor Coordination
             </h3>
             <p
               class="relative text-[15px] leading-6 text-white/75 sm:text-base sm:leading-6"
             >
-              Automatically remind customers about pending estimates with
-              scheduled emails or texts, so your sales team spends less time
-              chasing 'still deciding' leads and more time closing new jobs.
+              Assign work orders to internal crews, subcontractors, or vendors
+              and notify them automatically of schedule changes, new tasks, or
+              notes, keeping remodeling, general contracting, and home security
+              install teams on the same page.
             </p>
             <ul
               class="relative mt-7 hidden grid gap-3 border-t border-solid border-white/15 pt-6"
@@ -718,15 +716,14 @@ const tabIconClass =
             <h3
               class="relative mb-5 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
-              Improved Customer Confidence
+              Improved Accountability and Job Costing
             </h3>
             <p
               class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
-              A clear, professional, itemized estimate with the option to sign
-              and accept online builds confidence in your business and helps
-              convert more quotes into booked jobs, whether you do pool
-              maintenance or fiber installs.
+              With budgets, materials, and labor tracked in one place, owners
+              get an accurate picture of job profitability, helping every home
+              service business protect margins on every job, big or small.
             </p>
             <ul
               class="relative mt-7 hidden grid gap-3 border-t border-solid border-neutral-200 pt-6"
@@ -881,7 +878,10 @@ const tabIconClass =
                           <h3 class="mb-1 text-base font-bold text-neutral-950">
                             {review.name}
                           </h3>
-                          <p class="text-sm text-neutral-500" aria-label="5 out of 5 stars">
+                          <p
+                            class="text-sm text-neutral-500"
+                            aria-label="5 out of 5 stars"
+                          >
                             ⭐⭐⭐⭐⭐
                           </p>
                         </div>
@@ -927,7 +927,10 @@ const tabIconClass =
                           <h3 class="mb-1 text-base font-bold text-neutral-950">
                             {review.name}
                           </h3>
-                          <p class="text-sm text-neutral-500" aria-label="5 out of 5 stars">
+                          <p
+                            class="text-sm text-neutral-500"
+                            aria-label="5 out of 5 stars"
+                          >
                             ⭐⭐⭐⭐⭐
                           </p>
                         </div>
@@ -946,7 +949,7 @@ const tabIconClass =
       </div>
     </section>
 
-    <!-- ========== Book a Demo (deferred Cal.com via layout) ========== -->
+    <!-- ========== Book a Demo ========== -->
     <section id="cal-sec" class="py-36 max-xl:py-28 max-lg:py-20 max-md:py-16">
       <div class="my-container">
         <div
@@ -978,5 +981,5 @@ const tabIconClass =
     </section>
   </main>
 
-  <script src="../../scripts/estimate-software.js"></script>
+  <script src="../../scripts/work-order-management-software.js"></script>
 </KnockioHomeLayout>
