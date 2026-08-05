@@ -1,0 +1,1016 @@
+---
+import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
+import "../../styles/business-automation-software.css";
+import {
+  ArrowLeftRight,
+  ArrowRight,
+  CalendarCheck,
+  Check,
+  ChevronDown,
+  ChevronRight,
+  FileSignature,
+  ListChecks,
+  MessagesSquare,
+  Quote,
+  RefreshCw,
+  Settings,
+} from "lucide-astro";
+
+const title = "Business Automation Software for Field Service | Knockio";
+const description =
+  "Automation Software by Knockio helps home service teams automate payment reminders, scheduling, follow-ups without code, and more.";
+
+const asset = (name: string) => `/assets/cfw/${name}`;
+
+const proposalGroups = [
+  {
+    key: "digital",
+    title: "Automate Your Money Flow",
+    icon: "money" as const,
+    items: [
+      {
+        label: "Faster Collections",
+        title: "Automated Payment Reminders",
+        text: "Trigger friendly email or text reminders the moment an invoice goes unpaid, cutting down on overdue balances without anyone making a phone call.",
+        image: asset(
+          "inner-automation-automate-your-money-flow-faster-collections.webp",
+        ),
+      },
+      {
+        label: "Recurring Revenue",
+        title: "Auto Pay Sequences for Maintenance Plans",
+        text: "Set up recurring billing flows for pest control, lawn care, and HVAC contracts that run themselves every single cycle.",
+        image: asset(
+          "inner-automation-automate-your-money-flow-recurring-revenue.webp",
+        ),
+      },
+      {
+        label: "Instant Action",
+        title: "Auto Send Invoices on Job Completion",
+        text: "Automatically generate and send an invoice the moment a job status changes to completed, so billing never gets forgotten in the shuffle.",
+        image: asset(
+          "inner-automation-automate-your-money-flow-instant-action.webp",
+        ),
+      },
+    ],
+  },
+  {
+    key: "pricing",
+    title: "Automate Scheduling and Tasks",
+    icon: "calendar" as const,
+    items: [
+      {
+        label: "Proactive Service",
+        title: "Auto Create Follow Up Appointments",
+        text: "Trigger a follow up inspection or maintenance visit automatically a set number of days after a job is marked complete.",
+        image: asset(
+          "inner-automation-automate-scheduling-and-tasks-proactive-service.webp",
+        ),
+      },
+      {
+        label: "No Dropped Tasks",
+        title: "Status Triggered Task Creation",
+        text: "Automatically generate new tasks for crews or office staff whenever a job moves to a certain status.",
+        image: asset(
+          "inner-automation-automate-scheduling-and-tasks-no-dropped-tasks.webp",
+        ),
+      },
+      {
+        label: "Always On Schedule",
+        title: "Automated Reminders for Upcoming Appointments",
+        text: "Send customers and crews automatic reminders ahead of scheduled jobs to cut down on no shows and last minute scrambling.",
+        image: asset(
+          "inner-automation-automate-scheduling-and-tasks-always-on-schedule.webp",
+        ),
+      },
+    ],
+  },
+  {
+    key: "tracking",
+    title: "Automate Customer Communication",
+    icon: "messages" as const,
+    items: [
+      {
+        label: "Always Informed",
+        title: "Status Based Email and Text Updates",
+        text: "Automatically notify customers as their job moves from estimate sent to scheduled to completed, with zero manual updates from your team.",
+        image: asset(
+          "inner-automation-automate-customer-communication-always-informed.webp",
+        ),
+      },
+      {
+        label: "Close More Deals",
+        title: "Estimate Follow Up Sequences",
+        text: "Automatically follow up on pending estimates by email or text to keep your pipeline moving without anyone chasing leads by hand.",
+        image: asset(
+          "inner-automation-automate-customer-communication-close-more-deals.webp",
+        ),
+      },
+      {
+        label: "Stronger Relationships",
+        title: "Automated Post Job Thank You Messages",
+        text: "Send a thank you or review request automatically once a job is marked complete, helping build your reputation without extra outreach.",
+        image: asset(
+          "inner-automation-automate-customer-communication-stronger-relationships.webp",
+        ),
+      },
+    ],
+  },
+  {
+    key: "followup",
+    title: "Automate Operations and Inventory",
+    icon: "settings" as const,
+    items: [
+      {
+        label: "Stay Stocked",
+        title: "Low Stock Alert Notifications",
+        text: "Get an automatic alert when inventory drops below a set threshold, so reordering happens before a job gets delayed.",
+        image: asset(
+          "inner-automation-automate-operations-and-inventory-stay-stocked.webp",
+        ),
+      },
+      {
+        label: "Custom Workflows",
+        title: "Fully Customizable Triggers and Statuses",
+        text: "Build automations around your own custom job statuses, matching exactly how your business actually operates.",
+        image: asset(
+          "inner-automation-automate-operations-and-inventory-custom-workflows.webp",
+        ),
+      },
+      {
+        label: "Connected Automation",
+        title: "Flows Across Jobs, Estimates, Invoices, and Inventory",
+        text: "Automations are not stuck in their own silo. Trigger actions across any part of the platform from a single flow.",
+        image: asset(
+          "inner-automation-automate-operations-and-inventory-connected-automation.webp",
+        ),
+      },
+    ],
+  },
+];
+
+const initialItem = proposalGroups[0].items[0];
+
+const trustBadges = [
+  {
+    href: "https://www.capterra.com/p/10018264/Knockio/",
+    src: asset("badge-new-capterra.webp"),
+    alt: "Knockio Capterra rating badge",
+    label: "View Knockio reviews on Capterra",
+  },
+  {
+    href: "https://www.softwareadvice.com/field-sales/knockio-profile/",
+    src: asset("badge-new-software-advice.webp"),
+    alt: "Knockio Software Advice rating badge",
+    label: "View Knockio reviews on Software Advice",
+  },
+  {
+    href: "https://www.getapp.com/all-software/a/knockio/",
+    src: asset("badge-new-get-app.webp"),
+    alt: "Knockio GetApp rating badge",
+    label: "View Knockio reviews on GetApp",
+  },
+  {
+    href: "https://www.g2.com/products/knockio-by-knockio/reviews",
+    src: asset("badge-new-g2.webp"),
+    alt: "Knockio G2 rating badge",
+    label: "View Knockio reviews on G2",
+  },
+];
+
+const faqs = [
+  {
+    q: "What kinds of tasks can I automate with Knockio?",
+    a: "You can automate payment reminders, task and schedule creation, email and text notifications, and more, all triggered by changes to job status, invoices, estimates, and inventory levels.",
+  },
+  {
+    q: "Do I need technical skills to build an automation?",
+    a: "No. Knockio's flow builder is built for home service business owners and office staff, not developers. Automations are built visually using your existing job statuses and triggers.",
+  },
+  {
+    q: "Can automations be customized to match my business's process?",
+    a: "Yes. Since job statuses in Knockio are fully customizable, your automations can be built around your exact workflow, whether you run a simple process or a multi stage pipeline.",
+  },
+  {
+    q: "Can automation help me get paid faster?",
+    a: "Yes. Automated payment reminders and text to pay follow ups are some of the most popular automations, helping businesses across every home service trade reduce overdue invoices without adding staff.",
+  },
+];
+
+const reviewsRow1 = [
+  {
+    name: "Lacey Jackson",
+    avatar: asset("avatar-lacey-jackson.webp"),
+    quote:
+      "This app is the best thing that has happened to our company! Asad is absolutely amazing! He is so responsive, it doesn't matter what time of day he is on it! I highly recommend this company add this app!",
+  },
+  {
+    name: "Ben Loveland",
+    avatar: asset("avatar-ben-loveland.webp"),
+    quote:
+      "Knockio is a great product! We use it for our roofing sales canvassing. Their support team is responsive and fixes issues immediately. Highly recommend!",
+  },
+  {
+    name: "Bar Galanti",
+    avatar: asset("avatar-bar-galanti.webp"),
+    quote:
+      "The support team is awesome. The live tracking feature is very useful. The pricing is fair as well!",
+  },
+];
+
+const reviewsRow2 = [
+  {
+    name: "Georgia Hancocks",
+    avatar: asset("avatar-georgia-hancocks.webp"),
+    quote:
+      "Knockio is the best! My team and I absolutely love using it - it is so user friendly and simple. Support is brilliant too, nothing is ever too much trouble. The best on the market. Thanks Knockio!",
+  },
+  {
+    name: "Sarah Bennett",
+    avatar: asset("avatar-sarah-bennett.webp"),
+    quote:
+      "We love Knockio so far! It is solving a lot of the issues of the other canvassing apps. The team have worked with us providing excellent fast support. Highly recommend if you're seeing people face to face.",
+  },
+  {
+    name: "Ayana Hall",
+    avatar: asset("avatar-ayana-hall.webp"),
+    quote:
+      "Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.",
+  },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id":
+        "https://knockio.com/features/business-automation-software/#webpage",
+      url: "https://knockio.com/features/business-automation-software/",
+      name: title,
+      description,
+      isPartOf: { "@id": "https://knockio.com/#website" },
+      about: { "@id": "https://knockio.com/field-service-crm/#software" },
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id":
+        "https://knockio.com/features/business-automation-software/#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://knockio.com/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Features",
+          item: "https://knockio.com/features/",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Business Automation Software",
+          item: "https://knockio.com/features/business-automation-software/",
+        },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://knockio.com/features/business-automation-software/#faq",
+      mainEntity: faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
+      })),
+    },
+  ],
+};
+
+const tabIconClass =
+  "inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-primary-500 sm:h-10 sm:w-10";
+---
+
+<KnockioHomeLayout
+  title={title}
+  description={description}
+  ogImage={asset("inner-automation-hero.webp")}
+  jsonLd={jsonLd}
+  whiteBg={true}
+>
+  <main id="business-automation-page">
+    <!-- ========== Hero ========== -->
+    <section
+      class="overflow-hidden border-b border-solid border-[#7fc271] bg-white pt-[72px]"
+    >
+      <div
+        class="grid min-h-0 lg:min-h-[610px] lg:grid-cols-[50%_50%] xl:min-h-[720px]"
+      >
+        <div
+          class="relative flex flex-col justify-center px-[5%] py-12 sm:py-16 lg:min-h-[600px] lg:px-0 lg:py-0 lg:pb-[72px] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-[42px] xl:pr-[70px]"
+        >
+          <div class="max-w-[810px]">
+            <h1
+              class="mb-7 text-[32px] font-bold leading-[38px] text-neutral-950 sm:text-[38px] sm:leading-[44px] xl:text-[48px] xl:leading-[54px] 2xl:text-[56px] 2xl:leading-[60px]"
+            >
+              Automation Software for Field Business<br class="hidden sm:block" />
+            </h1>
+            <p
+              class="mb-10 max-w-[710px] text-base font-medium text-neutral-600 lg:text-lg"
+            >
+              Every home service business runs into the same problem. Someone
+              has to remember to send the reminder, follow up on the unpaid
+              invoice, schedule the next visit, and notify the customer when the
+              crew is on the way. Knockio's automation flow builder takes all of
+              that off your plate. Set it up once, and it runs in the background
+              every single time, whether you have 10 jobs a week or 200. Try
+              Knockio's automation software and enjoy your growth.
+            </p>
+            <a
+              href="#cal-sec"
+              class="inline-flex w-full items-center justify-center rounded-lg bg-primary-500 px-6 py-3.5 text-sm font-medium text-white hover:bg-primary-600 sm:w-auto sm:px-10 sm:py-4 sm:text-base lg:px-12"
+            >
+              Schedule a Demo
+            </a>
+          </div>
+
+          <div
+            id="kioSummaryPanel"
+            class="kio-summary-panel z-[18] mt-6 rounded-xl border border-solid border-primary-500/35 bg-white/95 px-[5%] py-5 text-base leading-7 text-neutral-600 lg:absolute lg:inset-x-0 lg:bottom-[72px] lg:mt-0 lg:px-0 lg:py-[22px] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-10 lg:shadow-[0_-18px_45px_rgba(15,23,42,0.08)]"
+          >
+            <h3
+              class="mb-4 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
+            >
+              Can home service businesses automate payment reminders and
+              scheduling?
+            </h3>
+            <p
+              class="max-w-[720px] text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
+            >
+              Yes. Knockio's automation flow builder lets home service
+              businesses automatically send payment reminders for unpaid
+              invoices, create follow up tasks or appointments when a job status
+              changes, send status based updates to customers by email or text,
+              and trigger purchase order or low stock alerts. All of this is
+              built around your own custom job statuses, with no coding and no
+              need for a developer.
+            </p>
+          </div>
+
+          <div
+            class="z-20 mt-8 min-h-[72px] border-t border-solid border-primary-500/70 bg-[#f3faf3] lg:absolute lg:inset-x-0 lg:bottom-0 lg:mt-0"
+          >
+            <button
+              id="kioSummaryBtn"
+              class="kio-summary-button duration-250 flex min-h-[72px] w-full items-center justify-between gap-5 px-[5%] text-neutral-950 transition-colors hover:bg-[#edf8ed] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-10"
+              type="button"
+              aria-expanded="false"
+              aria-controls="kioSummaryPanel"
+            >
+              <span class="text-lg font-medium leading-6">Quick summary</span>
+              <ChevronRight
+                class="summary-chevron size-5 shrink-0"
+                aria-hidden="true"
+              />
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="hero-estimate-visual relative flex min-h-[320px] items-end justify-center overflow-hidden px-4 sm:min-h-[400px] lg:min-h-full lg:px-0"
+        >
+          <img
+            src={asset("inner-automation-hero.webp")}
+            alt="Business automation preview"
+            width="802"
+            height="638"
+            decoding="async"
+            loading="eager"
+            fetchpriority="high"
+            class="relative z-10 w-[min(92%,720px)] max-w-[830px] object-contain object-bottom lg:-mb-3 lg:w-[min(92%,830px)] lg:animate-kio-float"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Everything You Need ========== -->
+    <section
+      class="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-[130px]"
+    >
+      <div
+        class="pointer-events-none absolute inset-0 opacity-[0.35] [background-image:radial-gradient(#0f172a_0.7px,transparent_0.7px)] [background-size:18px_18px]"
+      >
+      </div>
+
+      <div class="my-container relative z-10">
+        <div class="mx-auto mb-14 max-w-[900px] text-center lg:mb-16">
+          <h2
+            class="text-center text-[31px] font-bold leading-[39px] text-neutral-950 sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+          >
+            Everything You Need, <br class="hidden md:block" />
+            Built Into One Platform
+          </h2>
+        </div>
+
+        <div
+          class="mx-auto grid max-w-[1450px] items-start gap-10 lg:grid-cols-[500px_minmax(0,1fr)] lg:gap-16 xl:grid-cols-[540px_minmax(0,1fr)] xl:gap-20"
+        >
+          <div class="grid w-full max-w-[540px] content-start gap-4">
+            {
+              proposalGroups.map((group, groupIndex) => (
+                <div
+                  class:list={[
+                    "proposal-tab overflow-hidden rounded-2xl border border-solid border-[#e1e8de] bg-white shadow-sm transition-all duration-300 [&.is-active]:border-[#0f172a]",
+                    groupIndex === 0 && "is-active",
+                  ]}
+                  data-tab={group.key}
+                >
+                  <button
+                    class="proposal-tab-header flex w-full cursor-pointer items-center justify-between gap-4 rounded-2xl bg-white px-5 py-4 text-left text-[#0f172a] transition-all duration-300 [&[aria-expanded='true']]:rounded-b-none [&[aria-expanded='true']]:bg-[#0f172a] [&[aria-expanded='true']]:text-white sm:px-6 sm:py-5"
+                    type="button"
+                    aria-expanded={groupIndex === 0 ? "true" : "false"}
+                  >
+                    <span class="flex items-center gap-4">
+                      <span class={tabIconClass}>
+                        {group.icon === "money" && (
+                          <ArrowLeftRight
+                            class="size-[22px]"
+                            aria-hidden="true"
+                          />
+                        )}
+                        {group.icon === "calendar" && (
+                          <CalendarCheck
+                            class="size-[22px]"
+                            aria-hidden="true"
+                          />
+                        )}
+                        {group.icon === "messages" && (
+                          <MessagesSquare
+                            class="size-[22px]"
+                            aria-hidden="true"
+                          />
+                        )}
+                        {group.icon === "settings" && (
+                          <Settings class="size-[22px]" aria-hidden="true" />
+                        )}
+                      </span>
+                      <span class="text-xl font-bold leading-7 sm:text-lg sm:leading-8">
+                        {group.title}
+                      </span>
+                    </span>
+                    <ChevronDown
+                      class="proposal-chevron size-[18px] shrink-0"
+                      aria-hidden="true"
+                    />
+                  </button>
+
+                  <div class="proposal-panel">
+                    <div class="grid gap-3 rounded-b-2xl border border-t-0 border-solid border-[#e1e8de] bg-white px-5 py-5 sm:px-6">
+                      {group.items.map((item, itemIndex) => (
+                        <button
+                          class:list={[
+                            "proposal-subitem grid w-full grid-cols-[24px_1fr] items-start gap-3 rounded-xl px-3 py-2.5 text-left text-base font-semibold leading-6 text-[#0f172a] transition-all duration-300 hover:bg-[#f2f8f0] sm:text-[18px] sm:leading-7 [&.is-active]:bg-primary-500 [&.is-active]:text-white",
+                            groupIndex === 0 &&
+                              itemIndex === 0 &&
+                              "is-active",
+                          ]}
+                          type="button"
+                          data-tab={group.key}
+                          data-index={String(itemIndex)}
+                          data-title={item.title}
+                          data-text={item.text}
+                          data-image={item.image}
+                        >
+                          <ArrowRight
+                            class="mt-1 size-[17px]"
+                            aria-hidden="true"
+                          />
+                          <span>{item.label}</span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+
+          <div class="w-full self-start">
+            <div
+              id="proposalVisual"
+              class="proposal-visual-card relative overflow-hidden"
+            >
+              <img
+                id="proposalVisualImage"
+                src={initialItem.image}
+                alt={initialItem.title}
+                width="714"
+                height="386"
+                decoding="async"
+                loading="lazy"
+                class="relative z-10 h-full w-full object-contain"
+              />
+            </div>
+            <div class="mt-7 max-w-[760px]">
+              <h3
+                id="proposalVisualTitle"
+                class="mb-4 text-[24px] font-bold leading-8 text-[#0f172a] sm:text-[32px] sm:leading-[40px]"
+              >
+                {initialItem.title}
+              </h3>
+              <p
+                id="proposalVisualText"
+                class="text-base font-normal leading-7 text-neutral-700 sm:text-lg sm:leading-8"
+              >
+                {initialItem.text}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Trusted ========== -->
+    <section
+      class="relative overflow-hidden bg-[#0F172A] py-24 sm:py-28 lg:py-[150px]"
+    >
+      <div
+        class="pointer-events-none absolute inset-0 opacity-[0.22] [background-image:radial-gradient(rgba(255,255,255,0.65)_0.8px,transparent_0.8px)] [background-size:18px_18px]"
+      >
+      </div>
+      <div
+        class="pointer-events-none absolute top-16 left-1/2 h-[420px] w-[860px] -translate-x-1/2 rounded-full bg-primary-500/10 blur-3xl"
+      >
+      </div>
+
+      <div class="my-container relative z-10">
+        <div class="mx-auto mb-16 max-w-[1040px] text-center lg:mb-20">
+          <h2
+            class="mb-6 text-center text-[31px] font-bold leading-[39px] text-white sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+          >
+            Trusted by 100&rsquo;s of customers
+          </h2>
+          <p
+            class="mx-auto max-w-[800px] text-base leading-7 text-white/80 sm:text-lg sm:leading-8"
+          >
+            Join hundreds of growing teams using Knockio to manage leads, sales,
+            field teams, and customer relationships.
+          </p>
+        </div>
+
+        <div
+          class="mx-auto grid max-w-[1120px] grid-cols-1 justify-items-center gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10"
+        >
+          {
+            trustBadges.map((badge) => (
+              <a
+                href={badge.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={badge.label}
+                class="group block rounded-3xl focus:ring-2 focus:ring-primary-500 focus:ring-offset-4 focus:ring-offset-[#0F172A] focus:outline-none"
+              >
+                <img
+                  src={badge.src}
+                  alt={badge.alt}
+                  width="203"
+                  height="280"
+                  decoding="async"
+                  loading="lazy"
+                  class="w-full max-w-[200px] object-contain transition duration-300 group-hover:-translate-y-2 group-hover:drop-shadow-[0_24px_34px_rgba(255,255,255,0.12)]"
+                />
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Manage Autopilot ========== -->
+    <section
+      class="relative overflow-hidden bg-white py-24 sm:py-28 lg:py-[150px]"
+    >
+      <div
+        class="pointer-events-none absolute top-32 left-1/2 h-[420px] w-[900px] -translate-x-1/2 rounded-full bg-primary-500/5 blur-3xl"
+      >
+      </div>
+
+      <div class="my-container relative z-10">
+        <div class="mx-auto mb-14 max-w-[1120px] text-center lg:mb-20">
+          <h2
+            class="mb-6 text-center text-[31px] font-bold leading-[39px] text-neutral-950 sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+          >
+            Manage Your Entire Operation on Autopilot
+          </h2>
+          <p
+            class="mx-auto max-w-[800px] text-base leading-6 text-neutral-700 sm:text-lg sm:leading-6"
+          >
+            From the first job created to the final payment collected, Knockio's
+            automation flow builder removes the manual follow ups, reminders,
+            and notifications that slow your office down, giving every home
+            service business the operational muscle of a much bigger company.
+          </p>
+        </div>
+
+        <div class="mx-auto grid max-w-[1380px] gap-6 lg:grid-cols-3 lg:gap-8">
+          <article
+            class="group relative overflow-hidden rounded-[28px] border border-solid border-neutral-200 bg-white p-7 shadow-[0_18px_50px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-primary-500/40 hover:shadow-[0_28px_70px_rgba(15,23,42,0.09)] sm:p-8 lg:p-9"
+          >
+            <div
+              class="absolute top-0 right-0 h-32 w-32 translate-x-10 -translate-y-10 rounded-full bg-primary-500/10"
+            >
+            </div>
+            <div class="relative mb-8 flex items-start justify-between gap-5">
+              <div
+                class="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-500/10 text-primary-500 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white"
+              >
+                <RefreshCw class="size-7" aria-hidden="true" />
+              </div>
+            </div>
+            <h3
+              class="relative mb-5 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
+            >
+              Instant Workflow Triggers
+            </h3>
+            <p
+              class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
+            >
+              Set automations to fire the moment a job status changes, an invoice
+              goes out, or stock runs low, so the right action happens
+              immediately without anyone needing to remember it.
+            </p>
+            <ul
+              class="relative mt-7 hidden grid gap-3 border-t border-solid border-neutral-200 pt-6"
+            >
+              <li
+                class="flex items-center gap-3 text-sm font-medium leading-5 text-neutral-700"
+              >
+                <Check
+                  class="size-4 shrink-0 text-primary-500"
+                  aria-hidden="true"
+                />
+                <span>One latest version for the whole team</span>
+              </li>
+              <li
+                class="flex items-center gap-3 text-sm font-medium leading-5 text-neutral-700"
+              >
+                <Check
+                  class="size-4 shrink-0 text-primary-500"
+                  aria-hidden="true"
+                />
+                <span>Field and office updates stay connected</span>
+              </li>
+            </ul>
+          </article>
+
+          <article
+            class="group relative overflow-hidden rounded-[28px] border border-solid border-[#0F172A] bg-[#0F172A] p-7 shadow-[0_24px_70px_rgba(15,23,42,0.20)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_34px_90px_rgba(15,23,42,0.26)] sm:p-8 lg:p-9"
+          >
+            <div
+              class="absolute top-0 right-0 h-40 w-40 translate-x-12 -translate-y-12 rounded-full bg-primary-500/20"
+            >
+            </div>
+            <div
+              class="absolute bottom-0 left-0 h-32 w-32 -translate-x-12 translate-y-12 rounded-full bg-white/10"
+            >
+            </div>
+            <div class="relative mb-8 flex items-start justify-between gap-5">
+              <div
+                class="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-500 text-white"
+              >
+                <ListChecks class="size-7" aria-hidden="true" />
+              </div>
+            </div>
+            <h3
+              class="relative mb-5 text-[21px] font-semibold leading-[27px] text-white sm:text-2xl sm:leading-7"
+            >
+              Hands Off Follow Up and Lead to Job Communication
+            </h3>
+            <p
+              class="relative text-[15px] leading-6 text-white/75 sm:text-base sm:leading-6"
+            >
+              Automatically follow up on pending estimates, unpaid invoices, and
+              upcoming appointments by email or text, keeping your pipeline
+              moving from first contact to final job without manual chasing.
+            </p>
+            <ul
+              class="relative mt-7 hidden grid gap-3 border-t border-solid border-white/15 pt-6"
+            >
+              <li
+                class="flex items-center gap-3 text-sm font-medium leading-5 text-white/80"
+              >
+                <Check
+                  class="size-4 shrink-0 text-primary-500"
+                  aria-hidden="true"
+                />
+                <span>Track open estimates and next actions</span>
+              </li>
+              <li
+                class="flex items-center gap-3 text-sm font-medium leading-5 text-white/80"
+              >
+                <Check
+                  class="size-4 shrink-0 text-primary-500"
+                  aria-hidden="true"
+                />
+                <span>Assign leads before follow-ups are missed</span>
+              </li>
+            </ul>
+          </article>
+
+          <article
+            class="group relative overflow-hidden rounded-[28px] border border-solid border-neutral-200 bg-white p-7 shadow-[0_18px_50px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-primary-500/40 hover:shadow-[0_28px_70px_rgba(15,23,42,0.09)] sm:p-8 lg:p-9"
+          >
+            <div
+              class="absolute top-0 right-0 h-32 w-32 translate-x-10 -translate-y-10 rounded-full bg-primary-500/10"
+            >
+            </div>
+            <div class="relative mb-8 flex items-start justify-between gap-5">
+              <div
+                class="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-500/10 text-primary-500 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white"
+              >
+                <FileSignature class="size-7" aria-hidden="true" />
+              </div>
+            </div>
+            <h3
+              class="relative mb-5 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
+            >
+              A More Responsive Customer Experience
+            </h3>
+            <p
+              class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
+            >
+              Automated, timely updates make your business feel responsive and
+              professional at every step, helping roofing, HVAC, solar, lawn
+              care, and every other home service business build the kind of
+              reputation that earns repeat customers and referrals.
+            </p>
+            <ul
+              class="relative mt-7 hidden grid gap-3 border-t border-solid border-neutral-200 pt-6"
+            >
+              <li
+                class="flex items-center gap-3 text-sm font-medium leading-5 text-neutral-700"
+              >
+                <Check
+                  class="size-4 shrink-0 text-primary-500"
+                  aria-hidden="true"
+                />
+                <span>Mobile-friendly proposal experience</span>
+              </li>
+              <li
+                class="flex items-center gap-3 text-sm font-medium leading-5 text-neutral-700"
+              >
+                <Check
+                  class="size-4 shrink-0 text-primary-500"
+                  aria-hidden="true"
+                />
+                <span>Clear pricing helps customers approve faster</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="bg-white py-16 sm:py-20 lg:py-24">
+      <div class="my-container mx-auto">
+        <div class="grid gap-10 lg:grid-cols-2 lg:gap-20">
+          <div>
+            <p
+              class="mb-4 text-sm leading-7 font-medium text-primary-500 md:text-2xl"
+            >
+              Frequently Asked Questions
+            </p>
+            <h2
+              class="mb-8 w-full max-w-3xl text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+            >
+              Everything Teams Ask Before Using Knockio Service CRM
+            </h2>
+            <p
+              class="mb-6 w-full max-w-3xl text-sm leading-6 font-normal text-neutral-800 sm:text-base sm:leading-7 md:mb-8 md:text-lg md:leading-8"
+            >
+              Service teams need more than a basic contact list. Knockio
+              connects customer records, leads, jobs, estimates, schedules,
+              crews, invoices, payments, and field updates. It helps sales,
+              office, and field teams work from the same information, so jobs
+              move faster with less confusion.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            {
+              faqs.map((faq) => (
+                <div class="faq-item overflow-hidden rounded-2xl border border-solid border-neutral-200 transition-all duration-300">
+                  <button
+                    class="faq-button group flex w-full items-center justify-between p-4 text-left sm:p-6"
+                    type="button"
+                  >
+                    <span class="text-base font-medium text-neutral-950 transition-colors group-hover:text-primary-500 sm:text-lg lg:text-xl">
+                      {faq.q}
+                    </span>
+                    <div class="faq-icon ml-4 flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary-500">
+                      <svg
+                        class="icon-minus hidden h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M20 12H4"
+                        />
+                      </svg>
+                      <svg
+                        class="icon-plus h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 4v16m8-8H4"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                  <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="p-4 pt-0 text-sm leading-relaxed text-neutral-600 sm:p-6 sm:pt-0 sm:text-base">
+                      {faq.a}
+                    </div>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Customer Reviews ========== -->
+    <section class="overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
+      <div class="my-container mx-auto mb-10 text-center lg:mb-16">
+        <p
+          class="mb-4 text-sm leading-7 font-medium text-primary-500 md:text-2xl"
+        >
+          Customer Reviews
+        </p>
+        <h2
+          class="mb-8 text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+        >
+          What Field Service and Sales<br />
+          Teams Say About Knockio
+        </h2>
+        <img
+          src={asset("google-5-star.webp")}
+          alt="google review badge"
+          width="183"
+          height="60"
+          decoding="async"
+          loading="lazy"
+          class="mx-auto h-auto w-[150px] sm:w-[183px]"
+        />
+      </div>
+
+      <div class="mt-7 space-y-8">
+        <div class="testimonial-track-container flex overflow-hidden">
+          <div
+            class="testimonial-track hover:pause flex animate-marquee-left gap-4 sm:gap-6"
+          >
+            {
+              [0, 1].map((dup) => (
+                <div
+                  class="card-set flex gap-4 sm:gap-6"
+                  aria-hidden={dup === 1 ? "true" : undefined}
+                >
+                  {reviewsRow1.map((review) => (
+                    <div class="relative w-[300px] flex-shrink-0 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 group sm:w-[380px] sm:p-6 lg:w-[450px] lg:p-8">
+                      <p class="relative z-10 mb-6 min-h-[168px] text-sm italic leading-relaxed text-neutral-700 sm:mb-8 sm:text-base lg:text-lg">
+                        {review.quote}
+                      </p>
+                      <div class="relative z-10 flex items-center gap-4">
+                        <img
+                          src={review.avatar}
+                          alt={review.name}
+                          width="48"
+                          height="48"
+                          decoding="async"
+                          loading="lazy"
+                          class="h-12 w-12 rounded-full object-cover grayscale transition-all group-hover:grayscale-0"
+                        />
+                        <div>
+                          <h3 class="mb-1 text-base font-bold text-neutral-950">
+                            {review.name}
+                          </h3>
+                          <p
+                            class="text-sm text-neutral-500"
+                            aria-label="5 out of 5 stars"
+                          >
+                            ⭐⭐⭐⭐⭐
+                          </p>
+                        </div>
+                      </div>
+                      <Quote
+                        class="pointer-events-none absolute right-8 bottom-6 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <div class="testimonial-track-container flex overflow-hidden">
+          <div
+            class="testimonial-track hover:pause flex animate-marquee-right gap-4 sm:gap-6"
+          >
+            {
+              [0, 1].map((dup) => (
+                <div
+                  class="card-set flex gap-4 sm:gap-6"
+                  aria-hidden={dup === 1 ? "true" : undefined}
+                >
+                  {reviewsRow2.map((review) => (
+                    <div class="relative w-[300px] flex-shrink-0 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 group sm:w-[380px] sm:p-6 lg:w-[450px] lg:p-8">
+                      <p class="relative z-10 mb-6 min-h-[168px] text-sm italic leading-relaxed text-neutral-700 sm:mb-8 sm:text-base lg:text-lg">
+                        {review.quote}
+                      </p>
+                      <div class="relative z-10 flex items-center gap-4">
+                        <img
+                          src={review.avatar}
+                          alt={review.name}
+                          width="48"
+                          height="48"
+                          decoding="async"
+                          loading="lazy"
+                          class="h-12 w-12 rounded-full object-cover grayscale transition-all group-hover:grayscale-0"
+                        />
+                        <div>
+                          <h3 class="mb-1 text-base font-bold text-neutral-950">
+                            {review.name}
+                          </h3>
+                          <p
+                            class="text-sm text-neutral-500"
+                            aria-label="5 out of 5 stars"
+                          >
+                            ⭐⭐⭐⭐⭐
+                          </p>
+                        </div>
+                      </div>
+                      <Quote
+                        class="pointer-events-none absolute right-8 bottom-6 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Book a Demo ========== -->
+    <section id="cal-sec" class="py-36 max-xl:py-28 max-lg:py-20 max-md:py-16">
+      <div class="my-container">
+        <div
+          class="mx-auto max-w-[1440px] rounded-3xl bg-[linear-gradient(90deg,#0b1f12_0%,#0f2a17_100%)] px-6 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28 xl:px-16"
+        >
+          <div class="mx-auto mb-10 max-w-3xl text-center max-md:mb-8">
+            <p
+              class="mb-3 text-sm font-medium leading-7 text-primary-500 md:text-2xl"
+            >
+              See Knockio In Action
+            </p>
+            <h2
+              class="mb-0 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+            >
+              Book a Demo Now!
+            </h2>
+          </div>
+          <div
+            id="my-cal-inline"
+            class="mx-auto flex min-h-[680px] max-w-5xl items-center justify-center rounded-2xl bg-white p-4 sm:min-h-[720px] sm:p-6"
+            aria-live="polite"
+          >
+            <p class="text-center text-sm font-medium text-neutral-500">
+              Loading the calendar as you explore Knockio…
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../../scripts/business-automation-software.js"></script>
+</KnockioHomeLayout>
