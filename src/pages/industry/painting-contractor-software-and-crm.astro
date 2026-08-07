@@ -1,0 +1,880 @@
+---
+import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
+import "../../styles/painting-contractor-software-and-crm.css";
+import {
+  ChevronRight,
+  Crosshair,
+  FileSignature,
+  MessageSquare,
+  Quote,
+  Ruler,
+  Sparkles,
+  Zap,
+} from "lucide-astro";
+
+const title = "Painting Contractor Software & CRM for Painters | Knockio";
+const description = "Painting contractor software to send detailed estimates, schedule crews, track job budgets, collect payment on completion, and manage jobs.";
+
+const asset = (name: string) => `/assets/cfw/${name}`;
+
+const capabilityTabs = [
+  {
+    label: "Win the Job",
+    cards: [
+      {
+        title: "Detailed Estimates for Interior and Exterior Work",
+        text: "Win the job during every visit, log outcomes, add notes or quick voice notes, and move prospects into a clear CRM pipeline, so your whole team sees the full history and no promising lead ever slips through the cracks between quotes.",
+        image: asset("inner-painting-contractor-software-and-crm-detailed-estimates-for-interior-and-exterior-work-1.webp"),
+        alt: "Door-to-door canvassing in Knockio",
+      },
+      {
+        title: "One Record Per Customer and Property",
+        text: "Each job holds the address, contacts, custom fields, room counts, color choices, photos, and notes, so the crew shows up knowing the scope, the colors, and the spots the homeowner flagged on the walk-through.",
+        image: asset("inner-painting-contractor-software-and-crm-one-record-per-customer-and-property.webp"),
+        alt: "Lead management in Knockio",
+      },
+      {
+        title: "Communication History on Every Job",
+        text: "Every call, text, and email tied to a customer lands on the record, so when someone asks to change a color the week before, the whole back-and-forth is right there instead of buried in a phone.",
+        image: asset("inner-painting-contractor-software-and-crm-communication-history-on-every-job.webp"),
+        alt: "Kanban-style sales pipeline in Knockio",
+      },
+    ],
+  },
+  {
+    label: "Schedule With Tracking",
+    cards: [
+      {
+        title: "Crew Scheduling and Job Stages",
+        text: "Move each job through clear stages like estimate, approved, scheduled, prepping, painting, and final walk-through. Statuses are fully customizable to fit your shop, and unlimited boards let the office and crews each see the view they care about.",
+        image: asset("inner-painting-contractor-software-and-crm-crew-scheduling-and-job-stages.webp"),
+        alt: "Route planning in Knockio",
+      },
+      {
+        title: "Live GPS Tracking With Proximity",
+        text: "See where every crew is in real time, and let proximity intelligence confirm how close they actually were to a property when they marked a job started or done, so the schedule reflects reality, not a guess.",
+        image: asset("inner-painting-contractor-software-and-crm-live-gps-tracking-with-proximity-intelligence.webp"),
+        alt: "Territory management in Knockio",
+      },
+      {
+        title: "Automated Territory Creation",
+        text: "If you run estimates or canvassing across a wide service area, build territories automatically from zip codes and cities instead of mapping every boundary by hand, so you can balance estimators across town in minutes.",
+        image: asset("inner-painting-contractor-software-and-crm-automated-territory-creation-by-zip-code-and-city.webp"),
+        alt: "Field activity log in Knockio",
+      },
+    ],
+  },
+  {
+    label: "Track Materials and Costs",
+    cards: [
+      {
+        title: "Work Orders With Budgets and Material Takeoffs",
+        text: "Track Materials and Costs from lead to service with notes, status updates, documents, customer details, and clear next steps.",
+        image: asset("inner-painting-contractor-software-and-crm-work-orders-with-budgets-and-material-takeoffs.webp"),
+        alt: "Job management in Knockio",
+      },
+      {
+        title: "Inventory Management for Paint and Supplies",
+        text: "Track products, variants, SKUs, cost, and markup for paint, primer, tape, and rollers, with low-stock alerts so you reorder before a crew shows up to a job short on a color.",
+        image: asset("inner-painting-contractor-software-and-crm-inventory-management-for-paint-and-supplies-1.webp"),
+        alt: "Crew dispatching in Knockio",
+      },
+      {
+        title: "Vendor Bills and Material Purchase Orders",
+        text: "Raise a purchase order to the paint store when stock runs low, then record the vendor bill against that purchase order or work order, so supplier spend ties straight to the job and margins stay honest.",
+        image: asset("inner-painting-contractor-software-and-crm-vendor-bills-and-purchase-orders.webp"),
+        alt: "Work orders in Knockio",
+      },
+    ],
+  },
+  {
+    label: "Media Storage",
+    cards: [
+      {
+        title: "Photo Annotation Touch-Ups",
+        text: "Snap photos at the walk-through and during the job, then mark them up with notes and arrows on the image, so the crew knows which surfaces to prep and the homeowner sees the punch-list items.",
+        image: asset("inner-painting-contractor-software-and-crm-photo-annotation-for-scope-and-touch-ups.webp"),
+        alt: "Smart estimates in Knockio",
+      },
+      {
+        title: "Job Notes and Surveys on Site",
+        text: "Drop detailed notes on every job and use built-in surveys to capture wall conditions, surface issues, or extra work spotted, saved straight to the record instead of a slip lost in the truck.",
+        image: asset("inner-painting-contractor-software-and-crm-job-notes-and-surveys-on-site.webp"),
+        alt: "Proposals in Knockio",
+      },
+      {
+        title: "Centralized File Storage Per Job",
+        text: "Keep color specs, warranties, and signed agreements attached right to the job record, not scattered across email and a folder nobody can find when a customer calls about a touch-up next year.",
+        image: asset("inner-painting-contractor-software-and-crm-centralized-file-storage-per-job.webp"),
+        alt: "Digital contracts in Knockio",
+      },
+    ],
+  },
+  {
+    label: "Close and Get Paid",
+    cards: [
+      {
+        title: "Digital Contracts",
+        text: "Send the job agreement for digital signature with a documented audit trail, so scope and price are locked in with a clean legal record before the first drop cloth goes down. Change orders work the same way, logged instead of argued over later.",
+        image: asset("inner-painting-contractor-software-and-crm-digital-contracts-with-e-signatures.webp"),
+        alt: "Video and file storage in Knockio",
+      },
+      {
+        title: "Flexible Payment Collection",
+        text: "Collect deposits, progress draws, and final balances through tap to pay, text to pay, card, or ACH, all tied directly to the job through Knockio's own payment processing, so you are not chasing a check after the last coat dries.",
+        image: asset("inner-painting-contractor-software-and-crm-flexible-payment-collection.webp"),
+        alt: "Photo uploads in Knockio",
+      },
+      {
+        title: "Lifetime Activity Tracking",
+        text: "Every status change, note, estimate, and payment lands on a running timeline, so you can see the full story of a job at a glance, which helps when a customer questions a charge or asks what was done.",
+        image: asset("inner-painting-contractor-software-and-crm-lifetime-activity-tracking.webp"),
+        alt: "Service reports in Knockio",
+      },
+    ],
+  }
+];
+
+const organizedItems = [
+  {
+    title: "Live Field Tracking",
+    text: "Monitor crews in real time with GPS tracking and proximity intelligence. It helps with scheduling, accountability, and knowing exactly who is on which job right now.",
+    href: "https://knockio.com/features/gps-tracking-software/",
+    icon: "crosshair" as const,
+  },
+  {
+    title: "Native Automation Builder",
+    text: "Build your own automations without code: send a deposit request when an estimate is approved, text the homeowner the morning the crew arrives, or trigger a review request after the final walk-through.",
+    href: "https://knockio.com/features/business-automation-software/",
+    icon: "sparkles" as const,
+  },
+  {
+    title: "Job History and Media",
+    text: "See every job's annotated photos, color choices, and notes in one view, so the office and the crews are looking at the same record instead of asking each other for it.",
+    href: "#",
+    icon: "ruler" as const,
+  },
+  {
+    title: "E-Contracts",
+    text: "Review, approve, and sign contracts from anywhere so your team can close deals faster without paperwork slowing the process.",
+    href: "https://knockio.com/e-contracts/",
+    icon: "file" as const,
+  },
+  {
+    title: "CRM Integrations",
+    text: "Connect your painting jobs and customer records across Salesforce, HubSpot, Google Calendar, and GHL, plus thousands of apps via Zapier, FlowChef, and webhooks.",
+    href: "https://knockio.com/knockio-integrations/",
+    icon: "zap" as const,
+  },
+  {
+    title: "Team Communication",
+    text: "Knockio assigns estimators and crews to the same job record with shared notes, so a color change or a scope update reaches everyone immediately.",
+    href: "https://knockio.com/features/business-texting-and-calling-software/",
+    icon: "message" as const,
+  }
+];
+
+const trustBadges = [
+  {
+    href: "https://www.capterra.com/p/10018264/Knockio/",
+    src: asset("badge-new-capterra.webp"),
+    alt: "Knockio Capterra rating badge",
+    label: "View Knockio reviews on Capterra",
+  },
+  {
+    href: "https://www.softwareadvice.com/field-sales/knockio-profile/",
+    src: asset("badge-new-software-advice.webp"),
+    alt: "Knockio Software Advice rating badge",
+    label: "View Knockio reviews on Software Advice",
+  },
+  {
+    href: "https://www.getapp.com/all-software/a/knockio/",
+    src: asset("badge-new-get-app.webp"),
+    alt: "Knockio GetApp rating badge",
+    label: "View Knockio reviews on GetApp",
+  },
+  {
+    href: "https://www.g2.com/products/knockio-by-knockio/reviews",
+    src: asset("badge-new-g2.webp"),
+    alt: "Knockio G2 rating badge",
+    label: "View Knockio reviews on G2",
+  },
+];
+
+const faqs = [
+  {
+    q: "What should I look for in painting contractor software?",
+    a: "Look for detailed estimating that breaks out prep and coats, crew scheduling, material tracking, e-contracts, and payment collection, all tied to one customer record. The platform should carry a job from the walk-through to final payment instead of leaving you to stitch the pieces together. Knockio was built around exactly this kind of estimate-to-completion workflow.",
+  },
+  {
+    q: "Which software is best for a small painting business?",
+    a: "Knockio helps field service teams manage the full workflow. Teams can Win the Job, store customer details, create estimates, schedule jobs, assign crews, track job progress, upload photos, send invoices, and follow up with customers. This helps reduce manual work and keeps everyone updated.",
+  },
+  {
+    q: "Can Knockio track paint and materials per job?",
+    a: "Yes. Work orders carry a material takeoff, and inventory management tracks paint, primer, and supplies with low-stock alerts, so each job is cost against what it actually used.",
+  },
+  {
+    q: "Can Knockio handle change orders mid-job?",
+    a: "Yes. You can send change orders for digital signature the same way as the original agreement, so an added room or an upgraded finish is documented and priced instead of handled loosely.",
+  },
+  {
+    q: "Does Knockio track my crews in the field?",
+    a: "Yes. Knockio includes live GPS tracking with proximity intelligence, so you can confirm how close a crew was to a property when they marked a job started or completed.",
+  }
+];
+
+const reviewsRow1 = [
+  {
+    name: "Lacey Jackson",
+    avatar: asset("avatar-lacey-jackson.webp"),
+    quote:
+      "This app is the best thing that has happened to our company! Asad is absolutely amazing! He is so responsive, it doesn't matter what time of day he is on it! I highly recommend this company add this app!",
+  },
+  {
+    name: "Ben Loveland",
+    avatar: asset("avatar-ben-loveland.webp"),
+    quote:
+      "Knockio is a great product! We use it for our roofing sales canvassing. Their support team is responsive and fixes issues immediately. Highly recommend!",
+  },
+  {
+    name: "Bar Galanti",
+    avatar: asset("avatar-bar-galanti.webp"),
+    quote:
+      "The support team is awesome. The live tracking feature is very useful. The pricing is fair as well!",
+  },
+];
+
+const reviewsRow2 = [
+  {
+    name: "Georgia Hancocks",
+    avatar: asset("avatar-georgia-hancocks.webp"),
+    quote:
+      "Knockio is the best! My team and I absolutely love using it - it is so user friendly and simple. Support is brilliant too, nothing is ever too much trouble. The best on the market. Thanks Knockio!",
+  },
+  {
+    name: "Sarah Bennett",
+    avatar: asset("avatar-sarah-bennett.webp"),
+    quote:
+      "We love Knockio so far! It is solving a lot of the issues of the other canvassing apps. The team have worked with us providing excellent fast support. Highly recommend if you're seeing people face to face.",
+  },
+  {
+    name: "Ayana Hall",
+    avatar: asset("avatar-ayana-hall.webp"),
+    quote:
+      "Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.",
+  },
+];
+
+const heroImage = asset("inner-industry-painting-contractor-software.webp");
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://knockio.com/industry/painting-contractor-software-and-crm/#webpage",
+      url: "https://knockio.com/industry/painting-contractor-software-and-crm/",
+      name: title,
+      description,
+      isPartOf: { "@id": "https://knockio.com/#website" },
+      audience: {
+        "@type": "Audience",
+        audienceType: "Painting Contractors",
+      },
+      mainEntity: {
+        "@id": "https://knockio.com/industry/painting-contractor-software-and-crm/#faq",
+      },
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://knockio.com/industry/painting-contractor-software-and-crm/#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://knockio.com/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Painting Contractor Software & CRM",
+          item: "https://knockio.com/industry/painting-contractor-software-and-crm/",
+        },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://knockio.com/industry/painting-contractor-software-and-crm/#faq",
+      mainEntity: faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
+      })),
+    },
+  ],
+};
+---
+
+<KnockioHomeLayout
+  title={title}
+  description={description}
+  ogImage={heroImage}
+  jsonLd={jsonLd}
+  whiteBg={true}
+>
+  <main id="paint-industry-page">
+    <!-- ========== Hero ========== -->
+    <section
+      class="overflow-hidden border-b border-solid border-[#7fc271] bg-white"
+    >
+      <div
+        class="grid min-h-0 lg:min-h-[610px] lg:grid-cols-[55%_45%] xl:min-h-[720px] 2xl:min-h-[820px]"
+      >
+        <div
+          class="relative flex flex-col justify-center px-[5%] pt-[calc(72px+3rem)] pb-12 sm:pt-[calc(72px+4rem)] sm:pb-16 lg:min-h-[600px] lg:px-0 lg:pb-[72px] lg:pt-[72px] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-[42px] xl:pr-[70px]"
+        >
+          <div class="max-w-[810px]">
+            <h1
+              class="mb-7 text-[36px] font-bold leading-[44px] text-neutral-950 sm:text-[44px] sm:leading-[54px] xl:text-[58px] xl:leading-[66px] 2xl:text-[64px] 2xl:leading-[74px]"
+            >
+              Painting Contractor Software
+            </h1>
+            <p
+              class="mb-10 max-w-[760px] text-base font-medium leading-8 text-neutral-600 sm:text-lg sm:leading-9"
+            >
+              Painting is a walk-through business. You measure the rooms, count the doors and trim, price the prep and the coats, and then a crew has to show up, knock out the work, and get paid before the next estimate is even booked. Knockio is painting contractor software and CRM built for painters who need one place to hold customer records, quote jobs, schedule crews, track materials, and collect payment.
+            </p>
+            <a
+              href="#cal-sec"
+              class="inline-flex w-full items-center justify-center rounded-lg bg-primary-500 px-6 py-3.5 text-sm font-medium text-white transition-colors duration-300 hover:bg-primary-600 sm:w-auto sm:px-10 sm:py-4 sm:text-base lg:px-12"
+            >
+              Schedule a Demo
+            </a>
+          </div>
+
+          <div
+            id="kioSummaryPanel"
+            class="kio-summary-panel z-[18] mt-6 rounded-xl border border-solid border-primary-500/35 bg-white/95 px-[5%] py-5 text-base leading-7 text-neutral-600 lg:absolute lg:inset-x-0 lg:bottom-[72px] lg:mt-0 lg:px-0 lg:py-[22px] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-10 lg:shadow-[0_-18px_45px_rgba(15,23,42,0.08)]"
+          >
+            <p
+              class="mb-4 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
+            >
+              What should painting contractors look for in a CRM and estimating platform?
+            </p>
+            <p
+              class="max-w-[760px] text-[15px] leading-7 text-neutral-600 sm:text-base sm:leading-7"
+            >
+              A painting contractor should look for a CRM that carries the job from the first walk-through to the final coat. That means full customer and property records, detailed estimates for prep, primer, and coats, crew scheduling, material and paint tracking, e-contracts, and payment collection. Knockio handles all of it in one platform. It adds live GPS tracking with proximity intelligence and automated territory creation by zip code and city, so estimates, crews, and job history live in the same record. That depth, plus affordable pricing and support that actually answers, is what a generic CRM built for another industry leaves out.
+            </p>
+          </div>
+
+          <div
+            class="z-20 mt-8 min-h-[72px] border-t border-solid border-primary-500/70 bg-[#f3faf3] lg:absolute lg:inset-x-0 lg:bottom-0 lg:mt-0"
+          >
+            <button
+              id="kioSummaryBtn"
+              class="kio-summary-button duration-250 flex min-h-[72px] w-full items-center justify-between gap-5 px-[5%] text-neutral-950 transition-colors hover:bg-[#edf8ed] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-10"
+              type="button"
+              aria-expanded="false"
+              aria-controls="kioSummaryPanel"
+            >
+              <span class="text-lg font-medium leading-6">Quick summary</span>
+              <ChevronRight
+                class="summary-chevron size-5 shrink-0"
+                aria-hidden="true"
+              />
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="hero-paint-visual relative min-h-[340px] overflow-hidden sm:min-h-[440px] lg:min-h-full"
+        >
+          <img
+            src={heroImage}
+            alt="What should painting contractors look for in a crm and estimating platform"
+            width="830"
+            height="560"
+            decoding="async"
+            loading="eager"
+            fetchpriority="high"
+            class="h-full min-h-[340px] w-full object-cover object-center sm:min-h-[440px] lg:min-h-full"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Why Painters / Sticky tabs ========== -->
+    <section id="platform-capabilities" class="bg-white py-20 sm:py-24 lg:py-28">
+      <div class="my-container">
+        <div class="mx-auto mb-10 max-w-[1120px] text-center lg:mb-12">
+          <h2
+            class="mb-5 text-center text-[34px] font-bold leading-[42px] text-neutral-950 sm:text-4xl sm:leading-[48px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+          >
+            Why Painters Choose Knockio
+          </h2>
+          <p
+            class="mx-auto max-w-[960px] text-base font-normal leading-8 text-neutral-600 sm:text-lg sm:leading-9"
+          >
+            Knockio helps painting contractors manage customer records, estimates,
+            crews, production, materials, invoices, and payments. From the first
+            walk-through to the final walk-through, it all sits on one connected
+            platform. Owners run the schedule and the billing without the
+            back-and-forth between three different tools.
+          </p>
+        </div>
+
+        <div
+          id="paintCapScrollTrack"
+          class="hp-scroll-track"
+          style="--scroll-steps: 5"
+        >
+          <div
+            class="lg:sticky lg:top-0 lg:z-20 lg:flex lg:min-h-[760px] lg:flex-col lg:bg-white lg:pt-6"
+          >
+            <div
+              class="sticky top-0 z-30 border-b border-solid border-neutral-200/80 bg-white/95 pb-5 pt-2 backdrop-blur-md lg:static lg:border-0 lg:bg-transparent lg:pb-8"
+            >
+              <div
+                id="paintTabsNav"
+                class="mx-auto flex max-w-[1050px] items-center gap-4 overflow-x-auto scroll-smooth px-1 [scrollbar-width:none] lg:justify-center [&::-webkit-scrollbar]:hidden"
+                role="tablist"
+                aria-label="Painting platform capabilities"
+              >
+                {
+                  capabilityTabs.map((tab, index) => (
+                    <button
+                      type="button"
+                      role="tab"
+                      data-paint-tab={String(index)}
+                      aria-selected={index === 0 ? "true" : "false"}
+                      class:list={[
+                        "hp-tab-btn shrink-0 rounded-full border px-5 py-2.5 text-base font-medium leading-6 transition-all duration-300 hover:border-primary-500 hover:text-primary-500 sm:px-6",
+                        index === 0
+                          ? "is-active border-solid border-primary-500 bg-[#f9fff8] text-primary-500"
+                          : "border-dashed border-neutral-300 bg-white text-neutral-700",
+                      ]}
+                    >
+                      {tab.label}
+                    </button>
+                  ))
+                }
+              </div>
+            </div>
+
+            <div id="paintTabsPanels" class="relative lg:flex-1">
+              {
+                capabilityTabs.map((tab, tabIndex) => (
+                  <div
+                    class:list={["hp-panel", tabIndex === 0 && "is-active"]}
+                    role="tabpanel"
+                  >
+                    <div class="grid gap-6 lg:grid-cols-3 lg:gap-8">
+                      {tab.cards.map((card) => (
+                        <article class="hp-card flex min-h-[520px] flex-col overflow-hidden rounded-[28px] border border-solid border-neutral-200 bg-neutral-50 p-7 sm:p-8">
+                          <h3 class="mb-4 text-[26px] font-bold leading-8 text-neutral-950 sm:text-[30px] sm:leading-9">
+                            {card.title}
+                          </h3>
+                          <p class="mb-8 text-base leading-7 text-neutral-600 sm:text-[17px] sm:leading-8">
+                            {card.text}
+                          </p>
+                          <div class="mt-auto flex justify-center overflow-hidden rounded-3xl">
+                            <img
+                              src={card.image}
+                              alt={card.alt}
+                              width="430"
+                              height="320"
+                              decoding="async"
+                              loading="lazy"
+                              class="w-full max-w-[430px] object-contain object-bottom"
+                            />
+                          </div>
+                        </article>
+                      ))}
+                    </div>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+
+        <div class="sr-only">
+          {
+            capabilityTabs.map((tab) => (
+              <div>
+                <h3>{tab.label}</h3>
+                {tab.cards.map((card) => (
+                  <article>
+                    <h3>{card.title}</h3>
+                    <p>{card.text}</p>
+                  </article>
+                ))}
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Organized (dark) ========== -->
+    <section
+      class="relative overflow-hidden bg-[#0F172A] py-24 sm:py-28 lg:py-[150px]"
+    >
+      <div
+        class="pointer-events-none absolute inset-0 opacity-[0.22] [background-image:radial-gradient(rgba(255,255,255,0.65)_0.8px,transparent_0.8px)] [background-size:18px_18px]"
+      >
+      </div>
+
+      <div class="my-container relative z-10">
+        <div class="mx-auto mb-14 max-w-[1120px] text-center lg:mb-20">
+          <h2
+            class="mb-6 text-center text-[31px] font-bold leading-[39px] text-white sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+          >
+            Keep Customers, Crews, and Job Updates Organized
+          </h2>
+          <p
+            class="mx-auto max-w-[800px] text-base leading-7 text-white/80 sm:text-lg sm:leading-8"
+          >
+            Knockio makes painting job management simple with painting contractor
+            software and field service CRM tools in one place. Track crews,
+            manage the schedule, capture job photos, automate follow-ups, and
+            send digital contracts, all from the same platform.
+          </p>
+        </div>
+
+        <div class="mx-auto grid max-w-[1380px] gap-x-12 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-16 lg:gap-y-14">
+          {
+            organizedItems.map((item) => (
+              <div class="border-b border-solid border-white/20 pb-10">
+                <div class="mb-7 flex h-16 w-16 items-center justify-center rounded-xl bg-primary-500 text-white">
+                  {item.icon === "crosshair" && (
+                    <Crosshair class="size-[30px]" aria-hidden="true" />
+                  )}
+                  {item.icon === "sparkles" && (
+                    <Sparkles class="size-[30px]" aria-hidden="true" />
+                  )}
+                  {item.icon === "ruler" && (
+                    <Ruler class="size-[30px]" aria-hidden="true" />
+                  )}
+                  {item.icon === "file" && (
+                    <FileSignature class="size-[30px]" aria-hidden="true" />
+                  )}
+                  {item.icon === "zap" && (
+                    <Zap class="size-[30px]" aria-hidden="true" />
+                  )}
+                  {item.icon === "message" && (
+                    <MessageSquare class="size-[30px]" aria-hidden="true" />
+                  )}
+                </div>
+                <h3 class="mb-4 text-[22px] font-bold leading-7 text-white sm:text-2xl sm:leading-8">
+                  {item.title}
+                </h3>
+                <p class="mb-6 text-base font-light text-white">{item.text}</p>
+                <a
+                  href={item.href}
+                  class="inline-flex items-center gap-3 text-base font-semibold text-primary-500 transition-all duration-300 hover:gap-4"
+                >
+                  Learn More
+                  <ChevronRight class="size-3.5" aria-hidden="true" />
+                </a>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="bg-white py-16 sm:py-20 lg:py-24">
+      <div class="my-container mx-auto">
+        <div class="grid gap-10 lg:grid-cols-2 lg:gap-20">
+          <div>
+            <p
+              class="mb-4 text-sm leading-7 font-medium text-primary-500 md:text-2xl"
+            >
+              Frequently Asked Questions
+            </p>
+            <h2 class="text-3xl leading-tight sm:text-4xl lg:text-[42px] xl:text-5xl 2xl:text-[56px] lg:leading-none font-bold text-neutral-950 mb-8 w-full max-w-3xl">
+              Everything Painters Ask Before Switching to Knockio
+            </h2>
+            <p
+              class="mb-6 w-full max-w-3xl text-sm leading-6 font-normal text-neutral-800 sm:text-base sm:leading-7 md:mb-8 md:text-lg md:leading-8"
+            >
+              Switching software is a real decision when your whole pipeline,
+              crew schedule, and customer history live inside it. Here are the
+              questions painting contractors ask most before making the move.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            {
+              faqs.map((faq) => (
+                <div class="faq-item overflow-hidden rounded-2xl border border-solid border-neutral-200 transition-all duration-300">
+                  <button
+                    class="faq-button group flex w-full items-center justify-between p-4 text-left sm:p-6"
+                    type="button"
+                  >
+                    <span class="text-base font-medium text-neutral-950 transition-colors group-hover:text-primary-500 sm:text-lg lg:text-xl">
+                      {faq.q}
+                    </span>
+                    <div class="faq-icon ml-4 flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary-500">
+                      <svg
+                        class="icon-minus hidden h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M20 12H4"
+                        />
+                      </svg>
+                      <svg
+                        class="icon-plus h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 4v16m8-8H4"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                  <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="p-4 pt-0 text-sm leading-relaxed text-neutral-600 sm:p-6 sm:pt-0 sm:text-base">
+                      {faq.a}
+                    </div>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Trusted ========== -->
+    <section
+      class="relative overflow-hidden bg-[#0F172A] py-24 sm:py-28 lg:py-[150px]"
+    >
+      <div
+        class="pointer-events-none absolute inset-0 opacity-[0.22] [background-image:radial-gradient(rgba(255,255,255,0.65)_0.8px,transparent_0.8px)] [background-size:18px_18px]"
+      >
+      </div>
+      <div
+        class="pointer-events-none absolute top-16 left-1/2 h-[420px] w-[860px] -translate-x-1/2 rounded-full bg-primary-500/10 blur-3xl"
+      >
+      </div>
+
+      <div class="my-container relative z-10">
+        <div class="mx-auto mb-16 max-w-[1040px] text-center lg:mb-20">
+          <h2
+            class="mb-6 text-center text-[31px] font-bold leading-[39px] text-white sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+          >
+            Trusted by 100&rsquo;s of customers
+          </h2>
+          <p
+            class="mx-auto max-w-[800px] text-base leading-7 text-white/80 sm:text-lg sm:leading-8"
+          >
+            Join hundreds of growing teams using Knockio to manage leads, sales,
+            field teams, and customer relationships.
+          </p>
+        </div>
+
+        <div
+          class="mx-auto grid max-w-[1120px] grid-cols-1 justify-items-center gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10"
+        >
+          {
+            trustBadges.map((badge) => (
+              <a
+                href={badge.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={badge.label}
+                class="group block rounded-3xl focus:ring-2 focus:ring-primary-500 focus:ring-offset-4 focus:ring-offset-[#0F172A] focus:outline-none"
+              >
+                <img
+                  src={badge.src}
+                  alt={badge.alt}
+                  width="203"
+                  height="280"
+                  decoding="async"
+                  loading="lazy"
+                  class="w-full max-w-[200px] object-contain transition duration-300 group-hover:-translate-y-2 group-hover:drop-shadow-[0_24px_34px_rgba(255,255,255,0.12)]"
+                />
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Customer Reviews ========== -->
+    <section class="overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
+      <div class="my-container mx-auto mb-10 text-center lg:mb-16">
+        <p class="mb-4 text-sm leading-7 font-medium text-primary-500 md:text-2xl">
+          Customer Reviews
+        </p>
+        <h2
+          class="mb-8 text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+        >
+          What Field Service and Sales<br />
+          Teams Say About Knockio
+        </h2>
+        <img
+          src={asset("google-5-star.webp")}
+          alt="google review badge"
+          width="183"
+          height="60"
+          decoding="async"
+          loading="lazy"
+          class="mx-auto h-auto w-[150px] sm:w-[183px]"
+        />
+      </div>
+
+      <div class="mt-7 space-y-8">
+        <div class="testimonial-track-container flex overflow-hidden">
+          <div
+            class="testimonial-track hover:pause flex animate-marquee-left gap-4 sm:gap-6"
+          >
+            {
+              [0, 1].map((dup) => (
+                <div
+                  class="card-set flex gap-4 sm:gap-6"
+                  aria-hidden={dup === 1 ? "true" : undefined}
+                >
+                  {reviewsRow1.map((review) => (
+                    <div class="relative w-[300px] flex-shrink-0 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 group sm:w-[380px] sm:p-6 lg:w-[450px] lg:p-8">
+                      <p class="relative z-10 mb-6 min-h-[168px] text-sm italic leading-relaxed text-neutral-700 sm:mb-8 sm:text-base lg:text-lg">
+                        {review.quote}
+                      </p>
+                      <div class="relative z-10 flex items-center gap-4">
+                        <img
+                          src={review.avatar}
+                          alt={review.name}
+                          width="48"
+                          height="48"
+                          decoding="async"
+                          loading="lazy"
+                          class="h-12 w-12 rounded-full object-cover grayscale transition-all group-hover:grayscale-0"
+                        />
+                        <div>
+                          <h5 class="mb-1 text-base font-bold text-neutral-950">
+                            {review.name}
+                          </h5>
+                          <p
+                            class="text-sm text-neutral-500"
+                            aria-label="5 out of 5 stars"
+                          >
+                            ⭐⭐⭐⭐⭐
+                          </p>
+                        </div>
+                      </div>
+                      <Quote
+                        class="pointer-events-none absolute right-8 bottom-6 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <div class="testimonial-track-container flex overflow-hidden">
+          <div
+            class="testimonial-track hover:pause flex animate-marquee-right gap-4 sm:gap-6"
+          >
+            {
+              [0, 1].map((dup) => (
+                <div
+                  class="card-set flex gap-4 sm:gap-6"
+                  aria-hidden={dup === 1 ? "true" : undefined}
+                >
+                  {reviewsRow2.map((review) => (
+                    <div class="relative w-[300px] flex-shrink-0 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 group sm:w-[380px] sm:p-6 lg:w-[450px] lg:p-8">
+                      <p class="relative z-10 mb-6 min-h-[168px] text-sm italic leading-relaxed text-neutral-700 sm:mb-8 sm:text-base lg:text-lg">
+                        {review.quote}
+                      </p>
+                      <div class="relative z-10 flex items-center gap-4">
+                        <img
+                          src={review.avatar}
+                          alt={review.name}
+                          width="48"
+                          height="48"
+                          decoding="async"
+                          loading="lazy"
+                          class="h-12 w-12 rounded-full object-cover grayscale transition-all group-hover:grayscale-0"
+                        />
+                        <div>
+                          <h5 class="mb-1 text-base font-bold text-neutral-950">
+                            {review.name}
+                          </h5>
+                          <p
+                            class="text-sm text-neutral-500"
+                            aria-label="5 out of 5 stars"
+                          >
+                            ⭐⭐⭐⭐⭐
+                          </p>
+                        </div>
+                      </div>
+                      <Quote
+                        class="pointer-events-none absolute right-8 bottom-6 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Book a Demo ========== -->
+    <section id="cal-sec" class="py-36 max-xl:py-28 max-lg:py-20 max-md:py-16">
+      <div class="my-container">
+        <div
+          class="mx-auto max-w-[1440px] rounded-3xl bg-[linear-gradient(90deg,#0b1f12_0%,#0f2a17_100%)] px-6 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28 xl:px-16"
+        >
+          <div class="mx-auto mb-10 max-w-3xl text-center max-md:mb-8">
+            <h2
+              class="mb-3 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+            >
+              See Knockio In Action
+            </h2>
+            <p
+              class="mb-0 text-sm font-medium leading-7 text-primary-500 md:text-2xl"
+            >
+              Book a Demo Now!
+            </p>
+          </div>
+          <div
+            id="my-cal-inline"
+            class="mx-auto flex min-h-[680px] max-w-5xl items-center justify-center rounded-2xl bg-white p-4 sm:min-h-[720px] sm:p-6"
+            aria-live="polite"
+          >
+            <p class="text-center text-sm font-medium text-neutral-500">
+              Loading the calendar as you explore Knockio…
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../../scripts/painting-contractor-software-and-crm.js"></script>
+</KnockioHomeLayout>
