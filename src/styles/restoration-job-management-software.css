@@ -1,0 +1,129 @@
+/* ═══════════════════════════════════════════════
+   RESTORATION JOB MANAGEMENT SOFTWARE
+   Tailwind covers layout/typography. This file owns
+   interactions (summary panel, sticky capability tabs)
+   that cannot be expressed as utilities alone.
+   ═══════════════════════════════════════════════ */
+
+/* ---------- Hero visual overlay ---------- */
+.hero-resto-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(15, 23, 42, 0.08),
+    rgba(15, 23, 42, 0)
+  );
+  pointer-events: none;
+}
+
+/* ---------- Quick summary panel ---------- */
+.kio-summary-button .summary-chevron {
+  transition: transform 250ms ease;
+}
+
+.kio-summary-button.is-open .summary-chevron {
+  transform: rotate(90deg);
+}
+
+.kio-summary-panel {
+  display: none;
+}
+
+.kio-summary-panel.is-open {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .kio-summary-panel {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(14px);
+    transition:
+      opacity 260ms ease,
+      transform 260ms ease,
+      visibility 260ms ease;
+  }
+
+  .kio-summary-panel.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Sticky capability tabs ---------- */
+.hp-scroll-track {
+  height: auto;
+}
+
+@media (min-width: 1024px) {
+  .hp-scroll-track {
+    height: calc(100vh + (var(--scroll-steps, 5) - 1) * 48vh);
+  }
+
+  .hp-panel {
+    position: absolute;
+    inset: 0;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(16px);
+    transition:
+      opacity 300ms ease,
+      transform 300ms ease,
+      visibility 300ms ease;
+  }
+
+  .hp-panel.is-active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1023px) {
+  .hp-panel {
+    display: none;
+  }
+
+  .hp-panel.is-active {
+    display: block;
+  }
+}
+
+.hp-card {
+  transition:
+    transform 260ms ease,
+    box-shadow 260ms ease,
+    border-color 260ms ease;
+}
+
+.hp-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(79, 170, 58, 0.45);
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kio-summary-panel,
+  .kio-summary-button .summary-chevron,
+  .hp-panel,
+  .hp-card {
+    transition: none;
+  }
+
+  .hp-card:hover {
+    transform: none;
+  }
+}
+
+.duration-250 {
+  transition-duration: 250ms;
+}
