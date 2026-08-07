@@ -471,12 +471,12 @@ const tabIconClass =
               />
             </div>
             <div class="mt-7 max-w-[760px]">
-              <h3
+              <p
                 id="proposalVisualTitle"
                 class="mb-4 text-[24px] font-bold leading-8 text-[#0f172a] sm:text-[32px] sm:leading-[40px]"
               >
                 {initialItem.title}
-              </h3>
+              </p>
               <p
                 id="proposalVisualText"
                 class="text-base font-normal leading-7 text-neutral-700 sm:text-lg sm:leading-8"
@@ -485,6 +485,24 @@ const tabIconClass =
               </p>
             </div>
           </div>
+        </div>
+
+        <div class="sr-only">
+          {
+            proposalGroups.map((group) => (
+              <div>
+                <h3>{group.title}</h3>
+                <div>
+                  {group.items.map((item) => (
+                    <article>
+                      <h3>{item.title}</h3>
+                      <p>{item.text}</p>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            ))
+          }
         </div>
       </div>
     </section>
