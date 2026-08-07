@@ -427,6 +427,23 @@ const jsonLd = {
           </p>
         </div>
 
+        <!-- SEO outline: group H3s + cards in legacy document order (before visual tabs) -->
+        <div class="sr-only">
+          {
+            capabilityTabs.map((tab) => (
+              <div>
+                <h3>{tab.label}</h3>
+                {tab.cards.map((card) => (
+                  <article>
+                    <h3>{card.title}</h3>
+                    <p>{card.text}</p>
+                  </article>
+                ))}
+              </div>
+            ))
+          }
+        </div>
+
         <div
           id="restoCapScrollTrack"
           class="hp-scroll-track"
@@ -475,9 +492,9 @@ const jsonLd = {
                     <div class="grid gap-6 lg:grid-cols-3 lg:gap-8">
                       {tab.cards.map((card) => (
                         <article class="hp-card flex min-h-[520px] flex-col overflow-hidden rounded-[28px] border border-solid border-neutral-200 bg-neutral-50 p-7 sm:p-8">
-                          <h3 class="mb-4 text-[26px] font-bold leading-8 text-neutral-950 sm:text-[30px] sm:leading-9">
+                          <p class="mb-4 text-[26px] font-bold leading-8 text-neutral-950 sm:text-[30px] sm:leading-9">
                             {card.title}
-                          </h3>
+                          </p>
                           <p class="mb-8 text-base leading-7 text-neutral-600 sm:text-[17px] sm:leading-8">
                             {card.text}
                           </p>
@@ -500,22 +517,6 @@ const jsonLd = {
               }
             </div>
           </div>
-        </div>
-
-        <div class="sr-only">
-          {
-            capabilityTabs.map((tab) => (
-              <div>
-                <h3>{tab.label}</h3>
-                {tab.cards.map((card) => (
-                  <article>
-                    <h3>{card.title}</h3>
-                    <p>{card.text}</p>
-                  </article>
-                ))}
-              </div>
-            ))
-          }
         </div>
       </div>
     </section>
