@@ -1,164 +1,171 @@
 ---
 import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
-import "../../styles/hvac-software-and-crm.css";
+import "../../styles/home-security-sales-software-and-crm.css";
 import {
   ChevronRight,
   Crosshair,
   FileSignature,
   MessageSquare,
   Quote,
-  Ruler,
+  Map,
   Sparkles,
   Zap,
 } from "lucide-astro";
 
-const title = "HVAC Software & CRM for Service Contractors | Knockio";
+const title = "Home Security Sales Software & CRM for Dealers| Knockio";
 const description =
-  "Book service calls, dispatch techs, build estimates, and collect payment on site. HVAC software that runs every job from the first call to the final invoice.";
+  "Home security sales software to track door-to-door reps, schedule installations, automate monitoring plan billing, and manage sales with Knockio.";
 
 const asset = (name: string) => `/assets/cfw/${name}`;
 
-const capabilityTabs = [
+type CapCard = {
+  title: string;
+  text: string;
+  image: string;
+  alt: string;
+};
+
+const capabilityTabs: { label: string; cards: CapCard[] }[] = [
   {
-    label: "Manage Jobs",
+    label: "Own the Territory",
     cards: [
       {
-        title: "Customer and Equipment History in One Record",
-        text: "Manage Customers and Jobs during every visit, log outcomes, add notes or voice notes, and move prospects into a clear CRM pipeline.",
+        title: "Automated Territory Creation by Zip Code and City",
+        text: "Build canvassing territories automatically from zip codes and cities, instead of drawing every boundary by hand. When you push into a new market, you can carve it up and have reps knocking within minutes.",
         image: asset(
-          "inner-hvac-software-and-crm-customer-and-equipment-history-in-one-record.webp",
+          "inner-home-security-sales-software-and-crm-automated-territory-creation-by-zip-code-and-city.webp",
         ),
         alt: "Door-to-door canvassing in Knockio",
       },
       {
-        title: "Dynamic Job Pipeline for HVAC Stages",
-        text: "Move jobs through clear stages like new call, scheduled, dispatched, diagnosed, estimate sent, approved, installed, and invoiced. Statuses are fully customizable for better workflow.",
+        title: "Address-Level Signup Capture",
+        text: "A rep logs a signup the second a homeowner says yes, with the address, contact info, monitoring plan, and notes saved before they reach the next door. No re-keying back at the office, no lost paperwork.",
         image: asset(
-          "inner-hvac-software-and-crm-dynamic-job-pipeline-for-hvac-stages.webp",
+          "inner-home-security-sales-software-and-crm-address-level-signup-capture.webp",
         ),
         alt: "Lead management in Knockio",
       },
       {
-        title: "Scheduling and Dispatch That Match the Board",
-        text: "Assign service calls and install jobs to the right tech or crew, and keep the office and the field reading the same schedule instead of two versions that drift apart by mid-morning.",
+        title: "Pre-Knock Homeowner Data",
+        text: "Pull homeowner details before the rep even knocks, so they walk up already knowing who lives there, what was discussed last time, and where the deal stands instead of starting cold on the doorstep.",
         image: asset(
-          "inner-hvac-software-and-crm-scheduling-and-dispatch-that-match-the-board-1.webp",
+          "inner-home-security-sales-software-and-crm-pre-knock-homeowner-data.webp",
         ),
         alt: "Kanban-style sales pipeline in Knockio",
       },
     ],
   },
   {
-    label: "Track the Field",
+    label: "Track Every Rep",
     cards: [
       {
-        title: "Live GPS Tracking of Every Tech",
-        text: "See where every tech is in real time, so dispatch routes the closest person to the next emergency instead of guessing. Pin drop verification confirms how close a tech was when marking a job worked.",
+        title: "Live GPS Tracking With Proximity",
+        text: "See where every canvasser is on the map right now, and let proximity intelligence confirm how close a rep actually was to an address when they marked it worked.",
         image: asset(
-          "inner-hvac-software-and-crm-live-gps-tracking-of-every-tech.webp",
+          "inner-home-security-sales-software-and-crm-live-gps-tracking-with-proximity-intelligence.webp",
         ),
         alt: "Route planning in Knockio",
       },
       {
-        title: "Route Planning for Service Days",
-        text: "Plan smarter, tighter routes so your techs cover more calls in a single day, instead of crossing town twice for two jobs that sit only three blocks apart and burning fuel, time, and daylight doing it.",
+        title: "Disposition Every Door",
+        text: "Mark each address as sold, not home, callback, or not interested, so the map shows exactly where the team has been and where the open doors still are.",
         image: asset(
-          "inner-hvac-software-and-crm-route-planning-for-service-days.webp",
+          "inner-home-security-sales-software-and-crm-disposition-every-door.webp",
         ),
         alt: "Territory management in Knockio",
       },
       {
-        title: "Automated Territory Creation",
-        text: "If you run maintenance memberships or new-system sales by area, build territories automatically from zip codes and cities instead of mapping every boundary by hand. Most HVAC tools simply do not do this.",
+        title: "Rep Activity Reporting",
+        text: "See knocks, dispositions, signups, and install rates per rep, so you know who is producing and who needs coaching, not just who says they had a good night.",
         image: asset(
-          "inner-hvac-software-and-crm-automated-territory-creation-by-zip-code-and-city.webp",
+          "inner-home-security-sales-software-and-crm-rep-activity-reporting.webp",
         ),
         alt: "Field activity log in Knockio",
       },
     ],
   },
   {
-    label: "Work Orders and Parts",
+    label: "Move the Deal to Install",
     cards: [
       {
-        title: "Work Orders With Tasks, Budget, and Materials",
-        text: "Track work orders and parts from lead to service with notes, status updates, documents, customer details, photos, and clear next steps, so every HVAC job stays organized from the first call to the final invoice.",
+        title: "Pipeline Built for Security Signups",
+        text: "Move the deal to install from lead to service with notes, status updates, documents, customer details, photos, and clear next steps, so every job stays organized start to finish.",
         image: asset(
-          "inner-hvac-software-and-crm-work-orders-with-tasks-budget-and-materials.webp",
+          "inner-home-security-sales-software-and-crm-pipeline-built-for-security-signups.webp",
         ),
         alt: "Job management in Knockio",
       },
       {
-        title: "Purchase Orders When Parts Run Short",
-        text: "When a part is not in inventory, fire off a purchase order straight from the work order. Knockio tracks products, variants, SKUs, cost, and markup, and flags low stock before you run out mid-job.",
+        title: "Communication History Per Homeowner",
+        text: "Every call, text, and email tied to a homeowner is saved on the record, so when a rep follows up days later, the whole back-and-forth is right there instead of buried in someone's phone.",
         image: asset(
-          "inner-hvac-software-and-crm-purchase-orders-when-parts-run-short.webp",
+          "inner-home-security-sales-software-and-crm-communication-history-per-homeowner.webp",
         ),
         alt: "Crew dispatching in Knockio",
       },
       {
-        title: "Assign Jobs to Crews or Subcontractors",
-        text: "Work orders can go to your own install crew or to a subcontractor, with tasks, notes, photos, and the schedule all attached, so whoever does the work has the full picture.",
+        title: "Appointment and Install Scheduling",
+        text: "Book the install or a closer appointment on the spot and assign it to the right person, so the office and the field share one calendar instead of two that drift apart.",
         image: asset(
-          "inner-hvac-software-and-crm-assign-jobs-to-crews-or-subcontractors-1.webp",
+          "inner-home-security-sales-software-and-crm-appointment-and-install-scheduling.webp",
         ),
         alt: "Work orders in Knockio",
       },
     ],
   },
   {
-    label: "Documents and Media",
+    label: "Document the Signup",
     cards: [
       {
-        title: "Job Photos and Equipment Media in One Place",
-        text: "Upload before-and-after photos, model and serial shots, and problem images straight to the job. The next tech, the office, and the customer all get the full visual record.",
+        title: "Photo Annotation at the Door",
+        text: "Snap a photo of the entry points, the panel location, or anything the install tech needs to know, then mark it up with notes and arrows right on the image, so the crew knows what they are walking into before they arrive.",
         image: asset(
-          "inner-hvac-software-and-crm-job-photos-and-equipment-media-in-one-place.webp",
+          "inner-home-security-sales-software-and-crm-photo-annotation-at-the-door.webp",
         ),
         alt: "Smart estimates in Knockio",
       },
       {
-        title: "E-Contracts With Legal Protection",
-        text: "Send service agreements and approvals for digital signature with IP address and timestamp logging built in, so you have a documented trail if a job is ever disputed.",
+        title: "E-Contracts for Monitoring Agreements",
+        text: "Send the monitoring agreement for digital signature with a documented audit trail, IP address and timestamp logged on every view and signature, so a signed deal is a clean legal record, not a verbal yes.",
         image: asset(
-          "inner-hvac-software-and-crm-e-contracts-with-legal-protection.webp",
+          "inner-home-security-sales-software-and-crm-e-contracts-for-monitoring-agreements.webp",
         ),
         alt: "Proposals in Knockio",
       },
       {
-        title: "Centralized File Storage Per Job",
-        text: "Keep warranties, permits, manuals, and invoices attached right to the customer record, not scattered across email and a folder nobody can find when the warranty claim comes up.",
+        title: "Centralized File Storage Per Homeowner",
+        text: "Keep ID verification, agreements, and any service documents attached right to the homeowner record instead of scattered across inboxes and a shared drive that nobody on your team can ever navigate.",
         image: asset(
-          "inner-hvac-software-and-crm-centralized-file-storage-per-job.webp",
+          "inner-home-security-sales-software-and-crm-centralized-file-storage-per-homeowner.webp",
         ),
         alt: "Digital contracts in Knockio",
       },
     ],
   },
   {
-    label: "Quote and Get Paid",
+    label: "Automate and Get Paid",
     cards: [
       {
-        title: "Estimates and Service Agreements",
-        text: "Build clean estimates with optional line items, so a customer can add a surge protector or a better filter without a second visit. Save templates for your common repairs and installs, and pull from a product and service catalog so pricing stays consistent across every tech.",
+        title: "Native Automation Builder",
+        text: "Build your own automations without code: trigger a follow-up text when a door is marked callback, alert a manager when a rep signs a deal, or remind a closer the night before an install. The office stops chasing the same tasks by hand.",
         image: asset(
-          "inner-hvac-software-and-crm-estimates-and-service-agreements.webp",
+          "inner-home-security-sales-software-and-crm-native-automation-builder.webp",
         ),
         alt: "Video and file storage in Knockio",
       },
       {
-        title: "Digital Contracts With E-Signatures",
-        text: "Send an estimate or service agreement the customer reviews and signs from their phone, with a documented audit trail. Change orders work the same way, so a mid-job upsell is logged instead of scribbled on a clipboard.",
+        title: "Communication History",
+        text: "Knockio fires off your callbacks, confirmation texts, and appointment reminders on a schedule you set, so every interested homeowner gets a timely follow-up without a rep or the office having to remember to send it.",
         image: asset(
-          "inner-hvac-software-and-crm-digital-contracts-with-e-signatures.webp",
+          "inner-home-security-sales-software-and-crm-communication-history-for-follow-ups.webp",
         ),
         alt: "Photo uploads in Knockio",
       },
       {
         title: "Flexible Payment Collection",
-        text: "Collect deposits, milestone payments, and final balances through tap to pay, text to pay, card, or ACH, all tied directly to the job through Knockio's own payment processing. The tech leaves with the money instead of mailing an invoice and waiting.",
+        text: "Collect any upfront activation or equipment fee through tap to pay, text to pay, card, or ACH, all tied directly to the homeowner record through Knockio's own payment processing.",
         image: asset(
-          "inner-hvac-software-and-crm-flexible-payment-collection.webp",
+          "inner-home-security-sales-software-and-crm-flexible-payment-collection.webp",
         ),
         alt: "Service reports in Knockio",
       },
@@ -169,39 +176,39 @@ const capabilityTabs = [
 const organizedItems = [
   {
     title: "Live Field Tracking",
-    text: "Monitor techs in real time with GPS tracking. It helps with dispatch, accountability, and knowing exactly who is on which call right now.",
+    text: "Monitor reps in real time with GPS tracking and proximity intelligence. It helps with coverage, accountability, and knowing exactly who is working in which neighborhood right now.",
     href: "https://knockio.com/features/gps-tracking-software/",
     icon: "crosshair" as const,
   },
   {
-    title: "Flow Automation",
-    text: "Automatically handle the repetitive office work like maintenance reminders, follow ups, and appointment confirmations, so a customer due for a tune-up does not slip through the cracks.",
-    href: "https://knockio.com/features/business-automation-software/",
-    icon: "sparkles" as const,
+    title: "Communication History",
+    text: "Every text, call, and email with a homeowner lives on their record, so any rep who picks up the account sees the full conversation instead of starting over.",
+    href: "https://knockio.com/features/business-texting-and-calling-software/",
+    icon: "message" as const,
   },
   {
-    title: "Media and Measurements",
-    text: "See every job's photos, equipment details, and service notes in one view, so the office and the field are looking at the same record instead of asking each other for it.",
+    title: "Map and Disposition View",
+    text: "See who has been contacted, who signed, and who needs a revisit. The live map makes it obvious where the team should knock next.",
     href: null,
-    icon: "ruler" as const,
+    icon: "map" as const,
   },
   {
     title: "E-Contracts",
-    text: "Build, send, review, and sign contracts in one workflow so approved deals move ahead without paperwork or repeated follow-up delays.",
+    text: "Manage contract creation, review, approval, and signatures digitally so your team can move deals forward with fewer delays.",
     href: "https://knockio.com/e-contracts/",
     icon: "file" as const,
   },
   {
     title: "CRM Integrations",
-    text: "Knockio links your HVAC customer and dispatch data to Salesforce, HubSpot, Google Calendar, and GHL, with thousands more apps through Zapier, FlowChef, and webhooks.",
+    text: "Knockio connects your security signups and rep data to Salesforce, HubSpot, Google Calendar, and GHL, plus thousands of apps through Zapier, FlowChef, and webhooks.",
     href: "https://knockio.com/knockio-integrations/",
     icon: "zap" as const,
   },
   {
     title: "Team Communication",
-    text: "Knockio connects dispatchers, techs, and office staff to every job through shared assignees and internal notes, so nothing gets lost between shifts.",
+    text: "Knockio links reps, managers, and install coordinators to every signup through assignees and notes, so the deal moves forward without anyone chasing an update.",
     href: "https://knockio.com/features/business-texting-and-calling-software/",
-    icon: "message" as const,
+    icon: "sparkles" as const,
   },
 ];
 
@@ -234,24 +241,24 @@ const trustBadges = [
 
 const faqs = [
   {
-    q: "Can Knockio track equipment history per customer?",
-    a: "Yes. Each customer record holds the property's full service and equipment history, so a tech sees what is installed and what was done on past visits before arriving.",
+    q: "What should I look for in door-to-door home security sales software?",
+    a: "Look for automated territory assignment, live GPS rep tracking, fast signup capture, full communication history per door, e-contracts, and a customizable pipeline. The platform should match the speed of a canvassing push, not slow a rep down with office-style data entry. Knockio was built around exactly this kind of field workflow.",
   },
   {
-    q: "Can Knockio dispatch and track my techs in the field?",
-    a: "Knockio helps field service teams manage the full workflow. Teams can Manage Customers and Jobs, store customer details, create estimates, schedule jobs, assign crews, track job progress, upload photos, send invoices, and follow up with customers. This helps reduce manual work and keeps everyone updated.",
+    q: "Which software is best for managing a door-to-door security sales team?",
+    a: "Knockio helps field service teams manage the full workflow. Teams can Own the Territory, store customer details, create estimates, schedule jobs, assign crews, track job progress, upload photos, send invoices, and follow up with customers. This helps reduce manual work and keeps everyone updated.",
   },
   {
-    q: "Does Knockio handle work orders and parts for installs?",
-    a: "Yes. Work orders carry tasks, a budget, and a material takeoff, and you can raise a purchase order straight from the work order when a part runs short, with low-stock alerts to warn you first.",
+    q: "Can Knockio create canvassing territories automatically?",
+    a: "Yes. Knockio can build territories automatically from zip codes and cities, so when you enter a new market you can split it up and get reps knocking fast, without drawing boundaries by hand.",
   },
   {
-    q: "Does Knockio support digital contracts and on-site payment?",
-    a: "Yes. You can build estimates and service agreements, send them for e-signature, and collect payment through tap to pay, text to pay, card, or ACH, all tied to the job.",
+    q: "Can Knockio track my reps and verify which doors were worked?",
+    a: "Yes. Knockio includes live GPS tracking with proximity intelligence, so you can confirm how close a rep was to an address when they marked it worked.",
   },
   {
-    q: "How is Knockio different from FieldPulse, FieldBoss, or ServiceTitan for HVAC companies?",
-    a: "ServiceTitan is heavy and priced for large shops, while FieldPulse and FieldBoss focus mostly on service management. Knockio brings dispatch, equipment history, estimates, work orders, and payments together, then adds live tech tracking, a fully customizable pipeline with unlimited boards, automated territory creation by zip and city, personalized support, and pricing that does not punish a growing company. It is one connected system built around the way HVAC service and install work actually runs.",
+    q: "Does Knockio keep a record of every conversation with a homeowner?",
+    a: "Yes. Communication history saves every call, text, and email tied to a lead on the record, so any rep following up sees the full back-and-forth instead of starting cold.",
   },
 ];
 
@@ -298,7 +305,7 @@ const reviewsRow2 = [
 ];
 
 const heroImage = asset(
-  "inner-hvac-software-and-crm-what-should-hvac-contractors-look-for-in-a-crm-and-service-platform.webp",
+  "inner-home-security-sales-software-and-crm-what-should-home-security-sales-teams-look-for-in-a-canvassing-and-sales-platfor.webp",
 );
 
 const jsonLd = {
@@ -306,22 +313,25 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://knockio.com/industry/hvac-software-and-crm/#webpage",
-      url: "https://knockio.com/industry/hvac-software-and-crm/",
+      "@id":
+        "https://knockio.com/industry/home-security-sales-software-and-crm/#webpage",
+      url: "https://knockio.com/industry/home-security-sales-software-and-crm/",
       name: title,
       description,
       isPartOf: { "@id": "https://knockio.com/#website" },
       audience: {
         "@type": "Audience",
-        audienceType: "HVAC Contractors",
+        audienceType: "Home Security Sales Teams",
       },
       mainEntity: {
-        "@id": "https://knockio.com/industry/hvac-software-and-crm/#faq",
+        "@id":
+          "https://knockio.com/industry/home-security-sales-software-and-crm/#faq",
       },
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://knockio.com/industry/hvac-software-and-crm/#breadcrumb",
+      "@id":
+        "https://knockio.com/industry/home-security-sales-software-and-crm/#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
@@ -332,14 +342,15 @@ const jsonLd = {
         {
           "@type": "ListItem",
           position: 2,
-          name: "HVAC Software & CRM",
-          item: "https://knockio.com/industry/hvac-software-and-crm/",
+          name: "Home Security Sales Software & CRM",
+          item: "https://knockio.com/industry/home-security-sales-software-and-crm/",
         },
       ],
     },
     {
       "@type": "FAQPage",
-      "@id": "https://knockio.com/industry/hvac-software-and-crm/#faq",
+      "@id":
+        "https://knockio.com/industry/home-security-sales-software-and-crm/#faq",
       mainEntity: faqs.map((faq) => ({
         "@type": "Question",
         name: faq.q,
@@ -357,7 +368,7 @@ const jsonLd = {
   jsonLd={jsonLd}
   whiteBg={true}
 >
-  <main id="hvac-industry-page">
+  <main id="hs-industry-page">
     <!-- ========== Hero ========== -->
     <section
       class="overflow-hidden border-b border-solid border-[#7fc271] bg-white"
@@ -372,17 +383,18 @@ const jsonLd = {
             <h1
               class="mb-7 text-[36px] font-bold leading-[44px] text-neutral-950 sm:text-[44px] sm:leading-[54px] xl:text-[58px] xl:leading-[66px] 2xl:text-[64px] 2xl:leading-[74px]"
             >
-              HVAC Software for Service &amp; Install
+              Home Security Sales Software
             </h1>
             <p
               class="mb-10 max-w-[760px] text-base font-medium leading-8 text-neutral-600 sm:text-lg sm:leading-9"
             >
-              Knockio is HVAC software and CRM built for contractors who need
-              one place to book calls, dispatch techs, hold customer and
-              equipment history, build estimates, schedule installs, and collect
-              payment in the field. No more working off a whiteboard, a text
-              thread, and a paper invoice that never make it back to the same
-              desk.
+              Home security is a door-to-door close. A rep works a neighborhood,
+              pitches monitoring at the doorstep, signs the homeowner on a
+              monitoring agreement, and gets an install booked before the next
+              knock. Knockio is home security sales software built for teams who
+              need to assign territories, track reps in the field, capture
+              signups at the door, log every conversation, and move installs
+              forward, all from one app instead of a paper map and a group text.
             </p>
             <a
               href="#cal-sec"
@@ -399,24 +411,23 @@ const jsonLd = {
             <p
               class="mb-4 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
-              What should HVAC contractors look for in a CRM and service
-              platform?
+              What should home security sales teams look for in a canvassing and
+              sales platform?
             </p>
             <p
               class="max-w-[760px] text-[15px] leading-7 text-neutral-600 sm:text-base sm:leading-7"
             >
-              An HVAC contractor should look for a CRM that carries the whole
-              job, from the booked call to the paid invoice. That means customer
-              and equipment records, scheduling and dispatch, technician
-              tracking, estimates and service agreements, work orders with
-              parts, e-signed approvals, and on-site payment. Knockio handles
-              all of it in one platform. It also adds live GPS tracking of techs
-              and full job history per address, so the next visit starts with
-              everything the last tech already learned. That depth of service
-              record, plus affordable pricing and support that actually knows
-              the trade, is what a generic CRM built for another industry leaves
-              out, and it is what makes an HVAC CRM for contractors worth
-              keeping in the truck.
+              A home security sales team should look for a platform that matches
+              the speed of a door-to-door push: automated territory assignment,
+              live rep tracking, fast signup capture at the door, full
+              conversation history per homeowner, e-signed agreements, and a
+              pipeline that runs from first knock to confirmed install. Knockio
+              covers all of it in one app. It adds automated territory creation
+              by zip code and city plus live GPS tracking with proximity
+              intelligence, so managers know exactly which doors were worked and
+              by whom. That speed, plus affordable pricing and support that
+              actually answers, is what generic CRMs built for office sales
+              simply do not offer a field team.
             </p>
           </div>
 
@@ -440,11 +451,11 @@ const jsonLd = {
         </div>
 
         <div
-          class="hero-hvac-visual relative min-h-[340px] overflow-hidden sm:min-h-[440px] lg:min-h-full"
+          class="hero-hs-visual relative min-h-[340px] overflow-hidden sm:min-h-[440px] lg:min-h-full"
         >
           <img
             src={heroImage}
-            alt="What should hvac contractors look for in a crm and service platform"
+            alt="What should home security sales teams look for in a canvassing and sales platform"
             width="830"
             height="560"
             decoding="async"
@@ -456,24 +467,22 @@ const jsonLd = {
       </div>
     </section>
 
-    <!-- ========== Why HVAC / Sticky tabs ========== -->
+    <!-- ========== Why / Sticky tabs ========== -->
     <section id="platform-capabilities" class="bg-white py-20 sm:py-24 lg:py-28">
       <div class="my-container">
         <div class="mx-auto mb-10 max-w-[1120px] text-center lg:mb-12">
-          <h2
-            class="mb-5 text-center text-[34px] font-bold leading-[42px] text-neutral-950 sm:text-4xl sm:leading-[48px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
-          >
-            Why HVAC Contractors Choose Knockio
+          <h2 class="mb-5 text-center text-[34px] font-bold leading-[42px] text-neutral-950 sm:text-4xl sm:leading-[48px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px] aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            Why Home Security Teams Choose Knockio
           </h2>
           <p
             class="mx-auto max-w-[960px] text-base font-normal leading-8 text-neutral-600 sm:text-lg sm:leading-9"
           >
-            Knockio helps HVAC companies manage customers, equipment history,
-            scheduling, dispatch, techs, estimates, parts, invoices, and
-            payments. From the first service call to the signed-off install, it
-            all sits in one connected platform. Owners run the board and the
-            field without losing track of who is where, what was done, and what
-            still needs billing.
+            Knockio helps home security sales teams manage territories, reps,
+            signups, appointments, install scheduling, and follow-ups. From the
+            first knock to a confirmed install date, it all sits in one
+            connected platform. Managers run the field without stitching
+            together a spreadsheet, a mapping tool, and a separate messaging
+            app.
           </p>
         </div>
 
@@ -494,7 +503,7 @@ const jsonLd = {
         </div>
 
         <div
-          id="hvacCapScrollTrack"
+          id="hsCapScrollTrack"
           class="hp-scroll-track"
           style="--scroll-steps: 5"
         >
@@ -505,17 +514,17 @@ const jsonLd = {
               class="sticky top-0 z-30 border-b border-solid border-neutral-200/80 bg-white/95 pb-5 pt-2 backdrop-blur-md lg:static lg:border-0 lg:bg-transparent lg:pb-8"
             >
               <div
-                id="hvacTabsNav"
+                id="hsTabsNav"
                 class="mx-auto flex max-w-[1050px] items-center gap-4 overflow-x-auto scroll-smooth px-1 [scrollbar-width:none] lg:justify-center [&::-webkit-scrollbar]:hidden"
                 role="tablist"
-                aria-label="HVAC platform capabilities"
+                aria-label="Home security platform capabilities"
               >
                 {
                   capabilityTabs.map((tab, index) => (
                     <button
                       type="button"
                       role="tab"
-                      data-hvac-tab={String(index)}
+                      data-hs-tab={String(index)}
                       aria-selected={index === 0 ? "true" : "false"}
                       class:list={[
                         "hp-tab-btn shrink-0 rounded-full border px-5 py-2.5 text-base font-medium leading-6 transition-all duration-300 hover:border-primary-500 hover:text-primary-500 sm:px-6",
@@ -531,7 +540,7 @@ const jsonLd = {
               </div>
             </div>
 
-            <div id="hvacTabsPanels" class="relative lg:flex-1">
+            <div id="hsTabsPanels" class="relative lg:flex-1">
               {
                 capabilityTabs.map((tab, tabIndex) => (
                   <div
@@ -582,17 +591,18 @@ const jsonLd = {
       <div class="my-container relative z-10">
         <div class="mx-auto mb-14 max-w-[1120px] text-center lg:mb-20">
           <h2
-            class="mb-6 text-center text-[31px] font-bold leading-[39px] text-white sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+            class="mb-6 text-center text-[34px] font-bold leading-[42px] text-white sm:text-4xl sm:leading-[48px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
           >
-            Keep Customers, Techs, and Job Updates Organized
+            Run the Whole Field Team From One App
           </h2>
           <p
             class="mx-auto max-w-[980px] text-base leading-8 text-white sm:text-lg sm:leading-9"
           >
-            Knockio makes HVAC job management simple with HVAC software and
-            field service CRM tools in one place. Track techs, manage the
-            schedule, upload job media, automate follow ups, and send digital
-            contracts, all from the same platform.
+            Knockio pulls your home security sales operation into a single
+            platform, so the map, the reps, and the install pipeline are never
+            spread across different tools. Track reps, assign territories,
+            capture signups, automate follow-ups, and send digital agreements,
+            all in one place.
           </p>
         </div>
 
@@ -606,11 +616,11 @@ const jsonLd = {
                   {item.icon === "crosshair" && (
                     <Crosshair class="size-[30px]" aria-hidden="true" />
                   )}
-                  {item.icon === "sparkles" && (
-                    <Sparkles class="size-[30px]" aria-hidden="true" />
+                  {item.icon === "message" && (
+                    <MessageSquare class="size-[30px]" aria-hidden="true" />
                   )}
-                  {item.icon === "ruler" && (
-                    <Ruler class="size-[30px]" aria-hidden="true" />
+                  {item.icon === "map" && (
+                    <Map class="size-[30px]" aria-hidden="true" />
                   )}
                   {item.icon === "file" && (
                     <FileSignature class="size-[30px]" aria-hidden="true" />
@@ -618,8 +628,8 @@ const jsonLd = {
                   {item.icon === "zap" && (
                     <Zap class="size-[30px]" aria-hidden="true" />
                   )}
-                  {item.icon === "message" && (
-                    <MessageSquare class="size-[30px]" aria-hidden="true" />
+                  {item.icon === "sparkles" && (
+                    <Sparkles class="size-[30px]" aria-hidden="true" />
                   )}
                 </div>
                 <h3 class="mb-4 text-[22px] font-bold leading-7 text-white sm:text-2xl sm:leading-8">
@@ -655,14 +665,15 @@ const jsonLd = {
             <h2
               class="mb-8 w-full max-w-3xl text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
             >
-              Everything HVAC Contractors Ask Before Switching to Knockio
+              Everything Home Security Teams Ask Before Switching to Knockio
             </h2>
             <p
               class="mb-6 w-full max-w-3xl text-sm leading-6 font-normal text-neutral-800 sm:text-base sm:leading-7 md:mb-8 md:text-lg md:leading-8"
             >
-              Switching software is a real decision when your whole schedule,
-              customer history, and equipment records live inside it. Here are
-              the questions HVAC contractors ask most before making the move.
+              Switching software is a real decision when your whole map, rep
+              activity, and signup history live inside it. Here are the
+              questions home security sales teams ask most before making the
+              move.
             </p>
           </div>
 
@@ -933,5 +944,5 @@ const jsonLd = {
     </section>
   </main>
 
-  <script src="../../scripts/hvac-software-and-crm.js"></script>
+  <script src="../../scripts/home-security-sales-software-and-crm.js"></script>
 </KnockioHomeLayout>

@@ -1,6 +1,6 @@
 ---
 import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
-import "../../styles/hvac-software-and-crm.css";
+import "../../styles/solar-sales-software-and-crm.css";
 import {
   ChevronRight,
   Crosshair,
@@ -12,37 +12,44 @@ import {
   Zap,
 } from "lucide-astro";
 
-const title = "HVAC Software & CRM for Service Contractors | Knockio";
+const title = "Solar Sales Software & CRM for Solar Teams | Knockio";
 const description =
-  "Book service calls, dispatch techs, build estimates, and collect payment on site. HVAC software that runs every job from the first call to the final invoice.";
+  "Solar CRM system and sales software for door-to-door canvassing & service teams. Auto-built canvassing territories, setter-to-closer handoff, estimates & e-contracts in one platform.";
 
 const asset = (name: string) => `/assets/cfw/${name}`;
 
-const capabilityTabs = [
+type CapCard = {
+  title: string;
+  text: string;
+  image: string;
+  alt: string;
+};
+
+const capabilityTabs: { label: string; cards: CapCard[] }[] = [
   {
-    label: "Manage Jobs",
+    label: "Manage Records",
     cards: [
       {
-        title: "Customer and Equipment History in One Record",
-        text: "Manage Customers and Jobs during every visit, log outcomes, add notes or voice notes, and move prospects into a clear CRM pipeline.",
+        title: "Customer and Property Records in One Place",
+        text: "Manage records during every single visit, log outcomes, add detailed notes or quick voice memos, and move qualified prospects steadily into a clear, organized CRM pipeline your whole team can trust today.",
         image: asset(
-          "inner-hvac-software-and-crm-customer-and-equipment-history-in-one-record.webp",
+          "inner-solar-sales-software-and-crm-customer-and-property-records-in-one-place.webp",
         ),
         alt: "Door-to-door canvassing in Knockio",
       },
       {
-        title: "Dynamic Job Pipeline for HVAC Stages",
-        text: "Move jobs through clear stages like new call, scheduled, dispatched, diagnosed, estimate sent, approved, installed, and invoiced. Statuses are fully customizable for better workflow.",
+        title: "Dynamic Sales Pipeline for Solar Project Stages",
+        text: "Move deals through clear stages like lead, appointment, survey, design, permitting, install, and PTO. Statuses stay fully customizable, so every board matches your exact sales-to-install process and each team sees what matters.",
         image: asset(
-          "inner-hvac-software-and-crm-dynamic-job-pipeline-for-hvac-stages.webp",
+          "inner-solar-sales-software-and-crm-dynamic-pipeline-for-solar-stages.webp",
         ),
         alt: "Lead management in Knockio",
       },
       {
-        title: "Scheduling and Dispatch That Match the Board",
-        text: "Assign service calls and install jobs to the right tech or crew, and keep the office and the field reading the same schedule instead of two versions that drift apart by mid-morning.",
+        title: "Setter to Closer Handoff and Scheduling",
+        text: "Assign appointments from setters to closers, track who showed and who sat, and keep the sales floor and the field reading the same calendar instead of two versions that drift apart by midday.",
         image: asset(
-          "inner-hvac-software-and-crm-scheduling-and-dispatch-that-match-the-board-1.webp",
+          "inner-solar-sales-software-and-crm-setter-to-closer-handoff-and-scheduling.webp",
         ),
         alt: "Kanban-style sales pipeline in Knockio",
       },
@@ -52,55 +59,53 @@ const capabilityTabs = [
     label: "Track the Field",
     cards: [
       {
-        title: "Live GPS Tracking of Every Tech",
-        text: "See where every tech is in real time, so dispatch routes the closest person to the next emergency instead of guessing. Pin drop verification confirms how close a tech was when marking a job worked.",
+        title: "Automated Territory Creation by Zip Code and City",
+        text: "Build canvassing territories automatically from zip codes and cities, instead of drawing every boundary by hand. You can carve up a target market and get setters knocking in minutes, not hours. Most solar CRMs simply do not do this.",
         image: asset(
-          "inner-hvac-software-and-crm-live-gps-tracking-of-every-tech.webp",
+          "inner-solar-sales-software-and-crm-automated-territory-creation-by-zip-code-and-city.webp",
         ),
         alt: "Route planning in Knockio",
       },
       {
-        title: "Route Planning for Service Days",
-        text: "Plan smarter, tighter routes so your techs cover more calls in a single day, instead of crossing town twice for two jobs that sit only three blocks apart and burning fuel, time, and daylight doing it.",
+        title: "Live GPS Tracking of Every Field Setter",
+        text: "See exactly where every setter is in real time, which helps accountability, safety, and knowing who works which neighborhood right now. Pin drop verification confirms how close reps stood when marking doors.",
         image: asset(
-          "inner-hvac-software-and-crm-route-planning-for-service-days.webp",
+          "inner-solar-sales-software-and-crm-live-gps-tracking-of-every-setter.webp",
         ),
         alt: "Territory management in Knockio",
       },
       {
-        title: "Automated Territory Creation",
-        text: "If you run maintenance memberships or new-system sales by area, build territories automatically from zip codes and cities instead of mapping every boundary by hand. Most HVAC tools simply do not do this.",
-        image: asset(
-          "inner-hvac-software-and-crm-automated-territory-creation-by-zip-code-and-city.webp",
-        ),
+        title: "Smarter Route Planning for Busy Field Reps",
+        text: "Plan smarter, tighter routes so your reps cover far more doors in much less time each day, instead of crisscrossing the very same streets over and over again and burning valuable daylight.",
+        image: asset("inner-solar-sales-software-and-crm-route-planning.webp"),
         alt: "Field activity log in Knockio",
       },
     ],
   },
   {
-    label: "Work Orders and Parts",
+    label: "Work Orders and Materials",
     cards: [
       {
-        title: "Work Orders With Tasks, Budget, and Materials",
-        text: "Track work orders and parts from lead to service with notes, status updates, documents, customer details, photos, and clear next steps, so every HVAC job stays organized from the first call to the final invoice.",
+        title: "Solar Work Orders With Tasks and Materials",
+        text: "Track solar work orders from lead to service with notes, status updates, documents, customer details, and clear next steps, so every install job stays organized and nothing important slips through the cracks.",
         image: asset(
-          "inner-hvac-software-and-crm-work-orders-with-tasks-budget-and-materials.webp",
+          "inner-solar-sales-software-and-crm-work-orders-with-tasks-budget-and-materials.webp",
         ),
         alt: "Job management in Knockio",
       },
       {
-        title: "Purchase Orders When Parts Run Short",
-        text: "When a part is not in inventory, fire off a purchase order straight from the work order. Knockio tracks products, variants, SKUs, cost, and markup, and flags low stock before you run out mid-job.",
+        title: "Purchase Orders When Solar Equipment Runs Short",
+        text: "When panels, inverters, or racking fall out of inventory, raise a purchase order straight from the work order. Knockio tracks products, variants, SKUs, cost, and markup, flagging low stock before you run short.",
         image: asset(
-          "inner-hvac-software-and-crm-purchase-orders-when-parts-run-short.webp",
+          "inner-solar-sales-software-and-crm-purchase-orders-when-equipment-runs-short.webp",
         ),
         alt: "Crew dispatching in Knockio",
       },
       {
-        title: "Assign Jobs to Crews or Subcontractors",
-        text: "Work orders can go to your own install crew or to a subcontractor, with tasks, notes, photos, and the schedule all attached, so whoever does the work has the full picture.",
+        title: "Assign Solar Installs to Crews or Subcontractors",
+        text: "Send solar work orders directly to your own install crew or to a trusted subcontractor, with tasks, notes, photos, and the full schedule attached, so whoever does the work always has the complete picture.",
         image: asset(
-          "inner-hvac-software-and-crm-assign-jobs-to-crews-or-subcontractors-1.webp",
+          "inner-solar-sales-software-and-crm-assign-solar-installs-to-crews-or-subcontractors.webp",
         ),
         alt: "Work orders in Knockio",
       },
@@ -110,26 +115,26 @@ const capabilityTabs = [
     label: "Documents and Media",
     cards: [
       {
-        title: "Job Photos and Equipment Media in One Place",
-        text: "Upload before-and-after photos, model and serial shots, and problem images straight to the job. The next tech, the office, and the customer all get the full visual record.",
+        title: "Site Photos and System Media in One Place",
+        text: "Upload roof photos, electrical panel shots, and site survey images straight to the deal. Your design team, install crew, and the customer all get the full visual record together in one shared spot.",
         image: asset(
-          "inner-hvac-software-and-crm-job-photos-and-equipment-media-in-one-place.webp",
+          "inner-solar-sales-software-and-crm-site-photos-and-system-media-in-one-place.webp",
         ),
         alt: "Smart estimates in Knockio",
       },
       {
-        title: "E-Contracts With Legal Protection",
-        text: "Send service agreements and approvals for digital signature with IP address and timestamp logging built in, so you have a documented trail if a job is ever disputed.",
+        title: "E-Contracts for Solar Agreements",
+        text: "Send install contracts for digital signature with a documented audit trail, so financing partners and homeowners alike have a clean legal record. Every view and signature is logged with IP address and timestamp.",
         image: asset(
-          "inner-hvac-software-and-crm-e-contracts-with-legal-protection.webp",
+          "inner-solar-sales-software-and-crm-e-contracts-for-solar-agreements.webp",
         ),
         alt: "Proposals in Knockio",
       },
       {
-        title: "Centralized File Storage Per Job",
-        text: "Keep warranties, permits, manuals, and invoices attached right to the customer record, not scattered across email and a folder nobody can find when the warranty claim comes up.",
+        title: "Centralized File Storage Per Solar Deal",
+        text: "Keep utility bills, interconnection paperwork, and permits attached right to the customer record, not scattered across inboxes and a shared drive nobody can ever navigate, so the whole team finds documents fast.",
         image: asset(
-          "inner-hvac-software-and-crm-centralized-file-storage-per-job.webp",
+          "inner-solar-sales-software-and-crm-centralized-file-storage-per-deal.webp",
         ),
         alt: "Digital contracts in Knockio",
       },
@@ -139,26 +144,26 @@ const capabilityTabs = [
     label: "Quote and Get Paid",
     cards: [
       {
-        title: "Estimates and Service Agreements",
-        text: "Build clean estimates with optional line items, so a customer can add a surge protector or a better filter without a second visit. Save templates for your common repairs and installs, and pull from a product and service catalog so pricing stays consistent across every tech.",
+        title: "Solar Estimate and Quote Builder",
+        text: "Create estimates with system size, equipment, and clear line-item pricing built in, so homeowners compare real numbers instead of squinting at a handwritten napkin estimate. Add optional line items like battery storage, save templates, and pull from a product catalog.",
         image: asset(
-          "inner-hvac-software-and-crm-estimates-and-service-agreements.webp",
+          "inner-solar-sales-software-and-crm-solar-estimate-and-quote-builder-1.webp",
         ),
         alt: "Video and file storage in Knockio",
       },
       {
-        title: "Digital Contracts With E-Signatures",
-        text: "Send an estimate or service agreement the customer reviews and signs from their phone, with a documented audit trail. Change orders work the same way, so a mid-job upsell is logged instead of scribbled on a clipboard.",
+        title: "Digital Solar Contracts With E-Signatures",
+        text: "Once the homeowner is ready, send the install contract for digital signature with a documented audit trail. Change orders work exactly the same way, so any mid-deal adjustment is logged and tracked cleanly instead of handled loosely over text message.",
         image: asset(
-          "inner-hvac-software-and-crm-digital-contracts-with-e-signatures.webp",
+          "inner-solar-sales-software-and-crm-digital-contracts-with-e-signatures.webp",
         ),
         alt: "Photo uploads in Knockio",
       },
       {
-        title: "Flexible Payment Collection",
-        text: "Collect deposits, milestone payments, and final balances through tap to pay, text to pay, card, or ACH, all tied directly to the job through Knockio's own payment processing. The tech leaves with the money instead of mailing an invoice and waiting.",
+        title: "Flexible Payment Collection Options",
+        text: "Collect deposits, milestone payments, and final balances through tap to pay, text to pay, card, or ACH, all tied directly to the job through Knockio's own payment processing. Cash flow no longer waits around on a paper check showing up later.",
         image: asset(
-          "inner-hvac-software-and-crm-flexible-payment-collection.webp",
+          "inner-solar-sales-software-and-crm-flexible-payment-collection.webp",
         ),
         alt: "Service reports in Knockio",
       },
@@ -169,37 +174,37 @@ const capabilityTabs = [
 const organizedItems = [
   {
     title: "Live Field Tracking",
-    text: "Monitor techs in real time with GPS tracking. It helps with dispatch, accountability, and knowing exactly who is on which call right now.",
+    text: "Monitor setters in real time with GPS tracking. It helps with accountability, safety, and knowing exactly who is working in which neighborhood right now.",
     href: "https://knockio.com/features/gps-tracking-software/",
     icon: "crosshair" as const,
   },
   {
     title: "Flow Automation",
-    text: "Automatically handle the repetitive office work like maintenance reminders, follow ups, and appointment confirmations, so a customer due for a tune-up does not slip through the cracks.",
+    text: "Automatically handle the repetitive work like follow ups, callbacks, and appointment confirmations, so a deal does not go cold while your closers are out running other appointments.",
     href: "https://knockio.com/features/business-automation-software/",
     icon: "sparkles" as const,
   },
   {
     title: "Media and Measurements",
-    text: "See every job's photos, equipment details, and service notes in one view, so the office and the field are looking at the same record instead of asking each other for it.",
+    text: "See every deal's photos, site survey details, and notes in one view, so the office and the field are looking at the same record instead of asking each other for it.",
     href: null,
     icon: "ruler" as const,
   },
   {
     title: "E-Contracts",
-    text: "Build, send, review, and sign contracts in one workflow so approved deals move ahead without paperwork or repeated follow-up delays.",
+    text: "Create digital contracts, collect signatures, and move approved jobs forward faster without printing, scanning, chasing updates, or losing important details.",
     href: "https://knockio.com/e-contracts/",
     icon: "file" as const,
   },
   {
     title: "CRM Integrations",
-    text: "Knockio links your HVAC customer and dispatch data to Salesforce, HubSpot, Google Calendar, and GHL, with thousands more apps through Zapier, FlowChef, and webhooks.",
+    text: "Connect Knockio to Salesforce, HubSpot, Google Calendar, and GHL, then reach thousands more apps through Zapier, FlowChef, and webhooks, keeping every solar deal in sync.",
     href: "https://knockio.com/knockio-integrations/",
     icon: "zap" as const,
   },
   {
     title: "Team Communication",
-    text: "Knockio connects dispatchers, techs, and office staff to every job through shared assignees and internal notes, so nothing gets lost between shifts.",
+    text: "Knockio links setters, closers, and ops to the same deal record through assignees and notes, so handoffs never depend on a forwarded text.",
     href: "https://knockio.com/features/business-texting-and-calling-software/",
     icon: "message" as const,
   },
@@ -234,24 +239,24 @@ const trustBadges = [
 
 const faqs = [
   {
-    q: "Can Knockio track equipment history per customer?",
-    a: "Yes. Each customer record holds the property's full service and equipment history, so a tech sees what is installed and what was done on past visits before arriving.",
+    q: "Can Knockio keep all my deal history in one record?",
+    a: "Yes. Every deal record holds the property's contacts, photos, notes, documents, and full activity history, so anyone on your team sees the whole story instead of piecing it together from texts and email.",
   },
   {
-    q: "Can Knockio dispatch and track my techs in the field?",
-    a: "Knockio helps field service teams manage the full workflow. Teams can Manage Customers and Jobs, store customer details, create estimates, schedule jobs, assign crews, track job progress, upload photos, send invoices, and follow up with customers. This helps reduce manual work and keeps everyone updated.",
+    q: "Can Knockio handle the setter to close the handoff?",
+    a: "Knockio helps field service teams manage the full workflow. Teams can Manage Records, store customer details, create estimates, schedule jobs, assign crews, track job progress, upload photos, send invoices, and follow up with customers. This helps reduce manual work and keeps everyone updated.",
   },
   {
-    q: "Does Knockio handle work orders and parts for installs?",
-    a: "Yes. Work orders carry tasks, a budget, and a material takeoff, and you can raise a purchase order straight from the work order when a part runs short, with low-stock alerts to warn you first.",
+    q: "Can Knockio create canvassing territories automatically?",
+    a: "Yes. Knockio can build territories automatically from zip codes and cities, so you can split up a target market and get setters knocking fast, without drawing every boundary by hand.",
   },
   {
-    q: "Does Knockio support digital contracts and on-site payment?",
-    a: "Yes. You can build estimates and service agreements, send them for e-signature, and collect payment through tap to pay, text to pay, card, or ACH, all tied to the job.",
+    q: "Does Knockio support digital contracts for solar deals?",
+    a: "Yes. Knockio's native e-contract feature lets you send legally binding agreements for signature, with IP address and timestamp logging on every view and signature.",
   },
   {
-    q: "How is Knockio different from FieldPulse, FieldBoss, or ServiceTitan for HVAC companies?",
-    a: "ServiceTitan is heavy and priced for large shops, while FieldPulse and FieldBoss focus mostly on service management. Knockio brings dispatch, equipment history, estimates, work orders, and payments together, then adds live tech tracking, a fully customizable pipeline with unlimited boards, automated territory creation by zip and city, personalized support, and pricing that does not punish a growing company. It is one connected system built around the way HVAC service and install work actually runs.",
+    q: "How is Knockio different from Solargraf or Sales Rabbit for solar companies?",
+    a: "Solargraf leans into design and proposal work, and Sales Rabbit leans into canvassing, but Knockio brings canvassing, automated territory creation, live setter tracking, estimates, digital contracts, work orders, and payments into one connected system. Add deep deal history per property, a fully customizable pipeline with unlimited boards, personalized support, and pricing that does not punish a growing team, and you have one platform that runs the deal from the first knock to permission to operate.",
   },
 ];
 
@@ -298,7 +303,7 @@ const reviewsRow2 = [
 ];
 
 const heroImage = asset(
-  "inner-hvac-software-and-crm-what-should-hvac-contractors-look-for-in-a-crm-and-service-platform.webp",
+  "inner-solar-sales-software-and-crm-what-should-solar-companies-look-for-in-a-crm-and-sales-platform.webp",
 );
 
 const jsonLd = {
@@ -306,22 +311,24 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://knockio.com/industry/hvac-software-and-crm/#webpage",
-      url: "https://knockio.com/industry/hvac-software-and-crm/",
+      "@id":
+        "https://knockio.com/industry/solar-sales-software-and-crm/#webpage",
+      url: "https://knockio.com/industry/solar-sales-software-and-crm/",
       name: title,
       description,
       isPartOf: { "@id": "https://knockio.com/#website" },
       audience: {
         "@type": "Audience",
-        audienceType: "HVAC Contractors",
+        audienceType: "Solar Sales Teams",
       },
       mainEntity: {
-        "@id": "https://knockio.com/industry/hvac-software-and-crm/#faq",
+        "@id": "https://knockio.com/industry/solar-sales-software-and-crm/#faq",
       },
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://knockio.com/industry/hvac-software-and-crm/#breadcrumb",
+      "@id":
+        "https://knockio.com/industry/solar-sales-software-and-crm/#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
@@ -332,14 +339,14 @@ const jsonLd = {
         {
           "@type": "ListItem",
           position: 2,
-          name: "HVAC Software & CRM",
-          item: "https://knockio.com/industry/hvac-software-and-crm/",
+          name: "Solar Sales Software and CRM",
+          item: "https://knockio.com/industry/solar-sales-software-and-crm/",
         },
       ],
     },
     {
       "@type": "FAQPage",
-      "@id": "https://knockio.com/industry/hvac-software-and-crm/#faq",
+      "@id": "https://knockio.com/industry/solar-sales-software-and-crm/#faq",
       mainEntity: faqs.map((faq) => ({
         "@type": "Question",
         name: faq.q,
@@ -357,7 +364,7 @@ const jsonLd = {
   jsonLd={jsonLd}
   whiteBg={true}
 >
-  <main id="hvac-industry-page">
+  <main id="sl-industry-page">
     <!-- ========== Hero ========== -->
     <section
       class="overflow-hidden border-b border-solid border-[#7fc271] bg-white"
@@ -372,17 +379,17 @@ const jsonLd = {
             <h1
               class="mb-7 text-[36px] font-bold leading-[44px] text-neutral-950 sm:text-[44px] sm:leading-[54px] xl:text-[58px] xl:leading-[66px] 2xl:text-[64px] 2xl:leading-[74px]"
             >
-              HVAC Software for Service &amp; Install
+              Solar Sales Software and CRM
             </h1>
             <p
               class="mb-10 max-w-[760px] text-base font-medium leading-8 text-neutral-600 sm:text-lg sm:leading-9"
             >
-              Knockio is HVAC software and CRM built for contractors who need
-              one place to book calls, dispatch techs, hold customer and
-              equipment history, build estimates, schedule installs, and collect
-              payment in the field. No more working off a whiteboard, a text
-              thread, and a paper invoice that never make it back to the same
-              desk.
+              Knockio is solar sales software and CRM built for installers who
+              need one place to hold customer records, manage reps, set
+              appointments, track every project stage, build estimates, send
+              digital contracts, and collect deposits. No more working off three
+              different spreadsheets that never quite agree on where a deal
+              actually stands.
             </p>
             <a
               href="#cal-sec"
@@ -399,24 +406,22 @@ const jsonLd = {
             <p
               class="mb-4 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
-              What should HVAC contractors look for in a CRM and service
-              platform?
+              What should solar companies look for in a CRM and sales platform?
             </p>
             <p
               class="max-w-[760px] text-[15px] leading-7 text-neutral-600 sm:text-base sm:leading-7"
             >
-              An HVAC contractor should look for a CRM that carries the whole
-              job, from the booked call to the paid invoice. That means customer
-              and equipment records, scheduling and dispatch, technician
-              tracking, estimates and service agreements, work orders with
-              parts, e-signed approvals, and on-site payment. Knockio handles
-              all of it in one platform. It also adds live GPS tracking of techs
-              and full job history per address, so the next visit starts with
-              everything the last tech already learned. That depth of service
-              record, plus affordable pricing and support that actually knows
-              the trade, is what a generic CRM built for another industry leaves
-              out, and it is what makes an HVAC CRM for contractors worth
-              keeping in the truck.
+              A solar company should look for a CRM that carries the deal the
+              whole way, from the first knock to a working system on the roof.
+              That means complete customer records, door-to-door lead capture, a
+              pipeline that matches solar stages, appointment setting between
+              setters and closers, clear estimates, digital contracts, and
+              deposit collection. Knockio handles all of it in one platform. It
+              also adds live GPS tracking of setters and automated territory
+              creation by zip code and city, so a deal's full history lives in a
+              single record. That depth, plus affordable pricing and support
+              that actually understands solar, is what a generic CRM built for
+              another industry leaves out.
             </p>
           </div>
 
@@ -440,11 +445,11 @@ const jsonLd = {
         </div>
 
         <div
-          class="hero-hvac-visual relative min-h-[340px] overflow-hidden sm:min-h-[440px] lg:min-h-full"
+          class="hero-sl-visual relative min-h-[340px] overflow-hidden sm:min-h-[440px] lg:min-h-full"
         >
           <img
             src={heroImage}
-            alt="What should hvac contractors look for in a crm and service platform"
+            alt="What should solar companies look for in a crm and sales platform"
             width="830"
             height="560"
             decoding="async"
@@ -456,24 +461,24 @@ const jsonLd = {
       </div>
     </section>
 
-    <!-- ========== Why HVAC / Sticky tabs ========== -->
+    <!-- ========== Why / Sticky tabs ========== -->
     <section id="platform-capabilities" class="bg-white py-20 sm:py-24 lg:py-28">
       <div class="my-container">
         <div class="mx-auto mb-10 max-w-[1120px] text-center lg:mb-12">
           <h2
             class="mb-5 text-center text-[34px] font-bold leading-[42px] text-neutral-950 sm:text-4xl sm:leading-[48px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
           >
-            Why HVAC Contractors Choose Knockio
+            Why Solar Teams Choose Knockio
           </h2>
           <p
             class="mx-auto max-w-[960px] text-base font-normal leading-8 text-neutral-600 sm:text-lg sm:leading-9"
           >
-            Knockio helps HVAC companies manage customers, equipment history,
-            scheduling, dispatch, techs, estimates, parts, invoices, and
-            payments. From the first service call to the signed-off install, it
-            all sits in one connected platform. Owners run the board and the
-            field without losing track of who is where, what was done, and what
-            still needs billing.
+            Knockio helps solar companies manage customer records, appointments,
+            reps, projects, products, payments, and install progress. From the
+            setter's first knock to the closer's signed deal to the crew's final
+            sign-off, it all sits in one connected platform. Owners run the
+            sales floor and the field without losing track of where each deal
+            really stands.
           </p>
         </div>
 
@@ -494,7 +499,7 @@ const jsonLd = {
         </div>
 
         <div
-          id="hvacCapScrollTrack"
+          id="slCapScrollTrack"
           class="hp-scroll-track"
           style="--scroll-steps: 5"
         >
@@ -505,17 +510,17 @@ const jsonLd = {
               class="sticky top-0 z-30 border-b border-solid border-neutral-200/80 bg-white/95 pb-5 pt-2 backdrop-blur-md lg:static lg:border-0 lg:bg-transparent lg:pb-8"
             >
               <div
-                id="hvacTabsNav"
+                id="slTabsNav"
                 class="mx-auto flex max-w-[1050px] items-center gap-4 overflow-x-auto scroll-smooth px-1 [scrollbar-width:none] lg:justify-center [&::-webkit-scrollbar]:hidden"
                 role="tablist"
-                aria-label="HVAC platform capabilities"
+                aria-label="Solar platform capabilities"
               >
                 {
                   capabilityTabs.map((tab, index) => (
                     <button
                       type="button"
                       role="tab"
-                      data-hvac-tab={String(index)}
+                      data-sl-tab={String(index)}
                       aria-selected={index === 0 ? "true" : "false"}
                       class:list={[
                         "hp-tab-btn shrink-0 rounded-full border px-5 py-2.5 text-base font-medium leading-6 transition-all duration-300 hover:border-primary-500 hover:text-primary-500 sm:px-6",
@@ -531,7 +536,7 @@ const jsonLd = {
               </div>
             </div>
 
-            <div id="hvacTabsPanels" class="relative lg:flex-1">
+            <div id="slTabsPanels" class="relative lg:flex-1">
               {
                 capabilityTabs.map((tab, tabIndex) => (
                   <div
@@ -582,17 +587,17 @@ const jsonLd = {
       <div class="my-container relative z-10">
         <div class="mx-auto mb-14 max-w-[1120px] text-center lg:mb-20">
           <h2
-            class="mb-6 text-center text-[31px] font-bold leading-[39px] text-white sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+            class="mb-6 text-center text-[34px] font-bold leading-[42px] text-white sm:text-4xl sm:leading-[48px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
           >
-            Keep Customers, Techs, and Job Updates Organized
+            Keep Leads, Reps, and Project Updates Organized
           </h2>
           <p
             class="mx-auto max-w-[980px] text-base leading-8 text-white sm:text-lg sm:leading-9"
           >
-            Knockio makes HVAC job management simple with HVAC software and
-            field service CRM tools in one place. Track techs, manage the
-            schedule, upload job media, automate follow ups, and send digital
-            contracts, all from the same platform.
+            Knockio makes solar project management simple with solar sales
+            software and field service CRM tools in one place. Track setters,
+            manage appointments, upload site media, automate follow ups, and
+            send digital contracts, all from the same platform.
           </p>
         </div>
 
@@ -655,14 +660,14 @@ const jsonLd = {
             <h2
               class="mb-8 w-full max-w-3xl text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
             >
-              Everything HVAC Contractors Ask Before Switching to Knockio
+              Everything Solar Teams Ask Before Switching to Knockio
             </h2>
             <p
               class="mb-6 w-full max-w-3xl text-sm leading-6 font-normal text-neutral-800 sm:text-base sm:leading-7 md:mb-8 md:text-lg md:leading-8"
             >
-              Switching software is a real decision when your whole schedule,
-              customer history, and equipment records live inside it. Here are
-              the questions HVAC contractors ask most before making the move.
+              Switching software is a real decision when your whole pipeline,
+              appointment calendar, and customer history lives inside it. Here
+              are the questions solar companies ask most before making the move.
             </p>
           </div>
 
@@ -933,5 +938,5 @@ const jsonLd = {
     </section>
   </main>
 
-  <script src="../../scripts/hvac-software-and-crm.js"></script>
+  <script src="../../scripts/solar-sales-software-and-crm.js"></script>
 </KnockioHomeLayout>

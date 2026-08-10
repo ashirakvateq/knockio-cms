@@ -1,6 +1,6 @@
 ---
 import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
-import "../../styles/hvac-software-and-crm.css";
+import "../../styles/garage-door-service-software.css";
 import {
   ChevronRight,
   Crosshair,
@@ -12,153 +12,160 @@ import {
   Zap,
 } from "lucide-astro";
 
-const title = "HVAC Software & CRM for Service Contractors | Knockio";
+const title = "Garage Door Service Software for Repair Pros | Knockio";
 const description =
-  "Book service calls, dispatch techs, build estimates, and collect payment on site. HVAC software that runs every job from the first call to the final invoice.";
+  "Garage door service software to schedule repairs and installs, send estimates, dispatch techs, collect payment on site, and manage jobs.";
 
 const asset = (name: string) => `/assets/cfw/${name}`;
 
-const capabilityTabs = [
+type CapCard = {
+  title: string;
+  text: string;
+  image: string;
+  alt: string;
+};
+
+const capabilityTabs: { label: string; cards: CapCard[] }[] = [
   {
-    label: "Manage Jobs",
+    label: "Manage Work",
     cards: [
       {
-        title: "Customer and Equipment History in One Record",
+        title: "One Record for Every Customer and Property",
         text: "Manage Customers and Jobs during every visit, log outcomes, add notes or voice notes, and move prospects into a clear CRM pipeline.",
         image: asset(
-          "inner-hvac-software-and-crm-customer-and-equipment-history-in-one-record.webp",
+          "inner-garage-door-software-and-crm-one-record-for-every-customer-and-property.webp",
         ),
         alt: "Door-to-door canvassing in Knockio",
       },
       {
-        title: "Dynamic Job Pipeline for HVAC Stages",
-        text: "Move jobs through clear stages like new call, scheduled, dispatched, diagnosed, estimate sent, approved, installed, and invoiced. Statuses are fully customizable for better workflow.",
+        title: "Fully Customizable Visual Job Pipeline",
+        text: "Knockio moves each job through stages you define, such as scheduled, dispatched, quoted, approved, and invoiced. Statuses are fully customizable, and unlimited boards let dispatch and the install side each open the view they need.",
         image: asset(
-          "inner-hvac-software-and-crm-dynamic-job-pipeline-for-hvac-stages.webp",
+          "inner-garage-door-software-and-crm-customizable-job-pipeline.webp",
         ),
         alt: "Lead management in Knockio",
       },
       {
-        title: "Scheduling and Dispatch That Match the Board",
-        text: "Assign service calls and install jobs to the right tech or crew, and keep the office and the field reading the same schedule instead of two versions that drift apart by mid-morning.",
+        title: "Communication History Per Customer",
+        text: "Knockio saves every call, text, and email on the customer record, so anyone who picks up the job sees the full thread instead of asking around for it.",
         image: asset(
-          "inner-hvac-software-and-crm-scheduling-and-dispatch-that-match-the-board-1.webp",
+          "inner-garage-door-software-and-crm-communication-history-per-customer.webp",
         ),
         alt: "Kanban-style sales pipeline in Knockio",
       },
     ],
   },
   {
-    label: "Track the Field",
+    label: "Schedule and Dispatch",
     cards: [
       {
-        title: "Live GPS Tracking of Every Tech",
-        text: "See where every tech is in real time, so dispatch routes the closest person to the next emergency instead of guessing. Pin drop verification confirms how close a tech was when marking a job worked.",
+        title: "Scheduling and Dispatch in One Calendar",
+        text: "Knockio assigns service calls and install jobs to the right tech or crew and keeps the office and the field on the same calendar, so a broken-spring emergency gets slotted without blowing up the day.",
         image: asset(
-          "inner-hvac-software-and-crm-live-gps-tracking-of-every-tech.webp",
+          "inner-garage-door-service-software-scheduling-and-dispatch-in-one-calendar.webp",
         ),
         alt: "Route planning in Knockio",
       },
       {
-        title: "Route Planning for Service Days",
-        text: "Plan smarter, tighter routes so your techs cover more calls in a single day, instead of crossing town twice for two jobs that sit only three blocks apart and burning fuel, time, and daylight doing it.",
+        title: "Live GPS Tracking With Proximity Intelligence",
+        text: "Knockio shows where every tech is in real time and uses proximity intelligence to confirm how close they were to the address when they marked a job worked, so dispatch routes the closest tech to the next call and the activity log holds up.",
         image: asset(
-          "inner-hvac-software-and-crm-route-planning-for-service-days.webp",
+          "inner-garage-door-software-and-crm-live-gps-tracking-with-proximity-intelligence.webp",
         ),
         alt: "Territory management in Knockio",
       },
       {
-        title: "Automated Territory Creation",
-        text: "If you run maintenance memberships or new-system sales by area, build territories automatically from zip codes and cities instead of mapping every boundary by hand. Most HVAC tools simply do not do this.",
+        title: "Automated Territory Creation by Zip Code and City",
+        text: "Knockio builds service territories automatically from zip codes and cities, so if you cover a wide metro you can balance techs by region in minutes instead of mapping boundaries by hand.",
         image: asset(
-          "inner-hvac-software-and-crm-automated-territory-creation-by-zip-code-and-city.webp",
+          "inner-garage-door-software-and-crm-automated-territory-creation-by-zip-code-and-city.webp",
         ),
         alt: "Field activity log in Knockio",
       },
     ],
   },
   {
-    label: "Work Orders and Parts",
+    label: "Quote & Build Work Orders",
     cards: [
       {
-        title: "Work Orders With Tasks, Budget, and Materials",
-        text: "Track work orders and parts from lead to service with notes, status updates, documents, customer details, photos, and clear next steps, so every HVAC job stays organized from the first call to the final invoice.",
+        title: "Detailed Estimates With Templates",
+        text: "Quote and Build Work Orders from lead to service with notes, status updates, documents, customer details, and clear next steps.",
         image: asset(
-          "inner-hvac-software-and-crm-work-orders-with-tasks-budget-and-materials.webp",
+          "inner-garage-door-software-and-crm-detailed-estimates-with-templates.webp",
         ),
         alt: "Job management in Knockio",
       },
       {
-        title: "Purchase Orders When Parts Run Short",
-        text: "When a part is not in inventory, fire off a purchase order straight from the work order. Knockio tracks products, variants, SKUs, cost, and markup, and flags low stock before you run out mid-job.",
+        title: "Work Orders With Tasks, Budget, and Materials",
+        text: "Knockio carries a work order with tasks, a budget, and a material takeoff for every install, so springs, rollers, panels, and openers are tracked against real numbers.",
         image: asset(
-          "inner-hvac-software-and-crm-purchase-orders-when-parts-run-short.webp",
+          "inner-garage-door-software-and-crm-work-orders-with-tasks-budget-and-materials.webp",
         ),
         alt: "Crew dispatching in Knockio",
       },
       {
-        title: "Assign Jobs to Crews or Subcontractors",
-        text: "Work orders can go to your own install crew or to a subcontractor, with tasks, notes, photos, and the schedule all attached, so whoever does the work has the full picture.",
+        title: "Assign Work to Crews or Subcontractors",
+        text: "Knockio routes a work order to your own crew or a subcontractor with tasks, notes, photos, and the schedule attached, so whoever does the work has the full scope.",
         image: asset(
-          "inner-hvac-software-and-crm-assign-jobs-to-crews-or-subcontractors-1.webp",
+          "inner-garage-door-service-software-assign-work-to-crews-or-subcontractors.webp",
         ),
         alt: "Work orders in Knockio",
       },
     ],
   },
   {
-    label: "Documents and Media",
+    label: "Track Parts",
     cards: [
       {
-        title: "Job Photos and Equipment Media in One Place",
-        text: "Upload before-and-after photos, model and serial shots, and problem images straight to the job. The next tech, the office, and the customer all get the full visual record.",
+        title: "Inventory Management for Garage Door Parts",
+        text: "Knockio tracks products, variants, SKUs, cost, and markup for springs, rollers, cables, openers, and panels, with low-stock alerts that flag a shortage before a tech shows up to a job without the part.",
         image: asset(
-          "inner-hvac-software-and-crm-job-photos-and-equipment-media-in-one-place.webp",
+          "inner-garage-door-service-software-inventory-management-for-garage-door-parts.webp",
         ),
         alt: "Smart estimates in Knockio",
       },
       {
-        title: "E-Contracts With Legal Protection",
-        text: "Send service agreements and approvals for digital signature with IP address and timestamp logging built in, so you have a documented trail if a job is ever disputed.",
+        title: "Vendor Bills and Purchase Orders",
+        text: "Knockio raises a purchase order to your supplier when stock runs low and records the vendor bill against that purchase order or a work order, so suppliers spend ties straight to the job and your margins stay accurate.",
         image: asset(
-          "inner-hvac-software-and-crm-e-contracts-with-legal-protection.webp",
+          "inner-garage-door-software-and-crm-vendor-bills-and-purchase-orders.webp",
         ),
         alt: "Proposals in Knockio",
       },
       {
-        title: "Centralized File Storage Per Job",
-        text: "Keep warranties, permits, manuals, and invoices attached right to the customer record, not scattered across email and a folder nobody can find when the warranty claim comes up.",
+        title: "Photo Annotation for Doors and Repairs",
+        text: "Knockio lets techs snap a photo of a snapped spring, a bent panel, or a worn opener and mark it up with notes and arrows on the image, so the office can quote the fix and the customer sees exactly what was found.",
         image: asset(
-          "inner-hvac-software-and-crm-centralized-file-storage-per-job.webp",
+          "inner-garage-door-software-and-crm-photo-annotation-for-doors-and-repairs.webp",
         ),
         alt: "Digital contracts in Knockio",
       },
     ],
   },
   {
-    label: "Quote and Get Paid",
+    label: "Approved and Get Paid",
     cards: [
       {
-        title: "Estimates and Service Agreements",
-        text: "Build clean estimates with optional line items, so a customer can add a surge protector or a better filter without a second visit. Save templates for your common repairs and installs, and pull from a product and service catalog so pricing stays consistent across every tech.",
+        title: "Digital Contracts With E-Signatures",
+        text: "Knockio sends estimates and agreements for digital signature with a documented audit trail, IP and timestamp logged on every view. Change orders run the same way, so a mid-job addition is recorded and priced instead of argued later.",
         image: asset(
-          "inner-hvac-software-and-crm-estimates-and-service-agreements.webp",
+          "inner-garage-door-software-and-crm-digital-contracts-with-e-signatures.webp",
         ),
         alt: "Video and file storage in Knockio",
       },
       {
-        title: "Digital Contracts With E-Signatures",
-        text: "Send an estimate or service agreement the customer reviews and signs from their phone, with a documented audit trail. Change orders work the same way, so a mid-job upsell is logged instead of scribbled on a clipboard.",
+        title: "Flexible Payment Collection",
+        text: "Knockio processes tap to pay, text to pay, card, and ACH through its own payment platform, so the tech collects on site or the customer pays from their phone, with the money tied to the right job instead of waiting on a mailed check.",
         image: asset(
-          "inner-hvac-software-and-crm-digital-contracts-with-e-signatures.webp",
+          "inner-garage-door-software-and-crm-flexible-payment-collection.webp",
         ),
         alt: "Photo uploads in Knockio",
       },
       {
-        title: "Flexible Payment Collection",
-        text: "Collect deposits, milestone payments, and final balances through tap to pay, text to pay, card, or ACH, all tied directly to the job through Knockio's own payment processing. The tech leaves with the money instead of mailing an invoice and waiting.",
+        title: "Milestone Billing for Larger Installs",
+        text: "Knockio supports milestone-based payment collection, so on a bigger multi-door or commercial install you can take a deposit, bill progress as the work completes, and collect the balance at the end, all tied to the job.",
         image: asset(
-          "inner-hvac-software-and-crm-flexible-payment-collection.webp",
+          "inner-garage-door-software-and-crm-milestone-billing-for-larger-installs.webp",
         ),
         alt: "Service reports in Knockio",
       },
@@ -169,37 +176,37 @@ const capabilityTabs = [
 const organizedItems = [
   {
     title: "Live Field Tracking",
-    text: "Monitor techs in real time with GPS tracking. It helps with dispatch, accountability, and knowing exactly who is on which call right now.",
+    text: "Knockio monitors techs in real time with GPS tracking and proximity intelligence, so dispatch knows who is on which call and can route the closest tech to the next one.",
     href: "https://knockio.com/features/gps-tracking-software/",
     icon: "crosshair" as const,
   },
   {
-    title: "Flow Automation",
-    text: "Automatically handle the repetitive office work like maintenance reminders, follow ups, and appointment confirmations, so a customer due for a tune-up does not slip through the cracks.",
+    title: "Native Automation Builder",
+    text: "Knockio runs automations you build without code: a deposit request when an estimate is approved, an on-the-way text when a tech heads out, or a maintenance reminder when a tune-up is due. You set the trigger and Knockio handles the rest.",
     href: "https://knockio.com/features/business-automation-software/",
     icon: "sparkles" as const,
   },
   {
-    title: "Media and Measurements",
-    text: "See every job's photos, equipment details, and service notes in one view, so the office and the field are looking at the same record instead of asking each other for it.",
+    title: "Job History and Media",
+    text: "Knockio keeps every job's annotated photos, door and opener notes, and service records in one view, so the office and the field read from the same record.",
     href: null,
     icon: "ruler" as const,
   },
   {
     title: "E-Contracts",
-    text: "Build, send, review, and sign contracts in one workflow so approved deals move ahead without paperwork or repeated follow-up delays.",
+    text: "Get approved deals signed faster with e-contracts that keep paperwork, customer details, job records, and payment steps connected.",
     href: "https://knockio.com/e-contracts/",
     icon: "file" as const,
   },
   {
     title: "CRM Integrations",
-    text: "Knockio links your HVAC customer and dispatch data to Salesforce, HubSpot, Google Calendar, and GHL, with thousands more apps through Zapier, FlowChef, and webhooks.",
+    text: "Connect Knockio to Salesforce, HubSpot, Google Calendar, and GHL, plus thousands of apps through Zapier, FlowChef, and webhooks, so every job stays in sync.",
     href: "https://knockio.com/knockio-integrations/",
     icon: "zap" as const,
   },
   {
     title: "Team Communication",
-    text: "Knockio connects dispatchers, techs, and office staff to every job through shared assignees and internal notes, so nothing gets lost between shifts.",
+    text: "Knockio ties dispatch, techs, and the office to every job through assignees and internal notes, so a same-day change never catches the crew off guard.",
     href: "https://knockio.com/features/business-texting-and-calling-software/",
     icon: "message" as const,
   },
@@ -234,24 +241,24 @@ const trustBadges = [
 
 const faqs = [
   {
-    q: "Can Knockio track equipment history per customer?",
-    a: "Yes. Each customer record holds the property's full service and equipment history, so a tech sees what is installed and what was done on past visits before arriving.",
+    q: "What should I look for in garage door software?",
+    a: "Look for scheduling and dispatch, full job history per address, detailed estimating, work orders with parts, e-contracts, and on-site payment, all tied to one customer record. The platform should carry both quick repairs and planned installs without forcing you into two tools. Knockio was built to run both from the same system.",
   },
   {
-    q: "Can Knockio dispatch and track my techs in the field?",
+    q: "Which software is best for a small garage door business?",
     a: "Knockio helps field service teams manage the full workflow. Teams can Manage Customers and Jobs, store customer details, create estimates, schedule jobs, assign crews, track job progress, upload photos, send invoices, and follow up with customers. This helps reduce manual work and keeps everyone updated.",
   },
   {
-    q: "Does Knockio handle work orders and parts for installs?",
-    a: "Yes. Work orders carry tasks, a budget, and a material takeoff, and you can raise a purchase order straight from the work order when a part runs short, with low-stock alerts to warn you first.",
+    q: "Can Knockio track garage door parts and inventory?",
+    a: "Yes. Work orders carry a material takeoff, and inventory management tracks springs, rollers, cables, openers, and panels with low-stock alerts, so each job is cost against what it actually used.",
   },
   {
-    q: "Does Knockio support digital contracts and on-site payment?",
-    a: "Yes. You can build estimates and service agreements, send them for e-signature, and collect payment through tap to pay, text to pay, card, or ACH, all tied to the job.",
+    q: "Can Knockio collect payment on site?",
+    a: "Yes. Knockio processes tap to pay, text to pay, card, and ACH through its own payment platform, and supports milestone billing for larger installs, all tied to the job.",
   },
   {
-    q: "How is Knockio different from FieldPulse, FieldBoss, or ServiceTitan for HVAC companies?",
-    a: "ServiceTitan is heavy and priced for large shops, while FieldPulse and FieldBoss focus mostly on service management. Knockio brings dispatch, equipment history, estimates, work orders, and payments together, then adds live tech tracking, a fully customizable pipeline with unlimited boards, automated territory creation by zip and city, personalized support, and pricing that does not punish a growing company. It is one connected system built around the way HVAC service and install work actually runs.",
+    q: "Can Knockio track my techs in the field?",
+    a: "Yes. Knockio includes live GPS tracking with proximity intelligence, so you can confirm how close a tech was to a property when they marked a job.",
   },
 ];
 
@@ -297,31 +304,32 @@ const reviewsRow2 = [
   },
 ];
 
-const heroImage = asset(
-  "inner-hvac-software-and-crm-what-should-hvac-contractors-look-for-in-a-crm-and-service-platform.webp",
-);
+const heroImage = asset("inner-industry-garage-door-software.webp");
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://knockio.com/industry/hvac-software-and-crm/#webpage",
-      url: "https://knockio.com/industry/hvac-software-and-crm/",
+      "@id":
+        "https://knockio.com/industry/garage-door-service-software/#webpage",
+      url: "https://knockio.com/industry/garage-door-service-software/",
       name: title,
       description,
       isPartOf: { "@id": "https://knockio.com/#website" },
       audience: {
         "@type": "Audience",
-        audienceType: "HVAC Contractors",
+        audienceType: "Garage Door Contractors",
       },
       mainEntity: {
-        "@id": "https://knockio.com/industry/hvac-software-and-crm/#faq",
+        "@id":
+          "https://knockio.com/industry/garage-door-service-software/#faq",
       },
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://knockio.com/industry/hvac-software-and-crm/#breadcrumb",
+      "@id":
+        "https://knockio.com/industry/garage-door-service-software/#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
@@ -332,14 +340,14 @@ const jsonLd = {
         {
           "@type": "ListItem",
           position: 2,
-          name: "HVAC Software & CRM",
-          item: "https://knockio.com/industry/hvac-software-and-crm/",
+          name: "Garage Door Service Software",
+          item: "https://knockio.com/industry/garage-door-service-software/",
         },
       ],
     },
     {
       "@type": "FAQPage",
-      "@id": "https://knockio.com/industry/hvac-software-and-crm/#faq",
+      "@id": "https://knockio.com/industry/garage-door-service-software/#faq",
       mainEntity: faqs.map((faq) => ({
         "@type": "Question",
         name: faq.q,
@@ -357,7 +365,7 @@ const jsonLd = {
   jsonLd={jsonLd}
   whiteBg={true}
 >
-  <main id="hvac-industry-page">
+  <main id="gd-industry-page">
     <!-- ========== Hero ========== -->
     <section
       class="overflow-hidden border-b border-solid border-[#7fc271] bg-white"
@@ -372,17 +380,18 @@ const jsonLd = {
             <h1
               class="mb-7 text-[36px] font-bold leading-[44px] text-neutral-950 sm:text-[44px] sm:leading-[54px] xl:text-[58px] xl:leading-[66px] 2xl:text-[64px] 2xl:leading-[74px]"
             >
-              HVAC Software for Service &amp; Install
+              Garage Door Service Software
             </h1>
             <p
               class="mb-10 max-w-[760px] text-base font-medium leading-8 text-neutral-600 sm:text-lg sm:leading-9"
             >
-              Knockio is HVAC software and CRM built for contractors who need
-              one place to book calls, dispatch techs, hold customer and
-              equipment history, build estimates, schedule installs, and collect
-              payment in the field. No more working off a whiteboard, a text
-              thread, and a paper invoice that never make it back to the same
-              desk.
+              Garage door work is fast and call-driven. A broken spring this
+              morning, an opener replacement this afternoon, a full door install
+              booked for next week. Knockio is a best garage door service
+              software and CRM built for contractors who need one place to hold
+              customer records, dispatch techs, quote jobs, track parts, and
+              collect payment. No more juggling a paper schedule, a separate
+              quoting tool, and a billing app that never lines up.
             </p>
             <a
               href="#cal-sec"
@@ -399,24 +408,22 @@ const jsonLd = {
             <p
               class="mb-4 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
-              What should HVAC contractors look for in a CRM and service
+              What should garage door contractors look for in a CRM and dispatch
               platform?
             </p>
             <p
               class="max-w-[760px] text-[15px] leading-7 text-neutral-600 sm:text-base sm:leading-7"
             >
-              An HVAC contractor should look for a CRM that carries the whole
-              job, from the booked call to the paid invoice. That means customer
-              and equipment records, scheduling and dispatch, technician
-              tracking, estimates and service agreements, work orders with
-              parts, e-signed approvals, and on-site payment. Knockio handles
-              all of it in one platform. It also adds live GPS tracking of techs
-              and full job history per address, so the next visit starts with
-              everything the last tech already learned. That depth of service
-              record, plus affordable pricing and support that actually knows
-              the trade, is what a generic CRM built for another industry leaves
-              out, and it is what makes an HVAC CRM for contractors worth
-              keeping in the truck.
+              A garage door contractor should look for a CRM that carries the
+              job from the booked call to the paid invoice. That means full
+              customer and property records, scheduling and dispatch, technician
+              tracking, detailed estimates, work orders with parts, e-contracts,
+              and on-site payment collection. Knockio handles all of it in one
+              platform. It adds live GPS tracking with proximity intelligence
+              and a full job history per address, so the next visit starts with
+              everything the last tech already logged. That depth, plus
+              affordable pricing and support that picks up the phone, is what a
+              generic CRM built for another trade leaves out.
             </p>
           </div>
 
@@ -440,11 +447,11 @@ const jsonLd = {
         </div>
 
         <div
-          class="hero-hvac-visual relative min-h-[340px] overflow-hidden sm:min-h-[440px] lg:min-h-full"
+          class="hero-gd-visual relative min-h-[340px] overflow-hidden sm:min-h-[440px] lg:min-h-full"
         >
           <img
             src={heroImage}
-            alt="What should hvac contractors look for in a crm and service platform"
+            alt="What should garage door contractors look for in a crm and dispatch platform"
             width="830"
             height="560"
             decoding="async"
@@ -456,24 +463,24 @@ const jsonLd = {
       </div>
     </section>
 
-    <!-- ========== Why HVAC / Sticky tabs ========== -->
+    <!-- ========== Why / Sticky tabs ========== -->
     <section id="platform-capabilities" class="bg-white py-20 sm:py-24 lg:py-28">
       <div class="my-container">
         <div class="mx-auto mb-10 max-w-[1120px] text-center lg:mb-12">
           <h2
             class="mb-5 text-center text-[34px] font-bold leading-[42px] text-neutral-950 sm:text-4xl sm:leading-[48px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
           >
-            Why HVAC Contractors Choose Knockio
+            Why Garage Door Pros Choose Knockio
           </h2>
           <p
             class="mx-auto max-w-[960px] text-base font-normal leading-8 text-neutral-600 sm:text-lg sm:leading-9"
           >
-            Knockio helps HVAC companies manage customers, equipment history,
-            scheduling, dispatch, techs, estimates, parts, invoices, and
-            payments. From the first service call to the signed-off install, it
-            all sits in one connected platform. Owners run the board and the
-            field without losing track of who is where, what was done, and what
-            still needs billing.
+            Knockio helps garage door contractors manage customers, job history,
+            scheduling, dispatch, estimates, parts, invoices, and payments. From
+            a same-day spring repair to a scheduled door install, it all sits in
+            one connected platform. Owners run the board and the field without
+            losing track of who is where, what was done, and what still needs
+            billing.
           </p>
         </div>
 
@@ -494,7 +501,7 @@ const jsonLd = {
         </div>
 
         <div
-          id="hvacCapScrollTrack"
+          id="gdCapScrollTrack"
           class="hp-scroll-track"
           style="--scroll-steps: 5"
         >
@@ -505,17 +512,17 @@ const jsonLd = {
               class="sticky top-0 z-30 border-b border-solid border-neutral-200/80 bg-white/95 pb-5 pt-2 backdrop-blur-md lg:static lg:border-0 lg:bg-transparent lg:pb-8"
             >
               <div
-                id="hvacTabsNav"
+                id="gdTabsNav"
                 class="mx-auto flex max-w-[1050px] items-center gap-4 overflow-x-auto scroll-smooth px-1 [scrollbar-width:none] lg:justify-center [&::-webkit-scrollbar]:hidden"
                 role="tablist"
-                aria-label="HVAC platform capabilities"
+                aria-label="Garage door platform capabilities"
               >
                 {
                   capabilityTabs.map((tab, index) => (
                     <button
                       type="button"
                       role="tab"
-                      data-hvac-tab={String(index)}
+                      data-gd-tab={String(index)}
                       aria-selected={index === 0 ? "true" : "false"}
                       class:list={[
                         "hp-tab-btn shrink-0 rounded-full border px-5 py-2.5 text-base font-medium leading-6 transition-all duration-300 hover:border-primary-500 hover:text-primary-500 sm:px-6",
@@ -531,7 +538,7 @@ const jsonLd = {
               </div>
             </div>
 
-            <div id="hvacTabsPanels" class="relative lg:flex-1">
+            <div id="gdTabsPanels" class="relative lg:flex-1">
               {
                 capabilityTabs.map((tab, tabIndex) => (
                   <div
@@ -582,17 +589,17 @@ const jsonLd = {
       <div class="my-container relative z-10">
         <div class="mx-auto mb-14 max-w-[1120px] text-center lg:mb-20">
           <h2
-            class="mb-6 text-center text-[31px] font-bold leading-[39px] text-white sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+            class="mb-6 text-center text-[34px] font-bold leading-[42px] text-white sm:text-4xl sm:leading-[48px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
           >
-            Keep Customers, Techs, and Job Updates Organized
+            Run Service and Installs From One System
           </h2>
           <p
             class="mx-auto max-w-[980px] text-base leading-8 text-white sm:text-lg sm:leading-9"
           >
-            Knockio makes HVAC job management simple with HVAC software and
-            field service CRM tools in one place. Track techs, manage the
-            schedule, upload job media, automate follow ups, and send digital
-            contracts, all from the same platform.
+            Knockio pulls both sides of a garage door business into one
+            platform, so quick repairs and scheduled installs run from the same
+            place. Track techs, manage the schedule, quote jobs, capture site
+            photos, and send digital contracts, all in one system.
           </p>
         </div>
 
@@ -655,14 +662,14 @@ const jsonLd = {
             <h2
               class="mb-8 w-full max-w-3xl text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
             >
-              Everything HVAC Contractors Ask Before Switching to Knockio
+              Everything Garage Door Pros Ask Before Switching to Knockio
             </h2>
             <p
               class="mb-6 w-full max-w-3xl text-sm leading-6 font-normal text-neutral-800 sm:text-base sm:leading-7 md:mb-8 md:text-lg md:leading-8"
             >
               Switching software is a real decision when your whole schedule,
-              customer history, and equipment records live inside it. Here are
-              the questions HVAC contractors ask most before making the move.
+              customer history, and job records live inside it. Here are the
+              questions garage door contractors ask most before making the move.
             </p>
           </div>
 
@@ -933,5 +940,5 @@ const jsonLd = {
     </section>
   </main>
 
-  <script src="../../scripts/hvac-software-and-crm.js"></script>
+  <script src="../../scripts/garage-door-service-software.js"></script>
 </KnockioHomeLayout>
