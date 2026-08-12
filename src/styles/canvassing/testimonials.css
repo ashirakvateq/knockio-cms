@@ -1,0 +1,16 @@
+/* Testimonial marquee uses homepage.css keyframes (.animate-marquee-*).
+   Duplicate card-sets are rendered in markup for a seamless -50% loop. */
+
+#canvassing-page .testimonial-track-container {
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 4%,
+    #000 96%,
+    transparent
+  );
+}
+
+#canvassing-page .testimonial-track {
+  width: max-content;
+}

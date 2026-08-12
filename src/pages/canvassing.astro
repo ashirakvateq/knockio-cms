@@ -1,0 +1,1670 @@
+---
+import KnockioHomeLayout from '../layouts/KnockioHomeLayout.astro';
+import '../styles/canvassing/index.css';
+import {
+  ChartLine,
+  Check,
+  CloudLightning,
+  ListChecks,
+  Map,
+  MessagesSquare,
+  Phone,
+  Plug,
+  Quote,
+  UserRound,
+} from 'lucide-astro';
+
+const title = 'Best Door to Door Canvassing Software & D2D Sales App | Knockio';
+const description =
+  "Knockio's door-to-door canvassing app equips field reps with territory mapping, live tracking, route optimization, and lead capture. Knock more doors close more deals.";
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebApplication',
+      '@id': 'https://knockio.com/canvassing/#software',
+      name: 'Knockio Canvassing',
+      url: 'https://knockio.com/canvassing/',
+      applicationCategory: 'BusinessApplication',
+      applicationSubCategory:
+        'Door-to-Door Canvassing App, Field Sales Software',
+      operatingSystem: 'Web, iOS, Android',
+      description:
+        "Knockio's canvassing app for door-to-door field sales teams \u2014 territory mapping, route planning, live rep tracking, and lead capture.",
+      provider: {
+        '@id': 'https://knockio.com/#organization',
+      },
+      isPartOf: {
+        '@id': 'https://knockio.com/#software',
+      },
+      featureList: [
+        'Territory mapping',
+        'Route planning',
+        'Live rep tracking',
+        'Lead capture',
+        'Lead status updates',
+        'Follow-up reminders',
+      ],
+      offers: {
+        '@type': 'AggregateOffer',
+        lowPrice: '20.00',
+        highPrice: '25.00',
+        priceCurrency: 'USD',
+        url: 'https://knockio.com/pricing/',
+      },
+    },
+    {
+      '@type': 'WebPage',
+      '@id': 'https://knockio.com/canvassing/#webpage',
+      url: 'https://knockio.com/canvassing/',
+      name: 'Best Door to Door Canvassing Software & D2D Sales App | Knockio',
+      description:
+        "Knockio's door-to-door canvassing app equips field reps with territory mapping, live tracking, route optimization, and lead capture. Knock more doors close more deals.",
+      isPartOf: {
+        '@id': 'https://knockio.com/#website',
+      },
+      about: {
+        '@id': 'https://knockio.com/canvassing/#software',
+      },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://knockio.com/canvassing/#breadcrumb',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://knockio.com/',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Canvassing',
+          item: 'https://knockio.com/canvassing/',
+        },
+      ],
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://knockio.com/canvassing/#faq',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What is Knockio canvassing software?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "Knockio's canvassing app helps field sales teams plan routes, map territories, capture leads at the door, and track rep activity in real time \u2014 everything a door-to-door team needs in one place.",
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Is Knockio only for door-to-door sales teams?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "Knockio's canvassing app is built specifically for door-to-door reps. Territory mapping, route planning, and lead capture are designed around how canvassing actually works in the field.",
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How does Knockio help managers track canvassing teams?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Managers can see live rep locations, monitor territory coverage, review lead status by stage, and track follow-up activity \u2014 without calling reps for updates throughout the day.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How is Knockio different from other canvassing apps like SPOTIO or SalesRabbit?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Knockio combines territory mapping, route planning, live rep tracking, and lead capture in one canvassing app \u2014 built for teams who want a faster, simpler alternative to juggling multiple field sales tools.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Does Knockio work on mobile?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "Yes \u2014 reps can use Knockio's canvassing app from the field on mobile devices to capture leads, update visit status, and add notes or photos in real time.",
+          },
+        },
+      ],
+    },
+  ],
+};
+---
+
+<KnockioHomeLayout title={title} description={description} jsonLd={jsonLd}>
+  <div id="canvassing-page">
+    <!-- Hero -->
+    <section
+      class="hero-background relative z-0 overflow-hidden pt-32 text-center text-white sm:pt-36 md:pt-40 lg:pt-44 xl:pt-[200px]"
+    >
+      <div class="my-container">
+        <div class="mx-auto max-w-6xl">
+          <!-- Eyebrow Text -->
+          <div
+            class="mb-3 flex items-center justify-center gap-3 max-md:flex-col max-md:gap-1"
+          >
+            <span class="text-sm font-medium text-neutral-200 sm:text-base">
+              Track Leads in Real-time, Knock more Doors
+            </span>
+          </div>
+
+          <!-- Heading -->
+          <h1
+            class="mx-auto mb-4 max-w-6xl text-4xl font-extrabold leading-[1.15] text-white sm:text-5xl md:text-[52px] lg:text-6xl lg:leading-[1.12] xl:max-w-7xl xl:text-[64px] xl:leading-[76px]"
+          >
+            <span class="whitespace-nowrap max-sm:whitespace-normal"
+              >The #1 Door-to-Door Canvassing</span
+            ><br />Software for Field Sales
+          </h1>
+
+          <!-- Description -->
+          <p
+            class="mx-auto mb-7 max-w-5xl text-base font-normal leading-7 text-neutral-200 sm:text-lg sm:leading-8"
+          >
+            Track every field visit, map territories, and capture leads at the
+            door with Knockio's advanced door-to-door canvassing app. Spend less
+            time guessing and more time closing with a D2D sales software
+            purpose-built for the street. Once the lead is won, instantly push
+            it to our
+            <a
+              href="https://knockio.com/field-service-crm/"
+              class="font-semibold text-white underline decoration-primary-500 underline-offset-4 transition hover:text-primary-400"
+            >
+              field service CRM
+            </a>
+            for fulfillment.
+          </p>
+
+          <!-- App Store Buttons -->
+          <div
+            class="my-6 flex flex-wrap items-center justify-center gap-3 sm:gap-4"
+          >
+            <a
+              href="https://play.google.com/store/apps/details?id=com.knockio.crm&hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex rounded-lg shadow-md transition-opacity hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400"
+              aria-label="Download Knockio from Google Play"
+            >
+              <img
+                decoding="async"
+                src="/assets/cfw/google-play-button.webp"
+                alt="Download on Google Play"
+                width="176"
+                height="52"
+                class="h-auto w-36 sm:w-40 lg:w-[145px] xl:w-44"
+              />
+            </a>
+
+            <a
+              href="https://apps.apple.com/us/app/knockio/id6756485440"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex rounded-lg shadow-md transition-opacity hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400"
+              aria-label="Download Knockio from the App Store"
+            >
+              <img
+                decoding="async"
+                src="/assets/cfw/apple-store-button.webp"
+                alt="Download on the App Store"
+                width="176"
+                height="52"
+                class="h-auto w-36 sm:w-40 lg:w-[145px] xl:w-44"
+              />
+            </a>
+          </div>
+
+          <!-- CTA -->
+          <div class="flex items-center justify-center">
+            <a
+              href="#cal-sec"
+              class="inline-flex min-h-12 w-full items-center justify-center rounded-lg border border-solid border-primary-500 bg-primary-500 px-6 py-3 text-base font-medium text-white transition hover:bg-transparent focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 sm:w-60 lg:text-lg"
+            >
+              Schedule a Demo
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Image: hidden on mobile -->
+        <img
+          src="/assets/cfw/canvassing-landing-hero-img.webp"
+          alt="Knockio door-to-door canvassing software dashboard"
+          width="1200"
+          height="720"
+          class="mx-auto mt-12 hidden h-auto w-full md:block lg:mt-16 xl:mt-20"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-20 lg:py-36 bg-neutral-50">
+      <div class="my-container mx-auto">
+        <!-- Header -->
+        <div class="text-center max-w-[846px] mx-auto mb-10 lg:mb-14">
+          <p
+            class="text-primary-500 text-sm md:text-2xl leading-7 mb-3 font-inter font-medium"
+          >
+            Reach the right doors with precision and speed
+          </p>
+
+          <h2
+            class="text-3xl leading-tight sm:text-4xl lg:text-[42px] xl:text-5xl 2xl:text-[56px] lg:leading-none font-bold text-neutral-950 mb-5"
+          >
+            Smarter Canvassing, Better <br class="hidden md:block" />
+            Field Results
+          </h2>
+
+          <p
+            class="text-neutral-600 text-sm leading-6 sm:text-base sm:leading-7 md:text-lg md:leading-8 font-normal"
+          >
+            Door-to-door work gets messy with paper notes, maps, chats, and
+            separate <a href="https://knockio.com/field-service-crm/"
+              >CRM tools</a
+            >. Knockio's canvassing app keeps leads, routes, visits, and
+            follow-ups organized in one place.
+          </p>
+        </div>
+
+        <!-- Image -->
+        <div
+          class="rounded-3xl lg:rounded-[40px] overflow-hidden px-4 pt-6 sm:px-8 sm:pt-10 lg:px-10 lg:pt-12 w-fit mx-auto bg-neutral-100 mb-14"
+        >
+          <img
+            decoding="async"
+            src="/assets/cfw/all-devices-view-knockio.webp"
+            alt="Dashboard Preview"
+            width="1280"
+            height="800"
+            loading="lazy"
+            class="h-auto w-full max-w-5xl"
+          />
+        </div>
+        <!-- Features -->
+        <div class="grid gap-8 lg:grid-cols-3 sm:grid-cols-2 lg:gap-14">
+          <!-- Item -->
+          <div class="border border-neutral-200 rounded-2xl p-6 sm:p-8 lg:p-10">
+            <div
+              class="w-10 h-10 xl:w-14 xl:h-14 text-2xl xl:text-3xl flex items-center justify-center rounded-lg bg-primary-500 text-white mb-4"
+            >
+              <span class="font-bold text-white">1</span>
+            </div>
+            <h3 class="font-semibold text-xl text-neutral-900 mb-2">
+              Territory Mapping
+            </h3>
+            <p class="text-neutral-600 text-sm leading-normal">
+              Assign clear areas to reps, reduce overlap, and help every street,
+              lead, and sales opportunity stay organized inside one easy
+              canvassing workspace.
+            </p>
+          </div>
+
+          <!-- Item -->
+          <div class="border border-neutral-200 rounded-2xl p-6 sm:p-8 lg:p-10">
+            <div
+              class="w-10 h-10 xl:w-14 xl:h-14 text-2xl xl:text-3xl flex items-center justify-center rounded-lg bg-primary-500 text-white mb-4"
+            >
+              <span class="font-bold text-white">2</span>
+            </div>
+            <h3 class="font-semibold text-xl text-neutral-900 mb-2">
+              Route Planning
+            </h3>
+            <p class="text-neutral-600 text-sm leading-normal">
+              Help reps plan smarter daily routes, spend less time driving, and
+              reach more doors during every field shift with better direction.
+            </p>
+          </div>
+          <!-- Item -->
+          <div class="border border-neutral-200 rounded-2xl p-6 sm:p-8 lg:p-10">
+            <div
+              class="w-10 h-10 xl:w-14 xl:h-14 text-2xl xl:text-3xl flex items-center justify-center rounded-lg bg-primary-500 text-white mb-4"
+            >
+              <span class="font-bold text-white">3</span>
+            </div>
+            <h3 class="font-semibold text-xl text-neutral-900 mb-2">
+              Lead Capture
+            </h3>
+            <p class="text-neutral-600 text-sm leading-normal">
+              Add new leads from the field with names, phone numbers, notes,
+              photos, visit status, and follow-up details before anything gets
+              lost.
+            </p>
+          </div>
+          <!-- Item -->
+          <div class="border border-neutral-200 rounded-2xl p-6 sm:p-8 lg:p-10">
+            <div
+              class="w-10 h-10 xl:w-14 xl:h-14 text-2xl xl:text-3xl flex items-center justify-center rounded-lg bg-primary-500 text-white mb-4"
+            >
+              <span class="font-bold text-white">4</span>
+            </div>
+            <h3 class="font-semibold text-xl text-neutral-900 mb-2">
+              Live Rep Tracking
+            </h3>
+            <p class="text-neutral-600 text-sm leading-normal">
+              See where reps are working, review field activity, and understand
+              team progress without calling everyone again and again during the
+              day.
+            </p>
+          </div>
+          <!-- Item -->
+          <div class="border border-neutral-200 rounded-2xl p-6 sm:p-8 lg:p-10">
+            <div
+              class="w-10 h-10 xl:w-14 xl:h-14 text-2xl xl:text-3xl flex items-center justify-center rounded-lg bg-primary-500 text-white mb-4"
+            >
+              <span class="font-bold text-white">5</span>
+            </div>
+            <h3 class="font-semibold text-xl text-neutral-900 mb-2">
+              Lead Status Updates
+            </h3>
+            <p class="text-neutral-600 text-sm leading-normal">
+              See where reps are door-knocking, review field activity, and
+              understand team progress without calling everyone again and again
+              during the day.
+            </p>
+          </div>
+          <!-- Item -->
+          <div class="border border-neutral-200 rounded-2xl p-6 sm:p-8 lg:p-10">
+            <div
+              class="w-10 h-10 xl:w-14 xl:h-14 text-2xl xl:text-3xl flex items-center justify-center rounded-lg bg-primary-500 text-white mb-4"
+            >
+              <span class="font-bold text-white">6</span>
+            </div>
+            <h3 class="font-semibold text-xl text-neutral-900 mb-2">
+              Customer History
+            </h3>
+            <p class="text-neutral-600 text-sm leading-normal">
+              Keep past visits, notes, calls, messages, jobs, photos, and
+              service details connected to each customer record for better
+              future conversations.
+            </p>
+          </div>
+
+          <!-- Item -->
+          <div class="border border-neutral-200 rounded-2xl p-6 sm:p-8 lg:p-10">
+            <div
+              class="w-10 h-10 xl:w-14 xl:h-14 text-2xl xl:text-3xl flex items-center justify-center rounded-lg bg-primary-500 text-white mb-4"
+            >
+              <span class="font-bold text-white">7</span>
+            </div>
+            <h3 class="font-semibold text-xl text-neutral-900 mb-2">
+              Follow-Up Reminders
+            </h3>
+            <p class="text-neutral-600 text-sm leading-normal">
+              Set reminders for calls, visits, estimates, proposals, or next
+              steps, so warm leads do not sit too long or get forgotten.
+            </p>
+          </div>
+          <!-- Item -->
+          <div class="border border-neutral-200 rounded-2xl p-6 sm:p-8 lg:p-10">
+            <div
+              class="w-10 h-10 xl:w-14 xl:h-14 text-2xl xl:text-3xl flex items-center justify-center rounded-lg bg-primary-500 text-white mb-4"
+            >
+              <span class="font-bold text-white">8</span>
+            </div>
+            <h3 class="font-semibold text-xl text-neutral-900 mb-2">
+              Photos and Notes
+            </h3>
+            <p class="text-neutral-600 text-sm leading-normal">
+              Let reps upload site photos, add field notes, record key details,
+              and share visit context while the conversation is still fresh.
+            </p>
+          </div>
+          <!-- Item -->
+          <div class="border border-neutral-200 rounded-2xl p-6 sm:p-8 lg:p-10">
+            <div
+              class="w-10 h-10 xl:w-14 xl:h-14 text-2xl xl:text-3xl flex items-center justify-center rounded-lg bg-primary-500 text-white mb-4"
+            >
+              <span class="font-bold text-white">9</span>
+            </div>
+            <h3 class="font-semibold text-xl text-neutral-900 mb-2">
+              Flexible CRM Options
+            </h3>
+            <p class="text-neutral-600 text-sm leading-normal">
+              Sync leads with your existing CRM in minutes, or use <a
+                href="https://knockio.com/field-service-crm/"
+              >
+                Knockio's own built-in CRM</a
+              > for one seamless, fully connected sales workflow.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Plans -->
+    <section
+      id="pricing-plans"
+      class="relative z-10 py-20 max-xl:py-16 max-lg:py-14"
+    >
+      <div class="my-container">
+        <!-- Section Heading -->
+        <div class="mb-10 text-center max-md:mb-7">
+          <h2
+            class="mx-auto mb-4 max-w-3xl font-inter text-[56px] font-bold leading-tight text-neutral-900 max-2xl:text-5xl max-xl:text-4xl max-md:text-3xl"
+          >
+            Straightforward pricing. No surprises.
+          </h2>
+
+          <p class="mx-auto max-w-xl text-lg text-neutral-600 max-xl:text-base">
+            Start with the plan your team needs now. Add users as you grow, with
+            volume discounts applied automatically at 5 users.
+          </p>
+        </div>
+
+        <!-- Pricing Benefits -->
+        <div class="mb-12 flex flex-wrap items-center justify-center gap-3">
+          <div
+            class="flex items-center rounded-full border border-solid border-neutral-200 px-5 py-2.5 text-sm text-neutral-900"
+          >
+            <Check
+              class="mr-2 size-4 shrink-0 text-primary-500"
+              aria-hidden="true"
+            />
+            <span>Pro-rated billing</span>
+          </div>
+
+          <div
+            class="flex items-center rounded-full border border-solid border-neutral-200 px-5 py-2.5 text-sm text-neutral-900"
+          >
+            <Check
+              class="mr-2 size-4 shrink-0 text-primary-500"
+              aria-hidden="true"
+            />
+            <span>No setup fee</span>
+          </div>
+
+          <div
+            class="flex items-center rounded-full border border-solid border-neutral-200 px-5 py-2.5 text-sm text-neutral-900"
+          >
+            <Check
+              class="mr-2 size-4 shrink-0 text-primary-500"
+              aria-hidden="true"
+            />
+            <span>No contracts</span>
+          </div>
+        </div>
+
+        <!-- Pricing Cards -->
+        <div
+          class="mx-auto grid max-w-[920px] grid-cols-1 items-stretch gap-14 md:grid-cols-2 max-xl:gap-7"
+        >
+          <!-- Prospect Plan -->
+          <div
+            class="flex flex-col rounded-3xl border border-solid border-neutral-200 p-8 transition duration-150 ease-out hover:scale-[1.03] max-md:p-6"
+          >
+            <div class="mb-3 flex items-center gap-4">
+              <Map class="size-5 text-blue-600" aria-hidden="true" />
+
+              <h3 class="text-3xl font-bold text-neutral-900 max-xl:text-2xl">
+                Prospect
+              </h3>
+            </div>
+
+            <p class="mb-5 text-base leading-7 text-neutral-700 max-md:mb-4">
+              For canvassing teams that need territories, routes, presentations,
+              tracking, and field lead capture.
+            </p>
+
+            <div
+              class="mb-1 flex items-end text-5xl font-bold text-neutral-900 max-md:text-4xl"
+            >
+              <span>$20</span>
+
+              <span class="mb-1 ml-2 text-base font-normal text-neutral-500">
+                /user/mo
+              </span>
+            </div>
+
+            <p class="mb-6 text-sm text-neutral-500 max-md:mb-5">
+              <span>$25</span>/user for 1–4 users
+            </p>
+
+            <button
+              type="button"
+              data-package="4"
+              aria-label="Start Prospect plan"
+              class="knockio-checkout-btn mb-8 w-full cursor-pointer rounded-md border border-solid border-primary-500 bg-white py-3 font-medium text-primary-500 transition-colors duration-200 hover:bg-primary-500 hover:text-white"
+            >
+              Start Prospect
+            </button>
+
+            <h4
+              class="mb-4 text-xl font-semibold text-neutral-900 max-md:mb-3 max-md:text-lg"
+            >
+              Features Included:
+            </h4>
+
+            <ul class="flex-1 space-y-3.5 text-neutral-700">
+              <li
+                class="flex items-start text-base leading-7 max-md:text-[15px]"
+              >
+                <Check
+                  class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                  aria-hidden="true"
+                />
+                <span>Unlimited Territories & Campaigns</span>
+              </li>
+
+              <li
+                class="flex items-start text-base leading-7 max-md:text-[15px]"
+              >
+                <Check
+                  class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                  aria-hidden="true"
+                />
+                <span>Route Planning & Optimization</span>
+              </li>
+
+              <li
+                class="flex items-start text-base leading-7 max-md:text-[15px]"
+              >
+                <Check
+                  class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                  aria-hidden="true"
+                />
+                <span>Pre-Knocked Data (15¢ per address)</span>
+              </li>
+
+              <li
+                class="flex items-start text-base leading-7 max-md:text-[15px]"
+              >
+                <Check
+                  class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                  aria-hidden="true"
+                />
+                <span>Presentations & Real-time Tracking</span>
+              </li>
+
+              <li
+                class="flex items-start text-base leading-7 max-md:text-[15px]"
+              >
+                <Check
+                  class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                  aria-hidden="true"
+                />
+                <span>Digital Contracts & E-Signature</span>
+              </li>
+
+              <li
+                class="flex items-start text-base leading-7 max-md:text-[15px]"
+              >
+                <Phone
+                  class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                  aria-hidden="true"
+                />
+
+                <span>
+                  Engage Add-On
+                  <span class="text-neutral-500"> ($15/number/mo) </span>
+                </span>
+              </li>
+
+              <li
+                class="flex items-start text-base leading-7 max-md:text-[15px]"
+              >
+                <Plug
+                  class="mr-3 mt-1 size-4 shrink-0 text-neutral-400"
+                  aria-hidden="true"
+                />
+
+                <span class="text-neutral-500">
+                  Zapier & FlowChef integrations
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Growth Plan -->
+          <div
+            class="relative flex flex-col rounded-3xl border border-solid border-[#0f172a] bg-[#0f172a] p-8 transition duration-150 ease-out hover:scale-[1.03] max-md:p-6"
+          >
+            <div
+              class="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-solid border-neutral-300 bg-primary-500 px-9 py-1.5 text-base font-medium text-white"
+            >
+              Recommended
+            </div>
+
+            <div class="mb-3 mt-2 flex items-center gap-4">
+              <ChartLine class="size-5 text-primary-500" aria-hidden="true" />
+
+              <h3 class="text-3xl font-bold text-white max-xl:text-2xl">
+                Growth
+              </h3>
+            </div>
+
+            <p class="mb-5 text-base leading-7 text-neutral-300 max-md:mb-4">
+              Canvassing, CRM, jobs, estimates, invoices, payments, and
+              reporting in one platform.
+            </p>
+
+            <div
+              class="mb-1 flex items-end text-5xl font-bold text-white max-md:text-4xl"
+            >
+              <span>$45</span>
+
+              <span class="mb-1 ml-2 text-base font-normal text-neutral-400">
+                /user/mo
+              </span>
+            </div>
+
+            <p class="mb-6 text-sm text-neutral-400 max-md:mb-5">
+              <span>$60</span>/user for 1–4 users
+            </p>
+
+            <button
+              type="button"
+              data-package="6"
+              aria-label="Start Growth plan"
+              class="knockio-checkout-btn mb-8 w-full cursor-pointer rounded-md bg-primary-500 py-3 font-medium text-white transition-colors duration-200 hover:bg-primary-700"
+            >
+              Start Growth
+            </button>
+
+            <h4
+              class="mb-4 text-xl font-semibold text-white max-md:mb-3 max-md:text-lg"
+            >
+              Features Included:
+            </h4>
+
+            <ul class="flex-1 space-y-3.5 text-neutral-300">
+              <li
+                class="flex items-start text-base font-semibold leading-7 max-md:text-[15px]"
+              >
+                <Check
+                  class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                  aria-hidden="true"
+                />
+                <span>Full sales-to-payment workflow</span>
+              </li>
+
+              <li
+                class="flex items-start text-base leading-7 max-md:text-[15px]"
+              >
+                <Check
+                  class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                  aria-hidden="true"
+                />
+                <span>Unlimited workspaces</span>
+              </li>
+
+              <li
+                class="flex items-start text-base leading-7 max-md:text-[15px]"
+              >
+                <Check
+                  class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                  aria-hidden="true"
+                />
+                <span>Prospect + full CRM in one platform</span>
+              </li>
+
+              <li
+                class="flex items-start text-base leading-7 max-md:text-[15px]"
+              >
+                <Check
+                  class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                  aria-hidden="true"
+                />
+                <span>Estimates, invoices & vendor billing</span>
+              </li>
+
+              <li
+                class="flex items-start text-base leading-7 max-md:text-[15px]"
+              >
+                <UserRound
+                  class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                  aria-hidden="true"
+                />
+                <span>Dedicated success manager</span>
+              </li>
+
+              <li
+                class="flex items-start text-base leading-7 max-md:text-[15px]"
+              >
+                <Phone
+                  class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                  aria-hidden="true"
+                />
+
+                <span>
+                  Engage Add-On
+                  <span class="text-neutral-400"> ($15/number/mo) </span>
+                </span>
+              </li>
+
+              <li
+                class="flex items-start text-base leading-7 max-md:text-[15px]"
+              >
+                <Plug
+                  class="mr-3 mt-1 size-4 shrink-0 text-neutral-500"
+                  aria-hidden="true"
+                />
+
+                <span class="text-neutral-400">
+                  Zapier & FlowChef integrations
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Checkout Redirect -->
+
+    <section
+      class="py-14 sm:py-20 lg:py-28 bg-[linear-gradient(90deg,#0b1f12_0%,#0f2a17_100%)] text-white"
+    >
+      <div class="my-container mx-auto">
+        <div
+          class="grid grid-cols-1 items-center gap-10 md:grid-cols-12 md:gap-8 xl:gap-0"
+        >
+          <!-- Left Content: xl col widened so H2 wraps like live
+               "Manage Canvassing From / First Door Knock to Closed / Deal" -->
+          <div class="md:col-span-6 xl:col-span-6">
+            <p
+              class="text-primary-500 text-sm sm:text-base md:text-2xl leading-7 mb-3 font-inter font-medium"
+            >
+              A New Way Forward
+            </p>
+
+            <h2
+              class="text-3xl leading-tight sm:text-4xl lg:text-[42px] xl:text-5xl 2xl:text-[56px] lg:leading-none font-bold text-neutral-100 mb-5"
+            >
+              Manage Canvassing From First Door Knock to Closed Deal
+            </h2>
+
+            <p
+              class="text-neutral-200 text-sm leading-6 sm:text-base sm:leading-7 md:text-lg md:leading-8 font-normal mb-6 md:mb-8"
+            >
+              Knockio helps teams move faster after every field visit. Instead
+              of juggling paper notes, spreadsheets, and disconnected tools
+              between the first knock and the closed deal, everything stays in
+              one system your whole team can see.
+            </p>
+
+            <a
+              href="#cal-sec"
+              class="inline-flex w-full sm:w-auto items-center justify-center bg-primary-500 hover:bg-primary-600 text-sm sm:text-base font-medium px-6 sm:px-10 lg:px-12 py-3.5 sm:py-4 rounded-lg transition-colors"
+            >
+              Schedule a Demo
+            </a>
+          </div>
+
+          <!-- Spacer -->
+          <div class="hidden md:block md:col-span-1 xl:col-span-1"></div>
+
+          <!-- Right Features -->
+          <div class="md:col-span-5 xl:col-span-5">
+            <div class="grid grid-cols-1 gap-5 sm:gap-6 md:gap-7">
+              <!-- Feature 1 -->
+              <div
+                class="flex items-start gap-4 sm:gap-5 lg:gap-6 rounded-2xl border border-white/10 bg-white/[0.04] p-5 sm:p-6 md:border-0 md:bg-transparent md:p-0"
+              >
+                <CloudLightning
+                  class="size-11 shrink-0 text-primary-500 sm:size-14 lg:size-[3rem]"
+                  aria-hidden="true"
+                  stroke-width={1.5}
+                />
+
+                <div class="min-w-0">
+                  <h2
+                    class="text-xl leading-tight lg:text-2xl font-bold text-neutral-100 mb-2"
+                  >
+                    Capture Better Field Data
+                  </h2>
+                  <p
+                    class="text-sm leading-6 sm:text-base sm:leading-7 text-neutral-200 font-normal"
+                  >
+                    Save lead details, notes, photos, visit results, and
+                    follow-ups straight from the field.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Feature 2 -->
+              <div
+                class="flex items-start gap-4 sm:gap-5 lg:gap-6 rounded-2xl border border-white/10 bg-white/[0.04] p-5 sm:p-6 md:border-0 md:bg-transparent md:p-0"
+              >
+                <ListChecks
+                  class="size-11 shrink-0 text-primary-500 sm:size-14 lg:size-[3rem]"
+                  aria-hidden="true"
+                  stroke-width={1.5}
+                />
+
+                <div class="min-w-0">
+                  <h2
+                    class="text-xl leading-tight lg:text-2xl font-bold text-neutral-100 mb-2"
+                  >
+                    Keep Teams Aligned
+                  </h2>
+                  <p
+                    class="text-sm leading-6 sm:text-base sm:leading-7 text-neutral-200 font-normal"
+                  >
+                    Track territories, rep activity, lead status, and customer
+                    updates in one shared place.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Feature 3 -->
+              <div
+                class="flex items-start gap-4 sm:gap-5 lg:gap-6 rounded-2xl border border-white/10 bg-white/[0.04] p-5 sm:p-6 md:border-0 md:bg-transparent md:p-0"
+              >
+                <MessagesSquare
+                  class="size-11 shrink-0 text-primary-500 sm:size-14 lg:size-[3rem]"
+                  aria-hidden="true"
+                  stroke-width={1.5}
+                />
+
+                <div class="min-w-0">
+                  <h2
+                    class="text-xl leading-tight lg:text-2xl font-bold text-neutral-100 mb-2"
+                  >
+                    Close More at the Door
+                  </h2>
+                  <p
+                    class="text-sm leading-6 sm:text-base sm:leading-7 text-neutral-200 font-normal"
+                  >
+                    Turn more visits into closed deals with faster lead capture,
+                    smarter routes, and clear status updates.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="py-16 sm:py-20 lg:py-24 bg-white overflow-x-hidden">
+      <div class="my-container mx-auto">
+        <div class="grid gap-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:gap-20">
+          <!-- Left Side: Content -->
+          <div>
+            <p
+              class="text-primary-500 text-sm md:text-2xl leading-7 font-inter mb-4"
+            >
+              Frequently Asked Questions
+            </p>
+            <h2
+              class="text-3xl leading-tight sm:text-4xl lg:text-[42px] xl:text-5xl 2xl:text-[56px] lg:leading-none font-bold text-neutral-950 mb-8 w-full max-w-3xl xl:max-w-none"
+            >
+              <span class="whitespace-nowrap max-sm:whitespace-normal">Everything Teams Ask Before</span><br />Using Knockio Canvassing
+            </h2>
+            <p
+              class="text-neutral-800 text-sm leading-6 sm:text-base sm:leading-7 md:text-lg md:leading-8 font-normal mb-6 md:mb-8 w-full max-w-3xl"
+            >
+              Canvassing teams need more than maps. Knockio helps reps capture
+              leads, manage routes, update visits, and follow up faster. It also
+              connects CRM, estimates, proposals, scheduling, invoices, and
+              field service workflows, so teams can manage the full process with
+              less confusion.
+            </p>
+          </div>
+
+          <!-- Right Side: Accordion -->
+          <div class="space-y-4">
+            <!-- FAQ Item 1 -->
+            <div
+              class="faq-item border border-solid border-solid border-neutral-200 rounded-2xl overflow-hidden transition-all duration-300"
+            >
+              <button
+                class="faq-button w-full flex items-center justify-between p-4 text-left group sm:p-6"
+              >
+                <span
+                  class="text-base sm:text-lg lg:text-xl font-medium text-neutral-950 group-hover:text-primary-500 transition-colors"
+                >
+                  What is Knockio canvassing software?
+                </span>
+                <div
+                  class="faq-icon flex-shrink-0 ml-4 w-6 h-6 flex items-center justify-center text-primary-500"
+                >
+                  <!-- Minus Icon (Shown when active) -->
+                  <svg
+                    class="icon-minus hidden w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M20 12H4"></path>
+                  </svg>
+                  <!-- Plus Icon (Shown when inactive) -->
+                  <svg
+                    class="icon-plus w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </div>
+              </button>
+              <div
+                class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+              >
+                <div
+                  class="p-4 pt-0 text-sm leading-relaxed text-neutral-600 sm:p-6 sm:pt-0 sm:text-base"
+                >
+                  Knockio canvassing software helps field teams manage
+                  door-to-door sales and field visits. Reps can capture leads,
+                  view assigned areas, update visit results, add notes, upload
+                  photos, and set follow-ups from the field. Managers can track
+                  activity, manage territories, and move leads into the next
+                  sales or service step.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div
+              class="faq-item border border-solid border-neutral-200 rounded-2xl overflow-hidden transition-all duration-300"
+            >
+              <button
+                class="faq-button w-full flex items-center justify-between p-4 text-left group sm:p-6"
+              >
+                <span
+                  class="text-base sm:text-lg lg:text-xl font-medium text-neutral-950 group-hover:text-primary-500 transition-colors"
+                >
+                  Is Knockio only for door-to-door sales teams?
+                </span>
+                <div
+                  class="faq-icon flex-shrink-0 ml-4 w-6 h-6 flex items-center justify-center text-primary-500"
+                >
+                  <svg
+                    class="icon-minus hidden w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M20 12H4"></path>
+                  </svg>
+                  <svg
+                    class="icon-plus w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </div>
+              </button>
+              <div
+                class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+              >
+                <div
+                  class="p-4 pt-0 text-sm leading-relaxed text-neutral-600 sm:p-6 sm:pt-0 sm:text-base"
+                >
+                  No. Knockio's canvassing software works for door-to-door sales
+                  teams, roofing crews, solar dealers, pest control companies,
+                  fiber sales teams, HVAC contractors, and any business that
+                  manages field reps or territory-based outreach. It even has a
+                  plan for teams needing canvassing plus <a
+                    href="https://knockio.com/field-service-crm/"
+                    >CRM and service workflow tools</a
+                  >.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div
+              class="faq-item border border-solid border-neutral-200 rounded-2xl overflow-hidden transition-all duration-300"
+            >
+              <button
+                class="faq-button w-full flex items-center justify-between p-4 text-left group sm:p-6"
+              >
+                <span
+                  class="text-base sm:text-lg lg:text-xl font-medium text-neutral-950 group-hover:text-primary-500 transition-colors"
+                >
+                  How does Knockio help managers track canvassing teams?
+                </span>
+                <div
+                  class="faq-icon flex-shrink-0 ml-4 w-6 h-6 flex items-center justify-center text-primary-500"
+                >
+                  <svg
+                    class="icon-minus hidden w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M20 12H4"></path>
+                  </svg>
+                  <svg
+                    class="icon-plus w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </div>
+              </button>
+              <div
+                class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+              >
+                <div
+                  class="p-4 pt-0 text-sm leading-relaxed text-neutral-600 sm:p-6 sm:pt-0 sm:text-base"
+                >
+                  Managers can see field activity, assigned territories, lead
+                  status, and rep progress in one place. This makes it easier to
+                  know who is working where, which leads need attention, and
+                  which areas still need coverage. It also reduces the need for
+                  constant check-in calls.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div
+              class="faq-item border border-solid border-neutral-200 rounded-2xl overflow-hidden transition-all duration-300"
+            >
+              <button
+                class="faq-button w-full flex items-center justify-between p-4 text-left group sm:p-6"
+              >
+                <span
+                  class="text-base sm:text-lg lg:text-xl font-medium text-neutral-950 group-hover:text-primary-500 transition-colors"
+                >
+                  Can Knockio turn canvassing leads into jobs?
+                </span>
+                <div
+                  class="faq-icon flex-shrink-0 ml-4 w-6 h-6 flex items-center justify-center text-primary-500"
+                >
+                  <svg
+                    class="icon-minus hidden w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M20 12H4"></path>
+                  </svg>
+                  <svg
+                    class="icon-plus w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </div>
+              </button>
+              <div
+                class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+              >
+                <div
+                  class="p-4 pt-0 text-sm leading-relaxed text-neutral-600 sm:p-6 sm:pt-0 sm:text-base"
+                >
+                  Yes. Every lead a rep captures is saved with full visit
+                  history and contact details, ready to hand off the moment it's
+                  qualified. Teams that also use Knockio's field service CRM can
+                  move that same lead straight into scheduling and job
+                  management see how that works on our <a
+                    href="https://knockio.com/field-service-crm/"
+                    >Field Service CRM page.</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- FAQ Item 5 -->
+            <div
+              class="faq-item border border-solid border-neutral-200 rounded-2xl overflow-hidden transition-all duration-300"
+            >
+              <button
+                class="faq-button w-full flex items-center justify-between p-4 text-left group sm:p-6"
+              >
+                <span
+                  class="text-base sm:text-lg lg:text-xl font-medium text-neutral-950 group-hover:text-primary-500 transition-colors"
+                >
+                  Does Knockio work on mobile?
+                </span>
+                <div
+                  class="faq-icon flex-shrink-0 ml-4 w-6 h-6 flex items-center justify-center text-primary-500"
+                >
+                  <svg
+                    class="icon-minus hidden w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M20 12H4"></path>
+                  </svg>
+                  <svg
+                    class="icon-plus w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </div>
+              </button>
+              <div
+                class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+              >
+                <div
+                  class="p-4 pt-0 text-sm leading-relaxed text-neutral-600 sm:p-6 sm:pt-0 sm:text-base"
+                >
+                  Yes. Knockio is made for field teams, so mobile access is an
+                  important part of the workflow. We have both an <a
+                    href="https://play.google.com/store/apps/details?id=com.knockio.crm&hl=en"
+                    target="_blank"
+                    rel="noopener">Android app</a
+                  > & an <a
+                    href="https://apps.apple.com/us/app/knockio-field-service-crm/id6756485440"
+                    target="_blank"
+                    rel="noopener">iOS app</a
+                  > so while working outside, updating leads, adding notes, checking
+                  customer details, and managing their daily field activity is not
+                  a hassle.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIAL SECTION -->
+    <section class="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden">
+      <div class="my-container mx-auto mb-10 lg:mb-16 text-center">
+        <!-- Header -->
+        <p
+          class="text-primary-500 text-sm md:text-2xl leading-7 font-inter mb-4"
+        >
+          Customer Reviews
+        </p>
+        <h2
+          class="text-3xl leading-tight sm:text-4xl lg:text-[42px] xl:text-5xl 2xl:text-[56px] lg:leading-none font-bold text-neutral-950 mb-8"
+        >
+          What Field Service and Sales<br />
+          Teams Say About Knockio
+        </h2>
+
+        <!-- Google Review Badge -->
+        <img
+          decoding="async"
+          src="/assets/cfw/google-5-star.webp"
+          alt="google review badge"
+          class="mx-auto h-auto w-[150px] sm:w-[183px]"
+        />
+      </div>
+
+      <!-- SLIDER WRAPPER -->
+      <div class="space-y-8 mt-7">
+        <!-- Row 1: Left Moving -->
+        <div class="testimonial-track-container flex overflow-hidden">
+          <div
+            class="testimonial-track flex gap-4 sm:gap-6 animate-marquee-left hover:pause"
+          >
+            <!-- Card Set 1 -->
+            <div class="flex gap-4 sm:gap-6 card-set">
+              <!-- Card 1 -->
+              <div
+                class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group"
+              >
+                <p
+                  class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]"
+                >
+                  This app is the best thing that has happened to our company!
+                  Asad is absolutely amazing! He is so responsive, it doesn't
+                  matter what time of day he is on it! I highly recommend this
+                  company add this app!
+                </p>
+                <div class="flex items-center gap-4 relative z-10">
+                  <img
+                    decoding="async"
+                    src="/assets/cfw/avatar-lacey-jackson.webp"
+                    alt="Lacey Jackson"
+                    class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all"
+                  />
+                  <div>
+                    <h5 class="font-bold text-neutral-950 mb-1">
+                      Lacey Jackson
+                    </h5>
+                    <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
+                  </div>
+                </div>
+                <Quote
+                  class="pointer-events-none absolute bottom-6 right-8 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                  aria-hidden="true"
+                  stroke-width={1.25}
+                />
+              </div>
+              <!-- Card 2 -->
+              <div
+                class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group"
+              >
+                <p
+                  class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]"
+                >
+                  Knockio is a great product! We use it for our roofing sales
+                  canvassing. Their support team is responsive and fixes issues
+                  immediately. Highly recommend!
+                </p>
+                <div class="flex items-center gap-4 relative z-10">
+                  <img
+                    decoding="async"
+                    src="/assets/cfw/avatar-ben-loveland.webp"
+                    alt="Ben Loveland"
+                    class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all"
+                  />
+                  <div>
+                    <h5 class="font-bold text-neutral-950 mb-1">
+                      Ben Loveland
+                    </h5>
+                    <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
+                  </div>
+                </div>
+                <Quote
+                  class="pointer-events-none absolute bottom-6 right-8 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                  aria-hidden="true"
+                  stroke-width={1.25}
+                />
+              </div>
+              <!-- Card 3 -->
+              <div
+                class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group"
+              >
+                <p
+                  class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]"
+                >
+                  The support team is awesome. The live tracking feature is very
+                  useful. The pricing is fair as well!
+                </p>
+                <div class="flex items-center gap-4 relative z-10">
+                  <img
+                    decoding="async"
+                    src="/assets/cfw/avatar-bar-galanti.webp"
+                    alt="Bar Galanti"
+                    class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all"
+                  />
+                  <div>
+                    <h5 class="font-bold text-neutral-950 mb-1">Bar Galanti</h5>
+                    <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
+                  </div>
+                </div>
+                <Quote
+                  class="pointer-events-none absolute bottom-6 right-8 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                  aria-hidden="true"
+                  stroke-width={1.25}
+                />
+              </div>
+            </div>
+            <!-- Duplicate Set for loop -->
+            <div class="flex gap-4 sm:gap-6 card-set" aria-hidden="true">
+              <!-- Card 1 -->
+              <div
+                class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group"
+              >
+                <p
+                  class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]"
+                >
+                  This app is the best thing that has happened to our company!
+                  Asad is absolutely amazing! He is so responsive, it doesn't
+                  matter what time of day he is on it! I highly recommend this
+                  company add this app!
+                </p>
+                <div class="flex items-center gap-4 relative z-10">
+                  <img
+                    decoding="async"
+                    src="/assets/cfw/avatar-lacey-jackson.webp"
+                    alt="Lacey Jackson"
+                    class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all"
+                  />
+                  <div>
+                    <h5 class="font-bold text-neutral-950 mb-1">
+                      Lacey Jackson
+                    </h5>
+                    <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
+                  </div>
+                </div>
+                <Quote
+                  class="pointer-events-none absolute bottom-6 right-8 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                  aria-hidden="true"
+                  stroke-width={1.25}
+                />
+              </div>
+              <!-- Card 2 -->
+              <div
+                class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group"
+              >
+                <p
+                  class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]"
+                >
+                  Knockio is a great product! We use it for our roofing sales
+                  canvassing. Their support team is responsive and fixes issues
+                  immediately. Highly recommend!
+                </p>
+                <div class="flex items-center gap-4 relative z-10">
+                  <img
+                    decoding="async"
+                    src="/assets/cfw/avatar-ben-loveland.webp"
+                    alt="Ben Loveland"
+                    class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all"
+                  />
+                  <div>
+                    <h5 class="font-bold text-neutral-950 mb-1">
+                      Ben Loveland
+                    </h5>
+                    <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
+                  </div>
+                </div>
+                <Quote
+                  class="pointer-events-none absolute bottom-6 right-8 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                  aria-hidden="true"
+                  stroke-width={1.25}
+                />
+              </div>
+              <!-- Card 3 -->
+              <div
+                class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group"
+              >
+                <p
+                  class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]"
+                >
+                  The support team is awesome. The live tracking feature is very
+                  useful. The pricing is fair as well!
+                </p>
+                <div class="flex items-center gap-4 relative z-10">
+                  <img
+                    decoding="async"
+                    src="/assets/cfw/avatar-bar-galanti.webp"
+                    alt="Bar Galanti"
+                    class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all"
+                  />
+                  <div>
+                    <h5 class="font-bold text-neutral-950 mb-1">Bar Galanti</h5>
+                    <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
+                  </div>
+                </div>
+                <Quote
+                  class="pointer-events-none absolute bottom-6 right-8 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                  aria-hidden="true"
+                  stroke-width={1.25}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: Right Moving -->
+        <div class="testimonial-track-container flex overflow-hidden">
+          <div
+            class="testimonial-track flex gap-4 sm:gap-6 animate-marquee-right hover:pause"
+          >
+            <!-- Card Set 2 -->
+            <div class="flex gap-4 sm:gap-6 card-set">
+              <!-- Card 4 -->
+              <div
+                class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group"
+              >
+                <p
+                  class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]"
+                >
+                  Knockio is the best! My team and I absolutely love using it -
+                  it is so user friendly and simple. Support is brilliant too,
+                  nothing is ever too much trouble. The best on the market.
+                  Thanks Knockio!
+                </p>
+                <div class="flex items-center gap-4 relative z-10">
+                  <img
+                    decoding="async"
+                    src="/assets/cfw/avatar-georgia-hancocks.webp"
+                    alt="Georgia Hancocks"
+                    class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all"
+                  />
+                  <div>
+                    <h5 class="font-bold text-neutral-950 mb-1">
+                      Georgia Hancocks
+                    </h5>
+                    <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
+                  </div>
+                </div>
+                <Quote
+                  class="pointer-events-none absolute bottom-6 right-8 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                  aria-hidden="true"
+                  stroke-width={1.25}
+                />
+              </div>
+              <!-- Card 5 -->
+              <div
+                class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group"
+              >
+                <p
+                  class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]"
+                >
+                  We love Knockio so far! It is solving a lot of the issues of
+                  the other canvassing apps. The team have worked with us
+                  providing excellent fast support. Highly recommend if you're
+                  seeing people face to face.
+                </p>
+                <div class="flex items-center gap-4 relative z-10">
+                  <img
+                    decoding="async"
+                    src="/assets/cfw/avatar-sarah-bennett.webp"
+                    alt="Sarah Bennett"
+                    class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all"
+                  />
+                  <div>
+                    <h5 class="font-bold text-neutral-950 mb-1">
+                      Sarah Bennett
+                    </h5>
+                    <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
+                  </div>
+                </div>
+                <Quote
+                  class="pointer-events-none absolute bottom-6 right-8 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                  aria-hidden="true"
+                  stroke-width={1.25}
+                />
+              </div>
+              <!-- Card 6 -->
+              <div
+                class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group"
+              >
+                <p
+                  class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]"
+                >
+                  Amazing app! Definitely has helped out my team a whole lot
+                  from our previous canvassing software. They identified what we
+                  were struggling with and needed, and everything has been
+                  addressed. Highly recommend.
+                </p>
+                <div class="flex items-center gap-4 relative z-10">
+                  <img
+                    decoding="async"
+                    src="/assets/cfw/avatar-ayana-hall.webp"
+                    alt="Ayana Hall"
+                    class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all"
+                  />
+                  <div>
+                    <h5 class="font-bold text-neutral-950 mb-1">Ayana Hall</h5>
+                    <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
+                  </div>
+                </div>
+                <Quote
+                  class="pointer-events-none absolute bottom-6 right-8 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                  aria-hidden="true"
+                  stroke-width={1.25}
+                />
+              </div>
+            </div>
+            <!-- Duplicate Set for loop -->
+            <div class="flex gap-4 sm:gap-6 card-set" aria-hidden="true">
+              <!-- Card 4 -->
+              <div
+                class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group"
+              >
+                <p
+                  class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]"
+                >
+                  Knockio is the best! My team and I absolutely love using it -
+                  it is so user friendly and simple. Support is brilliant too,
+                  nothing is ever too much trouble. The best on the market.
+                  Thanks Knockio!
+                </p>
+                <div class="flex items-center gap-4 relative z-10">
+                  <img
+                    decoding="async"
+                    src="/assets/cfw/avatar-georgia-hancocks.webp"
+                    alt="Georgia Hancocks"
+                    class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all"
+                  />
+                  <div>
+                    <h5 class="font-bold text-neutral-950 mb-1">
+                      Georgia Hancocks
+                    </h5>
+                    <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
+                  </div>
+                </div>
+                <Quote
+                  class="pointer-events-none absolute bottom-6 right-8 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                  aria-hidden="true"
+                  stroke-width={1.25}
+                />
+              </div>
+              <!-- Card 5 -->
+              <div
+                class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group"
+              >
+                <p
+                  class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]"
+                >
+                  We love Knockio so far! It is solving a lot of the issues of
+                  the other canvassing apps. The team have worked with us
+                  providing excellent fast support. Highly recommend if you're
+                  seeing people face to face.
+                </p>
+                <div class="flex items-center gap-4 relative z-10">
+                  <img
+                    decoding="async"
+                    src="/assets/cfw/avatar-sarah-bennett.webp"
+                    alt="Sarah Bennett"
+                    class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all"
+                  />
+                  <div>
+                    <h5 class="font-bold text-neutral-950 mb-1">
+                      Sarah Bennett
+                    </h5>
+                    <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
+                  </div>
+                </div>
+                <Quote
+                  class="pointer-events-none absolute bottom-6 right-8 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                  aria-hidden="true"
+                  stroke-width={1.25}
+                />
+              </div>
+              <!-- Card 6 -->
+              <div
+                class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group"
+              >
+                <p
+                  class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]"
+                >
+                  Amazing app! Definitely has helped out my team a whole lot
+                  from our previous canvassing software. They identified what we
+                  were struggling with and needed, and everything has been
+                  addressed. Highly recommend.
+                </p>
+                <div class="flex items-center gap-4 relative z-10">
+                  <img
+                    decoding="async"
+                    src="/assets/cfw/avatar-ayana-hall.webp"
+                    alt="Ayana Hall"
+                    class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all"
+                  />
+                  <div>
+                    <h5 class="font-bold text-neutral-950 mb-1">Ayana Hall</h5>
+                    <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p>
+                  </div>
+                </div>
+                <Quote
+                  class="pointer-events-none absolute bottom-6 right-8 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                  aria-hidden="true"
+                  stroke-width={1.25}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cal.com Scheduling Section -->
+    <section id="cal-sec" class="py-36 max-xl:py-28 max-lg:py-20 max-md:py-16">
+      <div class="my-container">
+        <div
+          class="mx-auto max-w-[1440px] rounded-3xl bg-[linear-gradient(90deg,#0b1f12_0%,#0f2a17_100%)] px-6 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28 xl:px-16"
+        >
+          <div class="mx-auto mb-10 max-w-3xl text-center max-md:mb-8">
+            <p
+              class="mb-3 text-sm font-medium leading-7 text-primary-500 md:text-2xl"
+            >
+              See Knockio In Action
+            </p>
+            <h2
+              class="mb-0 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+            >
+              Book a Demo Now!
+            </h2>
+          </div>
+          <div
+            id="my-cal-inline"
+            class="mx-auto flex min-h-[680px] max-w-5xl items-center justify-center rounded-2xl bg-white p-4 sm:min-h-[720px] sm:p-6"
+            aria-live="polite"
+          >
+            <p class="text-center text-sm font-medium text-neutral-500">
+              Loading the calendar as you explore Knockio…
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</KnockioHomeLayout>

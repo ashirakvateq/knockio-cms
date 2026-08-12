@@ -1,3 +1,12 @@
+@import "tailwindcss";
+
+/* Explicit sources so Vite/dev regenerates utilities for every template.
+   Without this, new pages can miss classes like pt-32 / sm:w-60 in HMR. */
+@source "../pages/**/*.{astro,html,md}";
+@source "../components/**/*.{astro,html,js,ts}";
+@source "../layouts/**/*.{astro,html}";
+@source "../scripts/**/*.{js,ts}";
+
 @theme {
   --font-sans: var(--font-manrope);
   --color-primary-50: #e0f7da;
@@ -55,6 +64,3 @@ textarea {
   white-space: nowrap;
   border: 0;
 }
-
-
-@import "tailwindcss";

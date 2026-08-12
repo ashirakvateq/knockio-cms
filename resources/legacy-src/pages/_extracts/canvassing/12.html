@@ -1,0 +1,50 @@
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  function getParam(name) {
+    var params = new URLSearchParams(window.location.search);
+    return params.get(name);
+  }
+
+  function getSource() {
+    var source = getParam('source');
+    var utmSource = getParam('utm_source');
+
+    if (source) return source;
+    if (utmSource) return utmSource;
+
+    return 'direct';
+  }
+
+  function buildCheckoutUrl(packageId) {
+    var url = new URL('https://checkout.knockio.com/');
+    var gclid = getParam('gclid');
+    var source = getSource();
+
+    url.searchParams.set('users', '5');
+
+    if (packageId) {
+      url.searchParams.set('package', packageId);
+    }
+
+    if (gclid) {
+      url.searchParams.set('gclid', gclid);
+    }
+
+    if (source) {
+      url.searchParams.set('source', source);
+    }
+
+    return url.toString();
+  }
+
+  document.addEventListener('click', function (e) {
+    var button = e.target.closest('.knockio-checkout-btn');
+    if (!button) return;
+
+    e.preventDefault();
+
+    var packageId = button.getAttribute('data-package');
+    window.location.href = buildCheckoutUrl(packageId);
+  });
+});
+</script>

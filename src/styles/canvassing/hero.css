@@ -1,0 +1,7 @@
+/* Hero uses shared .hero-background from homepage.css (KnockioHomeLayout).
+   Keep page-specific hero tweaks here if the canvassing hero diverges. */
+
+#canvassing-page .hero-background {
+  /* Match live canvassing hero spacing over the shared home background asset. */
+  background-position: center top;
+}

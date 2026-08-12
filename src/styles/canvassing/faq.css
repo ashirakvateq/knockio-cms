@@ -1,0 +1,12 @@
+/* FAQ accordion open/close visuals — home.js toggles [data-open].
+   Icon swap rules live in homepage.css; keep canvassing-only tweaks here. */
+
+#canvassing-page .faq-item a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+#canvassing-page .faq-item a:hover {
+  color: var(--color-primary-500, #43a047);
+}

@@ -1,0 +1,113 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://knockio.com/canvassing/#software",
+      "name": "Knockio Canvassing",
+      "url": "https://knockio.com/canvassing/",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Door-to-Door Canvassing App, Field Sales Software",
+      "operatingSystem": "Web, iOS, Android",
+      "description": "Knockio's canvassing app for door-to-door field sales teams \u2014 territory mapping, route planning, live rep tracking, and lead capture.",
+      "provider": {
+        "@id": "https://knockio.com/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://knockio.com/#software"
+      },
+      "featureList": [
+        "Territory mapping",
+        "Route planning",
+        "Live rep tracking",
+        "Lead capture",
+        "Lead status updates",
+        "Follow-up reminders"
+      ],
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "20.00",
+        "highPrice": "25.00",
+        "priceCurrency": "USD",
+        "url": "https://knockio.com/pricing/"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://knockio.com/canvassing/#webpage",
+      "url": "https://knockio.com/canvassing/",
+      "name": "Best Door to Door Canvassing Software & D2D Sales App | Knockio",
+      "description": "Knockio's door-to-door canvassing app equips field reps with territory mapping, live tracking, route optimization, and lead capture. Knock more doors close more deals.",
+      "isPartOf": {
+        "@id": "https://knockio.com/#website"
+      },
+      "about": {
+        "@id": "https://knockio.com/canvassing/#software"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://knockio.com/canvassing/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://knockio.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Canvassing",
+          "item": "https://knockio.com/canvassing/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://knockio.com/canvassing/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Knockio canvassing software?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Knockio's canvassing app helps field sales teams plan routes, map territories, capture leads at the door, and track rep activity in real time \u2014 everything a door-to-door team needs in one place."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Knockio only for door-to-door sales teams?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Knockio's canvassing app is built specifically for door-to-door reps. Territory mapping, route planning, and lead capture are designed around how canvassing actually works in the field."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Knockio help managers track canvassing teams?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Managers can see live rep locations, monitor territory coverage, review lead status by stage, and track follow-up activity \u2014 without calling reps for updates throughout the day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Knockio different from other canvassing apps like SPOTIO or SalesRabbit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Knockio combines territory mapping, route planning, live rep tracking, and lead capture in one canvassing app \u2014 built for teams who want a faster, simpler alternative to juggling multiple field sales tools."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Knockio work on mobile?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes \u2014 reps can use Knockio's canvassing app from the field on mobile devices to capture leads, update visit status, and add notes or photos in real time."
+          }
+        }
+      ]
+    }
+  ]
+}

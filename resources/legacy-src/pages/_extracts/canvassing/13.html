@@ -1,0 +1,474 @@
+<!-- Knockio Exit Intent Cal.com Modal - 1024px Responsive Two Column -->
+<style>
+  #knockio-exit-modal iframe {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    border: 0 !important;
+  }
+
+  #knockio-exit-modal-card {
+    width: 90%;
+    max-height: calc(100svh - 48px);
+    height: min(720px, calc(100svh - 48px));
+    transform: translateY(14px) scale(0.98);
+    opacity: 0;
+    max-width: 1380px;
+  }
+
+  #knockio-exit-modal.knockio-open #knockio-exit-modal-card {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+
+  #knockio-exit-cal-inline {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  @media (max-width: 1023px) {
+    #knockio-exit-modal-card {
+      width: min(760px, calc(100vw - 24px));
+      height: auto;
+      max-height: calc(100svh - 24px);
+    }
+
+    #knockio-exit-cal-inline {
+      height: 620px;
+      min-height: 620px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    #knockio-exit-modal-card {
+      width: 100%;
+      max-height: calc(100svh - 16px);
+      border-radius: 24px 24px 0 0 !important;
+    }
+
+    #knockio-exit-cal-inline {
+      height: 560px;
+      min-height: 560px;
+    }
+  }
+
+  @media (max-width: 380px) {
+    #knockio-exit-cal-inline {
+      height: 530px;
+      min-height: 530px;
+    }
+  }
+</style>
+
+<div
+  id="knockio-exit-modal"
+  class="fixed inset-0 z-[999999] hidden bg-neutral-950/75 backdrop-blur-md"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="knockio-exit-modal-title"
+  aria-hidden="true"
+>
+  <div class="flex min-h-[100svh] items-end justify-center p-0 sm:items-center sm:p-4 lg:p-6 mt-[50px]">
+
+    <div
+      id="knockio-exit-modal-card"
+      class="relative overflow-hidden rounded-[28px] border border-white/10 bg-white shadow-[0_30px_120px_rgba(0,0,0,0.35)] transition-all duration-300"
+    >
+      <!-- Close Button -->
+      <button
+        type="button"
+        class="absolute right-4 top-4 z-50 flex h-10 w-10 items-center justify-center rounded-full border border-neutral-200 bg-white text-neutral-500 shadow-md transition-all duration-300 hover:border-primary-500/40 hover:text-primary-600"
+        aria-label="Close modal"
+        data-knockio-exit-close
+      >
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+
+      <div class="grid h-full max-h-[inherit] grid-cols-1 overflow-y-auto lg:grid-cols-[36%_64%] lg:overflow-hidden">
+
+        <!-- Left Content -->
+        <aside class="relative overflow-hidden bg-neutral-50 px-5 py-8 sm:px-7 sm:py-9 lg:flex lg:h-full lg:items-center lg:px-8 lg:py-8">
+
+          <!-- Background Effects -->
+          <div class="pointer-events-none absolute -left-24 top-8 h-64 w-64 rounded-full bg-primary-500/10 blur-3xl"></div>
+          <div class="pointer-events-none absolute bottom-0 right-0 h-72 w-72 translate-x-1/3 rounded-full bg-primary-500/10 blur-3xl"></div>
+          <div class="pointer-events-none absolute inset-0 opacity-[0.24] [background-image:linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] [background-size:48px_48px]"></div>
+
+          <div class="relative z-10 max-w-[430px] pr-8 lg:pr-0">
+
+            <!-- Badge -->
+            <div class="mb-4 inline-flex items-center gap-2 rounded-full border border-primary-500/20 bg-primary-500/10 px-3 py-2">
+              <span class="flex h-6 w-6 items-center justify-center rounded-full bg-primary-500 text-[11px] text-white">
+                <i class="fa-solid fa-hand" aria-hidden="true"></i>
+              </span>
+              <span class="text-[10px] font-semibold uppercase tracking-[0.18em] text-primary-700 sm:text-[11px]">
+                Wait, before you go
+              </span>
+            </div>
+
+            <!-- Heading -->
+            <h2
+              id="knockio-exit-modal-title"
+              class="mb-4 text-[30px] font-extrabold leading-[1.08] text-neutral-950 sm:text-[38px] lg:text-[40px]"
+            >
+              Still deciding between Knockio, Jobber, or ServiceTitan?
+            </h2>
+
+            <!-- Paragraph -->
+            <p class="mb-6 text-sm leading-6 text-neutral-600 sm:text-[15px] sm:leading-7">
+              Give us 30 minutes before you do. We'll show you exactly where Knockio is different and let you decide if it's the right fit for your team size and the way you actually work.
+            </p> 
+
+            <!-- Benefits -->
+            <div class="space-y-3">
+              <div class="flex items-start gap-3">
+                <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary-500/10 text-primary-600">
+                  <i class="fa-solid fa-check text-xs" aria-hidden="true"></i>
+                </span>
+                <div>
+                  <h4 class="text-sm font-semibold text-neutral-950">
+                    Complete Field Sales and Service Operations
+                  </h4>
+                  <p class="mt-0.5 text-xs leading-5 text-neutral-600">
+   Manage canvassing, territories, customer records, scheduling, jobs, crews, estimates, invoices, payments, and follow-ups in one connected workflow.
+                  </p> 
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary-500/10 text-primary-600">
+                  <i class="fa-solid fa-check text-xs" aria-hidden="true"></i>
+                </span>
+                <div>
+                  <h4 class="text-sm font-semibold text-neutral-950">
+                    Flexible Pricing Without Enterprise Minimums
+                  </h4>
+                  <p class="mt-0.5 text-xs leading-5 text-neutral-600">
+                    Start with the plan your team needs and scale users, workflows, permissions, automation, and reporting as your operation grows.
+                  </p> 
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary-500/10 text-primary-600">
+                  <i class="fa-solid fa-check text-xs" aria-hidden="true"></i>
+                </span>
+                <div>
+                  <h4 class="text-sm font-semibold text-neutral-950">
+                    One platform, not a patchwork
+                  </h4>
+                  <p class="mt-0.5 text-xs leading-5 text-neutral-600">
+                    CRM, work orders, estimates, invoicing, e-contracts, and payments. Connected from day one.
+                  </p> 
+                </div>
+              </div>
+            </div>
+
+            <!-- Note -->
+            <div class="mt-6 rounded-2xl border border-primary-500/15 bg-white p-4 shadow-sm max-sm:hidden">
+              <div class="flex items-start gap-3">
+                <span class="mt-0.5 text-primary-500">
+                  <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                </span>
+                <p class="text-xs leading-5 text-neutral-600">
+                  Pick a time that works. Our team will walk you through Knockio and answer your questions.
+                </p> 
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+        <!-- Right Calendar -->
+        <main class="flex min-h-[640px] flex-col bg-white px-4 py-6 sm:px-6 sm:py-7 lg:h-full lg:min-h-0 lg:px-7 lg:py-8">
+
+          <!-- Calendar Header 
+          <div class="mb-4 shrink-0 pr-12">
+            <p class="mb-1 text-sm font-medium text-primary-500">
+              Free 30-minute demo
+            </p> 
+            <h3 class="text-2xl font-bold leading-tight text-neutral-950 sm:text-3xl">
+              Choose your meeting time
+            </h3>
+            <p class="mt-1 text-sm leading-6 text-neutral-500">
+              Select a time and we’ll show you how Knockio works.
+            </p> 
+          </div>-->
+
+          <!-- Calendar Wrapper -->
+          <div class="min-h-0 flex-1 overflow-hidden rounded-2xl border border-neutral-200 bg-white p-1.5 shadow-xl shadow-neutral-900/10 sm:p-2">
+            <div id="knockio-exit-cal-inline"></div>
+          </div>
+
+          <!-- Dismiss -->
+          <button
+            type="button"
+            class="mt-3 shrink-0 text-left text-sm font-medium text-neutral-500 transition-colors duration-300 hover:text-neutral-900"
+            data-knockio-exit-close
+          >
+            No thanks, I’ll leave for now
+          </button>
+
+        </main>
+
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+(function () {
+  const STORAGE_KEY = "knockio_exit_demo_modal_seen_this_visit_v5";
+  const DESKTOP_EXIT_ENABLE_DELAY = 3000;
+  const MOBILE_TABLET_AUTO_DELAY = 30000;
+
+  const modal = document.getElementById("knockio-exit-modal");
+  const closeButtons = document.querySelectorAll("[data-knockio-exit-close]");
+
+  if (!modal) return;
+
+  let modalOpen = false;
+  let calLoaded = false;
+  let desktopExitEnabled = false;
+  let mobileTabletTimer = null;
+
+  const mobileTabletQuery = window.matchMedia(
+    "(hover: none), (pointer: coarse), (max-width: 1024px)"
+  );
+
+  function isMobileOrTablet() {
+    return mobileTabletQuery.matches;
+  }
+
+  setTimeout(function () {
+    desktopExitEnabled = true;
+  }, DESKTOP_EXIT_ENABLE_DELAY);
+
+  function hasSeenModalThisVisit() {
+    try {
+      return sessionStorage.getItem(STORAGE_KEY) === "yes";
+    } catch (error) {
+      return false;
+    }
+  }
+
+  function markModalSeenThisVisit() {
+    try {
+      sessionStorage.setItem(STORAGE_KEY, "yes");
+    } catch (error) {}
+  }
+
+  function getQueryParamCaseInsensitive(paramNames) {
+    const urlParams = new URLSearchParams(window.location.search);
+
+    for (const name of paramNames) {
+      const directValue = urlParams.get(name);
+      if (directValue) return directValue;
+    }
+
+    const lowerNames = paramNames.map(function (name) {
+      return name.toLowerCase();
+    });
+
+    for (const [key, value] of urlParams.entries()) {
+      if (lowerNames.includes(key.toLowerCase())) {
+        return value;
+      }
+    }
+
+    return "";
+  }
+
+  function getTrackingParamsForCal() {
+    const trackingParams = new URLSearchParams();
+
+    const customGclid = getQueryParamCaseInsensitive([
+      "gclid",
+      "GCLID",
+      "custom_gclid"
+    ]);
+
+    const utmSource = getQueryParamCaseInsensitive(["utm_source"]);
+    const utmMedium = getQueryParamCaseInsensitive(["utm_medium"]);
+    const utmCampaign = getQueryParamCaseInsensitive(["utm_campaign"]);
+
+    if (customGclid) {
+      trackingParams.set("custom_gclid", customGclid);
+    }
+
+    if (utmSource) {
+      trackingParams.set("utm_source", utmSource);
+    }
+
+    if (utmMedium) {
+      trackingParams.set("utm_medium", utmMedium);
+    }
+
+    if (utmCampaign) {
+      trackingParams.set("utm_campaign", utmCampaign);
+    }
+
+    return trackingParams.toString();
+  }
+
+  function setupCalScript() {
+    (function (C, A, L) {
+      let p = function (a, ar) {
+        a.q.push(ar);
+      };
+
+      let d = C.document;
+
+      C.Cal = C.Cal || function () {
+        let cal = C.Cal;
+        let ar = arguments;
+
+        if (!cal.loaded) {
+          cal.ns = cal.ns || {};
+          cal.q = cal.q || [];
+          d.head.appendChild(d.createElement("script")).src = A;
+          cal.loaded = true;
+        }
+
+        if (ar[0] === L) {
+          const api = function () {
+            p(api, arguments);
+          };
+
+          const namespace = ar[1];
+          api.q = api.q || [];
+
+          if (typeof namespace === "string") {
+            cal.ns[namespace] = cal.ns[namespace] || api;
+            p(cal.ns[namespace], ar);
+            p(cal, ["initNamespace", namespace]);
+          } else {
+            p(cal, ar);
+          }
+
+          return;
+        }
+
+        p(cal, ar);
+      };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
+  }
+
+  function loadCalEmbedOnce() {
+    if (calLoaded) return;
+    calLoaded = true;
+
+    setupCalScript();
+
+    Cal("init", "knockio-exit-demo-compact-v5", {
+      origin: "https://cal.com"
+    });
+
+    let calLink = "knockio-demo/30-minute";
+    const trackingQuery = getTrackingParamsForCal();
+
+    if (trackingQuery) {
+      calLink += "?" + trackingQuery;
+    }
+
+    Cal.ns["knockio-exit-demo-compact-v5"]("inline", {
+      elementOrSelector: "#knockio-exit-cal-inline",
+      config: {
+        layout: "month_view",
+        theme: "light"
+      },
+      calLink: calLink
+    });
+  }
+
+  function openExitModal() {
+    if (modalOpen || hasSeenModalThisVisit()) return;
+
+    modalOpen = true;
+    markModalSeenThisVisit();
+
+    if (mobileTabletTimer) {
+      clearTimeout(mobileTabletTimer);
+      mobileTabletTimer = null;
+    }
+
+    modal.classList.remove("hidden");
+    modal.setAttribute("aria-hidden", "false");
+
+    document.documentElement.classList.add("overflow-hidden");
+    document.body.classList.add("overflow-hidden");
+
+    requestAnimationFrame(function () {
+      modal.classList.add("knockio-open");
+    });
+
+    setTimeout(function () {
+      loadCalEmbedOnce();
+    }, 150);
+  }
+
+  function closeExitModal() {
+    if (!modalOpen) return;
+
+    modalOpen = false;
+    modal.classList.remove("knockio-open");
+
+    setTimeout(function () {
+      modal.classList.add("hidden");
+      modal.setAttribute("aria-hidden", "true");
+
+      document.documentElement.classList.remove("overflow-hidden");
+      document.body.classList.remove("overflow-hidden");
+    }, 250);
+  }
+
+  function scheduleMobileTabletAutoPopup() {
+    if (!isMobileOrTablet() || hasSeenModalThisVisit()) return;
+
+    if (mobileTabletTimer) {
+      clearTimeout(mobileTabletTimer);
+    }
+
+    mobileTabletTimer = setTimeout(function () {
+      if (!modalOpen && !hasSeenModalThisVisit()) {
+        openExitModal();
+      }
+    }, MOBILE_TABLET_AUTO_DELAY);
+  }
+
+  // Desktop: exit intent only.
+  document.addEventListener("mouseout", function (event) {
+    if (isMobileOrTablet()) return;
+    if (!desktopExitEnabled) return;
+
+    if (
+      event.clientY <= 8 &&
+      !event.relatedTarget &&
+      !event.toElement
+    ) {
+      openExitModal();
+    }
+  });
+
+  // Mobile + tablet: show automatically after 30 seconds.
+  scheduleMobileTabletAutoPopup();
+
+  if (mobileTabletQuery.addEventListener) {
+    mobileTabletQuery.addEventListener("change", scheduleMobileTabletAutoPopup);
+  } else if (mobileTabletQuery.addListener) {
+    mobileTabletQuery.addListener(scheduleMobileTabletAutoPopup);
+  }
+
+  closeButtons.forEach(function (button) {
+    button.addEventListener("click", closeExitModal);
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      closeExitModal();
+    }
+  });
+})();
+</script>

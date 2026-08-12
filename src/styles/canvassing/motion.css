@@ -1,0 +1,11 @@
+@media (prefers-reduced-motion: reduce) {
+  #canvassing-page .animate-marquee-left,
+  #canvassing-page .animate-marquee-right {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  #canvassing-page .hover\:scale-\[1\.03\]:hover {
+    transform: none !important;
+  }
+}
