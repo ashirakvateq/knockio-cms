@@ -1,0 +1,330 @@
+<!-- Enhanced Cal.com Script with Lead Source Tracking -->
+<script type="text/javascript">
+(function() {
+  'use strict';
+
+  const CONFIG = {
+    REDIRECT_URL: "https://knockio.com/thank-you/",
+    REDIRECT_DELAY: 3000,
+    OBSERVER_DELAY: 2000,
+    ALLOWED_ORIGINS: ['https://cal.com', 'https://app.cal.com'],
+    DEBUG: false
+  };
+
+  const log = CONFIG.DEBUG ? console.log.bind(console) : function () {};
+  let bookingProcessed = false;
+
+  function getQueryParamCaseInsensitive(paramNames) {
+    const urlParams = new URLSearchParams(window.location.search);
+
+    for (const name of paramNames) {
+      const directValue = urlParams.get(name);
+      if (directValue) return directValue;
+    }
+
+    const lowerNames = paramNames.map(function (name) {
+      return name.toLowerCase();
+    });
+
+    for (const [key, value] of urlParams.entries()) {
+      if (lowerNames.includes(key.toLowerCase())) {
+        return value;
+      }
+    }
+
+    return "";
+  }
+
+  function getLeadSource() {
+    const ref = document.referrer;
+    const urlParams = new URLSearchParams(window.location.search);
+
+    const utmSourceParam = urlParams.get('utm_source');
+    const source = urlParams.get('source');
+
+    if (utmSourceParam) {
+      return utmSourceParam.toLowerCase();
+    }
+
+    if (source) {
+      return source.toLowerCase();
+    }
+
+    if (!ref) {
+      return 'direct';
+    }
+
+    const referrerDomain = ref.toLowerCase();
+
+    if (referrerDomain.includes('facebook.com') || referrerDomain.includes('fb.com')) {
+      return 'facebook';
+    }
+
+    if (referrerDomain.includes('instagram.com')) {
+      return 'instagram';
+    }
+
+    if (referrerDomain.includes('tiktok.com')) {
+      return 'tiktok';
+    }
+
+    if (referrerDomain.includes('linkedin.com')) {
+      return 'linkedin';
+    }
+
+    if (referrerDomain.includes('twitter.com') || referrerDomain.includes('x.com')) {
+      return 'twitter';
+    }
+
+    if (referrerDomain.includes('youtube.com')) {
+      return 'youtube';
+    }
+
+    if (referrerDomain.includes('pinterest.com')) {
+      return 'pinterest';
+    }
+
+    if (referrerDomain.includes('snapchat.com')) {
+      return 'snapchat';
+    }
+
+    if (referrerDomain.includes('google.')) {
+      return 'google';
+    }
+
+    if (referrerDomain.includes('bing.com')) {
+      return 'bing';
+    }
+
+    if (referrerDomain.includes('yahoo.com')) {
+      return 'yahoo';
+    }
+
+    if (referrerDomain.includes('duckduckgo.com')) {
+      return 'duckduckgo';
+    }
+
+    if (referrerDomain.includes('reddit.com')) {
+      return 'reddit';
+    }
+
+    if (referrerDomain.includes('quora.com')) {
+      return 'quora';
+    }
+
+    try {
+      const hostname = new URL(ref).hostname.replace('www.', '');
+      return hostname;
+    } catch (e) {
+      return 'unknown';
+    }
+  }
+
+  const leadSource = getLeadSource();
+
+  function createEmptyBookingData() {
+    return {
+      isLoggedIn: false,
+      id: "",
+      email: "",
+      phone_number: "",
+      first_name: "",
+      last_name: "",
+      business_name: "",
+      street: "",
+      city: "",
+      region: "",
+      country: "",
+      postal_code: ""
+    };
+  }
+
+  function extractBookingData(data) {
+    const bookingData = createEmptyBookingData();
+
+    if (!data) {
+      return bookingData;
+    }
+
+    bookingData.id = data.id || "";
+
+    if (data.email) {
+      bookingData.email = data.email;
+    } else if (data.attendees && data.attendees[0] && data.attendees[0].email) {
+      bookingData.email = data.attendees[0].email;
+    }
+
+    if (data['Phone-Number'] || data['phone-number'] || data.phone) {
+      bookingData.phone_number = data['Phone-Number'] || data['phone-number'] || data.phone;
+    } else if (data.responses) {
+      bookingData.phone_number =
+        data.responses['Phone Number'] ||
+        data.responses['Phone-Number'] ||
+        data.responses.phone ||
+        "";
+    }
+
+    if (data.name) {
+      const nameParts = data.name.split(' ');
+      bookingData.first_name = nameParts[0] || "";
+      bookingData.last_name = nameParts.slice(1).join(' ') || "";
+    } else if (data.attendees && data.attendees[0] && data.attendees[0].name) {
+      const nameParts = data.attendees[0].name.split(' ');
+      bookingData.first_name = nameParts[0] || "";
+      bookingData.last_name = nameParts.slice(1).join(' ') || "";
+    }
+
+    if (data['Business-Name'] || data.businessName) {
+      bookingData.business_name = data['Business-Name'] || data.businessName;
+    } else if (data.responses) {
+      bookingData.business_name =
+        data.responses['Business Name'] ||
+        data.responses['Business-Name'] ||
+        data.responses.businessName ||
+        "";
+    }
+
+    return bookingData;
+  }
+
+  function pushBookingToDataLayer(bookingData, eventSource = 'cal.com') {
+    console.log('pushBookingToDataLayer', bookingData);
+
+    if (bookingProcessed) {
+      log("Booking already processed, skipping duplicate");
+      return;
+    }
+
+    bookingProcessed = true;
+
+    window.dataLayer = window.dataLayer || [];
+
+    window.dataLayer.push({
+      event: "user_data",
+      user_data: bookingData
+    });
+
+    window.dataLayer.push({
+      event: "generate_lead",
+      lead_source: leadSource,
+      booking_source: eventSource,
+      currency: "USD",
+      value: 1
+    });
+
+    setTimeout(function() {
+      window.location.href = CONFIG.REDIRECT_URL;
+    }, CONFIG.REDIRECT_DELAY);
+  }
+
+  if (typeof Cal !== 'undefined') {
+    Cal("on", {
+      action: "bookingSuccessful",
+      callback: function(e) {
+        console.log("Message from Calcom1", e.detail);
+        const bookingData = extractBookingData(e.detail);
+        pushBookingToDataLayer(bookingData, 'cal.com-api');
+      }
+    });
+  }
+
+  window.addEventListener('message', function(e) {
+    if (!CONFIG.ALLOWED_ORIGINS.includes(e.origin)) {
+      return;
+    }
+
+    log("Message from Cal.com:", e.data);
+
+    if (e.data && e.data.type === 'bookingSuccessful') {
+      const booking = e.data && e.data.data && e.data.data.booking ? e.data.data.booking : null;
+      console.log("Message from Calcom2", booking);
+      const bookingData = extractBookingData(booking);
+      pushBookingToDataLayer(bookingData, 'cal.com-message');
+    }
+  });
+
+  const observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      mutation.addedNodes.forEach(function(node) {
+        if (node.nodeType === 1) {
+          const text = node.textContent || node.innerText;
+
+          if (text && text.includes('This meeting is scheduled')) {
+            log("=== SUCCESS MESSAGE DETECTED IN DOM ===");
+
+            setTimeout(function() {
+              parseBookingFromDOM();
+            }, 1000);
+          }
+        }
+      });
+    });
+  });
+
+  function parseBookingFromDOM() {
+    const iframe = document.querySelector('#my-cal-inline iframe');
+
+    if (!iframe) return;
+
+    try {
+      const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+      const allText = iframeDoc.body.textContent || iframeDoc.body.innerText;
+
+      const bookingData = createEmptyBookingData();
+
+      const phoneMatch = allText.match(/\+?\d{1,4}[-.\s]?\(?\d{1,3}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}/);
+
+      if (phoneMatch) {
+        bookingData.phone_number = phoneMatch[0];
+      }
+
+      const emailMatch = allText.match(/\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/g);
+
+      if (emailMatch) {
+        const customerEmail = emailMatch.find(function(email) {
+          return !email.includes('knockio') &&
+                 !email.includes('cal.com') &&
+                 !email.includes('noreply');
+        });
+
+        if (customerEmail) {
+          bookingData.email = customerEmail;
+        }
+      }
+
+      const businessMatch = allText.match(/Business Name[:\s]*([^\n\r]+)/i);
+
+      if (businessMatch && businessMatch[1]) {
+        bookingData.business_name = businessMatch[1].trim();
+      }
+
+      if (bookingData.email || bookingData.phone_number) {
+        pushBookingToDataLayer(bookingData, 'cal.com-dom');
+      }
+
+    } catch (e) {
+      const basicData = createEmptyBookingData();
+      pushBookingToDataLayer(basicData, 'cal.com-cors-limited');
+    }
+  }
+
+  setTimeout(function() {
+    const targetNode = document.getElementById('my-cal-inline');
+
+    if (targetNode) {
+      observer.observe(targetNode, {
+        childList: true,
+        subtree: true
+      });
+
+      log("DOM observer started");
+    }
+  }, CONFIG.OBSERVER_DELAY);
+
+  log("Cal.com booking tracker initialized", {
+    leadSource: leadSource,
+    currentUrl: window.location.href
+  });
+
+})();
+</script>

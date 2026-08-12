@@ -1,0 +1,395 @@
+<!-- =========================================
+     KNOCKIO FIXED NAVBAR + MEGA MENUS
+     Requires:
+     1. Tailwind CSS
+     2. Font Awesome
+     ========================================= -->
+
+<style>
+  #mainNavbar {
+    isolation: isolate;
+  }
+
+  #mainNavbar.navbar-scrolled {
+    background: rgba(12, 26, 15, 0.96);
+    box-shadow: 0 12px 32px -24px rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  /* Active direct navbar link */
+  #mainNavbar .nav-link-active {
+    background: rgba(255, 255, 255, 0.12);
+    color: #7fc96f;
+  }
+
+  /* Active Features or Industries parent trigger */
+  #mainNavbar .desktop-menu-trigger.is-active {
+    background: rgba(255, 255, 255, 0.12);
+    color: #7fc96f;
+  }
+
+  /* Active link inside a desktop mega menu */
+  #mainNavbar .mega-link-active {
+    border-color: #cce8c5 !important;
+    background: #f0f8ee !important;
+    color: #38782d !important;
+  }
+
+  #mainNavbar .mega-link-active:not(.coming-soon-link) > span:first-child {
+    background: #4f9142 !important;
+    color: #ffffff !important;
+  }
+
+  /* Coming-soon links keep the same simple styling as standard menu links. */
+  #mainNavbar .coming-soon-link.mega-link-active,
+  #mobileSidebar .coming-soon-link.mobile-link-active {
+    border-color: transparent !important;
+    background: transparent !important;
+    color: #0f172a !important;
+  }
+
+  #mainNavbar .coming-soon-link.mega-link-active > span:first-child,
+  #mobileSidebar .coming-soon-link.mobile-link-active > span:first-child {
+    background: #eef7eb !important;
+    color: #38782d !important;
+  }
+
+  /* Active mobile navigation link */
+  #mobileSidebar .mobile-link-active {
+    border-color: #cce8c5 !important;
+    background: #f0f8ee !important;
+    color: #38782d !important;
+  }
+
+  /* Active mobile parent accordion */
+  #mobileSidebar .mobile-accordion-toggle.is-active {
+    background: #f0f8ee;
+  }
+
+  #mobileSidebar .mobile-accordion-toggle.is-active > span > span:first-child {
+    background: #4f9142;
+    color: #ffffff;
+  }
+
+  #mobileSidebar .mobile-accordion-toggle.is-active .text-neutral-950 {
+    color: #38782d;
+  }
+
+  .desktop-dropdown:hover > .desktop-mega-menu,
+  .desktop-dropdown:focus-within > .desktop-mega-menu,
+  .desktop-dropdown.is-open > .desktop-mega-menu {
+    visibility: visible;
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  .desktop-dropdown:hover > .desktop-mega-menu > .desktop-mega-menu-panel,
+  .desktop-dropdown:focus-within > .desktop-mega-menu > .desktop-mega-menu-panel,
+  .desktop-dropdown.is-open > .desktop-mega-menu > .desktop-mega-menu-panel {
+    transform: translateY(0);
+  }
+
+  .desktop-dropdown:hover > .desktop-menu-trigger .dropdown-chevron,
+  .desktop-dropdown:focus-within > .desktop-menu-trigger .dropdown-chevron,
+  .desktop-dropdown.is-open > .desktop-menu-trigger .dropdown-chevron {
+    transform: rotate(180deg);
+  }
+
+  #mainNavbar p,
+  #mainNavbar h4 {
+    margin: 0;
+  }
+
+  .knockio-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #b9cfb4 transparent;
+  }
+
+  .knockio-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .knockio-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .knockio-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: #b9cfb4;
+  }
+
+  body.admin-bar #mainNavbar {
+    top: 32px;
+  }
+
+  @media (max-width: 782px) {
+    body.admin-bar #mainNavbar {
+      top: 46px;
+    }
+  }
+
+  /* Center every desktop dropdown against the full viewport/header, not its trigger.
+     This prevents wide mega menus from being clipped off the left edge. */
+  #mainNavbar .my-container {
+    position: relative;
+  }
+
+  #mainNavbar .desktop-dropdown {
+    position: static !important;
+  }
+
+  #mainNavbar .desktop-mega-menu {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    max-width: calc(100vw - 24px);
+  }
+
+  #mainNavbar .desktop-mega-menu-panel {
+    max-height: calc(100vh - 110px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: #b9cfb4 transparent;
+  }
+
+  #mainNavbar .desktop-mega-menu-panel::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  #mainNavbar .desktop-mega-menu-panel::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: #b9cfb4;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #mainNavbar,
+    #mainNavbar *,
+    #mobileSidebar,
+    #mobileMenuOverlay {
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+
+  /* Wider features mega menu with a dedicated Marketing column */
+  #featuresMegaMenu {
+    max-width: calc(100vw - 32px);
+  }
+
+  #featuresMegaMenu .features-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 330px;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+
+  #featuresMegaMenu .features-links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  #featuresMegaMenu .marketing-column {
+    min-width: 0;
+    border-left: 2px solid #dfe5dc;
+    padding-left: 1.5rem;
+  }
+
+  .coming-soon-link {
+    cursor: default;
+  }
+
+  .coming-soon-link:hover,
+  .coming-soon-link:focus-visible {
+    border-color: #d8efd2 !important;
+    background: #f4faf2 !important;
+  }
+
+  .coming-soon-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: #eef7eb;
+    padding: 0.2rem 0.55rem;
+    color: #38782d;
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  body.knockio-mobile-menu-open {
+    overflow: hidden !important;
+    overscroll-behavior: none;
+  }
+
+  body.admin-bar #mobileSidebar {
+    top: 32px;
+    height: calc(100dvh - 32px);
+  }
+
+  /* Mobile dropdowns use their own display state instead of relying on
+     Tailwind's hidden utility, which can be unreliable inside cached Divi code. */
+  #mobileSidebar .mobile-submenu {
+    display: none;
+  }
+
+  #mobileSidebar .mobile-submenu.is-open {
+    display: block;
+  }
+
+  /* The whole mobile menu scrolls, including the CTA buttons. The extra bottom
+     clearance lets the buttons scroll above floating chat widgets. */
+  #mobileSidebar .mobile-menu-scroll {
+    padding-bottom: calc(9rem + env(safe-area-inset-bottom));
+  }
+
+  #mobileSidebar .mobile-menu-ctas {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  #mobileSidebar .mobile-menu-bottom-spacer {
+    height: 2rem;
+  }
+
+  /* Keep the open navigation above third-party floating widgets. */
+  #mobileMenuOverlay {
+    z-index: 2147483646 !important;
+  }
+
+  #mobileSidebar {
+    z-index: 2147483647 !important;
+  }
+
+  @media (max-width: 1380px) and (min-width: 1181px) {
+    #featuresMegaMenu {
+      width: calc(100vw - 24px) !important;
+    }
+
+    #featuresMegaMenu .features-layout {
+      grid-template-columns: minmax(0, 1fr) 280px;
+      gap: 1rem;
+    }
+
+    #featuresMegaMenu .features-links-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #featuresMegaMenu .marketing-column {
+      padding-left: 1rem;
+    }
+  }
+
+  @media (max-height: 760px) and (min-width: 1181px) {
+    #mainNavbar .desktop-mega-menu-panel {
+      max-height: calc(100vh - 88px);
+    }
+
+    #featuresMegaMenu .features-links-grid a {
+      min-height: 62px;
+      padding-top: 0.6rem;
+      padding-bottom: 0.6rem;
+    }
+  }
+
+  @media (max-width: 782px) {
+    body.admin-bar #mobileSidebar {
+      top: 46px;
+      height: calc(100dvh - 46px);
+    }
+  }
+
+</style>
+
+<!-- NAVBAR -->
+<header
+  id="mainNavbar"
+  class="fixed inset-x-0 top-0 z-[60] w-full bg-[linear-gradient(180deg,rgba(0,0,0,0.92)_0%,rgba(0,0,0,0.42)_58%,rgba(0,0,0,0)_100%)] py-5 transition-[background-color,padding,box-shadow,backdrop-filter] duration-300 ease-out max-[1180px]:py-3"
+>
+  <div class="my-container mx-auto flex items-center justify-between gap-6">
+    <!-- LOGO -->
+    <a
+      style="background:transparent!important"
+      href="https://knockio.com/"
+      class="inline-flex shrink-0 items-center !bg-transparent"
+      aria-label="Knockio home"
+    >
+      <img decoding="async"
+        src="https://knockio.com/wp-content/uploads/2026/05/knockio-logo.webp"
+        alt="Knockio"
+        class="h-9 w-56 object-contain max-[1280px]:w-48 max-[1100px]:w-44"
+      />
+    </a>
+
+    <!-- DESKTOP NAVIGATION -->
+    <nav class="max-[1180px]:hidden" aria-label="Main navigation">
+      <ul class="m-0 flex !list-none items-center gap-1 !p-0">
+        <!-- PRODUCTS -->
+        <li class="desktop-dropdown relative">
+          <button
+            type="button"
+            class="desktop-menu-trigger flex items-center gap-2 rounded-lg px-3 py-2 text-[15px] font-semibold text-white transition-colors duration-200 hover:bg-white/10 hover:text-primary-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400"
+            aria-expanded="false"
+            aria-controls="productsMegaMenu"
+          >
+            <span>Products</span>
+            <i
+              class="dropdown-chevron fa-solid fa-chevron-down text-[10px] transition-transform duration-200"
+              aria-hidden="true"
+            ></i>
+          </button>
+
+          <div
+            id="productsMegaMenu"
+            class="desktop-mega-menu invisible pointer-events-none absolute left-1/2 top-full z-50 w-[min(620px,calc(100vw-24px))] -translate-x-1/2 pt-4 opacity-0 transition-all duration-200 ease-out"
+            role="region"
+            aria-label="Products menu"
+          >
+            <div
+              class="desktop-mega-menu-panel knockio-scrollbar translate-y-2 overflow-x-hidden overflow-y-auto rounded-2xl border border-solid border-neutral-200 bg-white p-4 shadow-[0_26px_75px_-22px_rgba(15,23,42,0.42)] ring-1 ring-black/5 transition-transform duration-200"
+            >
+<div class="mb-3 border-b border-solid border-neutral-100 px-2 pb-3">
+                <p class="text-xs font-bold uppercase tracking-[0.12em] text-primary-600">
+                  Knockio Products
+                </p> 
+                <p class="mt-1 text-sm leading-5 text-neutral-500">
+                  Choose the workflow built for your team.
+                </p> 
+              </div>
+
+              <div class="grid grid-cols-2 gap-3">
+                <a
+                  href="https://knockio.com/canvassing/"
+                  class="group/item flex min-h-[72px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2] focus:outline-none focus-visible:border-primary-500 focus-visible:ring-2 focus-visible:ring-primary-100"
+                >
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-base text-primary-600 transition duration-200 group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-person-walking-arrow-right"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold leading-5 text-neutral-900">
+                    Door to Door Canvassing Software
+                  </span>
+                </a>
+
+                <a
+                  href="https://knockio.com/field-service-crm/"
+                  class="group/item flex min-h-[72px] items-center gap-3 rounded-xl border border-solid border-transparent p-3 transition-all duration-200 hover:border-[#D8EFD2] hover:bg-[#F4FAF2] focus:outline-none focus-visible:border-primary-500 focus-visible:ring-2 focus-visible:ring-primary-100"
+                >
+                  <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#EEF7EB] text-base text-primary-600 transition duration-200 group-hover/item:bg-primary-500 group-hover/item:text-white">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                  </span>
+                  <span class="text-[15px] font-semibold leading-5 text-neutral-900">
+                    Field Service CRM
+                  </span>
+                </a>
+              

@@ -1,0 +1,15 @@
+/* Testimonial marquee uses homepage.css keyframes (.animate-marquee-*). */
+
+#field-service-crm-page .testimonial-track-container {
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 4%,
+    #000 96%,
+    transparent
+  );
+}
+
+#field-service-crm-page .testimonial-track {
+  width: max-content;
+}

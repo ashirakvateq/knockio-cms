@@ -1,0 +1,11 @@
+@media (prefers-reduced-motion: reduce) {
+  #field-service-crm-page .animate-marquee-left,
+  #field-service-crm-page .animate-marquee-right {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  #field-service-crm-page .hover\:scale-\[1\.03\]:hover {
+    transform: none !important;
+  }
+}

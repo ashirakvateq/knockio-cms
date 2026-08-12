@@ -1,0 +1,11 @@
+/* FAQ accordion open/close visuals — home.js toggles [data-open]. */
+
+#field-service-crm-page .faq-item a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+#field-service-crm-page .faq-item a:hover {
+  color: var(--color-primary-500, #43a047);
+}

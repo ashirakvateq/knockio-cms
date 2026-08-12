@@ -1,0 +1,5 @@
+/* Field Service CRM landing — page-only styles (Tailwind covers layout). */
+@import "./hero.css";
+@import "./testimonials.css";
+@import "./faq.css";
+@import "./motion.css";

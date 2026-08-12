@@ -1,0 +1,5 @@
+/* Hero uses shared .hero-background from homepage.css (KnockioHomeLayout). */
+
+#field-service-crm-page .hero-background {
+  background-position: center top;
+}
