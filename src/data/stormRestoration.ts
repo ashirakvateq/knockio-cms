@@ -6,7 +6,7 @@ export const stormHero = {
   titleBreak1: 'Before Your Rep Leaves',
   titleBreak2: 'The Driveway',
   description:
-    'Jobs are lost after the rep leaves, photos stuck in camera rolls, agreements buried in texts, and the pipeline goes dark the moment the rep drives away.',
+    `Storm teams don't lose jobs at the door. They lose them in the weeks after. Photos in camera rolls, agreements in texts, a pipeline that goes dark when the rep drives away. Knockio keeps it all on one platform until the last check clears.`,
   image: `${base}/restoration-hero.webp`,
   imageWidth: 2560,
   imageHeight: 2044,
@@ -30,21 +30,21 @@ export const stormCycleCards = [
   },
   {
     title: 'Damage Documentation',
-    copy: 'Photos, notes, and door outcome logged in seconds tied to the lead, not a camera roll or a WhatsApp thread.',
+    copy: 'Photos, notes, and door outcome logged in seconds. Tied to the lead, not a camera roll or a WhatsApp thread. The evidence your adjuster needs, captured at the door.',
     image: `${baseGlob}/05_1.webp`,
     width: 290,
     height: 272,
   },
   {
-    title: 'Sign the Contingency',
-    copy: 'Contingency agreed and signed at the door, before the homeowner cools down.',
-    image: `${baseGlob}/10.webp`,
+    title: 'Sign the Contingency on the Porch',
+    copy: 'Contingency agreed and signed at the door, before the homeowner cools down or another contractor gets there first.',
+    image: `${baseGlob}/07_1.webp`,
     width: 325,
     height: 254,
   },
   {
-    title: 'Track Payments / Completion',
-    copy: 'ACV received. Depreciation pending. Know exactly where every dollar stands without a spreadsheet on the side.',
+    title: 'Track Payments',
+    copy: 'ACV received. Depreciation pending. Know exactly where every dollar stands without a spreadsheet on the side. Because the second check doesn\'t release itself.',
     image: `${baseGlob}/09.webp`,
     width: 300,
     height: 245,
@@ -61,32 +61,54 @@ export const stormTestimonial = {
 
 export const workflowGroups = [
   {
-    title: 'Field Sales',
+    title: 'Canvass',
     items: [
-      { icon: 'MapPin', title: 'Territory Assignment', copy: 'Assign streets and neighborhoods before your reps leave the lot.' },
-      { icon: 'Radio', title: 'Live Rep Tracking', copy: 'See every rep\u2019s real-time location and activity on the map.' },
-      { icon: 'BarChart3', title: 'Rep Performance', copy: 'Measure doors knocked, leads, conversations, and jobs.' },
-      { icon: 'MessageSquare', title: 'Communications', copy: 'Text, call, and email homeowners from one place. All conversations are logged.' },
+      { icon: 'MapPin', title: 'Territory Assignment', copy: 'Unlimited territories and storm campaigns' },
+      { icon: 'Radio', title: 'Live Rep Tracking', copy: 'Assign streets before reps leave the lot' },
+      { icon: 'BarChart3', title: 'Rep Performance', copy: 'Pre-knocked and storm-hit address import' },
+      { icon: 'MessageSquare', title: 'Communications', copy: 'Live rep tracking on a shared map.' },
     ],
   },
   {
-    title: 'Restoration Workflow',
+    title: 'Document',
     items: [
-      { icon: 'Camera', title: 'Damage Documentation', copy: 'Capture photos, videos, notes, and homeowner details in seconds.' },
-      { icon: 'FileSignature', title: 'Contingency Signing', copy: 'Legally binding e-signatures captured on-site, even offline.' },
-      { icon: 'ClipboardList', title: 'Work Order Creation', copy: 'Convert signed agreements into work orders and jobs with one tap.' },
-      { icon: 'FolderOpen', title: 'Document Storage', copy: 'Store photos, contracts, invoices, and all job files tied to one record.' },
+      { icon: 'Camera', title: 'Damage Documentation', copy: 'Damage photos and video logged in seconds' },
+      { icon: 'FileSignature', title: 'Contingency Signing', copy: 'Notes and homeowner details tied to the lead' },
+      { icon: 'ClipboardList', title: 'Adjuster Gap Follow-Up', copy: 'Everything attached before the rep leaves the street' },
+      { icon: 'FolderOpen', title: 'Your Crew Already Knows the Job', copy: 'Photos ready for the adjuster before he arrives' },
     ],
   },
   {
-    title: 'Business Control',
+    title: 'Close and Wait',
     items: [
-      { icon: 'DollarSign', title: 'ACV Tracking', copy: 'Track Actual Cash Value payments as soon as they\u2019re received.' },
-      { icon: 'TrendingDown', title: 'Depreciation Tracking', copy: 'Track depreciation and final recoverable amounts separately.' },
-      { icon: 'LayoutDashboard', title: 'Campaign Reporting', copy: 'Dashboards. See what\u2019s winning campaigns, reps, markets.' },
-      { icon: 'CreditCard', title: 'Payment Processing', copy: 'Pay vendors. Collect payments. Every transaction tied to the job.' },
+      { icon: 'DollarSign', title: 'ACV Tracking', copy: 'Contingency signed at the door, even offline' },
+      { icon: 'TrendingDown', title: 'Depreciation Tracking', copy: 'Automated follow-up through the adjuster gap' },
+      { icon: 'LayoutDashboard', title: 'Campaign Reporting', copy: 'Appointments and reminders on a schedule, not memory' },
+      { icon: 'CreditCard', title: 'Payment Processing', copy: 'Job status visible to the whole team' },
     ],
   },
+  {
+    title: 'Collect',
+    items: [
+      { icon: 'DollarSign', title: 'ACV Tracking', copy: 'ACV logged the day it lands' },
+      { icon: 'TrendingDown', title: 'Depreciation Tracking', copy: 'Depreciation tracked separately on the same job' },
+      { icon: 'LayoutDashboard', title: 'Campaign Reporting', copy: 'Completion photos and final invoice attached, ready to submit' },
+      { icon: 'CreditCard', title: 'Payment Processing', copy: 'Every dollar in and still owed, on one record' },
+    ],
+  },
+];
+
+
+export const stormRestorationChecklist= [
+  "Assign and manage unlimited territories from the admin dashboard",
+  "Track reps live on a shared map, no check-in calls needed",
+  "Log damage photos, video, and notes from the field in seconds",
+  "Get the contingency signed at the door, even without signal",
+  "Keep homeowners warm through the weeks before the adjuster arrives",
+  "Hand the crew a job that already has photos, scope, and signed docs",
+  "Track ACV and depreciation separately against the same job",
+  "Submit completion photos and the final invoice without chasing anyone",
+  "Run reports by rep, territory, or storm campaign"
 ];
 
 export const stormPricingPlans = [
@@ -161,7 +183,7 @@ export const stormFaqs = [
   {
     question: 'Will my reps actually use it?',
     answer:
-      'Logging a door takes under 10 seconds \u2014 outcome, photo, done. Built for reps moving fast between houses. Most teams have reps logging live the same day.',
+      'Logging a door takes under 10 seconds. Outcome, photo, done.',
   },
   {
     question: 'Is there a contract?',
@@ -171,12 +193,12 @@ export const stormFaqs = [
   {
     question: 'How is Knockio different from JobNimbus or AccuLynx?',
     answer:
-      'JobNimbus and AccuLynx handle the office side of roofing well \u2014 production, project management, invoicing. Neither owns the door. Knockio starts at the knock: territory assignment, live rep tracking, damage documentation, contingency signing, adjuster gap follow-up, and payment tracking \u2014 all in one platform. JobNimbus outsources canvassing to a separate tool. Knockio builds it natively.',
+      'JobNimbus and AccuLynx handle the office side of roofing well. Production, project management, invoicing. Neither owns the door. Knockio starts at the knock. Territory assignment, live rep tracking, damage documentation, contingency signing, adjuster gap follow-up, and payment tracking. One platform. JobNimbus outsources canvassing to a separate tool. Knockio builds it natively.',
   },
   {
-    question: 'Does Knockio track both insurance payments \u2014 ACV and depreciation?',
+    question: 'Does Knockio track both insurance payments ACV and depreciation?',
     answer:
-      'Yes. ACV and depreciation are logged separately against the same job record \u2014 what\u2019s been received, what\u2019s still pending, all in one place. When it\u2019s time to release the depreciation, the completion photos and final invoice are already attached to the job. Submit directly from Knockio. No separate spreadsheet, no chasing reps for payment status.',
+      'Yes. ACV and depreciation are logged separately against the same job. What\'s been received, what\'s still pending. All in one place. When it\u2019s time to release the depreciation, the completion photos and final invoice are already attached to the job. Submit directly from Knockio. No separate spreadsheet, no chasing reps for payment status.',
   },
   {
     question: 'What happens to our data if a rep leaves mid-season?',

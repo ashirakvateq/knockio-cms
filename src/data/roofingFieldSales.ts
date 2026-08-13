@@ -1,14 +1,14 @@
 
-const base = '/assets/storm-restoration-roofing';
-const shared = '/assets/canvassing-app';
-const baseGlob = '/assets/cfw';
+export const base = '/assets/storm-restoration-roofing';
+export const shared = '/assets/canvassing-app';
+export const baseGlob = '/assets/cfw';
 
 export const roofingHero = {
   title: 'The Field Sales',
   titleBreak1: 'Platform Built for',
   titleBreak2: 'Roofing Teams',
   description:
-    'You want your first estimate & signed contingency to win. Knockio keeps your team & the job organized. Territory to door to signed agreement. Nothing slows down the close.',
+    'In retail roofing, the first estimate wins. In insurance work, the first signed contingency wins. Either way, Knockio keeps your team organized. Territory to door to signed agreement. Nothing slows down the close.',
   image: `${base}/restoration-hero.webp`,
   imageWidth: 2560,
   imageHeight: 2044,
@@ -26,7 +26,7 @@ export const roofingCycleCards = [
   {
     title: 'Territory Intelligence',
     copy: 'Know which streets to knock before reps leave the lot. Assign boundaries. Eliminate overlap. Put every rep exactly where the opportunity is. When a rep moves on, every door they knocked stays with you.',
-    image: `${baseGlob}/022.webp`,
+    image: `${baseGlob}/011.webp`,
     width: 365,
     height: 285,
   },
@@ -45,7 +45,7 @@ export const roofingCycleCards = [
     height: 254,
   },
   {
-    title: 'Track Payments / Completion',
+    title: 'Retail and Insurance Jobs. One Platform.',
     copy: 'Retail invoice or split insurance payment, both tracked against the same job, start to finish. ACV received, depreciation pending. Because the second check doesn\'t release itself.',
     image: `${baseGlob}/09.webp`,
     width: 300,
@@ -63,32 +63,55 @@ export const roofingTestimonial = {
 
 export const workflowGroups = [
   {
-    title: 'Field Sales',
+    title: 'Canvass',
     items: [
-      { icon: 'MapPin', title: 'Territory Assignment', copy: 'Assign streets and neighborhoods before your reps leave the lot.' },
-      { icon: 'Radio', title: 'Live Rep Tracking', copy: 'See every rep\u2019s real-time location and activity on the map.' },
-      { icon: 'BarChart3', title: 'Rep Performance', copy: 'Measure doors knocked, leads, conversations, and jobs.' },
-      { icon: 'MessageSquare', title: 'Communications', copy: 'Text, call, and email homeowners from one place. All conversations are logged.' },
+      { icon: 'MapPin', title: 'Territory Assignment', copy: 'Unlimited territories and neighborhood campaigns' },
+      { icon: 'Radio', title: 'Live Rep Tracking', copy: 'Assign streets before reps leave the lot' },
+      { icon: 'BarChart3', title: 'Rep Performance', copy: 'Pre-knocked and storm-hit address import' },
+      { icon: 'MessageSquare', title: 'Communications', copy: 'Live rep tracking on a shared map' },
     ],
   },
   {
-    title: 'Restoration Workflow',
+    title: 'Document',
     items: [
-      { icon: 'Camera', title: 'Damage Documentation', copy: 'Capture photos, videos, notes, and homeowner details in seconds.' },
-      { icon: 'FileSignature', title: 'Contingency Signing', copy: 'Legally binding e-signatures captured on-site, even offline.' },
-      { icon: 'ClipboardList', title: 'Work Order Creation', copy: 'Convert signed agreements into work orders and jobs with one tap.' },
-      { icon: 'FolderOpen', title: 'Document Storage', copy: 'Store photos, contracts, invoices, and all job files tied to one record.' },
+      { icon: 'Camera', title: 'Damage Documentation', copy: 'Roof and damage photos logged in seconds' },
+      { icon: 'FileSignature', title: 'Contingency Signing', copy: 'Notes and homeowner details tied to the lead' },
+      { icon: 'ClipboardList', title: 'Work Order Creation', copy: 'Everything attached before the rep leaves the street' },
+      { icon: 'FolderOpen', title: 'Document Storage', copy: 'Photos ready for the adjuster or the estimate' },
     ],
   },
+  
   {
-    title: 'Business Control',
+    title: 'Close',
     items: [
-      { icon: 'DollarSign', title: 'ACV Tracking', copy: 'Track Actual Cash Value payments as soon as they\u2019re received.' },
-      { icon: 'TrendingDown', title: 'Depreciation Tracking', copy: 'Track depreciation and final recoverable amounts separately.' },
-      { icon: 'LayoutDashboard', title: 'Campaign Reporting', copy: 'Dashboards. See what\u2019s winning campaigns, reps, markets.' },
-      { icon: 'CreditCard', title: 'Payment Processing', copy: 'Pay vendors. Collect payments. Every transaction tied to the job.' },
+      { icon: 'Camera', title: 'Damage Documentation', copy: 'Branded estimates built at the driveway' },
+      { icon: 'FileSignature', title: 'Contingency Signing', copy: 'Retail contracts and contingencies signed at the door' },
+      { icon: 'ClipboardList', title: 'Work Order Creation', copy: 'Follow-up while he shops quotes or waits on the adjuster' },
+      { icon: 'FolderOpen', title: 'Document Storage', copy: 'The crew gets a job with photos, scope, and signed docs' },
     ],
   },
+
+  {
+    title: 'Collect',
+    items: [
+      { icon: 'DollarSign', title: 'ACV Tracking', copy: 'Retail invoices sent the same day.' },
+      { icon: 'TrendingDown', title: 'Depreciation Tracking', copy: 'ACV logged the day it lands.' },
+      { icon: 'LayoutDashboard', title: 'Campaign Reporting', copy: 'Depreciation tracked separately on the same job' },
+      { icon: 'CreditCard', title: 'Payment Processing', copy: 'Every dollar in and still owed, on one record' },
+    ],
+  },
+];
+
+export const roofingFieldChecklist= [
+  "Assign and manage unlimited territories from the admin dashboard",
+  "Track reps live on a shared map, no check -in calls needed",
+  "Log roof photos, damage notes, and outcomes from the field in seconds",
+  "Get the estimate out or the contingency signed before you leave the driveway",
+  "Keep homeowners warm while they shop quotes or wait on the adjuster",
+  "Hand the crew a job that already has photos, scope, and signed docs",
+  "Send retail invoices the same day the work is done",
+  "Track ACV and depreciation separately against the same insurance job",
+  "Run reports by rep, territory, or campaign"
 ];
 
 export const roofingWorkSteps = [
@@ -109,7 +132,7 @@ export const roofingWorkSteps = [
   {
     image: `${shared}/work-img3.webp`,
     title: 'Real support from real people',
-    copy: 'Direct access to the team, including the founder. No ticket queues, no offshore tiers, no chatbot. You talk to a person. Most issues resolved the same day.',
+    copy: 'Get help from the people who build and run Knockio. No chatbots, no ticket queues, no handoffs between tiers. You talk to a person who can actually fix it. Most issues resolved the same day.',
     width: 713,
     height: 376,
   },

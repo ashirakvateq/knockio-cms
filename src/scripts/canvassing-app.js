@@ -1,5 +1,21 @@
 const CHECKOUT_BASE = 'https://checkout.knockio.com/';
 
+import Lenis from "lenis";
+
+const lenis = new Lenis({
+  duration: 1.2, // higher = slower/smoother
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  smoothWheel: true,
+  wheelMultiplier: 0.3, // tune this for "how much per swipe"
+  touchMultiplier: 0.3,
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
 function getParamCaseInsensitive(names) {
   const params = new URLSearchParams(window.location.search);
 

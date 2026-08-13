@@ -359,26 +359,28 @@
   }
 }
 
-.platform-section::before {
+.platform-section::before,
+.kn-cycle::before {
   content: "";
   position: absolute;
   background-image: url("/assets/canvassing-app/platform-bg-new1.png");
   width: 100%;
   height: 100%;
-  top: 0;
+  top: -6rem;
   z-index: 0;
   left: 0;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.platform-section::after {
+.platform-section::after,
+.kn-cycle::after {
   content: "";
   position: absolute;
   background-image: url("/assets/canvassing-app/platform-bg-bottom-scaled.png");
   width: 100%;
   height: 200px;
-  bottom: -60px;
+  bottom: -8px;
   left: 0;
   background-size: cover;
   background-repeat: no-repeat;
@@ -743,6 +745,7 @@ h3.platform-fullstack-heading {
 
 .cal-shell {
   min-height: 720px;
+  position: relative;
   border-radius: 24px;
   background: #f4f3f0;
   box-shadow: 0 28px 90px rgba(15, 23, 42, 0.16);
@@ -750,12 +753,37 @@ h3.platform-fullstack-heading {
 
 .cal-placeholder {
   min-height: 680px;
+  position: relative;
+  z-index: 1;
   border: 1px dashed rgba(15, 23, 42, 0.16);
   border-radius: 18px;
   background:
     linear-gradient(135deg, rgba(79, 170, 58, 0.1), transparent 45%),
     #ffffff;
 }
+
+.cal-loading-copy {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: 1.5rem;
+  left: 1.5rem;
+  margin: 0;
+  transform: translateY(calc(-50% - 2.75rem));
+  color: #0f172a;
+  font-size: clamp(0.9rem, 1.6vw, 1.05rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+  pointer-events: none;
+  text-align: center;
+}
+
+.cal-shell[data-cal-state="loading"] .cal-loading-copy {
+  display: block;
+}
+
 
 .faq-item[open] {
   border-color: rgba(79, 170, 58, 0.45);
@@ -1478,4 +1506,242 @@ h3.platform-fullstack-heading {
   color: var(--color-ink-dark);
   font-style: italic;
   margin: 0.2rem;
+}
+
+
+
+.kn-cycle {
+  /* brand palette only */
+  --signal: #50AD3C;
+  /* Signal Green — primary accent */
+  --forest: #1F7D1D;
+  /* Forest — depth, resting fills */
+  --amber: #FFC72C;
+  /* Warm Accent — the pop, dark bg only */
+  --page-bg: #0d2b0a;
+  --card: #153811;
+  /* recessed panel, one step off the page */
+  --ink-on-signal: #08210a;
+  /* deepest brand green, used as text on Signal fill */
+
+  --edge: rgba(80, 173, 60, .26);
+  /* Signal at low alpha — branded hairline */
+  --edge-soft: rgba(80, 173, 60, .16);
+
+  --font-sans: 'Manrope', -apple-system, sans-serif;
+  --max-width: 1152px;
+
+  font-family: var(--font-sans);
+  background: var(--page-bg);
+  color: var(--color-paper);
+  padding: 100px 24px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.kn-cycle *,
+.kn-cycle *::before,
+.kn-cycle *::after {
+  box-sizing: border-box;
+}
+
+.kn-wrap {
+  max-width: var(--max-width);
+  margin: 0 auto 8rem auto;
+  position: relative;
+}
+
+/* ── masthead ───────────────────────────────────────────── */
+.kn-title {
+  font-size: clamp(30px, 3.5vw, 42px);
+  font-weight: 800;
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+  margin: 0 0 44px;
+  max-width: 18ch;
+  color: var(--color-paper);
+}
+
+.kn-title em {
+  font-style: normal;
+  color: var(--amber);
+  box-shadow: inset 0 -9px 0 rgba(255, 199, 44, .16);
+}
+
+/* ── stage cards ────────────────────────────────────────── */
+.kn-stages {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* recessed panel at rest → solid Signal Green on hover */
+.kn-stage {
+  background: var(--card);
+  border: 1px solid rgba(253, 252, 249, .05);
+  border-radius: 8px;
+  padding: 32px;
+  transition: background .3s ease, transform .3s ease, box-shadow .3s ease;
+}
+
+.kn-stage:hover {
+  background: var(--signal);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, .2), 0 8px 10px -6px rgba(0, 0, 0, .2);
+}
+
+.kn-stage-name, 
+h3.kn-stage-name {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--signal);
+  margin: 0 0 24px;
+  transition: color .3s ease;
+}
+
+.kn-stage:hover .kn-stage-name {
+  color: var(--ink-on-signal);
+}
+
+.kn-stage ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.kn-stage li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.375;
+  color: rgba(253, 252, 249, .9);
+  transition: color .3s ease;
+}
+
+.kn-stage li svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--signal);
+  transition: color .3s ease;
+}
+
+.kn-stage:hover li,
+.kn-stage:hover li svg {
+  color: var(--ink-on-signal);
+}
+
+/* ── checklist + reserved visual space ──────────────────── */
+.kn-lower {
+  margin-top: 0;
+  display: grid;
+  grid-template-columns: minmax(0, .78fr) minmax(0, 1.22fr);
+  gap: 40px;
+  align-items: start;
+}
+
+.kn-checklist-head {
+  font-size: clamp(19px, 2.1vw, 24px);
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  max-width: none;
+  margin: 72px 0 26px;
+  color: var(--color-paper);
+}
+
+.kn-checklist-head em {
+  font-style: normal;
+  color: var(--amber);
+}
+
+.kn-checklist ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.kn-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  font-size: 14.5px;
+  line-height: 1.45;
+  color: rgba(253, 252, 249, .88);
+  padding: 11px 2px;
+  border-bottom: 1px solid var(--edge-soft);
+  transition: color .18s ease, background .18s ease;
+}
+
+.kn-checklist li:first-child {
+  border-top: 1px solid var(--edge-soft);
+}
+
+.kn-checklist li:hover {
+  color: var(--color-paper);
+  background: rgba(80, 173, 60, .09);
+}
+
+.kn-check {
+  flex-shrink: 0;
+  margin-top: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(80, 173, 60, .2);
+  color: var(--signal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .18s ease, color .18s ease;
+}
+
+.kn-checklist li:hover .kn-check,
+.kn-checklist li:hover .hoverable-check {
+  background: var(--signal) !important;
+  color: var(--ink-on-signal) !important;
+  border-radius: 1rem !important;
+  border-color: var(--signal) !important;
+}
+
+/* visual asset — no frame, just the image */
+.kn-visual {
+  margin: 0;
+}
+
+.kn-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ── responsive ─────────────────────────────────────────── */
+@media (max-width: 1000px) {
+  .kn-stages {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .kn-lower {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .kn-cycle {
+    padding: 72px 18px;
+  }
+
+  .kn-stages {
+    grid-template-columns: 1fr;
+  }
+
+  .kn-lower {
+    margin-top: 56px;
+  }
 }

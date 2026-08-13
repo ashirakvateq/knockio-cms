@@ -1,16 +1,16 @@
 ---
 import LandingPagesLayout from "../layouts/LandingPagesLayout.astro";
+import CalendarLoadingCopy from "../components/CalendarLoadingCopy.astro";
 import "../styles/canvassing-app.css";
-import canvassingScript from "../scripts/canvassing-app.js?url";
-import calInlineScript from "../scripts/cal-inline.js?url";
+// import canvassingScript from "../scripts/canvassing-app.js?url";
 import {
   ArrowRight,
-  BadgeCheck,
   Boxes,
   CalendarDays,
   CalendarX,
   ChartLine,
   Check,
+  CheckCircle,
   CheckCircle2,
   FileSignature,
   Map,
@@ -21,6 +21,7 @@ import {
 } from "lucide-astro";
 import {
   assetBase,
+  assetBaseGlob,
   faqs,
   featureCards,
   fullStackItems,
@@ -106,389 +107,392 @@ const jsonLd = {
 <LandingPagesLayout
   title={title}
   description={description}
-  ogImage={`${assetBase}/capterra.webp`}
+  ogImage={`${assetBase}/hero-img-new-1280.webp`}
   bodyClass="canvassing-page"
   jsonLd={jsonLd}
   robots="noindex, follow"
   noHeader
-  noFooter
+  useLpCal
   preloadImages={[
     {
       href: `${assetBase}/hero-img-new-1280.webp`,
-      imagesrcset: `${assetBase}/hero-img-new-480.webp 480w, ${assetBase}/hero-img-new-1280.webp 1280w`,
+      imagesrcset: `${assetBase}/hero-img-new-1280.webp 480w, ${assetBase}/hero-img-new-1280.webp 1280w`,
       imagesizes: "(max-width: 767px) 92vw, 56vw",
     },
-    { href: `${assetBase}/green-name-1280.png` },
+    { href: `${assetBase}/green-name-640.webp` },
   ]}
 >
-  <main>
-    <section class="canvassing-hero pt-8 md:pt-12 xl:pt-16">
-      <div
-        class="my-container grid items-center gap-10 pt-[50px] lg:grid-cols-[0.85fr_1.15fr]"
-      >
-        <div class="reveal-up max-lg:text-center">
-          <a
-            href="/"
-            aria-label="Knockio home"
-            class="hero-logo mb-6 inline-block"
-          >
-            <img
-              src={`${assetBase}/green-name-1280.png`}
-              alt="Knockio"
-              width="1280"
-              height="193"
-              decoding="async"
-            />
-          </a>
-
-          <h1 class="hero-h1">
-            The Canvassing<br /> App Built for <br />Door to Door Teams
-          </h1>
-
-          <p class="hero-subtitle">
-            {description}
-          </p>
-
-          <div
-            class="mt-8 flex flex-col gap-3 sm:flex-row max-lg:justify-center"
-          >
-            <a
-              href="#landing-pricing"
-              class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary-500 px-6 py-4 text-base font-bold text-white shadow-lg shadow-primary-500/25 transition hover:bg-primary-600 hover:shadow-primary-500/35"
-            >
-              Get Started
-              <ArrowRight size={18} aria-hidden="true" />
-            </a>
-            <a
-              href="#landing-calender"
-              class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary-500 px-6 py-4 text-base font-bold text-white shadow-lg shadow-primary-500/25 transition hover:bg-primary-600 hover:shadow-primary-500/35"
-            >
-              Book a Free Demo
-              <ArrowRight size={18} aria-hidden="true" />
-            </a>
-          </div>
-
-          <ul
-            class="hero-checklist mt-7 space-y-3 text-left max-lg:mx-auto max-lg:max-w-xl"
-          >
-            <li class="flex items-start gap-3">
-              <CheckCircle2
-                class="mt-1 shrink-0 text-primary-500"
-                size={20}
-                aria-hidden="true"
-              />
-              <span
-                >No contract, Cancel anytime or book a demo if you'd like a
-                walkthrough first.</span
-              >
-            </li>
-          </ul>
-
-          <div class="mt-7 flex flex-wrap gap-4 max-lg:justify-center">
-            <a
-              href="https://play.google.com/store/apps/details?id=com.knockio.crm&hl=en"
-              target="_blank"
-              rel="noopener"
-              aria-label="Download Knockio on Google Play"
-              class="shadow-md transition hover:opacity-90"
-            >
-              <img
-                src={`${assetBase}/google-play-button.webp`}
-                alt="Get it on Google Play"
-                width="520"
-                height="154"
-                class="h-auto w-36 xl:w-44 lg:w-[145px]"
-                loading="eager"
-                decoding="async"
-              />
-            </a>
-            <a
-              href="https://apps.apple.com/us/app/knockio-field-service-crm/id6756485440"
-              target="_blank"
-              rel="noopener"
-              aria-label="Download Knockio on the App Store"
-              class="shadow-md transition hover:opacity-90"
-            >
-              <img
-                src={`${assetBase}/apple-store-button.webp`}
-                alt="Download on the App Store"
-                width="520"
-                height="154"
-                class="h-auto w-36 xl:w-44 lg:w-[145px]"
-                loading="eager"
-                decoding="async"
-              />
-            </a>
-          </div>
-        </div>
-
-        <div class="reveal-up hero-img-wrap" style="--reveal-delay: 120ms">
-          <picture>
-            <source
-              srcset={`${assetBase}/hero-img-new-480.webp`}
-              media="(max-width: 767px)"
-            />
-            <img
-              src={`${assetBase}/hero-img-new-1280.webp`}
-              alt="Knockio canvassing dashboard and mobile field app screens"
-              width="1280"
-              height="1077"
-              fetchpriority="high"
-              loading="eager"
-              decoding="async"
-              class="mx-auto h-auto w-full max-w-5xl"
-            />
-          </picture>
-        </div>
-      </div>
-    </section>
-
-    <section aria-labelledby="trusted-heading" class="trust-section">
-      <div class="my-container text-center">
-        <h2 id="trusted-heading">
-          Trusted by 1,000+ field sales teams from Roofing and Solar to Pest
-          Control, HVAC, and beyond.
-        </h2>
-        <div class="trust-logos">
-          {
-            trustLogos.map((logo) => (
-              <img
-                class="trust-logo"
-                src={logo.src}
-                alt={logo.alt}
-                width="139"
-                height="56"
-                loading="lazy"
-                decoding="async"
-              />
-            ))
-          }
-        </div>
-      </div>
-    </section>
-
-    <section class="stats-section lg:py-36">
-      <div class="my-container">
-        <h2 class="section-heading">Why D2D Teams Choose Knockio?</h2>
-        <div class="stats-row grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-          {
-            stats.map(([value, label]) => (
-              <article class="stat-blurb">
-                <div>
-                  <h4>
-                    <span>{value}</span>
-                  </h4>
-                  <p>{label}</p>
-                </div>
-              </article>
-            ))
-          }
-        </div>
-      </div>
-    </section>
-
-    <section class="features-section">
-      <div class="my-container">
-        <h2 class="section-heading">The Best Canvassing App For Field Teams</h2>
-        <div class="features-grid">
-          {
-            featureCards.map((feature) => (
-              <article class="feature-card" data-aos="fade-up">
-                <img
-                  src={feature.image}
-                  alt=""
-                  width={feature.width}
-                  height={feature.height}
-                  class="feature-img"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <h3 class="feature-heading">{feature.title}</h3>
-                <p class="feature-desc">{feature.copy}</p>
-              </article>
-            ))
-          }
-        </div>
-      </div>
-    </section>
-
-    <section class="testimonial-section py-20 lg:py-32">
-      <div class="my-container">
-        <div class="testimonial-quote-wrap">
-          <p>
-            Tracking leads has never been simpler. We can see real time updates,
-            assign follow-ups instantly, and never worry about losing
-            information. The mapping feature is a game changer it helps us plan
-            routes smarter and cover more ground in less time.
-          </p>
-        </div>
-        <div class="testi-wrapper mt-8">
+  <section class="canvassing-hero pt-8 md:pt-12 xl:pt-16">
+    <div
+      class="my-container grid items-center gap-10 pt-[50px] lg:grid-cols-[0.85fr_1.15fr]"
+    >
+      <div class="reveal-up max-lg:text-center">
+        <a
+          href="/"
+          aria-label="Knockio home"
+          class="hero-logo mb-6 inline-block"
+        >
           <img
-            src={`${assetBase}/testi.png`}
-            alt=""
-            width="80"
-            loading="lazy"
+            src={`${assetBase}/green-name-640.webp`}
+            alt="Knockio"
+            width="1280"
+            height="193"
             decoding="async"
           />
-          <div>
-            <h6>Michael Palmer</h6>
-            <p>Sales Manager - Modern Roofing</p>
-          </div>
-        </div>
-        <div class="mt-9 flex justify-center">
+        </a>
+
+        <h1 class="hero-h1">
+          The Canvassing<br /> App Built for <br />Door to Door Teams
+        </h1>
+
+        <p class="hero-subtitle">
+          {description}
+        </p>
+
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row max-lg:justify-center">
+          <a
+            href="#landing-pricing"
+            class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary-500 px-6 py-4 text-base font-bold text-white shadow-lg shadow-primary-500/25 transition hover:bg-primary-600 hover:shadow-primary-500/35"
+          >
+            Get Started
+            <ArrowRight size={18} aria-hidden="true" />
+          </a>
           <a
             href="#landing-calender"
-            class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary-500 px-7 py-4 font-bold text-white shadow-lg shadow-primary-500/25 transition hover:bg-primary-600 hover:shadow-primary-500/35"
+            class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary-500 px-6 py-4 text-base font-bold text-white shadow-lg shadow-primary-500/25 transition hover:bg-primary-600 hover:shadow-primary-500/35"
           >
             Book a Free Demo
             <ArrowRight size={18} aria-hidden="true" />
           </a>
         </div>
-      </div>
-    </section>
 
-    <section class="platform-section">
-      <div class="my-container">
-        <h2 class="section-heading">
-          Not Just a Map. The Full Door-to-Dollar Cycle.
-        </h2>
-        <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-          {
-            platformColumns.map((column) => (
-              <div class="platform-wrapper">
-                <span class="platform-wrapper-heading">{column.title}</span>
-                <ul class="mb-5 space-y-3">
-                  {column.items.map((item) => (
-                    <li class="flex items-center gap-2.5">
-                      <Check
-                        class="mt-0.5 shrink-0 text-white"
-                        size={17}
-                        aria-hidden="true"
-                      />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+        <ul
+          class="hero-checklist mt-7 space-y-3 text-left max-lg:mx-auto max-lg:max-w-xl"
+        >
+          <li class="flex items-start gap-3">
+            <CheckCircle2
+              class="mt-1 shrink-0 text-primary-500"
+              size={20}
+              aria-hidden="true"
+            />
+            <span
+              >No contract, Cancel anytime or book a demo if you'd like a
+              walkthrough first.</span
+            >
+          </li>
+        </ul>
+
+        <div class="mt-7 flex flex-wrap gap-4 max-lg:justify-center">
+          <a
+            href="https://play.google.com/store/apps/details?id=com.knockio.crm&hl=en"
+            target="_blank"
+            rel="noopener"
+            aria-label="Download Knockio on Google Play"
+            class="shadow-md transition hover:opacity-90"
+          >
+            <img
+              src={`${assetBase}/google-play-button.webp`}
+              alt="Get it on Google Play"
+              width="520"
+              height="154"
+              class="h-auto w-36 xl:w-44 lg:w-[145px]"
+              loading="eager"
+              decoding="async"
+            />
+          </a>
+          <a
+            href="https://apps.apple.com/us/app/knockio-field-service-crm/id6756485440"
+            target="_blank"
+            rel="noopener"
+            aria-label="Download Knockio on the App Store"
+            class="shadow-md transition hover:opacity-90"
+          >
+            <img
+              src={`${assetBase}/apple-store-button.webp`}
+              alt="Download on the App Store"
+              width="520"
+              height="154"
+              class="h-auto w-36 xl:w-44 lg:w-[145px]"
+              loading="eager"
+              decoding="async"
+            />
+          </a>
+        </div>
+      </div>
+
+      <div class="reveal-up hero-img-wrap" style="--reveal-delay: 120ms">
+        <picture>
+          <source
+            srcset={`${assetBase}/hero-img-new-480.webp`}
+            media="(max-width: 767px)"
+          />
+          <img
+            src={`${assetBase}/hero-img-new-1280.webp`}
+            alt="Knockio canvassing dashboard and mobile field app screens"
+            width="1280"
+            height="1077"
+            fetchpriority="high"
+            loading="eager"
+            decoding="async"
+            class="mx-auto h-auto w-full max-w-5xl"
+          />
+        </picture>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="trusted-heading" class="trust-section">
+    <div class="my-container text-center">
+      <h2 id="trusted-heading">
+        Trusted by 1,000+ field sales teams from Roofing and Solar to Pest
+        Control, HVAC, and beyond.
+      </h2>
+      <div class="trust-logos">
+        {
+          trustLogos.map((logo) => (
+            <img
+              class="trust-logo"
+              src={logo.src}
+              alt={logo.alt}
+              width="139"
+              height="56"
+              loading="lazy"
+              decoding="async"
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-section lg:py-36">
+    <div class="my-container">
+      <h2 class="section-heading">Why D2D Teams Choose Knockio?</h2>
+      <div class="stats-row grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+        {
+          stats.map(([value, label]) => (
+            <article class="stat-blurb">
+              <div>
+                <h4>
+                  <span>{value}</span>
+                </h4>
+                <p>{label}</p>
               </div>
-            ))
-          }
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="features-section">
+    <div class="my-container">
+      <h2 class="section-heading">The Best Canvassing App For Field Teams</h2>
+      <div class="features-grid">
+        {
+          featureCards.map((feature) => (
+            <article class="feature-card" data-aos="fade-up">
+              <img
+                src={feature.image}
+                alt=""
+                width={feature.width}
+                height={feature.height}
+                class="feature-img"
+                loading="lazy"
+                decoding="async"
+              />
+              <h3 class="feature-heading">{feature.title}</h3>
+              <p class="feature-desc">{feature.copy}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonial-section py-20 lg:py-32">
+    <div class="my-container">
+      <div class="testimonial-quote-wrap">
+        <p>
+          Tracking leads has never been simpler. We can see real time updates,
+          assign follow-ups instantly, and never worry about losing information.
+          The mapping feature is a game changer it helps us plan routes smarter
+          and cover more ground in less time.
+        </p>
+      </div>
+      <div class="testi-wrapper mt-8">
+        <img
+          src={`${assetBase}/testi.png`}
+          alt=""
+          width="80"
+          loading="lazy"
+          decoding="async"
+        />
+        <div>
+          <h6>Michael Palmer</h6>
+          <p>Sales Manager - Modern Roofing</p>
+        </div>
+      </div>
+      <div class="mt-9 flex justify-center">
+        <a
+          href="#landing-calender"
+          class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary-500 px-7 py-4 font-bold text-white shadow-lg shadow-primary-500/25 transition hover:bg-primary-600 hover:shadow-primary-500/35"
+        >
+          Book a Free Demo
+          <ArrowRight size={18} aria-hidden="true" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="kn-cycle mt-16">
+    <div class="kn-wrap">
+      <h2 class="kn-title">
+        Not just a map. The full <em>Door to Door cycle</em>.
+      </h2>
+      <div class="kn-stages">
+        {
+          platformColumns.map((column) => (
+            <article class="kn-stage">
+              <h3 class="kn-stage-name">{column.title}</h3>
+              <ul>
+                {column.items.map((item) => (
+                  <li>
+                    <svg
+                      width="19"
+                      height="19"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M20 6 9 17l-5-5" />
+                    </svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))
+        }
+      </div>
+
+      <h3 class="kn-checklist-head">
+        Stop duct-taping tools together. Here's everything your field team needs
+        in one place:
+      </h3>
+
+      <div class="kn-lower">
+        <div class="kn-checklist">
+          <ul>
+            {
+              fullStackItems.map((li) => (
+                <li>
+                  <CheckCircle
+                    class="hoverable-check mt-1 shrink-0 text-primary-500"
+                    size={18}
+                    aria-hidden="true"
+                  />
+                  {li}
+                </li>
+              ))
+            }
+          </ul>
         </div>
 
-        <div class="mt-16 grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-          <div>
-            <h3 class="platform-fullstack-heading">
-              Stop duct-taping tools together. Here's everything your field team
-              needs in one place:
-            </h3>
-            <ul class="platform-fullstack-list mt-8">
-              {fullStackItems.map((item) => <li>{item}</li>)}
-            </ul>
-            <div class="platform-book-demo-btn my-10 table">
-              <a
-                href="#landing-calender"
-                class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary-500 px-7 py-4 font-bold text-white shadow-lg shadow-primary-500/25 transition hover:bg-primary-600 hover:shadow-primary-500/35"
-              >
-                Book a Free Demo
-                <ArrowRight size={18} aria-hidden="true" />
-              </a>
-            </div>
-          </div>
+        <!-- Replace src with the WordPress media-library URL once uploaded -->
+        <figure class="kn-visual">
           <img
-            src={`${assetBase}/platform-img.webp`}
-            alt="Knockio platform workflow screen"
-            width="759"
-            height="520"
-            class="mx-auto h-auto w-full max-w-2xl"
+            src={`${assetBaseGlob}/invoice-kn-section-image.webp`}
+            alt="Knockio field app showing territory map and job pipeline"
             loading="lazy"
             decoding="async"
           />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="onboarding-section">
+    <div class="container">
+      <div class="editorial-header">
+        <!-- Headline Column -->
+        <div class="headline-column">
+          <h2 class="main-headline">
+            Switching<br />
+            <span class="headline-sub">to</span>
+            <span class="headline-accent mx-1"> Knockio </span>
+            <span class="headline-sub">is</span><br />
+            <span class="headline-sub">Easy</span>
+          </h2>
+        </div>
+
+        <!-- Intro / Pull-Quote Column -->
+        <div class="intro-column">
+          <p class="pull-quote">
+            Teams looking for the best door to door canvassing app are usually
+            replacing more than one tool, not just one app.
+            <i style="display: inline-block; font-weight: 800;">
+              Territory Map, Canvassing app, Photo chats, Contracts, and E-sign
+            </i>
+            <br /><br />
+            <span class="pull-quote-strong">
+              Most teams come from all five, then wish they had switched sooner.</span
+            >
+          </p>
         </div>
       </div>
-    </section>
 
-    <section class="onboarding-section">
-      <div class="container">
-        <div class="editorial-header">
-          <!-- Headline Column -->
-          <div class="headline-column">
-            <h2 class="main-headline">
-              Switching<br />
-              <span class="headline-sub">to</span>
-              <span class="headline-accent mx-1"> Knockio </span>
-              <span class="headline-sub">is</span><br />
-              <span class="headline-sub">Easy</span>
-            </h2>
+      <div>
+        <!-- Process Subhead -->
+        <h3 class="process-subhead">Here's how it works</h3>
+
+        <!-- 3-Column Grid for Steps -->
+        <div class="steps-grid">
+          <!-- Step 01 -->
+          <div class="step-card">
+            <div class="step-number">01</div>
+            <h4 class="step-title">Guided Onboarding</h4>
+            <p class="step-description">
+              Most teams are running live campaigns within the hour. We walk you
+              through territory setup, rep accounts, and your first campaign.
+              <span class="step-description-highlight"
+                >No consultant needed.</span
+              >
+            </p>
           </div>
 
-          <!-- Intro / Pull-Quote Column -->
-          <div class="intro-column">
-            <p class="pull-quote">
-              Teams looking for the best door to door canvassing app are usually
-              replacing more than one tool, not just one app.
-              <i style="display: inline-block; font-weight: 800;">
-                Territory Map, Canvassing app, Photo chats, Contracts, and
-                E-sign
-              </i>
-              <br /><br />
-              <span class="pull-quote-strong">
-                Most teams come from all five, then wish they had switched
-                sooner.</span
+          <!-- Step 02 -->
+          <div class="step-card">
+            <div class="step-number">02</div>
+            <h4 class="step-title">Import Your Data</h4>
+            <p class="step-description">
+              Bring over lead lists, pre-knocked address data, and customer
+              records via CSV or direct migration. Your history doesn't
+              disappear when you switch, and it
+              <span class="step-italic">never</span> gets held hostage.
+            </p>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="step-card">
+            <div class="step-number">03</div>
+            <h4 class="step-title">Support That Knows the Product</h4>
+            <p class="step-description">
+              Get help from the people who build and run Knockio. No chatbots,
+              no ticket queues, no handoffs between tiers. You talk to a person
+              who can actually fix it.
+              <span class="step-description-highlight"
+                >Most issues resolved same day.</span
               >
             </p>
           </div>
         </div>
-
-        <div>
-          <!-- Process Subhead -->
-          <h3 class="process-subhead">Here's how it works</h3>
-
-          <!-- 3-Column Grid for Steps -->
-          <div class="steps-grid">
-            <!-- Step 01 -->
-            <div class="step-card">
-              <div class="step-number">01</div>
-              <h4 class="step-title">Guided Onboarding</h4>
-              <p class="step-description">
-                Most teams are running live campaigns within the hour. We walk
-                you through territory setup, rep accounts, and your first
-                campaign.
-                <span class="step-description-highlight"
-                  >No consultant needed.</span
-                >
-              </p>
-            </div>
-
-            <!-- Step 02 -->
-            <div class="step-card">
-              <div class="step-number">02</div>
-              <h4 class="step-title">Import Your Data</h4>
-              <p class="step-description">
-                Bring over lead lists, pre-knocked address data, and customer
-                records via CSV or direct migration. Your history doesn't
-                disappear when you switch, and it
-                <span class="step-italic">never</span> gets held hostage.
-              </p>
-            </div>
-
-            <!-- Step 03 -->
-            <div class="step-card">
-              <div class="step-number">03</div>
-              <h4 class="step-title">Support That Knows the Product</h4>
-              <p class="step-description">
-                Get help from the people who build and run Knockio. No chatbots,
-                no ticket queues, no handoffs between tiers. You talk to a
-                person who can actually fix it.
-                <span class="step-description-highlight"
-                  >Most issues resolved same day.</span
-                >
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
-    </section>
-  </main>
-
+    </div>
+  </section>
   <section id="landing-pricing" class="pricing-section">
     <div class="my-container max-w-[1330px] mx-auto">
       <div class="text-center gap-3 mb-12">
@@ -663,32 +667,15 @@ const jsonLd = {
         id="landing-calender"
         class="cal-shell mx-auto mt-12 max-w-5xl p-2 sm:p-3 lg:p-4"
       >
+        <CalendarLoadingCopy />
         <div
           id="my-cal-inline"
           class="cal-placeholder grid place-items-center overflow-hidden"
           aria-live="polite"
+          aria-busy="false"
+          aria-label="Book a demo"
+          role="region"
         >
-          <div class="max-w-md p-6 text-center">
-            <CalendarDays
-              class="mx-auto text-primary-500"
-              size={42}
-              aria-hidden="true"
-            />
-            <p class="mt-4 text-xl font-extrabold text-slate-950">
-              Loading the live demo calendar
-            </p>
-            <p class="mt-2 text-sm leading-6 text-slate-600">
-              The scheduler loads only when you reach it, keeping the hero fast
-              for PageSpeed and search visitors.
-            </p>
-            <button
-              type="button"
-              data-load-cal
-              class="mt-5 rounded-xl bg-primary-500 px-5 py-3 text-sm font-bold text-white transition hover:bg-primary-600"
-            >
-              Load calendar now
-            </button>
-          </div>
         </div>
       </div>
     </div>
@@ -729,82 +716,3 @@ const jsonLd = {
     </div>
   </section>
 </LandingPagesLayout>
-
-<footer class="relative overflow-hidden border-t border-white/10 bg-[#0d2b0a]">
-  <div
-    class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary-500/60 to-transparent"
-  >
-  </div>
-  <div class="my-container">
-    <div class="flex flex-col items-center gap-4 py-10 text-center sm:py-12">
-      <a href="/" aria-label="Knockio home">
-        <img
-          src={`${assetBase}/knockio-logo.webp`}
-          alt="Knockio"
-          width="320"
-          height="96"
-          class="mx-auto h-8 w-auto object-contain sm:h-9"
-          loading="lazy"
-          decoding="async"
-        />
-      </a>
-      <p class="max-w-md text-sm leading-6 text-white/50">
-        Door-to-door sales software built for canvassing teams from the first
-        knock to the paid invoice.
-      </p>
-      <a
-        href="mailto:hello@knockio.com"
-        class="text-sm font-medium text-white/70 transition hover:text-primary-400"
-        >hello@knockio.com</a
-      >
-    </div>
-
-    <div
-      class="flex flex-col items-center gap-5 border-t border-white/10 py-6 sm:flex-row sm:justify-between"
-    >
-      <p class="order-2 text-xs text-white/45 sm:order-1 sm:text-sm">
-        &copy; {currentYear} Knockio. All rights reserved.
-      </p>
-
-      <div
-        class="order-1 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm sm:order-2"
-      >
-        <a
-          href="/privacy-policy/"
-          class="text-white/70 transition hover:text-primary-400"
-          >Privacy Policy</a
-        >
-        <span class="text-white/25" aria-hidden="true">/</span>
-        <a
-          href="/terms-and-conditions/"
-          class="text-white/70 transition hover:text-primary-400"
-          >Terms & Conditions</a
-        >
-      </div>
-
-      <div class="order-3 flex items-center gap-2.5">
-        {
-          [
-            ["https://www.facebook.com/knockioapp", "Facebook", "f"],
-            ["https://www.linkedin.com/company/knockio", "LinkedIn", "in"],
-            ["https://x.com/knockioapp", "X", "x"],
-            ["https://www.youtube.com/@knockioapp", "YouTube", "yt"],
-          ].map(([href, label, text]) => (
-            <a
-              href={href}
-              aria-label={label}
-              class="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-xs font-bold uppercase text-white/70 transition hover:border-primary-500/50 hover:text-primary-400"
-              target="_blank"
-              rel="noopener"
-            >
-              {text}
-            </a>
-          ))
-        }
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script is:inline src={canvassingScript} defer></script>
-<script is:inline src={calInlineScript} defer></script>

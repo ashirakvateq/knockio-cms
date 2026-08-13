@@ -1,9 +1,7 @@
 ---
 import LandingPagesLayout from "../layouts/LandingPagesLayout.astro";
+import CalendarLoadingCopy from "../components/CalendarLoadingCopy.astro";
 import "../styles/roofing.css";
-import "../styles/canvassing-app.css";
-import canvassingScript from "../scripts/canvassing-app.js?url";
-import calInlineScript from "../scripts/cal-inline.js?url";
 import {
   ArrowRight,
   BadgeCheck,
@@ -14,6 +12,7 @@ import {
   Camera,
   ChartLine,
   Check,
+  CheckCircle,
   CheckCircle2,
   ClipboardList,
   CreditCard,
@@ -36,36 +35,21 @@ import {
   stormFaqs,
   stormHero,
   stormPricingPlans,
+  stormRestorationChecklist,
   stormTestimonial,
   stormTrustLogos,
   workflowGroups,
 } from "../data/stormRestoration";
 
-import {
-  stats
-} from "../data/canvassingApp";
+import { stats } from "../data/canvassingApp";
+import { baseGlob } from "../data/roofingFieldSales";
 
 const title = "Storm Restoration Roofing Sales Software | Knockio";
 const description =
   "Territory, damage docs, contingency signing, and ACV plus depreciation tracking. One platform, from the first knock to the collected payment.";
 
 const iconMap = { Map, ChartLine, Boxes } as const;
-const workflowIconMap = {
-  MapPin,
-  Radio,
-  BarChart3,
-  MessageSquare,
-  Camera,
-  FileSignature,
-  ClipboardList,
-  FolderOpen,
-  DollarSign,
-  TrendingDown,
-  LayoutDashboard,
-  CreditCard,
-} as const;
 
-const currentYear = new Date().getFullYear();
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -125,22 +109,21 @@ const jsonLd = {
 <LandingPagesLayout
   title={title}
   description={description}
-  ogImage="/assets/cfw/capterra.webp"
+  ogImage="/assets/storm-restoration-roofing/restoration-hero-1280.webp"
   bodyClass="storm-page"
   jsonLd={jsonLd}
   robots="noindex, follow"
   noHeader
-  noFooter
+  useLpCal
   preloadImages={[
     {
       href: `${stormHero.image}`,
-      imagesrcset: `/assets/storm-restoration-roofing/restoration-hero-480.webp 480w, /assets/storm-restoration-roofing/restoration-hero-1280.webp 1280w`,
+      imagesrcset: `/assets/storm-restoration-roofing/restoration-hero-1280.webp 480w, /assets/storm-restoration-roofing/restoration-hero-1280.webp 1280w`,
       imagesizes: "(max-width: 767px) 92vw, 56vw",
     },
-    { href: "/assets/canvassing-app/green-name-1280.png" },
+    { href: "/assets/cfw/green-name-640.webp" },
   ]}
 >
-  <main>
     <section class="storm-hero">
       <div
         class="my-container grid items-center gap-10 pt-[50px] lg:grid-cols-[0.85fr_1.15fr]"
@@ -148,7 +131,7 @@ const jsonLd = {
         <div class="storm-reveal max-lg:text-center">
           <a href="/" aria-label="Knockio home" class="mb-6 inline-block">
             <img
-              src="/assets/canvassing-app/green-name-1280.png"
+              src="/assets/cfw/green-name-640.webp"
               alt="Knockio"
               width="1280"
               height="193"
@@ -369,143 +352,72 @@ const jsonLd = {
       </div>
     </section>
 
-    <section class="operations-section">
-      <div class="container">
-        <div class="editorial-header">
-          <div class="headline-column">
-            <h2 class="operations-headline">
-              Everything Your<br />
-              Roofing Operation<br />
-              Runs On
-            </h2>
-          </div>
-
-          <div class="intro-column">
-            <p class="operations-pull-quote">
-              Three parts of your operation. One platform. Nothing handed off to
-              a separate tool.
-            </p>
-          </div>
+    <section class="kn-cycle mt-8">
+      <div class="kn-wrap">
+        <h2 class="kn-title">
+          Not just a map. The full <em>restoration cycle</em>.
+        </h2>
+        <div class="kn-stages">
+          {
+            workflowGroups.map((card) => (
+              <article class="kn-stage">
+                <h3 class="kn-stage-name">{card.title}</h3>
+                <ul>
+                  {card.items.map((item) => (
+                    <li>
+                      <svg
+                        width="19"
+                        height="19"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M20 6 9 17l-5-5" />
+                      </svg>
+                      {item.copy}
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))
+          }
         </div>
 
-        <div class="columns-grid">
-          <div class="category-column">
-            <div class="category-header">
-              <div class="category-number">I</div>
-              <h3 class="category-title">Field Sales</h3>
-            </div>
+        <h3 class="kn-checklist-head">
+          Stop losing jobs in the gap. Here's everything your storm team needs
+          in one place:
+        </h3>
 
-            <ul class="feature-list">
-              <li class="feature-item">
-                <h4 class="feature-title">Territory Assignment</h4>
-                <p class="feature-desc">
-                  Assign streets and neighborhoods before your reps leave the
-                  lot.
-                </p>
-              </li>
-              <li class="feature-item">
-                <h4 class="feature-title">Live Rep Tracking</h4>
-                <p class="feature-desc">
-                  See every rep's real-time location and activity on the map.
-                </p>
-              </li>
-              <li class="feature-item">
-                <h4 class="feature-title">Rep Performance</h4>
-                <p class="feature-desc">
-                  Measure doors knocked, leads, conversations, and jobs.
-                </p>
-              </li>
-              <li class="feature-item">
-                <h4 class="feature-title">Communications</h4>
-                <p class="feature-desc">
-                  Text, call, and email homeowners from one place. All
-                  conversations are logged.
-                </p>
-              </li>
+        <div class="kn-lower">
+          <div class="kn-checklist">
+            <ul>
+              {
+                stormRestorationChecklist.map((li) => (
+                  <li>
+                    <CheckCircle
+                      class="hoverable-check mt-1 shrink-0 text-primary-500"
+                      size={18}
+                      aria-hidden="true"
+                    />
+                    {li}
+                  </li>
+                ))
+              }
             </ul>
           </div>
 
-          <div class="category-column">
-            <div class="category-header">
-              <div class="category-number">II</div>
-              <h3 class="category-title">Completion</h3>
-            </div>
-
-            <ul class="feature-list">
-              <li class="feature-item">
-                <h4 class="feature-title">Damage & Roof Doc.</h4>
-                <p class="feature-desc">
-                  Capture photos, videos, notes, and homeowner details in
-                  seconds.
-                </p>
-              </li>
-              <li class="feature-item">
-                <h4 class="feature-title">Contracts & Signing</h4>
-                <p class="feature-desc">
-                  Legally binding e-signatures captured on-site, even offline.
-                  Retail contracts or insurance contingencies.
-                </p>
-              </li>
-              <li class="feature-item">
-                <h4 class="feature-title">Work Order Creation</h4>
-                <p class="feature-desc">
-                  Convert signed agreements into work orders and jobs with one
-                  tap.
-                </p>
-              </li>
-              <li class="feature-item">
-                <h4 class="feature-title">Document Storage</h4>
-                <p class="feature-desc">
-                  Store photos, contracts, invoices, and all job files tied to
-                  one record.
-                </p>
-              </li>
-            </ul>
-          </div>
-
-          <div class="category-column">
-            <div class="category-header">
-              <div class="category-number">III</div>
-              <h3 class="category-title">Business Control</h3>
-            </div>
-
-            <ul class="feature-list">
-              <li class="feature-item">
-                <h4 class="feature-title">Estimates & Invoicing</h4>
-                <p class="feature-desc">
-                  Build branded estimates and send invoices from the field.
-                </p>
-              </li>
-              <li class="feature-item">
-                <h4 class="feature-title">Insurance Payment Tracking</h4>
-                <p class="feature-desc">
-                  Track ACV and depreciation separately on insurance jobs.
-                </p>
-              </li>
-              <li class="feature-item">
-                <h4 class="feature-title">Campaign Reporting</h4>
-                <p class="feature-desc">
-                  Dashboards show what's winning. Campaigns, reps, markets.
-                </p>
-              </li>
-              <li class="feature-item">
-                <h4 class="feature-title">Payment Processing</h4>
-                <p class="feature-desc">
-                  Pay vendors. Collect payments. Every transaction tied to the
-                  job.
-                </p>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="mt-12 table mx-auto">
-          <a
-            href="#landing-calender"
-            class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary-500 px-7 py-4 font-bold text-white shadow-lg shadow-primary-500/25 transition hover:bg-primary-600 hover:shadow-primary-500/35"
-          >
-            Book a Free Demo
-            <ArrowRight size={18} aria-hidden="true" />
-          </a>
+          <!-- Replace src with the WordPress media-library URL once uploaded -->
+          <figure class="kn-visual">
+            <img
+              src={`${baseGlob}/invoice-kn-section-image.webp`}
+              alt="Knockio field app showing territory map and job pipeline"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
         </div>
       </div>
     </section>
@@ -547,9 +459,8 @@ const jsonLd = {
               <div class="step-number">01</div>
               <h4 class="step-title">Guided Onboarding</h4>
               <p class="step-description">
-                Most teams are running live campaigns within the hour. We walk
-                you through territory setup, rep accounts, and your first
-                campaign.
+                Most teams are running live campaigns within the hour. Territory
+                setup, rep accounts, and first campaign included.
                 <span class="step-description-highlight"
                   >No consultant needed.</span
                 >
@@ -573,9 +484,10 @@ const jsonLd = {
               <div class="step-number">03</div>
               <h4 class="step-title">Handshake Support</h4>
               <p class="step-description">
-                Direct access to the team, including the founder. No ticket
-                queues, no offshore tiers, no chatbot. You talk to a real
-                person.
+                Get help from the people who build and run Knockio. No chatbots,
+                no ticket queues, no handoffs between tiers. You talk to a
+                person who can actually fix it. Most issues resolved the same
+                day.
                 <span class="step-description-highlight"
                   >Most issues resolved same day.</span
                 >
@@ -585,8 +497,6 @@ const jsonLd = {
         </div>
       </div>
     </section>
-  </main>
-
   <section id="landing-pricing" class="pricing-section">
     <div class="my-container max-w-[1330px] mx-auto">
       <div class="text-center gap-3 mb-12">
@@ -761,33 +671,15 @@ const jsonLd = {
         id="landing-calender"
         class="cal-shell mx-auto mt-12 max-w-5xl p-2 sm:p-3 lg:p-4"
       >
+        <CalendarLoadingCopy />
         <div
           id="my-cal-inline"
           class="cal-placeholder grid place-items-center overflow-hidden"
           aria-live="polite"
-        >
-          <div class="max-w-md p-6 text-center">
-            <CalendarDays
-              class="mx-auto text-primary-500"
-              size={42}
-              aria-hidden="true"
-            />
-            <p class="mt-4 text-xl font-extrabold text-slate-950">
-              Loading the live demo calendar
-            </p>
-            <p class="mt-2 text-sm leading-6 text-slate-600">
-              The scheduler loads only when you reach it, keeping the hero fast
-              for PageSpeed and search visitors.
-            </p>
-            <button
-              type="button"
-              data-load-cal
-              class="mt-5 rounded-xl bg-primary-500 px-5 py-3 text-sm font-bold text-white transition hover:bg-primary-600"
-            >
-              Load calendar now
-            </button>
-          </div>
-        </div>
+          aria-busy="false"
+          aria-label="Book a demo"
+          role="region"
+        ></div>
       </div>
     </div>
   </section>
@@ -829,82 +721,3 @@ const jsonLd = {
     </div>
   </section>
 </LandingPagesLayout>
-
-<footer class="relative overflow-hidden border-t border-white/10 bg-[#0d2b0a]">
-  <div
-    class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary-500/60 to-transparent"
-  >
-  </div>
-  <div class="my-container">
-    <div class="flex flex-col items-center gap-4 py-10 text-center sm:py-12">
-      <a href="/" aria-label="Knockio home">
-        <img
-          src="/assets/cfw/knockio-logo.webp"
-          alt="Knockio"
-          width="320"
-          height="96"
-          class="mx-auto h-8 w-auto object-contain sm:h-9"
-          loading="lazy"
-          decoding="async"
-        />
-      </a>
-      <p class="max-w-md text-sm leading-6 text-white/50">
-        Door-to-door sales software built for canvassing teams from the first
-        knock to the paid invoice.
-      </p>
-      <a
-        href="mailto:hello@knockio.com"
-        class="text-sm font-medium text-white/70 transition hover:text-primary-400"
-        >hello@knockio.com</a
-      >
-    </div>
-
-    <div
-      class="flex flex-col items-center gap-5 border-t border-white/10 py-6 sm:flex-row sm:justify-between"
-    >
-      <p class="order-2 text-xs text-white/45 sm:order-1 sm:text-sm">
-        &copy; {currentYear} Knockio. All rights reserved.
-      </p>
-
-      <div
-        class="order-1 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm sm:order-2"
-      >
-        <a
-          href="/privacy-policy/"
-          class="text-white/70 transition hover:text-primary-400"
-          >Privacy Policy</a
-        >
-        <span class="text-white/25" aria-hidden="true">/</span>
-        <a
-          href="/terms-and-conditions/"
-          class="text-white/70 transition hover:text-primary-400"
-          >Terms & Conditions</a
-        >
-      </div>
-
-      <div class="order-3 flex items-center gap-2.5">
-        {
-          [
-            ["https://www.facebook.com/knockioapp", "Facebook", "f"],
-            ["https://www.linkedin.com/company/knockio", "LinkedIn", "in"],
-            ["https://x.com/knockioapp", "X", "x"],
-            ["https://www.youtube.com/@knockioapp", "YouTube", "yt"],
-          ].map(([href, label, text]) => (
-            <a
-              href={href}
-              aria-label={label}
-              class="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-xs font-bold uppercase text-white/70 transition hover:border-primary-500/50 hover:text-primary-400"
-              target="_blank"
-              rel="noopener"
-            >
-              {text}
-            </a>
-          ))
-        }
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script is:inline src={canvassingScript} defer></script>
-<script is:inline src={calInlineScript} defer></script>
