@@ -7,8 +7,6 @@
    4. Calculator + Checkout
    ══════════════════════════════════════════════ */
 
-// ── 0. Smooth Scroll (legacy Divi smoothscroll.js) ──────────────────────────
-// import "./smoothscroll.js";
 
 import Lenis from "lenis";
 

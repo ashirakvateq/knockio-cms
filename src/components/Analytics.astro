@@ -13,7 +13,7 @@ const gtmId = import.meta.env.PUBLIC_GTM_ID || 'GTM-MG8F3DS9';
   <>
     <QueryForwarder />
     {gtmId && (
-      <script is:inline define:vars={{ gtmId }}>
+      <script is:inline defer define:vars={{ gtmId }}>
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({ 'gtm.start': Date.now(), event: 'gtm.js' });
 

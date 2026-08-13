@@ -1,3 +1,9 @@
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/cfw/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
 /door-knocking-app/
   X-Robots-Tag: noindex
 

@@ -216,12 +216,47 @@ function bindCalBookingEvents() {
   });
 }
 
+function setCalendarState(target, state) {
+  target.dataset.calState = state;
+  target.setAttribute('aria-busy', String(state === 'loading'));
+  target.closest('.cal-shell')?.setAttribute('data-cal-state', state);
+}
+
+function clearCalendarLoadingState(target) {
+  let observer;
+
+  const finishLoading = () => {
+    setCalendarState(target, 'ready');
+    observer?.disconnect();
+  };
+  const bindFrameLoad = () => {
+    const frame = target.querySelector('iframe');
+    if (!frame) return false;
+
+    // Cal.com inserts its iframe before its own spinner has finished. Keep our
+    // copy visible until that iframe has actually loaded, not merely inserted.
+    frame.addEventListener('load', finishLoading, { once: true });
+    return true;
+  };
+
+  if (bindFrameLoad() || !('MutationObserver' in window)) return;
+
+  observer = new MutationObserver(() => {
+    if (!bindFrameLoad()) return;
+    observer.disconnect();
+  });
+
+  observer.observe(target, { childList: true, subtree: true });
+}
+
 function loadCalendar() {
   const target = document.getElementById('my-cal-inline');
   if (!target || target.dataset.loaded === 'true') return;
 
   target.dataset.loaded = 'true';
-  target.innerHTML = '';
+  setCalendarState(target, 'loading');
+  target.replaceChildren();
+  clearCalendarLoadingState(target);
   addPreconnect('https://app.cal.com');
   addPreconnect('https://cal.com');
   ensureCalQueue();
@@ -244,56 +279,70 @@ function loadCalendar() {
 
 function initCalInline() {
   const target = document.getElementById('my-cal-inline');
-  const manualButton = document.querySelector('[data-load-cal]');
   if (!target) return;
 
-  manualButton?.addEventListener('click', loadCalendar, { once: true });
-
-  // The page content is rendered as direct body children by the home layouts.
-  // Use its second top-level section, rather than a page-specific data marker,
-  // so every future homepage gets the same lazy-loading behavior automatically.
+  // Landing pages render their content as direct body sections. The exact
+  // boundary after the second section is the established Cal.com load gate.
   const topLevelSections = Array.from(document.body.children).filter(
     (element) => element.tagName === 'SECTION',
   );
-  const secondSection = topLevelSections[1];
+  const secondSection = topLevelSections[2];
 
-  if (secondSection && 'IntersectionObserver' in window) {
-    // Observe the end of the second section, not its start. A 1px marker avoids
-    // a scroll listener and does not affect the visual layout.
-    const boundary = document.createElement('span');
-    boundary.setAttribute('aria-hidden', 'true');
-    boundary.style.cssText = 'display:block;height:1px;width:1px;margin-top:-1px;overflow:hidden;';
-    secondSection.after(boundary);
-
-    const observer = new IntersectionObserver((entries) => {
-      if (!entries.some((entry) => entry.isIntersecting)) return;
-
-      observer.disconnect();
-      loadCalendar();
-    }, { threshold: 0.01 });
-
-    observer.observe(boundary);
-
-    // Hero CTAs jump directly to the booking section, which may bypass the
-    // second-section observer. Load in that case so the destination is ready.
-    document.querySelectorAll('a[href="#cal-sec"]').forEach((link) => {
+  // Booking CTAs must beat the normal anchor jump so the calendar begins
+  // loading as soon as a visitor asks for it.
+  document
+    .querySelectorAll('a[href="#cal-sec"], a[href="#landing-calender"]')
+    .forEach((link) => {
+      link.addEventListener('pointerdown', loadCalendar, { once: true });
       link.addEventListener('click', loadCalendar, { once: true });
     });
 
-    if (window.location.hash === '#cal-sec') {
-      loadCalendar();
-    }
-
+  if (window.location.hash === '#cal-sec' || window.location.hash === '#landing-calender') {
+    loadCalendar();
     return;
   }
 
-  // Preserve the current eager-on-idle behavior for the non-homepage pages
-  // that use this shared calendar script but do not opt into the scroll gate.
-  if ('requestIdleCallback' in window) {
-    window.requestIdleCallback(loadCalendar, { timeout: 2000 });
+  if (!secondSection) return;
+
+  const boundary = document.createElement('span');
+  boundary.setAttribute('aria-hidden', 'true');
+  boundary.style.cssText =
+    'display:block;height:1px;width:1px;margin-top:-1px;overflow:hidden;';
+  secondSection.after(boundary);
+
+  let observer;
+  const startCalendar = () => {
+    observer?.disconnect();
+    loadCalendar();
+  };
+  const hasPassedBoundary = () => boundary.getBoundingClientRect().top <= window.innerHeight;
+  const loadIfBoundaryIsAlreadyPassed = () => {
+    if (hasPassedBoundary()) startCalendar();
+  };
+
+  if ('IntersectionObserver' in window) {
+    observer = new IntersectionObserver((entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return;
+      startCalendar();
+    }, { threshold: 0.01 });
+    observer.observe(boundary);
   } else {
-    window.setTimeout(loadCalendar, 0);
+    // Old-browser fallback: use scroll, not wheel, so touch, keyboard, and
+    // restored scroll positions are handled consistently.
+    const onScroll = () => {
+      if (!hasPassedBoundary()) return;
+      window.removeEventListener('scroll', onScroll);
+      loadCalendar();
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
   }
+
+  // Browser scroll restoration can complete after the deferred loader runs.
+  // Recheck after layout and on pageshow so a reload past this exact boundary
+  // always starts Cal.com without another user scroll.
+  loadIfBoundaryIsAlreadyPassed();
+  window.requestAnimationFrame(loadIfBoundaryIsAlreadyPassed);
+  window.addEventListener('pageshow', loadIfBoundaryIsAlreadyPassed, { once: true });
 }
 
 initCalInline();
