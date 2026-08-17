@@ -9,6 +9,7 @@ import ThirdPartyWidgets from "../components/ThirdPartyWidgets.astro";
 import FbAnalytics from "../components/FbAnalytics.astro";
 import KnockioHomeHeader from "../components/KnockioHomeHeader.astro";
 import KnockioHomeFooter from "../components/KnockioHomeFooter.astro";
+import CalcomEmbed from "../components/CalcomEmbed.astro";
 
 interface Props {
   title: string;
@@ -89,12 +90,13 @@ const {
 
     <slot />
 
+    <CalcomEmbed />
     <KnockioHomeFooter />
 
     <ThirdPartyWidgets />
     <FbAnalytics />
     <script src="../scripts/home.js" ></script>
-    <script src="../scripts/cal-inline.js" ></script>
+    <script src="../scripts/lp-cal-inline.js" ></script>
     <script src="../scripts/calendar-cta.js"></script>
   </body>
 </html>

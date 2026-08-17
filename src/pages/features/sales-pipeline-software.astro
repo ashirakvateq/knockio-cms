@@ -1,6 +1,6 @@
 ---
 import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
-import "../../styles/sales-pipeline-software.css";
+import "../../styles/feature-page.css";
 import {
   ArrowRight,
   Bell,
@@ -308,7 +308,7 @@ const tabIconClass =
       class="overflow-hidden border-b border-solid border-[#7fc271] bg-white pt-[72px]"
     >
       <div
-        class="sales-pipeline-hero grid min-h-0 lg:min-h-[610px] xl:min-h-[720px]"
+        class="grid min-h-0 lg:min-h-[610px] lg:grid-cols-[50%_50%] xl:min-h-[720px]"
       >
         <div
           class="relative flex flex-col justify-center px-[5%] py-12 sm:py-16 lg:min-h-[600px] lg:px-0 lg:py-0 lg:pb-[72px] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-[42px] xl:pr-[70px]"
@@ -382,7 +382,7 @@ const tabIconClass =
         </div>
 
         <div
-          class="hero-estimate-visual relative flex min-h-[320px] items-end justify-center overflow-hidden px-4 sm:min-h-[400px] lg:min-h-full lg:px-0"
+          class="hero-feature-visual relative flex min-h-[320px] items-end justify-center overflow-hidden px-4 sm:min-h-[400px] lg:min-h-full lg:px-0"
         >
           <img
             src={asset("inner-boards-hero.webp")}
@@ -469,9 +469,7 @@ const tabIconClass =
                         <button
                           class:list={[
                             "proposal-subitem grid w-full grid-cols-[24px_1fr] items-start gap-3 rounded-xl px-3 py-2.5 text-left text-base font-semibold leading-6 text-[#0f172a] transition-all duration-300 hover:bg-[#f2f8f0] sm:text-[18px] sm:leading-7 [&.is-active]:bg-primary-500 [&.is-active]:text-white",
-                            groupIndex === 0 &&
-                              itemIndex === 0 &&
-                              "is-active",
+                            groupIndex === 0 && itemIndex === 0 && "is-active",
                           ]}
                           type="button"
                           data-tab={group.key}
@@ -995,37 +993,6 @@ const tabIconClass =
                 </div>
               ))
             }
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== Book a Demo ========== -->
-    <section id="cal-sec" class="py-36 max-xl:py-28 max-lg:py-20 max-md:py-16">
-      <div class="my-container">
-        <div
-          class="mx-auto max-w-[1440px] rounded-3xl bg-[linear-gradient(90deg,#0b1f12_0%,#0f2a17_100%)] px-6 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28 xl:px-16"
-        >
-          <div class="mx-auto mb-10 max-w-3xl text-center max-md:mb-8">
-            <p
-              class="mb-3 text-sm font-medium leading-7 text-primary-500 md:text-2xl"
-            >
-              See Knockio In Action
-            </p>
-            <h2
-              class="mb-0 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
-            >
-              Book a Demo Now!
-            </h2>
-          </div>
-          <div
-            id="my-cal-inline"
-            class="mx-auto flex min-h-[680px] max-w-5xl items-center justify-center rounded-2xl bg-white p-4 sm:min-h-[720px] sm:p-6"
-            aria-live="polite"
-          >
-            <p class="text-center text-sm font-medium text-neutral-500">
-              Loading the calendar as you explore Knockio…
-            </p>
           </div>
         </div>
       </div>

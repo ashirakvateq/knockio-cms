@@ -1,12 +1,12 @@
 /* ═══════════════════════════════════════════════
-   HVAC SOFTWARE & CRM
+   Individual Feature Detail Page's CSS
    Tailwind covers layout/typography. This file owns
    interactions (summary panel, sticky capability tabs)
    that cannot be expressed as utilities alone.
    ═══════════════════════════════════════════════ */
 
 /* ---------- Hero visual overlay ---------- */
-.hero-hvac-visual::after {
+.hero-feature-visual::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -16,6 +16,12 @@
     rgba(15, 23, 42, 0)
   );
   pointer-events: none;
+}
+
+.hero-feature-visual {
+  background: radial-gradient(circle at 52% 58%, rgba(79, 170, 58, 0.24), transparent 38%),
+    radial-gradient(circle at 82% 18%, rgba(255, 255, 255, 0.07), transparent 30%),
+    #204718;
 }
 
 /* ---------- Quick summary panel ---------- */
@@ -57,55 +63,14 @@
 }
 
 /* ---------- Sticky capability tabs ---------- */
-.hp-scroll-track {
-  height: auto;
-}
-
-@media (min-width: 1024px) {
-  .hp-scroll-track {
-    height: calc(100vh + (var(--scroll-steps, 5) - 1) * 48vh);
-  }
-
-  .hp-panel {
-    position: absolute;
-    inset: 0;
-    display: block;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transform: translateY(16px);
-    transition:
-      opacity 300ms ease,
-      transform 300ms ease,
-      visibility 300ms ease;
-  }
-
-  .hp-panel.is-active {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transform: translateY(0);
-  }
-}
-
-@media (max-width: 1023px) {
-  .hp-panel {
-    display: none;
-  }
-
-  .hp-panel.is-active {
-    display: block;
-  }
-}
-
-.hp-card {
+.hp-cap-card {
   transition:
     transform 260ms ease,
     box-shadow 260ms ease,
     border-color 260ms ease;
 }
 
-.hp-card:hover {
+.hp-cap-card:hover {
   transform: translateY(-4px);
   border-color: rgba(79, 170, 58, 0.45);
   box-shadow: 0 24px 70px rgba(15, 23, 42, 0.08);
@@ -114,12 +79,11 @@
 @media (prefers-reduced-motion: reduce) {
   .kio-summary-panel,
   .kio-summary-button .summary-chevron,
-  .hp-panel,
-  .hp-card {
+  .hp-cap-card {
     transition: none;
   }
 
-  .hp-card:hover {
+  .hp-cap-card:hover {
     transform: none;
   }
 }

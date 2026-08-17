@@ -1,6 +1,6 @@
 ---
 import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
-import "../../styles/garage-door-service-software.css";
+import "../../styles/industry-page.css";
 import {
   ChevronRight,
   Crosshair,
@@ -365,7 +365,7 @@ const jsonLd = {
   jsonLd={jsonLd}
   whiteBg={true}
 >
-  <main id="gd-industry-page">
+  <main id="industry-page">
     <!-- ========== Hero ========== -->
     <section
       class="overflow-hidden border-b border-solid border-[#7fc271] bg-white"
@@ -447,7 +447,7 @@ const jsonLd = {
         </div>
 
         <div
-          class="hero-gd-visual relative min-h-[340px] overflow-hidden sm:min-h-[440px] lg:min-h-full"
+          class="hero-industry-visual relative min-h-[340px] overflow-hidden sm:min-h-[440px] lg:min-h-full"
         >
           <img
             src={heroImage}
@@ -500,80 +500,98 @@ const jsonLd = {
           }
         </div>
 
-        <div
-          id="gdCapScrollTrack"
-          class="hp-scroll-track"
-          style="--scroll-steps: 5"
-        >
           <div
-            class="lg:sticky lg:top-0 lg:z-20 lg:flex lg:min-h-[760px] lg:flex-col lg:bg-white lg:pt-6"
+            id="hpCapScrollTrack"
+            class="h-[calc(100vh+(var(--scroll-steps,5)-1)*45vh)] max-lg:h-auto motion-reduce:h-auto"
+            style="--scroll-steps: 5"
           >
             <div
-              class="sticky top-0 z-30 border-b border-solid border-neutral-200/80 bg-white/95 pb-5 pt-2 backdrop-blur-md lg:static lg:border-0 lg:bg-transparent lg:pb-8"
+              class="contents lg:flex lg:sticky lg:top-0 lg:z-20 lg:h-[min(calc(100vh-2rem),880px)] lg:flex-col lg:bg-white/95 lg:pt-1 motion-reduce:h-auto motion-reduce:static"
             >
               <div
-                id="gdTabsNav"
-                class="mx-auto flex max-w-[1050px] items-center gap-4 overflow-x-auto scroll-smooth px-1 [scrollbar-width:none] lg:justify-center [&::-webkit-scrollbar]:hidden"
-                role="tablist"
-                aria-label="Garage door platform capabilities"
+                class="sticky top-0 z-30 shrink-0 bg-white/95 px-1 pb-5 pt-2 backdrop-blur-md max-lg:overflow-hidden"
               >
+                <div
+                  id="hpTabs1Nav"
+                  class="relative mx-auto flex max-w-6xl scroll-smooth items-center gap-2 overflow-x-auto [scrollbar-width:none] max-xl:gap-3 lg:justify-between max-lg:flex-nowrap max-lg:justify-start max-lg:px-[12vw] [&::-webkit-scrollbar]:hidden"
+                  role="tablist"
+                  aria-label="Garage door platform capabilities"
+                >
+                  <span
+                    id="hpTabs1Indicator"
+                    class="pointer-events-none absolute left-0 top-0 z-0 rounded-full border-2 border-solid border-primary-500 bg-[#F9FFF8] transition-all duration-300 ease-out"
+                    aria-hidden="true"></span>
+                  {
+                    capabilityTabs.map((tab, index) => (
+                      <button
+                        type="button"
+                        data-hp-scroll-step={String(index)}
+                        class:list={[
+                          "hpTabs1_btn relative z-10 shrink-0 rounded-full border-2 px-5 py-2.5 text-lg font-bold transition-colors hover:border-primary-500/40 hover:text-primary-500 max-xl:px-4 max-xl:py-2 max-xl:text-base max-md:text-sm",
+                          index === 0
+                            ? "border-transparent text-primary-500"
+                            : "border-dashed border-neutral-300 text-neutral-700",
+                        ]}
+                      >
+                        {tab.label}
+                      </button>
+                    ))
+                  }
+                </div>
+              </div>
+
+              <div id="hpTabs1Panels" class="relative lg:flex-1">
                 {
-                  capabilityTabs.map((tab, index) => (
-                    <button
-                      type="button"
-                      role="tab"
-                      data-gd-tab={String(index)}
-                      aria-selected={index === 0 ? "true" : "false"}
+                  capabilityTabs.map((tab, tabIndex) => (
+                    <div
+                      id={`hpTabs${tabIndex + 1}_tab${tabIndex + 1}`}
                       class:list={[
-                        "hp-tab-btn shrink-0 rounded-full border px-5 py-2.5 text-base font-medium leading-6 transition-all duration-300 hover:border-primary-500 hover:text-primary-500 sm:px-6",
-                        index === 0
-                          ? "is-active border-solid border-primary-500 bg-[#f9fff8] text-primary-500"
-                          : "border-dashed border-neutral-300 bg-white text-neutral-700",
+                        "hpTabs1_content scroll-mt-24 lg:absolute lg:inset-0 lg:flex lg:h-full lg:flex-col lg:gap-3 lg:overflow-hidden transition-opacity duration-300 max-lg:static max-lg:mb-10 max-lg:h-auto max-lg:overflow-visible max-lg:opacity-100 max-lg:visible max-lg:pointer-events-auto motion-reduce:static motion-reduce:h-auto pt-5",
+                        tabIndex === 0
+                          ? "opacity-100 visible pointer-events-auto"
+                          : "opacity-0 invisible pointer-events-none",
                       ]}
+                      role="tabpanel"
                     >
-                      {tab.label}
-                    </button>
+                      <div class="grid gap-6 lg:grid-cols-3 lg:gap-8">
+                        {tab.cards.map((card) => (
+                          <article
+                            class:list={[
+                              "hp-cap-card hp-card flex min-h-[520px] flex-col overflow-hidden rounded-[28px] border border-solid border-neutral-200 bg-neutral-50 p-7 sm:p-8",
+                            ]}
+                          >
+                            <div
+                              class:list={[
+                                "relative z-10 shrink-0",
+                              ]}
+                            >
+                              <h5 class="text-3xl max-2xl:text-2xl max-md:text-lg font-bold text-neutral-900 mb-3 max-md:mb-1">
+                                {card.title}
+                              </h5>
+                              <p class="mb-8 text-base leading-7 text-neutral-600 sm:text-[17px] sm:leading-8">
+                                {card.text}
+                              </p>
+                            </div>
+                            <div class="mt-auto flex justify-center overflow-hidden rounded-3xl">
+                              <img
+                                src={card.image}
+                                alt={card.alt}
+                                width="430"
+                                height="320"
+                                decoding="async"
+                                loading="lazy"
+                                class="w-full max-w-[430px] object-contain object-bottom"
+                              />
+                            </div>
+                          </article>
+                        ))}
+                      </div>
+                    </div>
                   ))
                 }
               </div>
             </div>
-
-            <div id="gdTabsPanels" class="relative lg:flex-1">
-              {
-                capabilityTabs.map((tab, tabIndex) => (
-                  <div
-                    class:list={["hp-panel", tabIndex === 0 && "is-active"]}
-                    role="tabpanel"
-                  >
-                    <div class="grid gap-6 lg:grid-cols-3 lg:gap-8">
-                      {tab.cards.map((card) => (
-                        <article class="hp-card flex min-h-[520px] flex-col overflow-hidden rounded-[28px] border border-solid border-neutral-200 bg-neutral-50 p-7 sm:p-8">
-                          <p class="mb-4 text-[26px] font-bold leading-8 text-neutral-950 sm:text-[30px] sm:leading-9">
-                            {card.title}
-                          </p>
-                          <p class="mb-8 text-base leading-7 text-neutral-600 sm:text-[17px] sm:leading-8">
-                            {card.text}
-                          </p>
-                          <div class="mt-auto flex justify-center overflow-hidden rounded-3xl">
-                            <img
-                              src={card.image}
-                              alt={card.alt}
-                              width="430"
-                              height="320"
-                              decoding="async"
-                              loading="lazy"
-                              class="w-full max-w-[430px] object-contain object-bottom"
-                            />
-                          </div>
-                        </article>
-                      ))}
-                    </div>
-                  </div>
-                ))
-              }
-            </div>
           </div>
-        </div>
       </div>
     </section>
 
@@ -908,37 +926,8 @@ const jsonLd = {
       </div>
     </section>
 
-    <!-- ========== Book a Demo ========== -->
-    <section id="cal-sec" class="py-36 max-xl:py-28 max-lg:py-20 max-md:py-16">
-      <div class="my-container">
-        <div
-          class="mx-auto max-w-[1440px] rounded-3xl bg-[linear-gradient(90deg,#0b1f12_0%,#0f2a17_100%)] px-6 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28 xl:px-16"
-        >
-          <div class="mx-auto mb-10 max-w-3xl text-center max-md:mb-8">
-            <p
-              class="mb-3 text-sm font-medium leading-7 text-primary-500 md:text-2xl"
-            >
-              See Knockio In Action
-            </p>
-            <h2
-              class="mb-0 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
-            >
-              Book a Demo Now!
-            </h2>
-          </div>
-          <div
-            id="my-cal-inline"
-            class="mx-auto flex min-h-[680px] max-w-5xl items-center justify-center rounded-2xl bg-white p-4 sm:min-h-[720px] sm:p-6"
-            aria-live="polite"
-          >
-            <p class="text-center text-sm font-medium text-neutral-500">
-              Loading the calendar as you explore Knockio…
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+
   </main>
 
-  <script src="../../scripts/garage-door-service-software.js"></script>
+  <script src="../../scripts/industry-page.js"></script>
 </KnockioHomeLayout>
