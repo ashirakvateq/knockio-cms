@@ -27,8 +27,14 @@
   padding: 0;
 }
 
-.my-container {
+.hero-section {
   width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.my-container {
+  width: 66%;
   max-width: 1600px;
   margin: 0 auto;
 }
@@ -572,6 +578,7 @@ h3.platform-fullstack-heading {
 }
 
 .pricing-price {
+  font-size: 2.7rem;
   margin-top: 1rem;
 }
 
@@ -722,7 +729,7 @@ h3.platform-fullstack-heading {
 }
 
 .pricing-card h3,h4 {
-  font-size: 2rem !important;
+  font-size: 1.6rem !important;
 }
 
 @media (min-width: 1024px) {
@@ -1553,7 +1560,7 @@ h3.platform-fullstack-heading {
 
 /* ── masthead ───────────────────────────────────────────── */
 .kn-title {
-  font-size: clamp(30px, 3.5vw, 42px);
+  font-size: 2.8rem !important;
   font-weight: 800;
   line-height: 1.16;
   letter-spacing: -0.02em;
@@ -1617,7 +1624,7 @@ h3.kn-stage-name {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 1.375;
   color: rgba(253, 252, 249, .9);
@@ -1638,7 +1645,7 @@ h3.kn-stage-name {
 
 /* ── checklist + reserved visual space ──────────────────── */
 .kn-lower {
-  margin-top: 0;
+  margin-top: 5%;
   display: grid;
   grid-template-columns: minmax(0, .78fr) minmax(0, 1.22fr);
   gap: 40px;
@@ -1646,7 +1653,7 @@ h3.kn-stage-name {
 }
 
 .kn-checklist-head {
-  font-size: clamp(19px, 2.1vw, 24px);
+  font-size: 2.5rem !important;
   font-weight: 700;
   line-height: 1.4;
   letter-spacing: -0.01em;
@@ -1664,13 +1671,14 @@ h3.kn-stage-name {
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-top: 0px;
 }
 
 .kn-checklist li {
   display: flex;
   align-items: flex-start;
   gap: 11px;
-  font-size: 14.5px;
+  font-size: 1rem;
   line-height: 1.45;
   color: rgba(253, 252, 249, .88);
   padding: 11px 2px;
@@ -1722,6 +1730,10 @@ h3.kn-stage-name {
 
 /* ── responsive ─────────────────────────────────────────── */
 @media (max-width: 1000px) {
+  .my-container {
+    width: 90%;
+  }
+
   .kn-stages {
     grid-template-columns: 1fr 1fr;
   }

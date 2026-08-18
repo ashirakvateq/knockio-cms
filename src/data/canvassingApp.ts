@@ -57,11 +57,11 @@ export const platformColumns = [
   },
   {
     title: 'Track',
-    items: ['Live GPS rep tracking on a shared map', 'Color-coded statuses you define', 'Lead proximity in feet on every lead', 'Custom reports and granular permissions'],
+    items: ['Live GPS rep tracking on a shared map', 'Color-coded statuses you define','Lead proximity, measured in feet, on every lead','Custom reports and granular permissions'],
   },
   {
     title: 'Close',
-    items: ['Branded estimate builder, sent from the driveway', 'Digital contracts signed, at the door', 'Collect on-site & remote payments', 'Invoices & payment status, Every job'],
+    items: ['Branded estimate builder, sent from the driveway', 'Digital contracts signed, at the door','Collect on-site and remote payments', 'Invoices and payment status, every job'],
   },
 ];
 
@@ -69,12 +69,12 @@ export const fullStackItems = [
   'Assign and manage unlimited territories from the admin dashboard',
   'Track reps live on a shared map, no check-in calls needed',
   'See how far a rep was from the door on every lead they log',
-  'Log door outcomes, photos, and notes from the field app in seconds',
+  'Log door outcomes, photos, and notes from the field in seconds',
   'Turn a not-home into a scheduled callback before the rep walks away',
-  'Trigger tasks, texts, and emails automatically when a lead moves stage',
-  'Send branded estimates from the driveway before you move to the next house',
-  'Collect payment on-site or send a payment link from your phon',
-  'Set permissions for reps, team leads, and office admins separately',
+  'Trigger tasks, texts, and emails automatically as leads move stage',
+  'Send branded estimates from the driveway, collect payment on the spot',
+  'Set permissions by role and run reports by rep, territory, or campaign',
+  'Your data stays with your company, not with your reps'
 ];
 
 export const workSteps = [
