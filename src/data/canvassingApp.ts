@@ -24,7 +24,7 @@ export const featureCards = [
     height: 527,
   },
   {
-    title: 'Full Field Visibility. Down to the Foot',
+    title: 'Full Field Visibility.',
     copy: "See every rep's exact location in real time. Every lead shows how far the rep was from the door when they logged it. Know who's working and who's sitting in their car, without picking up the phone.",
     image: `${assetBaseGlob}/03_1.webp`,
     width: 843,

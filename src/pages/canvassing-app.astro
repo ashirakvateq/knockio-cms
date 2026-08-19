@@ -1,7 +1,7 @@
 ---
-import LandingPagesLayout from "../layouts/LandingPagesLayout.astro";
-import CalendarLoadingCopy from "../components/CalendarLoadingCopy.astro";
-import "../styles/canvassing-app.css";
+import LandingPagesLayout from '../layouts/LandingPagesLayout.astro';
+import CalendarLoadingCopy from '../components/CalendarLoadingCopy.astro';
+import '../styles/canvassing-app.css';
 // import canvassingScript from "../scripts/canvassing-app.js?url";
 import {
   ArrowRight,
@@ -18,7 +18,7 @@ import {
   Phone,
   Plug,
   Plus,
-} from "lucide-astro";
+} from 'lucide-astro';
 import {
   assetBase,
   assetBaseGlob,
@@ -29,74 +29,74 @@ import {
   pricingPlans,
   stats,
   trustLogos,
-} from "../data/canvassingApp";
+} from '../data/canvassingApp';
 
-const title = "Canvassing App for Door-to-Door Sales Teams | Knockio";
+const title = 'Canvassing App for Door-to-Door Sales Teams | Knockio';
 const description =
-  "The knocking is not the hard part. Keeping it organized is. Knockio is the canvassing application that puts everything in one place, from the first knock to the collected payment.";
+  'The knocking is not the hard part. Keeping it organized is. Knockio is the canvassing application that puts everything in one place, from the first knock to the collected payment.';
 const iconMap = { Map, ChartLine, Boxes };
 const currentYear = new Date().getFullYear();
 
 const jsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
+  '@context': 'https://schema.org',
+  '@graph': [
     {
-      "@type": "Organization",
-      "@id": "https://knockio.com/#organization",
-      name: "Knockio",
-      url: "https://knockio.com/",
-      logo: "https://knockio.com/assets/canvassing-app/knockio-logo.webp",
+      '@type': 'Organization',
+      '@id': 'https://knockio.com/#organization',
+      name: 'Knockio',
+      url: 'https://knockio.com/',
+      logo: 'https://knockio.com/assets/canvassing-app/knockio-logo.webp',
       sameAs: [
-        "https://www.facebook.com/knockioapp",
-        "https://www.linkedin.com/company/knockio",
-        "https://x.com/knockioapp",
-        "https://www.youtube.com/@knockioapp",
+        'https://www.facebook.com/knockioapp',
+        'https://www.linkedin.com/company/knockio',
+        'https://x.com/knockioapp',
+        'https://www.youtube.com/@knockioapp',
       ],
     },
     {
-      "@type": "SoftwareApplication",
-      "@id": "https://knockio.com/canvassing-app/#software",
-      name: "Knockio Canvassing App",
-      applicationCategory: "BusinessApplication",
-      operatingSystem: "Web, iOS, Android",
+      '@type': 'SoftwareApplication',
+      '@id': 'https://knockio.com/canvassing-app/#software',
+      name: 'Knockio Canvassing App',
+      applicationCategory: 'BusinessApplication',
+      operatingSystem: 'Web, iOS, Android',
       description,
-      image: "https://knockio.com/assets/canvassing-app/hero-img-new-1280.webp",
-      brand: { "@id": "https://knockio.com/#organization" },
+      image: 'https://knockio.com/assets/canvassing-app/hero-img-new-1280.webp',
+      brand: { '@id': 'https://knockio.com/#organization' },
       offers: pricingPlans.map((plan) => ({
-        "@type": "Offer",
+        '@type': 'Offer',
         name: plan.title,
-        price: plan.price.replace("$", ""),
-        priceCurrency: "USD",
-        category: "subscription",
+        price: plan.price.replace('$', ''),
+        priceCurrency: 'USD',
+        category: 'subscription',
       })),
     },
     {
-      "@type": "FAQPage",
-      "@id": "https://knockio.com/canvassing-app/#faq",
+      '@type': 'FAQPage',
+      '@id': 'https://knockio.com/canvassing-app/#faq',
       mainEntity: faqs.map((faq) => ({
-        "@type": "Question",
+        '@type': 'Question',
         name: faq.question,
         acceptedAnswer: {
-          "@type": "Answer",
+          '@type': 'Answer',
           text: faq.answer,
         },
       })),
     },
     {
-      "@type": "BreadcrumbList",
-      "@id": "https://knockio.com/canvassing-app/#breadcrumb",
+      '@type': 'BreadcrumbList',
+      '@id': 'https://knockio.com/canvassing-app/#breadcrumb',
       itemListElement: [
         {
-          "@type": "ListItem",
+          '@type': 'ListItem',
           position: 1,
-          name: "Home",
-          item: "https://knockio.com/",
+          name: 'Home',
+          item: 'https://knockio.com/',
         },
         {
-          "@type": "ListItem",
+          '@type': 'ListItem',
           position: 2,
-          name: "Canvassing App",
-          item: "https://knockio.com/canvassing-app/",
+          name: 'Canvassing App',
+          item: 'https://knockio.com/canvassing-app/',
         },
       ],
     },
@@ -117,7 +117,7 @@ const jsonLd = {
     {
       href: `${assetBase}/hero-img-new-1280.webp`,
       imagesrcset: `${assetBase}/hero-img-new-1280.webp 480w, ${assetBase}/hero-img-new-1280.webp 1280w`,
-      imagesizes: "(max-width: 767px) 92vw, 56vw",
+      imagesizes: '(max-width: 767px) 92vw, 56vw',
     },
     { href: `${assetBase}/green-name-640.webp` },
   ]}
@@ -412,6 +412,26 @@ const jsonLd = {
           />
         </figure>
       </div>
+
+      <div class="mt-9 flex justify-center">
+        <a
+          href="#landing-calender"
+          class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary-500 px-7 py-4 font-bold text-white shadow-lg shadow-primary-500/25 transition hover:bg-primary-600 hover:shadow-primary-500/35"
+          >Book a Free Demo<svg
+            xmlns="http://www.w3.org/2000/svg"
+            stroke-width="2"
+            width="18"
+            height="18"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            fill="none"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            class="lucide lucide-arrow-right"
+            ><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg
+          ></a>
+      </div>
     </div>
   </section>
 
@@ -520,8 +540,8 @@ const jsonLd = {
             return (
               <article
                 class:list={[
-                  "pricing-card relative flex flex-col",
-                  plan.featured && "is-featured",
+                  'pricing-card relative flex flex-col',
+                  plan.featured && 'is-featured',
                 ]}
               >
                 {plan.featured && (
@@ -532,15 +552,15 @@ const jsonLd = {
                 <div class="pricing-header flex items-center gap-4">
                   <Icon
                     class={
-                      plan.featured ? "text-primary-400" : "text-primary-600"
+                      plan.featured ? 'text-primary-400' : 'text-primary-600'
                     }
                     size={27}
                     aria-hidden="true"
                   />
                   <h3
                     class:list={[
-                      "pricing-title text-3xl font-extrabold",
-                      plan.featured ? "text-white" : "text-slate-950",
+                      'pricing-title text-3xl font-extrabold',
+                      plan.featured ? 'text-white' : 'text-slate-950',
                     ]}
                   >
                     {plan.title}
@@ -548,23 +568,23 @@ const jsonLd = {
                 </div>
                 <p
                   class:list={[
-                    "pricing-desc text-base leading-7",
-                    plan.featured ? "text-slate-300" : "text-slate-600",
+                    'pricing-desc text-base leading-7',
+                    plan.featured ? 'text-slate-300' : 'text-slate-600',
                   ]}
                 >
                   {plan.description}
                 </p>
                 <p
                   class:list={[
-                    "pricing-price flex items-end text-5xl font-extrabold",
-                    plan.featured ? "text-white" : "text-slate-950",
+                    'pricing-price flex items-end text-5xl font-extrabold',
+                    plan.featured ? 'text-white' : 'text-slate-950',
                   ]}
                 >
                   {plan.price}
                   <span
                     class:list={[
-                      "pricing-unit ml-2 pb-1 text-base font-medium",
-                      plan.featured ? "text-slate-400" : "text-slate-500",
+                      'pricing-unit ml-2 pb-1 text-base font-medium',
+                      plan.featured ? 'text-slate-400' : 'text-slate-500',
                     ]}
                   >
                     /user/mo
@@ -572,8 +592,8 @@ const jsonLd = {
                 </p>
                 <p
                   class:list={[
-                    "pricing-discount text-sm",
-                    plan.featured ? "text-slate-400" : "text-slate-500",
+                    'pricing-discount text-sm',
+                    plan.featured ? 'text-slate-400' : 'text-slate-500',
                   ]}
                 >
                   {plan.discountNote}
@@ -582,18 +602,18 @@ const jsonLd = {
                   type="button"
                   data-checkout-package={plan.packageId}
                   class:list={[
-                    "pricing-cta w-full rounded-md px-5 py-3 font-bold transition",
+                    'pricing-cta w-full rounded-md px-5 py-3 font-bold transition',
                     plan.featured
-                      ? "bg-primary-500 text-white hover:bg-primary-600"
-                      : "border border-primary-500 bg-white text-primary-600 hover:bg-primary-500 hover:text-white",
+                      ? 'bg-primary-500 text-white hover:bg-primary-600'
+                      : 'border border-primary-500 bg-white text-primary-600 hover:bg-primary-500 hover:text-white',
                   ]}
                 >
                   {plan.cta}
                 </button>
                 <h4
                   class:list={[
-                    "pricing-features-heading text-xl font-bold",
-                    plan.featured ? "text-white" : "text-slate-950",
+                    'pricing-features-heading text-xl font-bold',
+                    plan.featured ? 'text-white' : 'text-slate-950',
                   ]}
                 >
                   Features Included:
@@ -602,17 +622,17 @@ const jsonLd = {
                   {plan.features.map((feature) => (
                     <li
                       class:list={[
-                        "flex items-start gap-3 text-base leading-7",
-                        plan.featured ? "text-slate-300" : "text-slate-700",
+                        'flex items-start gap-3 text-base leading-7',
+                        plan.featured ? 'text-slate-300' : 'text-slate-700',
                       ]}
                     >
-                      {feature.includes("Engage") ? (
+                      {feature.includes('Engage') ? (
                         <Phone
                           class="mt-1 shrink-0 text-primary-500"
                           size={18}
                           aria-hidden="true"
                         />
-                      ) : feature.includes("Zapier") ? (
+                      ) : feature.includes('Zapier') ? (
                         <Plug
                           class="mt-1 shrink-0 text-slate-400"
                           size={18}
