@@ -32,7 +32,7 @@ export const featureCards = [
   },
   {
     title: 'Every Door Gets a Record',
-    copy: "Outcome, photo, notes logged in under 10 seconds. Not home becomes a scheduled callback before the rep steps off the porch. If the rep forgets, the system doesn't.",
+    copy: "A door knocking app your reps will actually open. Outcome, photo, notes logged in under 10 seconds. Not home becomes a scheduled callback before the rep steps off the porch. If the rep forgets, the system doesn't.",
     image: `${assetBaseGlob}/04_1.webp`,
     width: 718,
     height: 553,
@@ -53,7 +53,7 @@ export const platformColumns = [
   },
   {
     title: 'Capture',
-    items: ['Outcome logging in under 10 seconds', 'Photo capture at the door', 'Not-homes become scheduled callbacks','Follow-up runs automatically on every lead'],
+    items: ['Door knocking outcomes logged in under 10 seconds', 'Photo capture at the door', 'Not-homes become scheduled callbacks','Follow-up runs automatically on every lead'],
   },
   {
     title: 'Track',
@@ -168,6 +168,10 @@ export const faqs = [
   {
     question: 'Will my reps actually use it?',
     answer: 'Logging a knock takes under 10 seconds: outcome, photo, done. The app is built for people moving fast between doors. Most teams have reps logging live the same day.',
+  },
+  {
+    question: 'Is Knockio a door knocking app or a canvassing app?',
+    answer: 'Both. Door knocking apps and canvassing apps do the same job: get reps to the right doors and record what happened at each one. Knockio does that, then carries the lead through follow-up, estimate, contract, and payment. Most door knocking apps stop at the logged door.',
   },
   {
     question: 'How long does setup take?',

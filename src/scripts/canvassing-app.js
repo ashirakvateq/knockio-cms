@@ -95,8 +95,45 @@ function scheduleInit(fn) {
   }
 }
 
+function initPlanTooltips() {
+  document.querySelectorAll('.kio-plan-info-button').forEach((button) => {
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      const wrap = button.closest('.kio-plan-info');
+      if (!wrap) return;
+
+      document.querySelectorAll('.kio-plan-info.is-open').forEach((openWrap) => {
+        if (openWrap === wrap) return;
+        openWrap.classList.remove('is-open');
+        const openButton = openWrap.querySelector('.kio-plan-info-button');
+        const openTip = openWrap.querySelector('.kio-plan-tooltip');
+        if (openButton) openButton.setAttribute('aria-expanded', 'false');
+        if (openTip) openTip.setAttribute('aria-hidden', 'true');
+      });
+
+      const open = wrap.classList.toggle('is-open');
+      button.setAttribute('aria-expanded', String(open));
+      const tip = wrap.querySelector('.kio-plan-tooltip');
+      if (tip) tip.setAttribute('aria-hidden', String(!open));
+    });
+  });
+
+  document.addEventListener('click', (event) => {
+    if (event.target.closest('.kio-plan-info')) return;
+    document.querySelectorAll('.kio-plan-info.is-open').forEach((wrap) => {
+      wrap.classList.remove('is-open');
+      const button = wrap.querySelector('.kio-plan-info-button');
+      const tip = wrap.querySelector('.kio-plan-tooltip');
+      if (button) button.setAttribute('aria-expanded', 'false');
+      if (tip) tip.setAttribute('aria-hidden', 'true');
+    });
+  });
+}
+
 scheduleInit(function() {
   bindCheckoutButtons();
   initFaqAnalytics();
   initAosAnimations();
+  initPlanTooltips();
 });

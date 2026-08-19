@@ -510,20 +510,219 @@ h3.platform-fullstack-heading {
   align-items: center;
 }
 
-.pricing-section {
+#landing-pricing {
   padding: 4rem 1rem;
-  background-color: var(--color-paper);
+  background-color: var(--color-paper, #f4f3f0);
 }
 
 @media (min-width: 768px) {
-  .pricing-section {
+  #landing-pricing {
     padding: 5rem 1rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .pricing-section {
-    padding: 6rem 1rem;
+  #landing-pricing {
+    padding: 0rem 1rem 6rem 1rem;
+  }
+}
+
+#landing-pricing .my-container {
+  width: min(90%, 1500px);
+  max-width: 1500px;
+  margin-inline: auto;
+}
+
+#landing-pricing h2 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.25;
+  padding: 0;
+}
+
+#landing-pricing h3 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  padding: 0;
+}
+
+#landing-pricing h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 0;
+}
+
+#landing-pricing > .my-container > div:first-child > p {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.625;
+}
+
+@media (max-width: 1535px) {
+  #landing-pricing h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 1279px) {
+  #landing-pricing h2 {
+    font-size: 2.25rem;
+  }
+
+  #landing-pricing h3 {
+    font-size: 1.5rem;
+  }
+
+  #landing-pricing > .my-container > div:first-child > p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  #landing-pricing h2 {
+    font-size: 1.875rem;
+  }
+}
+
+.kio-pricing-card {
+  position: relative;
+}
+
+.kio-pricing-card:hover,
+.kio-pricing-card:focus-within,
+.kio-pricing-card.kio-tooltip-active {
+  z-index: 60;
+}
+
+.kio-plan-info {
+  position: relative;
+  z-index: 70;
+  flex-shrink: 0;
+}
+
+.kio-plan-info-button {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(229 229 229);
+  border-radius: 12px;
+  background: #ffffff;
+  color: #334155;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.kio-plan-info-button:hover,
+.kio-plan-info-button:focus-visible {
+  border-color: #65a30d;
+  background: #f5faf3;
+  color: #65a30d;
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.kio-plan-info-button-dark {
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+}
+
+.kio-plan-info-button-dark:hover,
+.kio-plan-info-button-dark:focus-visible {
+  border-color: #65a30d;
+  background: rgba(101, 163, 13, 0.18);
+  color: #ffffff;
+}
+
+.kio-plan-tooltip {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  z-index: 100;
+  width: min(340px, calc(100vw - 48px));
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  background: #0f172a;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.25);
+  color: #f8fafc;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+  text-align: left;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease,
+    transform 0.2s ease;
+}
+
+.kio-plan-tooltip::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  right: 14px;
+  width: 14px;
+  height: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  background: #0f172a;
+  transform: rotate(45deg);
+}
+
+.kio-plan-info:focus-within .kio-plan-tooltip,
+.kio-plan-info.is-open .kio-plan-tooltip {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+@media (hover: hover) {
+  .kio-plan-info:hover .kio-plan-tooltip {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .kio-plan-tooltip {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    left: 20px;
+    width: auto;
+    max-width: none;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    transform: translateY(-48%);
+  }
+
+  .kio-plan-tooltip::before {
+    display: none;
+  }
+
+  .kio-plan-info:focus-within .kio-plan-tooltip,
+  .kio-plan-info.is-open .kio-plan-tooltip {
+    transform: translateY(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kio-plan-info-button,
+  .kio-plan-tooltip {
+    transition: none;
   }
 }
 
@@ -609,7 +808,7 @@ h3.platform-fullstack-heading {
 
 .calender-section {
   background-color: var(--color-paper);
-  padding-top: 0;
+  padding-top: 96px;
 }
 
 .calender-wrapper {
@@ -731,7 +930,8 @@ h3.platform-fullstack-heading {
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 
-.pricing-card h3,h4 {
+.pricing-card h3,
+.pricing-card h4 {
   font-size: 1.6rem !important;
 }
 
@@ -1337,8 +1537,7 @@ h3.platform-fullstack-heading {
 
 /* Section Wrapper */
 .onboarding-section {
-  padding: 96px 24px;
-
+  padding: 96px 24px 96px 24px;
   background-color: var(--color-paper);
 }
 
