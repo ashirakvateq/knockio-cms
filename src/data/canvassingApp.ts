@@ -24,7 +24,7 @@ export const featureCards = [
     height: 527,
   },
   {
-    title: 'Full Field Visibility. Down to the Foot',
+    title: 'Full Field Visibility.',
     copy: "See every rep's exact location in real time. Every lead shows how far the rep was from the door when they logged it. Know who's working and who's sitting in their car, without picking up the phone.",
     image: `${assetBaseGlob}/03_1.webp`,
     width: 843,
@@ -32,7 +32,7 @@ export const featureCards = [
   },
   {
     title: 'Every Door Gets a Record',
-    copy: "Outcome, photo, notes logged in under 10 seconds. Not home becomes a scheduled callback before the rep steps off the porch. If the rep forgets, the system doesn't.",
+    copy: "A door knocking app your reps will actually open. Outcome, photo, notes logged in under 10 seconds. Not home becomes a scheduled callback before the rep steps off the porch. If the rep forgets, the system doesn't.",
     image: `${assetBaseGlob}/04_1.webp`,
     width: 718,
     height: 553,
@@ -53,15 +53,15 @@ export const platformColumns = [
   },
   {
     title: 'Capture',
-    items: ['Outcome logging in under 10 seconds', 'Photo capture at the door', 'Not-homes become scheduled callbacks','Follow-up runs automatically on every lead'],
+    items: ['Door knocking outcomes logged in under 10 seconds', 'Photo capture at the door', 'Not-homes become scheduled callbacks','Follow-up runs automatically on every lead'],
   },
   {
     title: 'Track',
-    items: ['Live GPS rep tracking on a shared map', 'Color-coded statuses you define', 'Lead proximity in feet on every lead', 'Custom reports and granular permissions'],
+    items: ['Live GPS rep tracking on a shared map', 'Color-coded statuses you define','Lead proximity, measured in feet, on every lead','Custom reports and granular permissions'],
   },
   {
     title: 'Close',
-    items: ['Branded estimate builder, sent from the driveway', 'Digital contracts signed, at the door', 'Collect on-site & remote payments', 'Invoices & payment status, Every job'],
+    items: ['Branded estimate builder, sent from the driveway', 'Digital contracts signed, at the door','Collect on-site and remote payments', 'Invoices and payment status, every job'],
   },
 ];
 
@@ -69,12 +69,12 @@ export const fullStackItems = [
   'Assign and manage unlimited territories from the admin dashboard',
   'Track reps live on a shared map, no check-in calls needed',
   'See how far a rep was from the door on every lead they log',
-  'Log door outcomes, photos, and notes from the field app in seconds',
+  'Log door outcomes, photos, and notes from the field in seconds',
   'Turn a not-home into a scheduled callback before the rep walks away',
-  'Trigger tasks, texts, and emails automatically when a lead moves stage',
-  'Send branded estimates from the driveway before you move to the next house',
-  'Collect payment on-site or send a payment link from your phon',
-  'Set permissions for reps, team leads, and office admins separately',
+  'Trigger tasks, texts, and emails automatically as leads move stage',
+  'Send branded estimates from the driveway, collect payment on the spot',
+  'Set permissions by role and run reports by rep, territory, or campaign',
+  'Your data stays with your company, not with your reps'
 ];
 
 export const workSteps = [
@@ -168,6 +168,10 @@ export const faqs = [
   {
     question: 'Will my reps actually use it?',
     answer: 'Logging a knock takes under 10 seconds: outcome, photo, done. The app is built for people moving fast between doors. Most teams have reps logging live the same day.',
+  },
+  {
+    question: 'Is Knockio a door knocking app or a canvassing app?',
+    answer: 'Both. Door knocking apps and canvassing apps do the same job: get reps to the right doors and record what happened at each one. Knockio does that, then carries the lead through follow-up, estimate, contract, and payment. Most door knocking apps stop at the logged door.',
   },
   {
     question: 'How long does setup take?',

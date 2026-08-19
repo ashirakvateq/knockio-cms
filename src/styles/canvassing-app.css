@@ -27,8 +27,14 @@
   padding: 0;
 }
 
+.hero-section {
+  width: 75%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
 .my-container {
-  width: 90%;
+  width: 66%;
   max-width: 1600px;
   margin: 0 auto;
 }
@@ -44,7 +50,7 @@
 }
 
 .hero-h1 {
-  font-size: clamp(2rem, 5vw, 3.375rem) !important;
+  font-size: clamp(2rem, 5vw, 3rem) !important;
   font-weight: 800;
   color: #1e1d1a;
   line-height: 1.1;
@@ -67,9 +73,8 @@
 }
 
 .hero-img-wrap {
-  width: 88%;
-  margin: 0 auto;
-  margin-right: 0;
+  margin: 0 auto; /* Keeps it centered horizontally */
+  margin-top: auto; /* Forces the image to the very bottom */
 }
 
 .trust-bar {
@@ -126,7 +131,7 @@
 
 @media (min-width: 1024px) {
   .stats-section {
-    padding: 6rem 0;
+    padding: 6rem 0 0;
   }
 }
 
@@ -153,9 +158,13 @@
   padding-bottom: 0.625rem;
 }
 
+.stat-blurb h4 span{
+  font-size: 34px;
+}
+
 .stat-blurb p {
   color: #74726c;
-  font-size: 1.125rem;
+  font-size: 1.18rem;
   text-align: center;
   line-height: 1.56;
   font-weight: 500;
@@ -501,20 +510,219 @@ h3.platform-fullstack-heading {
   align-items: center;
 }
 
-.pricing-section {
+#landing-pricing {
   padding: 4rem 1rem;
-  background-color: var(--color-paper);
+  background-color: var(--color-paper, #f4f3f0);
 }
 
 @media (min-width: 768px) {
-  .pricing-section {
+  #landing-pricing {
     padding: 5rem 1rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .pricing-section {
-    padding: 6rem 1rem;
+  #landing-pricing {
+    padding: 0rem 1rem 6rem 1rem;
+  }
+}
+
+#landing-pricing .my-container {
+  width: min(90%, 1500px);
+  max-width: 1500px;
+  margin-inline: auto;
+}
+
+#landing-pricing h2 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.25;
+  padding: 0;
+}
+
+#landing-pricing h3 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  padding: 0;
+}
+
+#landing-pricing h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 0;
+}
+
+#landing-pricing > .my-container > div:first-child > p {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.625;
+}
+
+@media (max-width: 1535px) {
+  #landing-pricing h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 1279px) {
+  #landing-pricing h2 {
+    font-size: 2.25rem;
+  }
+
+  #landing-pricing h3 {
+    font-size: 1.5rem;
+  }
+
+  #landing-pricing > .my-container > div:first-child > p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  #landing-pricing h2 {
+    font-size: 1.875rem;
+  }
+}
+
+.kio-pricing-card {
+  position: relative;
+}
+
+.kio-pricing-card:hover,
+.kio-pricing-card:focus-within,
+.kio-pricing-card.kio-tooltip-active {
+  z-index: 60;
+}
+
+.kio-plan-info {
+  position: relative;
+  z-index: 70;
+  flex-shrink: 0;
+}
+
+.kio-plan-info-button {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(229 229 229);
+  border-radius: 12px;
+  background: #ffffff;
+  color: #334155;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.kio-plan-info-button:hover,
+.kio-plan-info-button:focus-visible {
+  border-color: #65a30d;
+  background: #f5faf3;
+  color: #65a30d;
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.kio-plan-info-button-dark {
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+}
+
+.kio-plan-info-button-dark:hover,
+.kio-plan-info-button-dark:focus-visible {
+  border-color: #65a30d;
+  background: rgba(101, 163, 13, 0.18);
+  color: #ffffff;
+}
+
+.kio-plan-tooltip {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  z-index: 100;
+  width: min(340px, calc(100vw - 48px));
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  background: #0f172a;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.25);
+  color: #f8fafc;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+  text-align: left;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease,
+    transform 0.2s ease;
+}
+
+.kio-plan-tooltip::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  right: 14px;
+  width: 14px;
+  height: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  background: #0f172a;
+  transform: rotate(45deg);
+}
+
+.kio-plan-info:focus-within .kio-plan-tooltip,
+.kio-plan-info.is-open .kio-plan-tooltip {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+@media (hover: hover) {
+  .kio-plan-info:hover .kio-plan-tooltip {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .kio-plan-tooltip {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    left: 20px;
+    width: auto;
+    max-width: none;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    transform: translateY(-48%);
+  }
+
+  .kio-plan-tooltip::before {
+    display: none;
+  }
+
+  .kio-plan-info:focus-within .kio-plan-tooltip,
+  .kio-plan-info.is-open .kio-plan-tooltip {
+    transform: translateY(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kio-plan-info-button,
+  .kio-plan-tooltip {
+    transition: none;
   }
 }
 
@@ -572,6 +780,7 @@ h3.platform-fullstack-heading {
 }
 
 .pricing-price {
+  font-size: 2.7rem;
   margin-top: 1rem;
 }
 
@@ -599,7 +808,7 @@ h3.platform-fullstack-heading {
 
 .calender-section {
   background-color: var(--color-paper);
-  padding-top: 0;
+  padding-top: 96px;
 }
 
 .calender-wrapper {
@@ -721,8 +930,9 @@ h3.platform-fullstack-heading {
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 
-.pricing-card h3,h4 {
-  font-size: 2rem !important;
+.pricing-card h3,
+.pricing-card h4 {
+  font-size: 1.6rem !important;
 }
 
 @media (min-width: 1024px) {
@@ -1306,7 +1516,8 @@ h3.platform-fullstack-heading {
 :root {
   --color-paper: #fdfcf9;
   /* Warm, tactile paper-stock tone */
-  --color-ink-dark: #121212;
+  /* --color-ink-dark: #121212; */
+  --color-ink-dark:#1e1d1a;
   /* High-contrast heavy print ink */
   --color-ink-muted: #595855;
   /* Subdued, readable secondary charcoal */
@@ -1326,8 +1537,7 @@ h3.platform-fullstack-heading {
 
 /* Section Wrapper */
 .onboarding-section {
-  padding: 96px 24px;
-
+  padding: 96px 24px 96px 24px;
   background-color: var(--color-paper);
 }
 
@@ -1368,7 +1578,7 @@ h3.platform-fullstack-heading {
   font-size: 3rem !important;
   line-height: 1.05;
   letter-spacing: -0.02em;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   color: var(--color-ink-dark);
 }
 
@@ -1397,7 +1607,7 @@ h3.platform-fullstack-heading {
 .pull-quote {
   font-size: 1.25rem;
   line-height: 1.6;
-  color: var(--color-ink-muted);
+  color: var(--color-ink-dark);
   font-weight: 500;
   border-left: 4px solid var(--color-rust);
   padding-left: 24px;
@@ -1427,9 +1637,9 @@ h3.platform-fullstack-heading {
   font-family: var(--font-sans);
   font-size: 1.8rem;
   font-weight: 700;
-  letter-spacing: 0.25em;
-  color: var(--color-ink-muted);
-  text-transform: uppercase;
+  /* letter-spacing: 0.25em; */
+  color: #1e1d1a;
+  /* text-transform: uppercase; */
   margin-bottom: 48px;
   border-bottom: 1px solid var(--color-border-light);
   padding-bottom: 16px;
@@ -1475,13 +1685,13 @@ h3.platform-fullstack-heading {
   font-family: var(--font-serif);
   font-size: 1.25rem !important;
   font-weight: 700;
-  color: var(--color-ink-dark);
+  color: #1e1d1a;
   border-bottom: 4px solid var(--color-ink-dark);
   padding-bottom: 12px;
   margin-bottom: 20px;
   display: inline-block;
   align-self: flex-start;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 0.03em;
 }
 
@@ -1497,7 +1707,7 @@ h3.platform-fullstack-heading {
   display: block;
   margin-top: 12px;
   font-size: 1rem;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 0.05em;
 }
 
@@ -1553,7 +1763,7 @@ h3.platform-fullstack-heading {
 
 /* ── masthead ───────────────────────────────────────────── */
 .kn-title {
-  font-size: clamp(30px, 3.5vw, 42px);
+  font-size: 2.8rem !important;
   font-weight: 800;
   line-height: 1.16;
   letter-spacing: -0.02em;
@@ -1617,7 +1827,7 @@ h3.kn-stage-name {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 1.375;
   color: rgba(253, 252, 249, .9);
@@ -1638,7 +1848,7 @@ h3.kn-stage-name {
 
 /* ── checklist + reserved visual space ──────────────────── */
 .kn-lower {
-  margin-top: 0;
+  margin-top: 5%;
   display: grid;
   grid-template-columns: minmax(0, .78fr) minmax(0, 1.22fr);
   gap: 40px;
@@ -1646,7 +1856,7 @@ h3.kn-stage-name {
 }
 
 .kn-checklist-head {
-  font-size: clamp(19px, 2.1vw, 24px);
+  font-size: 1.5rem !important;
   font-weight: 700;
   line-height: 1.4;
   letter-spacing: -0.01em;
@@ -1664,13 +1874,14 @@ h3.kn-stage-name {
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-top: 0px;
 }
 
 .kn-checklist li {
   display: flex;
   align-items: flex-start;
   gap: 11px;
-  font-size: 14.5px;
+  font-size: 1rem;
   line-height: 1.45;
   color: rgba(253, 252, 249, .88);
   padding: 11px 2px;
@@ -1722,6 +1933,10 @@ h3.kn-stage-name {
 
 /* ── responsive ─────────────────────────────────────────── */
 @media (max-width: 1000px) {
+  .my-container {
+    width: 90%;
+  }
+
   .kn-stages {
     grid-template-columns: 1fr 1fr;
   }
