@@ -1,0 +1,1008 @@
+---
+import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
+import "../../styles/feature-page.css";
+import {
+  ArrowRight,
+  Check,
+  ChevronDown,
+  ChevronRight,
+  CircleCheck,
+  FileSignature,
+  ListChecks,
+  MapPin,
+  MapPinned,
+  Quote,
+  RefreshCw,
+} from "lucide-astro";
+
+const title = "Door to Door Sales Canvassing Software for Field Sales Teams";
+const description =
+  "Knockio's sales canvassing software gives field sales teams one tool for the whole door to door process. Drop custom pins, track reps live, and more.";
+
+const asset = (name: string) => `/assets/cfw/${name}`;
+
+const proposalGroups = [
+  {
+    key: "digital",
+    title: "Build and Assign Territories Before Boots Hit the Ground",
+    icon: "mapPinned" as const,
+    items: [
+      {
+        label: "Clear Boundaries",
+        title: "Map Based Territory Creation",
+        text: "Draw territories directly on a map to match neighborhoods, zip codes, or whatever boundaries make sense for your roofing, solar, or pest control canvassing team.",
+        image: asset(
+          "inner-sales-canvassing-build-and-assign-territories-before-boots-hit-the-ground-clear-boundaries.webp",
+        ),
+      },
+      {
+        label: "No Wasted Doors",
+        title: "Assign Territories to Specific Reps",
+        text: "Give each rep or team their own area so two people are never knocking the same block on the same day without realizing it.",
+        image: asset(
+          "inner-sales-canvassing-build-and-assign-territories-before-boots-hit-the-ground-no-wasted-doors.webp",
+        ),
+      },
+      {
+        label: "Total Control",
+        title: "Unlimited Territories, Reassigned Anytime",
+        text: "Create as many territories as your business needs and adjust them whenever you hire someone new or expand into a different part of town.",
+        image: asset(
+          "inner-sales-canvassing-build-and-assign-territories-before-boots-hit-the-ground-total-control.webp",
+        ),
+      },
+    ],
+  },
+  {
+    key: "pricing",
+    title: "Custom Pins That Tell the Real Story of Every Door",
+    icon: "mapPin" as const,
+    items: [
+      {
+        label: "Built for Speed",
+        title: "Drop a Pin in Seconds",
+        text: "A rep taps a home, drops a pin, and logs the outcome before they are even halfway to the next driveway.",
+        image: asset(
+          "inner-sales-canvassing-custom-pins-that-tell-the-real-story-of-every-door-built-for-speed.webp",
+        ),
+      },
+      {
+        label: "Visual Status at a Glance",
+        title: "Custom Colors, Icons, and Statuses for Every Pin",
+        text: "Set up your own pin statuses, like sold, not home, callback, or not interested, each with its own color and icon, so a manager can read the whole street's activity from one glance at the map.",
+        image: asset(
+          "inner-sales-canvassing-custom-pins-that-tell-the-real-story-of-every-door-visual-status-at-a-glance.webp",
+        ),
+      },
+      {
+        label: "A Map That Actually Means Something",
+        title: "Pin History on Every Property",
+        text: "See every past visit to a home, who knocked it, what happened, and when, instead of wondering if a door has already been worked this season.",
+        image: asset(
+          "inner-sales-canvassing-custom-pins-that-tell-the-real-story-of-every-door-a-map-that-actually-means-something.webp",
+        ),
+      },
+    ],
+  },
+  {
+    key: "tracking",
+    title: "Everything a Rep Needs, Right From the Pin",
+    icon: "list" as const,
+    items: [
+      {
+        label: "No App Switching",
+        title: "Create Contacts Directly From a Pin",
+        text: "Turn a homeowner conversation into a saved contact on the spot, with their name, number, and notes attached to that exact property.",
+        image: asset(
+          "inner-sales-canvassing-everything-a-rep-needs-right-from-the-pin-no-app-switching.webp",
+        ),
+      },
+      {
+        label: "Faster Booking",
+        title: "Schedule Appointments in the Field",
+        text: "Book a follow up appointment right from the door, so the lead does not go cold waiting for someone back at the office to call and set a time.",
+        image: asset(
+          "inner-sales-canvassing-everything-a-rep-needs-right-from-the-pin-faster-booking.webp",
+        ),
+      },
+      {
+        label: "Stay Organized",
+        title: "Create Tasks on the Spot",
+        text: "Set a reminder to follow up next week or flag a property for a manager's attention, all without pulling out a separate notebook or app.",
+        image: asset(
+          "inner-sales-canvassing-everything-a-rep-needs-right-from-the-pin-stay-organized.webp",
+        ),
+      },
+    ],
+  },
+  {
+    key: "followup",
+    title: "Verify the Work Actually Happened",
+    icon: "check" as const,
+    items: [
+      {
+        label: "Real Time Oversight",
+        title: "Live GPS Tracking of Every Rep",
+        text: "See exactly where your canvassing team is on a live map throughout the day, not just where they say they were at the end of a shift.",
+        image: asset(
+          "inner-sales-canvassing-verify-the-work-actually-happened-real-time-oversight.webp",
+        ),
+      },
+      {
+        label: "Honest Reporting",
+        title: "Pin Drop Proximity Verification",
+        text: "Knockio shows admins how far a rep's device actually was from the property when a pin was dropped, making it obvious when someone is marking doors as knocked from inside their car.",
+        image: asset(
+          "inner-sales-canvassing-verify-the-work-actually-happened-honest-reporting.webp",
+        ),
+      },
+      {
+        label: "Data Backed Coaching",
+        title: "Activity Tied to Real Location, Not Just Claims",
+        text: "Base performance conversations on verified location data instead of taking a rep's word for how many doors they actually worked.",
+        image: asset(
+          "inner-sales-canvassing-verify-the-work-actually-happened-data-backed-coaching.webp",
+        ),
+      },
+    ],
+  },
+];
+
+const initialItem = proposalGroups[0].items[0];
+
+const trustBadges = [
+  {
+    href: "https://www.capterra.com/p/10018264/Knockio/",
+    src: asset("badge-new-capterra.webp"),
+    alt: "Knockio Capterra rating badge",
+    label: "View Knockio reviews on Capterra",
+  },
+  {
+    href: "https://www.softwareadvice.com/field-sales/knockio-profile/",
+    src: asset("badge-new-software-advice.webp"),
+    alt: "Knockio Software Advice rating badge",
+    label: "View Knockio reviews on Software Advice",
+  },
+  {
+    href: "https://www.getapp.com/all-software/a/knockio/",
+    src: asset("badge-new-get-app.webp"),
+    alt: "Knockio GetApp rating badge",
+    label: "View Knockio reviews on GetApp",
+  },
+  {
+    href: "https://www.g2.com/products/knockio-by-knockio/reviews",
+    src: asset("badge-new-g2.webp"),
+    alt: "Knockio G2 rating badge",
+    label: "View Knockio reviews on G2",
+  },
+];
+
+const faqs = [
+  {
+    q: "Can I create custom territories for my canvassing team?",
+    a: "Yes. Admins can draw custom territories on a map and assign them to individual reps or teams, keeping the whole canvassing operation organized and avoiding overlap.",
+  },
+  {
+    q: "Can pins be customized with different statuses, colors, and icons?",
+    a: "Yes. You can create your own pin statuses, each with a unique color and icon, so the map gives an instant visual read on how a territory is being worked.",
+  },
+  {
+    q: "What can a rep do directly from a pin?",
+    a: "A rep can create a contact, set a task, book an appointment, run a presentation, and upload photos or other media, all directly from the pin without switching to a separate app.",
+  },
+  {
+    q: "How does Knockio provide location verification for field visits?",
+    a: "When a representative creates a property pin, Knockio records the distance between the device location and the selected property at that moment. Managers can use this information to review field records, identify possible location discrepancies, and maintain consistent territory data.",
+  },
+];
+
+const reviewsRow1 = [
+  {
+    name: "Lacey Jackson",
+    avatar: asset("avatar-lacey-jackson.webp"),
+    quote:
+      "This app is the best thing that has happened to our company! Asad is absolutely amazing! He is so responsive, it doesn't matter what time of day he is on it! I highly recommend this company add this app!",
+  },
+  {
+    name: "Ben Loveland",
+    avatar: asset("avatar-ben-loveland.webp"),
+    quote:
+      "Knockio is a great product! We use it for our roofing sales canvassing. Their support team is responsive and fixes issues immediately. Highly recommend!",
+  },
+  {
+    name: "Bar Galanti",
+    avatar: asset("avatar-bar-galanti.webp"),
+    quote:
+      "The support team is awesome. The live tracking feature is very useful. The pricing is fair as well!",
+  },
+];
+
+const reviewsRow2 = [
+  {
+    name: "Georgia Hancocks",
+    avatar: asset("avatar-georgia-hancocks.webp"),
+    quote:
+      "Knockio is the best! My team and I absolutely love using it - it is so user friendly and simple. Support is brilliant too, nothing is ever too much trouble. The best on the market. Thanks Knockio!",
+  },
+  {
+    name: "Sarah Bennett",
+    avatar: asset("avatar-sarah-bennett.webp"),
+    quote:
+      "We love Knockio so far! It is solving a lot of the issues of the other canvassing apps. The team have worked with us providing excellent fast support. Highly recommend if you're seeing people face to face.",
+  },
+  {
+    name: "Ayana Hall",
+    avatar: asset("avatar-ayana-hall.webp"),
+    quote:
+      "Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.",
+  },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://knockio.com/features/sales-canvassing-software/#webpage",
+      url: "https://knockio.com/features/sales-canvassing-software/",
+      name: title,
+      description,
+      isPartOf: { "@id": "https://knockio.com/#website" },
+      about: { "@id": "https://knockio.com/canvassing/#software" },
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id":
+        "https://knockio.com/features/sales-canvassing-software/#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://knockio.com/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Features",
+          item: "https://knockio.com/features/",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Sales Canvassing Software",
+          item: "https://knockio.com/features/sales-canvassing-software/",
+        },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://knockio.com/features/sales-canvassing-software/#faq",
+      mainEntity: faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
+      })),
+    },
+  ],
+};
+
+const tabIconClass =
+  "inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-primary-500 sm:h-10 sm:w-10";
+---
+
+<KnockioHomeLayout
+  title={title}
+  description={description}
+  ogImage={asset("inner-sales-canvassing-hero.webp")}
+  jsonLd={jsonLd}
+  whiteBg={true}
+>
+  <main id="sales-canvassing-page">
+    <!-- ========== Hero ========== -->
+    <section
+      class="overflow-hidden border-b border-solid border-[#7fc271] bg-white pt-[72px]"
+    >
+      <div
+        class="sales-canvassing-hero grid min-h-0 lg:min-h-[610px] xl:min-h-[720px]"
+      >
+        <div
+          class="relative flex flex-col justify-center px-[5%] py-12 sm:py-16 lg:min-h-[600px] lg:px-0 lg:py-0 lg:pb-[72px] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-[42px] xl:pr-[70px]"
+        >
+          <div class="max-w-[810px]">
+            <h1
+              class="mb-7 text-[32px] font-bold leading-[38px] text-neutral-950 sm:text-[38px] sm:leading-[44px] lg:whitespace-nowrap xl:text-[48px] xl:leading-[54px] 2xl:text-[56px] 2xl:leading-[60px]"
+            >
+              Sales Canvassing Software
+            </h1>
+            <p
+              class="mb-10 max-w-[710px] text-base font-medium text-neutral-600 lg:text-lg"
+            >
+              Most canvassing apps stop at a pin on a map. Knockio goes a lot
+              further. Admins build territories and assign them to reps, track
+              every rep live while they are in the field, and see exactly how
+              far a rep actually was from a home when they dropped a pin. Reps
+              drop a custom pin for every door, log a contact, book an
+              appointment, run a presentation, create a task, and upload photos.
+              Try our advanced sales canvassing software for your sales
+              campaigns.
+            </p>
+            <a
+              href="#cal-sec"
+              class="inline-flex w-full items-center justify-center rounded-lg bg-primary-500 px-6 py-3.5 text-sm font-medium text-white hover:bg-primary-600 sm:w-auto sm:px-10 sm:py-4 sm:text-base lg:px-12"
+            >
+              Schedule a Demo
+            </a>
+          </div>
+
+          <div
+            id="kioSummaryPanel"
+            class="kio-summary-panel z-[18] mt-6 rounded-xl border border-solid border-primary-500/35 bg-white/95 px-[5%] py-5 text-base leading-7 text-neutral-600 lg:absolute lg:inset-x-0 lg:bottom-[72px] lg:mt-0 lg:px-0 lg:py-[22px] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-10 lg:shadow-[0_-18px_45px_rgba(15,23,42,0.08)]"
+          >
+            <h3
+              class="mb-4 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
+            >
+              What is door to door canvassing software and what should it
+              actually track?
+            </h3>
+            <p
+              class="max-w-[720px] text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
+            >
+              Door to door canvassing software helps field sales teams organize
+              territories, log activity at every home they visit, and report
+              that activity back to the office in real time. Knockio handles
+              this with custom territories assigned to specific reps, live GPS
+              tracking of every rep in the field, and custom pin drops for every
+              home, each with its own color, icon, and status. Reps can create
+              contacts, book appointments, run presentations, log tasks, and
+              upload media directly from the pin, while admins can see exactly
+              how far a rep's device was from the property at the moment the pin
+              was dropped, which is the part most canvassing apps leave out
+              entirely.
+            </p>
+          </div>
+
+          <div
+            class="z-20 mt-8 min-h-[72px] border-t border-solid border-primary-500/70 bg-[#f3faf3] lg:absolute lg:inset-x-0 lg:bottom-0 lg:mt-0"
+          >
+            <button
+              id="kioSummaryBtn"
+              class="kio-summary-button duration-250 flex min-h-[72px] w-full items-center justify-between gap-5 px-[5%] text-neutral-950 transition-colors hover:bg-[#edf8ed] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-10"
+              type="button"
+              aria-expanded="false"
+              aria-controls="kioSummaryPanel"
+            >
+              <span class="text-lg font-medium leading-6">Quick summary</span>
+              <ChevronRight
+                class="summary-chevron size-5 shrink-0"
+                aria-hidden="true"
+              />
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="hero-feature-visual relative flex min-h-[320px] items-end justify-center overflow-hidden px-4 sm:min-h-[400px] lg:min-h-full lg:px-0"
+        >
+          <img
+            src={asset("inner-sales-canvassing-hero.webp")}
+            alt="Sales canvassing preview"
+            width="802"
+            height="638"
+            decoding="async"
+            loading="eager"
+            fetchpriority="high"
+            class="relative z-10 w-[min(92%,720px)] max-w-[830px] object-contain object-bottom lg:-mb-3 lg:w-[min(92%,830px)] lg:animate-kio-float"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Everything You Need ========== -->
+    <section
+      class="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-[130px]"
+    >
+      <div
+        class="pointer-events-none absolute inset-0 opacity-[0.35] [background-image:radial-gradient(#0f172a_0.7px,transparent_0.7px)] [background-size:18px_18px]"
+      >
+      </div>
+
+      <div class="my-container relative z-10">
+        <div class="mx-auto mb-14 max-w-[900px] text-center lg:mb-16">
+          <h2
+            class="text-center text-[31px] font-bold leading-[39px] text-neutral-950 sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+          >
+            Everything You Need, <br class="hidden md:block" />
+            Built Into One Platform
+          </h2>
+        </div>
+
+        <div
+          class="mx-auto grid max-w-[1450px] items-start gap-10 lg:grid-cols-[500px_minmax(0,1fr)] lg:gap-16 xl:grid-cols-[540px_minmax(0,1fr)] xl:gap-20"
+        >
+          <div class="grid w-full max-w-[540px] content-start gap-4">
+            {
+              proposalGroups.map((group, groupIndex) => (
+                <div
+                  class:list={[
+                    "proposal-tab overflow-hidden rounded-2xl border border-solid border-[#e1e8de] bg-white shadow-sm transition-all duration-300 [&.is-active]:border-[#0f172a]",
+                    groupIndex === 0 && "is-active",
+                  ]}
+                  data-tab={group.key}
+                >
+                  <button
+                    class="proposal-tab-header flex w-full cursor-pointer items-center justify-between gap-4 rounded-2xl bg-white px-5 py-4 text-left text-[#0f172a] transition-all duration-300 [&[aria-expanded='true']]:rounded-b-none [&[aria-expanded='true']]:bg-[#0f172a] [&[aria-expanded='true']]:text-white sm:px-6 sm:py-5"
+                    type="button"
+                    aria-expanded={groupIndex === 0 ? "true" : "false"}
+                  >
+                    <span class="flex items-center gap-4">
+                      <span class={tabIconClass}>
+                        {group.icon === "mapPinned" && (
+                          <MapPinned class="size-[22px]" aria-hidden="true" />
+                        )}
+                        {group.icon === "mapPin" && (
+                          <MapPin class="size-[22px]" aria-hidden="true" />
+                        )}
+                        {group.icon === "list" && (
+                          <ListChecks class="size-[22px]" aria-hidden="true" />
+                        )}
+                        {group.icon === "check" && (
+                          <CircleCheck
+                            class="size-[22px]"
+                            aria-hidden="true"
+                          />
+                        )}
+                      </span>
+                      <span class="text-xl font-bold leading-7 sm:text-lg sm:leading-8">
+                        {group.title}
+                      </span>
+                    </span>
+                    <ChevronDown
+                      class="proposal-chevron size-[18px] shrink-0"
+                      aria-hidden="true"
+                    />
+                  </button>
+
+                  <div class="proposal-panel">
+                    <div class="grid gap-3 rounded-b-2xl border border-t-0 border-solid border-[#e1e8de] bg-white px-5 py-5 sm:px-6">
+                      {group.items.map((item, itemIndex) => (
+                        <button
+                          class:list={[
+                            "proposal-subitem grid w-full grid-cols-[24px_1fr] items-start gap-3 rounded-xl px-3 py-2.5 text-left text-base font-semibold leading-6 text-[#0f172a] transition-all duration-300 hover:bg-[#f2f8f0] sm:text-[18px] sm:leading-7 [&.is-active]:bg-primary-500 [&.is-active]:text-white",
+                            groupIndex === 0 &&
+                              itemIndex === 0 &&
+                              "is-active",
+                          ]}
+                          type="button"
+                          data-tab={group.key}
+                          data-index={String(itemIndex)}
+                          data-title={item.title}
+                          data-text={item.text}
+                          data-image={item.image}
+                        >
+                          <ArrowRight
+                            class="mt-1 size-[17px]"
+                            aria-hidden="true"
+                          />
+                          <span>{item.label}</span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+
+          <div class="w-full self-start">
+            <div
+              id="proposalVisual"
+              class="proposal-visual-card relative overflow-hidden"
+            >
+              <img
+                id="proposalVisualImage"
+                src={initialItem.image}
+                alt={initialItem.title}
+                width="714"
+                height="386"
+                decoding="async"
+                loading="lazy"
+                class="relative z-10 h-full w-full object-contain"
+              />
+            </div>
+            <div class="mt-7 max-w-[760px]">
+              <p
+                id="proposalVisualTitle"
+                class="mb-4 text-[24px] font-bold leading-8 text-[#0f172a] sm:text-[32px] sm:leading-[40px]"
+              >
+                {initialItem.title}
+              </p>
+              <p
+                id="proposalVisualText"
+                class="text-base font-normal leading-7 text-neutral-700 sm:text-lg sm:leading-8"
+              >
+                {initialItem.text}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sr-only">
+          {
+            proposalGroups.map((group) => (
+              <div>
+                <h3>{group.title}</h3>
+                <div>
+                  {group.items.map((item) => (
+                    <article>
+                      <h3>{item.title}</h3>
+                      <p>{item.text}</p>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Trusted ========== -->
+    <section
+      class="relative overflow-hidden bg-[#0F172A] py-24 sm:py-28 lg:py-[150px]"
+    >
+      <div
+        class="pointer-events-none absolute inset-0 opacity-[0.22] [background-image:radial-gradient(rgba(255,255,255,0.65)_0.8px,transparent_0.8px)] [background-size:18px_18px]"
+      >
+      </div>
+      <div
+        class="pointer-events-none absolute top-16 left-1/2 h-[420px] w-[860px] -translate-x-1/2 rounded-full bg-primary-500/10 blur-3xl"
+      >
+      </div>
+
+      <div class="my-container relative z-10">
+        <div class="mx-auto mb-16 max-w-[1040px] text-center lg:mb-20">
+          <h2
+            class="mb-6 text-center text-[31px] font-bold leading-[39px] text-white sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+          >
+            Trusted by 100&rsquo;s of customers
+          </h2>
+          <p
+            class="mx-auto max-w-[800px] text-base leading-7 text-white/80 sm:text-lg sm:leading-8"
+          >
+            Join hundreds of growing teams using Knockio to manage leads, sales,
+            field teams, and customer relationships.
+          </p>
+        </div>
+
+        <div
+          class="mx-auto grid max-w-[1120px] grid-cols-1 justify-items-center gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10"
+        >
+          {
+            trustBadges.map((badge) => (
+              <a
+                href={badge.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={badge.label}
+                class="group block rounded-3xl focus:ring-2 focus:ring-primary-500 focus:ring-offset-4 focus:ring-offset-[#0F172A] focus:outline-none"
+              >
+                <img
+                  src={badge.src}
+                  alt={badge.alt}
+                  width="203"
+                  height="280"
+                  decoding="async"
+                  loading="lazy"
+                  class="w-full max-w-[200px] object-contain transition duration-300 group-hover:-translate-y-2 group-hover:drop-shadow-[0_24px_34px_rgba(255,255,255,0.12)]"
+                />
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Manage Canvassing Team ========== -->
+    <section
+      class="relative overflow-hidden bg-white py-24 sm:py-28 lg:py-[150px]"
+    >
+      <div
+        class="pointer-events-none absolute top-32 left-1/2 h-[420px] w-[900px] -translate-x-1/2 rounded-full bg-primary-500/5 blur-3xl"
+      >
+      </div>
+
+      <div class="my-container relative z-10">
+        <div class="mx-auto mb-14 max-w-[1120px] text-center lg:mb-20">
+          <h2
+            class="mb-6 text-center text-[31px] font-bold leading-[39px] text-neutral-950 sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+          >
+            Manage Your Canvassing Team From the First Knock to the Booked Job
+          </h2>
+          <p
+            class="mx-auto max-w-[800px] text-base leading-6 text-neutral-700 sm:text-lg sm:leading-6"
+          >
+            Canvassing in Knockio is not a separate app bolted onto your job
+            management system. Every pin, contact, task, and appointment created
+            at the door flows directly into the same pipeline running your
+            estimates, work orders, and invoices, so a knocked door can become a
+            booked, scheduled, and paid job without anyone re-entering a single
+            piece of information.
+          </p>
+        </div>
+
+        <div class="mx-auto grid max-w-[1380px] gap-6 lg:grid-cols-3 lg:gap-8">
+          <article
+            class="group relative overflow-hidden rounded-[28px] border border-solid border-neutral-200 bg-white p-7 shadow-[0_18px_50px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-primary-500/40 hover:shadow-[0_28px_70px_rgba(15,23,42,0.09)] sm:p-8 lg:p-9"
+          >
+            <div
+              class="absolute top-0 right-0 h-32 w-32 translate-x-10 -translate-y-10 rounded-full bg-primary-500/10"
+            >
+            </div>
+            <div class="relative mb-8 flex items-start justify-between gap-5">
+              <div
+                class="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-500/10 text-primary-500 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white"
+              >
+                <RefreshCw class="size-7" aria-hidden="true" />
+              </div>
+            </div>
+            <h3
+              class="relative mb-5 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
+            >
+              Instant Visibility Into Field Activity
+            </h3>
+            <p
+              class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
+            >
+              Watch pins populate on the map in real time as your team works a
+              territory, so managers always know what is happening in the field
+              without waiting for an end of day report.
+            </p>
+            <ul
+              class="relative mt-7 hidden grid gap-3 border-t border-solid border-neutral-200 pt-6"
+            >
+              <li
+                class="flex items-center gap-3 text-sm font-medium leading-5 text-neutral-700"
+              >
+                <Check
+                  class="size-4 shrink-0 text-primary-500"
+                  aria-hidden="true"
+                />
+                <span>One latest version for the whole team</span>
+              </li>
+              <li
+                class="flex items-center gap-3 text-sm font-medium leading-5 text-neutral-700"
+              >
+                <Check
+                  class="size-4 shrink-0 text-primary-500"
+                  aria-hidden="true"
+                />
+                <span>Field and office updates stay connected</span>
+              </li>
+            </ul>
+          </article>
+
+          <article
+            class="group relative overflow-hidden rounded-[28px] border border-solid border-[#0F172A] bg-[#0F172A] p-7 shadow-[0_24px_70px_rgba(15,23,42,0.20)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_34px_90px_rgba(15,23,42,0.26)] sm:p-8 lg:p-9"
+          >
+            <div
+              class="absolute top-0 right-0 h-40 w-40 translate-x-12 -translate-y-12 rounded-full bg-primary-500/20"
+            >
+            </div>
+            <div
+              class="absolute bottom-0 left-0 h-32 w-32 -translate-x-12 translate-y-12 rounded-full bg-white/10"
+            >
+            </div>
+            <div class="relative mb-8 flex items-start justify-between gap-5">
+              <div
+                class="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-500 text-white"
+              >
+                <ListChecks class="size-7" aria-hidden="true" />
+              </div>
+            </div>
+            <h3
+              class="relative mb-5 text-[21px] font-semibold leading-[27px] text-white sm:text-2xl sm:leading-7"
+            >
+              Automated Follow Up on Every Pin
+            </h3>
+            <p
+              class="relative text-[15px] leading-6 text-white/75 sm:text-base sm:leading-6"
+            >
+              Pair canvassing with Knockio's automation builder to automatically
+              text a homeowner after a callback pin gets dropped, or assign a
+              follow up task the moment a rep marks a door as interested.
+            </p>
+            <ul
+              class="relative mt-7 hidden grid gap-3 border-t border-solid border-white/15 pt-6"
+            >
+              <li
+                class="flex items-center gap-3 text-sm font-medium leading-5 text-white/80"
+              >
+                <Check
+                  class="size-4 shrink-0 text-primary-500"
+                  aria-hidden="true"
+                />
+                <span>Track open estimates and next actions</span>
+              </li>
+              <li
+                class="flex items-center gap-3 text-sm font-medium leading-5 text-white/80"
+              >
+                <Check
+                  class="size-4 shrink-0 text-primary-500"
+                  aria-hidden="true"
+                />
+                <span>Assign leads before follow-ups are missed</span>
+              </li>
+            </ul>
+          </article>
+
+          <article
+            class="group relative overflow-hidden rounded-[28px] border border-solid border-neutral-200 bg-white p-7 shadow-[0_18px_50px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-primary-500/40 hover:shadow-[0_28px_70px_rgba(15,23,42,0.09)] sm:p-8 lg:p-9"
+          >
+            <div
+              class="absolute top-0 right-0 h-32 w-32 translate-x-10 -translate-y-10 rounded-full bg-primary-500/10"
+            >
+            </div>
+            <div class="relative mb-8 flex items-start justify-between gap-5">
+              <div
+                class="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-500/10 text-primary-500 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white"
+              >
+                <FileSignature class="size-7" aria-hidden="true" />
+              </div>
+            </div>
+            <h3
+              class="relative mb-5 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
+            >
+              A Sharper, More Accountable Canvassing Operation
+            </h3>
+            <p
+              class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
+            >
+              When reps know their activity is tied to verified location data,
+              reporting gets more honest, and when every pin turns into a
+              contact, task, or appointment automatically, fewer leads slip
+              through the cracks between the doorstep and the office.
+            </p>
+            <ul
+              class="relative mt-7 hidden grid gap-3 border-t border-solid border-neutral-200 pt-6"
+            >
+              <li
+                class="flex items-center gap-3 text-sm font-medium leading-5 text-neutral-700"
+              >
+                <Check
+                  class="size-4 shrink-0 text-primary-500"
+                  aria-hidden="true"
+                />
+                <span>Mobile-friendly proposal experience</span>
+              </li>
+              <li
+                class="flex items-center gap-3 text-sm font-medium leading-5 text-neutral-700"
+              >
+                <Check
+                  class="size-4 shrink-0 text-primary-500"
+                  aria-hidden="true"
+                />
+                <span>Clear pricing helps customers approve faster</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="bg-white py-16 sm:py-20 lg:py-24">
+      <div class="my-container mx-auto">
+        <div class="grid gap-10 lg:grid-cols-2 lg:gap-20">
+          <div>
+            <p
+              class="mb-4 text-sm leading-7 font-medium text-primary-500 md:text-2xl"
+            >
+              Frequently Asked Questions
+            </p>
+            <h2
+              class="mb-8 w-full max-w-3xl text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:max-w-none lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+            >
+              <span class="lg:whitespace-nowrap"
+                >Everything Teams Ask Before</span
+              >
+              <br class="hidden lg:block" />
+              Using Knockio Service CRM
+            </h2>
+            <p
+              class="mb-6 w-full max-w-3xl text-sm leading-6 font-normal text-neutral-800 sm:text-base sm:leading-7 md:mb-8 md:text-lg md:leading-8"
+            >
+              Service teams need more than a basic contact list. Knockio
+              connects customer records, leads, jobs, estimates, schedules,
+              crews, invoices, payments, and field updates. It helps sales,
+              office, and field teams work from the same information, so jobs
+              move faster with less confusion.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            {
+              faqs.map((faq) => (
+                <div class="faq-item overflow-hidden rounded-2xl border border-solid border-neutral-200 transition-all duration-300">
+                  <button
+                    class="faq-button group flex w-full items-center justify-between p-4 text-left sm:p-6"
+                    type="button"
+                  >
+                    <span class="text-base font-medium text-neutral-950 transition-colors group-hover:text-primary-500 sm:text-lg lg:text-xl">
+                      {faq.q}
+                    </span>
+                    <div class="faq-icon ml-4 flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary-500">
+                      <svg
+                        class="icon-minus hidden h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M20 12H4"
+                        />
+                      </svg>
+                      <svg
+                        class="icon-plus h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 4v16m8-8H4"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                  <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="p-4 pt-0 text-sm leading-relaxed text-neutral-600 sm:p-6 sm:pt-0 sm:text-base">
+                      {faq.a}
+                    </div>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Customer Reviews ========== -->
+    <section class="overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
+      <div class="my-container mx-auto mb-10 text-center lg:mb-16">
+        <p
+          class="mb-4 text-sm leading-7 font-medium text-primary-500 md:text-2xl"
+        >
+          Customer Reviews
+        </p>
+        <h2
+          class="mb-8 text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+        >
+          What Field Service and Sales<br />
+          Teams Say About Knockio
+        </h2>
+        <img
+          src={asset("google-5-star.webp")}
+          alt="google review badge"
+          width="183"
+          height="60"
+          decoding="async"
+          loading="lazy"
+          class="mx-auto h-auto w-[150px] sm:w-[183px]"
+        />
+      </div>
+
+      <div class="mt-7 space-y-8">
+        <div class="testimonial-track-container flex overflow-hidden">
+          <div
+            class="testimonial-track hover:pause flex animate-marquee-left gap-4 sm:gap-6"
+          >
+            {
+              [0, 1].map((dup) => (
+                <div
+                  class="card-set flex gap-4 sm:gap-6"
+                  aria-hidden={dup === 1 ? "true" : undefined}
+                >
+                  {reviewsRow1.map((review) => (
+                    <div class="relative w-[300px] flex-shrink-0 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 group sm:w-[380px] sm:p-6 lg:w-[450px] lg:p-8">
+                      <p class="relative z-10 mb-6 min-h-[168px] text-sm italic leading-relaxed text-neutral-700 sm:mb-8 sm:text-base lg:text-lg">
+                        {review.quote}
+                      </p>
+                      <div class="relative z-10 flex items-center gap-4">
+                        <img
+                          src={review.avatar}
+                          alt={review.name}
+                          width="48"
+                          height="48"
+                          decoding="async"
+                          loading="lazy"
+                          class="h-12 w-12 rounded-full object-cover grayscale transition-all group-hover:grayscale-0"
+                        />
+                        <div>
+                          <h3 class="mb-1 text-base font-bold text-neutral-950">
+                            {review.name}
+                          </h3>
+                          <p
+                            class="text-sm text-neutral-500"
+                            aria-label="5 out of 5 stars"
+                          >
+                            ⭐⭐⭐⭐⭐
+                          </p>
+                        </div>
+                      </div>
+                      <Quote
+                        class="pointer-events-none absolute right-8 bottom-6 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <div class="testimonial-track-container flex overflow-hidden">
+          <div
+            class="testimonial-track hover:pause flex animate-marquee-right gap-4 sm:gap-6"
+          >
+            {
+              [0, 1].map((dup) => (
+                <div
+                  class="card-set flex gap-4 sm:gap-6"
+                  aria-hidden={dup === 1 ? "true" : undefined}
+                >
+                  {reviewsRow2.map((review) => (
+                    <div class="relative w-[300px] flex-shrink-0 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 group sm:w-[380px] sm:p-6 lg:w-[450px] lg:p-8">
+                      <p class="relative z-10 mb-6 min-h-[168px] text-sm italic leading-relaxed text-neutral-700 sm:mb-8 sm:text-base lg:text-lg">
+                        {review.quote}
+                      </p>
+                      <div class="relative z-10 flex items-center gap-4">
+                        <img
+                          src={review.avatar}
+                          alt={review.name}
+                          width="48"
+                          height="48"
+                          decoding="async"
+                          loading="lazy"
+                          class="h-12 w-12 rounded-full object-cover grayscale transition-all group-hover:grayscale-0"
+                        />
+                        <div>
+                          <h3 class="mb-1 text-base font-bold text-neutral-950">
+                            {review.name}
+                          </h3>
+                          <p
+                            class="text-sm text-neutral-500"
+                            aria-label="5 out of 5 stars"
+                          >
+                            ⭐⭐⭐⭐⭐
+                          </p>
+                        </div>
+                      </div>
+                      <Quote
+                        class="pointer-events-none absolute right-8 bottom-6 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <script src="../../scripts/sales-canvassing-software.js"></script>
+</KnockioHomeLayout>

@@ -1,0 +1,897 @@
+---
+import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
+import "../../styles/industry-page.css";
+import {
+  ChevronRight,
+  Crosshair,
+  FileSignature,
+  MessageSquare,
+  Quote,
+  Ruler,
+  Sparkles,
+  Zap,
+} from "lucide-astro";
+
+const title = "Window Cleaning Business Software for Cleaners | Knockio";
+const description =
+  "Window cleaning business software to schedule recurring cleanings, send estimates, route crews, collect payment on site, and manage jobs with Knockio.";
+
+const asset = (name: string) => `/assets/cfw/${name}`;
+
+const capabilityTabs = [
+  {
+    label: "Centralized Data",
+    cards: [
+      {
+        title: "One Record for Every Property",
+        text: "Centralize customer data during every visit, log outcomes, add notes or voice notes, and move prospects into a clear CRM pipeline, so nothing important ever slips.",
+        image: asset(
+          "inner-window-cleaning-software-and-crm-one-record-for-every-property.webp",
+        ),
+        alt: "Door-to-door canvassing in Knockio",
+      },
+      {
+        title: "Communication History",
+        text: "Every call, text, and email tied to a customer is saved on the record, so when someone asks to move their next clean, the whole back-and-forth is right there instead of buried in a phone.",
+        image: asset(
+          "inner-window-cleaning-software-and-crm-communication-history-per-customer.webp",
+        ),
+        alt: "Lead management in Knockio",
+      },
+      {
+        title: "Lifetime Activity Tracking",
+        text: "Every status change, note, quote, and payment lands on a running timeline, so you can see the full story of an account at a glance, which helps when a customer questions a charge or asks what you did last time.",
+        image: asset(
+          "inner-window-cleaning-business-software-lifetime-activity-tracking.webp",
+        ),
+        alt: "Kanban-style sales pipeline in Knockio",
+      },
+    ],
+  },
+  {
+    label: "Schedule and Route",
+    cards: [
+      {
+        title: "Recurring Service Scheduling",
+        text: "Set up monthly, quarterly, or custom recurring cleans, and let the schedule build itself out so the office is not rebooking every account by hand. Renewals stay on the calendar instead of slipping away.",
+        image: asset(
+          "inner-window-cleaning-software-and-crm-recurring-service-scheduling.webp",
+        ),
+        alt: "Route planning in Knockio",
+      },
+      {
+        title: "Tight Route Planning",
+        text: "Plan smarter routes so crews cover more stops in less time, instead of crossing town twice for two houses that sit a few blocks apart.",
+        image: asset(
+          "inner-window-cleaning-software-and-crm-tight-route-planning.webp",
+        ),
+        alt: "Territory management in Knockio",
+      },
+      {
+        title: "Automated Territory Creation",
+        text: "Carve your service area into territories automatically from zip codes and cities, instead of mapping every boundary by hand. As you expand into a new part of town, you can stand up a route in minutes.",
+        image: asset(
+          "inner-window-cleaning-software-and-crm-automated-territory-creation-by-zip-code-and-city.webp",
+        ),
+        alt: "Field activity log in Knockio",
+      },
+    ],
+  },
+  {
+    label: "Keep Crews Accountable",
+    cards: [
+      {
+        title: "Live GPS Tracking With Proximity",
+        text: "Keep Crews Accountable from lead to service with notes, status updates, documents, customer details, and clear next steps.",
+        image: asset(
+          "inner-window-cleaning-software-and-crm-live-gps-tracking-with-proximity-intelligence.webp",
+        ),
+        alt: "Job management in Knockio",
+      },
+      {
+        title: "Photo Annotations",
+        text: "Snap before-and-after photos at each stop, mark them up with notes and arrows on the image, so the customer sees the result and the next crew knows about that problem gutter.",
+        image: asset(
+          "inner-window-cleaning-software-and-crm-photo-annotation-for-before-and-after.webp",
+        ),
+        alt: "Crew dispatching in Knockio",
+      },
+      {
+        title: "Job Notes and Surveys on Site",
+        text: "Drop detailed notes on every clean and use built-in surveys to capture conditions or extra work spotted, saved straight to the account instead of a paper ticket lost in the van.",
+        image: asset(
+          "inner-window-cleaning-software-and-crm-job-notes-and-surveys-on-site.webp",
+        ),
+        alt: "Work orders in Knockio",
+      },
+    ],
+  },
+  {
+    label: "Quote and Get Paid",
+    cards: [
+      {
+        title: "On-Site Quotes and Estimates",
+        text: "Build estimates with optional line items, so a screen cleaning or a gutter add-on goes on the quote without a second visit. Save templates and pull from a service catalog so pricing stays consistent across every crew.",
+        image: asset(
+          "inner-window-cleaning-business-software-on-site-quotes-and-estimates.webp",
+        ),
+        alt: "Smart estimates in Knockio",
+      },
+      {
+        title: "Service Agreement with E-Signs",
+        text: "Send service agreements for digital signature with a documented audit trail, so a recurring plan is locked in with a clean legal record instead of a verbal handshake.",
+        image: asset(
+          "inner-window-cleaning-software-and-crm-flexible-payment-collection-with-e-signatures.webp",
+        ),
+        alt: "Proposals in Knockio",
+      },
+      {
+        title: "Flexible Payment Collection",
+        text: "Collect one-time and recurring balances through tap to pay, text to pay, card, or ACH, all tied directly to the account through Knockio's own payment processing, so cash flow keeps pace with the route.",
+        image: asset(
+          "inner-window-cleaning-software-and-crm-flexible-payment-collection.webp",
+        ),
+        alt: "Digital contracts in Knockio",
+      },
+    ],
+  },
+];
+
+const organizedItems = [
+  {
+    title: "Live Field Tracking",
+    text: "Monitor crews in real time with GPS tracking and proximity intelligence. It helps with routing, accountability, and giving customers a straight answer about arrival times.",
+    href: "https://knockio.com/features/gps-tracking-software/",
+    icon: "crosshair" as const,
+  },
+  {
+    title: "Native Automation Builder",
+    text: "Build your own automations without code: text a customer when the crew is on the way, send a review request after a completed clean, or remind an account that their quarterly is due. The office stops chasing the same tasks by hand.",
+    href: "https://knockio.com/features/business-automation-software/",
+    icon: "sparkles" as const,
+  },
+  {
+    title: "Service History and Media",
+    text: "See every account's annotated photos, notes, and survey answers in one view, so the office and the field are looking at the same record instead of asking each other for it.",
+    href: null,
+    icon: "ruler" as const,
+  },
+  {
+    title: "E-Contracts",
+    text: "Keep every contract digital, organized, and ready to sign so approved deals never get stuck in paperwork or missed communication.",
+    href: "https://knockio.com/e-contracts/",
+    icon: "file" as const,
+  },
+  {
+    title: "CRM Integrations",
+    text: "Sync Knockio with Salesforce, HubSpot, Google Calendar, and GHL, and connect thousands of apps through Zapier, FlowChef, and webhooks, keeping every account in one place.",
+    href: "https://knockio.com/knockio-integrations/",
+    icon: "zap" as const,
+  },
+  {
+    title: "Team Communication",
+    text: "Knockio keeps office staff and crews on the same job record through assignees and internal notes, so a reschedule never catches anyone off guard.",
+    href: "https://knockio.com/features/business-texting-and-calling-software/",
+    icon: "message" as const,
+  },
+];
+
+const trustBadges = [
+  {
+    href: "https://www.capterra.com/p/10018264/Knockio/",
+    src: asset("badge-new-capterra.webp"),
+    alt: "Knockio Capterra rating badge",
+    label: "View Knockio reviews on Capterra",
+  },
+  {
+    href: "https://www.softwareadvice.com/field-sales/knockio-profile/",
+    src: asset("badge-new-software-advice.webp"),
+    alt: "Knockio Software Advice rating badge",
+    label: "View Knockio reviews on Software Advice",
+  },
+  {
+    href: "https://www.getapp.com/all-software/a/knockio/",
+    src: asset("badge-new-get-app.webp"),
+    alt: "Knockio GetApp rating badge",
+    label: "View Knockio reviews on GetApp",
+  },
+  {
+    href: "https://www.g2.com/products/knockio-by-knockio/reviews",
+    src: asset("badge-new-g2.webp"),
+    alt: "Knockio G2 rating badge",
+    label: "View Knockio reviews on G2",
+  },
+];
+
+const faqs = [
+  {
+    q: "What should I look for in window cleaning software?",
+    a: "Look for recurring scheduling, route planning, crew tracking, on-site quoting, e-contracts, and payment collection, all tied to one customer record. The platform should make repeat business easy to manage instead of forcing you to rebook every account by hand. Knockio was built around exactly this kind of recurring, route-based work.",
+  },
+  {
+    q: "Which software is best for a small window cleaning business?",
+    a: "Knockio helps field service teams manage the full workflow. Teams can Centralized Data, store customer details, create estimates, schedule jobs, assign crews, track job progress, upload photos, send invoices, and follow up with customers. This helps reduce manual work and keeps everyone updated.",
+  },
+  {
+    q: "Can Knockio handle recurring cleans automatically?",
+    a: "Yes. You can set up monthly, quarterly, or custom recurring visits, and the schedule builds itself out so renewals stay on the calendar instead of getting forgotten.",
+  },
+  {
+    q: "Can Knockio track my crews and confirm jobs were done?",
+    a: "Yes. Knockio includes live GPS tracking with proximity intelligence, so you can confirm how close a crew actually was to a property when they marked a job complete.",
+  },
+  {
+    q: "Does Knockio let crews take before-and-after photos?",
+    a: "Yes. Crews can capture before-and-after photos at each stop and annotate them with notes right on the image, all saved to the customer record.",
+  },
+];
+
+const reviewsRow1 = [
+  {
+    name: "Lacey Jackson",
+    avatar: asset("avatar-lacey-jackson.webp"),
+    quote:
+      "This app is the best thing that has happened to our company! Asad is absolutely amazing! He is so responsive, it doesn't matter what time of day he is on it! I highly recommend this company add this app!",
+  },
+  {
+    name: "Ben Loveland",
+    avatar: asset("avatar-ben-loveland.webp"),
+    quote:
+      "Knockio is a great product! We use it for our roofing sales canvassing. Their support team is responsive and fixes issues immediately. Highly recommend!",
+  },
+  {
+    name: "Bar Galanti",
+    avatar: asset("avatar-bar-galanti.webp"),
+    quote:
+      "The support team is awesome. The live tracking feature is very useful. The pricing is fair as well!",
+  },
+];
+
+const reviewsRow2 = [
+  {
+    name: "Georgia Hancocks",
+    avatar: asset("avatar-georgia-hancocks.webp"),
+    quote:
+      "Knockio is the best! My team and I absolutely love using it - it is so user friendly and simple. Support is brilliant too, nothing is ever too much trouble. The best on the market. Thanks Knockio!",
+  },
+  {
+    name: "Sarah Bennett",
+    avatar: asset("avatar-sarah-bennett.webp"),
+    quote:
+      "We love Knockio so far! It is solving a lot of the issues of the other canvassing apps. The team have worked with us providing excellent fast support. Highly recommend if you're seeing people face to face.",
+  },
+  {
+    name: "Ayana Hall",
+    avatar: asset("avatar-ayana-hall.webp"),
+    quote:
+      "Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.",
+  },
+];
+
+const heroImage = asset("inner-industry-window-cleaning-software.webp");
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id":
+        "https://knockio.com/industry/window-cleaning-business-software/#webpage",
+      url: "https://knockio.com/industry/window-cleaning-business-software/",
+      name: title,
+      description,
+      isPartOf: { "@id": "https://knockio.com/#website" },
+      audience: {
+        "@type": "Audience",
+        audienceType: "Window Cleaning Businesses",
+      },
+      mainEntity: {
+        "@id":
+          "https://knockio.com/industry/window-cleaning-business-software/#faq",
+      },
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id":
+        "https://knockio.com/industry/window-cleaning-business-software/#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://knockio.com/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Window Cleaning Business Software",
+          item: "https://knockio.com/industry/window-cleaning-business-software/",
+        },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id":
+        "https://knockio.com/industry/window-cleaning-business-software/#faq",
+      mainEntity: faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
+      })),
+    },
+  ],
+};
+---
+
+<KnockioHomeLayout
+  title={title}
+  description={description}
+  ogImage={heroImage}
+  jsonLd={jsonLd}
+  whiteBg={true}
+>
+  <main id="industry-page">
+    <!-- ========== Hero ========== -->
+    <section
+      class="overflow-hidden border-b border-solid border-[#7fc271] bg-white"
+    >
+      <div
+        class="grid min-h-0 lg:min-h-[610px] lg:grid-cols-[55%_45%] xl:min-h-[720px] 2xl:min-h-[820px]"
+      >
+        <div
+          class="relative flex flex-col justify-center px-[5%] pt-[calc(72px+3rem)] pb-12 sm:pt-[calc(72px+4rem)] sm:pb-16 lg:min-h-[600px] lg:px-0 lg:pb-[72px] lg:pt-[72px] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-[42px] xl:pr-[70px]"
+        >
+          <div class="max-w-[810px]">
+            <h1
+              class="mb-7 text-[36px] font-bold leading-[44px] text-neutral-950 sm:text-[44px] sm:leading-[54px] xl:text-[58px] xl:leading-[66px] 2xl:text-[64px] 2xl:leading-[74px]"
+            >
+              Window Cleaning Business Software
+            </h1>
+            <p
+              class="mb-10 max-w-[760px] text-base font-medium leading-8 text-neutral-600 sm:text-lg sm:leading-9"
+            >
+              Window cleaning runs on repeat customers and a route that has to
+              stay tight. A first-time quote turns into a quarterly account, the
+              crew works a neighborhood in one efficient loop, and the invoice
+              goes out before they pull away from the curb. Knockio is window
+              cleaning business software and CRM built for owners who need one
+              place to hold customer records, schedule recurring cleans, route
+              crews, send quotes, and collect payment.
+            </p>
+            <a
+              href="#cal-sec"
+              class="inline-flex w-full items-center justify-center rounded-lg bg-primary-500 px-6 py-3.5 text-sm font-medium text-white transition-colors duration-300 hover:bg-primary-600 sm:w-auto sm:px-10 sm:py-4 sm:text-base lg:px-12"
+            >
+              Schedule a Demo
+            </a>
+          </div>
+
+          <div
+            id="kioSummaryPanel"
+            class="kio-summary-panel z-[18] mt-6 rounded-xl border border-solid border-primary-500/35 bg-white/95 px-[5%] py-5 text-base leading-7 text-neutral-600 lg:absolute lg:inset-x-0 lg:bottom-[72px] lg:mt-0 lg:px-0 lg:py-[22px] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-10 lg:shadow-[0_-18px_45px_rgba(15,23,42,0.08)]"
+          >
+            <p
+              class="mb-4 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
+            >
+              What should window cleaning businesses look for in a CRM and
+              scheduling platform?
+            </p>
+            <p
+              class="max-w-[760px] text-[15px] leading-7 text-neutral-600 sm:text-base sm:leading-7"
+            >
+              A window cleaning business should look for a CRM that carries the
+              customer the whole way, from the first quote to a steady recurring
+              plan. That means full customer and property records, recurring
+              scheduling, route planning, crew tracking, on-site quotes, and
+              payment collection. Knockio handles all of it in one platform. It
+              adds live GPS tracking with proximity intelligence and automated
+              territory creation by zip code and city, so route assignments and
+              job history live in the same record. That depth, plus affordable
+              pricing and support that actually picks up, is what a generic CRM
+              built for another industry leaves out.
+            </p>
+          </div>
+
+          <div
+            class="z-20 mt-8 min-h-[72px] border-t border-solid border-primary-500/70 bg-[#f3faf3] lg:absolute lg:inset-x-0 lg:bottom-0 lg:mt-0"
+          >
+            <button
+              id="kioSummaryBtn"
+              class="kio-summary-button duration-250 flex min-h-[72px] w-full items-center justify-between gap-5 px-[5%] text-neutral-950 transition-colors hover:bg-[#edf8ed] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-10"
+              type="button"
+              aria-expanded="false"
+              aria-controls="kioSummaryPanel"
+            >
+              <span class="text-lg font-medium leading-6">Quick summary</span>
+              <ChevronRight
+                class="summary-chevron size-5 shrink-0"
+                aria-hidden="true"
+              />
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="hero-industry-visual relative min-h-[340px] overflow-hidden sm:min-h-[440px] lg:min-h-full"
+        >
+          <img
+            src={heroImage}
+            alt="What should window cleaning businesses look for in a crm and scheduling platform"
+            width="830"
+            height="560"
+            decoding="async"
+            loading="eager"
+            fetchpriority="high"
+            class="h-full min-h-[340px] w-full object-cover object-center sm:min-h-[440px] lg:min-h-full"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Why Window Cleaners / Sticky tabs ========== -->
+    <section id="platform-capabilities" class="bg-white py-20 sm:py-24 lg:py-28">
+      <div class="my-container">
+        <div class="mx-auto mb-10 max-w-[1120px] text-center lg:mb-12">
+          <h2
+            class="mb-5 text-center text-[34px] font-bold leading-[42px] text-neutral-950 sm:text-4xl sm:leading-[48px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+          >
+            Why Window Cleaners Choose Knockio
+          </h2>
+          <p
+            class="mx-auto max-w-[960px] text-base font-normal leading-8 text-neutral-600 sm:text-lg sm:leading-9"
+          >
+            Knockio helps window cleaning businesses manage customer accounts,
+            recurring schedules, routes, crews, quotes, invoices, and payments.
+            From the first clean to a renewing service plan, it all sits in one
+            connected platform. Owners keep the route tight and the billing
+            clean without the back-and-forth between three different tools.
+          </p>
+        </div>
+
+        <div class="sr-only">
+          {
+            capabilityTabs.map((tab) => (
+              <div>
+                <h3>{tab.label}</h3>
+                {tab.cards.map((card) => (
+                  <article>
+                    <h3>{card.title}</h3>
+                    <p>{card.text}</p>
+                  </article>
+                ))}
+              </div>
+            ))
+          }
+        </div>
+
+          <div
+            id="hpCapScrollTrack"
+            class="h-[calc(100vh+(var(--scroll-steps,5)-1)*45vh)] max-lg:h-auto motion-reduce:h-auto"
+            style="--scroll-steps: 5"
+          >
+            <div
+              class="contents lg:flex lg:sticky lg:top-0 lg:z-20 lg:h-[min(calc(100vh-2rem),880px)] lg:flex-col lg:bg-white/95 lg:pt-1 motion-reduce:h-auto motion-reduce:static"
+            >
+              <div
+                class="sticky top-0 z-30 shrink-0 bg-white/95 px-1 pb-5 pt-2 backdrop-blur-md max-lg:overflow-hidden"
+              >
+                <div
+                  id="hpTabs1Nav"
+                  class="relative mx-auto flex max-w-6xl scroll-smooth items-center gap-2 overflow-x-auto [scrollbar-width:none] max-xl:gap-3 lg:justify-between max-lg:flex-nowrap max-lg:justify-start max-lg:px-[12vw] [&::-webkit-scrollbar]:hidden"
+                  role="tablist"
+                  aria-label="Window cleaning platform capabilities"
+                >
+                  <span
+                    id="hpTabs1Indicator"
+                    class="pointer-events-none absolute left-0 top-0 z-0 rounded-full border-2 border-solid border-primary-500 bg-[#F9FFF8] transition-all duration-300 ease-out"
+                    aria-hidden="true"></span>
+                  {
+                    capabilityTabs.map((tab, index) => (
+                      <button
+                        type="button"
+                        data-hp-scroll-step={String(index)}
+                        class:list={[
+                          "hpTabs1_btn relative z-10 shrink-0 rounded-full border-2 px-5 py-2.5 text-lg font-bold transition-colors hover:border-primary-500/40 hover:text-primary-500 max-xl:px-4 max-xl:py-2 max-xl:text-base max-md:text-sm",
+                          index === 0
+                            ? "border-transparent text-primary-500"
+                            : "border-dashed border-neutral-300 text-neutral-700",
+                        ]}
+                      >
+                        {tab.label}
+                      </button>
+                    ))
+                  }
+                </div>
+              </div>
+
+              <div id="hpTabs1Panels" class="relative lg:flex-1">
+                {
+                  capabilityTabs.map((tab, tabIndex) => (
+                    <div
+                      id={`hpTabs${tabIndex + 1}_tab${tabIndex + 1}`}
+                      class:list={[
+                        "hpTabs1_content scroll-mt-24 lg:absolute lg:inset-0 lg:flex lg:h-full lg:flex-col lg:gap-3 lg:overflow-hidden transition-opacity duration-300 max-lg:static max-lg:mb-10 max-lg:h-auto max-lg:overflow-visible max-lg:opacity-100 max-lg:visible max-lg:pointer-events-auto motion-reduce:static motion-reduce:h-auto pt-5",
+                        tabIndex === 0
+                          ? "opacity-100 visible pointer-events-auto"
+                          : "opacity-0 invisible pointer-events-none",
+                      ]}
+                      role="tabpanel"
+                    >
+                      <div class="grid gap-6 lg:grid-cols-3 lg:gap-8">
+                        {tab.cards.map((card) => (
+                          <article
+                            class:list={[
+                              "hp-cap-card hp-card flex min-h-[520px] flex-col overflow-hidden rounded-[28px] border border-solid border-neutral-200 bg-neutral-50 p-7 sm:p-8",
+                            ]}
+                          >
+                            <div
+                              class:list={[
+                                "relative z-10 shrink-0",
+                              ]}
+                            >
+                              <h5 class="text-3xl max-2xl:text-2xl max-md:text-lg font-bold text-neutral-900 mb-3 max-md:mb-1">
+                                {card.title}
+                              </h5>
+                              <p class="mb-8 text-base leading-7 text-neutral-600 sm:text-[17px] sm:leading-8">
+                                {card.text}
+                              </p>
+                            </div>
+                            <div class="mt-auto flex justify-center overflow-hidden rounded-3xl">
+                              <img
+                                src={card.image}
+                                alt={card.alt}
+                                width="430"
+                                height="320"
+                                decoding="async"
+                                loading="lazy"
+                                class="w-full max-w-[430px] object-contain object-bottom"
+                              />
+                            </div>
+                          </article>
+                        ))}
+                      </div>
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- ========== Organized (dark) ========== -->
+    <section
+      class="relative overflow-hidden bg-[#0F172A] py-24 sm:py-28 lg:py-[150px]"
+    >
+      <div
+        class="pointer-events-none absolute inset-0 opacity-[0.22] [background-image:radial-gradient(rgba(255,255,255,0.65)_0.8px,transparent_0.8px)] [background-size:18px_18px]"
+      >
+      </div>
+
+      <div class="my-container relative z-10">
+        <div class="mx-auto mb-14 max-w-[1120px] text-center lg:mb-20">
+          <h2
+            class="mb-6 text-center text-[31px] font-bold leading-[39px] text-white sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+          >
+            Keep Customers, Crews, and Job Updates Organized
+          </h2>
+          <p
+            class="mx-auto max-w-[980px] text-base leading-8 text-white sm:text-lg sm:leading-9"
+          >
+            Knockio makes window cleaning management simple with window cleaning
+            software and field service CRM tools in one place. Track crews,
+            manage recurring schedules, capture job photos, automate reminders,
+            and send digital contracts, all from the same platform.
+          </p>
+        </div>
+
+        <div
+          class="mx-auto grid max-w-[1380px] gap-x-12 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-16 lg:gap-y-14"
+        >
+          {
+            organizedItems.map((item) => (
+              <div class="border-b border-solid border-white/20 pb-10">
+                <div class="mb-7 flex h-16 w-16 items-center justify-center rounded-xl bg-primary-500 text-white">
+                  {item.icon === "crosshair" && (
+                    <Crosshair class="size-[30px]" aria-hidden="true" />
+                  )}
+                  {item.icon === "sparkles" && (
+                    <Sparkles class="size-[30px]" aria-hidden="true" />
+                  )}
+                  {item.icon === "ruler" && (
+                    <Ruler class="size-[30px]" aria-hidden="true" />
+                  )}
+                  {item.icon === "file" && (
+                    <FileSignature class="size-[30px]" aria-hidden="true" />
+                  )}
+                  {item.icon === "zap" && (
+                    <Zap class="size-[30px]" aria-hidden="true" />
+                  )}
+                  {item.icon === "message" && (
+                    <MessageSquare class="size-[30px]" aria-hidden="true" />
+                  )}
+                </div>
+                <h3 class="mb-4 text-[22px] font-bold leading-7 text-white sm:text-2xl sm:leading-8">
+                  {item.title}
+                </h3>
+                <p class="mb-6 text-base font-light text-white">{item.text}</p>
+                {item.href && (
+                  <a
+                    href={item.href}
+                    class="inline-flex items-center gap-3 text-base font-semibold text-primary-500 transition-all duration-300 hover:gap-4"
+                  >
+                    Learn More
+                    <ChevronRight class="size-3.5" aria-hidden="true" />
+                  </a>
+                )}
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="bg-white py-16 sm:py-20 lg:py-24">
+      <div class="my-container mx-auto">
+        <div class="grid gap-10 lg:grid-cols-2 lg:gap-20">
+          <div>
+            <p
+              class="mb-4 text-sm leading-7 font-medium text-primary-500 md:text-2xl"
+            >
+              Frequently Asked Questions
+            </p>
+            <h2
+              class="mb-8 w-full max-w-3xl text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+            >
+              Everything Window Cleaners Ask Before Switching to Knockio
+            </h2>
+            <p
+              class="mb-6 w-full max-w-3xl text-sm leading-6 font-normal text-neutral-800 sm:text-base sm:leading-7 md:mb-8 md:text-lg md:leading-8"
+            >
+              Switching software is a real decision when your whole route,
+              customer history, and billing live inside it. Here are the
+              questions window cleaning owners ask most before making the move.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            {
+              faqs.map((faq) => (
+                <div class="faq-item overflow-hidden rounded-2xl border border-solid border-neutral-200 transition-all duration-300">
+                  <button
+                    class="faq-button group flex w-full items-center justify-between p-4 text-left sm:p-6"
+                    type="button"
+                  >
+                    <span class="text-base font-medium text-neutral-950 transition-colors group-hover:text-primary-500 sm:text-lg lg:text-xl">
+                      {faq.q}
+                    </span>
+                    <div class="faq-icon ml-4 flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary-500">
+                      <svg
+                        class="icon-minus hidden h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M20 12H4"
+                        />
+                      </svg>
+                      <svg
+                        class="icon-plus h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 4v16m8-8H4"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                  <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="p-4 pt-0 text-sm leading-relaxed text-neutral-600 sm:p-6 sm:pt-0 sm:text-base">
+                      {faq.a}
+                    </div>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Trusted ========== -->
+    <section
+      class="relative overflow-hidden bg-[#0F172A] py-24 sm:py-28 lg:py-[150px]"
+    >
+      <div
+        class="pointer-events-none absolute inset-0 opacity-[0.22] [background-image:radial-gradient(rgba(255,255,255,0.65)_0.8px,transparent_0.8px)] [background-size:18px_18px]"
+      >
+      </div>
+      <div
+        class="pointer-events-none absolute top-16 left-1/2 h-[420px] w-[860px] -translate-x-1/2 rounded-full bg-primary-500/10 blur-3xl"
+      >
+      </div>
+
+      <div class="my-container relative z-10">
+        <div class="mx-auto mb-16 max-w-[1040px] text-center lg:mb-20">
+          <h2
+            class="mb-6 text-center text-[31px] font-bold leading-[39px] text-white sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+          >
+            Trusted by 100&rsquo;s of customers
+          </h2>
+          <p
+            class="mx-auto max-w-[800px] text-base leading-7 text-white/80 sm:text-lg sm:leading-8"
+          >
+            Join hundreds of growing teams using Knockio to manage leads, sales,
+            field teams, and customer relationships.
+          </p>
+        </div>
+
+        <div
+          class="mx-auto grid max-w-[1120px] grid-cols-1 justify-items-center gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10"
+        >
+          {
+            trustBadges.map((badge) => (
+              <a
+                href={badge.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={badge.label}
+                class="group block rounded-3xl focus:ring-2 focus:ring-primary-500 focus:ring-offset-4 focus:ring-offset-[#0F172A] focus:outline-none"
+              >
+                <img
+                  src={badge.src}
+                  alt={badge.alt}
+                  width="203"
+                  height="280"
+                  decoding="async"
+                  loading="lazy"
+                  class="w-full max-w-[200px] object-contain transition duration-300 group-hover:-translate-y-2 group-hover:drop-shadow-[0_24px_34px_rgba(255,255,255,0.12)]"
+                />
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Customer Reviews ========== -->
+    <section class="overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
+      <div class="my-container mx-auto mb-10 text-center lg:mb-16">
+        <p class="mb-4 text-sm leading-7 font-medium text-primary-500 md:text-2xl">
+          Customer Reviews
+        </p>
+        <p
+          class="mb-8 text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+        >
+          What Field Service and Sales<br />
+          Teams Say About Knockio
+        </p>
+        <img
+          src={asset("google-5-star.webp")}
+          alt="google review badge"
+          width="183"
+          height="60"
+          decoding="async"
+          loading="lazy"
+          class="mx-auto h-auto w-[150px] sm:w-[183px]"
+        />
+      </div>
+
+      <div class="mt-7 space-y-8">
+        <div class="testimonial-track-container flex overflow-hidden">
+          <div
+            class="testimonial-track hover:pause flex animate-marquee-left gap-4 sm:gap-6"
+          >
+            {
+              [0, 1].map((dup) => (
+                <div
+                  class="card-set flex gap-4 sm:gap-6"
+                  aria-hidden={dup === 1 ? "true" : undefined}
+                >
+                  {reviewsRow1.map((review) => (
+                    <div class="relative w-[300px] flex-shrink-0 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 group sm:w-[380px] sm:p-6 lg:w-[450px] lg:p-8">
+                      <p class="relative z-10 mb-6 min-h-[168px] text-sm italic leading-relaxed text-neutral-700 sm:mb-8 sm:text-base lg:text-lg">
+                        {review.quote}
+                      </p>
+                      <div class="relative z-10 flex items-center gap-4">
+                        <img
+                          src={review.avatar}
+                          alt={review.name}
+                          width="48"
+                          height="48"
+                          decoding="async"
+                          loading="lazy"
+                          class="h-12 w-12 rounded-full object-cover grayscale transition-all group-hover:grayscale-0"
+                        />
+                        <div>
+                          <p class="mb-1 text-base font-bold text-neutral-950">
+                            {review.name}
+                          </p>
+                          <p
+                            class="text-sm text-neutral-500"
+                            aria-label="5 out of 5 stars"
+                          >
+                            ⭐⭐⭐⭐⭐
+                          </p>
+                        </div>
+                      </div>
+                      <Quote
+                        class="pointer-events-none absolute right-8 bottom-6 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <div class="testimonial-track-container flex overflow-hidden">
+          <div
+            class="testimonial-track hover:pause flex animate-marquee-right gap-4 sm:gap-6"
+          >
+            {
+              [0, 1].map((dup) => (
+                <div
+                  class="card-set flex gap-4 sm:gap-6"
+                  aria-hidden={dup === 1 ? "true" : undefined}
+                >
+                  {reviewsRow2.map((review) => (
+                    <div class="relative w-[300px] flex-shrink-0 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 group sm:w-[380px] sm:p-6 lg:w-[450px] lg:p-8">
+                      <p class="relative z-10 mb-6 min-h-[168px] text-sm italic leading-relaxed text-neutral-700 sm:mb-8 sm:text-base lg:text-lg">
+                        {review.quote}
+                      </p>
+                      <div class="relative z-10 flex items-center gap-4">
+                        <img
+                          src={review.avatar}
+                          alt={review.name}
+                          width="48"
+                          height="48"
+                          decoding="async"
+                          loading="lazy"
+                          class="h-12 w-12 rounded-full object-cover grayscale transition-all group-hover:grayscale-0"
+                        />
+                        <div>
+                          <p class="mb-1 text-base font-bold text-neutral-950">
+                            {review.name}
+                          </p>
+                          <p
+                            class="text-sm text-neutral-500"
+                            aria-label="5 out of 5 stars"
+                          >
+                            ⭐⭐⭐⭐⭐
+                          </p>
+                        </div>
+                      </div>
+                      <Quote
+                        class="pointer-events-none absolute right-8 bottom-6 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <script src="../../scripts/industry-page.js"></script>
+</KnockioHomeLayout>

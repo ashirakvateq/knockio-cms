@@ -1,0 +1,926 @@
+---
+import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
+import "../../styles/industry-page.css";
+import {
+  ChevronRight,
+  Crosshair,
+  FileSignature,
+  MessageSquare,
+  Quote,
+  Ruler,
+  Sparkles,
+  Zap,
+} from "lucide-astro";
+
+const title = "HVAC Software & CRM for Service Contractors | Knockio";
+const description =
+  "Book service calls, dispatch techs, build estimates, and collect payment on site. HVAC software that runs every job from the first call to the final invoice.";
+
+const asset = (name: string) => `/assets/cfw/${name}`;
+
+const capabilityTabs = [
+  {
+    label: "Manage Jobs",
+    cards: [
+      {
+        title: "Customer and Equipment History in One Record",
+        text: "Manage Customers and Jobs during every visit, log outcomes, add notes or voice notes, and move prospects into a clear CRM pipeline.",
+        image: asset(
+          "inner-hvac-software-and-crm-customer-and-equipment-history-in-one-record.webp",
+        ),
+        alt: "Door-to-door canvassing in Knockio",
+      },
+      {
+        title: "Dynamic Job Pipeline for HVAC Stages",
+        text: "Move jobs through clear stages like new call, scheduled, dispatched, diagnosed, estimate sent, approved, installed, and invoiced. Statuses are fully customizable for better workflow.",
+        image: asset(
+          "inner-hvac-software-and-crm-dynamic-job-pipeline-for-hvac-stages.webp",
+        ),
+        alt: "Lead management in Knockio",
+      },
+      {
+        title: "Scheduling and Dispatch That Match the Board",
+        text: "Assign service calls and install jobs to the right tech or crew, and keep the office and the field reading the same schedule instead of two versions that drift apart by mid-morning.",
+        image: asset(
+          "inner-hvac-software-and-crm-scheduling-and-dispatch-that-match-the-board-1.webp",
+        ),
+        alt: "Kanban-style sales pipeline in Knockio",
+      },
+    ],
+  },
+  {
+    label: "Track the Field",
+    cards: [
+      {
+        title: "Live GPS Tracking of Every Tech",
+        text: "See where every tech is in real time, so dispatch routes the closest person to the next emergency instead of guessing. Pin drop verification confirms how close a tech was when marking a job worked.",
+        image: asset(
+          "inner-hvac-software-and-crm-live-gps-tracking-of-every-tech.webp",
+        ),
+        alt: "Route planning in Knockio",
+      },
+      {
+        title: "Route Planning for Service Days",
+        text: "Plan smarter, tighter routes so your techs cover more calls in a single day, instead of crossing town twice for two jobs that sit only three blocks apart and burning fuel, time, and daylight doing it.",
+        image: asset(
+          "inner-hvac-software-and-crm-route-planning-for-service-days.webp",
+        ),
+        alt: "Territory management in Knockio",
+      },
+      {
+        title: "Automated Territory Creation",
+        text: "If you run maintenance memberships or new-system sales by area, build territories automatically from zip codes and cities instead of mapping every boundary by hand. Most HVAC tools simply do not do this.",
+        image: asset(
+          "inner-hvac-software-and-crm-automated-territory-creation-by-zip-code-and-city.webp",
+        ),
+        alt: "Field activity log in Knockio",
+      },
+    ],
+  },
+  {
+    label: "Work Orders and Parts",
+    cards: [
+      {
+        title: "Work Orders With Tasks, Budget, and Materials",
+        text: "Track work orders and parts from lead to service with notes, status updates, documents, customer details, photos, and clear next steps, so every HVAC job stays organized from the first call to the final invoice.",
+        image: asset(
+          "inner-hvac-software-and-crm-work-orders-with-tasks-budget-and-materials.webp",
+        ),
+        alt: "Job management in Knockio",
+      },
+      {
+        title: "Purchase Orders When Parts Run Short",
+        text: "When a part is not in inventory, fire off a purchase order straight from the work order. Knockio tracks products, variants, SKUs, cost, and markup, and flags low stock before you run out mid-job.",
+        image: asset(
+          "inner-hvac-software-and-crm-purchase-orders-when-parts-run-short.webp",
+        ),
+        alt: "Crew dispatching in Knockio",
+      },
+      {
+        title: "Assign Jobs to Crews or Subcontractors",
+        text: "Work orders can go to your own install crew or to a subcontractor, with tasks, notes, photos, and the schedule all attached, so whoever does the work has the full picture.",
+        image: asset(
+          "inner-hvac-software-and-crm-assign-jobs-to-crews-or-subcontractors-1.webp",
+        ),
+        alt: "Work orders in Knockio",
+      },
+    ],
+  },
+  {
+    label: "Documents and Media",
+    cards: [
+      {
+        title: "Job Photos and Equipment Media in One Place",
+        text: "Upload before-and-after photos, model and serial shots, and problem images straight to the job. The next tech, the office, and the customer all get the full visual record.",
+        image: asset(
+          "inner-hvac-software-and-crm-job-photos-and-equipment-media-in-one-place.webp",
+        ),
+        alt: "Smart estimates in Knockio",
+      },
+      {
+        title: "E-Contracts With Legal Protection",
+        text: "Send service agreements and approvals for digital signature with IP address and timestamp logging built in, so you have a documented trail if a job is ever disputed.",
+        image: asset(
+          "inner-hvac-software-and-crm-e-contracts-with-legal-protection.webp",
+        ),
+        alt: "Proposals in Knockio",
+      },
+      {
+        title: "Centralized File Storage Per Job",
+        text: "Keep warranties, permits, manuals, and invoices attached right to the customer record, not scattered across email and a folder nobody can find when the warranty claim comes up.",
+        image: asset(
+          "inner-hvac-software-and-crm-centralized-file-storage-per-job.webp",
+        ),
+        alt: "Digital contracts in Knockio",
+      },
+    ],
+  },
+  {
+    label: "Quote and Get Paid",
+    cards: [
+      {
+        title: "Estimates and Service Agreements",
+        text: "Build clean estimates with optional line items, so a customer can add a surge protector or a better filter without a second visit. Save templates for your common repairs and installs, and pull from a product and service catalog so pricing stays consistent across every tech.",
+        image: asset(
+          "inner-hvac-software-and-crm-estimates-and-service-agreements.webp",
+        ),
+        alt: "Video and file storage in Knockio",
+      },
+      {
+        title: "Digital Contracts With E-Signatures",
+        text: "Send an estimate or service agreement the customer reviews and signs from their phone, with a documented audit trail. Change orders work the same way, so a mid-job upsell is logged instead of scribbled on a clipboard.",
+        image: asset(
+          "inner-hvac-software-and-crm-digital-contracts-with-e-signatures.webp",
+        ),
+        alt: "Photo uploads in Knockio",
+      },
+      {
+        title: "Flexible Payment Collection",
+        text: "Collect deposits, milestone payments, and final balances through tap to pay, text to pay, card, or ACH, all tied directly to the job through Knockio's own payment processing. The tech leaves with the money instead of mailing an invoice and waiting.",
+        image: asset(
+          "inner-hvac-software-and-crm-flexible-payment-collection.webp",
+        ),
+        alt: "Service reports in Knockio",
+      },
+    ],
+  },
+];
+
+const organizedItems = [
+  {
+    title: "Live Field Tracking",
+    text: "Monitor techs in real time with GPS tracking. It helps with dispatch, accountability, and knowing exactly who is on which call right now.",
+    href: "https://knockio.com/features/gps-tracking-software/",
+    icon: "crosshair" as const,
+  },
+  {
+    title: "Flow Automation",
+    text: "Automatically handle the repetitive office work like maintenance reminders, follow ups, and appointment confirmations, so a customer due for a tune-up does not slip through the cracks.",
+    href: "https://knockio.com/features/business-automation-software/",
+    icon: "sparkles" as const,
+  },
+  {
+    title: "Media and Measurements",
+    text: "See every job's photos, equipment details, and service notes in one view, so the office and the field are looking at the same record instead of asking each other for it.",
+    href: null,
+    icon: "ruler" as const,
+  },
+  {
+    title: "E-Contracts",
+    text: "Build, send, review, and sign contracts in one workflow so approved deals move ahead without paperwork or repeated follow-up delays.",
+    href: "https://knockio.com/e-contracts/",
+    icon: "file" as const,
+  },
+  {
+    title: "CRM Integrations",
+    text: "Knockio links your HVAC customer and dispatch data to Salesforce, HubSpot, Google Calendar, and GHL, with thousands more apps through Zapier, FlowChef, and webhooks.",
+    href: "https://knockio.com/knockio-integrations/",
+    icon: "zap" as const,
+  },
+  {
+    title: "Team Communication",
+    text: "Knockio connects dispatchers, techs, and office staff to every job through shared assignees and internal notes, so nothing gets lost between shifts.",
+    href: "https://knockio.com/features/business-texting-and-calling-software/",
+    icon: "message" as const,
+  },
+];
+
+const trustBadges = [
+  {
+    href: "https://www.capterra.com/p/10018264/Knockio/",
+    src: asset("badge-new-capterra.webp"),
+    alt: "Knockio Capterra rating badge",
+    label: "View Knockio reviews on Capterra",
+  },
+  {
+    href: "https://www.softwareadvice.com/field-sales/knockio-profile/",
+    src: asset("badge-new-software-advice.webp"),
+    alt: "Knockio Software Advice rating badge",
+    label: "View Knockio reviews on Software Advice",
+  },
+  {
+    href: "https://www.getapp.com/all-software/a/knockio/",
+    src: asset("badge-new-get-app.webp"),
+    alt: "Knockio GetApp rating badge",
+    label: "View Knockio reviews on GetApp",
+  },
+  {
+    href: "https://www.g2.com/products/knockio-by-knockio/reviews",
+    src: asset("badge-new-g2.webp"),
+    alt: "Knockio G2 rating badge",
+    label: "View Knockio reviews on G2",
+  },
+];
+
+const faqs = [
+  {
+    q: "Can Knockio track equipment history per customer?",
+    a: "Yes. Each customer record holds the property's full service and equipment history, so a tech sees what is installed and what was done on past visits before arriving.",
+  },
+  {
+    q: "Can Knockio dispatch and track my techs in the field?",
+    a: "Knockio helps field service teams manage the full workflow. Teams can Manage Customers and Jobs, store customer details, create estimates, schedule jobs, assign crews, track job progress, upload photos, send invoices, and follow up with customers. This helps reduce manual work and keeps everyone updated.",
+  },
+  {
+    q: "Does Knockio handle work orders and parts for installs?",
+    a: "Yes. Work orders carry tasks, a budget, and a material takeoff, and you can raise a purchase order straight from the work order when a part runs short, with low-stock alerts to warn you first.",
+  },
+  {
+    q: "Does Knockio support digital contracts and on-site payment?",
+    a: "Yes. You can build estimates and service agreements, send them for e-signature, and collect payment through tap to pay, text to pay, card, or ACH, all tied to the job.",
+  },
+  {
+    q: "How is Knockio different from FieldPulse, FieldBoss, or ServiceTitan for HVAC companies?",
+    a: "ServiceTitan is heavy and priced for large shops, while FieldPulse and FieldBoss focus mostly on service management. Knockio brings dispatch, equipment history, estimates, work orders, and payments together, then adds live tech tracking, a fully customizable pipeline with unlimited boards, automated territory creation by zip and city, personalized support, and pricing that does not punish a growing company. It is one connected system built around the way HVAC service and install work actually runs.",
+  },
+];
+
+const reviewsRow1 = [
+  {
+    name: "Lacey Jackson",
+    avatar: asset("avatar-lacey-jackson.webp"),
+    quote:
+      "This app is the best thing that has happened to our company! Asad is absolutely amazing! He is so responsive, it doesn't matter what time of day he is on it! I highly recommend this company add this app!",
+  },
+  {
+    name: "Ben Loveland",
+    avatar: asset("avatar-ben-loveland.webp"),
+    quote:
+      "Knockio is a great product! We use it for our roofing sales canvassing. Their support team is responsive and fixes issues immediately. Highly recommend!",
+  },
+  {
+    name: "Bar Galanti",
+    avatar: asset("avatar-bar-galanti.webp"),
+    quote:
+      "The support team is awesome. The live tracking feature is very useful. The pricing is fair as well!",
+  },
+];
+
+const reviewsRow2 = [
+  {
+    name: "Georgia Hancocks",
+    avatar: asset("avatar-georgia-hancocks.webp"),
+    quote:
+      "Knockio is the best! My team and I absolutely love using it - it is so user friendly and simple. Support is brilliant too, nothing is ever too much trouble. The best on the market. Thanks Knockio!",
+  },
+  {
+    name: "Sarah Bennett",
+    avatar: asset("avatar-sarah-bennett.webp"),
+    quote:
+      "We love Knockio so far! It is solving a lot of the issues of the other canvassing apps. The team have worked with us providing excellent fast support. Highly recommend if you're seeing people face to face.",
+  },
+  {
+    name: "Ayana Hall",
+    avatar: asset("avatar-ayana-hall.webp"),
+    quote:
+      "Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.",
+  },
+];
+
+const heroImage = asset(
+  "inner-hvac-software-and-crm-what-should-hvac-contractors-look-for-in-a-crm-and-service-platform.webp",
+);
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://knockio.com/industry/hvac-software-and-crm/#webpage",
+      url: "https://knockio.com/industry/hvac-software-and-crm/",
+      name: title,
+      description,
+      isPartOf: { "@id": "https://knockio.com/#website" },
+      audience: {
+        "@type": "Audience",
+        audienceType: "HVAC Contractors",
+      },
+      mainEntity: {
+        "@id": "https://knockio.com/industry/hvac-software-and-crm/#faq",
+      },
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://knockio.com/industry/hvac-software-and-crm/#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://knockio.com/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "HVAC Software & CRM",
+          item: "https://knockio.com/industry/hvac-software-and-crm/",
+        },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://knockio.com/industry/hvac-software-and-crm/#faq",
+      mainEntity: faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
+      })),
+    },
+  ],
+};
+---
+
+<KnockioHomeLayout
+  title={title}
+  description={description}
+  ogImage={heroImage}
+  jsonLd={jsonLd}
+  whiteBg={true}
+>
+  <main id="industry-page">
+    <!-- ========== Hero ========== -->
+    <section
+      class="overflow-hidden border-b border-solid border-[#7fc271] bg-white"
+    >
+      <div
+        class="grid min-h-0 lg:min-h-[610px] lg:grid-cols-[55%_45%] xl:min-h-[720px] 2xl:min-h-[820px]"
+      >
+        <div
+          class="relative flex flex-col justify-center px-[5%] pt-[calc(72px+3rem)] pb-12 sm:pt-[calc(72px+4rem)] sm:pb-16 lg:min-h-[600px] lg:px-0 lg:pb-[72px] lg:pt-[72px] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-[42px] xl:pr-[70px]"
+        >
+          <div class="max-w-[810px]">
+            <h1
+              class="mb-7 text-[36px] font-bold leading-[44px] text-neutral-950 sm:text-[44px] sm:leading-[54px] xl:text-[58px] xl:leading-[66px] 2xl:text-[64px] 2xl:leading-[74px]"
+            >
+              HVAC Software for Service &amp; Install
+            </h1>
+            <p
+              class="mb-10 max-w-[760px] text-base font-medium leading-8 text-neutral-600 sm:text-lg sm:leading-9"
+            >
+              Knockio is HVAC software and CRM built for contractors who need
+              one place to book calls, dispatch techs, hold customer and
+              equipment history, build estimates, schedule installs, and collect
+              payment in the field. No more working off a whiteboard, a text
+              thread, and a paper invoice that never make it back to the same
+              desk.
+            </p>
+            <a
+              href="#cal-sec"
+              class="inline-flex w-full items-center justify-center rounded-lg bg-primary-500 px-6 py-3.5 text-sm font-medium text-white transition-colors duration-300 hover:bg-primary-600 sm:w-auto sm:px-10 sm:py-4 sm:text-base lg:px-12"
+            >
+              Schedule a Demo
+            </a>
+          </div>
+
+          <div
+            id="kioSummaryPanel"
+            class="kio-summary-panel z-[18] mt-6 rounded-xl border border-solid border-primary-500/35 bg-white/95 px-[5%] py-5 text-base leading-7 text-neutral-600 lg:absolute lg:inset-x-0 lg:bottom-[72px] lg:mt-0 lg:px-0 lg:py-[22px] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-10 lg:shadow-[0_-18px_45px_rgba(15,23,42,0.08)]"
+          >
+            <p
+              class="mb-4 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
+            >
+              What should HVAC contractors look for in a CRM and service
+              platform?
+            </p>
+            <p
+              class="max-w-[760px] text-[15px] leading-7 text-neutral-600 sm:text-base sm:leading-7"
+            >
+              An HVAC contractor should look for a CRM that carries the whole
+              job, from the booked call to the paid invoice. That means customer
+              and equipment records, scheduling and dispatch, technician
+              tracking, estimates and service agreements, work orders with
+              parts, e-signed approvals, and on-site payment. Knockio handles
+              all of it in one platform. It also adds live GPS tracking of techs
+              and full job history per address, so the next visit starts with
+              everything the last tech already learned. That depth of service
+              record, plus affordable pricing and support that actually knows
+              the trade, is what a generic CRM built for another industry leaves
+              out, and it is what makes an HVAC CRM for contractors worth
+              keeping in the truck.
+            </p>
+          </div>
+
+          <div
+            class="z-20 mt-8 min-h-[72px] border-t border-solid border-primary-500/70 bg-[#f3faf3] lg:absolute lg:inset-x-0 lg:bottom-0 lg:mt-0"
+          >
+            <button
+              id="kioSummaryBtn"
+              class="kio-summary-button duration-250 flex min-h-[72px] w-full items-center justify-between gap-5 px-[5%] text-neutral-950 transition-colors hover:bg-[#edf8ed] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-10"
+              type="button"
+              aria-expanded="false"
+              aria-controls="kioSummaryPanel"
+            >
+              <span class="text-lg font-medium leading-6">Quick summary</span>
+              <ChevronRight
+                class="summary-chevron size-5 shrink-0"
+                aria-hidden="true"
+              />
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="hero-industry-visual relative min-h-[340px] overflow-hidden sm:min-h-[440px] lg:min-h-full"
+        >
+          <img
+            src={heroImage}
+            alt="What should hvac contractors look for in a crm and service platform"
+            width="830"
+            height="560"
+            decoding="async"
+            loading="eager"
+            fetchpriority="high"
+            class="h-full min-h-[340px] w-full object-cover object-center sm:min-h-[440px] lg:min-h-full"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Why HVAC / Sticky tabs ========== -->
+    <section id="platform-capabilities" class="bg-white py-20 sm:py-24 lg:py-28">
+      <div class="my-container">
+        <div class="mx-auto mb-10 max-w-[1120px] text-center lg:mb-12">
+          <h2
+            class="mb-5 text-center text-[34px] font-bold leading-[42px] text-neutral-950 sm:text-4xl sm:leading-[48px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+          >
+            Why HVAC Contractors Choose Knockio
+          </h2>
+          <p
+            class="mx-auto max-w-[960px] text-base font-normal leading-8 text-neutral-600 sm:text-lg sm:leading-9"
+          >
+            Knockio helps HVAC companies manage customers, equipment history,
+            scheduling, dispatch, techs, estimates, parts, invoices, and
+            payments. From the first service call to the signed-off install, it
+            all sits in one connected platform. Owners run the board and the
+            field without losing track of who is where, what was done, and what
+            still needs billing.
+          </p>
+        </div>
+
+        <div class="sr-only">
+          {
+            capabilityTabs.map((tab) => (
+              <div>
+                <h3>{tab.label}</h3>
+                {tab.cards.map((card) => (
+                  <article>
+                    <h3>{card.title}</h3>
+                    <p>{card.text}</p>
+                  </article>
+                ))}
+              </div>
+            ))
+          }
+        </div>
+
+          <div
+            id="hpCapScrollTrack"
+            class="h-[calc(100vh+(var(--scroll-steps,5)-1)*45vh)] max-lg:h-auto motion-reduce:h-auto"
+            style="--scroll-steps: 5"
+          >
+            <div
+              class="contents lg:flex lg:sticky lg:top-0 lg:z-20 lg:h-[min(calc(100vh-2rem),880px)] lg:flex-col lg:bg-white/95 lg:pt-1 motion-reduce:h-auto motion-reduce:static"
+            >
+              <div
+                class="sticky top-0 z-30 shrink-0 bg-white/95 px-1 pb-5 pt-2 backdrop-blur-md max-lg:overflow-hidden"
+              >
+                <div
+                  id="hpTabs1Nav"
+                  class="relative mx-auto flex max-w-6xl scroll-smooth items-center gap-2 overflow-x-auto [scrollbar-width:none] max-xl:gap-3 lg:justify-between max-lg:flex-nowrap max-lg:justify-start max-lg:px-[12vw] [&::-webkit-scrollbar]:hidden"
+                  role="tablist"
+                  aria-label="HVAC platform capabilities"
+                >
+                  <span
+                    id="hpTabs1Indicator"
+                    class="pointer-events-none absolute left-0 top-0 z-0 rounded-full border-2 border-solid border-primary-500 bg-[#F9FFF8] transition-all duration-300 ease-out"
+                    aria-hidden="true"></span>
+                  {
+                    capabilityTabs.map((tab, index) => (
+                      <button
+                        type="button"
+                        data-hp-scroll-step={String(index)}
+                        class:list={[
+                          "hpTabs1_btn relative z-10 shrink-0 rounded-full border-2 px-5 py-2.5 text-lg font-bold transition-colors hover:border-primary-500/40 hover:text-primary-500 max-xl:px-4 max-xl:py-2 max-xl:text-base max-md:text-sm",
+                          index === 0
+                            ? "border-transparent text-primary-500"
+                            : "border-dashed border-neutral-300 text-neutral-700",
+                        ]}
+                      >
+                        {tab.label}
+                      </button>
+                    ))
+                  }
+                </div>
+              </div>
+
+              <div id="hpTabs1Panels" class="relative lg:flex-1">
+                {
+                  capabilityTabs.map((tab, tabIndex) => (
+                    <div
+                      id={`hpTabs${tabIndex + 1}_tab${tabIndex + 1}`}
+                      class:list={[
+                        "hpTabs1_content scroll-mt-24 lg:absolute lg:inset-0 lg:flex lg:h-full lg:flex-col lg:gap-3 lg:overflow-hidden transition-opacity duration-300 max-lg:static max-lg:mb-10 max-lg:h-auto max-lg:overflow-visible max-lg:opacity-100 max-lg:visible max-lg:pointer-events-auto motion-reduce:static motion-reduce:h-auto pt-5",
+                        tabIndex === 0
+                          ? "opacity-100 visible pointer-events-auto"
+                          : "opacity-0 invisible pointer-events-none",
+                      ]}
+                      role="tabpanel"
+                    >
+                      <div class="grid gap-6 lg:grid-cols-3 lg:gap-8">
+                        {tab.cards.map((card) => (
+                          <article
+                            class:list={[
+                              "hp-cap-card hp-card flex min-h-[520px] flex-col overflow-hidden rounded-[28px] border border-solid border-neutral-200 bg-neutral-50 p-7 sm:p-8",
+                            ]}
+                          >
+                            <div
+                              class:list={[
+                                "relative z-10 shrink-0",
+                              ]}
+                            >
+                              <h5 class="text-3xl max-2xl:text-2xl max-md:text-lg font-bold text-neutral-900 mb-3 max-md:mb-1">
+                                {card.title}
+                              </h5>
+                              <p class="mb-8 text-base leading-7 text-neutral-600 sm:text-[17px] sm:leading-8">
+                                {card.text}
+                              </p>
+                            </div>
+                            <div class="mt-auto flex justify-center overflow-hidden rounded-3xl">
+                              <img
+                                src={card.image}
+                                alt={card.alt}
+                                width="430"
+                                height="320"
+                                decoding="async"
+                                loading="lazy"
+                                class="w-full max-w-[430px] object-contain object-bottom"
+                              />
+                            </div>
+                          </article>
+                        ))}
+                      </div>
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- ========== Organized (dark) ========== -->
+    <section
+      class="relative overflow-hidden bg-[#0F172A] py-24 sm:py-28 lg:py-[150px]"
+    >
+      <div
+        class="pointer-events-none absolute inset-0 opacity-[0.22] [background-image:radial-gradient(rgba(255,255,255,0.65)_0.8px,transparent_0.8px)] [background-size:18px_18px]"
+      >
+      </div>
+
+      <div class="my-container relative z-10">
+        <div class="mx-auto mb-14 max-w-[1120px] text-center lg:mb-20">
+          <h2
+            class="mb-6 text-center text-[31px] font-bold leading-[39px] text-white sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+          >
+            Keep Customers, Techs, and Job Updates Organized
+          </h2>
+          <p
+            class="mx-auto max-w-[980px] text-base leading-8 text-white sm:text-lg sm:leading-9"
+          >
+            Knockio makes HVAC job management simple with HVAC software and
+            field service CRM tools in one place. Track techs, manage the
+            schedule, upload job media, automate follow ups, and send digital
+            contracts, all from the same platform.
+          </p>
+        </div>
+
+        <div
+          class="mx-auto grid max-w-[1380px] gap-x-12 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-16 lg:gap-y-14"
+        >
+          {
+            organizedItems.map((item) => (
+              <div class="border-b border-solid border-white/20 pb-10">
+                <div class="mb-7 flex h-16 w-16 items-center justify-center rounded-xl bg-primary-500 text-white">
+                  {item.icon === "crosshair" && (
+                    <Crosshair class="size-[30px]" aria-hidden="true" />
+                  )}
+                  {item.icon === "sparkles" && (
+                    <Sparkles class="size-[30px]" aria-hidden="true" />
+                  )}
+                  {item.icon === "ruler" && (
+                    <Ruler class="size-[30px]" aria-hidden="true" />
+                  )}
+                  {item.icon === "file" && (
+                    <FileSignature class="size-[30px]" aria-hidden="true" />
+                  )}
+                  {item.icon === "zap" && (
+                    <Zap class="size-[30px]" aria-hidden="true" />
+                  )}
+                  {item.icon === "message" && (
+                    <MessageSquare class="size-[30px]" aria-hidden="true" />
+                  )}
+                </div>
+                <h3 class="mb-4 text-[22px] font-bold leading-7 text-white sm:text-2xl sm:leading-8">
+                  {item.title}
+                </h3>
+                <p class="mb-6 text-base font-light text-white">{item.text}</p>
+                {item.href && (
+                  <a
+                    href={item.href}
+                    class="inline-flex items-center gap-3 text-base font-semibold text-primary-500 transition-all duration-300 hover:gap-4"
+                  >
+                    Learn More
+                    <ChevronRight class="size-3.5" aria-hidden="true" />
+                  </a>
+                )}
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="bg-white py-16 sm:py-20 lg:py-24">
+      <div class="my-container mx-auto">
+        <div class="grid gap-10 lg:grid-cols-2 lg:gap-20">
+          <div>
+            <p
+              class="mb-4 text-sm leading-7 font-medium text-primary-500 md:text-2xl"
+            >
+              Frequently Asked Questions
+            </p>
+            <h2
+              class="mb-8 w-full max-w-3xl text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+            >
+              Everything HVAC Contractors Ask Before Switching to Knockio
+            </h2>
+            <p
+              class="mb-6 w-full max-w-3xl text-sm leading-6 font-normal text-neutral-800 sm:text-base sm:leading-7 md:mb-8 md:text-lg md:leading-8"
+            >
+              Switching software is a real decision when your whole schedule,
+              customer history, and equipment records live inside it. Here are
+              the questions HVAC contractors ask most before making the move.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            {
+              faqs.map((faq) => (
+                <div class="faq-item overflow-hidden rounded-2xl border border-solid border-neutral-200 transition-all duration-300">
+                  <button
+                    class="faq-button group flex w-full items-center justify-between p-4 text-left sm:p-6"
+                    type="button"
+                  >
+                    <span class="text-base font-medium text-neutral-950 transition-colors group-hover:text-primary-500 sm:text-lg lg:text-xl">
+                      {faq.q}
+                    </span>
+                    <div class="faq-icon ml-4 flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary-500">
+                      <svg
+                        class="icon-minus hidden h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M20 12H4"
+                        />
+                      </svg>
+                      <svg
+                        class="icon-plus h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 4v16m8-8H4"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                  <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="p-4 pt-0 text-sm leading-relaxed text-neutral-600 sm:p-6 sm:pt-0 sm:text-base">
+                      {faq.a}
+                    </div>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Trusted ========== -->
+    <section
+      class="relative overflow-hidden bg-[#0F172A] py-24 sm:py-28 lg:py-[150px]"
+    >
+      <div
+        class="pointer-events-none absolute inset-0 opacity-[0.22] [background-image:radial-gradient(rgba(255,255,255,0.65)_0.8px,transparent_0.8px)] [background-size:18px_18px]"
+      >
+      </div>
+      <div
+        class="pointer-events-none absolute top-16 left-1/2 h-[420px] w-[860px] -translate-x-1/2 rounded-full bg-primary-500/10 blur-3xl"
+      >
+      </div>
+
+      <div class="my-container relative z-10">
+        <div class="mx-auto mb-16 max-w-[1040px] text-center lg:mb-20">
+          <h2
+            class="mb-6 text-center text-[31px] font-bold leading-[39px] text-white sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+          >
+            Trusted by 100&rsquo;s of customers
+          </h2>
+          <p
+            class="mx-auto max-w-[800px] text-base leading-7 text-white/80 sm:text-lg sm:leading-8"
+          >
+            Join hundreds of growing teams using Knockio to manage leads, sales,
+            field teams, and customer relationships.
+          </p>
+        </div>
+
+        <div
+          class="mx-auto grid max-w-[1120px] grid-cols-1 justify-items-center gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10"
+        >
+          {
+            trustBadges.map((badge) => (
+              <a
+                href={badge.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={badge.label}
+                class="group block rounded-3xl focus:ring-2 focus:ring-primary-500 focus:ring-offset-4 focus:ring-offset-[#0F172A] focus:outline-none"
+              >
+                <img
+                  src={badge.src}
+                  alt={badge.alt}
+                  width="203"
+                  height="280"
+                  decoding="async"
+                  loading="lazy"
+                  class="w-full max-w-[200px] object-contain transition duration-300 group-hover:-translate-y-2 group-hover:drop-shadow-[0_24px_34px_rgba(255,255,255,0.12)]"
+                />
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Customer Reviews ========== -->
+    <section class="overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
+      <div class="my-container mx-auto mb-10 text-center lg:mb-16">
+        <p class="mb-4 text-sm leading-7 font-medium text-primary-500 md:text-2xl">
+          Customer Reviews
+        </p>
+        <p
+          class="mb-8 text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+        >
+          What Field Service and Sales<br />
+          Teams Say About Knockio
+        </p>
+        <img
+          src={asset("google-5-star.webp")}
+          alt="google review badge"
+          width="183"
+          height="60"
+          decoding="async"
+          loading="lazy"
+          class="mx-auto h-auto w-[150px] sm:w-[183px]"
+        />
+      </div>
+
+      <div class="mt-7 space-y-8">
+        <div class="testimonial-track-container flex overflow-hidden">
+          <div
+            class="testimonial-track hover:pause flex animate-marquee-left gap-4 sm:gap-6"
+          >
+            {
+              [0, 1].map((dup) => (
+                <div
+                  class="card-set flex gap-4 sm:gap-6"
+                  aria-hidden={dup === 1 ? "true" : undefined}
+                >
+                  {reviewsRow1.map((review) => (
+                    <div class="relative w-[300px] flex-shrink-0 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 group sm:w-[380px] sm:p-6 lg:w-[450px] lg:p-8">
+                      <p class="relative z-10 mb-6 min-h-[168px] text-sm italic leading-relaxed text-neutral-700 sm:mb-8 sm:text-base lg:text-lg">
+                        {review.quote}
+                      </p>
+                      <div class="relative z-10 flex items-center gap-4">
+                        <img
+                          src={review.avatar}
+                          alt={review.name}
+                          width="48"
+                          height="48"
+                          decoding="async"
+                          loading="lazy"
+                          class="h-12 w-12 rounded-full object-cover grayscale transition-all group-hover:grayscale-0"
+                        />
+                        <div>
+                          <p class="mb-1 text-base font-bold text-neutral-950">
+                            {review.name}
+                          </p>
+                          <p
+                            class="text-sm text-neutral-500"
+                            aria-label="5 out of 5 stars"
+                          >
+                            ⭐⭐⭐⭐⭐
+                          </p>
+                        </div>
+                      </div>
+                      <Quote
+                        class="pointer-events-none absolute right-8 bottom-6 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <div class="testimonial-track-container flex overflow-hidden">
+          <div
+            class="testimonial-track hover:pause flex animate-marquee-right gap-4 sm:gap-6"
+          >
+            {
+              [0, 1].map((dup) => (
+                <div
+                  class="card-set flex gap-4 sm:gap-6"
+                  aria-hidden={dup === 1 ? "true" : undefined}
+                >
+                  {reviewsRow2.map((review) => (
+                    <div class="relative w-[300px] flex-shrink-0 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 group sm:w-[380px] sm:p-6 lg:w-[450px] lg:p-8">
+                      <p class="relative z-10 mb-6 min-h-[168px] text-sm italic leading-relaxed text-neutral-700 sm:mb-8 sm:text-base lg:text-lg">
+                        {review.quote}
+                      </p>
+                      <div class="relative z-10 flex items-center gap-4">
+                        <img
+                          src={review.avatar}
+                          alt={review.name}
+                          width="48"
+                          height="48"
+                          decoding="async"
+                          loading="lazy"
+                          class="h-12 w-12 rounded-full object-cover grayscale transition-all group-hover:grayscale-0"
+                        />
+                        <div>
+                          <p class="mb-1 text-base font-bold text-neutral-950">
+                            {review.name}
+                          </p>
+                          <p
+                            class="text-sm text-neutral-500"
+                            aria-label="5 out of 5 stars"
+                          >
+                            ⭐⭐⭐⭐⭐
+                          </p>
+                        </div>
+                      </div>
+                      <Quote
+                        class="pointer-events-none absolute right-8 bottom-6 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <script src="../../scripts/industry-page.js"></script>
+</KnockioHomeLayout>

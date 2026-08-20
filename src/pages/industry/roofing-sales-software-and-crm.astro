@@ -1,0 +1,967 @@
+---
+import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
+import "../../styles/industry-page.css";
+import {
+  ChevronRight,
+  Crosshair,
+  FileSignature,
+  MessageSquare,
+  Quote,
+  Ruler,
+  Sparkles,
+  Zap,
+} from "lucide-astro";
+
+const title = "Roofing Sales Software & CRM for Roofers | Knockio";
+const description =
+  "Roofing CRM & sales software for door-to-door teams. Auto-built canvassing territories, live GPS tracking, estimates, e-contracts & payments in one platform.";
+
+const asset = (name: string) => `/assets/cfw/${name}`;
+
+type CapCard = {
+  title: string;
+  text: string;
+  image: string;
+  alt: string;
+  link?: { href: string; label: string };
+  textSuffix?: string;
+};
+
+const capabilityTabs: { label: string; cards: CapCard[] }[] = [
+  {
+    label: "Manage Jobs",
+    cards: [
+      {
+        title: "Customer and Property Records in One Place",
+        text: "Every job record holds the address, contacts, custom fields, photos, notes, tasks, and full ownership history. When a homeowner calls back about a repair, your team sees the whole history instead of digging through texts.",
+        image: asset(
+          "inner-roofing-sales-software-and-crm-customer-and-property-records-in-one-place.webp",
+        ),
+        alt: "Door-to-door canvassing in Knockio",
+      },
+      {
+        title: "Dynamic Job Pipeline for Roofing Stages",
+        text: "Move jobs through clear stages like lead, inspection, estimate, proposal, approval, production, payment, and closeout. Statuses stay fully customizable, so you name and order them to match your own shop and run unlimited boards.",
+        image: asset(
+          "inner-roofing-sales-software-and-crm-dynamic-job-pipeline-for-roofing-stages.webp",
+        ),
+        alt: "Lead management in Knockio",
+      },
+      {
+        title: "Crew and Roofing Production Scheduling",
+        text: "Assign crews to jobs, track production progress closely, and keep the office and the field reading one shared schedule instead of two versions of the truth. Everyone sees who is on which roof next.",
+        image: asset(
+          "inner-roofing-sales-software-and-crm-crew-and-production-scheduling-new.webp",
+        ),
+        alt: "Kanban-style sales pipeline in Knockio",
+      },
+    ],
+  },
+  {
+    label: "Track the Field",
+    cards: [
+      {
+        title: "Auto Territory Creation by ZIP & City",
+        text: "Build canvassing territories automatically from zip codes and cities, instead of drawing every single boundary by hand. After a storm, carve up a whole area and get reps knocking doors in minutes, not hours, unlike most roofing CRMs.",
+        image: asset(
+          "inner-roofing-sales-software-and-crm-auto-territory-creation-by-zip-city.webp",
+        ),
+        alt: "Route planning in Knockio",
+      },
+      {
+        title: "Live GPS Tracking of Every Roofing Rep",
+        text: "See where every canvasser and crew is in real time, which helps with accountability, safety, and knowing exactly who works which street right now. Pin drop verification confirms how close a rep stood when marking a door worked. See ",
+        link: {
+          href: "https://knockio.com/blog/roofers-knocking-on-doors/",
+          label: "how door-to-door roofing reps use canvassing software",
+        },
+        textSuffix: ".",
+        image: asset(
+          "inner-roofing-sales-software-and-crm-live-gps-tracking-of-every-rep.webp",
+        ),
+        alt: "Territory management in Knockio",
+      },
+      {
+        title: "Route Planning That Saves Daylight",
+        text: "Plan smarter, tighter routes so your roofing reps hit far more doors in less time each day, instead of crisscrossing the very same blocks over and over and burning the daylight hours that matter most after a storm.",
+        image: asset(
+          "inner-roofing-sales-software-and-crm-route-planning-that-saves-daylight.webp",
+        ),
+        alt: "Field activity log in Knockio",
+      },
+    ],
+  },
+  {
+    label: "Work Orders and Materials",
+    cards: [
+      {
+        title: "Work Orders With Tasks, Budget, and Materials",
+        text: "Build a work order with tasks, a budget, and a material takeoff for every roof. The job is tracked against real numbers, not a rough guess from the estimate, and the office can see exactly what was used and what it cost.",
+        image: asset(
+          "inner-roofing-sales-software-and-crm-work-orders-with-tasks-budget-and-materials.webp",
+        ),
+        alt: "Job management in Knockio",
+      },
+      {
+        title: "Purchase Orders When Materials Run Short",
+        text: "When shingles or flashing are not in inventory, fire off a purchase order straight from the work order. Knockio tracks products, variants, SKUs, cost, and markup, and flags low stock before you run out mid-job.",
+        image: asset(
+          "inner-roofing-sales-software-and-crm-purchase-orders-when-materials-run-short.webp",
+        ),
+        alt: "Crew dispatching in Knockio",
+      },
+      {
+        title: "Assign Jobs to Crews or Subcontractors",
+        text: "Work orders can go directly to your own in-house crew or to a trusted outside subcontractor, with tasks, notes, photos, and the full production schedule all attached, so whoever climbs the ladder on that roof always has the complete picture.",
+        image: asset(
+          "inner-roofing-sales-software-and-crm-assign-jobs-to-crews-or-subcontractors-new.webp",
+        ),
+        alt: "Work orders in Knockio",
+      },
+    ],
+  },
+  {
+    label: "Documents and Media",
+    cards: [
+      {
+        title: "Job Photos and Roof Media in One Place",
+        text: "Upload before, during, and after photos straight to the job. Insurance adjusters, homeowners, and your own crew all get the full visual record in one spot instead of scattered across phones.",
+        image: asset(
+          "inner-roofing-sales-software-and-crm-job-photos-and-roof-media-in-one-place.webp",
+        ),
+        alt: "Smart estimates in Knockio",
+      },
+      {
+        title: "E-Contracts With Legal Protection",
+        text: "Send contracts for digital signature with IP address and timestamp logging built in. If a job is ever disputed, you have a documented trail instead of a he-said argument.",
+        image: asset(
+          "inner-roofing-sales-software-and-crm-e-contracts-with-legal-protection.webp",
+        ),
+        alt: "Proposals in Knockio",
+      },
+      {
+        title: "Centralized File Storage Per Job",
+        text: "Keep permits, warranties, and insurance documents attached right to the job record, not scattered across email and a filing cabinet drawer nobody can find when a claim comes up.",
+        image: asset(
+          "inner-roofing-sales-software-and-crm-centralized-file-storage-per-job.webp",
+        ),
+        alt: "Digital contracts in Knockio",
+      },
+    ],
+  },
+  {
+    label: "Quote and Get Paid",
+    cards: [
+      {
+        title: "Roof Estimates From Real Measurement Data",
+        text: "Build clean, accurate estimates using roof measurement data from EagleView or other providers. Pricing reflects the actual roof, not a satellite guess. Add optional line items, save templates, and pull from a product catalog so pricing stays consistent.",
+        image: asset(
+          "inner-roofing-sales-software-and-crm-roof-estimates-from-real-measurement-data-new.webp",
+        ),
+        alt: "Video and file storage in Knockio",
+      },
+      {
+        title: "Digital Proposals With E-Signatures",
+        text: "Send a proposal the homeowner reviews and signs from their phone, through a customer portal, with financing and product choices built in. Change orders work the same way, so a mid-job add-on is documented instead of scribbled on a clipboard.",
+        image: asset(
+          "inner-roofing-sales-software-and-crm-digital-proposals-with-e-signatures.webp",
+        ),
+        alt: "Photo uploads in Knockio",
+      },
+      {
+        title: "Get Paid With Tap to Pay or Text to Pay",
+        text: "Collect deposits and final payments on the spot or remotely through Knockio's own payment processing. Credit card, ACH, tap to pay, text to pay, so cash flow does not wait on a check in the mail.",
+        image: asset(
+          "inner-roofing-sales-software-and-crm-get-paid-with-tap-to-pay-or-text-to-pay.webp",
+        ),
+        alt: "Service reports in Knockio",
+      },
+    ],
+  },
+];
+
+const organizedItems = [
+  {
+    title: "Live Field Tracking",
+    text: "Monitor field reps in real time with GPS tracking. It helps with accountability, safety, and knowing exactly who is working which street right now.",
+    href: "https://knockio.com/features/gps-tracking-software/",
+    icon: "crosshair" as const,
+  },
+  {
+    title: "Flow Automation",
+    text: "Automatically handles the daily grind like follow ups, callbacks, and appointment confirmations, so a job does not go cold while your office is buried in something else.",
+    href: "https://knockio.com/features/business-automation-software/",
+    icon: "sparkles" as const,
+  },
+  {
+    title: "Media & Measurements",
+    text: "See every job's photos, measurement data, and notes in one view, so the office and the field are looking at the same record instead of asking each other for it.",
+    href: null,
+    icon: "ruler" as const,
+  },
+  {
+    title: "E-Contracts",
+    text: "Create, send, review, and sign contracts digitally so every approved deal moves forward faster without paperwork delays or manual follow-ups.",
+    href: "https://knockio.com/e-contracts/",
+    icon: "file" as const,
+  },
+  {
+    title: "CRM Integrations",
+    text: "Knockio syncs your roofing leads and job records with Salesforce, HubSpot, Google Calendar, and GHL, plus thousands of apps via Zapier, FlowChef, and webhooks.",
+    href: "https://knockio.com/knockio-integrations/",
+    icon: "zap" as const,
+  },
+  {
+    title: "Team Communication",
+    text: "Quickly sort and manage jobs by priority, so your highest value roofs never sit forgotten at the bottom of someone's task list.",
+    href: "https://knockio.com/features/business-texting-and-calling-software/",
+    icon: "message" as const,
+  },
+];
+
+const trustBadges = [
+  {
+    href: "https://www.capterra.com/p/10018264/Knockio/",
+    src: asset("badge-new-capterra.webp"),
+    alt: "Knockio Capterra rating badge",
+    label: "View Knockio reviews on Capterra",
+  },
+  {
+    href: "https://www.softwareadvice.com/field-sales/knockio-profile/",
+    src: asset("badge-new-software-advice.webp"),
+    alt: "Knockio Software Advice rating badge",
+    label: "View Knockio reviews on Software Advice",
+  },
+  {
+    href: "https://www.getapp.com/all-software/a/knockio/",
+    src: asset("badge-new-get-app.webp"),
+    alt: "Knockio GetApp rating badge",
+    label: "View Knockio reviews on GetApp",
+  },
+  {
+    href: "https://www.g2.com/products/knockio-by-knockio/reviews",
+    src: asset("badge-new-g2.webp"),
+    alt: "Knockio G2 rating badge",
+    label: "View Knockio reviews on G2",
+  },
+];
+
+const faqs = [
+  {
+    q: "Can Knockio keep all my job history in one record?",
+    a: "Yes. As a complete roofing contractor CRM, Knockio ensures every job record holds the property's contacts, photos, notes, documents, and full activity history, so anyone on your team sees the whole story instead of piecing it together from texts and email.",
+  },
+  {
+    q: "Can Knockio create canvassing territories automatically?",
+    a: "Yes. Our built-in roofing canvassing app can build territories automatically from zip codes and cities, so you can split up a storm-hit area and get reps knocking fast, without drawing every boundary by hand.",
+  },
+  {
+    q: "Can Knockio build estimates from EagleView measurement reports?",
+    a: "Yes. Knockio lets you create roof estimates using measurement data from EagleView or other measurement providers, so pricing is based on accurate roof data instead of a rough guess.",
+  },
+  {
+    q: "Does Knockio handle work orders and materials for production?",
+    a: "Yes. Functioning as a full roofing project management software, Knockio ensures work orders carry tasks, a budget, and a material takeoff. You can even raise a purchase order straight from the work order when materials run short, with low-stock alerts to warn you first.",
+  },
+  {
+    q: "How is Knockio different from Jobber or JobNimbus for roofing companies?",
+    a: "Knockio gives you the estimating, scheduling, and invoicing you would expect from tools like Jobber or JobNimbus, but as an all-in-one roofer software, it natively adds live rep tracking and automated territory creation for your sales team. It is one connected system built around the way a job actually runs, from the first knock to the final payment, backed by personalized support and pricing that does not punish a growing crew.",
+  },
+  {
+    q: "Is Knockio a roofing CRM or a door-to-door sales app?",
+    a: "Both, in one system. Knockio pairs door-to-door sales tools, like automatic canvassing territories, live GPS rep tracking, and route planning, with a full roofing CRM: job pipelines, crew scheduling, estimates, e-contracts, and payments. You do not need a separate canvassing app running alongside your CRM.",
+  },
+  {
+    q: "How is Knockio different from AccuLynx for roofing companies?",
+    a: "AccuLynx is built mainly for production and job management. Knockio adds native door-to-door sales tools on top of the CRM, including automated territory creation, live rep tracking on a map, and route planning, so sales and production run in one system instead of stitching a canvassing app onto your CRM.",
+  },
+];
+
+const reviewsRow1 = [
+  {
+    name: "Lacey Jackson",
+    avatar: asset("avatar-lacey-jackson.webp"),
+    quote:
+      "This app is the best thing that has happened to our company! Asad is absolutely amazing! He is so responsive, it doesn't matter what time of day he is on it! I highly recommend this company add this app!",
+  },
+  {
+    name: "Ben Loveland",
+    avatar: asset("avatar-ben-loveland.webp"),
+    quote:
+      "Knockio is a great product! We use it for our roofing sales canvassing. Their support team is responsive and fixes issues immediately. Highly recommend!",
+  },
+  {
+    name: "Bar Galanti",
+    avatar: asset("avatar-bar-galanti.webp"),
+    quote:
+      "The support team is awesome. The live tracking feature is very useful. The pricing is fair as well!",
+  },
+];
+
+const reviewsRow2 = [
+  {
+    name: "Georgia Hancocks",
+    avatar: asset("avatar-georgia-hancocks.webp"),
+    quote:
+      "Knockio is the best! My team and I absolutely love using it - it is so user friendly and simple. Support is brilliant too, nothing is ever too much trouble. The best on the market. Thanks Knockio!",
+  },
+  {
+    name: "Sarah Bennett",
+    avatar: asset("avatar-sarah-bennett.webp"),
+    quote:
+      "We love Knockio so far! It is solving a lot of the issues of the other canvassing apps. The team have worked with us providing excellent fast support. Highly recommend if you're seeing people face to face.",
+  },
+  {
+    name: "Ayana Hall",
+    avatar: asset("avatar-ayana-hall.webp"),
+    quote:
+      "Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.",
+  },
+];
+
+const heroImage = asset("inner-industry-roofing-sales-software.webp");
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id":
+        "https://knockio.com/industry/roofing-sales-software-and-crm/#webpage",
+      url: "https://knockio.com/industry/roofing-sales-software-and-crm/",
+      name: title,
+      description,
+      isPartOf: { "@id": "https://knockio.com/#website" },
+      audience: {
+        "@type": "Audience",
+        audienceType: "Roofing Contractors",
+      },
+      mainEntity: {
+        "@id":
+          "https://knockio.com/industry/roofing-sales-software-and-crm/#faq",
+      },
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id":
+        "https://knockio.com/industry/roofing-sales-software-and-crm/#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://knockio.com/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Roofing Sales Software & CRM",
+          item: "https://knockio.com/industry/roofing-sales-software-and-crm/",
+        },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://knockio.com/industry/roofing-sales-software-and-crm/#faq",
+      mainEntity: faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
+      })),
+    },
+  ],
+};
+---
+
+<KnockioHomeLayout
+  title={title}
+  description={description}
+  ogImage={heroImage}
+  jsonLd={jsonLd}
+  whiteBg={true}
+>
+  <main id="industry-page">
+    <!-- ========== Hero ========== -->
+    <section
+      class="overflow-hidden border-b border-solid border-[#7fc271] bg-white"
+    >
+      <div
+        class="grid min-h-0 lg:min-h-[610px] lg:grid-cols-[55%_45%] xl:min-h-[720px] 2xl:min-h-[820px]"
+      >
+        <div
+          class="relative flex flex-col justify-center px-[5%] pt-[calc(72px+3rem)] pb-12 sm:pt-[calc(72px+4rem)] sm:pb-16 lg:min-h-[600px] lg:px-0 lg:pb-[72px] lg:pt-[72px] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-[42px] xl:pr-[70px]"
+        >
+          <div class="max-w-[810px]">
+            <h1
+              class="mb-7 text-[36px] font-bold leading-[44px] text-neutral-950 sm:text-[44px] sm:leading-[54px] xl:text-[58px] xl:leading-[66px] 2xl:text-[64px] 2xl:leading-[74px]"
+            >
+              Roofing Sales Software &amp; CRM Built for Contractors
+            </h1>
+            <p
+              class="mb-10 max-w-[760px] text-base font-medium leading-8 text-neutral-600 sm:text-lg sm:leading-9"
+            >
+              Knockio is one of the best all-in-one platforms for roofing
+              contractors who need a single place to hold customer records,
+              manage crews, schedule inspections, track production, and collect
+              payments. Built with input from professional roofers to match
+              real-world workflows, Knockio connects your door to door roofing
+              sales tracking directly to your back-office operations to help
+              teams sell, manage jobs, and grow faster.
+            </p>
+            <a
+              href="#cal-sec"
+              class="inline-flex w-full items-center justify-center rounded-lg bg-primary-500 px-6 py-3.5 text-sm font-medium text-white transition-colors duration-300 hover:bg-primary-600 sm:w-auto sm:px-10 sm:py-4 sm:text-base lg:px-12"
+            >
+              Schedule a Demo
+            </a>
+          </div>
+
+          <div
+            id="kioSummaryPanel"
+            class="kio-summary-panel z-[18] mt-6 rounded-xl border border-solid border-primary-500/35 bg-white/95 px-[5%] py-5 text-base leading-7 text-neutral-600 lg:absolute lg:inset-x-0 lg:bottom-[72px] lg:mt-0 lg:px-0 lg:py-[22px] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-10 lg:shadow-[0_-18px_45px_rgba(15,23,42,0.08)]"
+          >
+            <p
+              class="mb-4 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
+            >
+              What should roofing contractors look for in a CRM and job
+              management platform?
+            </p>
+            <p
+              class="max-w-[760px] text-[15px] leading-7 text-neutral-600 sm:text-base sm:leading-7"
+            >
+              A true roofing project management software carries the whole job,
+              from the first inspection to the last dollar collected. That means
+              complete customer and property records, a job pipeline that
+              matches roofing stages, crew and production scheduling, work
+              orders with materials, job photos, e-contracts, and payment
+              collection. Knockio handles all of it in one platform. It also
+              adds live GPS tracking of field reps and automated territory
+              creation, so a job's full history lives in a single record. That
+              depth, plus affordable pricing and support that actually knows
+              roofing, is what generic CRMs leave out.
+            </p>
+          </div>
+
+          <div
+            class="z-20 mt-8 min-h-[72px] border-t border-solid border-primary-500/70 bg-[#f3faf3] lg:absolute lg:inset-x-0 lg:bottom-0 lg:mt-0"
+          >
+            <button
+              id="kioSummaryBtn"
+              class="kio-summary-button duration-250 flex min-h-[72px] w-full items-center justify-between gap-5 px-[5%] text-neutral-950 transition-colors hover:bg-[#edf8ed] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-10"
+              type="button"
+              aria-expanded="false"
+              aria-controls="kioSummaryPanel"
+            >
+              <span class="text-lg font-medium leading-6">Quick summary</span>
+              <ChevronRight
+                class="summary-chevron size-5 shrink-0"
+                aria-hidden="true"
+              />
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="hero-industry-visual relative min-h-[340px] overflow-hidden sm:min-h-[440px] lg:min-h-full"
+        >
+          <img
+            src={heroImage}
+            alt="Roofing contractors working on a residential roof"
+            width="830"
+            height="560"
+            decoding="async"
+            loading="eager"
+            fetchpriority="high"
+            class="h-full min-h-[340px] w-full object-cover object-center sm:min-h-[440px] lg:min-h-full"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Why Roofers / Sticky tabs ========== -->
+    <section id="platform-capabilities" class="bg-white py-20 sm:py-24 lg:py-28">
+      <div class="my-container">
+        <div class="mx-auto mb-10 max-w-[1120px] text-center lg:mb-12">
+          <h2 class="mb-5 text-center text-[34px] font-bold leading-[42px] text-neutral-950 sm:text-4xl sm:leading-[48px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px] aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            Why Knockio is the Best Roofing CRM Software?
+          </h2>
+          <p
+            class="mx-auto max-w-[960px] text-base font-normal leading-8 text-neutral-600 sm:text-lg sm:leading-9"
+          >
+            Knockio is a roofing contractor software built to manage customer
+            records, inspections, crews, production, work orders, inventory, and
+            payments. From the first knock to the completed roof, it all sits in
+            one connected platform. It is a complete roofing management software
+            that allows owners to run sales and production without the confusion
+            of two systems that never quite agree.
+          </p>
+        </div>
+
+        <div class="sr-only">
+          {
+            capabilityTabs.map((tab) => (
+              <div>
+                <h3>{tab.label}</h3>
+                {tab.cards.map((card) => (
+                  <article>
+                    <h3>{card.title}</h3>
+                    <p>
+                      {card.text}
+                      {card.link?.label}
+                      {card.textSuffix}
+                    </p>
+                  </article>
+                ))}
+              </div>
+            ))
+          }
+        </div>
+
+          <div
+            id="hpCapScrollTrack"
+            class="h-[calc(100vh+(var(--scroll-steps,5)-1)*45vh)] max-lg:h-auto motion-reduce:h-auto"
+            style="--scroll-steps: 5"
+          >
+            <div
+              class="contents lg:flex lg:sticky lg:top-0 lg:z-20 lg:h-[min(calc(100vh-2rem),880px)] lg:flex-col lg:bg-white/95 lg:pt-1 motion-reduce:h-auto motion-reduce:static"
+            >
+              <div
+                class="sticky top-0 z-30 shrink-0 bg-white/95 px-1 pb-5 pt-2 backdrop-blur-md max-lg:overflow-hidden"
+              >
+                <div
+                  id="hpTabs1Nav"
+                  class="relative mx-auto flex max-w-6xl scroll-smooth items-center gap-2 overflow-x-auto [scrollbar-width:none] max-xl:gap-3 lg:justify-between max-lg:flex-nowrap max-lg:justify-start max-lg:px-[12vw] [&::-webkit-scrollbar]:hidden"
+                  role="tablist"
+                  aria-label="Roofing platform capabilities"
+                >
+                  <span
+                    id="hpTabs1Indicator"
+                    class="pointer-events-none absolute left-0 top-0 z-0 rounded-full border-2 border-solid border-primary-500 bg-[#F9FFF8] transition-all duration-300 ease-out"
+                    aria-hidden="true"></span>
+                  {
+                    capabilityTabs.map((tab, index) => (
+                      <button
+                        type="button"
+                        data-hp-scroll-step={String(index)}
+                        class:list={[
+                          "hpTabs1_btn relative z-10 shrink-0 rounded-full border-2 px-5 py-2.5 text-lg font-bold transition-colors hover:border-primary-500/40 hover:text-primary-500 max-xl:px-4 max-xl:py-2 max-xl:text-base max-md:text-sm",
+                          index === 0
+                            ? "border-transparent text-primary-500"
+                            : "border-dashed border-neutral-300 text-neutral-700",
+                        ]}
+                      >
+                        {tab.label}
+                      </button>
+                    ))
+                  }
+                </div>
+              </div>
+
+              <div id="hpTabs1Panels" class="relative lg:flex-1">
+                {
+                  capabilityTabs.map((tab, tabIndex) => (
+                    <div
+                      id={`hpTabs${tabIndex + 1}_tab${tabIndex + 1}`}
+                      class:list={[
+                        "hpTabs1_content scroll-mt-24 lg:absolute lg:inset-0 lg:flex lg:h-full lg:flex-col lg:gap-3 lg:overflow-hidden transition-opacity duration-300 max-lg:static max-lg:mb-10 max-lg:h-auto max-lg:overflow-visible max-lg:opacity-100 max-lg:visible max-lg:pointer-events-auto motion-reduce:static motion-reduce:h-auto pt-5",
+                        tabIndex === 0
+                          ? "opacity-100 visible pointer-events-auto"
+                          : "opacity-0 invisible pointer-events-none",
+                      ]}
+                      role="tabpanel"
+                    >
+                      <div class="grid gap-6 lg:grid-cols-3 lg:gap-8">
+                        {tab.cards.map((card) => (
+                          <article
+                            class:list={[
+                              "hp-cap-card hp-card flex min-h-[520px] flex-col overflow-hidden rounded-[28px] border border-solid border-neutral-200 bg-neutral-50 p-7 sm:p-8",
+                            ]}
+                          >
+                            <div
+                              class:list={[
+                                "relative z-10 shrink-0",
+                              ]}
+                            >
+                              <h5 class="text-3xl max-2xl:text-2xl max-md:text-lg font-bold text-neutral-900 mb-3 max-md:mb-1">
+                                {card.title}
+                              </h5>
+                              <p class="mb-8 text-base leading-7 text-neutral-600 sm:text-[17px] sm:leading-8">
+                                {card.text}
+                                {card.link && (
+                                  <a
+                                    href={card.link.href}
+                                    class="text-primary-500 underline-offset-2 hover:underline"
+                                  >
+                                    {card.link.label}
+                                  </a>
+                                )}
+                                {card.textSuffix}
+                              </p>
+                            </div>
+                            <div class="mt-auto flex justify-center overflow-hidden rounded-3xl">
+                              <img
+                                src={card.image}
+                                alt={card.alt}
+                                width="430"
+                                height="320"
+                                decoding="async"
+                                loading="lazy"
+                                class="w-full max-w-[430px] object-contain object-bottom"
+                              />
+                            </div>
+                          </article>
+                        ))}
+                      </div>
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- ========== Organized (dark) ========== -->
+    <section
+      class="relative overflow-hidden bg-[#0F172A] py-24 sm:py-28 lg:py-[150px]"
+    >
+      <div
+        class="pointer-events-none absolute inset-0 opacity-[0.22] [background-image:radial-gradient(rgba(255,255,255,0.65)_0.8px,transparent_0.8px)] [background-size:18px_18px]"
+      >
+      </div>
+
+      <div class="my-container relative z-10">
+        <div class="mx-auto mb-14 max-w-[1120px] text-center lg:mb-20">
+          <h2
+            class="mb-6 text-center text-[34px] font-bold leading-[42px] text-white sm:text-4xl sm:leading-[48px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+          >
+            Keep Leads, Crews, and{" "}
+            <br class="hidden md:block" />
+            Job Updates Organized
+          </h2>
+          <p
+            class="mx-auto max-w-[980px] text-base leading-8 text-white sm:text-lg sm:leading-9"
+          >
+            Knockio makes job management simple by combining elite roofing
+            canvassing software and a powerful{" "}
+            <a
+              href="https://knockio.com/field-service-crm/"
+              class="text-primary-500 underline-offset-2 hover:underline"
+            >
+              field service CRM
+            </a>{" "}
+            in one place. Track reps, manage crews, upload job media, automate
+            follow-ups, and send e-contracts, all from the exact same platform.
+          </p>
+        </div>
+
+        <div
+          class="mx-auto grid max-w-[1380px] gap-x-12 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-16 lg:gap-y-14"
+        >
+          {
+            organizedItems.map((item) => (
+              <div class="border-b border-solid border-white/20 pb-10">
+                <div class="mb-7 flex h-16 w-16 items-center justify-center rounded-xl bg-primary-500 text-white">
+                  {item.icon === "crosshair" && (
+                    <Crosshair class="size-[30px]" aria-hidden="true" />
+                  )}
+                  {item.icon === "sparkles" && (
+                    <Sparkles class="size-[30px]" aria-hidden="true" />
+                  )}
+                  {item.icon === "ruler" && (
+                    <Ruler class="size-[30px]" aria-hidden="true" />
+                  )}
+                  {item.icon === "file" && (
+                    <FileSignature class="size-[30px]" aria-hidden="true" />
+                  )}
+                  {item.icon === "zap" && (
+                    <Zap class="size-[30px]" aria-hidden="true" />
+                  )}
+                  {item.icon === "message" && (
+                    <MessageSquare class="size-[30px]" aria-hidden="true" />
+                  )}
+                </div>
+                <h3 class="mb-4 text-[22px] font-bold leading-7 text-white sm:text-2xl sm:leading-8">
+                  {item.title}
+                </h3>
+                <p class="mb-6 text-base font-light text-white">{item.text}</p>
+                {item.href && (
+                  <a
+                    href={item.href}
+                    class="inline-flex items-center gap-3 text-base font-semibold text-primary-500 transition-all duration-300 hover:gap-4"
+                  >
+                    Learn More
+                    <ChevronRight class="size-3.5" aria-hidden="true" />
+                  </a>
+                )}
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="bg-white py-16 sm:py-20 lg:py-24">
+      <div class="my-container mx-auto">
+        <div class="grid gap-10 lg:grid-cols-2 lg:gap-20">
+          <div>
+            <p
+              class="mb-4 text-sm leading-7 font-medium text-primary-500 md:text-2xl"
+            >
+              Frequently Asked Questions
+            </p>
+            <h2
+              class="mb-8 w-full max-w-3xl text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+            >
+              Everything Roofers Ask Before Switching to Knockio
+            </h2>
+            <p
+              class="mb-6 w-full max-w-3xl text-sm leading-6 font-normal text-neutral-800 sm:text-base sm:leading-7 md:mb-8 md:text-lg md:leading-8"
+            >
+              Switching software is a real decision when your whole pipeline,
+              crew schedule, and customer history lives inside it. Here are the
+              questions roofing contractors ask most before making the move.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            {
+              faqs.map((faq) => (
+                <div class="faq-item overflow-hidden rounded-2xl border border-solid border-neutral-200 transition-all duration-300">
+                  <button
+                    class="faq-button group flex w-full items-center justify-between p-4 text-left sm:p-6"
+                    type="button"
+                  >
+                    <span class="text-base font-medium text-neutral-950 transition-colors group-hover:text-primary-500 sm:text-lg lg:text-xl">
+                      {faq.q}
+                    </span>
+                    <div class="faq-icon ml-4 flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary-500">
+                      <svg
+                        class="icon-minus hidden h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M20 12H4"
+                        />
+                      </svg>
+                      <svg
+                        class="icon-plus h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 4v16m8-8H4"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                  <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="p-4 pt-0 text-sm leading-relaxed text-neutral-600 sm:p-6 sm:pt-0 sm:text-base">
+                      {faq.a}
+                    </div>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Trusted ========== -->
+    <section
+      class="relative overflow-hidden bg-[#0F172A] py-24 sm:py-28 lg:py-[150px]"
+    >
+      <div
+        class="pointer-events-none absolute inset-0 opacity-[0.22] [background-image:radial-gradient(rgba(255,255,255,0.65)_0.8px,transparent_0.8px)] [background-size:18px_18px]"
+      >
+      </div>
+      <div
+        class="pointer-events-none absolute top-16 left-1/2 h-[420px] w-[860px] -translate-x-1/2 rounded-full bg-primary-500/10 blur-3xl"
+      >
+      </div>
+
+      <div class="my-container relative z-10">
+        <div class="mx-auto mb-16 max-w-[1040px] text-center lg:mb-20">
+          <h2
+            class="mb-6 text-center text-[31px] font-bold leading-[39px] text-white sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+          >
+            Trusted by 100&rsquo;s of customers
+          </h2>
+          <p
+            class="mx-auto max-w-[800px] text-base leading-7 text-white/80 sm:text-lg sm:leading-8"
+          >
+            Join hundreds of growing teams using Knockio to manage leads, sales,
+            field teams, and customer relationships.
+          </p>
+        </div>
+
+        <div
+          class="mx-auto grid max-w-[1120px] grid-cols-1 justify-items-center gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10"
+        >
+          {
+            trustBadges.map((badge) => (
+              <a
+                href={badge.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={badge.label}
+                class="group block rounded-3xl focus:ring-2 focus:ring-primary-500 focus:ring-offset-4 focus:ring-offset-[#0F172A] focus:outline-none"
+              >
+                <img
+                  src={badge.src}
+                  alt={badge.alt}
+                  width="203"
+                  height="280"
+                  decoding="async"
+                  loading="lazy"
+                  class="w-full max-w-[200px] object-contain transition duration-300 group-hover:-translate-y-2 group-hover:drop-shadow-[0_24px_34px_rgba(255,255,255,0.12)]"
+                />
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Customer Reviews ========== -->
+    <section class="overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
+      <div class="my-container mx-auto mb-10 text-center lg:mb-16">
+        <p class="mb-4 text-sm leading-7 font-medium text-primary-500 md:text-2xl">
+          Customer Reviews
+        </p>
+        <p
+          class="mb-8 text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+        >
+          What Field Service and Sales<br />
+          Teams Say About Knockio
+        </p>
+        <img
+          src={asset("google-5-star.webp")}
+          alt="google review badge"
+          width="183"
+          height="60"
+          decoding="async"
+          loading="lazy"
+          class="mx-auto h-auto w-[150px] sm:w-[183px]"
+        />
+      </div>
+
+      <div class="mt-7 space-y-8">
+        <div class="testimonial-track-container flex overflow-hidden">
+          <div
+            class="testimonial-track hover:pause flex animate-marquee-left gap-4 sm:gap-6"
+          >
+            {
+              [0, 1].map((dup) => (
+                <div
+                  class="card-set flex gap-4 sm:gap-6"
+                  aria-hidden={dup === 1 ? "true" : undefined}
+                >
+                  {reviewsRow1.map((review) => (
+                    <div class="relative w-[300px] flex-shrink-0 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 group sm:w-[380px] sm:p-6 lg:w-[450px] lg:p-8">
+                      <p class="relative z-10 mb-6 min-h-[168px] text-sm italic leading-relaxed text-neutral-700 sm:mb-8 sm:text-base lg:text-lg">
+                        {review.quote}
+                      </p>
+                      <div class="relative z-10 flex items-center gap-4">
+                        <img
+                          src={review.avatar}
+                          alt={review.name}
+                          width="48"
+                          height="48"
+                          decoding="async"
+                          loading="lazy"
+                          class="h-12 w-12 rounded-full object-cover grayscale transition-all group-hover:grayscale-0"
+                        />
+                        <div>
+                          <p class="mb-1 text-base font-bold text-neutral-950">
+                            {review.name}
+                          </p>
+                          <p
+                            class="text-sm text-neutral-500"
+                            aria-label="5 out of 5 stars"
+                          >
+                            ⭐⭐⭐⭐⭐
+                          </p>
+                        </div>
+                      </div>
+                      <Quote
+                        class="pointer-events-none absolute right-8 bottom-6 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <div class="testimonial-track-container flex overflow-hidden">
+          <div
+            class="testimonial-track hover:pause flex animate-marquee-right gap-4 sm:gap-6"
+          >
+            {
+              [0, 1].map((dup) => (
+                <div
+                  class="card-set flex gap-4 sm:gap-6"
+                  aria-hidden={dup === 1 ? "true" : undefined}
+                >
+                  {reviewsRow2.map((review) => (
+                    <div class="relative w-[300px] flex-shrink-0 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 group sm:w-[380px] sm:p-6 lg:w-[450px] lg:p-8">
+                      <p class="relative z-10 mb-6 min-h-[168px] text-sm italic leading-relaxed text-neutral-700 sm:mb-8 sm:text-base lg:text-lg">
+                        {review.quote}
+                      </p>
+                      <div class="relative z-10 flex items-center gap-4">
+                        <img
+                          src={review.avatar}
+                          alt={review.name}
+                          width="48"
+                          height="48"
+                          decoding="async"
+                          loading="lazy"
+                          class="h-12 w-12 rounded-full object-cover grayscale transition-all group-hover:grayscale-0"
+                        />
+                        <div>
+                          <p class="mb-1 text-base font-bold text-neutral-950">
+                            {review.name}
+                          </p>
+                          <p
+                            class="text-sm text-neutral-500"
+                            aria-label="5 out of 5 stars"
+                          >
+                            ⭐⭐⭐⭐⭐
+                          </p>
+                        </div>
+                      </div>
+                      <Quote
+                        class="pointer-events-none absolute right-8 bottom-6 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <script src="../../scripts/industry-page.js"></script>
+</KnockioHomeLayout>

@@ -1,0 +1,137 @@
+/* ═══════════════════════════════════════════════
+   INVENTORY MANAGEMENT SOFTWARE — Page-specific styles
+   Tailwind covers layout/typography. This file owns
+   interactions (summary panel, proposal tabs, float)
+   that cannot be expressed as utilities alone.
+   ═══════════════════════════════════════════════ */
+
+/* ---------- Hero float (LCP visual, desktop) ---------- */
+@keyframes kio-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.animate-kio-float {
+  animation: kio-float 4.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-kio-float {
+    animation: none;
+  }
+}
+
+/*
+ * Hero product shot is a transparent WebP. The WordPress page fills
+ * the right column with deep forest green behind it.
+ */
+.hero-estimate-visual {
+  padding-top: 2.5rem;
+  background:
+    radial-gradient(circle at 52% 58%, rgba(79, 170, 58, 0.24), transparent 38%),
+    radial-gradient(circle at 82% 18%, rgba(255, 255, 255, 0.07), transparent 30%),
+    #204718;
+}
+
+@media (min-width: 1024px) {
+  .hero-estimate-visual {
+    margin-top: -72px;
+    padding-top: calc(72px + 5rem);
+  }
+}
+
+.hero-estimate-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.08), rgba(15, 23, 42, 0));
+  pointer-events: none;
+}
+
+/* ---------- Quick summary panel ---------- */
+.kio-summary-button .summary-chevron {
+  transition: transform 250ms ease;
+}
+
+.kio-summary-button.is-open .summary-chevron {
+  transform: rotate(90deg);
+}
+
+@media (min-width: 1024px) {
+  .kio-summary-panel {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(14px);
+    transition:
+      opacity 260ms ease,
+      transform 260ms ease,
+      visibility 260ms ease;
+  }
+
+  .kio-summary-panel.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Proposal accordion + visual swap ---------- */
+.proposal-panel {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition:
+    max-height 360ms ease,
+    opacity 260ms ease;
+}
+
+.proposal-tab.is-active .proposal-panel {
+  max-height: 360px;
+  opacity: 1;
+}
+
+.proposal-tab.is-active .proposal-chevron {
+  transform: rotate(180deg);
+}
+
+.proposal-chevron {
+  transition: transform 300ms ease;
+}
+
+.proposal-visual-card {
+  transition:
+    opacity 260ms ease,
+    transform 260ms ease;
+}
+
+.proposal-visual-card.is-changing {
+  opacity: 0.55;
+  transform: translateY(10px) scale(0.985);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .proposal-panel,
+  .proposal-visual-card,
+  .kio-summary-panel,
+  .kio-summary-button .summary-chevron,
+  .proposal-chevron {
+    transition: none;
+  }
+
+  .proposal-visual-card.is-changing {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Tailwind duration-250 companion (used on summary controls) */
+.duration-250 {
+  transition-duration: 250ms;
+}

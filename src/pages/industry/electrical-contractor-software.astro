@@ -1,0 +1,860 @@
+---
+import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
+import "../../styles/industry-page.css";
+import {
+  ChevronRight,
+  Crosshair,
+  FileSignature,
+  MessageSquare,
+  Quote,
+  Ruler,
+  Sparkles,
+  Zap,
+} from "lucide-astro";
+
+const title = "Electrical Contractor Software for Electricians | Knockio";
+const description = "Electrical contractor software to schedule service calls, send estimates, dispatch electricians, collect payment on site, and manage jobs.";
+
+const asset = (name: string) => `/assets/cfw/${name}`;
+
+const capabilityTabs = [
+	{
+		label: "Manage Customers",
+		cards: [
+			{
+				title: "One Record for Every Customer and Property",
+				text: "Manage Customers and Jobs during every visit, log outcomes, add notes or voice notes, and move prospects into a clear CRM pipeline.",
+				image: asset("inner-electrician-software-and-crm-one-record-for-every-customer-and-property.webp"),
+				alt: "Door-to-door canvassing in Knockio",
+			},
+			{
+				title: "Fully Customizable Job Pipeline",
+				text: "Knockio moves each job through stages you define, such as new call, scheduled, dispatched, diagnosed, quoted, approved, in progress, and inspection.",
+				image: asset("inner-electrician-software-and-crm-customizable-job-pipeline.webp"),
+				alt: "Lead management in Knockio",
+			},
+			{
+				title: "Communication History Per Customer",
+				text: "Knockio saves every call, text, and email on the customer record, so anyone who picks up the job sees the full thread instead of asking around for it.",
+				image: asset("inner-electrician-software-and-crm-communication-history-per-customer.webp"),
+				alt: "Kanban-style sales pipeline in Knockio",
+			},
+		],
+	},
+	{
+		label: "Schedule and Dispatch",
+		cards: [
+			{
+				title: "Scheduling and Dispatch in One Calendar",
+				text: "Knockio assigns service calls and install jobs to the right electrician or crew and keeps the office and the field on the same calendar, so the schedule does not split into two versions by mid-morning.",
+				image: asset("inner-electrical-contractor-software-scheduling-and-dispatch-in-one-calendar.webp"),
+				alt: "Route planning in Knockio",
+			},
+			{
+				title: "Live GPS Tracking With Proximity Intelligence",
+				text: "Knockio shows where every electrician is in real time and uses proximity intelligence to confirm how close they were to the address when they marked a job worked, so dispatch routes the closest tech and the activity log holds up.",
+				image: asset("inner-electrician-software-and-crm-live-gps-tracking-with-proximity-intelligence.webp"),
+				alt: "Territory management in Knockio",
+			},
+			{
+				title: "Automated Territory Creation by Zip Code and City",
+				text: "Knockio builds service territories automatically from zip codes and cities, so if you run jobs across a wide area you can balance crews by region in minutes instead of mapping boundaries by hand.",
+				image: asset("inner-electrician-software-and-crm-automated-territory-creation-by-zip-code-and-city.webp"),
+				alt: "Field activity log in Knockio",
+			},
+		],
+	},
+	{
+		label: "Build Work Orders",
+		cards: [
+			{
+				title: "Detailed Estimates With Templates",
+				text: "Quote and Build Work Orders from lead to service with notes, status updates, documents, customer details, and clear next steps.",
+				image: asset("inner-electrician-software-and-crm-detailed-estimates-with-templates.webp"),
+				alt: "Job management in Knockio",
+			},
+			{
+				title: "Work Orders With Tasks, Budget, and Materials",
+				text: "Knockio carries a work order with tasks, a budget, and a material takeoff for every install, so wire, breakers, fixtures, and panels get tracked against real numbers instead of a rough guess.",
+				image: asset("inner-electrician-software-and-crm-work-orders-with-tasks-budget-and-materials.webp"),
+				alt: "Crew dispatching in Knockio",
+			},
+			{
+				title: "Assign Work to Crews or Subcontractors",
+				text: "Knockio routes a work order to your own crew or a subcontractor with tasks, notes, photos, and the schedule attached, so whoever does the work has the full scope.",
+				image: asset("inner-electrical-contractor-software-assign-work-to-crews-or-subcontractors.webp"),
+				alt: "Work orders in Knockio",
+			},
+		],
+	},
+	{
+		label: "Track Parts",
+		cards: [
+			{
+				title: "Inventory Management for Electrical Parts",
+				text: "Knockio tracks products, variants, SKUs, cost, and markup for wire, breakers, fixtures, and devices, with low-stock alerts that flag a shortage before an electrician shows up to a job without the part.",
+				image: asset("inner-electrical-contractor-software-inventory-management-for-electrical-parts.webp"),
+				alt: "Smart estimates in Knockio",
+			},
+			{
+				title: "Create Vendor Bills and Purchase Orders",
+				text: "Knockio raises a purchase order to your supply house when stock runs low and records the vendor bill against that purchase order or a work order, so suppliers spend ties straight to the job and your margins stay accurate.",
+				image: asset("inner-electrician-software-and-crm-vendor-bills-and-purchase-orders.webp"),
+				alt: "Proposals in Knockio",
+			},
+			{
+				title: "Photo Annotation for Panels and Problems",
+				text: "Knockio lets electricians snap a photo of a panel, a junction box, or a code issue and mark it up with notes and arrows on the image, so the office can quote the fix and the customer sees exactly what was found.",
+				image: asset("inner-electrician-software-and-crm-photo-annotation-for-panels-and-problems.webp"),
+				alt: "Digital contracts in Knockio",
+			},
+		],
+	},
+	{
+		label: "Approved and Get Paid",
+		cards: [
+			{
+				title: "Digital Contracts With E-Signatures",
+				text: "Knockio sends estimates and agreements for digital signatures with a documented audit trail, IP address and timestamp logged on every view and signature. Change orders run the same way.",
+				image: asset("inner-electrician-software-and-crm-digital-contracts-with-e-signatures.webp"),
+				alt: "Video and file storage in Knockio",
+			},
+			{
+				title: "Milestone-Based Payment Collection",
+				text: "Knockio collects a deposit up front, progress draws as each phase of a larger job completes, and the final balance at inspection, all tied to the job, so you get paid as the work moves instead of fronting parts and labor for weeks.",
+				image: asset("inner-electrician-software-and-crm-milestone-based-payment-collection.webp"),
+				alt: "Photo uploads in Knockio",
+			},
+			{
+				title: "Flexible Payment Methods",
+				text: "Knockio processes tap to pay, text to pay, card, and ACH through its own payment platform, so the electrician collects on site or the customer pays from their phone, with the money tied to the right job.",
+				image: asset("inner-electrician-software-and-crm-flexible-payment-methods.webp"),
+				alt: "Service reports in Knockio",
+			},
+		],
+	},
+];
+
+const organizedItems = [
+	{
+		title: "Live Field Tracking",
+		text: "Knockio monitors electricians in real time with GPS tracking and proximity intelligence, so dispatch knows who is on which call and can route the closest tech to the next one.",
+		href: "https://knockio.com/features/gps-tracking-software/",
+		icon: "crosshair" as const,
+	},
+	{
+		title: "Native Automation Builder",
+		text: "Knockio runs automations you build without code: a deposit request when an estimate is approved, an on-the-way text when an electrician heads out, or an inspection reminder when a job is marked ready. You set the trigger and Knockio handles the rest.",
+		href: "https://knockio.com/features/business-automation-software/",
+		icon: "sparkles" as const,
+	},
+	{
+		title: "Job History and Media",
+		text: "Knockio keeps every job's annotated photos, panel notes, and service records in one view, so the office and the field read from the same record.",
+		href: "#",
+		icon: "ruler" as const,
+	},
+	{
+		title: "E-Contracts",
+		text: "Replace slow paperwork with digital contracts that help customers review, approve, and sign agreements quickly from any device.",
+		href: "https://knockio.com/e-contracts/",
+		icon: "file" as const,
+	},
+	{
+		title: "CRM Integrations",
+		text: "Sync Knockio with Salesforce, HubSpot, Google Calendar, and GHL, and reach thousands of apps through Zapier, FlowChef, and webhooks, keeping job and billing data aligned.",
+		href: "https://knockio.com/knockio-integrations/",
+		icon: "zap" as const,
+	},
+	{
+		title: "Team Communication",
+		text: "Knockio keeps estimators, electricians, and the office tied to the same job through assignees and notes, so a permit update or scope change lands on the record immediately.",
+		href: "https://knockio.com/features/business-texting-and-calling-software/",
+		icon: "message" as const,
+	},
+];
+
+const trustBadges = [
+  {
+    href: "https://www.capterra.com/p/10018264/Knockio/",
+    src: asset("badge-new-capterra.webp"),
+    alt: "Knockio Capterra rating badge",
+    label: "View Knockio reviews on Capterra",
+  },
+  {
+    href: "https://www.softwareadvice.com/field-sales/knockio-profile/",
+    src: asset("badge-new-software-advice.webp"),
+    alt: "Knockio Software Advice rating badge",
+    label: "View Knockio reviews on Software Advice",
+  },
+  {
+    href: "https://www.getapp.com/all-software/a/knockio/",
+    src: asset("badge-new-get-app.webp"),
+    alt: "Knockio GetApp rating badge",
+    label: "View Knockio reviews on GetApp",
+  },
+  {
+    href: "https://www.g2.com/products/knockio-by-knockio/reviews",
+    src: asset("badge-new-g2.webp"),
+    alt: "Knockio G2 rating badge",
+    label: "View Knockio reviews on G2",
+  },
+];
+
+const faqs = [
+	{
+		q: "What should I look for in electrician software?",
+		a: "Look for scheduling and dispatch, full job history per address, detailed estimating, work orders with parts, e-contracts, and flexible billing, all tied to one customer record. The platform should carry both service calls and install projects without forcing you into two tools. Knockio was built to run both from the same system.",
+	},
+	{
+		q: "Which software is best for a small electrical contractor?",
+		a: "Knockio helps field service teams manage the full workflow. Teams can Manage Customers and Jobs, store customer details, create estimates, schedule jobs, assign crews, track job progress, upload photos, send invoices, and follow up with customers. This helps reduce manual work and keeps everyone updated.",
+	},
+	{
+		q: "Can Knockio bill a large job in stages?",
+		a: "Yes. Knockio supports milestone-based payment collection, so you can take a deposit, bill progress draws as each phase completes, and collect the final balance at inspection, all tied to the job.",
+	},
+	{
+		q: "Can Knockio track electrical parts and materials?",
+		a: "Yes. Work orders carry a material takeoff, and inventory management tracks wire, breakers, fixtures, and devices with low-stock alerts, so each job is cost against what it actually used.",
+	},
+	{
+		q: "Can Knockio track my electricians in the field?",
+		a: "Yes. Knockio includes live GPS tracking with proximity intelligence, so you can confirm how close an electrician was to a property when they marked a job.",
+	},
+];
+
+const reviewsRow1 = [
+  {
+    name: "Lacey Jackson",
+    avatar: asset("avatar-lacey-jackson.webp"),
+    quote:
+      "This app is the best thing that has happened to our company! Asad is absolutely amazing! He is so responsive, it doesn't matter what time of day he is on it! I highly recommend this company add this app!",
+  },
+  {
+    name: "Ben Loveland",
+    avatar: asset("avatar-ben-loveland.webp"),
+    quote:
+      "Knockio is a great product! We use it for our roofing sales canvassing. Their support team is responsive and fixes issues immediately. Highly recommend!",
+  },
+  {
+    name: "Bar Galanti",
+    avatar: asset("avatar-bar-galanti.webp"),
+    quote:
+      "The support team is awesome. The live tracking feature is very useful. The pricing is fair as well!",
+  },
+];
+
+const reviewsRow2 = [
+  {
+    name: "Georgia Hancocks",
+    avatar: asset("avatar-georgia-hancocks.webp"),
+    quote:
+      "Knockio is the best! My team and I absolutely love using it - it is so user friendly and simple. Support is brilliant too, nothing is ever too much trouble. The best on the market. Thanks Knockio!",
+  },
+  {
+    name: "Sarah Bennett",
+    avatar: asset("avatar-sarah-bennett.webp"),
+    quote:
+      "We love Knockio so far! It is solving a lot of the issues of the other canvassing apps. The team have worked with us providing excellent fast support. Highly recommend if you're seeing people face to face.",
+  },
+  {
+    name: "Ayana Hall",
+    avatar: asset("avatar-ayana-hall.webp"),
+    quote:
+      "Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.",
+  },
+];
+
+const heroImage = asset("inner-industry-electrical-contractor-software.webp");
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://knockio.com/industry/electrical-contractor-software/#webpage",
+      url: "https://knockio.com/industry/electrical-contractor-software/",
+      name: title,
+      description,
+      isPartOf: { "@id": "https://knockio.com/#website" },
+      audience: {
+        "@type": "Audience",
+        audienceType: "Electrical Contractors",
+      },
+      mainEntity: {
+        "@id": "https://knockio.com/industry/electrical-contractor-software/#faq",
+      },
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://knockio.com/industry/electrical-contractor-software/#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://knockio.com/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Electrical Contractor Software",
+          item: "https://knockio.com/industry/electrical-contractor-software/",
+        },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://knockio.com/industry/electrical-contractor-software/#faq",
+      mainEntity: faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
+      })),
+    },
+  ],
+};
+---
+
+<KnockioHomeLayout
+  title={title}
+  description={description}
+  ogImage={heroImage}
+  jsonLd={jsonLd}
+  whiteBg={true}
+>
+  <main id="industry-page">
+    <!-- ========== Hero ========== -->
+    <section
+      class="overflow-hidden border-b border-solid border-[#7fc271] bg-white"
+    >
+      <div
+        class="grid min-h-0 lg:min-h-[610px] lg:grid-cols-[55%_45%] xl:min-h-[720px] 2xl:min-h-[820px]"
+      >
+        <div
+          class="relative flex flex-col justify-center px-[5%] pt-[calc(72px+3rem)] pb-12 sm:pt-[calc(72px+4rem)] sm:pb-16 lg:min-h-[600px] lg:px-0 lg:pb-[72px] lg:pt-[72px] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-[42px] xl:pr-[70px]"
+        >
+          <div class="max-w-[810px]">
+            <h1
+              class="mb-7 text-[36px] font-bold leading-[44px] text-neutral-950 sm:text-[44px] sm:leading-[54px] xl:text-[58px] xl:leading-[66px] 2xl:text-[64px] 2xl:leading-[74px]"
+            >
+              Electrical Contractor Software
+            </h1>
+            <p
+              class="mb-10 max-w-[760px] text-base font-medium leading-8 text-neutral-600 sm:text-lg sm:leading-9"
+            >
+              Electrical work swings between quick service calls and big install jobs. A panel upgrade one day, a troubleshooting call the next, a full rewire that runs a crew for a week. Knockio is electrical contractor software and CRM built for those invlove in eletrical business who need one place to hold customer records, dispatch electricians, quote jobs, track parts, and collect payment by milestone. No more running a paper schedule, a separate quoting tool, and a billing app that never lines up.
+            </p>
+            <a
+              href="#cal-sec"
+              class="inline-flex w-full items-center justify-center rounded-lg bg-primary-500 px-6 py-3.5 text-sm font-medium text-white transition-colors duration-300 hover:bg-primary-600 sm:w-auto sm:px-10 sm:py-4 sm:text-base lg:px-12"
+            >
+              Schedule a Demo
+            </a>
+          </div>
+
+          <div
+            id="kioSummaryPanel"
+            class="kio-summary-panel z-[18] mt-6 rounded-xl border border-solid border-primary-500/35 bg-white/95 px-[5%] py-5 text-base leading-7 text-neutral-600 lg:absolute lg:inset-x-0 lg:bottom-[72px] lg:mt-0 lg:px-0 lg:py-[22px] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-10 lg:shadow-[0_-18px_45px_rgba(15,23,42,0.08)]"
+          >
+            <p
+              class="mb-4 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
+            >
+              What should electrical contractors look for in a CRM and job platform?
+            </p>
+            <p
+              class="max-w-[760px] text-[15px] leading-7 text-neutral-600 sm:text-base sm:leading-7"
+            >
+              An electrical contractor should look for a CRM that carries the job from the booked call to the passed inspection. That means full customer and property records, scheduling and dispatch, electrician tracking, detailed estimates, work orders with parts, e-contracts, and milestone-based payment collection. Knockio handles all of it in one platform. It adds live GPS tracking with proximity intelligence and a full job history per address, so the next visit starts with everything the last electrician already logged. That depth, plus affordable pricing and support that picks up the phone, is what a generic CRM built for another trade leaves out.
+            </p>
+          </div>
+
+          <div
+            class="z-20 mt-8 min-h-[72px] border-t border-solid border-primary-500/70 bg-[#f3faf3] lg:absolute lg:inset-x-0 lg:bottom-0 lg:mt-0"
+          >
+            <button
+              id="kioSummaryBtn"
+              class="kio-summary-button duration-250 flex min-h-[72px] w-full items-center justify-between gap-5 px-[5%] text-neutral-950 transition-colors hover:bg-[#edf8ed] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-10"
+              type="button"
+              aria-expanded="false"
+              aria-controls="kioSummaryPanel"
+            >
+              <span class="text-lg font-medium leading-6">Quick summary</span>
+              <ChevronRight
+                class="summary-chevron size-5 shrink-0"
+                aria-hidden="true"
+              />
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="hero-industry-visual relative min-h-[340px] overflow-hidden sm:min-h-[440px] lg:min-h-full"
+        >
+          <img
+            src={heroImage}
+            alt="What should electrical contractors look for in a crm and job platform"
+            width="830"
+            height="560"
+            decoding="async"
+            loading="eager"
+            fetchpriority="high"
+            class="h-full min-h-[340px] w-full object-cover object-center sm:min-h-[440px] lg:min-h-full"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Why Electrical / Sticky tabs ========== -->
+    <section id="platform-capabilities" class="bg-white py-20 sm:py-24 lg:py-28">
+      <div class="my-container">
+        <div class="mx-auto mb-10 max-w-[1120px] text-center lg:mb-12">
+          <h2
+            class="mb-5 text-center text-[34px] font-bold leading-[42px] text-neutral-950 sm:text-4xl sm:leading-[48px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+          >
+            Why Electricians Choose Knockio
+          </h2>
+          <p
+            class="mx-auto max-w-[960px] text-base font-normal leading-8 text-neutral-600 sm:text-lg sm:leading-9"
+          >
+            Knockio helps electrical contractors manage customers, job history, scheduling, dispatch, estimates, parts, invoices, and payments. From a same-day service call to a multi-day install, it all sits in one connected platform. Owners run the board and the field without losing track of who is where, what was done, and what still needs billing.
+          </p>
+        </div>
+
+        <!-- SEO outline: group H3s + cards in legacy document order (before visual tabs) -->
+        <div class="sr-only">
+          {
+            capabilityTabs.map((tab) => (
+              <div>
+                <h3>{tab.label}</h3>
+                {tab.cards.map((card) => (
+                  <article>
+                    <h3>{card.title}</h3>
+                    <p>{card.text}</p>
+                  </article>
+                ))}
+              </div>
+            ))
+          }
+        </div>
+
+          <div
+            id="hpCapScrollTrack"
+            class="h-[calc(100vh+(var(--scroll-steps,5)-1)*45vh)] max-lg:h-auto motion-reduce:h-auto"
+            style="--scroll-steps: 5"
+          >
+            <div
+              class="contents lg:flex lg:sticky lg:top-0 lg:z-20 lg:h-[min(calc(100vh-2rem),880px)] lg:flex-col lg:bg-white/95 lg:pt-1 motion-reduce:h-auto motion-reduce:static"
+            >
+              <div
+                class="sticky top-0 z-30 shrink-0 bg-white/95 px-1 pb-5 pt-2 backdrop-blur-md max-lg:overflow-hidden"
+              >
+                <div
+                  id="hpTabs1Nav"
+                  class="relative mx-auto flex max-w-6xl scroll-smooth items-center gap-2 overflow-x-auto [scrollbar-width:none] max-xl:gap-3 lg:justify-between max-lg:flex-nowrap max-lg:justify-start max-lg:px-[12vw] [&::-webkit-scrollbar]:hidden"
+                  role="tablist"
+                  aria-label="Electrical platform capabilities"
+                >
+                  <span
+                    id="hpTabs1Indicator"
+                    class="pointer-events-none absolute left-0 top-0 z-0 rounded-full border-2 border-solid border-primary-500 bg-[#F9FFF8] transition-all duration-300 ease-out"
+                    aria-hidden="true"></span>
+                  {
+                    capabilityTabs.map((tab, index) => (
+                      <button
+                        type="button"
+                        data-hp-scroll-step={String(index)}
+                        class:list={[
+                          "hpTabs1_btn relative z-10 shrink-0 rounded-full border-2 px-5 py-2.5 text-lg font-bold transition-colors hover:border-primary-500/40 hover:text-primary-500 max-xl:px-4 max-xl:py-2 max-xl:text-base max-md:text-sm",
+                          index === 0
+                            ? "border-transparent text-primary-500"
+                            : "border-dashed border-neutral-300 text-neutral-700",
+                        ]}
+                      >
+                        {tab.label}
+                      </button>
+                    ))
+                  }
+                </div>
+              </div>
+
+              <div id="hpTabs1Panels" class="relative lg:flex-1">
+                {
+                  capabilityTabs.map((tab, tabIndex) => (
+                    <div
+                      id={`hpTabs${tabIndex + 1}_tab${tabIndex + 1}`}
+                      class:list={[
+                        "hpTabs1_content scroll-mt-24 lg:absolute lg:inset-0 lg:flex lg:h-full lg:flex-col lg:gap-3 lg:overflow-hidden transition-opacity duration-300 max-lg:static max-lg:mb-10 max-lg:h-auto max-lg:overflow-visible max-lg:opacity-100 max-lg:visible max-lg:pointer-events-auto motion-reduce:static motion-reduce:h-auto pt-5",
+                        tabIndex === 0
+                          ? "opacity-100 visible pointer-events-auto"
+                          : "opacity-0 invisible pointer-events-none",
+                      ]}
+                      role="tabpanel"
+                    >
+                      <div class="grid gap-6 lg:grid-cols-3 lg:gap-8">
+                        {tab.cards.map((card) => (
+                          <article
+                            class:list={[
+                              "hp-cap-card hp-card flex min-h-[520px] flex-col overflow-hidden rounded-[28px] border border-solid border-neutral-200 bg-neutral-50 p-7 sm:p-8",
+                            ]}
+                          >
+                            <div
+                              class:list={[
+                                "relative z-10 shrink-0",
+                              ]}
+                            >
+                              <h5 class="text-3xl max-2xl:text-2xl max-md:text-lg font-bold text-neutral-900 mb-3 max-md:mb-1">
+                                {card.title}
+                              </h5>
+                              <p class="mb-8 text-base leading-7 text-neutral-600 sm:text-[17px] sm:leading-8">
+                                {card.text}
+                              </p>
+                            </div>
+                            <div class="mt-auto flex justify-center overflow-hidden rounded-3xl">
+                              <img
+                                src={card.image}
+                                alt={card.alt}
+                                width="430"
+                                height="320"
+                                decoding="async"
+                                loading="lazy"
+                                class="w-full max-w-[430px] object-contain object-bottom"
+                              />
+                            </div>
+                          </article>
+                        ))}
+                      </div>
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- ========== Organized (dark) ========== -->
+    <section
+      class="relative overflow-hidden bg-[#0F172A] py-24 sm:py-28 lg:py-[150px]"
+    >
+      <div
+        class="pointer-events-none absolute inset-0 opacity-[0.22] [background-image:radial-gradient(rgba(255,255,255,0.65)_0.8px,transparent_0.8px)] [background-size:18px_18px]"
+      >
+      </div>
+
+      <div class="my-container relative z-10">
+        <div class="mx-auto mb-14 max-w-[1120px] text-center lg:mb-20">
+          <h2
+            class="mb-6 text-center text-[31px] font-bold leading-[39px] text-white sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+          >
+            Run Service and Installs From One System
+          </h2>
+          <p
+            class="mx-auto max-w-[800px] text-base leading-7 text-white/80 sm:text-lg sm:leading-8"
+          >
+            Knockio pulls both sides of an electrical business into one platform, so quick service calls and multi-day installs run from the same place. Track electricians, manage the schedule, quote jobs, capture site photos, and send digital contracts, all in one system.
+          </p>
+        </div>
+
+        <div class="mx-auto grid max-w-[1380px] gap-x-12 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-16 lg:gap-y-14">
+          {
+            organizedItems.map((item) => (
+              <div class="border-b border-solid border-white/20 pb-10">
+                <div class="mb-7 flex h-16 w-16 items-center justify-center rounded-xl bg-primary-500 text-white">
+                  {item.icon === "crosshair" && (
+                    <Crosshair class="size-[30px]" aria-hidden="true" />
+                  )}
+                  {item.icon === "sparkles" && (
+                    <Sparkles class="size-[30px]" aria-hidden="true" />
+                  )}
+                  {item.icon === "ruler" && (
+                    <Ruler class="size-[30px]" aria-hidden="true" />
+                  )}
+                  {item.icon === "file" && (
+                    <FileSignature class="size-[30px]" aria-hidden="true" />
+                  )}
+                  {item.icon === "zap" && (
+                    <Zap class="size-[30px]" aria-hidden="true" />
+                  )}
+                  {item.icon === "message" && (
+                    <MessageSquare class="size-[30px]" aria-hidden="true" />
+                  )}
+                </div>
+                <h3 class="mb-4 text-[22px] font-bold leading-7 text-white sm:text-2xl sm:leading-8">
+                  {item.title}
+                </h3>
+                <p class="mb-6 text-base font-light text-white">{item.text}</p>
+                <a
+                  href={item.href}
+                  class="inline-flex items-center gap-3 text-base font-semibold text-primary-500 transition-all duration-300 hover:gap-4"
+                >
+                  Learn More
+                  <ChevronRight class="size-3.5" aria-hidden="true" />
+                </a>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="bg-white py-16 sm:py-20 lg:py-24">
+      <div class="my-container mx-auto">
+        <div class="grid gap-10 lg:grid-cols-2 lg:gap-20">
+          <div>
+            <p
+              class="mb-4 text-sm leading-7 font-medium text-primary-500 md:text-2xl"
+            >
+              Frequently Asked Questions
+            </p>
+            <h2 class="text-3xl leading-tight sm:text-4xl lg:text-[42px] xl:text-5xl 2xl:text-[56px] lg:leading-none font-bold text-neutral-950 mb-8 w-full max-w-3xl">
+              Everything Electricians Ask Before Switching to Knockio
+            </h2>
+            <p
+              class="mb-6 w-full max-w-3xl text-sm leading-6 font-normal text-neutral-800 sm:text-base sm:leading-7 md:mb-8 md:text-lg md:leading-8"
+            >
+              Switching software is a real decision when your whole schedule, customer history, and job records live inside it. Here are the questions electrical contractors ask most before making the move.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            {
+              faqs.map((faq) => (
+                <div class="faq-item overflow-hidden rounded-2xl border border-solid border-neutral-200 transition-all duration-300">
+                  <button
+                    class="faq-button group flex w-full items-center justify-between p-4 text-left sm:p-6"
+                    type="button"
+                  >
+                    <span class="text-base font-medium text-neutral-950 transition-colors group-hover:text-primary-500 sm:text-lg lg:text-xl">
+                      {faq.q}
+                    </span>
+                    <div class="faq-icon ml-4 flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary-500">
+                      <svg
+                        class="icon-minus hidden h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M20 12H4"
+                        />
+                      </svg>
+                      <svg
+                        class="icon-plus h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 4v16m8-8H4"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                  <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="p-4 pt-0 text-sm leading-relaxed text-neutral-600 sm:p-6 sm:pt-0 sm:text-base">
+                      {faq.a}
+                    </div>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Trusted ========== -->
+    <section
+      class="relative overflow-hidden bg-[#0F172A] py-24 sm:py-28 lg:py-[150px]"
+    >
+      <div
+        class="pointer-events-none absolute inset-0 opacity-[0.22] [background-image:radial-gradient(rgba(255,255,255,0.65)_0.8px,transparent_0.8px)] [background-size:18px_18px]"
+      >
+      </div>
+      <div
+        class="pointer-events-none absolute top-16 left-1/2 h-[420px] w-[860px] -translate-x-1/2 rounded-full bg-primary-500/10 blur-3xl"
+      >
+      </div>
+
+      <div class="my-container relative z-10">
+        <div class="mx-auto mb-16 max-w-[1040px] text-center lg:mb-20">
+          <h2
+            class="mb-6 text-center text-[31px] font-bold leading-[39px] text-white sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+          >
+            Trusted by 100&rsquo;s of customers
+          </h2>
+          <p
+            class="mx-auto max-w-[800px] text-base leading-7 text-white/80 sm:text-lg sm:leading-8"
+          >
+            Join hundreds of growing teams using Knockio to manage leads, sales,
+            field teams, and customer relationships.
+          </p>
+        </div>
+
+        <div
+          class="mx-auto grid max-w-[1120px] grid-cols-1 justify-items-center gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10"
+        >
+          {
+            trustBadges.map((badge) => (
+              <a
+                href={badge.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={badge.label}
+                class="group block rounded-3xl focus:ring-2 focus:ring-primary-500 focus:ring-offset-4 focus:ring-offset-[#0F172A] focus:outline-none"
+              >
+                <img
+                  src={badge.src}
+                  alt={badge.alt}
+                  width="203"
+                  height="280"
+                  decoding="async"
+                  loading="lazy"
+                  class="w-full max-w-[200px] object-contain transition duration-300 group-hover:-translate-y-2 group-hover:drop-shadow-[0_24px_34px_rgba(255,255,255,0.12)]"
+                />
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Customer Reviews ========== -->
+    <section class="overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
+      <div class="my-container mx-auto mb-10 text-center lg:mb-16">
+        <p class="mb-4 text-sm leading-7 font-medium text-primary-500 md:text-2xl">
+          Customer Reviews
+        </p>
+        <p
+          class="mb-8 text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+        >
+          What Field Service and Sales<br />
+          Teams Say About Knockio
+        </p>
+        <img
+          src={asset("google-5-star.webp")}
+          alt="google review badge"
+          width="183"
+          height="60"
+          decoding="async"
+          loading="lazy"
+          class="mx-auto h-auto w-[150px] sm:w-[183px]"
+        />
+      </div>
+
+      <div class="mt-7 space-y-8">
+        <div class="testimonial-track-container flex overflow-hidden">
+          <div
+            class="testimonial-track hover:pause flex animate-marquee-left gap-4 sm:gap-6"
+          >
+            {
+              [0, 1].map((dup) => (
+                <div
+                  class="card-set flex gap-4 sm:gap-6"
+                  aria-hidden={dup === 1 ? "true" : undefined}
+                >
+                  {reviewsRow1.map((review) => (
+                    <div class="relative w-[300px] flex-shrink-0 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 group sm:w-[380px] sm:p-6 lg:w-[450px] lg:p-8">
+                      <p class="relative z-10 mb-6 min-h-[168px] text-sm italic leading-relaxed text-neutral-700 sm:mb-8 sm:text-base lg:text-lg">
+                        {review.quote}
+                      </p>
+                      <div class="relative z-10 flex items-center gap-4">
+                        <img
+                          src={review.avatar}
+                          alt={review.name}
+                          width="48"
+                          height="48"
+                          decoding="async"
+                          loading="lazy"
+                          class="h-12 w-12 rounded-full object-cover grayscale transition-all group-hover:grayscale-0"
+                        />
+                        <div>
+                          <p class="mb-1 text-base font-bold text-neutral-950">
+                            {review.name}
+                          </p>
+                          <p
+                            class="text-sm text-neutral-500"
+                            aria-label="5 out of 5 stars"
+                          >
+                            ⭐⭐⭐⭐⭐
+                          </p>
+                        </div>
+                      </div>
+                      <Quote
+                        class="pointer-events-none absolute right-8 bottom-6 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <div class="testimonial-track-container flex overflow-hidden">
+          <div
+            class="testimonial-track hover:pause flex animate-marquee-right gap-4 sm:gap-6"
+          >
+            {
+              [0, 1].map((dup) => (
+                <div
+                  class="card-set flex gap-4 sm:gap-6"
+                  aria-hidden={dup === 1 ? "true" : undefined}
+                >
+                  {reviewsRow2.map((review) => (
+                    <div class="relative w-[300px] flex-shrink-0 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 group sm:w-[380px] sm:p-6 lg:w-[450px] lg:p-8">
+                      <p class="relative z-10 mb-6 min-h-[168px] text-sm italic leading-relaxed text-neutral-700 sm:mb-8 sm:text-base lg:text-lg">
+                        {review.quote}
+                      </p>
+                      <div class="relative z-10 flex items-center gap-4">
+                        <img
+                          src={review.avatar}
+                          alt={review.name}
+                          width="48"
+                          height="48"
+                          decoding="async"
+                          loading="lazy"
+                          class="h-12 w-12 rounded-full object-cover grayscale transition-all group-hover:grayscale-0"
+                        />
+                        <div>
+                          <p class="mb-1 text-base font-bold text-neutral-950">
+                            {review.name}
+                          </p>
+                          <p
+                            class="text-sm text-neutral-500"
+                            aria-label="5 out of 5 stars"
+                          >
+                            ⭐⭐⭐⭐⭐
+                          </p>
+                        </div>
+                      </div>
+                      <Quote
+                        class="pointer-events-none absolute right-8 bottom-6 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+  <script src="../../scripts/industry-page.js"></script>
+</KnockioHomeLayout>
