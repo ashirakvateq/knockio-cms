@@ -218,6 +218,11 @@ export const roofingFaqs = [
       'Logging a door takes under 10 seconds. Outcome, photo, done. Built for reps moving fast between houses. Most teams have reps logging live the same day.',
   },
   {
+    question: 'Is Knockio a door knocking app or a canvassing app?',
+    answer:
+      'Both. Door knocking apps and canvassing apps do the same job: get reps to the right doors and record what happened at each one. Knockio does that, then carries the lead through follow-up, estimate, contract, and payment. Most door knocking apps stop at the logged door.',
+  },
+  {
     question: 'How is Knockio different from JobNimbus or AccuLynx?',
     answer:
       'JobNimbus and AccuLynx manage the production and project side of roofing well. Neither starts at the door. Knockio is built from the knock forward. Territory assignment, live rep tracking, door logging, damage documentation, contingency signing, and payment tracking. One platform. No handoff to a separate canvassing tool.',
