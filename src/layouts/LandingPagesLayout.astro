@@ -5,8 +5,6 @@ import SEO from "../components/SEO.astro";
 import Analytics from "../components/Analytics.astro";
 import ThirdPartyWidgets from "../components/ThirdPartyWidgets.astro";
 import FbAnalytics from "../components/FbAnalytics.astro";
-import calInlineScript from "../scripts/cal-inline.js?url";
-import lpCalInlineScript from "../scripts/lp-cal-inline.js?url";
 
 interface Props {
   title: string;
@@ -18,7 +16,6 @@ interface Props {
   noFooter?: boolean;
   robots?: string;
   lazyCalendar?: boolean;
-  useLpCal?: boolean;
   preloadImages?: Array<{
     href: string;
     imagesrcset?: string;
@@ -36,7 +33,6 @@ const {
   noFooter = false,
   robots,
   lazyCalendar = false,
-  useLpCal = false,
   preloadImages = [],
 } = Astro.props;
 
@@ -196,11 +192,7 @@ const currentYear = new Date().getFullYear();
     <FbAnalytics />
     
     <script src="../scripts/canvassing-app.js"></script>
-    {useLpCal ? (
-      <script src="../scripts/lp-cal-inline.js"></script>
-    ) : (
-      <script src="../scripts/cal-inline.js"></script>
-    )}
+    <script src="../scripts/cal-inline.js"></script>
     <script src="../scripts/calendar-cta.js"></script>
   </body>
 </html>
