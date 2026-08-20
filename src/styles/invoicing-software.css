@@ -43,14 +43,14 @@
  * image beside the copy on desktop and gives the H1 room for one line.
  */
 @media (min-width: 1024px) {
-  #invoicing-page .invoicing-hero {
+  /* #invoicing-page .invoicing-hero {
     grid-template-columns: minmax(0, 55%) minmax(0, 45%);
   }
 
   .hero-estimate-visual {
     margin-top: -72px;
     padding-top: calc(72px + 5rem);
-  }
+  } */
 }
 
 .hero-estimate-visual::after {

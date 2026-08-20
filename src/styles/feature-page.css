@@ -91,3 +91,63 @@
 .duration-250 {
   transition-duration: 250ms;
 }
+
+/* ---------- Hero float (LCP visual, desktop) ---------- */
+@keyframes kio-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.animate-kio-float {
+  animation: kio-float 4.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-kio-float {
+    animation: none;
+  }
+}
+
+/* ---------- Proposal accordion + visual swap ---------- */
+.proposal-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 200ms linear;
+}
+
+.proposal-tab.is-active .proposal-chevron {
+  transform: rotate(180deg);
+}
+
+.proposal-chevron {
+  transition: transform 300ms ease;
+}
+
+.proposal-visual-card {
+  transition:
+    opacity 260ms ease,
+    transform 260ms ease;
+}
+
+.proposal-visual-card.is-changing {
+  opacity: 0.55;
+  transform: translateY(10px) scale(0.985);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .proposal-panel,
+  .proposal-visual-card,
+  .proposal-chevron {
+    transition: none;
+  }
+
+  .proposal-visual-card.is-changing {
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -1,21 +1,13 @@
-/**
- * Appointment scheduling page interactions.
- * Scoped to #appointment-scheduling-page. Exits if root is absent.
- * - Quick summary open/close
- * - Proposal tab + sub-item visual swap (content from data-* attributes)
- * FAQ accordion is handled by the shared home.js loaded in KnockioHomeLayout.
- */
 (function () {
   "use strict";
 
-  const root = document.getElementById("appointment-scheduling-page");
+  const root = document.querySelector("main");
   if (!root) return;
 
   const reduceMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)",
   ).matches;
 
-  /* ---------- Quick summary ---------- */
   const summaryBtn = root.querySelector("#kioSummaryBtn");
   const summaryPanel = root.querySelector("#kioSummaryPanel");
 
@@ -27,7 +19,6 @@
     });
   }
 
-  /* ---------- Proposal tabs ---------- */
   const tabs = root.querySelectorAll(".proposal-tab");
   const subItems = root.querySelectorAll(".proposal-subitem");
   const visual = root.querySelector("#proposalVisual");
@@ -39,12 +30,10 @@
     return;
   }
 
-  const activeIndexByTab = {
-    digital: 0,
-    pricing: 0,
-    tracking: 0,
-    followup: 0,
-  };
+  const activeIndexByTab = {};
+  tabs.forEach((tab) => {
+    activeIndexByTab[tab.dataset.tab] = 0;
+  });
 
   function updateProposalVisual(item) {
     if (!item) return;
@@ -78,6 +67,10 @@
       if (header) {
         header.setAttribute("aria-expanded", isActive ? "true" : "false");
       }
+      const panel = tab.querySelector(".proposal-panel");
+      if (panel) {
+        panel.style.maxHeight = isActive ? panel.scrollHeight + "px" : null;
+      }
     });
 
     let activeItem = null;
@@ -108,5 +101,14 @@
     });
   });
 
-  setActiveProposal("digital", 0);
+  const firstTab = tabs[0];
+  if (firstTab) {
+    const firstPanel = firstTab.querySelector(".proposal-panel");
+    if (firstPanel) firstPanel.style.transition = "none";
+    setActiveProposal(firstTab.dataset.tab, 0);
+    if (firstPanel) {
+      firstPanel.offsetHeight;
+      firstPanel.style.transition = "";
+    }
+  }
 })();

@@ -1058,8 +1058,8 @@ html.lenis body {
 @media (max-width: 1180px) {
   .kh-header { padding: 0.75rem 0; }
   .kh-desktop-nav { display: none; }
-  .kh-btn-signin,
-  .kh-btn-demo { display: none; }
+  .kh-actions .kh-btn-signin,
+  .kh-actions .kh-btn-demo { display: none; }
   .kh-mobile-toggle { display: inline-flex; }
 }
 
