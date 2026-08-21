@@ -131,7 +131,6 @@ const jsonLd = {
   jsonLd={jsonLd}
   robots="noindex, follow"
   noHeader
-  useLpCal
   preloadImages={[
     {
       href: `${roofingHero.image}`,
@@ -435,7 +434,25 @@ const jsonLd = {
         </figure>
       </div>
 
-      <div class="mt-9 flex justify-center"><a href="#landing-calender" class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary-500 px-7 py-4 font-bold text-white shadow-lg shadow-primary-500/25 transition hover:bg-primary-600 hover:shadow-primary-500/35">Book a Free Demo<svg xmlns="http://www.w3.org/2000/svg" stroke-width="2" width="18" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" fill="none" viewBox="0 0 24 24" aria-hidden="true" class="lucide lucide-arrow-right"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></div>
+      <div class="mt-9 flex justify-center">
+        <a
+          href="#landing-calender"
+          class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary-500 px-7 py-4 font-bold text-white shadow-lg shadow-primary-500/25 transition hover:bg-primary-600 hover:shadow-primary-500/35"
+          >Book a Free Demo<svg
+            xmlns="http://www.w3.org/2000/svg"
+            stroke-width="2"
+            width="18"
+            height="18"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            fill="none"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            class="lucide lucide-arrow-right"
+            ><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg
+          ></a>
+      </div>
     </div>
   </section>
 
@@ -444,9 +461,14 @@ const jsonLd = {
       <div class="editorial-header">
         <!-- Headline Column -->
         <div class="headline-column">
-          <h2 class="onboarding-main-headline">
+          <!-- <h2 class="onboarding-main-headline">
             Switching<br />
             <span class="headline-sub">to Knockio is</span><br />
+            <span class="headline-accent">Easy.</span>
+          </h2> -->
+          <h2 class="onboarding-main-headline">
+            Switching<br />
+            <span class="">to Knockio is</span><br />
             <span class="headline-accent">Easy.</span>
           </h2>
         </div>
@@ -525,7 +547,7 @@ const jsonLd = {
       </div>
     </div>
   </section>
-  
+
   <section
     id="landing-pricing"
     class="pricing-section relative z-10 py-20 max-xl:py-16 max-lg:py-14"
@@ -610,7 +632,8 @@ const jsonLd = {
             aria-hidden="true"
             class="lucide lucide-arrow-down ml-2 size-3"
             ><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg
-          ></a>
+          ></a
+        >
       </div><div
         class="mx-auto grid w-full max-w-[1200px] grid-cols-1 items-stretch justify-center gap-7 lg:grid-cols-3"
       >
@@ -693,7 +716,8 @@ const jsonLd = {
           </div><div class="mb-1 flex flex-wrap items-end text-neutral-900">
             <span class="text-5xl font-bold max-md:text-4xl">$20</span><span
               class="mb-1 ml-2 text-base font-normal text-neutral-500"
-              >/user/mo</span>
+              >/user/mo</span
+            >
           </div><p class="mb-1 text-sm font-semibold text-primary-600">
             5+ users
           </p><p class="mb-6 text-sm text-neutral-500">
@@ -962,7 +986,8 @@ const jsonLd = {
           <div class="mb-1 flex flex-wrap items-end text-white">
             <span class="text-5xl font-bold max-md:text-4xl">$45</span><span
               class="mb-1 ml-2 text-base font-normal text-neutral-400"
-              >/user/mo</span>
+              >/user/mo</span
+            >
           </div><p class="mb-1 text-sm font-semibold text-primary-400">
             5+ users
           </p><p class="mb-6 text-sm text-neutral-400">
@@ -1374,8 +1399,6 @@ const jsonLd = {
       </div>
     </div>
   </section>
-
-  
 
   <section class="faq-section py-24 lg:py-36" aria-labelledby="faq-heading">
     <div class="my-container">

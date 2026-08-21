@@ -37,7 +37,7 @@ export const stormCycleCards = [
   },
   {
     title: 'Sign the Contingency on the Porch',
-    copy: 'Contingency agreed and signed at the door, before the homeowner cools down or another contractor gets there first.',
+    copy: 'Contingency agreed and signed at the door, with photos and scope already attached to the job.',
     image: `${baseGlob}/07_1.webp`,
     width: 325,
     height: 254,
@@ -81,9 +81,9 @@ export const workflowGroups = [
   {
     title: 'Close and Wait',
     items: [
-      { icon: 'DollarSign', title: 'ACV Tracking', copy: 'Contingency signed at the door, even offline' },
-      { icon: 'TrendingDown', title: 'Depreciation Tracking', copy: 'Automated follow-up through the adjuster gap' },
-      { icon: 'LayoutDashboard', title: 'Campaign Reporting', copy: 'Appointments and reminders on a schedule, not memory' },
+      { icon: 'DollarSign', title: 'ACV Tracking', copy: 'Contingency signed at the door' },
+      { icon: 'TrendingDown', title: 'Depreciation Tracking', copy: 'Automated follow-up on a schedule, not memory' },
+      { icon: 'LayoutDashboard', title: 'Campaign Reporting', copy: 'Appointments and reminders tied to the job' },
       { icon: 'CreditCard', title: 'Payment Processing', copy: 'Job status visible to the whole team' },
     ],
   },
@@ -102,9 +102,9 @@ export const workflowGroups = [
 export const stormRestorationChecklist= [
   "Assign and manage unlimited territories from the admin dashboard",
   "Track reps live on a shared map, no check-in calls needed",
-  "Log damage photos, video, and notes from the field in seconds",
+  "Log damage photos, video, and notes from the field in second",
   "Get the contingency signed at the door, even without signal",
-  "Keep homeowners warm through the weeks before the adjuster arrives",
+  "Keep every job moving while the claim works its way through",
   "Hand the crew a job that already has photos, scope, and signed docs",
   "Track ACV and depreciation separately against the same job",
   "Submit completion photos and the final invoice without chasing anyone",
@@ -178,7 +178,7 @@ export const stormFaqs = [
   {
     question: 'How fast can we go live?',
     answer:
-      'Most teams are running live campaigns within the hour \u2014 territory setup, rep accounts, and first campaign included. No consultant, no implementation process.',
+      'Most teams are running live campaigns within the hour. Territory setup, rep accounts, and first campaign included. No consultant, no implementation process.',
   },
   {
     question: 'Will my reps actually use it?',
@@ -193,16 +193,16 @@ export const stormFaqs = [
   {
     question: 'How is Knockio different from JobNimbus or AccuLynx?',
     answer:
-      'JobNimbus and AccuLynx handle the office side of roofing well. Production, project management, invoicing. Neither owns the door. Knockio starts at the knock. Territory assignment, live rep tracking, damage documentation, contingency signing, adjuster gap follow-up, and payment tracking. One platform. JobNimbus outsources canvassing to a separate tool. Knockio builds it natively.',
+      'JobNimbus and AccuLynx handle the office side of roofing well. Production, project management, invoicing. Neither owns the door. Knockio starts at the knock. Territory assignment, live rep tracking, damage documentation, contingency signing, automated follow-up, and two payment tracking. One platform. JobNimbus outsources canvassing to a separate tool. Knockio builds it natively.',
   },
   {
-    question: 'Does Knockio track both insurance payments ACV and depreciation?',
+    question: 'Does Knockio track both insurance payments, ACV and depreciation?',
     answer:
       'Yes. ACV and depreciation are logged separately against the same job. What\'s been received, what\'s still pending. All in one place. When it\u2019s time to release the depreciation, the completion photos and final invoice are already attached to the job. Submit directly from Knockio. No separate spreadsheet, no chasing reps for payment status.',
   },
   {
     question: 'What happens to our data if a rep leaves mid-season?',
     answer:
-      'Every door they knocked, every lead they captured, every note and photo \u2014 it stays in your account. Your pipeline doesn\u2019t walk out the door when they do.',
+      'Every door they knocked, every lead they captured, every note and photo. It all stays in your account. Your pipeline doesn\u2019t walk out the door when they do.',
   },
 ];
