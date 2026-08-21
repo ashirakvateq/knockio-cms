@@ -22,32 +22,39 @@ export const roofingTrustLogos = [
   { src: `${baseGlob}/review.webp`, alt: 'Review platform rating' },
 ];
 
+export const roofingStats = [
+  ['1000+', 'Field sales teams running on Knockio'],
+  ['12+', 'Verticals built for D2D field sales'],
+  ['10 min', 'From signup to your first live campaign.'],
+  ['One', 'Platform from the first knock to the payment'],
+];
+
 export const roofingCycleCards = [
   {
     title: 'Territory Intelligence',
     copy: 'Know which streets to knock before reps leave the lot. Assign boundaries. Eliminate overlap. Put every rep exactly where the opportunity is. When a rep moves on, every door they knocked stays with you.',
-    image: `${baseGlob}/011.webp`,
+    image: `${baseGlob}/roofing-asset-1.webp`,
     width: 365,
     height: 285,
   },
   {
     title: 'Door-to-Commitment Speed',
     copy: 'Log the door and capture damage photos. Secure the signed agreement, a retail estimate or a contingency, before another contractor knocks tomorrow. The window between yes and gone is shorter than most teams think.',
-    image: `${baseGlob}/04_3.webp`,
+    image: `${baseGlob}/roofing-asset-2.webp`,
     width: 290,
     height: 272,
   },
   {
     title: 'Full Team Visibility',
     copy: 'Every rep live on the map. Every door logged. Every follow-up tracked. Know who\'s working and who\'s sitting in their car. No need to pick up the phone.',
-    image: `${baseGlob}/03_1.webp`,
+    image: `${baseGlob}/roofing-asset-3.webp`,
     width: 325,
     height: 254,
   },
   {
     title: 'Retail and Insurance Jobs. One Platform.',
     copy: 'Retail invoice or split insurance payment, both tracked against the same job, start to finish. ACV received, depreciation pending. Because the second check doesn\'t release itself.',
-    image: `${baseGlob}/09.webp`,
+    image: `${baseGlob}/roofing-asset-4.webp`,
     width: 300,
     height: 245,
   },

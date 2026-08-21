@@ -38,7 +38,7 @@ body *{
   display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
-  border-bottom: 2px solid var(--color-border-dark);
+  /* border-bottom: 2px solid var(--color-border-dark); */
   padding-bottom: 64px;
   margin-bottom: 80px;
 }

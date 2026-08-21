@@ -123,21 +123,19 @@ const jsonLd = {
     { href: `${assetBase}/green-name-640.webp` },
   ]}
 >
-  <section class="canvassing-hero pt-8 md:pt-12 xl:pt-16">
+  <!-- <section class="canvassing-hero pt-8 md:pt-12 xl:pt-16"> -->
+  <section class="storm-hero">
     <div
       class="hero-section grid items-center gap-10 pt-[50px] lg:grid-cols-[0.85fr_1.15fr]"
     >
       <div class="reveal-up max-lg:text-center">
-        <a
-          href="/"
-          aria-label="Knockio home"
-          class="hero-logo mb-6 inline-block"
-        >
+        <a href="/" aria-label="Knockio home" class="mb-6 inline-block">
           <img
-            src={`${assetBase}/green-name-640.webp`}
+            src="/assets/cfw/green-name-640.webp"
             alt="Knockio"
             width="1280"
             height="193"
+            class="h-auto w-56 sm:w-72 xl:w-80"
             decoding="async"
           />
         </a>
@@ -431,7 +429,8 @@ const jsonLd = {
             aria-hidden="true"
             class="lucide lucide-arrow-right"
             ><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg
-          ></a>
+          ></a
+        >
       </div>
     </div>
   </section>
@@ -441,12 +440,19 @@ const jsonLd = {
       <div class="editorial-header">
         <!-- Headline Column -->
         <div class="headline-column">
-          <h2 class="main-headline">
+          <!-- <h2 class="main-headline">
             Switching<br />
             <span class="headline-sub">to</span>
             <span class="headline-accent mx-1"> Knockio </span>
             <span class="headline-sub">is</span><br />
             <span class="headline-sub">Easy</span>
+          </h2> -->
+          <h2 class="main-headline">
+            Switching<br />
+            <span class="">to</span>
+            <span class="headline-accent mx-1"> Knockio </span>
+            <span class="">is</span><br />
+            <span class="">Easy</span>
           </h2>
         </div>
 
@@ -514,12 +520,10 @@ const jsonLd = {
       </div>
     </div>
   </section>
-  
+
   <section class="calender-section py-24 lg:py-36">
     <div class="my-container">
-      <h2 class="section-heading">
-        Watch Your Whole Canvassing Cycle, Live
-      </h2>
+      <h2 class="section-heading">Watch Your Whole Canvassing Cycle, Live</h2>
       <p class="section-copy">
         No pitch deck. No scripted walkthrough. No pressure. A live session
         built around your vertical and team size, so you can see exactly how it
@@ -560,488 +564,484 @@ const jsonLd = {
   </section>
 
   <section
-      id="landing-pricing"
-      class="pricing-section relative z-10 py-20 max-xl:py-16 max-lg:py-14"
-    >
-      <div class="my-container">
-        <div class="mb-10 text-center max-md:mb-7">
-          <h2
-            class="mx-auto mb-4 max-w-3xl text-[56px] font-bold leading-tight text-neutral-900 max-2xl:text-5xl max-xl:text-4xl max-md:text-3xl"
-          >
-            Straightforward pricing. No surprises.
-          </h2>
-          <p class="mx-auto max-w-2xl text-lg text-neutral-600 max-xl:text-base">
-            Choose the tools your team needs today, or combine your entire
-            field-sales and service operation in one connected platform.
-          </p>
-        </div>
+    id="landing-pricing"
+    class="pricing-section relative z-10 py-20 max-xl:py-16 max-lg:py-14"
+  >
+    <div class="my-container">
+      <div class="mb-10 text-center max-md:mb-7">
+        <h2
+          class="mx-auto mb-4 max-w-3xl text-[56px] font-bold leading-tight text-neutral-900 max-2xl:text-5xl max-xl:text-4xl max-md:text-3xl"
+        >
+          Straightforward pricing. No surprises.
+        </h2>
+        <p class="mx-auto max-w-2xl text-lg text-neutral-600 max-xl:text-base">
+          Choose the tools your team needs today, or combine your entire
+          field-sales and service operation in one connected platform.
+        </p>
+      </div>
 
-        <div class="mb-12 flex flex-wrap items-center justify-center gap-3">
-          <div
-            class="flex items-center rounded-full border border-solid border-neutral-200 px-5 py-2.5 text-sm text-neutral-900"
-          >
-            <Check
-              class="mr-2 size-4 shrink-0 text-primary-500"
-              aria-hidden="true"
-            />
-            <span>Pro-rated billing</span>
+      <div class="mb-12 flex flex-wrap items-center justify-center gap-3">
+        <div
+          class="flex items-center rounded-full border border-solid border-neutral-200 px-5 py-2.5 text-sm text-neutral-900"
+        >
+          <Check
+            class="mr-2 size-4 shrink-0 text-primary-500"
+            aria-hidden="true"
+          />
+          <span>Pro-rated billing</span>
+        </div>
+        <div
+          class="flex items-center rounded-full border border-solid border-neutral-200 px-5 py-2.5 text-sm text-neutral-900"
+        >
+          <Check
+            class="mr-2 size-4 shrink-0 text-primary-500"
+            aria-hidden="true"
+          />
+          <span>No setup fee</span>
+        </div>
+        <div
+          class="flex items-center rounded-full border border-solid border-neutral-200 px-5 py-2.5 text-sm text-neutral-900"
+        >
+          <Check
+            class="mr-2 size-4 shrink-0 text-primary-500"
+            aria-hidden="true"
+          />
+          <span>No contracts</span>
+        </div>
+        <a
+          href="https://knockio.com/pricing/#pricing-compare"
+          class="flex items-center rounded-full border border-solid border-primary-200 px-5 py-2.5 text-sm font-medium text-primary-600 transition-colors hover:bg-primary-50"
+        >
+          Compare plans in detail
+          <ArrowDown class="ml-2 size-3" aria-hidden="true" />
+        </a>
+      </div>
+
+      <div
+        class="mx-auto grid w-full max-w-[1200px] grid-cols-1 items-stretch justify-center gap-7 lg:grid-cols-3"
+      >
+        <div
+          class="kio-pricing-card flex flex-col rounded-3xl border border-solid border-neutral-200 bg-white p-7 transition duration-150 ease-out hover:-translate-y-1 hover:shadow-xl max-md:p-6"
+        >
+          <div class="mb-3 flex items-start justify-between gap-4">
+            <div class="flex items-center gap-4">
+              <span
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600"
+              >
+                <Map class="size-5" aria-hidden="true" />
+              </span>
+              <div>
+                <p
+                  class="mb-1 text-xs font-bold uppercase tracking-wider text-blue-600"
+                >
+                  Field Sales
+                </p>
+                <h3 class="text-3xl font-bold text-neutral-900 max-xl:text-2xl">
+                  Prospect
+                </h3>
+              </div>
+            </div>
+            <div class="kio-plan-info">
+              <button
+                type="button"
+                class="kio-plan-info-button"
+                aria-label="View Prospect plan details"
+                aria-expanded="false"
+                aria-controls="prospect-plan-tooltip"
+              >
+                <Eye class="size-4" aria-hidden="true" />
+              </button>
+              <div
+                id="prospect-plan-tooltip"
+                class="kio-plan-tooltip"
+                role="tooltip"
+                aria-hidden="true"
+              >
+                Everything your reps need to knock doors, log, and close.
+                Unlimited territories, live tracking, route planning, lead
+                capture, and digital contracts from the first door to the signed
+                agreement.
+              </div>
+            </div>
           </div>
-          <div
-            class="flex items-center rounded-full border border-solid border-neutral-200 px-5 py-2.5 text-sm text-neutral-900"
-          >
-            <Check
-              class="mr-2 size-4 shrink-0 text-primary-500"
-              aria-hidden="true"
-            />
-            <span>No setup fee</span>
+          <div class="mb-5 min-h-[76px]">
+            <p class="text-sm font-semibold leading-6 text-neutral-900">
+              Who it’s for:
+            </p>
+            <p class="text-sm leading-6 text-neutral-600">
+              For field sales teams running door-to-door campaigns.
+            </p>
           </div>
-          <div
-            class="flex items-center rounded-full border border-solid border-neutral-200 px-5 py-2.5 text-sm text-neutral-900"
-          >
-            <Check
-              class="mr-2 size-4 shrink-0 text-primary-500"
-              aria-hidden="true"
-            />
-            <span>No contracts</span>
+          <div class="mb-1 flex flex-wrap items-end text-neutral-900">
+            <span class="text-5xl font-bold max-md:text-4xl">$20</span>
+            <span class="mb-1 ml-2 text-base font-normal text-neutral-500"
+              >/user/mo</span
+            >
           </div>
-          <a
-            href="https://knockio.com/pricing/#pricing-compare"
-            class="flex items-center rounded-full border border-solid border-primary-200 px-5 py-2.5 text-sm font-medium text-primary-600 transition-colors hover:bg-primary-50"
+          <p class="mb-1 text-sm font-semibold text-primary-600">5+ users</p>
+          <p class="mb-6 text-sm text-neutral-500">$25/user/mo for 1–4 users</p>
+          <button
+            type="button"
+            data-checkout-package="4"
+            data-package="4"
+            aria-label="Start Prospect plan"
+            class="knockio-checkout-btn mb-8 w-full cursor-pointer rounded-xl border border-solid border-primary-500 bg-white px-5 py-3.5 font-semibold text-primary-500 transition-colors duration-200 hover:bg-primary-500 hover:text-white"
           >
-            Compare plans in detail
-            <ArrowDown class="ml-2 size-3" aria-hidden="true" />
-          </a>
+            Start Prospect
+          </button>
+          <h4 class="mb-4 text-lg font-semibold text-neutral-900">
+            Features included:
+          </h4>
+          <ul class="flex-1 space-y-3 text-neutral-700">
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Unlimited Territories & Campaigns</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Route Planning & Optimization</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Pre-Knocked Data (15¢ per address)</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Real-time Rep Tracking</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Presentations</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Digital Contracts & E-Signature</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Native Automation Builder</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Task Management & Appointment Scheduling</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Zapier & FlowChef Integrations</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Free Onboarding & Support</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Phone
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Engage Add-On ($15/number/mo)</span>
+            </li>
+          </ul>
         </div>
 
         <div
-          class="mx-auto grid w-full max-w-[1200px] grid-cols-1 items-stretch justify-center gap-7 lg:grid-cols-3"
+          class="kio-pricing-card relative flex flex-col rounded-3xl border border-solid border-[#0f172a] bg-[#0f172a] p-7 shadow-xl shadow-neutral-900/10 transition duration-150 ease-out hover:-translate-y-1 max-md:p-6"
         >
           <div
-            class="kio-pricing-card flex flex-col rounded-3xl border border-solid border-neutral-200 bg-white p-7 transition duration-150 ease-out hover:-translate-y-1 hover:shadow-xl max-md:p-6"
+            class="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-solid border-neutral-300 bg-primary-500 px-7 py-1.5 text-sm font-semibold text-white"
           >
-            <div class="mb-3 flex items-start justify-between gap-4">
-              <div class="flex items-center gap-4">
-                <span
-                  class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600"
-                >
-                  <Map class="size-5" aria-hidden="true" />
-                </span>
-                <div>
-                  <p
-                    class="mb-1 text-xs font-bold uppercase tracking-wider text-blue-600"
-                  >
-                    Field Sales
-                  </p>
-                  <h3 class="text-3xl font-bold text-neutral-900 max-xl:text-2xl">
-                    Prospect
-                  </h3>
-                </div>
-              </div>
-              <div class="kio-plan-info">
-                <button
-                  type="button"
-                  class="kio-plan-info-button"
-                  aria-label="View Prospect plan details"
-                  aria-expanded="false"
-                  aria-controls="prospect-plan-tooltip"
-                >
-                  <Eye class="size-4" aria-hidden="true" />
-                </button>
-                <div
-                  id="prospect-plan-tooltip"
-                  class="kio-plan-tooltip"
-                  role="tooltip"
-                  aria-hidden="true"
-                >
-                  Everything your reps need to knock doors, log, and close.
-                  Unlimited territories, live tracking, route planning, lead
-                  capture, and digital contracts from the first door to the signed
-                  agreement.
-                </div>
-              </div>
-            </div>
-            <div class="mb-5 min-h-[76px]">
-              <p class="text-sm font-semibold leading-6 text-neutral-900">
-                Who it’s for:
-              </p>
-              <p class="text-sm leading-6 text-neutral-600">
-                For field sales teams running door-to-door campaigns.
-              </p>
-            </div>
-            <div class="mb-1 flex flex-wrap items-end text-neutral-900">
-              <span class="text-5xl font-bold max-md:text-4xl">$20</span>
-              <span class="mb-1 ml-2 text-base font-normal text-neutral-500"
-                >/user/mo</span
-              >
-            </div>
-            <p class="mb-1 text-sm font-semibold text-primary-600">5+ users</p>
-            <p class="mb-6 text-sm text-neutral-500">
-              $25/user/mo for 1–4 users
-            </p>
-            <button
-              type="button"
-              data-checkout-package="4"
-              data-package="4"
-              aria-label="Start Prospect plan"
-              class="knockio-checkout-btn mb-8 w-full cursor-pointer rounded-xl border border-solid border-primary-500 bg-white px-5 py-3.5 font-semibold text-primary-500 transition-colors duration-200 hover:bg-primary-500 hover:text-white"
-            >
-              Start Prospect
-            </button>
-            <h4 class="mb-4 text-lg font-semibold text-neutral-900">
-              Features included:
-            </h4>
-            <ul class="flex-1 space-y-3 text-neutral-700">
-              <li class="flex items-start text-[15px] leading-6">
-                <Check
-                  class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
-                  aria-hidden="true"
-                /><span>Unlimited Territories & Campaigns</span>
-              </li>
-              <li class="flex items-start text-[15px] leading-6">
-                <Check
-                  class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
-                  aria-hidden="true"
-                /><span>Route Planning & Optimization</span>
-              </li>
-              <li class="flex items-start text-[15px] leading-6">
-                <Check
-                  class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
-                  aria-hidden="true"
-                /><span>Pre-Knocked Data (15¢ per address)</span>
-              </li>
-              <li class="flex items-start text-[15px] leading-6">
-                <Check
-                  class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
-                  aria-hidden="true"
-                /><span>Real-time Rep Tracking</span>
-              </li>
-              <li class="flex items-start text-[15px] leading-6">
-                <Check
-                  class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
-                  aria-hidden="true"
-                /><span>Presentations</span>
-              </li>
-              <li class="flex items-start text-[15px] leading-6">
-                <Check
-                  class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
-                  aria-hidden="true"
-                /><span>Digital Contracts & E-Signature</span>
-              </li>
-              <li class="flex items-start text-[15px] leading-6">
-                <Check
-                  class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
-                  aria-hidden="true"
-                /><span>Native Automation Builder</span>
-              </li>
-              <li class="flex items-start text-[15px] leading-6">
-                <Check
-                  class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
-                  aria-hidden="true"
-                /><span>Task Management & Appointment Scheduling</span>
-              </li>
-              <li class="flex items-start text-[15px] leading-6">
-                <Check
-                  class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
-                  aria-hidden="true"
-                /><span>Zapier & FlowChef Integrations</span>
-              </li>
-              <li class="flex items-start text-[15px] leading-6">
-                <Check
-                  class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
-                  aria-hidden="true"
-                /><span>Free Onboarding & Support</span>
-              </li>
-              <li class="flex items-start text-[15px] leading-6">
-                <Phone
-                  class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
-                  aria-hidden="true"
-                /><span>Engage Add-On ($15/number/mo)</span>
-              </li>
-            </ul>
+            Recommended
           </div>
-
-          <div
-            class="kio-pricing-card relative flex flex-col rounded-3xl border border-solid border-[#0f172a] bg-[#0f172a] p-7 shadow-xl shadow-neutral-900/10 transition duration-150 ease-out hover:-translate-y-1 max-md:p-6"
-          >
-            <div
-              class="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-solid border-neutral-300 bg-primary-500 px-7 py-1.5 text-sm font-semibold text-white"
-            >
-              Recommended
-            </div>
-            <div class="mb-3 mt-2 flex items-start justify-between gap-4">
-              <div class="flex items-center gap-4">
-                <span
-                  class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary-500/15 text-primary-400"
+          <div class="mb-3 mt-2 flex items-start justify-between gap-4">
+            <div class="flex items-center gap-4">
+              <span
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary-500/15 text-primary-400"
+              >
+                <ChartLine class="size-5" aria-hidden="true" />
+              </span>
+              <div>
+                <p
+                  class="mb-1 text-xs font-bold uppercase tracking-wider text-primary-400"
                 >
-                  <ChartLine class="size-5" aria-hidden="true" />
-                </span>
-                <div>
-                  <p
-                    class="mb-1 text-xs font-bold uppercase tracking-wider text-primary-400"
-                  >
-                    All-In-One
-                  </p>
-                  <h3 class="text-3xl font-bold text-white max-xl:text-2xl">
-                    Growth
-                  </h3>
-                </div>
-              </div>
-              <div class="kio-plan-info">
-                <button
-                  type="button"
-                  class="kio-plan-info-button kio-plan-info-button-dark"
-                  aria-label="View Growth plan details"
-                  aria-expanded="false"
-                  aria-controls="growth-plan-tooltip"
-                >
-                  <Eye class="size-4" aria-hidden="true" />
-                </button>
-                <div
-                  id="growth-plan-tooltip"
-                  class="kio-plan-tooltip"
-                  role="tooltip"
-                  aria-hidden="true"
-                >
-                  The complete end-to-end platform. Includes everything in
-                  Prospect & Organize combined into one seamless workflow—plus
-                  inventory tracking, granular team permissions, and a dedicated
-                  success manager.
-                </div>
+                  All-In-One
+                </p>
+                <h3 class="text-3xl font-bold text-white max-xl:text-2xl">
+                  Growth
+                </h3>
               </div>
             </div>
-            <div class="mb-5 min-h-[76px]">
-              <p class="text-sm font-semibold leading-6 text-white">
-                Who it’s for:
-              </p>
-              <p class="text-sm leading-6 text-neutral-300">
-                For contractors and field teams running the entire business—from
-                first knock to final payment.
-              </p>
+            <div class="kio-plan-info">
+              <button
+                type="button"
+                class="kio-plan-info-button kio-plan-info-button-dark"
+                aria-label="View Growth plan details"
+                aria-expanded="false"
+                aria-controls="growth-plan-tooltip"
+              >
+                <Eye class="size-4" aria-hidden="true" />
+              </button>
+              <div
+                id="growth-plan-tooltip"
+                class="kio-plan-tooltip"
+                role="tooltip"
+                aria-hidden="true"
+              >
+                The complete end-to-end platform. Includes everything in
+                Prospect & Organize combined into one seamless workflow—plus
+                inventory tracking, granular team permissions, and a dedicated
+                success manager.
+              </div>
             </div>
-            <!-- <p
+          </div>
+          <div class="mb-5 min-h-[76px]">
+            <p class="text-sm font-semibold leading-6 text-white">
+              Who it’s for:
+            </p>
+            <p class="text-sm leading-6 text-neutral-300">
+              For contractors and field teams running the entire business—from
+              first knock to final payment.
+            </p>
+          </div>
+          <!-- <p
               class="mb-6 rounded-xl border border-solid border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-semibold text-white"
             >
               Sell the job. Run the job. Get paid.
             </p> -->
-            <div class="mb-1 flex flex-wrap items-end text-white">
-              <span class="text-5xl font-bold max-md:text-4xl">$45</span>
-              <span class="mb-1 ml-2 text-base font-normal text-neutral-400"
-                >/user/mo</span
-              >
-            </div>
-            <p class="mb-1 text-sm font-semibold text-primary-400">5+ users</p>
-            <p class="mb-6 text-sm text-neutral-400">
-              $60/user/mo for 1–4 users
-            </p>
-            <button
-              type="button"
-              data-checkout-package="6"
-              data-package="6"
-              aria-label="Start Growth plan"
-              class="knockio-checkout-btn mb-8 w-full cursor-pointer rounded-xl bg-primary-500 px-5 py-3.5 font-semibold text-white transition-colors duration-200 hover:bg-primary-700"
+          <div class="mb-1 flex flex-wrap items-end text-white">
+            <span class="text-5xl font-bold max-md:text-4xl">$45</span>
+            <span class="mb-1 ml-2 text-base font-normal text-neutral-400"
+              >/user/mo</span
             >
-              Start Growth
-            </button>
-            <h4 class="mb-4 text-lg font-semibold text-white">
-              Features included:
-            </h4>
-            <ul class="flex-1 space-y-3 text-neutral-300">
-              <li class="flex items-start text-[15px] font-semibold leading-6">
-                <Check
-                  class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
-                  aria-hidden="true"
-                /><span>Everything in Prospect</span>
-              </li>
-              <li class="flex items-start text-[15px] leading-6">
-                <Check
-                  class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
-                  aria-hidden="true"
-                /><span>Unlimited Workspaces</span>
-              </li>
-              <li class="flex items-start text-[15px] leading-6">
-                <Check
-                  class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
-                  aria-hidden="true"
-                /><span>Pipelines & Lead Management</span>
-              </li>
-              <li class="flex items-start text-[15px] leading-6">
-                <Check
-                  class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
-                  aria-hidden="true"
-                /><span>Granular Permissions</span>
-              </li>
-              <li class="flex items-start text-[15px] leading-6">
-                <Check
-                  class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
-                  aria-hidden="true"
-                /><span>Email Communication</span>
-              </li>
-              <li class="flex items-start text-[15px] leading-6">
-                <Check
-                  class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
-                  aria-hidden="true"
-                /><span>Estimates & Work Orders</span>
-              </li>
-              <li class="flex items-start text-[15px] leading-6">
-                <Check
-                  class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
-                  aria-hidden="true"
-                /><span>Invoices & Payments</span>
-              </li>
-              <li class="flex items-start text-[15px] leading-6">
-                <Check
-                  class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
-                  aria-hidden="true"
-                /><span>Product & Inventory Management</span>
-              </li>
-              <li class="flex items-start text-[15px] leading-6">
-                <Check
-                  class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
-                  aria-hidden="true"
-                /><span>Native Automation Builder</span>
-              </li>
-              <li class="flex items-start text-[15px] leading-6">
-                <Check
-                  class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
-                  aria-hidden="true"
-                /><span>Zapier & FlowChef Integrations</span>
-              </li>
-              <li class="flex items-start text-[15px] leading-6">
-                <UserRound
-                  class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
-                  aria-hidden="true"
-                /><span>Dedicated Success Manager</span>
-              </li>
-              <li class="flex items-start text-[15px] leading-6">
-                <Check
-                  class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
-                  aria-hidden="true"
-                /><span>Free Onboarding & Account Setup</span>
-              </li>
-              <li class="flex items-start text-[15px] leading-6">
-                <Phone
-                  class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
-                  aria-hidden="true"
-                /><span>Engage Add-On ($15/number/mo)</span>
-              </li>
-            </ul>
           </div>
-
-          <div
-            class="kio-pricing-card relative flex flex-col rounded-3xl border border-solid border-primary-500 bg-[#f5faf3] p-7 transition duration-150 ease-out hover:-translate-y-1 hover:shadow-xl max-md:p-6"
+          <p class="mb-1 text-sm font-semibold text-primary-400">5+ users</p>
+          <p class="mb-6 text-sm text-neutral-400">$60/user/mo for 1–4 users</p>
+          <button
+            type="button"
+            data-checkout-package="6"
+            data-package="6"
+            aria-label="Start Growth plan"
+            class="knockio-checkout-btn mb-8 w-full cursor-pointer rounded-xl bg-primary-500 px-5 py-3.5 font-semibold text-white transition-colors duration-200 hover:bg-primary-700"
           >
-            <div
-              class="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-solid border-primary-500 bg-white px-7 py-1.5 text-sm font-semibold text-primary-600"
-            >
-              100+ Users
-            </div>
-            <div class="mb-3 mt-2 flex items-start justify-between gap-4">
-              <div class="flex items-center gap-4">
-                <span
-                  class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary-500 text-white"
-                >
-                  <Building2 class="size-5" aria-hidden="true" />
-                </span>
-                <div>
-                  <p
-                    class="mb-1 text-xs font-bold uppercase tracking-wider text-primary-600"
-                  >
-                    Enterprise
-                  </p>
-                  <h3 class="text-3xl font-bold text-neutral-900 max-xl:text-2xl">
-                    Scale
-                  </h3>
-                </div>
-              </div>
-              <div class="kio-plan-info">
-                <button
-                  type="button"
-                  class="kio-plan-info-button"
-                  aria-label="View Scale plan details"
-                  aria-expanded="false"
-                  aria-controls="scale-plan-tooltip"
-                >
-                  <Eye class="size-4" aria-hidden="true" />
-                </button>
-                <div
-                  id="scale-plan-tooltip"
-                  class="kio-plan-tooltip"
-                  role="tooltip"
-                  aria-hidden="true"
-                >
-                  Everything in Growth, engineered for your exact operational
-                  scale. Get custom volume pricing, white-glove team onboarding,
-                  priority support, and a direct line to our product team for
-                  feature requests. If an off-the-shelf plan isn’t enough, we’ll
-                  build this around you.
-                </div>
-              </div>
-            </div>
-            <div class="mb-5 min-h-[76px]">
-              <p class="text-sm font-semibold leading-6 text-neutral-900">
-                Who it’s for:
-              </p>
-              <p class="text-sm leading-6 text-neutral-600">
-                Built for multi-location contractors and enterprise operations
-                running 100+ reps in the field.
-              </p>
-            </div>
-            <div class="mb-2 text-3xl font-bold leading-tight text-neutral-900">
-              Custom Pricing
-            </div>
-            <p class="mb-6 text-sm font-semibold leading-6 text-primary-600">
-              Volume rates for large field teams
-            </p>
-            <a
-              href="#landing-calender"
-              class="mb-8 inline-flex w-full items-center justify-center rounded-xl bg-primary-500 px-5 py-3.5 font-semibold text-white transition-colors duration-200 hover:bg-primary-700"
-            >
-              Book a demo
-            </a>
-            <h4 class="mb-4 text-lg font-semibold text-neutral-900">
-              Features included:
-            </h4>
-            <ul class="flex-1 space-y-3 text-neutral-700">
-              <li class="flex items-start text-[15px] font-semibold leading-6">
-                <Check
-                  class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
-                  aria-hidden="true"
-                /><span>Everything in Growth</span>
-              </li>
-              <li class="flex items-start text-[15px] leading-6">
-                <Check
-                  class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
-                  aria-hidden="true"
-                /><span>Custom Per-Seat Volume Rates</span>
-              </li>
-              <li class="flex items-start text-[15px] leading-6">
-                <Check
-                  class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
-                  aria-hidden="true"
-                /><span>White-Glove Onboarding & Account Setup</span>
-              </li>
-              <li class="flex items-start text-[15px] leading-6">
-                <UserRound
-                  class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
-                  aria-hidden="true"
-                /><span>Dedicated Success Manager & Priority Support</span>
-              </li>
-              <li class="flex items-start text-[15px] leading-6">
-                <Check
-                  class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
-                  aria-hidden="true"
-                /><span>Direct Input on Product Roadmap & Features</span>
-              </li>
-              <li class="flex items-start text-[15px] leading-6">
-                <Shield
-                  class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
-                  aria-hidden="true"
-                /><span>Custom Enterprise Workspaces & Security</span>
-              </li>
-            </ul>
+            Start Growth
+          </button>
+          <h4 class="mb-4 text-lg font-semibold text-white">
+            Features included:
+          </h4>
+          <ul class="flex-1 space-y-3 text-neutral-300">
+            <li class="flex items-start text-[15px] font-semibold leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                aria-hidden="true"
+              /><span>Everything in Prospect</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                aria-hidden="true"
+              /><span>Unlimited Workspaces</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                aria-hidden="true"
+              /><span>Pipelines & Lead Management</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                aria-hidden="true"
+              /><span>Granular Permissions</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                aria-hidden="true"
+              /><span>Email Communication</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                aria-hidden="true"
+              /><span>Estimates & Work Orders</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                aria-hidden="true"
+              /><span>Invoices & Payments</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                aria-hidden="true"
+              /><span>Product & Inventory Management</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                aria-hidden="true"
+              /><span>Native Automation Builder</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                aria-hidden="true"
+              /><span>Zapier & FlowChef Integrations</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <UserRound
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                aria-hidden="true"
+              /><span>Dedicated Success Manager</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                aria-hidden="true"
+              /><span>Free Onboarding & Account Setup</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Phone
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                aria-hidden="true"
+              /><span>Engage Add-On ($15/number/mo)</span>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="kio-pricing-card relative flex flex-col rounded-3xl border border-solid border-primary-500 bg-[#f5faf3] p-7 transition duration-150 ease-out hover:-translate-y-1 hover:shadow-xl max-md:p-6"
+        >
+          <div
+            class="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-solid border-primary-500 bg-white px-7 py-1.5 text-sm font-semibold text-primary-600"
+          >
+            100+ Users
           </div>
+          <div class="mb-3 mt-2 flex items-start justify-between gap-4">
+            <div class="flex items-center gap-4">
+              <span
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary-500 text-white"
+              >
+                <Building2 class="size-5" aria-hidden="true" />
+              </span>
+              <div>
+                <p
+                  class="mb-1 text-xs font-bold uppercase tracking-wider text-primary-600"
+                >
+                  Enterprise
+                </p>
+                <h3 class="text-3xl font-bold text-neutral-900 max-xl:text-2xl">
+                  Scale
+                </h3>
+              </div>
+            </div>
+            <div class="kio-plan-info">
+              <button
+                type="button"
+                class="kio-plan-info-button"
+                aria-label="View Scale plan details"
+                aria-expanded="false"
+                aria-controls="scale-plan-tooltip"
+              >
+                <Eye class="size-4" aria-hidden="true" />
+              </button>
+              <div
+                id="scale-plan-tooltip"
+                class="kio-plan-tooltip"
+                role="tooltip"
+                aria-hidden="true"
+              >
+                Everything in Growth, engineered for your exact operational
+                scale. Get custom volume pricing, white-glove team onboarding,
+                priority support, and a direct line to our product team for
+                feature requests. If an off-the-shelf plan isn’t enough, we’ll
+                build this around you.
+              </div>
+            </div>
+          </div>
+          <div class="mb-5 min-h-[76px]">
+            <p class="text-sm font-semibold leading-6 text-neutral-900">
+              Who it’s for:
+            </p>
+            <p class="text-sm leading-6 text-neutral-600">
+              Built for multi-location contractors and enterprise operations
+              running 100+ reps in the field.
+            </p>
+          </div>
+          <div class="mb-2 text-3xl font-bold leading-tight text-neutral-900">
+            Custom Pricing
+          </div>
+          <p class="mb-6 text-sm font-semibold leading-6 text-primary-600">
+            Volume rates for large field teams
+          </p>
+          <a
+            href="#landing-calender"
+            class="mb-8 inline-flex w-full items-center justify-center rounded-xl bg-primary-500 px-5 py-3.5 font-semibold text-white transition-colors duration-200 hover:bg-primary-700"
+          >
+            Book a demo
+          </a>
+          <h4 class="mb-4 text-lg font-semibold text-neutral-900">
+            Features included:
+          </h4>
+          <ul class="flex-1 space-y-3 text-neutral-700">
+            <li class="flex items-start text-[15px] font-semibold leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Everything in Growth</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Custom Per-Seat Volume Rates</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>White-Glove Onboarding & Account Setup</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <UserRound
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Dedicated Success Manager & Priority Support</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Direct Input on Product Roadmap & Features</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Shield
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Custom Enterprise Workspaces & Security</span>
+            </li>
+          </ul>
         </div>
       </div>
+    </div>
   </section>
 
   <section class="faq-section py-24 lg:py-36" aria-labelledby="faq-heading">
