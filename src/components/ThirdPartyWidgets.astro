@@ -29,7 +29,35 @@ const TALKGENIE_SRC = "https://unpkg.com/talkgeniejs@latest/talkgeniejs.umd.js";
         document.head.appendChild(s);
       }
 
+      var isMobile = window.matchMedia("(max-width: 767px)").matches;
+
+      function consentSaved() {
+        return document.cookie.indexOf("cc_cookie=") !== -1;
+      }
+
+      function armMobileConsentGate() {
+        var start = Date.now();
+        var sawBanner = false;
+        var timer = setInterval(function () {
+          if (consentSaved()) {
+            clearInterval(timer);
+            loadTalkgenie();
+            return;
+          }
+          if (document.getElementById("cc-main")) sawBanner = true;
+          if (!sawBanner && Date.now() - start > 15000) {
+            clearInterval(timer);
+            loadTalkgenie();
+          }
+        }, 1000);
+      }
+
       function arm() {
+        if (isMobile && !consentSaved()) {
+          armMobileConsentGate();
+          return;
+        }
+
         var events = ["pointerdown", "keydown", "touchstart"];
 
         events.forEach(function (eventName) {
