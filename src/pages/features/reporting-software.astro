@@ -16,9 +16,9 @@ import {
   RefreshCw,
 } from "lucide-astro";
 
-const title = "Reporting Software for Data Driven Decisions | Knockio";
+const title = "Reporting Software for Data-Driven Decisions";
 const description =
-  "Reporting Software for data driven decisions by Knockio tracks conversions, revenue, payments, and rep performance with custom reports.";
+  "You can't fix what you can't see. Knockio lets you build custom reports on your own rules — conversion rates, territory performance, field activity, payments, stalled leads — pulled live from the same data already running your boards, work orders, and invoices.";
 
 const asset = (name: string) => `/assets/cfw/${name}`;
 
@@ -29,25 +29,25 @@ const proposalGroups = [
     icon: "clipboard" as const,
     items: [
       {
-        label: "Total Flexibility",
-        title: "Custom Report Builder",
-        text: "Define your own rules and conditions to generate a report, instead of being stuck with a handful of generic templates that almost fit your business.",
+        label: "Custom, not canned",
+        title: "Define your own rules and conditions to generate a report",
+        text: "Define your own rules and conditions to generate a report, instead of being stuck with a handful of generic templates.",
         image: asset(
           "inner-reports-build-reports-around-your-own-rules-total-flexibility.webp",
         ),
       },
       {
-        label: "No Limits",
-        title: "Reports for Any Part of Your Operation",
-        text: "Build reports around sales, field activity, payments, or staffing, all from the same data already living inside Knockio.",
+        label: "Filter any way you need",
+        title: "Break a report down by rep, territory, source, date, or any other rule that matters",
+        text: "Break a report down by rep, territory, source, date, or any other rule that matters.",
         image: asset(
           "inner-reports-build-reports-around-your-own-rules-no-limits.webp",
         ),
       },
       {
-        label: "Always Current",
-        title: "Reports That Update With Your Data",
-        text: "Set up a report once and it reflects your live job, payment, and activity data going forward, no manual refresh or export required.",
+        label: "The exact report you need",
+        title: "Build what your business actually runs on, not what a platform decided to pre-build",
+        text: "Build what your business actually runs on, not what a platform decided to pre-build.",
         image: asset(
           "inner-reports-build-reports-around-your-own-rules-always-current.webp",
         ),
@@ -60,25 +60,25 @@ const proposalGroups = [
     icon: "chartLine" as const,
     items: [
       {
-        label: "Know What Is Working",
-        title: "Conversion Rate Reports",
-        text: "See exactly what percentage of leads turn into booked jobs, broken down however you need it, whether that is by rep, source, or territory.",
+        label: "Conversion and performance",
+        title: "Track conversion rates, rep performance by territory, and revenue by pipeline stage",
+        text: "Track conversion rates, rep performance by territory, and revenue by pipeline stage.",
         image: asset(
           "inner-reports-understand-your-sales-and-conversions-know-what-is-working.webp",
         ),
       },
       {
-        label: "Spot the Bottleneck",
-        title: "Reports on Leads by Status History",
-        text: "Build a report showing every lead that passed through a specific status, which is the fastest way to find out exactly where deals are stalling out.",
+        label: "Catch stalled deals",
+        title: "See leads that sat in a status too long and estimates sent but never signed",
+        text: "See leads that sat in a status too long and estimates sent but never signed.",
         image: asset(
           "inner-reports-understand-your-sales-and-conversions-spot-the-bottleneck.webp",
         ),
       },
       {
-        label: "Plan With Confidence",
-        title: "Forecasted Revenue Reports",
-        text: "Build a forward looking report on pipeline value and expected close dates, so you are planning around real numbers instead of a gut feeling.",
+        label: "Live from your boards",
+        title: "The numbers come straight from the pipeline, not a stale export",
+        text: "The numbers come straight from the pipeline, not a stale export.",
         image: asset(
           "inner-reports-understand-your-sales-and-conversions-plan-with-confidence.webp",
         ),
@@ -91,25 +91,25 @@ const proposalGroups = [
     icon: "chartCol" as const,
     items: [
       {
-        label: "Territory Insights",
-        title: "Rep Performance by Territory",
-        text: "Build a report comparing how reps perform in different territories, helping you figure out if results come from skill, territory quality, or both.",
+        label: "Time in the field",
+        title: "Report on time spent in the field and employee check-in and check-out times",
+        text: "Report on time spent in the field and employee check-in and check-out times.",
         image: asset(
           "inner-reports-track-your-field-teams-real-performance-territory-insights.webp",
         ),
       },
       {
-        label: "Time Accountability",
-        title: "Time Spent in the Field Reports",
-        text: "See exactly how much time each rep actually spends in the field versus sitting idle, based on real location and activity data, not their word for it.",
+        label: "Real activity, real locations",
+        title: "Field reports draw on actual activity and location data",
+        text: "Field reports draw on actual activity and location data.",
         image: asset(
           "inner-reports-track-your-field-teams-real-performance-time-accountability.webp",
         ),
       },
       {
-        label: "Workforce Oversight",
-        title: "Employee Check In and Check Out Reports",
-        text: "Build a report tracking when employees check in and out each day, giving you a clear record for payroll, accountability, and scheduling decisions.",
+        label: "Spot who's producing",
+        title: "See real rep performance so you can coach, reassign, or reward",
+        text: "See real rep performance so you can coach, reassign, or reward.",
         image: asset(
           "inner-reports-track-your-field-teams-real-performance-workforce-oversight.webp",
         ),
@@ -122,25 +122,25 @@ const proposalGroups = [
     icon: "dollar" as const,
     items: [
       {
-        label: "Cash Flow Clarity",
-        title: "Incoming and Outgoing Payment Reports",
-        text: "Build a report showing money coming in and money going out across all your jobs, so you always know where your cash position actually stands.",
+        label: "Money in and out",
+        title: "Track incoming and outgoing payments, what's due, and cash flow",
+        text: "Track incoming and outgoing payments, what's due, and cash flow.",
         image: asset(
           "inner-reports-stay-on-top-of-every-dollar-cash-flow-clarity.webp",
         ),
       },
       {
-        label: "Collections Tracking",
-        title: "Due and Paid Payment Reports",
-        text: "See which invoices are paid and which are still due at a glance, broken down by customer, job, or date range.",
+        label: "Live from work orders and invoices",
+        title: "Financial reports pull straight from the real records, always current",
+        text: "Financial reports pull straight from the real records, always current.",
         image: asset(
           "inner-reports-stay-on-top-of-every-dollar-collections-tracking.webp",
         ),
       },
       {
-        label: "Connected Financial Picture",
-        title: "Reports Tied to Jobs, Invoices, and Estimates",
-        text: "Every report pulls from the same connected data running your jobs, so the numbers always match what is actually happening on the ground.",
+        label: "Reports that act",
+        title: "Pair a report with the automation builder to trigger a follow-up when the numbers move",
+        text: "Pair a report with the automation builder to trigger a follow-up when the numbers move.",
         image: asset(
           "inner-reports-stay-on-top-of-every-dollar-connected-financial-picture.webp",
         ),
@@ -196,8 +196,8 @@ const faqs = [
     a: "Yes. You can create a report that shows every lead or job that passed through a specific status, which helps identify exactly where deals are stalling.",
   },
   {
-    q: "Does Knockio support revenue forecasting?",
-    a: "Yes. You can build forecasted revenue reports based on your pipeline data, giving you a realistic view of expected revenue going forward.",
+    q: "Can I report on revenue by pipeline stage?",
+    a: "Yes. You can build reports that show revenue by pipeline stage and status, giving you a clear view of where value sits in your pipeline right now.",
   },
   {
     q: "Can I track payments through reports?",
@@ -258,8 +258,9 @@ const jsonLd = {
       "@type": "WebPage",
       "@id": "https://knockio.com/features/reporting-software/#webpage",
       url: "https://knockio.com/features/reporting-software/",
-      name: title,
-      description,
+      name: "Reporting Software for Data Driven Decisions | Knockio",
+      description:
+        "Reporting Software for data driven decisions by Knockio tracks conversions, revenue, payments, and rep performance with custom reports.",
       isPartOf: { "@id": "https://knockio.com/#website" },
       about: { "@id": "https://knockio.com/field-service-crm/#software" },
     },
@@ -290,11 +291,64 @@ const jsonLd = {
     {
       "@type": "FAQPage",
       "@id": "https://knockio.com/features/reporting-software/#faq",
-      mainEntity: faqs.map((faq) => ({
-        "@type": "Question",
-        name: faq.q,
-        acceptedAnswer: { "@type": "Answer", text: faq.a },
-      })),
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Can I build a custom report instead of using a preset template?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Knockio lets you create custom rules and conditions to generate a report, so you are not limited to a fixed set of preset templates.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I build a report on lead conversion rates?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. You can create a conversion report broken down by rep, territory, source, or any other rule that matters to your business.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I see how much time each rep spends in the field?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Knockio can generate a report showing how much time each rep actually spends in the field, based on real activity and location data.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I build a report showing leads that went through a specific status?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. You can create a report that shows every lead or job that passed through a specific status, which helps identify exactly where deals are stalling.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I report on revenue by pipeline stage?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. You can build reports that show revenue by pipeline stage and status, giving you a clear view of where value sits in your pipeline right now.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I track payments through reports?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Knockio supports reports covering incoming, outgoing, due, and paid payments, giving you a clear and current financial picture at all times.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I track employee check in and check out times?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. You can build a report on employee check in and check out activity, useful for payroll, accountability, and scheduling decisions.",
+          },
+        },
+      ],
     },
   ],
 };
@@ -332,11 +386,13 @@ const tabIconClass =
             <p
               class="mb-10 max-w-[710px] text-base font-medium text-neutral-600 lg:text-lg"
             >
-              Knockio's reporting software for data-driven decisions helps you
-              see what is working and what needs fixing. Build custom reports
-              for conversion rates, territory performance, field activity,
-              payments, and stalled leads. Create the report once, and Knockio
-              keeps your data updated for smarter decisions.
+              You can't fix what you can't see. Knockio lets you build custom
+              reports on your own rules — conversion rates, territory
+              performance, field activity, payments, stalled leads — pulled live
+              from the same data already running your boards, work orders, and
+              invoices. Build the report once and it stays current, so you're
+              deciding on what's happening now, not a spreadsheet from last
+              month.
             </p>
             <a
               href="#cal-sec"
@@ -359,15 +415,14 @@ const tabIconClass =
             <p
               class="max-w-[720px] text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
-              Knockio lets home service businesses build custom reports based on
-              their own rules, covering things like conversion rates, rep
-              performance by territory, time spent in the field, leads that
-              passed through specific statuses, forecasted revenue, incoming and
-              outgoing payments, and employee check in and check out times.
-              Because the reports are built on custom rules rather than fixed
-              templates, you can create the exact report your business needs
+              Knockio lets you build custom reports on your own rules, covering
+              conversion rates, rep performance by territory, time spent in the
+              field, leads that passed through specific statuses, incoming and
+              outgoing payments, and employee check-in and check-out times.
+              Because the reports run on custom rules rather than fixed
+              templates, you can build the exact report your business needs
               instead of settling for whatever a platform like ServiceTitan or
-              Jobber decided to pre build.
+              Jobber decided to pre-build.
             </p>
           </div>
 
@@ -640,7 +695,7 @@ const tabIconClass =
           >
             Knockio's reports pull directly from the same job, payment, and
             activity data already living in your boards, work orders, and
-            invoices, so what you see in a report is exactly what is happening
+            invoices — so what you see in a report is exactly what's happening
             in your business right now, not a stale export from last month.
           </p>
         </div>
@@ -663,14 +718,14 @@ const tabIconClass =
             <h3
               class="relative mb-5 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
-              Instant Access to the Numbers That Matter
+              Instant access to the numbers that matter
             </h3>
             <p
               class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
               Build a report once and check it whenever you need it, with
               current data pulled straight from your jobs, payments, and field
-              activity, no manual exporting or spreadsheet rebuilding required.
+              activity — no manual exporting.
             </p>
             <ul
               class="relative mt-7 hidden grid gap-3 border-t border-solid border-neutral-200 pt-6"
@@ -717,15 +772,15 @@ const tabIconClass =
             <h3
               class="relative mb-5 text-[21px] font-semibold leading-[27px] text-white sm:text-2xl sm:leading-7"
             >
-              Reports That Drive Action, Not Just Awareness
+              Reports that drive action, not just awareness
             </h3>
             <p
               class="relative text-[15px] leading-6 text-white/75 sm:text-base sm:leading-6"
             >
-              Use Knockio's automation builder alongside your reports to trigger
-              follow ups automatically, like flagging a rep whose field time is
-              dropping or alerting your office when forecasted revenue for a
-              territory falls behind.
+              Use the automation builder alongside your reports to trigger
+              follow-ups automatically, like flagging a rep whose field time is
+              dropping or alerting the office when a territory's numbers fall
+              behind.
             </p>
             <ul
               class="relative mt-7 hidden grid gap-3 border-t border-solid border-white/15 pt-6"
@@ -768,15 +823,15 @@ const tabIconClass =
             <h3
               class="relative mb-5 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
-              Smarter Decisions Across Sales, Field, and Finance
+              Smarter decisions across sales, field, and finance
             </h3>
             <p
               class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
-              When owners and managers can see real conversion rates, real rep
-              performance, and a real financial picture, they make better
-              decisions faster, whether that is reassigning a territory,
-              adjusting staffing, or chasing down overdue invoices.
+              When owners can see real conversion rates, real rep performance,
+              and a real financial picture, they make better decisions faster —
+              reassigning a territory, adjusting staffing, or chasing an overdue
+              invoice.
             </p>
             <ul
               class="relative mt-7 hidden grid gap-3 border-t border-solid border-neutral-200 pt-6"
@@ -818,20 +873,13 @@ const tabIconClass =
             <h2
               class="mb-8 w-full max-w-3xl text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:max-w-none lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
             >
-              <span class="lg:whitespace-nowrap"
-                >Everything Teams Ask Before</span
-              >
-              <br class="hidden lg:block" />
-              Using Knockio Service CRM
+            Everything Teams Ask Before Using Knockio Service CRM
             </h2>
             <p
               class="mb-6 w-full max-w-3xl text-sm leading-6 font-normal text-neutral-800 sm:text-base sm:leading-7 md:mb-8 md:text-lg md:leading-8"
             >
-              Service teams need more than a basic contact list. Knockio
-              connects customer records, leads, jobs, estimates, schedules,
-              crews, invoices, payments, and field updates. It helps sales,
-              office, and field teams work from the same information, so jobs
-              move faster with less confusion.
+              Reports are only useful if they're current and yours. Here's how
+              Knockio's reporting works.
             </p>
           </div>
 

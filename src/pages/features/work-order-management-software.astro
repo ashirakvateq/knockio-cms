@@ -16,9 +16,9 @@ import {
   RefreshCw,
 } from "lucide-astro";
 
-const title = "Work Order Management Software for Home Services | Knockio";
+const title = "Work Order Management Software";
 const description =
-  "Run tasks, budgets, materials, and crews from one work order. See why contractors move job costing from spreadsheets and ServiceTitan to Knockio fast.";
+  "If your crews run on a text, a phone call, and a notepad, you're losing margin every week. Knockio's work orders pull tasks, schedules, materials, crews, and costs onto one record built from the approved estimate — so the office and the field read the same playbook.";
 
 const asset = (name: string) => `/assets/cfw/${name}`;
 
@@ -29,25 +29,25 @@ const proposalGroups = [
     icon: "clipboard" as const,
     items: [
       {
-        label: "Clear Direction",
-        title: "Tasks and Checklists for Every Job",
-        text: "Break a job into clear, assignable tasks so crews and subcontractors know exactly what needs to happen and in what order.",
+        label: "Build from a lead or an estimate",
+        title: "Start a work order from a lead, or from an approved estimate",
+        text: "Start a work order from a lead, or from an approved estimate so the scope and pricing carry over with nothing retyped — either way it stays connected to the job.",
         image: asset(
           "inner-work-order-plan-the-job-from-the-ground-up-clear-direction-new.webp",
         ),
       },
       {
-        label: "Time Management",
-        title: "Built In Scheduling",
-        text: "Assign dates and time slots to tasks and crews directly inside the work order, keeping the whole job on one visible timeline.",
+        label: "Tasks, scope, and priority",
+        title: "Lay out the tasks and scope of work, and set priority from Low to Urgent",
+        text: "Lay out the tasks and scope of work, and set priority from Low to Urgent so crews know what matters.",
         image: asset(
           "inner-work-order-plan-the-job-from-the-ground-up-time-management.webp",
         ),
       },
       {
-        label: "Total Flexibility",
-        title: "Assign to Internal Crews or Subcontractors",
-        text: "Work orders support both in house teams and subcontractors, so you can run jobs however your business is actually staffed.",
+        label: "Timeline and sub-schedules",
+        title: "Set start and end dates the whole team can see",
+        text: "Set start and end dates the whole team can see, and add named schedules inside the work order — each with its own team and due date — for the phases of a bigger job.",
         image: asset(
           "inner-work-order-plan-the-job-from-the-ground-up-total-flexibility.webp",
         ),
@@ -60,23 +60,23 @@ const proposalGroups = [
     icon: "dollar" as const,
     items: [
       {
-        label: "Job Costing",
-        title: "Detailed Budgets and Line Items",
-        text: "Break down labor, materials, and subcontractor costs so you know your real margin on every job, not just an optimistic guess from the estimate.",
+        label: "Budget vs. actual",
+        title: "Track spend against the budget while the job is still open",
+        text: "Track spend against the budget while the job is still open, so a bad number surfaces before it's too late.",
         image: asset("inner-work-order-protect-your-margins-job-costing.webp"),
       },
       {
-        label: "Profitability Tracking",
-        title: "Real Time Budget vs Actual View",
-        text: "Compare planned costs to actual spend as the job moves forward, so you catch overruns before they wreck your profit.",
+        label: "Job costing and labor",
+        title: "See labor and materials against the job for an accurate picture of profitability",
+        text: "See labor and materials against the job for an accurate picture of profitability, and share the cost summary with the customer by email when you want to.",
         image: asset(
           "inner-work-order-protect-your-margins-profitability-tracking.webp",
         ),
       },
       {
-        label: "No Surprises",
-        title: "Vendor Bills Linked to the Job",
-        text: "Attach vendor bills directly to the relevant work order, so every cost shows up in the job's total picture.",
+        label: "Vendor bills against the budget",
+        title: "Log bills from suppliers and subcontractors right on the work order",
+        text: "Log bills from suppliers and subcontractors right on the work order — with their own line items, dates, and notes — so what you owe out is tracked against the job budget.",
         image: asset("inner-work-order-protect-your-margins-no-surprises.webp"),
       },
     ],
@@ -87,25 +87,25 @@ const proposalGroups = [
     icon: "file" as const,
     items: [
       {
-        label: "Accurate Planning",
-        title: "Material Takeoffs From the Work Order",
-        text: "Generate a material takeoff straight from the job's scope, so you know exactly what is needed before the crew shows up.",
+        label: "Material takeoffs",
+        title: "Add a material takeoff from your catalog",
+        text: "Add a material takeoff from your catalog; Knockio checks stock — available, required, and reserved — and you can adjust stock right from the takeoff with a logged reason.",
         image: asset(
           "inner-work-order-keep-materials-moving-accurate-planning.webp",
         ),
       },
       {
-        label: "Inventory Sync",
-        title: "Takeoffs Linked to Inventory",
-        text: "Connect takeoffs to your product catalog to see instantly what is in stock and what needs to be ordered.",
+        label: "Purchase orders from a takeoff",
+        title: "Raise a PO straight from the takeoff when materials run short",
+        text: "Raise a PO straight from the takeoff when materials run short, and receive stock back into inventory.",
         image: asset(
           "inner-work-order-keep-materials-moving-inventory-sync.webp",
         ),
       },
       {
-        label: "Fast Procurement",
-        title: "Create Purchase Orders for Shortages",
-        text: "When a takeoff shows a shortage, generate a purchase order right from the work order to keep the job moving.",
+        label: "Stock-aware jobs",
+        title: "Because takeoffs tie to inventory, a job never gets scheduled against materials you don't actually have",
+        text: "Because takeoffs tie to inventory, a job never gets scheduled against materials you don't actually have.",
         image: asset(
           "inner-work-order-keep-materials-moving-fast-procurement.webp",
         ),
@@ -118,25 +118,25 @@ const proposalGroups = [
     icon: "bell" as const,
     items: [
       {
-        label: "Field Communication",
-        title: "Notes and Job Site Photos",
-        text: "Drop notes and upload photos directly to the work order, so crews and subcontractors have full context without a separate text thread.",
+        label: "Assign crew, sub, or vendor",
+        title: "Route the work to an internal crew, a subcontractor, or a vendor",
+        text: "Route the work to an internal crew, a subcontractor, or a vendor — or a mix.",
         image: asset(
           "inner-work-order-give-crews-full-job-context-field-communication.webp",
         ),
       },
       {
-        label: "Connected Records",
-        title: "Tied to Estimates, Invoices, and Inventory",
-        text: "Work orders are not floating documents. They connect to the job's estimate, invoice, and inventory for a complete picture.",
+        label: "Customer vs. team notes",
+        title: "Keep customer-facing notes for shared documents and internal notes for the crew",
+        text: "Keep customer-facing notes for shared documents and internal notes for the crew.",
         image: asset(
           "inner-work-order-give-crews-full-job-context-connected-records.webp",
         ),
       },
       {
-        label: "Accountability",
-        title: "Full Activity History per Work Order",
-        text: "Track every update, task completion, and note tied to the work order, giving owners a clear record of how the job actually went.",
+        label: "Files and photos on the job",
+        title: "Attach permits, photos, and documents so the field always has the latest information",
+        text: "Attach permits, photos, and documents so the field always has the latest information.",
         image: asset(
           "inner-work-order-give-crews-full-job-context-accountability.webp",
         ),
@@ -176,20 +176,32 @@ const trustBadges = [
 
 const faqs = [
   {
-    q: "Can work orders be assigned to subcontractors as well as internal crews?",
-    a: "Yes. Work orders support both internal crews and subcontractors or vendors, giving you flexibility no matter how your business is staffed.",
+    q: "Can I assign work to both my own crews and subcontractors?",
+    a: "Yes. A work order can go to an internal crew, a subcontractor, or a vendor — or a combination — so you can run jobs however your business is staffed.",
   },
   {
-    q: "What can a work order include?",
-    a: "A work order can include tasks, a detailed budget, materials and material takeoffs, notes, photos, a schedule, linked purchase orders, and vendor bills, everything needed to run the job from start to finish.",
+    q: "Does it track job cost and profit?",
+    a: "Yes. With budget vs. actual, labor, and materials tracked on the work order, owners get an accurate picture of profitability on every job.",
   },
   {
-    q: "Can I create a purchase order directly from a work order?",
-    a: "Yes. If a material takeoff shows a shortage, you can generate a purchase order directly from the work order to restock inventory or order materials for the job.",
+    q: "Can I create purchase orders from a work order?",
+    a: "Yes. Raise a purchase order straight from the material takeoff when stock runs short, and receive new inventory without switching systems.",
   },
   {
-    q: "Are work orders connected to invoicing and payments?",
-    a: "Yes. Work orders are part of Knockio's connected job workflow, so costs, materials, and progress tracked on a work order tie directly into your estimates, invoices, and payment tracking.",
+    q: "Can I see job progress without calling the field?",
+    a: "Yes. Tasks completed, budget spent, and materials ordered are all visible on the work order, so owners and PMs check status without a phone call.",
+  },
+  {
+    q: "Can I keep some notes internal?",
+    a: "Yes. Work orders have separate customer-facing notes (which can appear on shared documents) and internal team notes for reminders and instructions.",
+  },
+  {
+    q: "Can I create a work order from a lead, or only from an estimate?",
+    a: "Either. You can start a work order from a lead directly, or from an approved estimate so the scope and pricing carry straight over — whichever fits the job. It stays connected to that lead or estimate the whole way through.",
+  },
+  {
+    q: "Can I track what I owe suppliers and subcontractors on the job?",
+    a: "Yes. Each work order has a vendor bills section that logs bills from suppliers and subcontractors — with their own line items, dates, and notes — tracked against the work order's budget, so your cost picture stays complete.",
   },
 ];
 
@@ -317,12 +329,12 @@ const tabIconClass =
             <p
               class="mb-10 max-w-[710px] text-base font-medium text-neutral-600 lg:text-lg"
             >
-              If your crews are working off a text message, a phone call, and a
-              notepad, you are leaving money on the table every single week.
-              Knockio's work orders bring tasks, budgets, materials, schedules,
-              and crew assignments into one place, so your office and your field
-              teams are always working from the exact same playbook, whether you
-              run your own crews, subcontractors, or both.
+              If your crews run on a text, a phone call, and a
+              notepad, you're losing margin every week. Knockio's work orders
+              pull tasks, schedules, materials, crews, and costs onto one record
+              built from the approved estimate — so the office and the field
+              read the same playbook, whether you run your own crews, subs, or
+              both, and you can see the profit on every job.
             </p>
             <a
               href="#cal-sec"
@@ -345,14 +357,13 @@ const tabIconClass =
             <p
               class="max-w-[720px] text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
-              Work order management software for contractors should let you
-              assign tasks and schedules to crews or subcontractors, track a
-              detailed job budget against actual spend, generate material
-              takeoffs linked to inventory, create purchase orders for
-              shortages, and attach notes, photos, and vendor bills, all tied to
-              the same job. Knockio brings every one of these into a single
-              connected work order, which is more depth than most platforms
-              offer without an expensive add on tier.
+              It should let you assign tasks and schedules to crews or
+              subcontractors, track a detailed budget against actual spend,
+              generate material takeoffs linked to inventory, create purchase
+              orders for shortages, and attach notes, photos, and vendor bills —
+              all tied to the same job. Knockio brings every one of these into a
+              single connected work order, which is more depth than most
+              platforms offer without an expensive add-on tier.
             </p>
           </div>
 
@@ -611,15 +622,15 @@ const tabIconClass =
           <h2
             class="mb-6 text-center text-[31px] font-bold leading-[39px] text-neutral-950 sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
           >
-            Manage Production From the First Task to the Final Walkthrough
+              Manage Production From the First Task to the Final Walkthrough
           </h2>
           <p
             class="mx-auto max-w-[800px] text-base leading-6 text-neutral-700 sm:text-lg sm:leading-6"
           >
-            Knockio connects work orders to the rest of the job, including
-            estimates, invoices, inventory, and payments, so production teams
-            and office staff are always looking at the exact same information,
-            no matter how complex the project gets.
+            Knockio connects work orders to the rest of the job — estimates,
+            invoices, inventory, and payments — so production teams and office
+            staff always look at the same information, no matter how complex
+            the project gets.
           </p>
         </div>
 
@@ -641,14 +652,17 @@ const tabIconClass =
             <h3
               class="relative mb-5 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
-              Instant Job Progress Visibility
+              Track progress on a visual board
             </h3>
             <p
               class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
-              Owners and project managers can see exactly where every work order
-              stands, including tasks completed, budget spent, and materials
-              ordered, without calling the field for an update.
+              Work orders live in a List View for detail or a Board View for
+              progress — drag a card across Draft, Planned, Scheduled, In
+              Progress, and Completed, and filter by team member, date, or
+              status to find any job fast. Owners and PMs see exactly where
+              every job stands — tasks completed, budget spent, materials
+              ordered — without calling the field.
             </p>
             <ul
               class="relative mt-7 hidden grid gap-3 border-t border-solid border-neutral-200 pt-6"
@@ -689,15 +703,14 @@ const tabIconClass =
             <h3
               class="relative mb-5 text-[21px] font-semibold leading-[27px] text-white sm:text-2xl sm:leading-7"
             >
-              Crew and Subcontractor Coordination
+              Crew and subcontractor coordination
             </h3>
             <p
               class="relative text-[15px] leading-6 text-white/75 sm:text-base sm:leading-6"
             >
-              Assign work orders to internal crews, subcontractors, or vendors
-              and notify them automatically of schedule changes, new tasks, or
-              notes, keeping remodeling, general contracting, and home security
-              install teams on the same page.
+              Assign work to internal crews, subs, or vendors and notify them
+              automatically of schedule changes, new tasks, or notes — keeping
+              remodeling, GC, and install teams on the same page.
             </p>
             <ul
               class="relative mt-7 hidden grid gap-3 border-t border-solid border-white/15 pt-6"
@@ -734,14 +747,14 @@ const tabIconClass =
             <h3
               class="relative mb-5 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
-              Improved Accountability and Job Costing
+              Accountability and job costing
             </h3>
             <p
               class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
-              With budgets, materials, and labor tracked in one place, owners
-              get an accurate picture of job profitability, helping every home
-              service business protect margins on every job, big or small.
+              With budget, materials, and labor tracked in one place, owners
+              get an accurate picture of job profitability and protect margins
+              on every job.
             </p>
             <ul
               class="relative mt-7 hidden grid gap-3 border-t border-solid border-neutral-200 pt-6"
@@ -775,20 +788,12 @@ const tabIconClass =
             <h2
               class="mb-8 w-full max-w-3xl text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:max-w-none lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
             >
-              <span class="lg:whitespace-nowrap"
-                >Everything Teams Ask Before</span
-              >
-              <br class="hidden lg:block" />
-              Using Knockio Service CRM
+            Everything Teams Ask Before Using Knockio Service CRM
             </h2>
             <p
               class="mb-6 w-full max-w-3xl text-sm leading-6 font-normal text-neutral-800 sm:text-base sm:leading-7 md:mb-8 md:text-lg md:leading-8"
             >
-              Service teams need more than a basic contact list. Knockio
-              connects customer records, leads, jobs, estimates, schedules,
-              crews, invoices, payments, and field updates. It helps sales,
-              office, and field teams work from the same information, so jobs
-              move faster with less confusion.
+              A work order is where margin is won or lost, so here's what contractors ask most before moving production into Knockio.
             </p>
           </div>
 

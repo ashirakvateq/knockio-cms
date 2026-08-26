@@ -15,9 +15,9 @@ import {
   Users,
 } from "lucide-astro";
 
-const title = "Territory Management Software for Canvassing | Knockio";
+const title = "Territory Management Software";
 const description =
-  "Territory Management Software by Knockio helps canvassing teams map, assign, and track sales territories to prevent overlap and track performance.";
+  "A territory is only useful if two reps never knock the same house and every rep knows exactly where their zone ends. Knockio lets you draw territories on a map or auto-build them from ZIP codes, assign them to individual reps or whole teams, and watch coverage fill in live as your crew works.";
 
 const asset = (name: string) => `/assets/cfw/${name}`;
 
@@ -28,25 +28,25 @@ const proposalGroups = [
     icon: "map" as const,
     items: [
       {
-        label: "Visual Planning",
-        title: "Map Based Territory Drawing",
-        text: "Draw custom territory boundaries directly on a map to match neighborhoods, zip codes, or sales regions for your roofing or solar canvassing teams.",
+        label: "Draw or auto-build",
+        title: "Draw a boundary on the map by hand, or auto-generate one from a ZIP code, city, or region",
+        text: "Draw a boundary on the map by hand, or auto-generate one from a ZIP code, city, or region, and color-code it so overlapping zones stay readable.",
         image: asset(
           "inner-territory-management-draw-and-assign-territories-with-ease-visual-planning.webp",
         ),
       },
       {
-        label: "Clear Ownership",
-        title: "Assign Territories to Individual Reps or Teams",
-        text: "Give each rep or team a defined area to work, so everyone knows exactly where their responsibility starts and ends.",
+        label: "Assign to reps, teams, and campaigns",
+        title: "Attach a territory to a rep or a whole team, and tie it to a campaign",
+        text: "Attach a territory to a rep or a whole team, and tie it to a campaign — the layer that lets several teams run the same market cleanly, instead of one flat map everyone shares.",
         image: asset(
           "inner-territory-management-draw-and-assign-territories-with-ease-clear-ownership.webp",
         ),
       },
       {
-        label: "Flexible Structure",
-        title: "Unlimited Custom Territories",
-        text: "Create as many territories as your business needs, whether you are running one city or expanding across multiple regions.",
+        label: "Preload the door list",
+        title: "Run Find Properties and Knockio scans the territory for the addresses inside it",
+        text: "Run Find Properties and Knockio scans the territory for the addresses inside it, flagging how many need review, so reps start on a real list, not a blank map.",
         image: asset(
           "inner-territory-management-draw-and-assign-territories-with-ease-flexible-structure.webp",
         ),
@@ -59,25 +59,25 @@ const proposalGroups = [
     icon: "users" as const,
     items: [
       {
-        label: "No Wasted Effort",
-        title: "Prevent Overlapping Rep Activity",
-        text: "When territories are clearly assigned, reps stop accidentally re knocking doors another rep already worked that week.",
+        label: "Boundaries with flagged strays",
+        title: "Each rep or team owns a defined patch of the map",
+        text: "Each rep or team owns a defined patch of the map, knocked doors layer onto the boundary, and an automation flags activity logged outside an assigned zone — so the same street never gets worked twice.",
         image: asset(
           "inner-territory-management-eliminate-double-knocks-no-wasted-effort.webp",
         ),
       },
       {
-        label: "Activity Visibility",
-        title: "See Knocked Doors Within Each Territory",
-        text: "View pin drops and lead activity layered on top of territory boundaries to understand exactly what has been worked and what has not.",
+        label: "Separate overlapping teams with campaigns",
+        title: "When two teams share or overlap an area, run each as its own campaign",
+        text: "When two teams share or overlap an area, run each as its own campaign; every lead is tagged to the campaign it came from, so two teams' pipelines never blur together.",
         image: asset(
           "inner-territory-management-eliminate-double-knocks-activity-visibility.webp",
         ),
       },
       {
-        label: "Fair Distribution",
-        title: "Balance Workload Across Reps",
-        text: "Spot territories that are over or under worked and rebalance assignments so opportunity gets distributed fairly across your team.",
+        label: "Control who sees whose leads",
+        title: "Role-based data access decides whether a team sees only its own campaign's leads",
+        text: "Role-based data access decides whether a team sees only its own campaign's leads or across teams — wall them off completely, or let a manager see everything. Flat-territory tools can't separate overlapping teams like this.",
         image: asset(
           "inner-territory-management-eliminate-double-knocks-fair-distribution.webp",
         ),
@@ -90,25 +90,25 @@ const proposalGroups = [
     icon: "trending" as const,
     items: [
       {
-        label: "Data Driven Decisions",
-        title: "Territory Based Lead and Sales Reporting",
-        text: "See which territories are generating the most leads and closed jobs, which is useful for pest control, solar, and home security companies expanding into new areas.",
+        label: "Live coverage status",
+        title: "Every area reads as covered, in progress, or still open",
+        text: "Every area reads as covered, in progress, or still open, updated in real time as pins drop.",
         image: asset(
           "inner-territory-management-visualize-sales-performance-by-area-data-driven-decisions.webp",
         ),
       },
       {
-        label: "Smarter Expansion",
-        title: "Identify High Opportunity Areas",
-        text: "Spot underperforming or untapped territories to prioritize for future canvassing pushes or rep reassignment.",
+        label: "Reporting by territory, team, and campaign",
+        title: "Break leads and sales performance down by area, team, or campaign",
+        text: "Break leads and sales performance down by area, team, or campaign to see which crews and which blocks are producing.",
         image: asset(
           "inner-territory-management-visualize-sales-performance-by-area-smarter-expansion.webp",
         ),
       },
       {
-        label: "Performance Tracking",
-        title: "Compare Rep Performance by Territory",
-        text: "Understand whether results come from rep skill, territory quality, or both, which helps with coaching and territory planning.",
+        label: "Real-time map updates",
+        title: "Boundaries, assigned reps, and activity all update live on one map",
+        text: "Boundaries, assigned reps, and activity all update live on one map as the team works the field.",
         image: asset(
           "inner-territory-management-visualize-sales-performance-by-area-performance-tracking.webp",
         ),
@@ -148,20 +148,28 @@ const trustBadges = [
 
 const faqs = [
   {
-    q: "Can I create custom territory shapes on a map?",
-    a: "Yes. Knockio lets you draw custom territory boundaries directly on a map to match your business's sales regions.",
+    q: "How does it stop two reps knocking the same house?",
+    a: "Each rep or team gets a clearly bounded area, and every knocked door layers onto that boundary on the map. Managers can see what's been covered and reassign open pockets, so the same street never gets worked twice.",
   },
   {
-    q: "Can territories be assigned to multiple reps?",
-    a: "Yes. You can assign one or more reps or teams to a single territory, depending on how your sales operation is structured.",
+    q: "Can I auto-build territories from ZIP codes?",
+    a: "Yes. Draw a boundary by hand or generate one automatically from a ZIP code, city, or region, then fine-tune it on the map.",
   },
   {
-    q: "How does Knockio help prevent double knocking?",
-    a: "By assigning clear territory boundaries and visualizing knocked door activity within those boundaries, reps can avoid working areas already covered by someone else.",
+    q: "Can more than one rep work the same territory?",
+    a: "Yes. A territory can go to an individual rep or a team, and you can put several reps on a single large area when you need coverage fast.",
   },
   {
-    q: "Can I see sales performance by territory?",
-    a: "Yes. Knockio provides territory based reporting so you can see leads, jobs, and sales activity broken down by area.",
+    q: "How do I see which areas are still open?",
+    a: "Every territory shows a coverage state — covered, in progress, or open — that updates live as pins drop, so you always know where there's ground left to cover.",
+  },
+  {
+    q: "Can I compare performance between territories?",
+    a: "Yes. Territory-based reporting breaks leads and sales performance down by area, so you can see which blocks are producing and which need a different rep or approach.",
+  },
+  {
+    q: "Can two teams work the same area without seeing each other's leads?",
+    a: "Yes — this is where campaigns come in. A territory belongs to a campaign, and you assign each team's users to their own. Leads are tagged to the campaign they're created in, so you always know which team they came from, and role-based data access controls whether a team sees other teams' leads in the same area or only its own — something most flat-territory tools can't do.",
   },
 ];
 
@@ -288,10 +296,14 @@ const tabIconClass =
             <p
               class="mb-10 max-w-[710px] text-base font-medium text-neutral-600 lg:text-lg"
             >
-              Knockio's Territory Management Software helps teams draw, assign,
-              and visualize sales territories on a map. Prevent two reps from
-              visiting the same house and wasting payroll. See which areas are
-              covered, in progress, or still open for new sales opportunities.
+              A territory is only useful if two reps never knock the same house
+              and every rep knows exactly where their zone ends. Knockio lets you
+              draw territories on a map or auto-build them from ZIP codes,
+              assign them to individual reps or whole teams, and watch coverage
+              fill in live as your crew works — so payroll goes to new doors,
+              not repeat ones. And when multiple teams share an area, campaigns
+              keep each team's leads separated, so nobody's stepping on another
+              crew's pipeline.
             </p>
             <a
               href="#cal-sec"
@@ -309,18 +321,18 @@ const tabIconClass =
               class="mb-4 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
               How does territory management software prevent double knocking in
-              door to door sales?
+              door-to-door sales?
             </h3>
             <p
               class="max-w-[720px] text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
-              Territory management software prevents double knocking by giving
-              each rep or team a clearly defined, map based area to work, then
-              layering knocked door activity on top of those boundaries so
-              managers can see exactly what has been covered. Knockio lets you
-              draw unlimited custom territories, assign them to individual reps
-              or teams, and view territory based reporting on leads and sales
-              performance by area.
+              It prevents double knocking by giving each rep or team a clearly
+              defined, map-based area to work, then layering knocked-door
+              activity on top of those boundaries so managers see exactly what
+              has been covered. Knockio lets you draw unlimited custom
+              territories, assign them to individual reps or teams, and pull
+              territory-based reporting on leads and sales performance by area —
+              so overlap is obvious and easy to shut down before it costs you.
             </p>
           </div>
 
@@ -578,9 +590,10 @@ const tabIconClass =
           <p
             class="mx-auto max-w-[800px] text-base leading-6 text-neutral-700 sm:text-lg sm:leading-6"
           >
-            Territories are not just lines on a map. In Knockio, they connect
+            Territories aren't just lines on a map. In Knockio they connect
             directly to your leads, jobs, and field activity, giving owners and
-            sales managers a complete picture of how each area is performing.
+            sales managers a complete picture of how each area is performing —
+            and where to send reps next.
           </p>
         </div>
 
@@ -602,13 +615,14 @@ const tabIconClass =
             <h3
               class="relative mb-5 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
-              Instant Territory Visibility
+              Coverage you can see at a glance
             </h3>
             <p
               class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
-              See territory boundaries, assigned reps, and activity all on one
-              map, updated in real time as your team works the field.
+              See boundaries, assigned reps, and knocked-door activity on one
+              live map, so you always know which streets are covered and which
+              are still open.
             </p>
             <ul
               class="relative mt-7 hidden grid gap-3 border-t border-solid border-neutral-200 pt-6"
@@ -655,14 +669,14 @@ const tabIconClass =
             <h3
               class="relative mb-5 text-[21px] font-semibold leading-[27px] text-white sm:text-2xl sm:leading-7"
             >
-              Automated Territory Alerts
+              Alerts that catch waste early
             </h3>
             <p
               class="relative text-[15px] leading-6 text-white/75 sm:text-base sm:leading-6"
             >
-              Use Knockio's automation builder to flag when activity gets logged
-              outside a rep's assigned territory, helping catch double knocks or
-              misassigned leads early.
+              Use the automation builder to flag activity logged outside a rep's
+              territory, so double-knocks and misassigned leads get caught
+              before they cost payroll.
             </p>
             <ul
               class="relative mt-7 hidden grid gap-3 border-t border-solid border-white/15 pt-6"
@@ -705,14 +719,14 @@ const tabIconClass =
             <h3
               class="relative mb-5 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
-              A More Motivated, Organized Sales Team
+              A more motivated, organized team
             </h3>
             <p
               class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
               When reps know exactly which area is theirs, they work it more
-              thoroughly and competitively, helping solar, roofing, and pest
-              control businesses get more out of every canvassing day.
+              thoroughly and competitively — and territory reporting shows you
+              who's producing.
             </p>
             <ul
               class="relative mt-7 hidden grid gap-3 border-t border-solid border-neutral-200 pt-6"
@@ -754,20 +768,14 @@ const tabIconClass =
             <h2
               class="mb-8 w-full max-w-3xl text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
             >
-              <span class="lg:whitespace-nowrap"
-                >Everything Teams Ask Before</span
-              >
-              <br class="hidden lg:block" />
-              Using Knockio Service CRM
+            Everything Teams Ask Before Using Knockio Service CRM
             </h2>
             <p
               class="mb-6 w-full max-w-3xl text-sm leading-6 font-normal text-neutral-800 sm:text-base sm:leading-7 md:mb-8 md:text-lg md:leading-8"
             >
-              Service teams need more than a basic contact list. Knockio
-              connects customer records, leads, jobs, estimates, schedules,
-              crews, invoices, payments, and field updates. It helps sales,
-              office, and field teams work from the same information, so jobs
-              move faster with less confusion.
+              Territories touch payroll, coverage, and morale, so it's worth
+              knowing how they work before you commit. Here's what canvassing
+              teams ask most.
             </p>
           </div>
 

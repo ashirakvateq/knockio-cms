@@ -16,9 +16,9 @@ import {
   RefreshCw,
 } from "lucide-astro";
 
-const title = "GPS Tracking Software for Sales Reps & Dispatchers | Knockio";
+const title = "GPS Tracking Software for Field Staff";
 const description =
-  "GPS tracking software by Knockio shows live sales rep and dispatcher location, full movement history, and pin drop distance verification in the field.";
+  "\"Were you actually there?\" is a question no owner should have to guess at. Knockio shows each rep's live location on the map, keeps a history of where they went, and — the part most tools skip — records how far their phone was from the property the moment they logged a knock or a job update.";
 
 const asset = (name: string) => `/assets/cfw/${name}`;
 
@@ -29,25 +29,25 @@ const proposalGroups = [
     icon: "map" as const,
     items: [
       {
-        label: "Connected to the Job",
-        title: "GPS Tracking Connected to the Job",
-        text: "See field activity in the same place as the job itself, so location history is not floating in a separate app disconnected from the work your team is doing.",
+        label: "Tied to the job",
+        title: "Location data sits on the actual lead and job records",
+        text: "Location data sits on the actual lead and job records, not floating in a separate tracking app disconnected from the work.",
         image: asset(
           "inner-gps-tracking-built-for-field-first-businesses-connected-to-the-job.webp",
         ),
       },
       {
-        label: "Customer Confidence",
-        title: "Arrival Proof That Builds Trust",
-        text: "Show customers when your rep or technician arrived, helping reduce disputes and giving them more confidence that your team is where they said they would be.",
+        label: "Native mobile apps",
+        title: "Tracking runs in Knockio's iOS and Android apps",
+        text: "Tracking runs in Knockio's iOS and Android apps built for reps who spend the day in the field.",
         image: asset(
           "inner-gps-tracking-built-for-field-first-businesses-customer-confidence.webp",
         ),
       },
       {
-        label: "Safety and Support",
-        title: "Better Safety and Support in the Field",
-        text: "Know where your team members are during the workday so managers can respond faster when someone needs help or something goes wrong in the field.",
+        label: "One place for field and office",
+        title: "Managers see field activity in the same system that runs scheduling, jobs, and invoices",
+        text: "Managers see field activity in the same system that runs scheduling, jobs, and invoices.",
         image: asset(
           "inner-gps-tracking-built-for-field-first-businesses-safety-and-support.webp",
         ),
@@ -60,25 +60,25 @@ const proposalGroups = [
     icon: "crosshair" as const,
     items: [
       {
-        label: "Real-Time Visibility",
-        title: "Live Map Visibility for Every Rep",
-        text: "See where your field team is right now instead of waiting for end of day updates, making it easier to manage jobs as they happen.",
+        label: "Live location on the map",
+        title: "Reps positions update in real time",
+        text: "Reps positions update in real time, so dispatch always has current information when assigning work.",
         image: asset(
           "inner-gps-tracking-know-where-your-team-is-right-now-real-time-visibility.webp",
         ),
       },
       {
-        label: "Smarter Dispatch",
-        title: "Smarter Dispatch Decisions",
-        text: "Send the closest available rep to the next stop or urgent job instead of guessing who is nearby.",
+        label: "See who's nearest",
+        title: "Spot which rep is closest and available on the map",
+        text: "Spot which rep is closest and available on the map, so you can assign an urgent call to the right person instead of phoning around to find who's free.",
         image: asset(
           "inner-gps-tracking-know-where-your-team-is-right-now-smarter-dispatch.webp",
         ),
       },
       {
-        label: "Team Oversight",
-        title: "Real Oversight Without Constant Check-Ins",
-        text: "Managers can verify where people are and how routes are progressing without calling reps every hour for updates.",
+        label: "No end-of-day guesswork",
+        title: "See who's active and where without waiting for a rep to check in",
+        text: "See who's active and where without waiting for a rep to check in.",
         image: asset(
           "inner-gps-tracking-know-where-your-team-is-right-now-team-oversight.webp",
         ),
@@ -91,25 +91,25 @@ const proposalGroups = [
     icon: "history" as const,
     items: [
       {
-        label: "Complete Picture",
-        title: "A Complete View of the Workday",
-        text: "See the full route and movement history across the day, not just a single point on a map, so you understand what actually happened.",
+        label: "Movement history",
+        title: "Review any rep's location and movement by day or time range",
+        text: "Review any rep's location and movement by day or time range, after the fact.",
         image: asset(
           "inner-gps-tracking-understand-the-full-day-not-just-a-snapshot-complete-picture.webp",
         ),
       },
       {
-        label: "Operational Insight",
-        title: "Operational Insight From Real Movement Data",
-        text: "Identify route inefficiencies, unnecessary drive time, or missed coverage areas by reviewing how the day really played out.",
+        label: "Spot the outliers",
+        title: "See who's spending 90 minutes on a 45-minute stop",
+        text: "See who's spending 90 minutes on a 45-minute stop, or drifting off route.",
         image: asset(
           "inner-gps-tracking-understand-the-full-day-not-just-a-snapshot-operational-insight.webp",
         ),
       },
       {
-        label: "Time Management",
-        title: "Better Time Management Across the Team",
-        text: "Compare travel time, time on site, and time between stops so you can make scheduling and staffing decisions with more confidence.",
+        label: "Tied to the record",
+        title: "History connects to the jobs and leads worked",
+        text: "History connects to the jobs and leads worked, so activity and outcomes line up.",
         image: asset(
           "inner-gps-tracking-understand-the-full-day-not-just-a-snapshot-time-management.webp",
         ),
@@ -122,25 +122,25 @@ const proposalGroups = [
     icon: "check" as const,
     items: [
       {
-        label: "Accountability",
-        title: "Accountability Based on Real Activity",
-        text: "Verify field activity using actual location history instead of relying on memory or manual notes from the rep.",
+        label: "Pin-drop distance check",
+        title: "Knockio measures device-to-property distance at the moment an activity is logged",
+        text: "Knockio measures device-to-property distance at the moment an activity is logged, so a windshield \"knock\" stands out.",
         image: asset(
           "inner-gps-tracking-verify-field-activity-not-just-claims-accountability.webp",
         ),
       },
       {
-        label: "Fair Performance Reviews",
-        title: "Fairer Performance Reviews",
-        text: "Use real route and activity data to review performance more fairly, separating effort and consistency from guesswork.",
+        label: "Automated flags",
+        title: "Pair location with the automation builder to notify a manager when a pin lands far from the address",
+        text: "Pair location with the automation builder to notify a manager when a pin lands far from the address.",
         image: asset(
           "inner-gps-tracking-verify-field-activity-not-just-claims-fair-performance-reviews.webp",
         ),
       },
       {
-        label: "Honest Reporting",
-        title: "More Honest Reporting Across the Team",
-        text: "GPS based records help create cleaner internal reporting, reducing inflated claims and making conversations about performance more objective.",
+        label: "Honest reporting",
+        title: "When reps know activity is verified against real location data, the numbers coming back from the field get more trustworthy",
+        text: "When reps know activity is verified against real location data, the numbers coming back from the field get more trustworthy.",
         image: asset(
           "inner-gps-tracking-verify-field-activity-not-just-claims-honest-reporting.webp",
         ),
@@ -180,20 +180,24 @@ const trustBadges = [
 
 const faqs = [
   {
-    q: "Can I see where my reps are in real time?",
-    a: "Yes. Knockio's Live Tracking shows the current GPS location of every rep on a live map.",
+    q: "How does Knockio confirm a rep actually visited a property?",
+    a: "It measures the distance between the rep's device and the property address at the moment they log the activity. A large distance gets flagged — a clear signal between a real knock and activity logged from the truck.",
   },
   {
-    q: "Can I see where reps have been in the past?",
-    a: "Yes. Knockio keeps a history of each rep's location and movement, so you can review past activity by day or time range.",
+    q: "Can I review where a rep went earlier in the day?",
+    a: "Yes. Knockio keeps a movement history for each rep that you can review by day or by time range.",
   },
   {
-    q: "How does Knockio verify if a pin drop is legitimate?",
-    a: "When a rep drops a pin for an activity like a knocked door, Knockio calculates the distance between the device's location and the property address at that time, helping you identify pins dropped far from the actual location.",
+    q: "What happens if a pin is dropped far from the house?",
+    a: "The far drop is flagged, and you can pair it with the automation builder to notify a manager automatically whenever a pin lands well away from the property address.",
   },
   {
-    q: "Is live tracking connected to jobs and leads?",
-    a: "Yes. Location and pin drop data are tied to the relevant job or lead record, giving you full context alongside activity history.",
+    q: "Does tracking help with dispatch, not just accountability?",
+    a: "Yes. Live locations let dispatchers assign the closest available rep to an urgent job, cutting drive time on emergencies.",
+  },
+  {
+    q: "Who can see location data?",
+    a: "Visibility is role-based, so you control which roles can view live tracking and movement history.",
   },
 ];
 
@@ -320,10 +324,12 @@ const tabIconClass =
             <p
               class="mb-10 max-w-[710px] text-base font-medium text-neutral-600 lg:text-lg"
             >
-              Knockio&rsquo;s GPS Tracking Software shows each rep&rsquo;s
-              real-time location, full movement history, and pin drop distance,
-              so you can verify real field visits. Know who is working, where
-              they went, and which visits actually happened.
+              "Were you actually there?" is a question no owner should have to
+              guess at. Knockio shows each rep's live location on the map, keeps
+              a history of where they went, and — the part most tools skip —
+              records how far their phone was from the property the moment they
+              logged a knock or a job update. You know who is working, where,
+              and which visits really happened.
             </p>
             <a
               href="#cal-sec"
@@ -340,19 +346,18 @@ const tabIconClass =
             <h3
               class="mb-4 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
-              How does GPS tracking software verify if a field rep actually
-              visited a property?
+              How does GPS tracking software verify a field rep actually visited
+              a property?
             </h3>
             <p
               class="max-w-[720px] text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
-              Knockio&rsquo;s GPS tracking software calculates the distance
-              between a rep&rsquo;s device location and the property address at
-              the exact moment they log an activity, such as dropping a pin for
-              a knocked door. This pin drop distance check flags activity logged
-              far from the actual property, helping managers confirm field reps
-              are working real locations rather than reporting activity from a
-              vehicle or somewhere else entirely.
+              Knockio calculates the distance between a rep's device location
+              and the property address at the exact moment they log an activity,
+              such as dropping a pin for a knocked door. That distance check
+              flags activity logged far from the actual property, helping
+              managers confirm reps are working real locations instead of
+              reporting from a vehicle or somewhere else entirely.
             </p>
           </div>
 
@@ -620,10 +625,10 @@ const tabIconClass =
           <p
             class="mx-auto max-w-[800px] text-base leading-6 text-neutral-700 sm:text-lg sm:leading-6"
           >
-            From dispatching a same day HVAC repair to verifying a roofing
-            canvasser&rsquo;s door knocking activity, Knockio&rsquo;s Live
-            Tracking gives owners and managers the visibility they need to run
-            an efficient, accountable field operation.
+            From dispatching a same-day HVAC repair to verifying a roofing
+            canvasser's door-knocking, Knockio's live tracking gives owners and
+            managers the visibility to run an efficient, accountable field
+            operation — without micromanaging.
           </p>
         </div>
 
@@ -645,14 +650,13 @@ const tabIconClass =
             <h3
               class="relative mb-5 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
-              Instant Location Updates
+              Real-time location for dispatch
             </h3>
             <p
               class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
-              Rep locations update in real time on the map, so dispatchers
-              always have current information when assigning jobs or responding
-              to urgent calls.
+              Rep locations update live on the map, so dispatchers have current
+              information when assigning jobs or responding to urgent calls.
             </p>
             <ul
               class="relative mt-7 hidden grid gap-3 border-t border-solid border-neutral-200 pt-6"
@@ -699,14 +703,14 @@ const tabIconClass =
             <h3
               class="relative mb-5 text-[21px] font-semibold leading-[27px] text-white sm:text-2xl sm:leading-7"
             >
-              Automated Flags for Suspicious Pin Drops
+              Automated flags for suspicious drops
             </h3>
             <p
               class="relative text-[15px] leading-6 text-white/75 sm:text-base sm:leading-6"
             >
-              Combine location verification with Knockio&rsquo;s automation
-              builder to flag or notify managers when a pin gets dropped
-              significantly far from the property address.
+              Combine location verification with the automation builder to
+              notify managers when a pin gets dropped far from the property
+              address.
             </p>
             <ul
               class="relative mt-7 hidden grid gap-3 border-t border-solid border-white/15 pt-6"
@@ -749,14 +753,14 @@ const tabIconClass =
             <h3
               class="relative mb-5 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
-              Improved Trust Between Office and Field
+              Trust between office and field
             </h3>
             <p
               class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
-              When reps know activity gets verified against real location data,
-              it encourages honest reporting and gives office staff confidence
-              in the numbers coming back from the field.
+              When activity is verified against real location data, honest
+              reporting is rewarded and office staff can rely on the numbers
+              coming in.
             </p>
             <ul
               class="relative mt-7 hidden grid gap-3 border-t border-solid border-neutral-200 pt-6"
@@ -798,20 +802,13 @@ const tabIconClass =
             <h2
               class="mb-8 w-full max-w-3xl text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:max-w-none lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
             >
-              <span class="lg:whitespace-nowrap"
-                >Everything Teams Ask Before</span
-              >
-              <br class="hidden lg:block" />
-              Using Knockio Service CRM
+            Everything Teams Ask Before Using Knockio Service CRM
             </h2>
             <p
               class="mb-6 w-full max-w-3xl text-sm leading-6 font-normal text-neutral-800 sm:text-base sm:leading-7 md:mb-8 md:text-lg md:leading-8"
             >
-              Service teams need more than a basic contact list. Knockio
-              connects customer records, leads, jobs, estimates, schedules,
-              crews, invoices, payments, and field updates. It helps sales,
-              office, and field teams work from the same information, so jobs
-              move faster with less confusion.
+              Location data is sensitive and useful in equal measure, so here's
+              exactly how Knockio's tracking works before you roll it out.
             </p>
           </div>
 

@@ -15,9 +15,9 @@ import {
   Shield,
 } from "lucide-astro";
 
-const title = "User Management Software for Field Teams | Knockio";
+const title = "User Management Software";
 const description =
-  "User Management Software by Knockio helps home service businesses control team access and protect sensitive data with role-based permissions.";
+  "Not everyone on your team should see everything. Knockio lets you decide exactly what each role can see and do — office managers get financials, field techs get job details, and subcontractors get only their own work orders.";
 
 const asset = (name: string) => `/assets/cfw/${name}`;
 
@@ -28,25 +28,25 @@ const proposalGroups = [
     icon: "key" as const,
     items: [
       {
-        label: "Granular Control",
-        title: "Granular Permissions by User",
-        text: "Control exactly what each user can see, edit, create, or approve so your team only gets access to the parts of Knockio they actually need.",
+        label: "Section-level permissions",
+        title: "For every module, control whether a role can see, edit, create, or approve",
+        text: "For every module, control whether a role can see, edit, create, or approve.",
         image: asset(
           "inner-user-management-control-access-down-to-the-detail-granular-control.webp",
         ),
       },
       {
-        label: "Role-Based Setup",
-        title: "Role-Based Access for Every Team Type",
-        text: "Set up different access levels for admins, office staff, sales reps, managers, and technicians without rebuilding permissions one user at a time.",
+        label: "Assigned vs Full data scope",
+        title: "Set each module to Assigned (a user's own records only) or Full (everything in that module)",
+        text: "Set each module to Assigned (a user's own records only) or Full (everything in that module).",
         image: asset(
           "inner-user-management-control-access-down-to-the-detail-role-based-setup.webp",
         ),
       },
       {
-        label: "Scalable Structure",
-        title: "A Permission Structure That Scales",
-        text: "As your team grows, your access setup stays organized and manageable instead of becoming a mess of one-off exceptions.",
+        label: "Show it or hide it",
+        title: "Decide whether a module even appears in a role's menu and mobile app",
+        text: "Decide whether a module even appears in a role's menu and mobile app.",
         image: asset(
           "inner-user-management-control-access-down-to-the-detail-scalable-structure.webp",
         ),
@@ -59,25 +59,25 @@ const proposalGroups = [
     icon: "cog" as const,
     items: [
       {
-        label: "Easy Onboarding",
-        title: "Faster Onboarding for New Team Members",
-        text: "Get new hires into the system quickly with the right permissions from day one, so they can start working without delays or confusion.",
+        label: "Custom roles",
+        title: "Build roles named for your real positions",
+        text: "Build roles named for your real positions — Field Tech, Office Manager, Subcontractor, General Manager.",
         image: asset(
           "inner-user-management-keep-operations-running-smoothly-easy-onboarding.webp",
         ),
       },
       {
-        label: "Focused Workflows",
-        title: "Focused Workflows by Role",
-        text: "Each person sees the tools and records relevant to their job, which keeps screens cleaner and makes everyday work easier to follow.",
+        label: "Multiple roles per user",
+        title: "A user's access is the cumulative total of every role they hold",
+        text: "A user's access is the cumulative total of every role they hold.",
         image: asset(
           "inner-user-management-keep-operations-running-smoothly-focused-workflows.webp",
         ),
       },
       {
-        label: "Reduced Errors",
-        title: "Fewer Mistakes From the Wrong Access",
-        text: "Reduce accidental edits, missed handoffs, and unnecessary changes by making sure the wrong people cannot touch the wrong data.",
+        label: "Instant assignment",
+        title: "Drop a new hire into a role and they immediately have the right access",
+        text: "Drop a new hire into a role and they immediately have the right access — no per-permission setup.",
         image: asset(
           "inner-user-management-keep-operations-running-smoothly-reduced-errors.webp",
         ),
@@ -90,25 +90,25 @@ const proposalGroups = [
     icon: "shield" as const,
     items: [
       {
-        label: "Customer Data Protection",
-        title: "Customer Data Protection",
-        text: "Protect customer records by limiting who can access personal details, lead information, and job history across your team.",
+        label: "Hide financials from the field",
+        title: "Keep pricing, margin, and payment data off field-team screens entirely",
+        text: "Keep pricing, margin, and payment data off field-team screens entirely.",
         image: asset(
           "inner-user-management-protect-sensitive-information-customer-data-protection.webp",
         ),
       },
       {
-        label: "Financial Privacy",
-        title: "Financial Privacy Across the Team",
-        text: "Keep invoices, payments, and revenue details visible only to the people who actually need financial access.",
+        label: "Restrict customer contact info",
+        title: "Limit who can see customer contact details",
+        text: "Limit who can see customer contact details.",
         image: asset(
           "inner-user-management-protect-sensitive-information-financial-privacy.webp",
         ),
       },
       {
-        label: "Subcontractor Boundaries",
-        title: "Clear Boundaries for Subcontractors",
-        text: "Give subcontractors access only to the jobs or information they need, without exposing internal data, customer lists, or wider business records.",
+        label: "Limit subcontractors",
+        title: "Give a 1099 sub visibility into only their assigned work orders",
+        text: "Give a 1099 sub visibility into only their assigned work orders — not your other jobs, pricing, or customers.",
         image: asset(
           "inner-user-management-protect-sensitive-information-subcontractor-boundaries.webp",
         ),
@@ -148,24 +148,24 @@ const trustBadges = [
 
 const faqs = [
   {
-    q: "Can I control what different team members can see?",
-    a: "Yes. Knockio offers detailed, granular permissions so you can control exactly what each user or role can view and edit.",
+    q: "Can I hide financials from field techs?",
+    a: "Yes. Permissions are section-level, so you can keep pricing, margin, and payment data off a field role's screens entirely while still giving them the job details they need.",
   },
   {
     q: "Can I create custom roles for my business?",
-    a: "Yes. You can create custom roles, such as Field Tech, Office Manager, or Subcontractor, with permissions tailored to each role's responsibilities.",
+    a: "Yes. Beyond the default Owner and Agent roles, you can build custom roles — Field Tech, Office Manager, Subcontractor, and more — with access tailored to each position.",
   },
   {
-    q: "Can subcontractors have limited access to Knockio?",
-    a: "Yes. Subcontractors and vendors can be given limited access, such as visibility into only their assigned work orders, without exposing your full pipeline or financials.",
+    q: "Can I limit a subcontractor to only their own work orders?",
+    a: "Yes. Set the subcontractor role's data access to Assigned so they see only the work orders assigned to them — not your other jobs, pricing, or customers.",
   },
   {
-    q: "Is it easy to onboard new team members?",
-    a: "Yes. New team members can be assigned an existing role, instantly giving them the appropriate access without manual configuration for each person.",
+    q: "Can one person have more than one role?",
+    a: "Yes. A user can hold multiple roles, and their access is the cumulative total of everything those roles allow.",
   },
   {
-    q: "Is Knockio useful for both sales and service teams?",
-    a: "Yes. Knockio is built for teams that need both sales and service workflows. Sales reps can manage leads and proposals, while office and field teams can manage scheduling, dispatching, job updates, invoices, and customer service history from the same CRM.",
+    q: "What's the difference between Assigned and Full access?",
+    a: "Assigned means the user sees only records explicitly assigned to them within a module; Full means they see everything in that module without manual assignment. It's the core control for how wide each role's view is.",
   },
 ];
 
@@ -291,11 +291,12 @@ const tabIconClass =
             <p
               class="mb-10 max-w-[710px] text-base font-medium text-neutral-600 lg:text-lg"
             >
-              Knockio&rsquo;s User Management Software helps home service
-              businesses control what each role can see and do. Office managers
-              can access financials, field techs see job details, and
-              subcontractors get only their work orders. Keep sensitive data
-              protected while every team member gets the access they need.
+              Not everyone on your team should see everything. Knockio lets you
+              decide exactly what each role can see and do — office managers get
+              financials, field techs get job details, and subcontractors get
+              only their own work orders. Sensitive customer and money data stays
+              protected while every person gets the access their job actually
+              needs.
             </p>
             <a
               href="#cal-sec"
@@ -318,13 +319,13 @@ const tabIconClass =
             <p
               class="max-w-[720px] text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
-              Yes. Knockio offers granular, section level user permissions,
+              Yes. Knockio offers granular, section-level user permissions,
               letting you create custom roles such as Field Tech, Office
               Manager, or Subcontractor with access tailored to each position.
               You can hide financial details and customer contact information
               from field staff, give subcontractors visibility into only their
-              assigned work orders, and apply roles instantly to new team
-              members as your business grows.
+              assigned work orders, and apply a role to a new team member
+              instantly as your business grows.
             </p>
           </div>
 
@@ -578,7 +579,7 @@ const tabIconClass =
             class="mb-6 text-center text-[31px] font-bold leading-[39px] text-neutral-950 sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
           >
             <span class="lg:whitespace-nowrap"
-              >Manage Your Team&rsquo;s Access From Day One</span
+              >Manage Your Team's Access From Day One</span
             >
             <br class="hidden lg:block" />
             to Day One Thousand
@@ -586,9 +587,9 @@ const tabIconClass =
           <p
             class="mx-auto max-w-[800px] text-base leading-6 text-neutral-700 sm:text-lg sm:leading-6"
           >
-            As your home service business grows, adding field techs,
-            subcontractors, and office staff, Knockio&rsquo;s permission system
-            keeps access organized, secure, and aligned with each person&rsquo;s
+            As your home service business grows — adding field techs,
+            subcontractors, and office staff — Knockio's permission system
+            keeps access organized, secure, and aligned with each person's
             role.
           </p>
         </div>
@@ -671,7 +672,7 @@ const tabIconClass =
               class="relative text-[15px] leading-6 text-white/75 sm:text-base sm:leading-6"
             >
               Review and adjust roles and permissions at any time as
-              responsibilities change, making sure access always matches what
+              responsibilities change, so access always matches what
               each person actually needs.
             </p>
             <ul
@@ -720,7 +721,7 @@ const tabIconClass =
             <p
               class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
-              When team members only see what is relevant to their role, it
+              When team members only see what's relevant to their role, it
               reduces confusion, protects sensitive customer and financial data,
               and gives owners confidence.
             </p>
@@ -764,20 +765,13 @@ const tabIconClass =
             <h2
               class="mb-8 w-full max-w-3xl text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:max-w-none lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
             >
-              <span class="lg:whitespace-nowrap"
-                >Everything Teams Ask Before</span
-              >
-              <br class="hidden lg:block" />
-              Using Knockio Service CRM
+            Everything Teams Ask Before Using Knockio Service CRM
             </h2>
             <p
               class="mb-6 w-full max-w-3xl text-sm leading-6 font-normal text-neutral-800 sm:text-base sm:leading-7 md:mb-8 md:text-lg md:leading-8"
             >
-              Service teams need more than a basic contact list. Knockio
-              connects customer records, leads, jobs, estimates, schedules,
-              crews, invoices, payments, and field updates. It helps sales,
-              office, and field teams work from the same information, so jobs
-              move faster with less confusion.
+              Access control protects your data and your customers. Here's how
+              granular Knockio's permissions get.
             </p>
           </div>
 

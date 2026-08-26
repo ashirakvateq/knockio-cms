@@ -16,9 +16,9 @@ import {
   RefreshCw,
 } from "lucide-astro";
 
-const title = "Sales Pipeline Software for Service Businesses | Knockio";
+const title = "Sales Pipeline Software for Service Businesses";
 const description =
-  "Visualize every lead and work order with sales pipeline software for service businesses. Build custom stages and separate boards by department.";
+  "If you have to ask three people where a job stands, your pipeline isn't a pipeline. Knockio gives every team its own board — sales, production, billing — with stages you name, cards you drag, and jobs that move themselves between boards the moment their status changes.";
 
 const asset = (name: string) => `/assets/cfw/${name}`;
 
@@ -29,25 +29,25 @@ const proposalGroups = [
     icon: "clipboard" as const,
     items: [
       {
-        label: "Visual Clarity",
-        title: "Custom Boards for Leads, Jobs, and Work Orders",
-        text: "Create a board for sales and a separate board for work orders, so each team sees exactly what matters to them without digging through everything else.",
+        label: "Unlimited boards",
+        title: "Run one simple board or a dozen for different departments and crews",
+        text: "Run one simple board or a dozen for different departments and crews; there's no cap.",
         image: asset(
           "inner-boards-build-a-board-that-matches-how-you-work-visual-clarity-new.webp",
         ),
       },
       {
-        label: "Your Stages, Your Names",
-        title: "Fully Customizable Pipeline Stages",
-        text: "Name your stages whatever fits your business, whether that is New Lead, Estimate Sent, Approved, In Production, or anything else. Knockio does not force you into a template.",
+        label: "Name your own stages",
+        title: "Each stage is tied to a status you've defined",
+        text: "Each stage is tied to a status you've defined, so the board and the record always agree.",
         image: asset(
           "inner-boards-build-a-board-that-matches-how-you-work-your-stages-your-names.webp",
         ),
       },
       {
-        label: "Unlimited Flexibility",
-        title: "Create as Many Boards as You Need",
-        text: "Run one simple board for a small operation or a dozen boards for different departments and crews. There is no cap on how you organize the work.",
+        label: "Group related stages",
+        title: "Cluster stages into named groups to keep a larger workflow easy to navigate",
+        text: "Cluster stages into named groups to keep a larger workflow easy to navigate.",
         image: asset(
           "inner-boards-build-a-board-that-matches-how-you-work-unlimited-flexibility.webp",
         ),
@@ -60,25 +60,25 @@ const proposalGroups = [
     icon: "dollar" as const,
     items: [
       {
-        label: "Catch What Is Stalling",
-        title: "Sort by Days in Stage",
-        text: "Instantly spot the estimate that has been sitting untouched for two weeks or the job that has been stuck waiting on approval far too long.",
+        label: "Sort by time-in-stage",
+        title: "Surface jobs that have sat too long",
+        text: "Surface jobs that have sat too long so stalls don't hide at the bottom of a column.",
         image: asset(
           "inner-boards-sort-and-find-what-matters-fast-catch-what-is-stalling-new.webp",
         ),
       },
       {
-        label: "Focus on the Big Wins",
-        title: "Sort by Highest Value",
-        text: "Put your biggest jobs at the top of the board so your sales team and project managers never lose sight of the work that matters most to revenue.",
+        label: "Sort by dollar value",
+        title: "Put the biggest deals at the top",
+        text: "Put the biggest deals at the top so your team works the money first.",
         image: asset(
           "inner-boards-sort-and-find-what-matters-fast-focus-on-the-big-wins-new.webp",
         ),
       },
       {
-        label: "See It Your Way",
-        title: "Multiple Sorting and Filtering Options",
-        text: "Filter and sort by rep, territory, status, or value so every person looking at the board sees exactly the slice of information they need.",
+        label: "Filter to the job you need",
+        title: "Find any job fast without scrolling the whole board",
+        text: "Find any job fast without scrolling the whole board.",
         image: asset(
           "inner-boards-sort-and-find-what-matters-fast-see-it-your-way.webp",
         ),
@@ -91,25 +91,25 @@ const proposalGroups = [
     icon: "file" as const,
     items: [
       {
-        label: "Controlled Access",
-        title: "Assign Roles to Specific Boards",
-        text: "Give your sales team access to the sales board and your production team access to the work order board, without either group seeing information that is not relevant to them.",
+        label: "Role-based access",
+        title: "Assign each board to specific roles",
+        text: "Assign each board to specific roles so a department sees its own workflow, not everyone's.",
         image: asset(
           "inner-boards-boards-that-work-like-departments-controlled-access.webp",
         ),
       },
       {
-        label: "Built In Security",
-        title: "Only Assigned Roles Can View or Move Jobs",
-        text: "Keep boards locked down so only the people who need to act on a job can move it through the pipeline.",
+        label: "A board per team",
+        title: "Sales, production, and billing each get a board built around how they actually work",
+        text: "Sales, production, and billing each get a board built around how they actually work.",
         image: asset(
           "inner-boards-boards-that-work-like-departments-built-in-security.webp",
         ),
       },
       {
-        label: "Cross Department Handoffs",
-        title: "Shared Statuses Move Jobs Between Boards Automatically",
-        text: "When a status exists on more than one board, a job moves into the matching stage on the second board automatically, so sales and production can work the same job without manual handoffs.",
+        label: "Clean handoffs",
+        title: "When one team finishes, the job moves to the next team's board automatically",
+        text: "When one team finishes, the job moves to the next team's board automatically.",
         image: asset(
           "inner-boards-boards-that-work-like-departments-cross-department-handoffs.webp",
         ),
@@ -122,25 +122,25 @@ const proposalGroups = [
     icon: "bell" as const,
     items: [
       {
-        label: "No Duplicate Data Entry",
-        title: "A Single Job Record Across Every Board",
-        text: "The job does not get copied or recreated when it moves to a new board. It is the same record, visible wherever it needs to be.",
+        label: "Shared-status handoff",
+        title: "When two boards share a status, a job appears on both at once",
+        text: "When two boards share a status, a job appears on both at once — no duplicate records.",
         image: asset(
           "inner-boards-one-job-tracked-everywhere-it-needs-to-be-no-duplicate-data-entry.webp",
         ),
       },
       {
-        label: "Full Visibility",
-        title: "See History Across Every Stage and Board",
-        text: "Look back at every stage a job passed through, on every board it touched, to understand exactly how long each part of the process actually took.",
+        label: "Connected to the real job",
+        title: "Boards link to estimates, work orders, invoices, and payments",
+        text: "Boards link to estimates, work orders, invoices, and payments, so a moving card is the real job with real data.",
         image: asset(
           "inner-boards-one-job-tracked-everywhere-it-needs-to-be-full-visibility.webp",
         ),
       },
       {
-        label: "Connected to the Whole Platform",
-        title: "Boards Tied to Estimates, Work Orders, and Financials",
-        text: "Pipeline boards are not a separate tool bolted on. They connect directly to the same job data running through your estimates, invoices, and work orders.",
+        label: "Drag to advance",
+        title: "Move a card and Knockio updates the underlying status behind the scenes",
+        text: "Move a card and Knockio updates the underlying status behind the scenes.",
         image: asset(
           "inner-boards-one-job-tracked-everywhere-it-needs-to-be-connected-to-the-whole-platform.webp",
         ),
@@ -180,24 +180,24 @@ const trustBadges = [
 
 const faqs = [
   {
-    q: "Can I create more than one board?",
-    a: "Yes. You can create unlimited boards for leads, jobs, work orders, or any other workflow your business needs to track separately.",
+    q: "Can I run separate boards for different departments?",
+    a: "Yes. Build unlimited boards — one for a small crew or a dozen for different departments — and assign each to the roles that should see it.",
   },
   {
-    q: "Can I sort jobs by how long they have been in a stage?",
-    a: "Yes. Boards let you sort by days in stage, so you can quickly spot leads or jobs that have gone stale and need attention.",
+    q: "How does a job move from one board to another?",
+    a: "Through shared statuses. If a status exists on both the sales and production boards, moving the job into that status makes it appear on the next board automatically, with no duplicate record.",
   },
   {
-    q: "Can I sort by job value?",
-    a: "Yes. You can sort by highest value, helping your team prioritize the jobs that matter most to revenue first.",
+    q: "Can I see what's been sitting in a stage too long?",
+    a: "Yes. Sort any stage by how long jobs have been sitting there — or by dollar value — so stalls and high-value deals rise to the top.",
   },
   {
-    q: "Can I restrict who has access to a specific board?",
-    a: "Yes. Boards can be treated like a department. Assign specific roles to a board so only those roles can view it and move jobs through it.",
+    q: "Who controls which team sees which board?",
+    a: "You do, by role. Each board is assigned to specific roles, so only the right department sees its own workflow.",
   },
   {
-    q: "What happens when a job's status exists on more than one board?",
-    a: "If a status exists on multiple boards, the job automatically appears in the matching stage on every board where that status exists, letting two departments work the same job without manual re-entry.",
+    q: "Does dragging a card change the job's status?",
+    a: "Yes. Moving a card to a new stage updates the underlying status automatically, keeping the record and the board in sync.",
   },
 ];
 
@@ -324,12 +324,12 @@ const tabIconClass =
             <p
               class="mb-10 max-w-[710px] text-base font-medium text-neutral-600 lg:text-lg"
             >
-              If you have to ask three different people where a job stands, your
-              pipeline is not working. Knockio gives you a board for leads and
-              jobs, and a separate board for work orders, so you can see every
-              stage at a glance. Sort by how long something has been sitting,
-              sort by dollar value, and move a job forward with a single drag.
-              No spreadsheet, no sticky notes, no guessing.
+              If you have to ask three people where a job stands, your pipeline
+              isn't a pipeline. Knockio gives every team its own board — sales,
+              production, billing — with stages you name, cards you drag, and
+              jobs that move themselves between boards the moment their status
+              changes. Sort by what's been sitting too long or what's worth the
+              most, and stop running the business on sticky notes.
             </p>
             <a
               href="#cal-sec"
@@ -346,19 +346,20 @@ const tabIconClass =
             <h3
               class="mb-4 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
-              What is pipeline software for home service businesses and how does
+              What is pipeline software for home service businesses, and how does
               it work?
             </h3>
             <p
               class="max-w-[720px] text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
-              Pipeline software for home service businesses organizes leads,
-              jobs, and work orders into visual boards with custom stages, so
-              you can see exactly where everything stands at a glance. Knockio
-              lets you build unlimited boards, create your own stages, sort jobs
-              by how long they have sat in a stage or by total value, and assign
-              specific boards to specific roles or departments, so a job can
-              move between two boards at once if the same status exists on both.
+              Pipeline software organizes leads, jobs, and work orders into
+              visual boards with custom stages, so you can see exactly where
+              everything stands at a glance. Knockio lets you build unlimited
+              boards, create your own stages, sort jobs by how long they've sat
+              in a stage or by total value, and assign specific boards to
+              specific roles — and because a job can carry a status that exists
+              on two boards, it can appear on both at once without duplicating
+              the record.
             </p>
           </div>
 
@@ -621,9 +622,9 @@ const tabIconClass =
             class="mx-auto max-w-[800px] text-base leading-6 text-neutral-700 sm:text-lg sm:leading-6"
           >
             Knockio's boards connect directly to estimates, work orders,
-            invoices, and payments, so a job moving across your pipeline is not
-            just a card sliding across a screen. It is the real job, with real
-            data, visible to whichever department needs to see it next.
+            invoices, and payments — so a job moving across your pipeline isn't
+            just a card sliding across a screen. It's the real job, with real
+            data, visible to whichever department needs it next.
           </p>
         </div>
 
@@ -645,14 +646,14 @@ const tabIconClass =
             <h3
               class="relative mb-5 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
-              Instant Visual Updates
+              Instant visual updates
             </h3>
             <p
               class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
               Drag a job to a new stage and the board updates immediately for
-              everyone looking at it, whether they are in the office or out in
-              the field on a phone.
+              everyone looking at it, in the office or out in the field on a
+              phone.
             </p>
             <ul
               class="relative mt-7 hidden grid gap-3 border-t border-solid border-neutral-200 pt-6"
@@ -699,13 +700,12 @@ const tabIconClass =
             <h3
               class="relative mb-5 text-[21px] font-semibold leading-[27px] text-white sm:text-2xl sm:leading-7"
             >
-              Automated Movement Across Departments
+              Automated movement across departments
             </h3>
             <p
               class="relative text-[15px] leading-6 text-white/75 sm:text-base sm:leading-6"
             >
-              Pair boards with Knockio's automation builder to trigger
-              notifications or tasks the moment a job moves into a new stage, so
+              Trigger a task or notification the moment a job enters a stage, so
               handoffs between sales, production, and billing happen without
               anyone forgetting to send an update.
             </p>
@@ -750,15 +750,14 @@ const tabIconClass =
             <h3
               class="relative mb-5 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
-              A Clearer Operation, Top to Bottom
+              A clearer operation, top to bottom
             </h3>
             <p
               class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
               When everyone can see exactly where a job stands, fewer things
-              slip through the cracks. That means faster closes, faster
-              production, and a business that runs on visibility instead of
-              guesswork.
+              slip through the cracks — meaning faster closes, faster
+              production, and a business that runs on visibility.
             </p>
             <ul
               class="relative mt-7 hidden grid gap-3 border-t border-solid border-neutral-200 pt-6"
@@ -800,20 +799,13 @@ const tabIconClass =
             <h2
               class="mb-8 w-full max-w-3xl text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:max-w-none lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
             >
-              <span class="lg:whitespace-nowrap"
-                >Everything Teams Ask Before</span
-              >
-              <br class="hidden lg:block" />
-              Using Knockio Service CRM
+            Everything Teams Ask Before Using Knockio Service CRM
             </h2>
             <p
               class="mb-6 w-full max-w-3xl text-sm leading-6 font-normal text-neutral-800 sm:text-base sm:leading-7 md:mb-8 md:text-lg md:leading-8"
             >
-              Service teams need more than a basic contact list. Knockio
-              connects customer records, leads, jobs, estimates, schedules,
-              crews, invoices, payments, and field updates. It helps sales,
-              office, and field teams work from the same information, so jobs
-              move faster with less confusion.
+              A pipeline is only worth switching to if it fits how your teams
+              actually hand off work. Here's what service businesses ask most.
             </p>
           </div>
 

@@ -16,9 +16,9 @@ import {
   RefreshCw,
 } from "lucide-astro";
 
-const title = "Appointment Scheduling Software for Contractors | Knockio";
+const title = "Appointment Scheduling Software";
 const description =
-  "Book appointments, view real-time availability, and send automatic reminders with appointment scheduling software synced to your calendar.";
+  "Double bookings, no-shows, and a schedule that lives in one person's head. Knockio connects the calendar you already use — or gives you one — and books appointments straight from the job, checks who's actually free, assigns the right person, and reminds the customer so fewer of them ghost.";
 
 const asset = (name: string) => `/assets/cfw/${name}`;
 
@@ -29,23 +29,23 @@ const proposalGroups = [
     icon: "clipboard" as const,
     items: [
       {
-        label: "Flexible Setup",
-        title: "Connect Your Existing Calendar",
-        text: "Sync Knockio with the calendar your team already uses, so appointments show up where everyone is already looking.",
+        label: "Bring your calendar or use ours",
+        title: "Sync the calendar your team already runs on, or use Knockio's built-in one",
+        text: "Sync the calendar your team already runs on, or use Knockio's built-in one if you don't have a system yet.",
         image: asset("inner-appointments-schedule-your-way-flexible-setup.webp"),
       },
       {
-        label: "All in One Option",
-        title: "Use Knockio's Built In Calendar",
-        text: "Do not have a calendar system yet? Use Knockio's native calendar to book and manage appointments with zero extra setup.",
+        label: "Calendar and list views",
+        title: "Plan visually on a calendar, or work a clean list of upcoming appointments",
+        text: "Plan visually on a calendar, or work a clean list of upcoming appointments.",
         image: asset(
           "inner-appointments-schedule-your-way-all-in-one-option.webp",
         ),
       },
       {
-        label: "Quick Booking",
-        title: "Book Appointments Directly From a Job",
-        text: "Schedule a follow up inspection or installation appointment right from the job record, no switching screens required.",
+        label: "Book straight from the job",
+        title: "Schedule an inspection or install right on the job record",
+        text: "Schedule an inspection or install right on the job record, no screen-switching.",
         image: asset("inner-appointments-schedule-your-way-quick-booking.webp"),
       },
     ],
@@ -56,25 +56,25 @@ const proposalGroups = [
     icon: "dollar" as const,
     items: [
       {
-        label: "Smart Scheduling",
-        title: "Real Time Availability View",
-        text: "See which techs or crews are free at a glance before booking a same day pest control or HVAC appointment.",
+        label: "Real-time availability",
+        title: "See who's free before you commit a slot",
+        text: "See who's free before you commit a slot, so two jobs never land on the same tech.",
         image: asset(
           "inner-appointments-know-whos-available-instantly-smart-scheduling.webp",
         ),
       },
       {
-        label: "Right Person, Right Job",
-        title: "Assign Appointments by Skill or Territory",
-        text: "Match appointments to the rep best suited for the job based on availability, location, or specialty.",
+        label: "Assign by skill or territory",
+        title: "Conflict-free assignment puts the right person on the job automatically",
+        text: "Conflict-free assignment puts the right person on the job automatically.",
         image: asset(
           "inner-appointments-know-whos-available-instantly-right-person-right-job.webp",
         ),
       },
       {
-        label: "Avoid Conflicts",
-        title: "Automatic Double Booking Prevention",
-        text: "Knockio flags scheduling conflicts before they happen, so two jobs never get booked for the same tech at the same time.",
+        label: "Multi-person availability",
+        title: "Add several people to one appointment and Knockio only offers slots where everyone is free",
+        text: "Add several people to one appointment and Knockio only offers slots where everyone is free for the full duration.",
         image: asset(
           "inner-appointments-know-whos-available-instantly-avoid-conflicts.webp",
         ),
@@ -87,23 +87,23 @@ const proposalGroups = [
     icon: "file" as const,
     items: [
       {
-        label: "Fewer No Shows",
-        title: "Automated Appointment Reminders",
-        text: "Send automatic text or email reminders to customers ahead of their scheduled appointment, cutting down on missed visits.",
+        label: "Automatic reminders",
+        title: "Reminders go to both the customer and the assigned crew",
+        text: "Reminders go to both the customer and the assigned crew to cut no-shows.",
         image: asset(
           "inner-appointments-keep-everyone-on-time-fewer-no-shows.webp",
         ),
       },
       {
-        label: "Team Alerts",
-        title: "Reminders for Reps and Crews",
-        text: "Notify your team about upcoming appointments so the day stays on track, even when schedules shift last minute.",
+        label: "Live schedule updates",
+        title: "When an appointment is booked, moved, or canceled, the calendar updates across the whole team",
+        text: "When an appointment is booked, moved, or canceled, the calendar updates across the whole team in real time.",
         image: asset("inner-appointments-keep-everyone-on-time-team-alerts.webp"),
       },
       {
-        label: "Stay Organized",
-        title: "Daily and Weekly Schedule Views",
-        text: "Get a clear view of the day or week ahead across your whole team, helping office staff plan routes and dispatch efficiently.",
+        label: "Completion triggers",
+        title: "When an appointment is done, fire an automation like sending the invoice or booking the follow-up",
+        text: "When an appointment is done, fire an automation like sending the invoice or booking the follow-up.",
         image: asset(
           "inner-appointments-keep-everyone-on-time-stay-organized.webp",
         ),
@@ -116,25 +116,25 @@ const proposalGroups = [
     icon: "bell" as const,
     items: [
       {
-        label: "Full Context",
-        title: "Appointment History on Every Job",
-        text: "See every past and upcoming appointment tied to a job, right alongside notes, media, and financials.",
+        label: "One record, start to finish",
+        title: "The appointment stays tied to the job, the customer, and the team",
+        text: "The appointment stays tied to the job, the customer, and the team from booking through completion.",
         image: asset(
           "inner-appointments-appointments-connected-to-the-job-full-context.webp",
         ),
       },
       {
-        label: "Better Planning",
-        title: "Recurring Appointments for Maintenance Plans",
-        text: "Set up recurring appointments for pool maintenance, lawn care, or pest control service plans without rebooking every single cycle.",
+        label: "Recurring visits",
+        title: "Set recurring appointments for maintenance plans and seasonal tune-ups",
+        text: "Set recurring appointments for maintenance plans and seasonal tune-ups so repeat visits schedule themselves.",
         image: asset(
           "inner-appointments-appointments-connected-to-the-job-better-planning.webp",
         ),
       },
       {
-        label: "Connected Automations",
-        title: "Trigger Follow Ups After Appointments",
-        text: "Combine appointments with Knockio's automation builder to automatically schedule follow ups or send invoices once an appointment is marked complete.",
+        label: "Field and office in sync",
+        title: "A change made anywhere shows everywhere",
+        text: "A change made anywhere shows everywhere, so no one works off an outdated schedule.",
         image: asset(
           "inner-appointments-appointments-connected-to-the-job-connected-automations.webp",
         ),
@@ -174,20 +174,24 @@ const trustBadges = [
 
 const faqs = [
   {
-    q: "Can I connect my existing calendar to Knockio?",
-    a: "Yes. Knockio can connect to your existing calendar, or you can use Knockio's built in calendar to manage appointments.",
+    q: "Do I have to use Knockio's calendar?",
+    a: "No. Connect the calendar your team already uses, or adopt Knockio's built-in one if you don't have a system yet.",
   },
   {
-    q: "Can I see who is available before booking an appointment?",
-    a: "Yes. Knockio shows real time availability for your team, helping you assign appointments to the right person without conflicts.",
+    q: "How does it stop double-booking?",
+    a: "It checks the whole team's availability in real time before a slot is confirmed and assigns conflict-free based on skill or territory. When you add several people to one appointment, it only offers slots where everyone is free for the full duration.",
   },
   {
-    q: "Does Knockio send appointment reminders?",
-    a: "Yes. Knockio can automatically send reminders to customers and team members ahead of scheduled appointments to reduce no shows.",
+    q: "Can I set recurring appointments for maintenance plans?",
+    a: "Yes. Recurring appointments are built for maintenance work like seasonal tune-ups and quarterly treatments, so repeat visits schedule themselves.",
   },
   {
-    q: "Can I set up recurring appointments?",
-    a: "Yes. Recurring appointments are supported, which is great for maintenance plans like pool care, lawn care, and pest control treatments.",
+    q: "How does it cut down on no-shows?",
+    a: "Automatic reminders go to the customer and the crew, so fewer appointments get forgotten on either side.",
+  },
+  {
+    q: "Can I book an appointment straight from a job?",
+    a: "Yes. Schedule right from the job record, and the appointment stays tied to that job, the customer, and the assigned team.",
   },
 ];
 
@@ -315,12 +319,12 @@ const tabIconClass =
             <p
               class="mb-10 max-w-[710px] text-base font-medium text-neutral-600 lg:text-lg"
             >
-              Double bookings, no shows, and a schedule that lives in someone's
-              head instead of an actual system. Sound familiar? Connect your
-              existing calendar or use Knockio's built in calendar to book
-              appointments, see who is available in real time, assign jobs to
-              the right person, and send automatic reminders, so your schedule
-              basically runs itself.
+              Double bookings, no-shows, and a schedule that lives in one person's
+              head. Knockio connects the calendar you already use — or gives you
+              one — and books appointments straight from the job, checks who's
+              actually free, assigns the right person, and reminds the customer
+              so fewer of them ghost. Recurring visits for maintenance plans
+              book themselves.
             </p>
             <a
               href="#cal-sec"
@@ -343,13 +347,12 @@ const tabIconClass =
             <p
               class="max-w-[720px] text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
-              Not necessarily. Knockio's appointment scheduling software can
-              connect to the calendar your team already uses, or you can use
-              Knockio's built in calendar if you do not have one yet. Either
-              way, you get real time availability views, conflict free
-              assignment based on skill or territory, automated reminders for
-              customers and crews, and support for recurring appointments, all
-              tied directly to the job record.
+              Not necessarily. Knockio can connect to the calendar your team
+              already uses, or you can use its built-in calendar if you don't
+              have one yet. Either way you get real-time availability views,
+              conflict-free assignment based on skill or territory, automated
+              reminders for customers and crews, and support for recurring
+              appointments — all tied directly to the job record.
             </p>
           </div>
 
@@ -608,14 +611,14 @@ const tabIconClass =
           <h2
             class="mb-6 text-center text-[31px] font-bold leading-[39px] text-neutral-950 sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
           >
-            Manage Your Schedule From the First Booking to the Final Visit
+              Manage Your Schedule From the First Booking to the Final Visit
           </h2>
           <p
             class="mx-auto max-w-[800px] text-base leading-6 text-neutral-700 sm:text-lg sm:leading-6"
           >
-            Whether you are booking a one time roofing inspection or a recurring
-            pest control treatment, Knockio keeps appointments connected to the
-            job, the customer, and your team's availability, all in one place.
+            Whether you're booking a one-time roofing inspection or a recurring
+            pest-control treatment, Knockio keeps appointments connected to the
+            job, the customer, and your team's availability — all in one place.
           </p>
         </div>
 
@@ -637,14 +640,14 @@ const tabIconClass =
             <h3
               class="relative mb-5 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
-              Instant Schedule Updates
+              Instant schedule updates
             </h3>
             <p
               class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
-              When an appointment gets booked, rescheduled, or canceled, your
+              When an appointment is booked, rescheduled, or canceled, the
               calendar updates in real time across the whole team. No more
-              outdated paper schedules taped to the wall.
+              outdated schedules taped to the wall.
             </p>
             <ul
               class="relative mt-7 hidden grid gap-3 border-t border-solid border-neutral-200 pt-6"
@@ -691,14 +694,14 @@ const tabIconClass =
             <h3
               class="relative mb-5 text-[21px] font-semibold leading-[27px] text-white sm:text-2xl sm:leading-7"
             >
-              Automated Reminders and Follow Ups
+              Automated reminders and follow-ups
             </h3>
             <p
               class="relative text-[15px] leading-6 text-white/75 sm:text-base sm:leading-6"
             >
-              Reduce no shows with automatic reminders, and use Knockio's
-              automation builder to trigger next steps, like sending an invoice
-              or booking a follow up, once an appointment is completed.
+              Cut no-shows with automatic reminders, and use the automation
+              builder to trigger the next step — an invoice, a follow-up
+              booking — once an appointment wraps.
             </p>
             <ul
               class="relative mt-7 hidden grid gap-3 border-t border-solid border-white/15 pt-6"
@@ -741,14 +744,14 @@ const tabIconClass =
             <h3
               class="relative mb-5 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
-              A More Reliable Customer Experience
+              A more reliable customer experience
             </h3>
             <p
               class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
-              Showing up on time, every time, with clear communication, builds
-              trust and helps HVAC, plumbing, and home security businesses stand
-              out and earn repeat bookings.
+              Showing up on time, every time, with clear communication builds
+              trust and helps HVAC, plumbing, and home security teams earn
+              repeat bookings.
             </p>
             <ul
               class="relative mt-7 hidden grid gap-3 border-t border-solid border-neutral-200 pt-6"
@@ -790,20 +793,12 @@ const tabIconClass =
             <h2
               class="mb-8 w-full max-w-3xl text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:max-w-none lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
             >
-              <span class="lg:whitespace-nowrap"
-                >Everything Teams Ask Before</span
-              >
-              <br class="hidden lg:block" />
-              Using Knockio Service CRM
+            Everything Teams Ask Before Using Knockio Service CRM
             </h2>
             <p
               class="mb-6 w-full max-w-3xl text-sm leading-6 font-normal text-neutral-800 sm:text-base sm:leading-7 md:mb-8 md:text-lg md:leading-8"
             >
-              Service teams need more than a basic contact list. Knockio
-              connects customer records, leads, jobs, estimates, schedules,
-              crews, invoices, payments, and field updates. It helps sales,
-              office, and field teams work from the same information, so jobs
-              move faster with less confusion.
+              Scheduling is where jobs get won or lost on reliability, so here's how Knockio keeps your calendar honest.
             </p>
           </div>
 

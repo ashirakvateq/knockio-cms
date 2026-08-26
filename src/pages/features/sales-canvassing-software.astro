@@ -15,38 +15,38 @@ import {
   RefreshCw,
 } from "lucide-astro";
 
-const title = "Door to Door Sales Canvassing Software for Field Sales Teams";
+const title = "Sales Canvassing Built Into Your CRM & Pipeline | Knockio";
 const description =
-  "Knockio's sales canvassing software gives field sales teams one tool for the whole door to door process. Drop custom pins, track reps live, and more.";
+  "Most canvassing apps stop at a pin on a map — then someone re-types the lead into your CRM. Knockio doesn't hand off; it's already connected. The territory a rep works this morning, the pin they drop, the contact they capture, and the appointment they book all live in the same system that runs your pipeline, estimates, work orders, and invoices.";
 
 const asset = (name: string) => `/assets/cfw/${name}`;
 
 const proposalGroups = [
   {
     key: "digital",
-    title: "Build and Assign Territories Before Boots Hit the Ground",
+    title: "Cut Territories, Then Put Them to Work",
     icon: "mapPinned" as const,
     items: [
       {
-        label: "Clear Boundaries",
-        title: "Map Based Territory Creation",
-        text: "Draw territories directly on a map to match neighborhoods, zip codes, or whatever boundaries make sense for your roofing, solar, or pest control canvassing team.",
+        label: "Map-Based Territory Creation",
+        title: "Draw a boundary by hand or auto-build one from a ZIP, city, or address",
+        text: "Draw a boundary by hand or auto-build one from a ZIP, city, or address, so reps start the day on a real door list instead of a blank map.",
         image: asset(
           "inner-sales-canvassing-build-and-assign-territories-before-boots-hit-the-ground-clear-boundaries.webp",
         ),
       },
       {
-        label: "No Wasted Doors",
-        title: "Assign Territories to Specific Reps",
-        text: "Give each rep or team their own area so two people are never knocking the same block on the same day without realizing it.",
+        label: "Assigned to Reps and Pipelines",
+        title: "Attach a territory to one rep or a team",
+        text: "Attach a territory to one rep or a team so two people never work the same street — and every pin dropped inside it is already tagged to the right person and pipeline.",
         image: asset(
           "inner-sales-canvassing-build-and-assign-territories-before-boots-hit-the-ground-no-wasted-doors.webp",
         ),
       },
       {
-        label: "Total Control",
-        title: "Unlimited Territories, Reassigned Anytime",
-        text: "Create as many territories as your business needs and adjust them whenever you hire someone new or expand into a different part of town.",
+        label: "Unlimited, Reassigned Anytime",
+        title: "Spin up as many zones as a launch needs",
+        text: "Spin up as many zones as a launch needs and reassign them on the fly; the leads inside move with them, staying attached to their records.",
         image: asset(
           "inner-sales-canvassing-build-and-assign-territories-before-boots-hit-the-ground-total-control.webp",
         ),
@@ -55,29 +55,29 @@ const proposalGroups = [
   },
   {
     key: "pricing",
-    title: "Custom Pins That Tell the Real Story of Every Door",
+    title: "Every Pin Is a CRM Record, Not Just a Dot",
     icon: "mapPin" as const,
     items: [
       {
-        label: "Built for Speed",
-        title: "Drop a Pin in Seconds",
-        text: "A rep taps a home, drops a pin, and logs the outcome before they are even halfway to the next driveway.",
+        label: "Drop a Pin in Seconds",
+        title: "Log a disposition at the door and it becomes a live record",
+        text: "Log a disposition at the door and it becomes a live record in the same pipeline as your jobs — not a note that has to be copied over later.",
         image: asset(
           "inner-sales-canvassing-custom-pins-that-tell-the-real-story-of-every-door-built-for-speed.webp",
         ),
       },
       {
-        label: "Visual Status at a Glance",
-        title: "Custom Colors, Icons, and Statuses for Every Pin",
-        text: "Set up your own pin statuses, like sold, not home, callback, or not interested, each with its own color and icon, so a manager can read the whole street's activity from one glance at the map.",
+        label: "Custom Colors, Icons, and Statuses",
+        title: "Each status can require the fields that matter to your trade",
+        text: "Each status can require the fields that matter to your trade before it saves, so roof age, decision-maker, or account number is captured at the door and ready for the estimate.",
         image: asset(
           "inner-sales-canvassing-custom-pins-that-tell-the-real-story-of-every-door-visual-status-at-a-glance.webp",
         ),
       },
       {
-        label: "A Map That Actually Means Something",
-        title: "Pin History on Every Property",
-        text: "See every past visit to a home, who knocked it, what happened, and when, instead of wondering if a door has already been worked this season.",
+        label: "Full History on Every Property",
+        title: "Notes, photos, and the complete activity log stay on the record",
+        text: "Notes, photos, and the complete activity log stay on the record, so whoever touches that lead next — setter, closer, or office — sees exactly what happened.",
         image: asset(
           "inner-sales-canvassing-custom-pins-that-tell-the-real-story-of-every-door-a-map-that-actually-means-something.webp",
         ),
@@ -86,29 +86,29 @@ const proposalGroups = [
   },
   {
     key: "tracking",
-    title: "Everything a Rep Needs, Right From the Pin",
+    title: "Book, Capture, and Hand Off Without Leaving the Door",
     icon: "list" as const,
     items: [
       {
-        label: "No App Switching",
-        title: "Create Contacts Directly From a Pin",
-        text: "Turn a homeowner conversation into a saved contact on the spot, with their name, number, and notes attached to that exact property.",
+        label: "Create Contacts From a Pin",
+        title: "The homeowner becomes a CRM contact on the spot",
+        text: "The homeowner becomes a CRM contact on the spot, already linked to the property and pipeline — no separate data entry back at the office.",
         image: asset(
           "inner-sales-canvassing-everything-a-rep-needs-right-from-the-pin-no-app-switching.webp",
         ),
       },
       {
-        label: "Faster Booking",
-        title: "Schedule Appointments in the Field",
-        text: "Book a follow up appointment right from the door, so the lead does not go cold waiting for someone back at the office to call and set a time.",
+        label: "Schedule Appointments in the Field",
+        title: "Set an appointment straight onto a closer's calendar",
+        text: "Set an appointment straight onto a closer's calendar with the address and notes attached, so the closer never arrives blind and nothing is re-typed.",
         image: asset(
           "inner-sales-canvassing-everything-a-rep-needs-right-from-the-pin-faster-booking.webp",
         ),
       },
       {
-        label: "Stay Organized",
-        title: "Create Tasks on the Spot",
-        text: "Set a reminder to follow up next week or flag a property for a manager's attention, all without pulling out a separate notebook or app.",
+        label: "Create Tasks and Trigger Follow-Up",
+        title: "Log a task from the pin, or let the automation builder fire on the status change",
+        text: "Log a task from the pin, or let the automation builder fire on the status change — a Callback pin can auto-text the homeowner, an Interested pin can notify the closer.",
         image: asset(
           "inner-sales-canvassing-everything-a-rep-needs-right-from-the-pin-stay-organized.webp",
         ),
@@ -117,29 +117,29 @@ const proposalGroups = [
   },
   {
     key: "followup",
-    title: "Verify the Work Actually Happened",
+    title: "Verified in the Field, Connected to the Office",
     icon: "check" as const,
     items: [
       {
-        label: "Real Time Oversight",
-        title: "Live GPS Tracking of Every Rep",
-        text: "See exactly where your canvassing team is on a live map throughout the day, not just where they say they were at the end of a shift.",
+        label: "Live GPS Tracking of Every Rep",
+        title: "Watch pins populate in real time and see each rep on the map",
+        text: "Watch pins populate in real time and see each rep on the map, with movement history you can review by day or range.",
         image: asset(
           "inner-sales-canvassing-verify-the-work-actually-happened-real-time-oversight.webp",
         ),
       },
       {
-        label: "Honest Reporting",
-        title: "Pin Drop Proximity Verification",
-        text: "Knockio shows admins how far a rep's device actually was from the property when a pin was dropped, making it obvious when someone is marking doors as knocked from inside their car.",
+        label: "Pin-Drop Proximity Verification",
+        title: "Knockio records how far the rep's device was from the address",
+        text: "Knockio records how far the rep's device was from the address the moment the pin dropped, so a windshield knock is obvious instead of buried in a report.",
         image: asset(
           "inner-sales-canvassing-verify-the-work-actually-happened-honest-reporting.webp",
         ),
       },
       {
-        label: "Data Backed Coaching",
-        title: "Activity Tied to Real Location, Not Just Claims",
-        text: "Base performance conversations on verified location data instead of taking a rep's word for how many doors they actually worked.",
+        label: "Activity Tied to the Job",
+        title: "The verified pin lives on the same record as the estimate, work order, and invoice",
+        text: "Because the verified pin lives on the same record as the estimate, work order, and invoice, field activity and job outcome sit in one connected trail.",
         image: asset(
           "inner-sales-canvassing-verify-the-work-actually-happened-data-backed-coaching.webp",
         ),
@@ -179,20 +179,24 @@ const trustBadges = [
 
 const faqs = [
   {
-    q: "Can I create custom territories for my canvassing team?",
-    a: "Yes. Admins can draw custom territories on a map and assign them to individual reps or teams, keeping the whole canvassing operation organized and avoiding overlap.",
+    q: "Does a knocked door really become a job without re-entering the data?",
+    a: "Yes. The pin, contact, appointment, and photos captured at the door live in the same pipeline as your estimates, work orders, and invoices, so the same record carries through to a signed estimate and a collected payment with nothing retyped.",
   },
   {
-    q: "Can pins be customized with different statuses, colors, and icons?",
-    a: "Yes. You can create your own pin statuses, each with a unique color and icon, so the map gives an instant visual read on how a territory is being worked.",
+    q: "Can a pin trigger an automated follow-up?",
+    a: "Yes. The automation builder fires on a status change, so a Callback pin can auto-text the homeowner and an Interested pin can create a follow-up task or notify the closer, so no one has to remember to do it.",
   },
   {
-    q: "What can a rep do directly from a pin?",
-    a: "A rep can create a contact, set a task, book an appointment, run a presentation, and upload photos or other media, all directly from the pin without switching to a separate app.",
+    q: "How does an appointment booked at the door reach my closer?",
+    a: "When a rep books from the pin, the appointment lands on the closer's calendar with the property address and field notes already attached, so the closer walks in prepared instead of chasing context.",
   },
   {
-    q: "How does Knockio provide location verification for field visits?",
-    a: "When a representative creates a property pin, Knockio records the distance between the device location and the selected property at that moment. Managers can use this information to review field records, identify possible location discrepancies, and maintain consistent territory data.",
+    q: "Can I require reps to capture specific info before leaving a door?",
+    a: "Yes. Each status can require specific custom fields, or a full lead-form survey, before the pin can save, so the details your trade needs such as decision-maker, account number, or roof age are captured at the door, not guessed later.",
+  },
+  {
+    q: "How is this different from Knockio's main canvassing page?",
+    a: "The door-to-door canvassing software page covers Knockio's canvassing product as a whole. This page shows how that canvassing connects to the rest of the platform, including pipeline, estimates, work orders, and invoices, so field activity turns into finished, paid jobs in one system.",
   },
 ];
 
@@ -245,10 +249,12 @@ const jsonLd = {
       "@type": "WebPage",
       "@id": "https://knockio.com/features/sales-canvassing-software/#webpage",
       url: "https://knockio.com/features/sales-canvassing-software/",
-      name: title,
-      description,
+      name: "Sales Canvassing Built Into Your CRM & Pipeline | Knockio",
+      description:
+        "See how Knockio's canvassing connects to the rest of your platform: territories, custom pins, and lead capture that flow into your pipeline, estimates, work orders, and invoices, with no re-typing between the door and the office.",
       isPartOf: { "@id": "https://knockio.com/#website" },
-      about: { "@id": "https://knockio.com/canvassing/#software" },
+      about: { "@id": "https://knockio.com/field-service-crm/#software" },
+      mainEntity: { "@id": "https://knockio.com/features/sales-canvassing-software/#faq" },
     },
     {
       "@type": "BreadcrumbList",
@@ -278,11 +284,48 @@ const jsonLd = {
     {
       "@type": "FAQPage",
       "@id": "https://knockio.com/features/sales-canvassing-software/#faq",
-      mainEntity: faqs.map((faq) => ({
-        "@type": "Question",
-        name: faq.q,
-        acceptedAnswer: { "@type": "Answer", text: faq.a },
-      })),
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Does a knocked door really become a job without re-entering the data?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. The pin, contact, appointment, and photos captured at the door live in the same pipeline as your estimates, work orders, and invoices, so the same record carries through to a signed estimate and a collected payment with nothing retyped.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can a pin trigger an automated follow-up?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. The automation builder fires on a status change, so a Callback pin can auto-text the homeowner and an Interested pin can create a follow-up task or notify the closer, so no one has to remember to do it.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How does an appointment booked at the door reach my closer?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "When a rep books from the pin, the appointment lands on the closer's calendar with the property address and field notes already attached, so the closer walks in prepared instead of chasing context.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I require reps to capture specific info before leaving a door?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Each status can require specific custom fields, or a full lead-form survey, before the pin can save, so the details your trade needs such as decision-maker, account number, or roof age are captured at the door, not guessed later.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How is this different from Knockio's main canvassing page?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "The door-to-door canvassing software page covers Knockio's canvassing product as a whole. This page shows how that canvassing connects to the rest of the platform, including pipeline, estimates, work orders, and invoices, so field activity turns into finished, paid jobs in one system.",
+          },
+        },
+      ],
     },
   ],
 };
@@ -313,19 +356,18 @@ const tabIconClass =
             <h1
               class="mb-7 text-[32px] font-bold leading-[38px] text-neutral-950 sm:text-[38px] sm:leading-[44px] lg:whitespace-nowrap xl:text-[48px] xl:leading-[54px] 2xl:text-[56px] 2xl:leading-[60px]"
             >
-              Sales Canvassing Software
+              Canvassing That Flows Into Every Job
             </h1>
             <p
               class="mb-10 max-w-[710px] text-base font-medium text-neutral-600 lg:text-lg"
             >
-              Most canvassing apps stop at a pin on a map. Knockio goes a lot
-              further. Admins build territories and assign them to reps, track
-              every rep live while they are in the field, and see exactly how
-              far a rep actually was from a home when they dropped a pin. Reps
-              drop a custom pin for every door, log a contact, book an
-              appointment, run a presentation, create a task, and upload photos.
-              Try our advanced sales canvassing software for your sales
-              campaigns.
+              Most canvassing apps stop at a pin on a map — then someone
+              re-types the lead into your CRM. Knockio doesn't hand off; it's
+              already connected. The territory a rep works this morning, the pin
+              they drop, the contact they capture, and the appointment they book
+              all live in the same system that runs your pipeline, estimates,
+              work orders, and invoices. A knocked door becomes a booked,
+              scheduled, and paid job without anyone re-entering a single field.
             </p>
             <a
               href="#cal-sec"
@@ -342,23 +384,22 @@ const tabIconClass =
             <h3
               class="mb-4 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
-              What is door to door canvassing software and what should it
-              actually track?
+              How does canvassing connect to the rest of your CRM and job
+              management?
             </h3>
             <p
               class="max-w-[720px] text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
-              Door to door canvassing software helps field sales teams organize
-              territories, log activity at every home they visit, and report
-              that activity back to the office in real time. Knockio handles
-              this with custom territories assigned to specific reps, live GPS
-              tracking of every rep in the field, and custom pin drops for every
-              home, each with its own color, icon, and status. Reps can create
-              contacts, book appointments, run presentations, log tasks, and
-              upload media directly from the pin, while admins can see exactly
-              how far a rep's device was from the property at the moment the pin
-              was dropped, which is the part most canvassing apps leave out
-              entirely.
+              In Knockio, canvassing isn't a separate app bolted onto your job
+              software — it's the front end of the same platform. Every
+              territory, pin, contact, and appointment created at the door
+              writes straight into the pipeline that holds your estimates, work
+              orders, and invoices. When a rep marks a door Interested, that
+              record is already in your CRM; when they book an appointment, it
+              lands on the closer's calendar with the address and notes attached;
+              when the deal moves forward, the same record carries through to a
+              signed estimate and a collected payment. Nothing is exported,
+              re-keyed, or lost between the field and the office.
             </p>
           </div>
 
@@ -622,12 +663,12 @@ const tabIconClass =
           <p
             class="mx-auto max-w-[800px] text-base leading-6 text-neutral-700 sm:text-lg sm:leading-6"
           >
-            Canvassing in Knockio is not a separate app bolted onto your job
-            management system. Every pin, contact, task, and appointment created
-            at the door flows directly into the same pipeline running your
-            estimates, work orders, and invoices, so a knocked door can become a
-            booked, scheduled, and paid job without anyone re-entering a single
-            piece of information.
+            This is where a feature page earns its keep over a standalone
+            canvassing app: the door isn't the finish line, it's step one.
+            Because every pin lives in the same pipeline as your estimates, work
+            orders, and invoices, an interested door carries straight through to
+            a signed job and a collected payment — with a verified location trail
+            the whole way.
           </p>
         </div>
 
@@ -654,9 +695,9 @@ const tabIconClass =
             <p
               class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
-              Watch pins populate on the map in real time as your team works a
-              territory, so managers always know what is happening in the field
-              without waiting for an end of day report.
+              Watch pins populate on the map as a territory gets worked, so
+              managers know what's happening in the field without waiting for an
+              end-of-day report.
             </p>
             <ul
               class="relative mt-7 hidden grid gap-3 border-t border-solid border-neutral-200 pt-6"
@@ -708,9 +749,9 @@ const tabIconClass =
             <p
               class="relative text-[15px] leading-6 text-white/75 sm:text-base sm:leading-6"
             >
-              Pair canvassing with Knockio's automation builder to automatically
-              text a homeowner after a callback pin gets dropped, or assign a
-              follow up task the moment a rep marks a door as interested.
+              Pair canvassing with the automation builder so a callback pin
+              texts the homeowner and an interested pin assigns a follow-up
+              task — leads don't cool off between the doorstep and the office.
             </p>
             <ul
               class="relative mt-7 hidden grid gap-3 border-t border-solid border-white/15 pt-6"
@@ -753,15 +794,14 @@ const tabIconClass =
             <h3
               class="relative mb-5 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
-              A Sharper, More Accountable Canvassing Operation
+              One Record From Knock to Cash
             </h3>
             <p
               class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
-              When reps know their activity is tied to verified location data,
-              reporting gets more honest, and when every pin turns into a
-              contact, task, or appointment automatically, fewer leads slip
-              through the cracks between the doorstep and the office.
+              The pin, contact, appointment, and photos created at the door
+              become the same record your office quotes, schedules, and invoices
+              — nothing retyped, nothing dropped.
             </p>
             <ul
               class="relative mt-7 hidden grid gap-3 border-t border-solid border-neutral-200 pt-6"
@@ -803,20 +843,14 @@ const tabIconClass =
             <h2
               class="mb-8 w-full max-w-3xl text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:max-w-none lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
             >
-              <span class="lg:whitespace-nowrap"
-                >Everything Teams Ask Before</span
-              >
-              <br class="hidden lg:block" />
-              Using Knockio Service CRM
+            Everything Teams Ask Before Using Knockio Service CRM
             </h2>
             <p
               class="mb-6 w-full max-w-3xl text-sm leading-6 font-normal text-neutral-800 sm:text-base sm:leading-7 md:mb-8 md:text-lg md:leading-8"
             >
-              Service teams need more than a basic contact list. Knockio
-              connects customer records, leads, jobs, estimates, schedules,
-              crews, invoices, payments, and field updates. It helps sales,
-              office, and field teams work from the same information, so jobs
-              move faster with less confusion.
+              Switching how your team canvasses is a real decision when
+              territories, dispositions, and lead history all live inside it.
+              Here's what teams ask most.
             </p>
           </div>
 

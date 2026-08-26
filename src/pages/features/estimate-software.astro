@@ -16,9 +16,9 @@ import {
   RefreshCw,
 } from "lucide-astro";
 
-const title = "Estimate Software for Contractors and Home Service | Knockio";
+const title = "Estimate Software for Contractors";
 const description =
-  "Build estimates that win jobs with e-signatures, online approvals, and change orders. See why contractors choose Knockio over Jobber and ServiceTitan.";
+  "Most contractors don't lose jobs on price — they lose them because the estimate looked sloppy, took two days to send, or sat in an inbox with no follow-up. Knockio gives you branded, itemized estimates a customer can approve and sign from their phone.";
 
 const asset = (name: string) => `/assets/cfw/${name}`;
 
@@ -29,25 +29,25 @@ const proposalGroups = [
     icon: "clipboard" as const,
     items: [
       {
-        label: "Professional Proposals",
-        title: "Branded Digital Estimates",
-        text: "Send polished, on brand estimates by email or text that customers can open and review on any device. No paper, no fax machine, no excuses.",
+        label: "Pull from your catalog",
+        title: "Build the quote from a library of priced products and services",
+        text: "Build the quote from a library of priced products and services, so pricing is accurate and consistent across every rep and crew.",
         image: asset(
           "inner-estimate-build-estimates-that-win-jobs-professional-proposals.webp",
         ),
       },
       {
-        label: "Higher Average Job Value",
-        title: "Optional Line Items for Upsells",
-        text: "Let homeowners add upgrades like gutter guards on a roofing job or a smart thermostat on an HVAC install, right inside the estimate.",
+        label: "Optional upsell lines",
+        title: "Include optional line items the customer can add themselves",
+        text: "Include optional line items the customer can add themselves — an easy way to lift ticket size without a hard sell.",
         image: asset(
           "inner-estimate-build-estimates-that-win-jobs-higher-average-job-value.webp",
         ),
       },
       {
-        label: "Speed and Consistency",
-        title: "Templates and a Product or Service Catalog",
-        text: "Pull from a library of priced services and products so every estimate goes out fast, accurate, and consistent across your team.",
+        label: "Branded and professional",
+        title: "Every estimate goes out clean, itemized, and consistent",
+        text: "Every estimate goes out clean, itemized, and consistent, so your business looks the part.",
         image: asset(
           "inner-estimate-build-estimates-that-win-jobs-speed-and-consistency.webp",
         ),
@@ -60,25 +60,25 @@ const proposalGroups = [
     icon: "dollar" as const,
     items: [
       {
-        label: "Sign Anywhere",
-        title: "Digital Signatures",
-        text: "Customers approve estimates with a legally binding e signature from their phone. No printing, scanning, or waiting around for someone to be home.",
+        label: "E-signature on any device",
+        title: "Customers review and sign from a phone, tablet, or laptop",
+        text: "Customers review and sign from a phone, tablet, or laptop, so approval doesn't wait on a printer.",
         image: asset(
           "inner-estimate-make-approval-effortless-sign-anywhere.webp",
         ),
       },
       {
-        label: "Self Serve Approval",
-        title: "Online Customer Acceptance Portal",
-        text: "Give clients a dedicated portal to review pricing, photos, and scope, then accept the job whenever it works for them.",
+        label: "Online acceptance, timestamped",
+        title: "The approval is captured on the record",
+        text: 'The approval is captured on the record, so there\'s no "I never agreed to that" later.',
         image: asset(
           "inner-estimate-make-approval-effortless-self-serve-approval.webp",
         ),
       },
       {
-        label: "Transparent Pricing",
-        title: "Itemized Cost Breakdown",
-        text: "Show customers exactly what they are paying for with clear line items. That builds confidence and cuts down on back and forth questions.",
+        label: "Real-time pricing",
+        title: "Adjust pricing, add a product, or apply a discount and the customer sees the updated total instantly",
+        text: "Adjust pricing, add a product, or apply a discount and the customer sees the updated total instantly — great for in-home sales.",
         image: asset(
           "inner-estimate-make-approval-effortless-transparent-pricing.webp",
         ),
@@ -91,25 +91,25 @@ const proposalGroups = [
     icon: "file" as const,
     items: [
       {
-        label: "Scope Changes Made Easy",
-        title: "Built In Change Orders",
-        text: "When the job grows mid project, create a change order linked to the original estimate so pricing and approvals stay organized.",
+        label: "Change orders",
+        title: "When scope grows mid-job, issue a change order against the original estimate",
+        text: "When scope grows mid-job, issue a change order against the original estimate instead of starting over.",
         image: asset(
           "inner-estimate-handle-changes-without-the-chaos-scope-changes-made-easy.webp",
         ),
       },
       {
-        label: "Connected Records",
-        title: "Estimates Linked to Jobs and Work Orders",
-        text: "Every estimate ties to the job record, so approved pricing flows into work orders and invoices automatically.",
+        label: "A clear trail",
+        title: "What changed and what it cost stays documented on the job",
+        text: "What changed and what it cost stays documented on the job.",
         image: asset(
           "inner-estimate-handle-changes-without-the-chaos-connected-records.webp",
         ),
       },
       {
-        label: "Clean Audit Trail",
-        title: "Full Estimate History per Job",
-        text: "Track every version, revision, and change order tied to a job, all in one place for easy reference down the road.",
+        label: "Reusable templates",
+        title: "Save templates for the jobs you quote over and over",
+        text: "Save templates for the jobs you quote over and over, so every estimate goes out fast and accurate.",
         image: asset(
           "inner-estimate-handle-changes-without-the-chaos-clean-audit-trail.webp",
         ),
@@ -122,25 +122,25 @@ const proposalGroups = [
     icon: "bell" as const,
     items: [
       {
-        label: "Automated Nudges",
-        title: "Estimate Follow Up Reminders",
-        text: "Automatically remind customers about pending estimates by email or text, so your sales team is not stuck chasing 'still thinking about it' leads forever.",
+        label: "Follow-up automation",
+        title: "Scheduled email or text reminders chase pending estimates",
+        text: 'Scheduled email or text reminders chase pending estimates, so your team spends less time on "still deciding" leads.',
         image: asset(
           "inner-estimate-close-more-follow-up-less-automated-nudges.webp",
         ),
       },
       {
-        label: "Real Time Edits",
-        title: "Live Pricing Updates",
-        text: "Adjust line items, discounts, or pricing during an in home conversation and the customer sees the updated total right away.",
+        label: "Convert to a work order",
+        title: "Turn a signed estimate into a work order with the scope and pricing carried straight through",
+        text: "Turn a signed estimate into a work order with the scope and pricing carried straight through.",
         image: asset(
           "inner-estimate-close-more-follow-up-less-real-time-edits.webp",
         ),
       },
       {
-        label: "From Quote to Job",
-        title: "One Click Conversion to Work Orders and Invoices",
-        text: "Turn an approved estimate straight into a work order or invoice, keeping your pipeline moving without manual handoffs.",
+        label: "One connected workflow",
+        title: "Estimate, approval, change order, work order, and invoice all move through one pipeline",
+        text: "Estimate, approval, change order, work order, and invoice all move through one pipeline so nothing falls through the cracks.",
         image: asset(
           "inner-estimate-close-more-follow-up-less-from-quote-to-job.webp",
         ),
@@ -180,20 +180,24 @@ const trustBadges = [
 
 const faqs = [
   {
-    q: "Can customers approve and sign estimates online?",
-    a: "Yes. Knockio includes a customer acceptance portal with digital signature support, so homeowners and commercial clients can review and approve estimates from any device.",
+    q: "Can customers approve and sign an estimate online?",
+    a: "Yes. Estimates go out branded and mobile-friendly, and the customer can review, approve, and e-sign from any device. The online acceptance is captured on the record with a timestamp.",
   },
   {
-    q: "Does Knockio support change orders?",
-    a: "Yes. If the scope of work changes after an estimate is approved, you can create a change order linked to the original job and estimate, keeping pricing and approvals organized.",
+    q: "Can I offer Good/Better/Best pricing?",
+    a: "Yes — through optional line items or a set of saved estimate templates (for example, a builder, an architectural, and an impact-resistant version), so the customer can compare tiers and add upgrades themselves.",
   },
   {
-    q: "Can I offer optional add ons in an estimate?",
-    a: "Yes. Estimates support optional line items, letting customers choose upgrades or extras, which is a simple way to increase average job value for roofing, HVAC, solar, and remodeling jobs.",
+    q: "Does it handle change orders mid-job?",
+    a: "Yes. When scope shifts after the estimate is signed, you issue a change order against the original rather than rewriting the whole quote — keeping a clean trail of what changed and what it cost.",
   },
   {
-    q: "Can I save estimate templates for common jobs?",
-    a: "Yes. Knockio supports estimate templates and a product or service catalog, so your team can build accurate, consistent quotes quickly for repeatable job types.",
+    q: "Does a signed estimate turn into a work order and invoice?",
+    a: "Yes. A signed estimate converts into a work order, and later an invoice, with the scope and pricing carried straight through — no retyping across tools.",
+  },
+  {
+    q: "Can I reuse estimate templates for repeat job types?",
+    a: "Yes. Save templates for the jobs you quote over and over so every estimate goes out fast, accurate, and consistent across your team.",
   },
 ];
 
@@ -318,13 +322,13 @@ const tabIconClass =
             <p
               class="mb-10 max-w-[710px] text-base font-medium text-neutral-600 lg:text-lg"
             >
-              Most contractors lose jobs not because their price is wrong, but
-              because the estimate looks unprofessional, takes too long to send,
-              or sits in someone's inbox with no follow up. Knockio gives you
-              branded, easy to approve estimates with digital signatures and
-              online acceptance built in. Create a consistent, professional
-              estimating experience across every representative, crew, branch,
-              service line, and customer interaction.
+              Most contractors don't lose jobs on price — they lose
+              them because the estimate looked sloppy, took two days to send, or
+              sat in an inbox with no follow-up. Knockio gives you branded,
+              itemized estimates a customer can approve and sign from their
+              phone, built from a reusable catalog so every quote goes out fast
+              and consistent. When they say yes, that same estimate becomes a
+              work order and an invoice with nothing re-entered.
             </p>
             <a
               href="#cal-sec"
@@ -346,16 +350,15 @@ const tabIconClass =
             <p
               class="max-w-[720px] text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
-              Good estimate software for contractors should let you build
-              branded, itemized quotes fast, support digital signatures and
-              online approval so customers can accept from any device, handle
-              change orders when scope shifts mid job, and connect directly to
-              your invoicing and inventory. Knockio includes all of this out of
-              the box, plus optional line items for upsells and a reusable
-              product and service catalog. Knockio connects estimate templates,
-              optional line items, digital approvals, change orders, products,
-              services, work orders, invoices, payments, and job history in one
-              workflow.
+              Good estimate software should let you build branded, itemized
+              quotes quickly, support digital signatures and online approval so
+              customers can accept from any device, handle change orders when
+              scope shifts mid-job, and connect straight to your invoicing and
+              inventory. Knockio does all of this out of the box, plus optional
+              line items for upsells and a reusable product-and-service catalog
+              — so estimates, approvals, change orders, work orders, invoices,
+              and payments all live in one workflow instead of four disconnected
+              tools.
             </p>
           </div>
 
@@ -624,8 +627,8 @@ const tabIconClass =
             class="mx-auto max-w-[800px] text-base leading-6 text-neutral-700 sm:text-lg sm:leading-6"
           >
             Stop letting quotes get lost in someone's inbox. Knockio moves every
-            opportunity, from the first estimate to a signed job, a change
-            order, and a final invoice, through one connected pipeline so
+            opportunity — from the first estimate to a signed job, a change
+            order, and a final invoice — through one connected pipeline, so
             nothing falls through the cracks.
           </p>
         </div>
@@ -648,13 +651,13 @@ const tabIconClass =
             <h3
               class="relative mb-5 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
-              Instant Estimate Updates
+              Instant estimate updates
             </h3>
             <p
               class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
               Adjust pricing, add products, or apply discounts and the customer
-              sees the updated estimate in real time. Great for in home sales
+              sees the updated estimate in real time — perfect for in-home sales
               conversations where decisions happen on the spot.
             </p>
             <ul
@@ -696,14 +699,14 @@ const tabIconClass =
             <h3
               class="relative mb-5 text-[21px] font-semibold leading-[27px] text-white sm:text-2xl sm:leading-7"
             >
-              Estimate Follow Up Automation
+              Estimate follow-up automation
             </h3>
             <p
               class="relative text-[15px] leading-6 text-white/75 sm:text-base sm:leading-6"
             >
               Automatically remind customers about pending estimates with
               scheduled emails or texts, so your sales team spends less time
-              chasing 'still deciding' leads and more time closing new jobs.
+              chasing and more time closing.
             </p>
             <ul
               class="relative mt-7 hidden grid gap-3 border-t border-solid border-white/15 pt-6"
@@ -740,15 +743,14 @@ const tabIconClass =
             <h3
               class="relative mb-5 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
-              Improved Customer Confidence
+              Improved customer confidence
             </h3>
             <p
               class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
               A clear, professional, itemized estimate with the option to sign
-              and accept online builds confidence in your business and helps
-              convert more quotes into booked jobs, whether you do pool
-              maintenance or fiber installs.
+              online builds confidence and converts more quotes into booked
+              jobs, whether you do pool maintenance or fiber installs.
             </p>
             <ul
               class="relative mt-7 hidden grid gap-3 border-t border-solid border-neutral-200 pt-6"
@@ -782,20 +784,12 @@ const tabIconClass =
             <h2
               class="mb-8 w-full max-w-3xl text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:max-w-none lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
             >
-              <span class="lg:whitespace-nowrap"
-                >Everything Teams Ask Before</span
-              >
-              <br class="hidden lg:block" />
-              Using Knockio Service CRM
+            Everything Teams Ask Before Using Knockio Service CRM
             </h2>
             <p
               class="mb-6 w-full max-w-3xl text-sm leading-6 font-normal text-neutral-800 sm:text-base sm:leading-7 md:mb-8 md:text-lg md:leading-8"
             >
-              Service teams need more than a basic contact list. Knockio
-              connects customer records, leads, jobs, estimates, schedules,
-              crews, invoices, payments, and field updates. It helps sales,
-              office, and field teams work from the same information, so jobs
-              move faster with less confusion.
+              Your estimate is often the first real impression a customer gets, so here's how Knockio helps you send ones that close.
             </p>
           </div>
 

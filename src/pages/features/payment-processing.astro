@@ -3,6 +3,7 @@ import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
 import "../../styles/feature-page.css";
 import {
   ArrowRight,
+  Bell,
   Check,
   ChevronDown,
   ChevronRight,
@@ -15,9 +16,9 @@ import {
   RefreshCw,
 } from "lucide-astro";
 
-const title = "Payment Processing for Field Service Businesses | Knockio";
+const title = "Payment Processing for Field Service Business";
 const description =
-  "See how payment processing works in Knockio. Use Knockio to collect payments online or in-person, get paid out instantly, and more.";
+  "You finish the job, the customer's standing right there, and you still can't collect without opening a different app or sending a clunky third-party link. Knockio fixes that with built-in payment processing: Text-to-Pay links, card, and ACH, all tied directly to the job and invoice.";
 
 const asset = (name: string) => `/assets/cfw/${name}`;
 
@@ -28,25 +29,25 @@ const proposalGroups = [
     icon: "clipboard" as const,
     items: [
       {
-        label: "On Site Collection",
-        title: "Tap to Pay Right From Your Phone",
-        text: "Your technician finishes the job and taps the customer's card on their own phone. No card reader, no extra hardware to lose.",
+        label: "Card payments on the job",
+        title: "Take card payments tied directly to the job and invoice",
+        text: "Take card payments tied directly to the job and invoice, so every dollar lands on the right record.",
         image: asset(
           "inner-payments-accept-payments-however-customers-want-to-pay-on-site-collection.webp",
         ),
       },
       {
-        label: "Remote Collection",
-        title: "Text to Pay Links",
-        text: "Send a secure payment link by text when the homeowner is not on site. Great for roofing, remodeling, and bigger installs where the decision maker is somewhere else.",
+        label: "Text-to-Pay links",
+        title: "Send a payment link to customers who aren't on site",
+        text: "Send a payment link to customers who aren't on site; they tap and pay from anywhere.",
         image: asset(
           "inner-payments-accept-payments-however-customers-want-to-pay-remote-collection.webp",
         ),
       },
       {
-        label: "Flexible Methods",
-        title: "Credit Card and ACH Support",
-        text: "Let homeowners and commercial clients choose between cards and bank transfers, all through the same built in processor.",
+        label: "Card, ACH, and manual",
+        title: "Let customers pay by card or bank transfer (ACH)",
+        text: "Let customers pay by card or bank transfer (ACH), and log cash and check payments on the job too.",
         image: asset(
           "inner-payments-accept-payments-however-customers-want-to-pay-flexible-methods.webp",
         ),
@@ -59,25 +60,25 @@ const proposalGroups = [
     icon: "dollar" as const,
     items: [
       {
-        label: "Automatic Reconciliation",
-        title: "Payments Tied Directly to Invoices",
-        text: "Whether the payment comes through online or gets entered manually, the invoice and job record update in real time.",
+        label: "Auto-reconciled",
+        title: "The moment a payment lands, the job record and invoice update automatically",
+        text: "The moment a payment lands, the job record and invoice update automatically — no spreadsheet.",
         image: asset(
           "inner-payments-payments-connected-to-every-job-automatic-reconciliation.webp",
         ),
       },
       {
-        label: "Accurate Bookkeeping",
-        title: "Manual Entry for Cash and Check",
-        text: "Got paid the old fashioned way? Log it so your numbers stay accurate for every job, no matter how the customer paid.",
+        label: "One real-time view",
+        title: "See what's been collected and what's still outstanding across every job",
+        text: "See what's been collected and what's still outstanding across every job, crew, and customer.",
         image: asset(
           "inner-payments-payments-connected-to-every-job-accurate-bookkeeping.webp",
         ),
       },
       {
-        label: "Full Visibility",
-        title: "Real Time Cash Flow Dashboard",
-        text: "See what has been collected, what is outstanding, and where every dollar stands across all jobs and crews, instantly.",
+        label: "One reconciled ledger",
+        title: "Because every payment ties to its job and invoice, collected and outstanding amounts stay reconciled",
+        text: "Because every payment ties to its job and invoice, collected and outstanding amounts stay reconciled without a spreadsheet.",
         image: asset(
           "inner-payments-payments-connected-to-every-job-full-visibility.webp",
         ),
@@ -86,31 +87,62 @@ const proposalGroups = [
   },
   {
     key: "tracking",
-    title: "Automate Your Collections",
+    title: "Bill Recurring Services on a Subscription",
     icon: "file" as const,
     items: [
       {
-        label: "Hands Off Follow Up",
-        title: "Automatic Payment Reminders",
-        text: "Set up reminder sequences for unpaid invoices so nobody on your team has to manually chase down a late payment again.",
+        label: "Recurring invoices",
+        title: "Put maintenance plans, pest treatments, and lawn-care on a subscription",
+        text: "Put maintenance plans, pest treatments, and lawn-care on a subscription that generates an invoice every billing cycle, so recurring revenue goes out on schedule.",
         image: asset(
           "inner-payments-automate-your-collections-hands-off-follow-up.webp",
         ),
       },
       {
-        label: "Recurring Revenue",
-        title: "Auto Pay for Maintenance Plans",
-        text: "Run recurring billing for pest control, lawn care, and HVAC maintenance contracts without rebuilding the invoice every month.",
+        label: "Collected the same way",
+        title: "Each subscription invoice sends by text or email and collects by card or ACH",
+        text: "Each subscription invoice sends by text or email and collects by card or ACH, just like any other invoice.",
         image: asset(
           "inner-payments-automate-your-collections-recurring-revenue.webp",
         ),
       },
       {
-        label: "Faster Cycles",
-        title: "Same Day Payment Capture",
-        text: "Combine instant invoicing with on site payment so cash hits your account before the crew is even back at the shop.",
+        label: "Tied to the customer",
+        title: "Every recurring invoice lives on the same customer and job record",
+        text: "Every recurring invoice lives on the same customer and job record, so nothing has to be re-entered.",
         image: asset(
           "inner-payments-automate-your-collections-faster-cycles.webp",
+        ),
+      },
+    ],
+  },
+  {
+    key: "followup",
+    title: "A Payment Experience That Builds Trust",
+    icon: "bell" as const,
+    items: [
+      {
+        label: "Professional options",
+        title: "Offering Text-to-Pay and online payment links signals professionalism",
+        text: "Offering Text-to-Pay and online payment links signals professionalism to homeowners and commercial clients alike.",
+        image: asset(
+          "inner-payments-accept-payments-however-customers-want-to-pay-on-site-collection.webp",
+        ),
+      },
+      {
+        label: "Faster close, faster pay",
+        title: "That trust translates directly into closed jobs and quicker payments",
+        text: "That trust translates directly into closed jobs and quicker payments.",
+        image: asset(
+          "inner-payments-accept-payments-however-customers-want-to-pay-remote-collection.webp",
+        ),
+      },
+      {
+        label: "Accurate books, automatically",
+        title: "Because every payment ties to the job, your numbers stay accurate",
+        text: "Because every payment ties to the job, your numbers stay accurate without anyone touching a spreadsheet.",
+        image: asset(
+          "inner-payments-accept-payments-however-customers-want-to-pay-flexible-methods.webp",
         ),
       },
     ],
@@ -148,8 +180,8 @@ const trustBadges = [
 
 const faqs = [
   {
-    q: "Does Knockio have its own payment processor?",
-    a: "Yes. Knockio includes its own built-in payment processing, supporting credit cards, ACH, tap to pay, and text to pay, with no need to connect a separate third party processor.",
+    q: "Does Knockio have its own payment processing?",
+    a: "Yes. Knockio includes built-in payment processing that supports credit cards, ACH, and text to pay. You apply for a merchant account to enable it, and once approved, payments run inside Knockio and tie to the job and invoice.",
   },
   {
     q: "Can I record payments that were collected outside the app, like cash or check?",
@@ -214,8 +246,9 @@ const jsonLd = {
       "@type": "WebPage",
       "@id": "https://knockio.com/features/payment-processing/#webpage",
       url: "https://knockio.com/features/payment-processing/",
-      name: title,
-      description,
+      name: "Payment Processing for Field Service Businesses | Knockio",
+      description:
+        "See how payment processing works in Knockio. Collect card, ACH, and Text-to-Pay payments online or in person, all tied to the job and invoice.",
       isPartOf: { "@id": "https://knockio.com/#website" },
       about: { "@id": "https://knockio.com/field-service-crm/#software" },
     },
@@ -246,11 +279,40 @@ const jsonLd = {
     {
       "@type": "FAQPage",
       "@id": "https://knockio.com/features/payment-processing/#faq",
-      mainEntity: faqs.map((faq) => ({
-        "@type": "Question",
-        name: faq.q,
-        acceptedAnswer: { "@type": "Answer", text: faq.a },
-      })),
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Does Knockio have its own payment processing?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Knockio includes built-in payment processing that supports credit cards, ACH, and text to pay. You apply for a merchant account to enable it, and once approved, payments run inside Knockio and tie to the job and invoice.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I record payments that were collected outside the app, like cash or check?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. You can log manual payments against any invoice for accurate accounting and job financial tracking, even when the payment did not go through Knockio.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I send a customer a link to pay remotely?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Text to pay and online payment links let customers pay securely from their phone or computer, even if they are not on site when the job wraps up.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How does Knockio help me get paid faster?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "By combining instant invoicing, multiple payment options, and automated reminders in one platform, Knockio removes the friction and delays that come from juggling separate billing, payment, and accounting tools.",
+          },
+        },
+      ],
     },
   ],
 };
@@ -288,12 +350,11 @@ const tabIconClass =
             <p
               class="mb-10 max-w-[710px] text-base font-medium text-neutral-600 lg:text-lg"
             >
-              You finish the job, the customer is standing right there, and you
-              still cannot collect payment without pulling out a different app
-              or sending them a clunky link from a third party tool. Knockio
-              fixes that with built-in payment processing. Tap to pay, text to
-              pay, credit cards, and ACH, all tied directly to the job, no
-              separate merchant account required.
+              You finish the job, the customer's standing right there, and you
+              still can't collect without opening a different app or sending a
+              clunky third-party link. Knockio fixes that with built-in payment
+              processing: Text-to-Pay links, card, and ACH, all tied directly
+              to the job and invoice.
             </p>
             <a
               href="#cal-sec"
@@ -310,19 +371,18 @@ const tabIconClass =
             <h3
               class="mb-4 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
-              Can home service businesses accept tap to pay and text to pay in
+              Can home service businesses collect card and ACH payments in
               one platform?
             </h3>
             <p
               class="max-w-[720px] text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
-              Yes. Knockio includes built in payment processing that lets home
-              service businesses accept tap to pay straight from a technician's
-              phone, send text to pay links for customers who are not on site,
-              and process credit card and ACH payments. Every payment ties
-              automatically to the job and invoice, so you are not reconciling
-              numbers across two or three different systems like you would with
-              a separate processor bolted onto ServiceTitan or Jobber.
+              Yes. Knockio includes built-in payment processing that lets you
+              send Text-to-Pay links to customers who aren't on site and
+              process card and ACH payments. Every payment ties automatically
+              to the job and invoice, so you're not reconciling numbers across
+              two or three systems like you would with a processor bolted onto
+              ServiceTitan or Jobber.
             </p>
           </div>
 
@@ -412,6 +472,9 @@ const tabIconClass =
                         )}
                         {group.icon === "file" && (
                           <FileText class="size-[22px]" aria-hidden="true" />
+                        )}
+                        {group.icon === "bell" && (
+                          <Bell class="size-[22px]" aria-hidden="true" />
                         )}
                       </span>
                       <span class="text-xl font-bold leading-7 sm:text-lg sm:leading-8">
@@ -578,17 +641,17 @@ const tabIconClass =
           <h2
             class="mb-6 text-center text-[31px] font-bold leading-[39px] text-neutral-950 sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
           >
-            Manage Every Proposal From First{" "}
+            Manage Every Payment From First{" "}
             <br class="hidden lg:block" />
-            Estimate to Signed Job
+            Collection to Cleared Funds
           </h2>
           <p
             class="mx-auto max-w-[800px] text-base leading-6 text-neutral-700 sm:text-lg sm:leading-6"
           >
-            Stop guessing what has been collected and what is still sitting out
-            there. Knockio gives owners and office managers one real time view
-            of payments across every job, crew, and customer, whether you run a
-            single truck or a multi location operation.
+            Stop guessing what's been collected and what's still sitting out
+            there. Knockio gives owners and office managers one real-time view
+            of payments across every job, crew, and customer — whether you're
+            running one crew or a dozen.
           </p>
         </div>
 
@@ -615,9 +678,9 @@ const tabIconClass =
             <p
               class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
-              The moment a payment comes in, whether in person, online, or by
-              text, the job record and invoice update automatically. Your books
-              stay accurate without anyone touching a spreadsheet.
+              The moment a payment comes in — in person, online, or by text —
+              the job record and invoice update automatically, so your books
+              stay accurate on their own.
             </p>
             <ul
               class="relative mt-7 hidden grid gap-3 border-t border-solid border-neutral-200 pt-6"
@@ -669,10 +732,9 @@ const tabIconClass =
             <p
               class="relative text-[15px] leading-6 text-white/75 sm:text-base sm:leading-6"
             >
-              Set up automatic reminders for unpaid invoices and recurring
-              schedules for maintenance contracts, pest control treatments, and
-              lawn care plans. Knockio's automation builder handles the follow
-              up so your team does not have to.
+              Set automatic text or email reminders for unpaid invoices, so the
+              automation builder handles the follow-up instead of your office
+              chasing every one.
             </p>
             <ul
               class="relative mt-7 hidden grid gap-3 border-t border-solid border-white/15 pt-6"
@@ -720,9 +782,9 @@ const tabIconClass =
             <p
               class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
-              Offering tap to pay, text to pay, and online links signals
-              professionalism to homeowners and commercial clients alike. That
-              trust translates directly into closed jobs and faster payments.
+              Offering Text-to-Pay and online payment links signals
+              professionalism to homeowners and commercial clients — and that
+              trust translates into closed jobs and faster payments.
             </p>
             <ul
               class="relative mt-7 hidden grid gap-3 border-t border-solid border-neutral-200 pt-6"
@@ -764,20 +826,13 @@ const tabIconClass =
             <h2
               class="mb-8 w-full max-w-3xl text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:max-w-none lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
             >
-              <span class="lg:whitespace-nowrap"
-                >Everything Teams Ask Before</span
-              >
-              <br class="hidden lg:block" />
-              Using Knockio Service CRM
+            Everything Teams Ask Before Using Knockio Service CRM
             </h2>
             <p
               class="mb-6 w-full max-w-3xl text-sm leading-6 font-normal text-neutral-800 sm:text-base sm:leading-7 md:mb-8 md:text-lg md:leading-8"
             >
-              Service teams need more than a basic contact list. Knockio
-              connects customer records, leads, jobs, estimates, schedules,
-              crews, invoices, payments, and field updates. It helps sales,
-              office, and field teams work from the same information, so jobs
-              move faster with less confusion.
+              Collecting on the spot changes your cash flow. Here's how
+              Knockio's payments work.
             </p>
           </div>
 
