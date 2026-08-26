@@ -12,11 +12,11 @@ import Lenis from "lenis";
 
 
 const lenis = new Lenis({
-  duration: 1.2, // higher = slower/smoother
+  duration: 0.8,
   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
   smoothWheel: true,
-  wheelMultiplier: 0.3, // tune this for "how much per swipe"
-  touchMultiplier: 0.3,
+  wheelMultiplier: 0.45,
+  touchMultiplier: 0.45,
 });
 
 function raf(time) {
@@ -486,6 +486,7 @@ requestAnimationFrame(raf);
     var lerpTarget = 0;
     var lerpCurrent = 0;
     var LERP_FACTOR = 0.12;
+    var clickAnimating = false;
 
     function manageHeaderVisibility() {
       if (!header) return;
@@ -518,10 +519,17 @@ requestAnimationFrame(raf);
     }
 
     function updateDesktop() {
-      lerpTarget = getScrollStepRaw(track, steps);
+      if (!clickAnimating) {
+        lerpTarget = getScrollStepRaw(track, steps);
+      }
       var diff = lerpTarget - lerpCurrent;
       if (Math.abs(diff) < 0.01) {
         lerpCurrent = lerpTarget;
+        if (clickAnimating) {
+          clickAnimating = false;
+          lerpTarget = getScrollStepRaw(track, steps);
+          lerpCurrent = lerpTarget;
+        }
       } else {
         lerpCurrent += diff * LERP_FACTOR;
       }
@@ -564,7 +572,7 @@ requestAnimationFrame(raf);
           scrollToCompactPanel(panels[index]);
         } else {
           lerpTarget = index;
-          lerpCurrent = index;
+          clickAnimating = true;
           scrollToTrackStep(track, steps, index);
         }
       });
