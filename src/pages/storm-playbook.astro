@@ -1,0 +1,531 @@
+---
+import KnockioHomeLayout from "../layouts/KnockioHomeLayout.astro";
+import "../styles/storm-playbook.css";
+import {
+  Check,
+  ListChecks,
+  MapPin,
+  Shield,
+  Target,
+  CalendarDays,
+  FileDown,
+  Quote,
+} from "lucide-astro";
+
+const title = "Storm Playbook - Knockio";
+const description =
+  "A simple field guide for roofing teams after a storm. One system for canvassing, documenting, and closing.";
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://knockio.com/storm-playbook/#webpage",
+    url: "https://knockio.com/storm-playbook/",
+    name: "Storm Playbook - Knockio",
+    description:
+      "A simple field guide for roofing teams after a storm. One system for canvassing, documenting, and closing.",
+    isPartOf: {
+      "@id": "https://knockio.com/#website",
+    },
+    about: {
+      "@id": "https://knockio.com/canvassing/#software",
+    },
+    audience: {
+      "@type": "Audience",
+      audienceType: "Roofing Contractors",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://knockio.com/storm-playbook/#breadcrumb",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://knockio.com/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Storm Playbook",
+        item: "https://knockio.com/storm-playbook/",
+      },
+    ],
+  },
+];
+
+const reviewsRow1 = [
+  {
+    name: "Lacey Jackson",
+    avatar: "/assets/cfw/avatar-lacey-jackson.webp",
+    quote:
+      "This app is the best thing that has happened to our company! Asad is absolutely amazing! He is so responsive, it doesn't matter what time of day he is on it! I highly recommend this company add this app!",
+  },
+  {
+    name: "Ben Loveland",
+    avatar: "/assets/cfw/avatar-ben-loveland.webp",
+    quote:
+      "Knockio is a great product! We use it for our roofing sales canvassing. Their support team is responsive and fixes issues immediately. Highly recommend!",
+  },
+  {
+    name: "Bar Galanti",
+    avatar: "/assets/cfw/avatar-bar-galanti.webp",
+    quote:
+      "The support team is awesome. The live tracking feature is very useful. The pricing is fair as well!",
+  },
+];
+
+const reviewsRow2 = [
+  {
+    name: "Georgia Hancocks",
+    avatar: "/assets/cfw/avatar-georgia-hancocks.webp",
+    quote:
+      "Knockio is the best! My team and I absolutely love using it - it is so user friendly and simple. Support is brilliant too, nothing is ever too much trouble. The best on the market. Thanks Knockio!",
+  },
+  {
+    name: "Sarah Bennett",
+    avatar: "/assets/cfw/avatar-sarah-bennett.webp",
+    quote:
+      "We love Knockio so far! It is solving a lot of the issues of the other canvassing apps. The team have worked with us providing excellent fast support. Highly recommend if you're seeing people face to face.",
+  },
+  {
+    name: "Ayana Hall",
+    avatar: "/assets/cfw/avatar-ayana-hall.webp",
+    quote:
+      "Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.",
+  },
+];
+---
+
+<KnockioHomeLayout
+  title={title}
+  description={description}
+  jsonLd={jsonLd}
+>
+  <main class="overflow-hidden bg-white">
+    <!-- HERO SECTION -->
+    <section class="relative overflow-hidden bg-[#f7fbff] py-16 sm:py-20 lg:min-h-[760px] lg:py-0">
+      <!-- Soft background glows -->
+      <div class="pointer-events-none absolute inset-0">
+        <div class="absolute -left-28 top-10 h-[520px] w-[520px] rounded-full bg-blue-100/50 blur-3xl"></div>
+        <div class="absolute right-0 top-0 h-[560px] w-[560px] translate-x-1/3 rounded-full bg-primary-500/10 blur-3xl"></div>
+        <div class="absolute bottom-0 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-white blur-3xl"></div>
+      </div>
+
+      <div class="relative z-10 my-container mx-auto flex min-h-[680px] items-center">
+        <div class="grid w-full grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-14 xl:gap-20">
+          <!-- Left Content -->
+          <div class="lg:col-span-6">
+            <h1 class="mb-6 max-w-[760px] text-5xl font-extrabold leading-[1.12] tracking-[-0.04em] text-[#111827] sm:text-6xl lg:text-[72px] xl:text-[80px]">
+              Storm Restoration
+              <span class="block text-[#188b1f]">Playbook.</span>
+            </h1>
+
+            <p class="mb-7 max-w-[760px] text-lg font-medium leading-8 text-slate-700 sm:text-xl lg:text-2xl lg:leading-9">
+              A simple field guide for roofing teams after a storm. One system for canvassing,
+              documenting, and closing.
+            </p>
+
+            <div class="space-y-4">
+              <div class="flex items-center gap-3">
+                <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-100 text-primary-600">
+                  <Check class="size-3.5 stroke-[3]" />
+                </span>
+                <span class="text-base font-bold text-[#111827] sm:text-lg">
+                  Hit the right neighborhoods first
+                </span>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-100 text-primary-600">
+                  <Check class="size-3.5 stroke-[3]" />
+                </span>
+                <span class="text-base font-bold text-[#111827] sm:text-lg">
+                  Stop overlap and double-knocking
+                </span>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-100 text-primary-600">
+                  <Check class="size-3.5 stroke-[3]" />
+                </span>
+                <span class="text-base font-bold text-[#111827] sm:text-lg">
+                  Keep leads moving with a next step
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Form Card -->
+          <div class="lg:col-span-6">
+            <div class="relative mx-auto max-w-[690px] lg:ml-auto">
+              <div class="absolute -right-9 -bottom-8 hidden h-full w-full rounded-[2rem] border border-primary-500/20 xl:block"></div>
+
+              <div
+                id="storm-playbook-form"
+                class="relative rounded-[2rem] border border-neutral-300 bg-white p-6 shadow-2xl shadow-neutral-900/20 sm:p-8 lg:p-10"
+              >
+                <div class="mb-6">
+                  <h2 class="text-2xl font-extrabold leading-tight text-[#07152d] sm:text-[28px]">
+                    Instant PDF Access
+                  </h2>
+                  <p class="mt-1 text-base font-medium leading-6 text-slate-700">
+                    Enter your details to download the guide.
+                  </p>
+                </div>
+
+                <div class="storm-playbook-form">
+                  <div class="fluentform ff-default fluentform_wrapper_3 ffs_default_wrap">
+                    <form
+                      data-form_id="3"
+                      id="fluentform_3"
+                      class="frm-fluent-form fluent_form_3 ff-el-form-top ff_form_instance_3_1 ffs_default"
+                      data-form_instance="ff_form_instance_3_1"
+                      method="POST"
+                    >
+                      <fieldset style="border: none!important;margin: 0!important;padding: 0!important;background-color: transparent!important;box-shadow: none!important;outline: none!important; min-inline-size: 100%;">
+                        <legend class="sr-only">playbook form</legend>
+                        <input type="hidden" name="__fluent_form_embded_post_id" value="5476" />
+                        <input type="hidden" id="_fluentform_3_fluentformnonce" name="_fluentform_3_fluentformnonce" value="e570fb3c42" />
+                        <input type="hidden" name="_wp_http_referer" value="/storm-playbook/" />
+
+                        <div data-type="name-element" data-name="names" class="ff-field_container ff-name-field-wrapper">
+                          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                            <div class="ff-el-group ff-el-form-top">
+                              <div class="ff-el-input--label ff-el-is-required">
+                                <label for="ff_3_names_first_name_">First Name</label>
+                              </div>
+                              <div class="ff-el-input--content">
+                                <input
+                                  type="text"
+                                  name="names[first_name]"
+                                  id="ff_3_names_first_name_"
+                                  class="ff-el-form-control"
+                                  placeholder="Enter Your First Name"
+                                  aria-required="true"
+                                  required
+                                />
+                              </div>
+                            </div>
+                            <div class="ff-el-group ff-el-form-top">
+                              <div class="ff-el-input--label ff-el-is-required">
+                                <label for="ff_3_names_last_name_">Last Name</label>
+                              </div>
+                              <div class="ff-el-input--content">
+                                <input
+                                  type="text"
+                                  name="names[last_name]"
+                                  id="ff_3_names_last_name_"
+                                  class="ff-el-form-control"
+                                  placeholder="Enter Your Last Name"
+                                  aria-required="true"
+                                  required
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="ff-el-group">
+                          <div class="ff-el-input--label ff-el-is-required">
+                            <label for="ff_3_email">Work Email</label>
+                          </div>
+                          <div class="ff-el-input--content">
+                            <input
+                              type="email"
+                              name="email"
+                              id="ff_3_email"
+                              class="ff-el-form-control"
+                              placeholder="Email Address"
+                              data-name="email"
+                              aria-required="true"
+                              required
+                            />
+                          </div>
+                        </div>
+
+                        <div class="ff-el-group">
+                          <div class="ff-el-input--label">
+                            <label for="ff_3_input_text">Company (Optional)</label>
+                          </div>
+                          <div class="ff-el-input--content">
+                            <input
+                              type="text"
+                              name="input_text"
+                              class="ff-el-form-control"
+                              data-name="input_text"
+                              id="ff_3_input_text"
+                              placeholder="Company (Optional)"
+                            />
+                          </div>
+                        </div>
+
+                        <div class="ff-el-group ff-text-left ff_submit_btn_wrapper">
+                          <button type="submit" class="ff-btn ff-btn-submit ff-btn-md ff_btn_style">
+                            Download the Playbook
+                          </button>
+                        </div>
+                      </fieldset>
+                    </form>
+                    <div id="fluentform_3_errors" class="ff-errors-in-stack ff_form_instance_3_1"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT'S INSIDE SECTION -->
+    <section class="bg-white py-16 sm:py-20 lg:py-28">
+      <div class="my-container mx-auto">
+        <!-- Header -->
+        <div class="mx-auto mb-12 max-w-[900px] text-center lg:mb-14">
+          <p class="mb-2 text-sm font-extrabold uppercase tracking-wide text-primary-500">
+            The Strategy
+          </p>
+
+          <h2 class="mb-3 text-4xl font-extrabold leading-tight tracking-[-0.03em] text-[#07152d] sm:text-5xl lg:text-[56px]">
+            What’s inside the Playbook
+          </h2>
+
+          <p class="text-lg font-medium leading-8 text-slate-700 sm:text-xl lg:text-2xl">
+            Everything you need to turn a storm event into a profitable campaign without the chaos.
+          </p>
+        </div>
+
+        <!-- Cards -->
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3 xl:gap-10">
+          <!-- Card 1 -->
+          <div class="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-white hover:shadow-xl hover:shadow-neutral-900/5 sm:p-10">
+            <div class="mb-7 flex h-14 w-14 items-center justify-center rounded-xl bg-orange-50 text-orange-500">
+              <ListChecks class="size-6" />
+            </div>
+
+            <h3 class="mb-4 text-2xl font-extrabold leading-tight text-[#07152d]">
+              First 24-hour checklist
+            </h3>
+
+            <p class="text-base font-medium leading-7 text-slate-700">
+              Speed is everything. Follow the exact protocol for the first day after the storm hits.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-white hover:shadow-xl hover:shadow-neutral-900/5 sm:p-10">
+            <div class="mb-7 flex h-14 w-14 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+              <MapPin class="size-6" />
+            </div>
+
+            <h3 class="mb-4 text-2xl font-extrabold leading-tight text-[#07152d]">
+              Neighborhood ranking method
+            </h3>
+
+            <p class="text-base font-medium leading-7 text-slate-700">
+              Use radar and data to prioritize territories that yield the highest insurance claim approvals.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-white hover:shadow-xl hover:shadow-neutral-900/5 sm:p-10">
+            <div class="mb-7 flex h-14 w-14 items-center justify-center rounded-xl bg-purple-50 text-purple-600">
+              <Shield class="size-6" />
+            </div>
+
+            <h3 class="mb-4 text-2xl font-extrabold leading-tight text-[#07152d]">
+              Territory rules
+            </h3>
+
+            <p class="text-base font-medium leading-7 text-slate-700">
+              Assign areas and set clear rules to stop reps from overlapping or double-knocking.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-white hover:shadow-xl hover:shadow-neutral-900/5 sm:p-10">
+            <div class="mb-7 flex h-14 w-14 items-center justify-center rounded-xl bg-emerald-50 text-teal-600">
+              <Target class="size-6" />
+            </div>
+
+            <h3 class="mb-4 text-2xl font-extrabold leading-tight text-[#07152d]">
+              Lead tracking setup
+            </h3>
+
+            <p class="text-base font-medium leading-7 text-slate-700">
+              Scale from 10 leads to 1,000 without losing photos, notes, or contact details.
+            </p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-primary-500/30 hover:bg-white hover:shadow-xl hover:shadow-neutral-900/5 sm:p-10">
+            <div class="mb-7 flex h-14 w-14 items-center justify-center rounded-xl bg-rose-50 text-rose-500">
+              <CalendarDays class="size-6" />
+            </div>
+
+            <h3 class="mb-4 text-2xl font-extrabold leading-tight text-[#07152d]">
+              30-day plan
+            </h3>
+
+            <p class="text-base font-medium leading-7 text-slate-700">
+              A sustainable roadmap to manage the post-storm surge from intake to production.
+            </p>
+          </div>
+
+          <!-- Dark CTA Card -->
+          <div class="flex min-h-[265px] items-center justify-center rounded-[1.25rem] bg-[#111827] p-8 text-center text-white shadow-xl shadow-neutral-900/10 sm:p-10">
+            <div>
+              <div class="mx-auto mb-7 flex h-14 w-14 items-center justify-center rounded-lg bg-primary-500 text-[#07152d]">
+                <FileDown class="size-6 text-white" />
+              </div>
+
+              <h3 class="mx-auto mb-7 max-w-[280px] text-2xl font-extrabold leading-tight text-white">
+                Stop chasing, <br />
+                start dominating.
+              </h3>
+
+              <a
+                href="#storm-playbook-form"
+                class="inline-flex items-center justify-center rounded-xl bg-primary-500 px-8 py-3 text-base font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-600 hover:shadow-lg hover:shadow-primary-500/25"
+              >
+                Get the PDF
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTE SECTION -->
+    <section class="bg-white py-14 sm:py-16 lg:py-20">
+      <div class="my-container mx-auto">
+        <div class="mx-auto max-w-[960px] text-center">
+          <h2 class="text-2xl font-extrabold italic leading-[1.55] text-[#07152d] sm:text-3xl lg:text-[34px]">
+            “Built specifically for roofing owners and ops managers doing high-volume post-storm restoration work.”
+          </h2>
+
+          <div class="mx-auto mt-9 h-1 w-16 rounded-full bg-primary-500"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CUSTOMER REVIEWS SECTION -->
+    <section class="overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
+      <div class="my-container mx-auto mb-10 text-center lg:mb-16">
+        <p class="mb-4 text-sm font-medium leading-7 text-primary-500 md:text-2xl">
+          Customer Reviews
+        </p>
+        <h2 class="mb-8 text-3xl font-bold leading-tight text-neutral-950 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]">
+          What Field Service and Sales<br />
+          Teams Say About Knockio
+        </h2>
+        <img
+          src="/assets/cfw/google-5-star.webp"
+          alt="google review badge"
+          width="183"
+          height="60"
+          decoding="async"
+          loading="lazy"
+          class="mx-auto h-auto w-[150px] sm:w-[183px]"
+        />
+      </div>
+
+      <div class="mt-7 space-y-8">
+        <!-- Row 1: Left Moving -->
+        <div class="testimonial-track-container flex overflow-hidden">
+          <div class="testimonial-track hover:pause flex animate-marquee-left gap-4 sm:gap-6">
+            {
+              [0, 1].map((dup) => (
+                <div
+                  class="card-set flex gap-4 sm:gap-6"
+                  aria-hidden={dup === 1 ? "true" : undefined}
+                >
+                  {reviewsRow1.map((review) => (
+                    <div class="group relative w-[300px] flex-shrink-0 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 sm:w-[380px] sm:p-6 lg:w-[450px] lg:p-8">
+                      <p class="relative z-10 mb-6 min-h-[168px] text-sm italic leading-relaxed text-neutral-700 sm:mb-8 sm:text-base lg:text-lg">
+                        {review.quote}
+                      </p>
+                      <div class="relative z-10 flex items-center gap-4">
+                        <img
+                          src={review.avatar}
+                          alt={review.name}
+                          width="48"
+                          height="48"
+                          decoding="async"
+                          loading="lazy"
+                          class="h-12 w-12 rounded-full object-cover grayscale transition-all group-hover:grayscale-0"
+                        />
+                        <div>
+                          <p class="mb-1 text-base font-bold text-neutral-950">
+                            {review.name}
+                          </p>
+                          <p class="text-sm text-neutral-500" aria-label="5 out of 5 stars">
+                            ⭐⭐⭐⭐⭐
+                          </p>
+                        </div>
+                      </div>
+                      <Quote
+                        class="pointer-events-none absolute right-8 bottom-6 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <!-- Row 2: Right Moving -->
+        <div class="testimonial-track-container flex overflow-hidden">
+          <div class="testimonial-track hover:pause flex animate-marquee-right gap-4 sm:gap-6">
+            {
+              [0, 1].map((dup) => (
+                <div
+                  class="card-set flex gap-4 sm:gap-6"
+                  aria-hidden={dup === 1 ? "true" : undefined}
+                >
+                  {reviewsRow2.map((review) => (
+                    <div class="group relative w-[300px] flex-shrink-0 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 sm:w-[380px] sm:p-6 lg:w-[450px] lg:p-8">
+                      <p class="relative z-10 mb-6 min-h-[168px] text-sm italic leading-relaxed text-neutral-700 sm:mb-8 sm:text-base lg:text-lg">
+                        {review.quote}
+                      </p>
+                      <div class="relative z-10 flex items-center gap-4">
+                        <img
+                          src={review.avatar}
+                          alt={review.name}
+                          width="48"
+                          height="48"
+                          decoding="async"
+                          loading="lazy"
+                          class="h-12 w-12 rounded-full object-cover grayscale transition-all group-hover:grayscale-0"
+                        />
+                        <div>
+                          <p class="mb-1 text-base font-bold text-neutral-950">
+                            {review.name}
+                          </p>
+                          <p class="text-sm text-neutral-500" aria-label="5 out of 5 stars">
+                            ⭐⭐⭐⭐⭐
+                          </p>
+                        </div>
+                      </div>
+                      <Quote
+                        class="pointer-events-none absolute right-8 bottom-6 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../scripts/storm-playbook.js"></script>
+</KnockioHomeLayout>
