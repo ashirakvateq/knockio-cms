@@ -1,0 +1,128 @@
+/* ═══════════════════════════════════════════════
+   PRIVACY POLICY — PAGE STYLES
+   ═══════════════════════════════════════════════ */
+
+/* ── HERO ────────────────────────────────────── */
+.privacy-hero {
+  background-image: linear-gradient(270deg, rgba(18, 35, 20, 0.9) 0%, #122314 100%),
+    url('/assets/cfw/inner-industry-hero-bg.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  padding: 8rem 0;
+  margin-top: -80px;
+}
+
+@media (min-width: 640px) {
+  .privacy-hero {
+    padding: 9rem 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .privacy-hero {
+    padding: 0;
+  }
+}
+
+.privacy-hero-title {
+  color: #ffffff;
+  text-align: center;
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+
+/* ── LEGAL CONTENT ───────────────────────────── */
+.privacy-content-wrapper {
+  max-width: 1120px;
+}
+
+.privacy-updated-heading {
+  margin-bottom: 2rem;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: #0a0a0a;
+}
+
+.privacy-section-heading {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: clamp(1.5rem, 2.5vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: #0a0a0a;
+}
+
+.privacy-paragraph {
+  margin-bottom: 1.25rem;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 2rem;
+  color: #525252;
+}
+
+@media (min-width: 640px) {
+  .privacy-paragraph {
+    font-size: 1rem;
+  }
+}
+
+.privacy-list {
+  margin-bottom: 1.5rem;
+  margin-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.privacy-list > li {
+  padding-left: 0.5rem;
+  font-size: 0.9375rem;
+  line-height: 1.75rem;
+  color: #525252;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .privacy-list > li {
+    font-size: 1rem;
+  }
+}
+
+.privacy-callout-card {
+  margin-top: 2rem;
+  border-radius: 1rem;
+  border: 1px solid #e5e5e5;
+  background-color: #fafafa;
+  padding: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .privacy-callout-card {
+    padding: 1.5rem;
+  }
+}
+
+.privacy-callout-card h2 {
+  margin-bottom: 1rem;
+  font-size: clamp(1.5rem, 2.5vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: #0a0a0a;
+}
+
+.privacy-link {
+  font-weight: 500;
+  color: #4faa3a;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.2s ease;
+}
+
+.privacy-link:hover {
+  color: #43a047;
+}
