@@ -1,0 +1,395 @@
+---
+import KnockioHomeLayout from "../layouts/KnockioHomeLayout.astro";
+import PricingCalculator from "../components/PricingCalculator.astro";
+import PricingPlans from "../components/PricingPlans.astro";
+import "../styles/pricing.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Knockio Pricing",
+  description:
+    "Straightforward pricing for Knockio field sales and service platform. Plans from $20/user/month. No contracts, no setup fees.",
+  url: "https://knockio.com/pricing/",
+  isPartOf: { "@id": "https://knockio.com/#website" },
+};
+---
+
+<KnockioHomeLayout
+  title="Knockio Pricing | Field Sales & Service Plans from $20/mo"
+  description="Straightforward pricing for Knockio. Prospect $20/mo, Organize $30/mo, Growth $45/mo. No contracts, no setup fees. Volume discounts at 5+ users."
+  jsonLd={jsonLd}
+  fAwsm={true}
+>
+  <!-- Hero -->
+  <section class="pricing-hero relative flex min-h-[520px] items-center py-28 sm:py-32 lg:py-36">
+    <div class="my-container relative z-10 mx-auto w-full">
+      <div class="mx-auto max-w-4xl text-center">
+        <h1 class="mb-6 font-inter text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-[56px]">
+          Knockio Pricing
+        </h1>
+        <div class="flex flex-wrap items-center justify-center gap-3">
+          <div class="inline-flex items-center gap-2 text-base font-semibold text-white sm:text-lg">
+            <i class="fas fa-check text-sm text-primary-500"></i>
+            <span>No contracts.</span>
+          </div>
+          <div class="inline-flex items-center gap-2 text-base font-semibold text-white sm:text-lg">
+            <i class="fas fa-check text-sm text-primary-500"></i>
+            <span>Prorated billing.</span>
+          </div>
+          <div class="inline-flex items-center gap-2 text-base font-semibold text-white sm:text-lg">
+            <i class="fas fa-check text-sm text-primary-500"></i>
+            <span>No setup fees.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pointer-events-none absolute bottom-0 left-0 right-0 h-[160px]" style="background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.6) 50%, #fff 100%)"></div>
+  </section>
+
+  <!-- Pricing Plans -->
+  <section id="pricing-plans" class="relative z-10 -mt-8 py-20 max-xl:py-16 max-lg:py-14">
+    <div class="my-container">
+      <div class="mb-10 text-center max-md:mb-7">
+        <h2 class="mx-auto mb-4 max-w-3xl font-inter text-[56px] font-bold leading-tight text-neutral-900 max-2xl:text-5xl max-xl:text-4xl max-md:text-3xl">
+          Straightforward pricing. No surprises.
+        </h2>
+        <p class="mx-auto max-w-2xl text-lg text-neutral-600 max-xl:text-base">
+          Choose the tools your team needs today, or combine your entire field-sales and service operation in one connected platform.
+        </p>
+      </div>
+
+      <div class="mb-12 flex flex-wrap items-center justify-center gap-3">
+        <div class="flex items-center rounded-full border border-solid border-neutral-200 px-5 py-2.5 text-sm text-neutral-900">
+          <i class="fas fa-check mr-2 text-primary-500"></i>
+          <span>Pro-rated billing</span>
+        </div>
+        <div class="flex items-center rounded-full border border-solid border-neutral-200 px-5 py-2.5 text-sm text-neutral-900">
+          <i class="fas fa-check mr-2 text-primary-500"></i>
+          <span>No setup fee</span>
+        </div>
+        <div class="flex items-center rounded-full border border-solid border-neutral-200 px-5 py-2.5 text-sm text-neutral-900">
+          <i class="fas fa-check mr-2 text-primary-500"></i>
+          <span>No contracts</span>
+        </div>
+        <a href="#pricing-compare" class="flex items-center rounded-full border border-solid border-primary-200 px-5 py-2.5 text-sm font-medium text-primary-600 transition-colors hover:bg-primary-50">
+          Compare plans in detail
+          <i class="fa-solid fa-arrow-down ml-2 text-xs"></i>
+        </a>
+      </div>
+
+      <PricingPlans variant="pricing" />
+    </div>
+  </section>
+
+  <!-- Quick Estimate Calculator -->
+  <PricingCalculator />
+
+  <!-- Comparison Table -->
+  <section id="pricing-compare" class="relative bg-white py-16 sm:py-20">
+    <div class="my-container mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto mb-10 max-w-2xl text-center">
+        <p class="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-primary-500">Full Feature Comparison</p>
+        <h2 class="font-inter text-3xl font-bold text-neutral-950 sm:text-4xl">Compare plans in detail</h2>
+        <p class="mx-auto mt-3 max-w-xl text-base leading-7 text-neutral-600">See which Knockio plan best matches your sales, service, and enterprise requirements.</p>
+      </div>
+
+      <!-- Desktop Table -->
+      <div class="hidden overflow-x-auto rounded-[22px] border border-solid border-neutral-200 bg-white shadow-xl shadow-neutral-900/[0.04] lg:block">
+        <table class="min-w-[1280px] w-full border-separate border-spacing-0 text-left">
+          <thead>
+            <tr>
+              <th class="sticky z-30 w-[24%] rounded-tl-[22px] border-b border-r border-solid border-neutral-200 bg-white px-5 py-4 text-sm font-bold text-neutral-950 shadow-sm" style="top:0">Feature</th>
+              <th class="sticky z-30 w-[19%] border-b border-r border-solid border-neutral-200 bg-white px-5 py-4 shadow-sm" style="top:0">
+                <div class="flex items-center justify-between gap-3"><span class="text-sm font-bold text-neutral-950">Prospect</span><div class="text-right leading-tight"><span class="block text-base font-bold text-primary-600">$20/mo</span><span class="block text-xs font-medium text-neutral-500">5+ users</span></div></div>
+              </th>
+              <th class="sticky z-30 w-[19%] border-b border-r border-solid border-neutral-200 bg-[#f5faf3] px-5 py-4 shadow-sm" style="top:0">
+                <div class="flex items-center justify-between gap-3"><div class="flex items-center gap-2"><span class="text-sm font-bold text-neutral-950">Growth</span><span class="rounded-full bg-primary-500 px-2 py-0.5 text-[10px] font-bold text-white">Popular</span></div><div class="text-right leading-tight"><span class="block text-base font-bold text-primary-600">$45/mo</span><span class="block text-xs font-medium text-neutral-500">5+ users</span></div></div>
+              </th>
+              <th class="sticky z-30 w-[19%] border-b border-r border-solid border-neutral-200 bg-white px-5 py-4 shadow-sm" style="top:0">
+                <div class="flex items-center justify-between gap-3"><span class="text-sm font-bold text-neutral-950">Organize</span><div class="text-right leading-tight"><span class="block text-base font-bold text-primary-600">$30/mo</span><span class="block text-xs font-medium text-neutral-500">5+ users</span></div></div>
+              </th>
+              <th class="sticky z-30 w-[19%] rounded-tr-[22px] border-b border-solid border-neutral-200 bg-[#f5faf3] px-5 py-4 shadow-sm" style="top:0">
+                <div class="flex items-center justify-between gap-3"><div><span class="block text-sm font-bold text-neutral-950">Scale</span><span class="block text-xs font-medium text-primary-600">100+ users</span></div><div class="text-right leading-tight"><span class="block text-sm font-bold text-primary-600">Custom</span></div></div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="compare-group-start"><td class="border-b border-solid border-neutral-200 bg-white px-5 pt-4 pb-2 text-sm font-bold text-neutral-950 border-r border-neutral-200">Field Sales</td><td class="border-b border-solid border-neutral-200 bg-white px-5 pt-4 pb-2 border-r border-neutral-200"></td><td class="border-b border-solid border-neutral-200 bg-[#f8fbf7] px-5 pt-4 pb-2 border-r border-neutral-200"></td><td class="border-b border-solid border-neutral-200 bg-white px-5 pt-4 pb-2 border-r border-neutral-200"></td><td class="border-b border-solid border-neutral-200 bg-[#f8fbf7] px-5 pt-4 pb-2"></td></tr>
+            <tr><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Unlimited Territories &amp; Campaigns</td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td><td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td></tr>
+            <tr><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Route Planning &amp; Optimization</td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td><td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td></tr>
+            <tr><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Pre-Knocked Data (15¢ per address)</td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td><td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td></tr>
+            <tr><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Real-time Rep Tracking</td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td><td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td></tr>
+            <tr><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Presentations</td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td><td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td></tr>
+
+            <tr class="compare-group-start"><td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 text-sm font-bold text-neutral-950 border-r border-neutral-200">CRM &amp; Operations</td><td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 border-r border-neutral-200"></td><td class="border-b border-solid border-neutral-200 bg-[#f8fbf7] px-5 pt-6 pb-2 border-r border-neutral-200"></td><td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 border-r border-neutral-200"></td><td class="border-b border-solid border-neutral-200 bg-[#f8fbf7] px-5 pt-6 pb-2"></td></tr>
+            <tr><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Pipelines &amp; Lead Management</td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td></tr>
+            <tr><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Digital Contracts &amp; E-Signature</td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td></tr>
+            <tr><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Granular Permissions</td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td></tr>
+            <tr><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Email Communication</td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td></tr>
+            <tr><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Estimates &amp; Work Orders</td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td></tr>
+            <tr><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Invoices &amp; Payments</td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td></tr>
+            <tr><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Product &amp; Inventory Management</td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td></tr>
+            <tr><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Unlimited Workspaces</td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td><td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td></tr>
+
+            <tr class="compare-group-start"><td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 text-sm font-bold text-neutral-950 border-r border-neutral-200">Automation &amp; Productivity</td><td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 border-r border-neutral-200"></td><td class="border-b border-solid border-neutral-200 bg-[#f8fbf7] px-5 pt-6 pb-2 border-r border-neutral-200"></td><td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 border-r border-neutral-200"></td><td class="border-b border-solid border-neutral-200 bg-[#f8fbf7] px-5 pt-6 pb-2"></td></tr>
+            <tr><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Native Automation Builder</td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td></tr>
+            <tr><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Task Management &amp; Appointment Scheduling</td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td></tr>
+            <tr><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Zapier &amp; FlowChef Integrations</td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td></tr>
+
+            <tr class="compare-group-start"><td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 text-sm font-bold text-neutral-950 border-r border-neutral-200">Onboarding &amp; Support</td><td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 border-r border-neutral-200"></td><td class="border-b border-solid border-neutral-200 bg-[#f8fbf7] px-5 pt-6 pb-2 border-r border-neutral-200"></td><td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 border-r border-neutral-200"></td><td class="border-b border-solid border-neutral-200 bg-[#f8fbf7] px-5 pt-6 pb-2"></td></tr>
+            <tr><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Onboarding &amp; Account Setup</td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="text-sm font-semibold text-neutral-900">Free</span></td><td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="text-sm font-semibold text-neutral-900">Free</span></td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="text-sm font-semibold text-neutral-900">Free</span></td><td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center gap-1.5 text-sm font-semibold text-neutral-900"><i class="fa-solid fa-star text-primary-500"></i><span class="whitespace-nowrap">White-Glove</span></span></td></tr>
+            <tr><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Dedicated Success Manager</td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td><td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td></tr>
+            <tr><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Priority Support</td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td><td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td></tr>
+
+            <tr class="compare-group-start"><td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 text-sm font-bold text-neutral-950 border-r border-neutral-200">Enterprise</td><td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 border-r border-neutral-200"></td><td class="border-b border-solid border-neutral-200 bg-[#f8fbf7] px-5 pt-6 pb-2 border-r border-neutral-200"></td><td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 border-r border-neutral-200"></td><td class="border-b border-solid border-neutral-200 bg-[#f8fbf7] px-5 pt-6 pb-2"></td></tr>
+            <tr><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Custom Per-Seat Volume Rates</td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td><td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td></tr>
+            <tr><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Direct Product Roadmap Input</td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td><td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td></tr>
+            <tr><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Custom Enterprise Workspaces &amp; Security</td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td><td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td></tr>
+
+            <tr class="compare-group-start"><td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 text-sm font-bold text-neutral-950 border-r border-neutral-200">Add-On</td><td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 border-r border-neutral-200"></td><td class="border-b border-solid border-neutral-200 bg-[#f8fbf7] px-5 pt-6 pb-2 border-r border-neutral-200"></td><td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 border-r border-neutral-200"></td><td class="border-b border-solid border-neutral-200 bg-[#f8fbf7] px-5 pt-6 pb-2"></td></tr>
+            <tr><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Engage Phone Numbers ($15/number/mo)</td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="text-sm font-semibold text-neutral-900">Available</span></td><td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="text-sm font-semibold text-neutral-900">Available</span></td><td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="text-sm font-semibold text-neutral-900">Available</span></td><td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="text-sm font-semibold text-neutral-900">Available</span></td></tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td class="border-t border-r border-solid border-neutral-200 bg-neutral-50 px-5 py-4 text-sm font-bold text-neutral-950">Get started today</td>
+              <td class="border-t border-r border-solid border-neutral-200 bg-neutral-50 px-5 py-4"><button type="button" data-package="4" class="knockio-checkout-btn w-full rounded-xl border border-solid border-primary-500 bg-white px-4 py-3 text-sm font-bold text-primary-500 transition hover:bg-primary-500 hover:text-white">Start Prospect</button></td>
+              <td class="border-t border-r border-solid border-neutral-200 bg-primary-500/[0.06] px-5 py-4"><button type="button" data-package="6" class="knockio-checkout-btn w-full rounded-xl bg-primary-500 px-4 py-3 text-sm font-bold text-white transition hover:bg-primary-600">Start Growth</button></td>
+              <td class="border-t border-r border-solid border-neutral-200 bg-neutral-50 px-5 py-4"><button type="button" data-package="5" class="knockio-checkout-btn w-full rounded-xl border border-solid border-primary-500 bg-white px-4 py-3 text-sm font-bold text-primary-500 transition hover:bg-primary-500 hover:text-white">Start Organize</button></td>
+              <td class="border-t border-solid border-neutral-200 bg-[#f5faf3] px-5 py-4"><a href="https://knockio.com/book-a-demo/" data-demo-url="https://knockio.com/book-a-demo/" class="knockio-demo-btn inline-flex w-full items-center justify-center rounded-xl bg-[#0f172a] px-4 py-3 text-sm font-bold text-white transition hover:bg-neutral-800">Book a demo</a></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <!-- Mobile Comparison Cards -->
+      <div class="space-y-4 lg:hidden" id="compare-mobile-body"></div>
+
+      <p class="mt-6 text-center text-xs leading-relaxed text-neutral-500">Volume pricing starts at 5+ users · Scale is available for teams with 100+ users · Billed monthly · No setup fees</p>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden">
+    <div class="my-container mx-auto mb-10 lg:mb-16 text-center">
+      <p class="text-primary-500 text-sm md:text-2xl leading-7 font-inter mb-4">Customer Reviews</p>
+      <h2 class="text-3xl leading-tight sm:text-4xl lg:text-[42px] xl:text-5xl 2xl:text-[56px] lg:leading-none font-bold text-neutral-950 mb-8">What Field Service and Sales<br>Teams Say About Knockio</h2>
+      <img decoding="async" src="/assets/pricing/google-5-star.webp" alt="google review badge" class="mx-auto h-auto w-[150px] sm:w-[183px]">
+    </div>
+    <div class="space-y-8 mt-7">
+      <div class="testimonial-track-container flex overflow-hidden">
+        <div class="testimonial-track flex gap-4 sm:gap-6 animate-marquee-left hover:pause">
+          <div class="flex gap-4 sm:gap-6 card-set">
+            <div class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group">
+              <p class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]">This app is the best thing that has happened to our company! Asad is absolutely amazing! He is so responsive, it doesn't matter what time of day he is on it! I highly recommend this company add this app!</p>
+              <div class="flex items-center gap-4 relative z-10">
+                <img decoding="async" src="/assets/pricing/avatar-lacey.webp" alt="Lacey Jackson" class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                <div><h5 class="font-bold text-neutral-950 mb-1">Lacey Jackson</h5><p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p></div>
+              </div>
+              <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
+            </div>
+            <div class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group">
+              <p class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]">Knockio is a great product! We use it for our roofing sales canvassing. Their support team is responsive and fixes issues immediately. Highly recommend!</p>
+              <div class="flex items-center gap-4 relative z-10">
+                <img decoding="async" src="/assets/pricing/avatar-ben.webp" alt="Ben Loveland" class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                <div><h5 class="font-bold text-neutral-950 mb-1">Ben Loveland</h5><p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p></div>
+              </div>
+              <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
+            </div>
+            <div class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group">
+              <p class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]">The support team is awesome. The live tracking feature is very useful. The pricing is fair as well!</p>
+              <div class="flex items-center gap-4 relative z-10">
+                <img decoding="async" src="/assets/pricing/avatar-bar.webp" alt="Bar Galanti" class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                <div><h5 class="font-bold text-neutral-950 mb-1">Bar Galanti</h5><p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p></div>
+              </div>
+              <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
+            </div>
+          </div>
+          <div class="flex gap-4 sm:gap-6 card-set" aria-hidden="true">
+            <div class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group">
+              <p class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]">This app is the best thing that has happened to our company! Asad is absolutely amazing! He is so responsive, it doesn't matter what time of day he is on it! I highly recommend this company add this app!</p>
+              <div class="flex items-center gap-4 relative z-10">
+                <img decoding="async" src="/assets/pricing/avatar-lacey.webp" alt="Lacey Jackson" class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                <div><h5 class="font-bold text-neutral-950 mb-1">Lacey Jackson</h5><p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p></div>
+              </div>
+              <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
+            </div>
+            <div class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group">
+              <p class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]">Knockio is a great product! We use it for our roofing sales canvassing. Their support team is responsive and fixes issues immediately. Highly recommend!</p>
+              <div class="flex items-center gap-4 relative z-10">
+                <img decoding="async" src="/assets/pricing/avatar-ben.webp" alt="Ben Loveland" class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                <div><h5 class="font-bold text-neutral-950 mb-1">Ben Loveland</h5><p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p></div>
+              </div>
+              <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
+            </div>
+            <div class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group">
+              <p class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]">The support team is awesome. The live tracking feature is very useful. The pricing is fair as well!</p>
+              <div class="flex items-center gap-4 relative z-10">
+                <img decoding="async" src="/assets/pricing/avatar-bar.webp" alt="Bar Galanti" class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                <div><h5 class="font-bold text-neutral-950 mb-1">Bar Galanti</h5><p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p></div>
+              </div>
+              <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-track-container flex overflow-hidden">
+        <div class="testimonial-track flex gap-4 sm:gap-6 animate-marquee-right hover:pause">
+          <div class="flex gap-4 sm:gap-6 card-set">
+            <div class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group">
+              <p class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]">Knockio is the best! My team and I absolutely love using it - it is so user friendly and simple. Support is brilliant too, nothing is ever too much trouble. The best on the market. Thanks Knockio!</p>
+              <div class="flex items-center gap-4 relative z-10">
+                <img decoding="async" src="/assets/pricing/avatar-georgia.webp" alt="Georgia Hancocks" class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                <div><h5 class="font-bold text-neutral-950 mb-1">Georgia Hancocks</h5><p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p></div>
+              </div>
+              <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
+            </div>
+            <div class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group">
+              <p class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]">We love Knockio so far! It is solving a lot of the issues of the other canvassing apps. The team have worked with us providing excellent fast support. Highly recommend if you're seeing people face to face.</p>
+              <div class="flex items-center gap-4 relative z-10">
+                <img decoding="async" src="/assets/pricing/avatar-sarah.webp" alt="Sarah Bennett" class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                <div><h5 class="font-bold text-neutral-950 mb-1">Sarah Bennett</h5><p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p></div>
+              </div>
+              <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
+            </div>
+            <div class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group">
+              <p class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]">Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.</p>
+              <div class="flex items-center gap-4 relative z-10">
+                <img decoding="async" src="/assets/pricing/avatar-ayana.webp" alt="Ayana Hall" class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                <div><h5 class="font-bold text-neutral-950 mb-1">Ayana Hall</h5><p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p></div>
+              </div>
+              <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
+            </div>
+          </div>
+          <div class="flex gap-4 sm:gap-6 card-set" aria-hidden="true">
+            <div class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group">
+              <p class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]">Knockio is the best! My team and I absolutely love using it - it is so user friendly and simple. Support is brilliant too, nothing is ever too much trouble. The best on the market. Thanks Knockio!</p>
+              <div class="flex items-center gap-4 relative z-10">
+                <img decoding="async" src="/assets/pricing/avatar-georgia.webp" alt="Georgia Hancocks" class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                <div><h5 class="font-bold text-neutral-950 mb-1">Georgia Hancocks</h5><p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p></div>
+              </div>
+              <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
+            </div>
+            <div class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group">
+              <p class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]">We love Knockio so far! It is solving a lot of the issues of the other canvassing apps. The team have worked with us providing excellent fast support. Highly recommend if you're seeing people face to face.</p>
+              <div class="flex items-center gap-4 relative z-10">
+                <img decoding="async" src="/assets/pricing/avatar-sarah.webp" alt="Sarah Bennett" class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                <div><h5 class="font-bold text-neutral-950 mb-1">Sarah Bennett</h5><p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p></div>
+              </div>
+              <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
+            </div>
+            <div class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group">
+              <p class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]">Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.</p>
+              <div class="flex items-center gap-4 relative z-10">
+                <img decoding="async" src="/assets/pricing/avatar-ayana.webp" alt="Ayana Hall" class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                <div><h5 class="font-bold text-neutral-950 mb-1">Ayana Hall</h5><p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p></div>
+              </div>
+              <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tooltip Interaction Script -->
+  <script is:inline>
+    (function () {
+      function closeTooltip(wrapper) {
+        if (!wrapper) return;
+        wrapper.classList.remove("is-open");
+        var button = wrapper.querySelector(".kio-plan-info-button");
+        var tooltip = wrapper.querySelector(".kio-plan-tooltip");
+        var card = wrapper.closest(".kio-pricing-card");
+        if (button) button.setAttribute("aria-expanded", "false");
+        if (tooltip) tooltip.setAttribute("aria-hidden", "true");
+        if (card) card.classList.remove("kio-tooltip-active");
+      }
+      function closeAllTooltips(except) {
+        document.querySelectorAll(".kio-plan-info").forEach(function (wrapper) {
+          if (wrapper !== except) closeTooltip(wrapper);
+        });
+      }
+      document.addEventListener("click", function (event) {
+        var button = event.target.closest(".kio-plan-info-button");
+        if (button) {
+          var wrapper = button.closest(".kio-plan-info");
+          var tooltip = wrapper.querySelector(".kio-plan-tooltip");
+          var card = wrapper.closest(".kio-pricing-card");
+          var shouldOpen = !wrapper.classList.contains("is-open");
+          closeAllTooltips(wrapper);
+          wrapper.classList.toggle("is-open", shouldOpen);
+          button.setAttribute("aria-expanded", shouldOpen ? "true" : "false");
+          if (tooltip) tooltip.setAttribute("aria-hidden", shouldOpen ? "false" : "true");
+          if (card) card.classList.toggle("kio-tooltip-active", shouldOpen);
+          event.preventDefault();
+          event.stopPropagation();
+          return;
+        }
+        if (!event.target.closest(".kio-plan-tooltip")) closeAllTooltips();
+      });
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") closeAllTooltips();
+      });
+    })();
+  </script>
+
+  <!-- Mobile Comparison Renderer -->
+  <script is:inline>
+    (function () {
+      var mobileBody = document.getElementById("compare-mobile-body");
+      if (!mobileBody) return;
+      var plans = ["Prospect", "Growth", "Organize", "Scale"];
+      var groups = [
+        { title: "Field Sales", rows: [
+          ["Unlimited Territories & Campaigns", ["check","check","empty","check"]],
+          ["Route Planning & Optimization", ["check","check","empty","check"]],
+          ["Pre-Knocked Data (15¢ per address)", ["check","check","empty","check"]],
+          ["Real-time Rep Tracking", ["check","check","empty","check"]],
+          ["Presentations", ["check","check","empty","check"]]
+        ]},
+        { title: "CRM & Operations", rows: [
+          ["Pipelines & Lead Management", ["empty","check","check","check"]],
+          ["Digital Contracts & E-Signature", ["check","check","check","check"]],
+          ["Granular Permissions", ["empty","check","check","check"]],
+          ["Email Communication", ["empty","check","check","check"]],
+          ["Estimates & Work Orders", ["empty","check","check","check"]],
+          ["Invoices & Payments", ["empty","check","check","check"]],
+          ["Product & Inventory Management", ["empty","check","check","check"]],
+          ["Unlimited Workspaces", ["empty","check","empty","check"]]
+        ]},
+        { title: "Automation & Productivity", rows: [
+          ["Native Automation Builder", ["check","check","check","check"]],
+          ["Task Management & Appointment Scheduling", ["check","check","check","check"]],
+          ["Zapier & FlowChef Integrations", ["check","check","check","check"]]
+        ]},
+        { title: "Onboarding & Support", rows: [
+          ["Onboarding & Account Setup", ["Free","Free","Free","White-Glove"]],
+          ["Dedicated Success Manager", ["empty","check","empty","check"]],
+          ["Priority Support", ["empty","empty","empty","check"]]
+        ]},
+        { title: "Enterprise", rows: [
+          ["Custom Per-Seat Volume Rates", ["empty","empty","empty","check"]],
+          ["Direct Product Roadmap Input", ["empty","empty","empty","check"]],
+          ["Custom Enterprise Workspaces & Security", ["empty","empty","empty","check"]]
+        ]},
+        { title: "Add-On", rows: [
+          ["Engage Phone Numbers ($15/number/mo)", ["Available","Available","Available","Available"]]
+        ]}
+      ];
+      function valueHTML(value) {
+        if (value === "check") return '<span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span>';
+        if (value === "empty") return '<span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span>';
+        if (value === "White-Glove") return '<span class="inline-flex items-center justify-center gap-1.5 text-sm font-semibold text-neutral-900"><i class="fa-solid fa-star text-primary-500"></i><span class="whitespace-nowrap">White-Glove</span></span>';
+        return '<span class="text-sm font-semibold text-neutral-900">' + value + '</span>';
+      }
+      mobileBody.innerHTML = groups.map(function (group) {
+        return '<div class="rounded-2xl border border-solid border-neutral-200 bg-white shadow-sm"><div class="border-b border-solid border-neutral-200 bg-white px-4 py-4"><h3 class="text-base font-bold text-neutral-950">' + group.title + '</h3></div><div class="divide-y divide-neutral-200">' + group.rows.map(function (row) {
+          return '<div class="p-4"><h4 class="mb-3 text-sm font-semibold text-neutral-900">' + row[0] + '</h4><div class="space-y-2">' + row[1].map(function (value, index) {
+            return '<div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3"><span class="text-sm font-semibold text-neutral-900">' + plans[index] + '</span><span class="text-right">' + valueHTML(value) + '</span></div>';
+          }).join("") + '</div></div>';
+        }).join("") + '</div></div>';
+      }).join("");
+    })();
+  </script>
+</KnockioHomeLayout>

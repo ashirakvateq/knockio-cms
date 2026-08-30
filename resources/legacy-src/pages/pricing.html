@@ -1,0 +1,2710 @@
+
+
+
+<style>
+/*! CSS Used from: Embedded */
+div,h2,h5,i,img,p{margin:0;padding:0;border:0;outline:0;font-size:100%;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;vertical-align:baseline;background:transparent;}
+:focus{outline:0;}
+section{display:block;}
+p{padding-bottom:1em;}
+p:not(.has-background):last-of-type{padding-bottom:0;}
+i{font-style:italic;}
+h2,h5{color:#333;padding-bottom:10px;line-height:1em;font-weight:500;}
+h2{font-size:26px;}
+h5{font-size:16px;}
+img{max-width:100%;height:auto;}
+*{-webkit-box-sizing:border-box;box-sizing:border-box;}
+/*! CSS Used from: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css */
+.fa-solid{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:var(--fa-display,inline-block);font-style:normal;font-variant:normal;line-height:1;text-rendering:auto;}
+.fa-solid{font-family:"Font Awesome 6 Free";}
+.fa-quote-right:before{content:"\f10e";}
+.fa-solid{font-weight:900;}
+/*! CSS Used from: https://knockio.com/wp-content/et-cache/13/et-core-unified-13.min.css?ver=1787664181 */
+h2,h5{font-family:"Manrope",sans-serif;font-weight:700;letter-spacing:-0.025em;padding:0;}
+p{padding:0;margin:0;}
+.font-inter{font-family:"Manrope",sans-serif;}
+::selection{background:#4faa3a;color:#fff;}
+.my-container{width:90%;max-width:1680px;margin:0 auto;}
+.animate-marquee-left{animation:marquee-left 40s linear infinite;}
+.animate-marquee-right{animation:marquee-right 40s linear infinite;}
+.hover\:pause:hover{animation-play-state:paused!important;}
+.text-neutral-700{color:#000!important;}
+/*! CSS Used from: Embedded */
+*,::before,::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-scroll-snap-strictness:proximity;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;}
+*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb;}
+::after,::before{--tw-content:'';}
+h2,h5{font-size:inherit;font-weight:inherit;}
+h2,h5,p{margin:0;}
+:disabled{cursor:default;}
+img{display:block;vertical-align:middle;}
+img{max-width:100%;height:auto;}
+.absolute{position:absolute;}
+.relative{position:relative;}
+.bottom-6{bottom:1.5rem;}
+.right-8{right:2rem;}
+.z-10{z-index:10;}
+.mx-auto{margin-left:auto;margin-right:auto;}
+.mb-1{margin-bottom:0.25rem;}
+.mb-10{margin-bottom:2.5rem;}
+.mb-4{margin-bottom:1rem;}
+.mb-6{margin-bottom:1.5rem;}
+.mb-8{margin-bottom:2rem;}
+.mt-7{margin-top:1.75rem;}
+.flex{display:flex;}
+.hidden{display:none;}
+.h-12{height:3rem;}
+.h-auto{height:auto;}
+.min-h-\[168px\]{min-height:168px;}
+.w-12{width:3rem;}
+.w-\[150px\]{width:150px;}
+.w-\[300px\]{width:300px;}
+.flex-shrink-0{flex-shrink:0;}
+.items-center{align-items:center;}
+.gap-4{gap:1rem;}
+.space-y-8 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem * var(--tw-space-y-reverse));}
+.overflow-hidden{overflow:hidden;}
+.rounded-2xl{border-radius:1rem;}
+.rounded-full{border-radius:9999px;}
+.border{border-width:1px;}
+.border-neutral-200{--tw-border-opacity:1;border-color:rgb(229 229 229 / var(--tw-border-opacity, 1));}
+.bg-neutral-50{--tw-bg-opacity:1;background-color:rgb(250 250 250 / var(--tw-bg-opacity, 1));}
+.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1));}
+.object-cover{object-fit:cover;}
+.p-5{padding:1.25rem;}
+.py-16{padding-top:4rem;padding-bottom:4rem;}
+.text-center{text-align:center;}
+.text-sm{font-size:0.875rem;line-height:1.25rem;}
+.text-3xl{font-size:1.875rem;line-height:2.25rem;}
+.text-5xl{font-size:3rem;line-height:1;}
+.font-bold{font-weight:700;}
+.italic{font-style:italic;}
+.leading-7{line-height:1.75rem;}
+.leading-tight{line-height:1.25;}
+.text-neutral-500{--tw-text-opacity:1;color:rgb(115 115 115 / var(--tw-text-opacity, 1));}
+.text-neutral-700{--tw-text-opacity:1;color:rgb(64 64 64 / var(--tw-text-opacity, 1));}
+.text-neutral-950{--tw-text-opacity:1;color:rgb(10 10 10 / var(--tw-text-opacity, 1));}
+.text-primary-500{--tw-text-opacity:1;color:rgb(79 170 58 / var(--tw-text-opacity, 1));}
+.text-primary-500\/10{color:rgb(79 170 58 / 0.1);}
+.grayscale{--tw-grayscale:grayscale(100%);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);}
+.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;}
+.group:hover .group-hover\:grayscale-0{--tw-grayscale:grayscale(0);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);}
+@media (min-width: 640px){
+.sm\:mb-8{margin-bottom:2rem;}
+.sm\:w-\[183px\]{width:183px;}
+.sm\:w-\[380px\]{width:380px;}
+.sm\:gap-6{gap:1.5rem;}
+.sm\:p-6{padding:1.5rem;}
+.sm\:py-20{padding-top:5rem;padding-bottom:5rem;}
+.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem;}
+.sm\:text-base{font-size:1rem;line-height:1.5rem;}
+.sm\:text-6xl{font-size:3.75rem;line-height:1;}
+}
+@media (min-width: 768px){
+.md\:text-2xl{font-size:1.5rem;line-height:2rem;}
+}
+@media (min-width: 1024px){
+.lg\:mb-16{margin-bottom:4rem;}
+.lg\:w-\[450px\]{width:450px;}
+.lg\:p-8{padding:2rem;}
+.lg\:py-24{padding-top:6rem;padding-bottom:6rem;}
+.lg\:text-7xl{font-size:4.5rem;line-height:1;}
+.lg\:text-\[42px\]{font-size:42px;}
+.lg\:text-lg{font-size:1.125rem;line-height:1.75rem;}
+.lg\:leading-none{line-height:1;}
+}
+@media (min-width: 1280px){
+.xl\:text-5xl{font-size:3rem;line-height:1;}
+}
+@media (min-width: 1536px){
+.\32xl\:text-\[56px\]{font-size:56px;}
+}
+/*! CSS Used keyframes */
+@keyframes marquee-left{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+@keyframes marquee-right{0%{transform:translateX(-50%);}100%{transform:translateX(0);}}
+/*! CSS Used fontfaces */
+@font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:400;font-display:block;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-regular-400.woff2) format("woff2"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-regular-400.ttf) format("truetype");}
+
+
+
+
+
+/*! CSS Used from: Embedded */
+a,div,h1,h2,h3,h4,i,label,li,p,span,ul{margin:0;padding:0;border:0;outline:0;font-size:100%;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;vertical-align:baseline;background:transparent;}
+ul{list-style:none;}
+:focus{outline:0;}
+table{border-collapse:collapse;border-spacing:0;}
+section{display:block;}
+a{color:#2ea3f2;}
+a,a:hover{text-decoration:none;}
+p{padding-bottom:1em;}
+p:not(.has-background):last-of-type{padding-bottom:0;}
+i{font-style:italic;}
+h1,h2,h3,h4{color:#333;padding-bottom:10px;line-height:1em;font-weight:500;}
+h1{font-size:30px;}
+h2{font-size:26px;}
+h3{font-size:22px;}
+h4{font-size:18px;}
+input{-webkit-appearance:none;}
+select{background-color:#fff;border:1px solid #bbb;padding:2px;color:#4e4e4e;}
+select:focus{border-color:#2d3940;color:#3e3e3e;}
+select{margin:0;}
+button,input,select{font-family:inherit;}
+.entry-content table:not(.variations){border:1px solid #eee;margin:0 0 15px;text-align:left;width:100%;}
+.entry-content thead th,.entry-content tr th{color:#555;font-weight:700;padding:9px 24px;}
+.entry-content tr td{border-top:1px solid #eee;padding:6px 24px;}
+.entry-content ul{list-style-type:disc;padding:0 0 23px 1em;line-height:26px;}
+*{-webkit-box-sizing:border-box;box-sizing:border-box;}
+/*! CSS Used from: Embedded */
+.et_pb_code_inner{position:relative;}
+/*! CSS Used from: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css */
+.fa-regular,.fa-solid,.fas{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:var(--fa-display,inline-block);font-style:normal;font-variant:normal;line-height:1;text-rendering:auto;}
+.fa-regular,.fa-solid,.fas{font-family:"Font Awesome 6 Free";}
+.fa-user-check:before{content:"\f4fc";}
+.fa-users:before{content:"\f0c0";}
+.fa-star:before{content:"\f005";}
+.fa-user-tie:before{content:"\f508";}
+.fa-shield-alt:before{content:"\f3ed";}
+.fa-chart-line:before{content:"\f201";}
+.fa-eye:before{content:"\f06e";}
+.fa-phone:before{content:"\f095";}
+.fa-phone-volume:before{content:"\f2a0";}
+.fa-minus:before{content:"\f068";}
+.fa-calculator:before{content:"\f1ec";}
+.fa-arrow-down:before{content:"\f063";}
+.fa-boxes:before{content:"\f468";}
+.fa-map:before{content:"\f279";}
+.fa-building:before{content:"\f1ad";}
+.fa-check:before{content:"\f00c";}
+.fa-regular{font-weight:400;}
+.fa-solid,.fas{font-weight:900;}
+/*! CSS Used from: https://unpkg.com/aos@2.3.1/dist/aos.css */
+[data-aos][data-aos][data-aos-delay="100"]{transition-delay:0;}
+[data-aos][data-aos][data-aos-delay="100"].aos-animate{transition-delay:.1s;}
+[data-aos][data-aos][data-aos-delay="200"]{transition-delay:0;}
+[data-aos][data-aos][data-aos-delay="200"].aos-animate{transition-delay:.2s;}
+body[data-aos-duration="1000"] [data-aos]{transition-duration:1s;}
+body[data-aos-easing=ease] [data-aos]{transition-timing-function:ease;}
+[data-aos^=fade][data-aos^=fade]{opacity:0;transition-property:opacity,transform;}
+[data-aos^=fade][data-aos^=fade].aos-animate{opacity:1;transform:translateZ(0);}
+[data-aos=fade-up]{transform:translate3d(0,100px,0);}
+[data-aos=fade-down]{transform:translate3d(0,-100px,0);}
+/*! CSS Used from: https://knockio.com/wp-content/et-cache/13/et-core-unified-13.min.css?ver=1787664181 */
+h1,h2,h3,h4{font-family:"Manrope",sans-serif;font-weight:700;letter-spacing:-0.025em;padding:0;}
+p{padding:0;margin:0;}
+ul{padding:0!important;}
+.font-inter{font-family:"Manrope",sans-serif;}
+::selection{background:#4faa3a;color:#fff;}
+.my-container{width:90%;max-width:1680px;margin:0 auto;}
+.text-neutral-700{color:#000!important;}
+/*! CSS Used from: Embedded */
+*,::before,::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-scroll-snap-strictness:proximity;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;}
+*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb;}
+::after,::before{--tw-content:'';}
+h1,h2,h3,h4{font-size:inherit;font-weight:inherit;}
+a{color:inherit;text-decoration:inherit;}
+table{text-indent:0;border-color:inherit;border-collapse:collapse;}
+button,input,select{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0;}
+button,select{text-transform:none;}
+button{-webkit-appearance:button;background-color:transparent;background-image:none;}
+h1,h2,h3,h4,p{margin:0;}
+ul{list-style:none;margin:0;padding:0;}
+input::placeholder{opacity:1;color:#9ca3af;}
+button{cursor:pointer;}
+:disabled{cursor:default;}
+.pointer-events-none{pointer-events:none;}
+.absolute{position:absolute;}
+.relative{position:relative;}
+.sticky{position:sticky;}
+.left-1\/2{left:50%;}
+.right-0{right:0px;}
+.-bottom-24{bottom:-6rem;}
+.-left-24{left:-6rem;}
+.-right-20{right:-5rem;}
+.-top-20{top:-5rem;}
+.-top-4{top:-1rem;}
+.bottom-0{bottom:0px;}
+.left-0{left:0px;}
+.right-4{right:1rem;}
+.top-1\/2{top:50%;}
+.z-10{z-index:10;}
+.z-30{z-index:30;}
+.mx-auto{margin-left:auto;margin-right:auto;}
+.mb-3{margin-bottom:0.75rem;}
+.mt-1{margin-top:0.25rem;}
+.mt-2{margin-top:0.5rem;}
+.-mt-8{margin-top:-2rem;}
+.mb-1{margin-bottom:0.25rem;}
+.mb-10{margin-bottom:2.5rem;}
+.mb-12{margin-bottom:3rem;}
+.mb-2{margin-bottom:0.5rem;}
+.mb-4{margin-bottom:1rem;}
+.mb-5{margin-bottom:1.25rem;}
+.mb-6{margin-bottom:1.5rem;}
+.mb-8{margin-bottom:2rem;}
+.ml-2{margin-left:0.5rem;}
+.mr-2{margin-right:0.5rem;}
+.mr-3{margin-right:0.75rem;}
+.mt-3{margin-top:0.75rem;}
+.mt-6{margin-top:1.5rem;}
+.block{display:block;}
+.flex{display:flex;}
+.inline-flex{display:inline-flex;}
+.grid{display:grid;}
+.hidden{display:none;}
+.h-11{height:2.75rem;}
+.h-9{height:2.25rem;}
+.h-14{height:3.5rem;}
+.h-56{height:14rem;}
+.h-64{height:16rem;}
+.h-\[160px\]{height:160px;}
+.min-h-\[48px\]{min-height:48px;}
+.min-h-\[520px\]{min-height:520px;}
+.min-h-\[76px\]{min-height:76px;}
+.w-11{width:2.75rem;}
+.w-56{width:14rem;}
+.w-full{width:100%;}
+.w-14{width:3.5rem;}
+.w-64{width:16rem;}
+.w-9{width:2.25rem;}
+.w-\[19\%\]{width:19%;}
+.w-\[24\%\]{width:24%;}
+.min-w-\[1280px\]{min-width:1280px;}
+.max-w-2xl{max-width:42rem;}
+.max-w-3xl{max-width:48rem;}
+.max-w-4xl{max-width:56rem;}
+.max-w-5xl{max-width:64rem;}
+.max-w-\[1500px\]{max-width:1500px;}
+.max-w-xl{max-width:36rem;}
+.flex-1{flex:1 1 0%;}
+.shrink-0{flex-shrink:0;}
+.border-separate{border-collapse:separate;}
+.border-spacing-0{--tw-border-spacing-x:0px;--tw-border-spacing-y:0px;border-spacing:var(--tw-border-spacing-x) var(--tw-border-spacing-y);}
+.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}
+.-translate-y-1\/2{--tw-translate-y:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}
+.cursor-pointer{cursor:pointer;}
+.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr));}
+.flex-col{flex-direction:column;}
+.flex-wrap{flex-wrap:wrap;}
+.items-start{align-items:flex-start;}
+.items-end{align-items:flex-end;}
+.items-center{align-items:center;}
+.items-stretch{align-items:stretch;}
+.justify-center{justify-content:center;}
+.justify-between{justify-content:space-between;}
+.gap-2{gap:0.5rem;}
+.gap-3{gap:0.75rem;}
+.gap-4{gap:1rem;}
+.gap-5{gap:1.25rem;}
+.gap-7{gap:1.75rem;}
+.gap-1\.5{gap:0.375rem;}
+.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse));}
+.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse));}
+.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse));}
+.divide-y > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse));}
+.divide-neutral-200 > :not([hidden]) ~ :not([hidden]){--tw-divide-opacity:1;border-color:rgb(229 229 229 / var(--tw-divide-opacity, 1));}
+.overflow-hidden{overflow:hidden;}
+.overflow-x-auto{overflow-x:auto;}
+.whitespace-nowrap{white-space:nowrap;}
+.rounded-2xl{border-radius:1rem;}
+.rounded-xl{border-radius:0.75rem;}
+.rounded-3xl{border-radius:1.5rem;}
+.rounded-\[22px\]{border-radius:22px;}
+.rounded-\[2rem\]{border-radius:2rem;}
+.rounded-full{border-radius:9999px;}
+.rounded-tl-\[22px\]{border-top-left-radius:22px;}
+.rounded-tr-\[22px\]{border-top-right-radius:22px;}
+.border{border-width:1px;}
+.border-b{border-bottom-width:1px;}
+.border-t{border-top-width:1px;}
+.border-r{border-right-width:1px;}
+.border-solid{border-style:solid;}
+.border-neutral-100{--tw-border-opacity:1;border-color:rgb(245 245 245 / var(--tw-border-opacity, 1));}
+.border-neutral-200{--tw-border-opacity:1;border-color:rgb(229 229 229 / var(--tw-border-opacity, 1));}
+.border-primary-500{--tw-border-opacity:1;border-color:rgb(79 170 58 / var(--tw-border-opacity, 1));}
+.border-white\/10{border-color:rgb(255 255 255 / 0.1);}
+.border-\[\#0f172a\]{--tw-border-opacity:1;border-color:rgb(15 23 42 / var(--tw-border-opacity, 1));}
+.border-neutral-300{--tw-border-opacity:1;border-color:rgb(212 212 212 / var(--tw-border-opacity, 1));}
+.border-primary-200{--tw-border-opacity:1;border-color:rgb(165 214 167 / var(--tw-border-opacity, 1));}
+.bg-neutral-100{--tw-bg-opacity:1;background-color:rgb(245 245 245 / var(--tw-bg-opacity, 1));}
+.bg-neutral-50{--tw-bg-opacity:1;background-color:rgb(250 250 250 / var(--tw-bg-opacity, 1));}
+.bg-primary-500{--tw-bg-opacity:1;background-color:rgb(79 170 58 / var(--tw-bg-opacity, 1));}
+.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1));}
+.bg-\[\#0f172a\]{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1));}
+.bg-\[\#f5faf3\]{--tw-bg-opacity:1;background-color:rgb(245 250 243 / var(--tw-bg-opacity, 1));}
+.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1));}
+.bg-neutral-50\/80{background-color:rgb(250 250 250 / 0.8);}
+.bg-orange-50{--tw-bg-opacity:1;background-color:rgb(255 247 237 / var(--tw-bg-opacity, 1));}
+.bg-primary-500\/10{background-color:rgb(79 170 58 / 0.1);}
+.bg-primary-500\/15{background-color:rgb(79 170 58 / 0.15);}
+.bg-primary-500\/\[0\.06\]{background-color:rgb(79 170 58 / 0.06);}
+.bg-white\/\[0\.04\]{background-color:rgb(255 255 255 / 0.04);}
+.bg-\[\#f8fbf7\]{--tw-bg-opacity:1;background-color:rgb(248 251 247 / var(--tw-bg-opacity, 1));}
+.bg-primary-500\/\[0\.025\]{background-color:rgb(79 170 58 / 0.025);}
+.p-4{padding:1rem;}
+.p-5{padding:1.25rem;}
+.p-7{padding:1.75rem;}
+.px-2{padding-left:0.5rem;padding-right:0.5rem;}
+.px-3{padding-left:0.75rem;padding-right:0.75rem;}
+.px-4{padding-left:1rem;padding-right:1rem;}
+.px-5{padding-left:1.25rem;padding-right:1.25rem;}
+.py-2{padding-top:0.5rem;padding-bottom:0.5rem;}
+.py-3{padding-top:0.75rem;padding-bottom:0.75rem;}
+.py-4{padding-top:1rem;padding-bottom:1rem;}
+.px-7{padding-left:1.75rem;padding-right:1.75rem;}
+.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem;}
+.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem;}
+.py-12{padding-top:3rem;padding-bottom:3rem;}
+.py-16{padding-top:4rem;padding-bottom:4rem;}
+.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem;}
+.py-20{padding-top:5rem;padding-bottom:5rem;}
+.py-28{padding-top:7rem;padding-bottom:7rem;}
+.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem;}
+.pt-4{padding-top:1rem;}
+.pb-6{padding-bottom:1.5rem;}
+.pr-11{padding-right:2.75rem;}
+.pb-2{padding-bottom:0.5rem;}
+.pt-6{padding-top:1.5rem;}
+.text-left{text-align:left;}
+.text-center{text-align:center;}
+.text-right{text-align:right;}
+.text-\[10px\]{font-size:10px;}
+.text-\[15px\]{font-size:15px;}
+.text-base{font-size:1rem;line-height:1.5rem;}
+.text-lg{font-size:1.125rem;line-height:1.75rem;}
+.text-sm{font-size:0.875rem;line-height:1.25rem;}
+.text-xs{font-size:0.75rem;line-height:1rem;}
+.text-2xl{font-size:1.5rem;line-height:2rem;}
+.text-3xl{font-size:1.875rem;line-height:2.25rem;}
+.text-4xl{font-size:2.25rem;line-height:2.5rem;}
+.text-5xl{font-size:3rem;line-height:1;}
+.text-\[56px\]{font-size:56px;}
+.text-xl{font-size:1.25rem;line-height:1.75rem;}
+.font-bold{font-weight:700;}
+.font-medium{font-weight:500;}
+.font-semibold{font-weight:600;}
+.font-extrabold{font-weight:800;}
+.font-normal{font-weight:400;}
+.uppercase{text-transform:uppercase;}
+.leading-6{line-height:1.5rem;}
+.leading-7{line-height:1.75rem;}
+.leading-relaxed{line-height:1.625;}
+.leading-tight{line-height:1.25;}
+.tracking-\[0\.08em\]{letter-spacing:0.08em;}
+.tracking-\[0\.18em\]{letter-spacing:0.18em;}
+.tracking-tight{letter-spacing:-0.025em;}
+.tracking-wider{letter-spacing:0.05em;}
+.text-neutral-500{--tw-text-opacity:1;color:rgb(115 115 115 / var(--tw-text-opacity, 1));}
+.text-neutral-700{--tw-text-opacity:1;color:rgb(64 64 64 / var(--tw-text-opacity, 1));}
+.text-neutral-900{--tw-text-opacity:1;color:rgb(23 23 23 / var(--tw-text-opacity, 1));}
+.text-neutral-950{--tw-text-opacity:1;color:rgb(10 10 10 / var(--tw-text-opacity, 1));}
+.text-primary-600{--tw-text-opacity:1;color:rgb(67 160 71 / var(--tw-text-opacity, 1));}
+.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1));}
+.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1));}
+.text-neutral-300{--tw-text-opacity:1;color:rgb(212 212 212 / var(--tw-text-opacity, 1));}
+.text-neutral-400{--tw-text-opacity:1;color:rgb(163 163 163 / var(--tw-text-opacity, 1));}
+.text-neutral-600{--tw-text-opacity:1;color:rgb(82 82 82 / var(--tw-text-opacity, 1));}
+.text-orange-600{--tw-text-opacity:1;color:rgb(234 88 12 / var(--tw-text-opacity, 1));}
+.text-primary-400{--tw-text-opacity:1;color:rgb(102 187 106 / var(--tw-text-opacity, 1));}
+.text-primary-500{--tw-text-opacity:1;color:rgb(79 170 58 / var(--tw-text-opacity, 1));}
+.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);}
+.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);}
+.shadow-neutral-900\/10{--tw-shadow-color:rgb(23 23 23 / 0.1);--tw-shadow:var(--tw-shadow-colored);}
+.shadow-neutral-900\/5{--tw-shadow-color:rgb(23 23 23 / 0.05);--tw-shadow:var(--tw-shadow-colored);}
+.shadow-neutral-900\/\[0\.04\]{--tw-shadow-color:rgb(23 23 23 / 0.04);--tw-shadow:var(--tw-shadow-colored);}
+.outline-none{outline:2px solid transparent;outline-offset:2px;}
+.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;}
+.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;}
+.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms;}
+.duration-200{transition-duration:200ms;}
+.duration-150{transition-duration:150ms;}
+.ease-out{transition-timing-function:cubic-bezier(0, 0, 0.2, 1);}
+.hover\:-translate-y-1:hover{--tw-translate-y:-0.25rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));}
+.hover\:bg-primary-50:hover{--tw-bg-opacity:1;background-color:rgb(224 247 218 / var(--tw-bg-opacity, 1));}
+.hover\:bg-primary-500:hover{--tw-bg-opacity:1;background-color:rgb(79 170 58 / var(--tw-bg-opacity, 1));}
+.hover\:bg-primary-600:hover{--tw-bg-opacity:1;background-color:rgb(67 160 71 / var(--tw-bg-opacity, 1));}
+.hover\:bg-neutral-800:hover{--tw-bg-opacity:1;background-color:rgb(38 38 38 / var(--tw-bg-opacity, 1));}
+.hover\:bg-primary-700:hover{--tw-bg-opacity:1;background-color:rgb(56 142 60 / var(--tw-bg-opacity, 1));}
+.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1));}
+.hover\:shadow-xl:hover{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);}
+.focus\:border-primary-500:focus{--tw-border-opacity:1;border-color:rgb(79 170 58 / var(--tw-border-opacity, 1));}
+.focus\:ring-4:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);}
+.focus\:ring-primary-500\/10:focus{--tw-ring-color:rgb(79 170 58 / 0.1);}
+@media not all and (min-width: 1536px){
+.max-2xl\:text-5xl{font-size:3rem;line-height:1;}
+}
+@media not all and (min-width: 1280px){
+.max-xl\:py-10{padding-top:2.5rem;padding-bottom:2.5rem;}
+.max-xl\:py-16{padding-top:4rem;padding-bottom:4rem;}
+.max-xl\:text-2xl{font-size:1.5rem;line-height:2rem;}
+.max-xl\:text-4xl{font-size:2.25rem;line-height:2.5rem;}
+.max-xl\:text-base{font-size:1rem;line-height:1.5rem;}
+}
+@media not all and (min-width: 1024px){
+.max-lg\:py-14{padding-top:3.5rem;padding-bottom:3.5rem;}
+}
+@media not all and (min-width: 768px){
+.max-md\:mb-7{margin-bottom:1.75rem;}
+.max-md\:p-6{padding:1.5rem;}
+.max-md\:text-3xl{font-size:1.875rem;line-height:2.25rem;}
+.max-md\:text-4xl{font-size:2.25rem;line-height:2.5rem;}
+}
+@media (min-width: 640px){
+.sm\:flex{display:flex;}
+.sm\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr));}
+.sm\:flex-row{flex-direction:row;}
+.sm\:items-center{align-items:center;}
+.sm\:justify-between{justify-content:space-between;}
+.sm\:border-r{border-right-width:1px;}
+.sm\:p-6{padding:1.5rem;}
+.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem;}
+.sm\:py-20{padding-top:5rem;padding-bottom:5rem;}
+.sm\:py-32{padding-top:8rem;padding-bottom:8rem;}
+.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem;}
+.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem;}
+.sm\:text-5xl{font-size:3rem;line-height:1;}
+.sm\:text-base{font-size:1rem;line-height:1.5rem;}
+.sm\:text-lg{font-size:1.125rem;line-height:1.75rem;}
+}
+@media (min-width: 768px){
+.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr));}
+.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr));}
+}
+@media (min-width: 1024px){
+.lg\:col-span-5{grid-column:span 5 / span 5;}
+.lg\:col-span-7{grid-column:span 7 / span 7;}
+.lg\:block{display:block;}
+.lg\:hidden{display:none;}
+.lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr));}
+.lg\:p-8{padding:2rem;}
+.lg\:px-8{padding-left:2rem;padding-right:2rem;}
+.lg\:py-36{padding-top:9rem;padding-bottom:9rem;}
+.lg\:text-\[56px\]{font-size:56px;}
+}
+@media (min-width: 1280px){
+.xl\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr));}
+}
+/*! CSS Used from: Embedded */
+.pricing-hero{background-image:linear-gradient(         to right,         rgba(18, 35, 20, 0.25) 0%,         rgba(18, 35, 20, 0.55) 35%,         rgba(18, 35, 20, 0.82) 65%,         rgba(18, 35, 20, 0.96) 100%       ),       url("https://knockio.com/wp-content/uploads/2026/05/inner-industry-hero-bg.webp");background-size:cover;background-position:center;}
+#pricing-compare{scroll-margin-top:0;}
+#pricing-compare table th,#pricing-compare table td{vertical-align:middle;}
+#pricing-compare tbody tr.compare-group-start td{border-top-width:0;}
+#pricing-compare tbody tr.compare-group-start:not(:first-child) td{border-top-width:1px;border-top-color:rgb(212 212 212);}
+.kio-pricing-card{position:relative;}
+.kio-pricing-card:hover{z-index:60;}
+.kio-plan-info{position:relative;z-index:70;flex-shrink:0;}
+.kio-plan-info-button{display:inline-flex;width:44px;height:44px;align-items:center;justify-content:center;border:1px solid rgb(229 229 229);border-radius:12px;background:#ffffff;color:#334155;cursor:pointer;transition:background-color 0.2s ease,       border-color 0.2s ease,       color 0.2s ease,       transform 0.2s ease;}
+.kio-plan-info-button:hover{border-color:#65a30d;background:#f5faf3;color:#65a30d;outline:none;transform:translateY(-1px);}
+.kio-plan-info-button-dark{border-color:rgba(255, 255, 255, 0.15);background:rgba(255, 255, 255, 0.06);color:#ffffff;}
+.kio-plan-info-button-dark:hover{border-color:#65a30d;background:rgba(101, 163, 13, 0.18);color:#ffffff;}
+.kio-plan-tooltip{position:absolute;top:calc(100% + 12px);right:0;z-index:100;width:min(340px, calc(100vw - 48px));padding:16px;border:1px solid rgba(255, 255, 255, 0.12);border-radius:16px;background:#0f172a;box-shadow:0 20px 50px rgba(15, 23, 42, 0.25);color:#f8fafc;font-size:14px;font-weight:400;line-height:1.7;text-align:left;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(8px);transition:opacity 0.2s ease,       visibility 0.2s ease,       transform 0.2s ease;}
+.kio-plan-tooltip::before{content:"";position:absolute;top:-7px;right:14px;width:14px;height:14px;border-top:1px solid rgba(255, 255, 255, 0.12);border-left:1px solid rgba(255, 255, 255, 0.12);background:#0f172a;transform:rotate(45deg);}
+@media (hover: hover){
+.kio-plan-info:hover .kio-plan-tooltip{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0);}
+}
+@media (max-width: 767px){
+.kio-plan-tooltip{position:fixed;top:50%;right:20px;left:20px;width:auto;max-width:none;max-height:calc(100vh - 80px);overflow-y:auto;transform:translateY(-48%);}
+.kio-plan-tooltip::before{display:none;}
+}
+@media (prefers-reduced-motion: reduce){
+.kio-plan-info-button,.kio-plan-tooltip{transition:none;}
+}
+/*! CSS Used fontfaces */
+@font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:400;font-display:block;src:url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-regular-400.woff2) format("woff2"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-regular-400.ttf) format("truetype");}
+
+</style>
+
+<div class="et_pb_code_inner"><style>
+  .pricing-hero {
+    background-image:
+      linear-gradient(
+        to right,
+        rgba(18, 35, 20, 0.25) 0%,
+        rgba(18, 35, 20, 0.55) 35%,
+        rgba(18, 35, 20, 0.82) 65%,
+        rgba(18, 35, 20, 0.96) 100%
+      ),
+      url("https://knockio.com/wp-content/uploads/2026/05/inner-industry-hero-bg.webp");
+    background-size: cover;
+    background-position: center;
+  }
+
+  #pricing-compare {
+    scroll-margin-top: 0;
+  }
+
+  #pricing-compare table th,
+  #pricing-compare table td {
+    vertical-align: middle;
+  }
+
+  #pricing-compare tbody tr.compare-group-start td {
+    border-top-width: 0;
+  }
+
+  #pricing-compare tbody tr.compare-group-start:not(:first-child) td {
+    border-top-width: 1px;
+    border-top-color: rgb(212 212 212);
+  }
+
+  .kio-pricing-card {
+    position: relative;
+  }
+
+  .kio-pricing-card:hover,
+  .kio-pricing-card:focus-within,
+  .kio-pricing-card.kio-tooltip-active {
+    z-index: 60;
+  }
+
+  .kio-plan-info {
+    position: relative;
+    z-index: 70;
+    flex-shrink: 0;
+  }
+
+  .kio-plan-info-button {
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(229 229 229);
+    border-radius: 12px;
+    background: #ffffff;
+    color: #334155;
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .kio-plan-info-button:hover,
+  .kio-plan-info-button:focus-visible {
+    border-color: #65a30d;
+    background: #f5faf3;
+    color: #65a30d;
+    outline: none;
+    transform: translateY(-1px);
+  }
+
+  .kio-plan-info-button-dark {
+    border-color: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+  }
+
+  .kio-plan-info-button-dark:hover,
+  .kio-plan-info-button-dark:focus-visible {
+    border-color: #65a30d;
+    background: rgba(101, 163, 13, 0.18);
+    color: #ffffff;
+  }
+
+  .kio-plan-tooltip {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    z-index: 100;
+    width: min(340px, calc(100vw - 48px));
+    padding: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    background: #0f172a;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.25);
+    color: #f8fafc;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+    text-align: left;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(8px);
+    transition:
+      opacity 0.2s ease,
+      visibility 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .kio-plan-tooltip::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    right: 14px;
+    width: 14px;
+    height: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+    background: #0f172a;
+    transform: rotate(45deg);
+  }
+
+  .kio-plan-info:focus-within .kio-plan-tooltip,
+  .kio-plan-info.is-open .kio-plan-tooltip {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  @media (hover: hover) {
+    .kio-plan-info:hover .kio-plan-tooltip {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .kio-plan-tooltip {
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      left: 20px;
+      width: auto;
+      max-width: none;
+      max-height: calc(100vh - 80px);
+      overflow-y: auto;
+      transform: translateY(-48%);
+    }
+
+    .kio-plan-tooltip::before {
+      display: none;
+    }
+
+    .kio-plan-info:focus-within .kio-plan-tooltip,
+    .kio-plan-info.is-open .kio-plan-tooltip {
+      transform: translateY(-50%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    .kio-plan-info-button,
+    .kio-plan-tooltip {
+      transition: none;
+    }
+  }
+</style>
+
+<!-- Hero -->
+<section class="pricing-hero relative flex min-h-[520px] items-center py-28 sm:py-32 lg:py-36">
+  <div class="my-container relative z-10 mx-auto w-full">
+    <div class="mx-auto max-w-4xl text-center aos-init aos-animate" data-aos="fade-up">
+      <h1 class="mb-6 font-inter text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-[56px]">
+        Knockio Pricing
+      </h1>
+
+      <div class="flex flex-wrap items-center justify-center gap-3">
+        <div class="inline-flex items-center gap-2 text-base font-semibold text-white sm:text-lg">
+          <i class="fas fa-check text-sm text-primary-500"></i>
+          <span>No contracts.</span>
+        </div>
+
+        <div class="inline-flex items-center gap-2 text-base font-semibold text-white sm:text-lg">
+          <i class="fas fa-check text-sm text-primary-500"></i>
+          <span>Prorated billing.</span>
+        </div>
+
+        <div class="inline-flex items-center gap-2 text-base font-semibold text-white sm:text-lg">
+          <i class="fas fa-check text-sm text-primary-500"></i>
+          <span>No setup fees.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pointer-events-none absolute bottom-0 left-0 right-0 h-[160px]" style="background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.6) 50%, #fff 100%)"></div>
+</section>
+
+<!-- Pricing Plans -->
+<section id="pricing-plans" class="relative z-10 -mt-8 py-20 max-xl:py-16 max-lg:py-14">
+  <div class="my-container">
+    <div class="mb-10 text-center max-md:mb-7">
+      <h2 class="mx-auto mb-4 max-w-3xl font-inter text-[56px] font-bold leading-tight text-neutral-900 max-2xl:text-5xl max-xl:text-4xl max-md:text-3xl aos-init aos-animate" data-aos="fade-down" data-aos-delay="100">
+        Straightforward pricing. No surprises.
+      </h2>
+
+      <p class="mx-auto max-w-2xl text-lg text-neutral-600 max-xl:text-base aos-init aos-animate" data-aos="fade-down" data-aos-delay="200">
+        Choose the tools your team needs today, or combine your entire field-sales and service operation in one connected platform.
+      </p> 
+    </div>
+
+    <div class="mb-12 flex flex-wrap items-center justify-center gap-3 aos-init aos-animate" data-aos="fade-up">
+      <div class="flex items-center rounded-full border border-solid border-neutral-200 px-5 py-2.5 text-sm text-neutral-900">
+        <i class="fas fa-check mr-2 text-primary-500"></i>
+        <span>Pro-rated billing</span>
+      </div>
+
+      <div class="flex items-center rounded-full border border-solid border-neutral-200 px-5 py-2.5 text-sm text-neutral-900">
+        <i class="fas fa-check mr-2 text-primary-500"></i>
+        <span>No setup fee</span>
+      </div>
+
+      <div class="flex items-center rounded-full border border-solid border-neutral-200 px-5 py-2.5 text-sm text-neutral-900">
+        <i class="fas fa-check mr-2 text-primary-500"></i>
+        <span>No contracts</span>
+      </div>
+
+      <a href="#pricing-compare" class="flex items-center rounded-full border border-solid border-primary-200 px-5 py-2.5 text-sm font-medium text-primary-600 transition-colors hover:bg-primary-50">
+        Compare plans in detail
+        <i class="fa-solid fa-arrow-down ml-2 text-xs"></i>
+      </a>
+    </div>
+
+    <div class="mx-auto grid max-w-[1500px] grid-cols-1 items-stretch gap-7 md:grid-cols-2 xl:grid-cols-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+      <!-- Prospect -->
+      <div class="kio-pricing-card flex flex-col rounded-3xl border border-solid border-neutral-200 bg-white p-7 transition duration-150 ease-out hover:-translate-y-1 hover:shadow-xl max-md:p-6">
+        <div class="mb-3 flex items-start justify-between gap-4">
+          <div class="flex items-center gap-4">
+            <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+              <i class="fas fa-map text-lg"></i>
+            </span>
+
+            <div>
+              <p class="mb-1 text-xs font-bold uppercase tracking-wider text-blue-600">Field Sales</p> 
+              <h3 class="text-3xl font-bold text-neutral-900 max-xl:text-2xl">Prospect</h3>
+            </div>
+          </div>
+
+          <div class="kio-plan-info">
+            <button type="button" class="kio-plan-info-button" aria-label="View Prospect plan details" aria-expanded="false" aria-controls="prospect-plan-tooltip">
+              <i class="fa-regular fa-eye" aria-hidden="true"></i>
+            </button>
+
+            <div id="prospect-plan-tooltip" class="kio-plan-tooltip" role="tooltip" aria-hidden="true">
+              Everything your reps need to knock doors, log, and close. Unlimited territories, live tracking, route planning, lead capture, and digital contracts from the first door to the signed agreement.
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-5 min-h-[76px]">
+          <p class="text-sm font-semibold leading-6 text-neutral-900">Who it’s for:</p> 
+          <p class="text-sm leading-6 text-neutral-600">For field sales teams running door-to-door campaigns.</p> 
+        </div>
+
+        <div class="mb-1 flex flex-wrap items-end text-neutral-900">
+          <span class="text-5xl font-bold max-md:text-4xl">$20</span>
+          <span class="mb-1 ml-2 text-base font-normal text-neutral-500">/user/mo</span>
+        </div>
+
+        <p class="mb-1 text-sm font-semibold text-primary-600">5+ users</p> 
+        <p class="mb-6 text-sm text-neutral-500">$25/user/mo for 1–4 users</p> 
+
+        <button type="button" data-package="4" aria-label="Start Prospect plan" class="knockio-checkout-btn mb-8 w-full cursor-pointer rounded-xl border border-solid border-primary-500 bg-white px-5 py-3.5 font-semibold text-primary-500 transition-colors duration-200 hover:bg-primary-500 hover:text-white">
+          Start Prospect
+        </button>
+
+        <h4 class="mb-4 text-lg font-semibold text-neutral-900">Features included:</h4>
+
+        <ul class="flex-1 space-y-3 text-neutral-700">
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-500"></i><span>Unlimited Territories &amp; Campaigns</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-500"></i><span>Route Planning &amp; Optimization</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-500"></i><span>Pre-Knocked Data (15¢ per address)</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-500"></i><span>Real-time Rep Tracking</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-500"></i><span>Presentations</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-500"></i><span>Digital Contracts &amp; E-Signature</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-500"></i><span>Native Automation Builder</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-500"></i><span>Task Management &amp; Appointment Scheduling</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-500"></i><span>Zapier &amp; FlowChef Integrations</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-500"></i><span>Free Onboarding &amp; Support</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-phone mr-3 mt-1 shrink-0 text-primary-500"></i><span>Engage Add-On ($15/number/mo)</span></li>
+        </ul>
+      </div>
+
+      <!-- Growth -->
+      <div class="kio-pricing-card relative flex flex-col rounded-3xl border border-solid border-[#0f172a] bg-[#0f172a] p-7 shadow-xl shadow-neutral-900/10 transition duration-150 ease-out hover:-translate-y-1 max-md:p-6">
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-solid border-neutral-300 bg-primary-500 px-7 py-1.5 text-sm font-semibold text-white">
+          Recommended
+        </div>
+
+        <div class="mb-3 mt-2 flex items-start justify-between gap-4">
+          <div class="flex items-center gap-4">
+            <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary-500/15 text-primary-400">
+              <i class="fas fa-chart-line text-lg"></i>
+            </span>
+
+            <div>
+              <p class="mb-1 text-xs font-bold uppercase tracking-wider text-primary-400">All-In-One</p> 
+              <h3 class="text-3xl font-bold text-white max-xl:text-2xl">Growth</h3>
+            </div>
+          </div>
+
+          <div class="kio-plan-info">
+            <button type="button" class="kio-plan-info-button kio-plan-info-button-dark" aria-label="View Growth plan details" aria-expanded="false" aria-controls="growth-plan-tooltip">
+              <i class="fa-regular fa-eye" aria-hidden="true"></i>
+            </button>
+
+            <div id="growth-plan-tooltip" class="kio-plan-tooltip" role="tooltip" aria-hidden="true">
+              The complete end-to-end platform. Includes everything in Prospect &amp; Organize combined into one seamless workflow—plus inventory tracking, granular team permissions, and a dedicated success manager.
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-5 min-h-[76px]">
+          <p class="text-sm font-semibold leading-6 text-white">Who it’s for:</p> 
+          <p class="text-sm leading-6 text-neutral-300">For contractors and field teams running the entire business—from first knock to final payment.</p> 
+        </div>
+
+        <p class="mb-6 rounded-xl border border-solid border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-semibold text-white">
+          Sell the job. Run the job. Get paid.
+        </p> 
+
+        <div class="mb-1 flex flex-wrap items-end text-white">
+          <span class="text-5xl font-bold max-md:text-4xl">$45</span>
+          <span class="mb-1 ml-2 text-base font-normal text-neutral-400">/user/mo</span>
+        </div>
+
+        <p class="mb-1 text-sm font-semibold text-primary-400">5+ users</p> 
+        <p class="mb-6 text-sm text-neutral-400">$60/user/mo for 1–4 users</p> 
+
+        <button type="button" data-package="6" aria-label="Start Growth plan" class="knockio-checkout-btn mb-8 w-full cursor-pointer rounded-xl bg-primary-500 px-5 py-3.5 font-semibold text-white transition-colors duration-200 hover:bg-primary-700">
+          Start Growth
+        </button>
+
+        <h4 class="mb-4 text-lg font-semibold text-white">Features included:</h4>
+
+        <ul class="flex-1 space-y-3 text-neutral-300">
+          <li class="flex items-start text-[15px] font-semibold leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-400"></i><span>Everything in Prospect</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-400"></i><span>Unlimited Workspaces</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-400"></i><span>Pipelines &amp; Lead Management</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-400"></i><span>Granular Permissions</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-400"></i><span>Email Communication</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-400"></i><span>Estimates &amp; Work Orders</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-400"></i><span>Invoices &amp; Payments</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-400"></i><span>Product &amp; Inventory Management</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-400"></i><span>Native Automation Builder</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-400"></i><span>Zapier &amp; FlowChef Integrations</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-user-tie mr-3 mt-1 shrink-0 text-primary-400"></i><span>Dedicated Success Manager</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-400"></i><span>Free Onboarding &amp; Account Setup</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-phone mr-3 mt-1 shrink-0 text-primary-400"></i><span>Engage Add-On ($15/number/mo)</span></li>
+        </ul>
+      </div>
+
+      <!-- Organize -->
+      <div class="kio-pricing-card flex flex-col rounded-3xl border border-solid border-neutral-200 bg-white p-7 transition duration-150 ease-out hover:-translate-y-1 hover:shadow-xl max-md:p-6">
+        <div class="mb-3 flex items-start justify-between gap-4">
+          <div class="flex items-center gap-4">
+            <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-orange-600">
+              <i class="fas fa-boxes text-lg"></i>
+            </span>
+
+            <div>
+              <p class="mb-1 text-xs font-bold uppercase tracking-wider text-orange-600">Field Service</p> 
+              <h3 class="text-3xl font-bold text-neutral-900 max-xl:text-2xl">Organize</h3>
+            </div>
+          </div>
+
+          <div class="kio-plan-info">
+            <button type="button" class="kio-plan-info-button" aria-label="View Organize plan details" aria-expanded="false" aria-controls="organize-plan-tooltip">
+              <i class="fa-regular fa-eye" aria-hidden="true"></i>
+            </button>
+
+            <div id="organize-plan-tooltip" class="kio-plan-tooltip" role="tooltip" aria-hidden="true">
+              Keep every job organized from estimate to invoice. Pipelines, work orders, digital contracts, invoices, payments, and customer records all in one place. No canvassing tools. Just the service and billing workflow your team needs.
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-5 min-h-[76px]">
+          <p class="text-sm font-semibold leading-6 text-neutral-900">Who it’s for:</p> 
+          <p class="text-sm leading-6 text-neutral-600">For field service teams managing jobs, billing, and customer records.</p> 
+        </div>
+
+        <div class="mb-1 flex flex-wrap items-end text-neutral-900">
+          <span class="text-5xl font-bold max-md:text-4xl">$30</span>
+          <span class="mb-1 ml-2 text-base font-normal text-neutral-500">/user/mo</span>
+        </div>
+
+        <p class="mb-1 text-sm font-semibold text-primary-600">5+ users</p> 
+        <p class="mb-6 text-sm text-neutral-500">$35/user/mo for 1–4 users</p> 
+
+        <button type="button" data-package="5" aria-label="Start Organize plan" class="knockio-checkout-btn mb-8 w-full cursor-pointer rounded-xl border border-solid border-primary-500 bg-white px-5 py-3.5 font-semibold text-primary-500 transition-colors duration-200 hover:bg-primary-500 hover:text-white">
+          Start Organize
+        </button>
+
+        <h4 class="mb-4 text-lg font-semibold text-neutral-900">Features included:</h4>
+
+        <ul class="flex-1 space-y-3 text-neutral-700">
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-500"></i><span>Pipelines &amp; Lead Management</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-500"></i><span>Digital Contracts &amp; E-Signature</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-500"></i><span>Granular Permissions</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-500"></i><span>Email Communication</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-500"></i><span>Estimates &amp; Work Orders</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-500"></i><span>Invoices &amp; Payments</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-500"></i><span>Product &amp; Inventory Management</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-500"></i><span>Native Automation Builder</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-500"></i><span>Task Management &amp; Appointment Scheduling</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-500"></i><span>Zapier &amp; FlowChef Integrations</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-500"></i><span>Free Onboarding &amp; Support</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-phone mr-3 mt-1 shrink-0 text-primary-500"></i><span>Engage Add-On ($15/number/mo)</span></li>
+        </ul>
+      </div>
+
+      <!-- Scale -->
+      <div class="kio-pricing-card relative flex flex-col rounded-3xl border border-solid border-primary-500 bg-[#f5faf3] p-7 transition duration-150 ease-out hover:-translate-y-1 hover:shadow-xl max-md:p-6">
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-solid border-primary-500 bg-white px-7 py-1.5 text-sm font-semibold text-primary-600">
+          100+ Users
+        </div>
+
+        <div class="mb-3 mt-2 flex items-start justify-between gap-4">
+          <div class="flex items-center gap-4">
+            <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary-500 text-white">
+              <i class="fas fa-building text-lg"></i>
+            </span>
+
+            <div>
+              <p class="mb-1 text-xs font-bold uppercase tracking-wider text-primary-600">Enterprise</p> 
+              <h3 class="text-3xl font-bold text-neutral-900 max-xl:text-2xl">Scale</h3>
+            </div>
+          </div>
+
+          <div class="kio-plan-info">
+            <button type="button" class="kio-plan-info-button" aria-label="View Scale plan details" aria-expanded="false" aria-controls="scale-plan-tooltip">
+              <i class="fa-regular fa-eye" aria-hidden="true"></i>
+            </button>
+
+            <div id="scale-plan-tooltip" class="kio-plan-tooltip" role="tooltip" aria-hidden="true">
+              Everything in Growth, engineered for your exact operational scale. Get custom volume pricing, white-glove team onboarding, priority support, and a direct line to our product team for feature requests. If an off-the-shelf plan isn’t enough, we’ll build this around you.
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-5 min-h-[76px]">
+          <p class="text-sm font-semibold leading-6 text-neutral-900">Who it’s for:</p> 
+          <p class="text-sm leading-6 text-neutral-600">Built for multi-location contractors and enterprise operations running 100+ reps in the field.</p> 
+        </div>
+
+        <div class="mb-2 text-3xl font-bold leading-tight text-neutral-900">Custom Pricing</div>
+        <p class="mb-6 text-sm font-semibold leading-6 text-primary-600">Volume rates for large field teams</p> 
+
+        <a href="https://knockio.com/book-a-demo/" data-demo-url="https://knockio.com/book-a-demo/" class="knockio-demo-btn mb-8 inline-flex w-full items-center justify-center rounded-xl bg-primary-500 px-5 py-3.5 font-semibold text-white transition-colors duration-200 hover:bg-primary-700">
+          Book a demo
+        </a>
+
+        <h4 class="mb-4 text-lg font-semibold text-neutral-900">Features included:</h4>
+
+        <ul class="flex-1 space-y-3 text-neutral-700">
+          <li class="flex items-start text-[15px] font-semibold leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-500"></i><span>Everything in Growth</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-500"></i><span>Custom Per-Seat Volume Rates</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-500"></i><span>White-Glove Onboarding &amp; Account Setup</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-user-tie mr-3 mt-1 shrink-0 text-primary-500"></i><span>Dedicated Success Manager &amp; Priority Support</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-check mr-3 mt-1 shrink-0 text-primary-500"></i><span>Direct Input on Product Roadmap &amp; Features</span></li>
+          <li class="flex items-start text-[15px] leading-6"><i class="fas fa-shield-alt mr-3 mt-1 shrink-0 text-primary-500"></i><span>Custom Enterprise Workspaces &amp; Security</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Quick Estimate Calculator -->
+<section class="bg-neutral-50/80 py-12 max-xl:py-10">
+  <div class="my-container">
+    <div data-kio-calc="" class="relative mx-auto max-w-5xl overflow-hidden rounded-[2rem] border border-solid border-neutral-200 bg-white p-5 shadow-xl shadow-neutral-900/5 sm:p-6 lg:p-8 aos-init aos-animate" data-aos="fade-up">
+      <div class="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-primary-500/10"></div>
+      <div class="pointer-events-none absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-neutral-100"></div>
+
+      <div class="relative z-10">
+        <div class="mb-6 flex flex-col gap-4 border-b border-neutral-100 pb-6 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <span class="mb-3 inline-flex items-center gap-2 rounded-full bg-[#0f172a] px-4 py-2 text-xs font-bold uppercase tracking-[0.08em] text-white">
+              <i class="fa-solid fa-calculator text-primary-400"></i>
+              Quick Estimate
+            </span>
+
+            <h3 class="mt-3 font-inter text-2xl font-bold leading-tight text-neutral-950 sm:text-3xl">Estimate your monthly cost</h3>
+            <p class="mt-2 text-sm text-neutral-600 sm:text-base">Choose your plan, users, and Engage phone numbers to preview pricing.</p> 
+          </div>
+
+          <div class="hidden h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary-500 text-white sm:flex">
+            <i class="fa-solid fa-chart-line text-xl"></i>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+          <div class="rounded-2xl border border-solid border-neutral-200 bg-neutral-50 p-4 transition-all focus-within:border-primary-500/40 focus-within:bg-white focus-within:shadow-md">
+            <label for="kio-users" class="mb-2 block text-xs font-bold uppercase tracking-wider text-neutral-950">Total Users</label>
+            <div class="relative">
+              <input id="kio-users" data-kio-users="" type="number" min="1" value="1" inputmode="numeric" class="min-h-[48px] w-full rounded-xl border border-solid border-neutral-200 bg-white px-4 pr-11 text-sm font-medium outline-none focus:border-primary-500 focus:ring-4 focus:ring-primary-500/10">
+              <span class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-neutral-400"><i class="fa-solid fa-users text-sm"></i></span>
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-solid border-neutral-200 bg-neutral-50 p-4 transition-all focus-within:border-primary-500/40 focus-within:bg-white focus-within:shadow-md">
+            <label for="kio-plan" class="mb-2 block text-xs font-bold uppercase tracking-wider text-neutral-950">Plan Type</label>
+            <select id="kio-plan" data-kio-plan="" class="min-h-[48px] w-full rounded-xl border border-solid border-neutral-200 bg-white px-4 text-sm font-medium outline-none focus:border-primary-500 focus:ring-4 focus:ring-primary-500/10">
+<option value="prospect" selected="">Prospect — Field Sales</option>
+<option value="growth">Growth — All-In-One</option>
+<option value="organize">Organize — Field Service</option>
+<option value="scale">Scale — 100+ Users</option>
+            </select>
+          </div>
+
+          <div class="rounded-2xl border border-solid border-neutral-200 bg-neutral-50 p-4 transition-all focus-within:border-primary-500/40 focus-within:bg-white focus-within:shadow-md">
+            <label for="kio-lines" class="mb-2 block text-xs font-bold uppercase tracking-wider text-neutral-950">Phone Numbers</label>
+            <div class="relative">
+              <input id="kio-lines" data-kio-lines="" type="number" min="0" value="0" inputmode="numeric" placeholder="0" class="min-h-[48px] w-full rounded-xl border border-solid border-neutral-200 bg-white px-4 pr-11 text-sm font-medium outline-none focus:border-primary-500 focus:ring-4 focus:ring-primary-500/10">
+              <span class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-neutral-400"><i class="fa-solid fa-phone text-sm"></i></span>
+            </div>
+            <p class="mt-2 text-xs text-neutral-500">Engage add-on, $15 per phone number.</p> 
+          </div>
+        </div>
+
+        <div class="mt-6 overflow-hidden rounded-2xl bg-[#0f172a]">
+          <div class="grid grid-cols-1 items-center gap-5 p-5 sm:p-6 lg:grid-cols-12">
+            <div class="lg:col-span-5">
+              <p class="mb-1 text-xs font-bold uppercase tracking-wider text-primary-400">Estimated Total</p> 
+              <div data-kio-total="" class="font-inter text-3xl font-extrabold text-white sm:text-4xl">$25 / mo</div>
+              <div data-kio-billing-label="" class="mt-1 text-sm text-neutral-300">Billed monthly</div>
+            </div>
+
+            <div class="lg:col-span-7">
+              <div class="rounded-2xl border border-solid border-white/10 bg-white/[0.04] p-4">
+                <p class="mb-2 text-xs font-bold uppercase tracking-wider text-neutral-400">Breakdown</p> 
+                <div data-kio-breakdown="" class="text-sm font-medium leading-6 text-white">1 user × $25</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 border-t border-white/10 sm:grid-cols-3">
+            <div class="flex items-center gap-3 border-white/10 p-4 sm:border-r">
+              <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-primary-500/15 text-primary-400"><i class="fa-solid fa-user-check text-sm"></i></span>
+              <span class="text-xs text-neutral-300">Volume pricing starts at 5 users</span>
+            </div>
+
+            <div class="flex items-center gap-3 border-white/10 p-4 sm:border-r">
+              <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-primary-500/15 text-primary-400"><i class="fa-solid fa-phone-volume text-sm"></i></span>
+              <span class="text-xs text-neutral-300">Engage phone numbers are optional</span>
+            </div>
+
+            <div class="flex items-center gap-3 p-4">
+              <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-primary-500/15 text-primary-400"><i class="fa-solid fa-building text-sm"></i></span>
+              <span class="text-xs text-neutral-300">Scale pricing is customized for 100+ users</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Comparison Table -->
+<section id="pricing-compare" class="relative bg-white py-16 sm:py-20" style="--compare-sticky-top: 0px">
+  <div class="my-container mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto mb-10 max-w-2xl text-center aos-init aos-animate" data-aos="fade-up">
+      <p class="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-primary-500">Full Feature Comparison</p>
+      <h2 class="font-inter text-3xl font-bold text-neutral-950 sm:text-4xl">Compare plans in detail</h2>
+      <p class="mx-auto mt-3 max-w-xl text-base leading-7 text-neutral-600">See which Knockio plan best matches your sales, service, and enterprise requirements.</p>
+    </div>
+
+    <div class="hidden overflow-x-auto rounded-[22px] border border-solid border-neutral-200 bg-white shadow-xl shadow-neutral-900/[0.04] lg:block aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+      <table class="min-w-[1280px] w-full border-separate border-spacing-0 text-left">
+        <thead>
+          <tr>
+            <th class="sticky z-30 w-[24%] rounded-tl-[22px] border-b border-r border-solid border-neutral-200 bg-white px-5 py-4 text-sm font-bold text-neutral-950 shadow-sm" style="top: var(--compare-sticky-top)">Feature</th>
+
+            <th class="sticky z-30 w-[19%] border-b border-r border-solid border-neutral-200 bg-white px-5 py-4 shadow-sm" style="top: var(--compare-sticky-top)">
+              <div class="flex items-center justify-between gap-3">
+                <span class="text-sm font-bold text-neutral-950">Prospect</span>
+                <div class="text-right leading-tight">
+                  <span class="block text-base font-bold text-primary-600">$20/mo</span>
+                  <span class="block text-xs font-medium text-neutral-500">5+ users</span>
+                </div>
+              </div>
+            </th>
+
+            <th class="sticky z-30 w-[19%] border-b border-r border-solid border-neutral-200 bg-[#f5faf3] px-5 py-4 shadow-sm" style="top: var(--compare-sticky-top)">
+              <div class="flex items-center justify-between gap-3">
+                <div class="flex items-center gap-2">
+                  <span class="text-sm font-bold text-neutral-950">Growth</span>
+                  <span class="rounded-full bg-primary-500 px-2 py-0.5 text-[10px] font-bold text-white">Popular</span>
+                </div>
+                <div class="text-right leading-tight">
+                  <span class="block text-base font-bold text-primary-600">$45/mo</span>
+                  <span class="block text-xs font-medium text-neutral-500">5+ users</span>
+                </div>
+              </div>
+            </th>
+
+            <th class="sticky z-30 w-[19%] border-b border-r border-solid border-neutral-200 bg-white px-5 py-4 shadow-sm" style="top: var(--compare-sticky-top)">
+              <div class="flex items-center justify-between gap-3">
+                <span class="text-sm font-bold text-neutral-950">Organize</span>
+                <div class="text-right leading-tight">
+                  <span class="block text-base font-bold text-primary-600">$30/mo</span>
+                  <span class="block text-xs font-medium text-neutral-500">5+ users</span>
+                </div>
+              </div>
+            </th>
+
+            <th class="sticky z-30 w-[19%] rounded-tr-[22px] border-b border-solid border-neutral-200 bg-[#f5faf3] px-5 py-4 shadow-sm" style="top: var(--compare-sticky-top)">
+              <div class="flex items-center justify-between gap-3">
+                <div>
+                  <span class="block text-sm font-bold text-neutral-950">Scale</span>
+                  <span class="block text-xs font-medium text-primary-600">100+ users</span>
+                </div>
+                <div class="text-right leading-tight"><span class="block text-sm font-bold text-primary-600">Custom</span></div>
+              </div>
+            </th>
+          </tr>
+        </thead>
+
+        <tbody id="compare-table-body">
+          <tr class="compare-group-start">
+            <td class="border-b border-solid border-neutral-200 bg-white px-5 pt-4 pb-2 text-sm font-bold text-neutral-950 border-r border-neutral-200">Field Sales</td>
+            <td class="border-b border-solid border-neutral-200 bg-white px-5 pt-4 pb-2 text-sm font-bold text-neutral-950 border-r border-neutral-200"></td>
+            <td class="border-b border-solid border-neutral-200 bg-white px-5 pt-4 pb-2 text-sm font-bold text-neutral-950 border-r border-neutral-200 bg-[#f8fbf7]"></td>
+            <td class="border-b border-solid border-neutral-200 bg-white px-5 pt-4 pb-2 text-sm font-bold text-neutral-950 border-r border-neutral-200"></td>
+            <td class="border-b border-solid border-neutral-200 bg-white px-5 pt-4 pb-2 text-sm font-bold text-neutral-950 bg-[#f8fbf7]"></td>
+          </tr>
+          
+            <tr>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Unlimited Territories &amp; Campaigns</td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td>
+              <td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+            </tr>
+          
+            <tr>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Route Planning &amp; Optimization</td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td>
+              <td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+            </tr>
+          
+            <tr>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Pre-Knocked Data (15¢ per address)</td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td>
+              <td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+            </tr>
+          
+            <tr>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Real-time Rep Tracking</td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td>
+              <td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+            </tr>
+          
+            <tr>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Presentations</td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td>
+              <td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+            </tr>
+          
+        
+          <tr class="compare-group-start">
+            <td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 text-sm font-bold text-neutral-950 border-r border-neutral-200">CRM &amp; Operations</td>
+            <td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 text-sm font-bold text-neutral-950 border-r border-neutral-200"></td>
+            <td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 text-sm font-bold text-neutral-950 border-r border-neutral-200 bg-[#f8fbf7]"></td>
+            <td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 text-sm font-bold text-neutral-950 border-r border-neutral-200"></td>
+            <td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 text-sm font-bold text-neutral-950 bg-[#f8fbf7]"></td>
+          </tr>
+          
+            <tr>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Pipelines &amp; Lead Management</td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+            </tr>
+          
+            <tr>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Digital Contracts &amp; E-Signature</td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+            </tr>
+          
+            <tr>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Granular Permissions</td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+            </tr>
+          
+            <tr>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Email Communication</td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+            </tr>
+          
+            <tr>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Estimates &amp; Work Orders</td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+            </tr>
+          
+            <tr>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Invoices &amp; Payments</td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+            </tr>
+          
+            <tr>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Product &amp; Inventory Management</td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+            </tr>
+          
+            <tr>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Unlimited Workspaces</td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td>
+              <td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+            </tr>
+          
+        
+          <tr class="compare-group-start">
+            <td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 text-sm font-bold text-neutral-950 border-r border-neutral-200">Automation &amp; Productivity</td>
+            <td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 text-sm font-bold text-neutral-950 border-r border-neutral-200"></td>
+            <td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 text-sm font-bold text-neutral-950 border-r border-neutral-200 bg-[#f8fbf7]"></td>
+            <td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 text-sm font-bold text-neutral-950 border-r border-neutral-200"></td>
+            <td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 text-sm font-bold text-neutral-950 bg-[#f8fbf7]"></td>
+          </tr>
+          
+            <tr>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Native Automation Builder</td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+            </tr>
+          
+            <tr>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Task Management &amp; Appointment Scheduling</td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+            </tr>
+          
+            <tr>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Zapier &amp; FlowChef Integrations</td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+            </tr>
+          
+        
+          <tr class="compare-group-start">
+            <td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 text-sm font-bold text-neutral-950 border-r border-neutral-200">Onboarding &amp; Support</td>
+            <td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 text-sm font-bold text-neutral-950 border-r border-neutral-200"></td>
+            <td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 text-sm font-bold text-neutral-950 border-r border-neutral-200 bg-[#f8fbf7]"></td>
+            <td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 text-sm font-bold text-neutral-950 border-r border-neutral-200"></td>
+            <td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 text-sm font-bold text-neutral-950 bg-[#f8fbf7]"></td>
+          </tr>
+          
+            <tr>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Onboarding &amp; Account Setup</td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="text-sm font-semibold text-neutral-900">Free</span></td>
+              <td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="text-sm font-semibold text-neutral-900">Free</span></td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="text-sm font-semibold text-neutral-900">Free</span></td>
+              <td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center gap-1.5 text-sm font-semibold text-neutral-900"><i class="fa-solid fa-star text-primary-500"></i><span class="whitespace-nowrap">White-Glove</span></span></td>
+            </tr>
+          
+            <tr>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Dedicated Success Manager</td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td>
+              <td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+            </tr>
+          
+            <tr>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Priority Support</td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td>
+              <td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+            </tr>
+          
+        
+          <tr class="compare-group-start">
+            <td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 text-sm font-bold text-neutral-950 border-r border-neutral-200">Enterprise</td>
+            <td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 text-sm font-bold text-neutral-950 border-r border-neutral-200"></td>
+            <td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 text-sm font-bold text-neutral-950 border-r border-neutral-200 bg-[#f8fbf7]"></td>
+            <td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 text-sm font-bold text-neutral-950 border-r border-neutral-200"></td>
+            <td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 text-sm font-bold text-neutral-950 bg-[#f8fbf7]"></td>
+          </tr>
+          
+            <tr>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Custom Per-Seat Volume Rates</td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td>
+              <td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+            </tr>
+          
+            <tr>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Direct Product Roadmap Input</td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td>
+              <td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+            </tr>
+          
+            <tr>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Custom Enterprise Workspaces &amp; Security</td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></td>
+              <td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></td>
+            </tr>
+          
+        
+          <tr class="compare-group-start">
+            <td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 text-sm font-bold text-neutral-950 border-r border-neutral-200">Add-On</td>
+            <td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 text-sm font-bold text-neutral-950 border-r border-neutral-200"></td>
+            <td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 text-sm font-bold text-neutral-950 border-r border-neutral-200 bg-[#f8fbf7]"></td>
+            <td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 text-sm font-bold text-neutral-950 border-r border-neutral-200"></td>
+            <td class="border-b border-solid border-neutral-200 bg-white px-5 pt-6 pb-2 text-sm font-bold text-neutral-950 bg-[#f8fbf7]"></td>
+          </tr>
+          
+            <tr>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">Engage Phone Numbers ($15/number/mo)</td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="text-sm font-semibold text-neutral-900">Available</span></td>
+              <td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="text-sm font-semibold text-neutral-900">Available</span></td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center"><span class="text-sm font-semibold text-neutral-900">Available</span></td>
+              <td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center"><span class="text-sm font-semibold text-neutral-900">Available</span></td>
+            </tr>
+          
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <td class="border-t border-r border-solid border-neutral-200 bg-neutral-50 px-5 py-4 text-sm font-bold text-neutral-950">Get started today</td>
+
+            <td class="border-t border-r border-solid border-neutral-200 bg-neutral-50 px-5 py-4">
+              <button type="button" data-package="4" class="knockio-checkout-btn w-full rounded-xl border border-solid border-primary-500 bg-white px-4 py-3 text-sm font-bold text-primary-500 transition hover:bg-primary-500 hover:text-white">Start Prospect</button>
+            </td>
+
+            <td class="border-t border-r border-solid border-neutral-200 bg-primary-500/[0.06] px-5 py-4">
+              <button type="button" data-package="6" class="knockio-checkout-btn w-full rounded-xl bg-primary-500 px-4 py-3 text-sm font-bold text-white transition hover:bg-primary-600">Start Growth</button>
+            </td>
+
+            <td class="border-t border-r border-solid border-neutral-200 bg-neutral-50 px-5 py-4">
+              <button type="button" data-package="5" class="knockio-checkout-btn w-full rounded-xl border border-solid border-primary-500 bg-white px-4 py-3 text-sm font-bold text-primary-500 transition hover:bg-primary-500 hover:text-white">Start Organize</button>
+            </td>
+
+            <td class="border-t border-solid border-neutral-200 bg-[#f5faf3] px-5 py-4">
+              <a href="https://knockio.com/book-a-demo/" data-demo-url="https://knockio.com/book-a-demo/" class="knockio-demo-btn inline-flex w-full items-center justify-center rounded-xl bg-[#0f172a] px-4 py-3 text-sm font-bold text-white transition hover:bg-neutral-800">
+                Book a demo
+              </a>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <div id="compare-mobile-body" class="space-y-4 lg:hidden">
+          <div class="rounded-2xl border border-solid border-neutral-200 bg-white shadow-sm">
+            <div class="border-b border-solid border-neutral-200 bg-white px-4 py-4">
+              <h3 class="text-base font-bold text-neutral-950">Field Sales</h3>
+            </div>
+
+            <div class="divide-y divide-neutral-200">
+              
+                  <div class="p-4">
+                    <h4 class="mb-3 text-sm font-semibold text-neutral-900">Unlimited Territories &amp; Campaigns</h4>
+                    <div class="space-y-2">
+                      
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Prospect</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Growth</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Organize</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Scale</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                    </div>
+                  </div>
+                
+                  <div class="p-4">
+                    <h4 class="mb-3 text-sm font-semibold text-neutral-900">Route Planning &amp; Optimization</h4>
+                    <div class="space-y-2">
+                      
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Prospect</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Growth</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Organize</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Scale</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                    </div>
+                  </div>
+                
+                  <div class="p-4">
+                    <h4 class="mb-3 text-sm font-semibold text-neutral-900">Pre-Knocked Data (15¢ per address)</h4>
+                    <div class="space-y-2">
+                      
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Prospect</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Growth</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Organize</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Scale</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                    </div>
+                  </div>
+                
+                  <div class="p-4">
+                    <h4 class="mb-3 text-sm font-semibold text-neutral-900">Real-time Rep Tracking</h4>
+                    <div class="space-y-2">
+                      
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Prospect</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Growth</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Organize</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Scale</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                    </div>
+                  </div>
+                
+                  <div class="p-4">
+                    <h4 class="mb-3 text-sm font-semibold text-neutral-900">Presentations</h4>
+                    <div class="space-y-2">
+                      
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Prospect</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Growth</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Organize</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Scale</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                    </div>
+                  </div>
+                
+            </div>
+          </div>
+        
+          <div class="rounded-2xl border border-solid border-neutral-200 bg-white shadow-sm">
+            <div class="border-b border-solid border-neutral-200 bg-white px-4 py-4">
+              <h3 class="text-base font-bold text-neutral-950">CRM &amp; Operations</h3>
+            </div>
+
+            <div class="divide-y divide-neutral-200">
+              
+                  <div class="p-4">
+                    <h4 class="mb-3 text-sm font-semibold text-neutral-900">Pipelines &amp; Lead Management</h4>
+                    <div class="space-y-2">
+                      
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Prospect</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Growth</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Organize</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Scale</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                    </div>
+                  </div>
+                
+                  <div class="p-4">
+                    <h4 class="mb-3 text-sm font-semibold text-neutral-900">Digital Contracts &amp; E-Signature</h4>
+                    <div class="space-y-2">
+                      
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Prospect</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Growth</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Organize</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Scale</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                    </div>
+                  </div>
+                
+                  <div class="p-4">
+                    <h4 class="mb-3 text-sm font-semibold text-neutral-900">Granular Permissions</h4>
+                    <div class="space-y-2">
+                      
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Prospect</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Growth</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Organize</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Scale</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                    </div>
+                  </div>
+                
+                  <div class="p-4">
+                    <h4 class="mb-3 text-sm font-semibold text-neutral-900">Email Communication</h4>
+                    <div class="space-y-2">
+                      
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Prospect</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Growth</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Organize</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Scale</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                    </div>
+                  </div>
+                
+                  <div class="p-4">
+                    <h4 class="mb-3 text-sm font-semibold text-neutral-900">Estimates &amp; Work Orders</h4>
+                    <div class="space-y-2">
+                      
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Prospect</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Growth</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Organize</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Scale</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                    </div>
+                  </div>
+                
+                  <div class="p-4">
+                    <h4 class="mb-3 text-sm font-semibold text-neutral-900">Invoices &amp; Payments</h4>
+                    <div class="space-y-2">
+                      
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Prospect</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Growth</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Organize</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Scale</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                    </div>
+                  </div>
+                
+                  <div class="p-4">
+                    <h4 class="mb-3 text-sm font-semibold text-neutral-900">Product &amp; Inventory Management</h4>
+                    <div class="space-y-2">
+                      
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Prospect</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Growth</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Organize</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Scale</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                    </div>
+                  </div>
+                
+                  <div class="p-4">
+                    <h4 class="mb-3 text-sm font-semibold text-neutral-900">Unlimited Workspaces</h4>
+                    <div class="space-y-2">
+                      
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Prospect</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Growth</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Organize</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Scale</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                    </div>
+                  </div>
+                
+            </div>
+          </div>
+        
+          <div class="rounded-2xl border border-solid border-neutral-200 bg-white shadow-sm">
+            <div class="border-b border-solid border-neutral-200 bg-white px-4 py-4">
+              <h3 class="text-base font-bold text-neutral-950">Automation &amp; Productivity</h3>
+            </div>
+
+            <div class="divide-y divide-neutral-200">
+              
+                  <div class="p-4">
+                    <h4 class="mb-3 text-sm font-semibold text-neutral-900">Native Automation Builder</h4>
+                    <div class="space-y-2">
+                      
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Prospect</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Growth</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Organize</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Scale</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                    </div>
+                  </div>
+                
+                  <div class="p-4">
+                    <h4 class="mb-3 text-sm font-semibold text-neutral-900">Task Management &amp; Appointment Scheduling</h4>
+                    <div class="space-y-2">
+                      
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Prospect</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Growth</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Organize</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Scale</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                    </div>
+                  </div>
+                
+                  <div class="p-4">
+                    <h4 class="mb-3 text-sm font-semibold text-neutral-900">Zapier &amp; FlowChef Integrations</h4>
+                    <div class="space-y-2">
+                      
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Prospect</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Growth</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Organize</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Scale</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                    </div>
+                  </div>
+                
+            </div>
+          </div>
+        
+          <div class="rounded-2xl border border-solid border-neutral-200 bg-white shadow-sm">
+            <div class="border-b border-solid border-neutral-200 bg-white px-4 py-4">
+              <h3 class="text-base font-bold text-neutral-950">Onboarding &amp; Support</h3>
+            </div>
+
+            <div class="divide-y divide-neutral-200">
+              
+                  <div class="p-4">
+                    <h4 class="mb-3 text-sm font-semibold text-neutral-900">Onboarding &amp; Account Setup</h4>
+                    <div class="space-y-2">
+                      
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Prospect</span>
+                            <span class="text-right"><span class="text-sm font-semibold text-neutral-900">Free</span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Growth</span>
+                            <span class="text-right"><span class="text-sm font-semibold text-neutral-900">Free</span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Organize</span>
+                            <span class="text-right"><span class="text-sm font-semibold text-neutral-900">Free</span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Scale</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center gap-1.5 text-sm font-semibold text-neutral-900"><i class="fa-solid fa-star text-primary-500"></i><span class="whitespace-nowrap">White-Glove</span></span></span>
+                          </div>
+                        
+                    </div>
+                  </div>
+                
+                  <div class="p-4">
+                    <h4 class="mb-3 text-sm font-semibold text-neutral-900">Dedicated Success Manager</h4>
+                    <div class="space-y-2">
+                      
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Prospect</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Growth</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Organize</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Scale</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                    </div>
+                  </div>
+                
+                  <div class="p-4">
+                    <h4 class="mb-3 text-sm font-semibold text-neutral-900">Priority Support</h4>
+                    <div class="space-y-2">
+                      
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Prospect</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Growth</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Organize</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Scale</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                    </div>
+                  </div>
+                
+            </div>
+          </div>
+        
+          <div class="rounded-2xl border border-solid border-neutral-200 bg-white shadow-sm">
+            <div class="border-b border-solid border-neutral-200 bg-white px-4 py-4">
+              <h3 class="text-base font-bold text-neutral-950">Enterprise</h3>
+            </div>
+
+            <div class="divide-y divide-neutral-200">
+              
+                  <div class="p-4">
+                    <h4 class="mb-3 text-sm font-semibold text-neutral-900">Custom Per-Seat Volume Rates</h4>
+                    <div class="space-y-2">
+                      
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Prospect</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Growth</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Organize</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Scale</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                    </div>
+                  </div>
+                
+                  <div class="p-4">
+                    <h4 class="mb-3 text-sm font-semibold text-neutral-900">Direct Product Roadmap Input</h4>
+                    <div class="space-y-2">
+                      
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Prospect</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Growth</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Organize</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Scale</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                    </div>
+                  </div>
+                
+                  <div class="p-4">
+                    <h4 class="mb-3 text-sm font-semibold text-neutral-900">Custom Enterprise Workspaces &amp; Security</h4>
+                    <div class="space-y-2">
+                      
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Prospect</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Growth</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Organize</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Scale</span>
+                            <span class="text-right"><span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span></span>
+                          </div>
+                        
+                    </div>
+                  </div>
+                
+            </div>
+          </div>
+        
+          <div class="rounded-2xl border border-solid border-neutral-200 bg-white shadow-sm">
+            <div class="border-b border-solid border-neutral-200 bg-white px-4 py-4">
+              <h3 class="text-base font-bold text-neutral-950">Add-On</h3>
+            </div>
+
+            <div class="divide-y divide-neutral-200">
+              
+                  <div class="p-4">
+                    <h4 class="mb-3 text-sm font-semibold text-neutral-900">Engage Phone Numbers ($15/number/mo)</h4>
+                    <div class="space-y-2">
+                      
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Prospect</span>
+                            <span class="text-right"><span class="text-sm font-semibold text-neutral-900">Available</span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Growth</span>
+                            <span class="text-right"><span class="text-sm font-semibold text-neutral-900">Available</span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Organize</span>
+                            <span class="text-right"><span class="text-sm font-semibold text-neutral-900">Available</span></span>
+                          </div>
+                        
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">Scale</span>
+                            <span class="text-right"><span class="text-sm font-semibold text-neutral-900">Available</span></span>
+                          </div>
+                        
+                    </div>
+                  </div>
+                
+            </div>
+          </div>
+        </div>
+
+    <p class="mt-6 text-center text-xs leading-relaxed text-neutral-500">
+      Volume pricing starts at 5+ users · Scale is available for teams with 100+ users · Billed monthly · No setup fees
+    </p> 
+  </div>
+</section>
+
+<!-- Plan Tooltip Interaction -->
+<script>
+  (function () {
+    function closeTooltip(wrapper) {
+      if (!wrapper) return;
+
+      wrapper.classList.remove("is-open");
+
+      var button = wrapper.querySelector(".kio-plan-info-button");
+      var tooltip = wrapper.querySelector(".kio-plan-tooltip");
+      var card = wrapper.closest(".kio-pricing-card");
+
+      if (button) {
+        button.setAttribute("aria-expanded", "false");
+      }
+
+      if (tooltip) {
+        tooltip.setAttribute("aria-hidden", "true");
+      }
+
+      if (card) {
+        card.classList.remove("kio-tooltip-active");
+      }
+    }
+
+    function closeAllTooltips(except) {
+      document.querySelectorAll(".kio-plan-info").forEach(function (wrapper) {
+        if (wrapper !== except) {
+          closeTooltip(wrapper);
+        }
+      });
+    }
+
+    document.addEventListener("click", function (event) {
+      var button = event.target.closest(".kio-plan-info-button");
+
+      if (button) {
+        var wrapper = button.closest(".kio-plan-info");
+        var tooltip = wrapper.querySelector(".kio-plan-tooltip");
+        var card = wrapper.closest(".kio-pricing-card");
+        var shouldOpen = !wrapper.classList.contains("is-open");
+
+        closeAllTooltips(wrapper);
+
+        wrapper.classList.toggle("is-open", shouldOpen);
+        button.setAttribute("aria-expanded", shouldOpen ? "true" : "false");
+
+        if (tooltip) {
+          tooltip.setAttribute("aria-hidden", shouldOpen ? "false" : "true");
+        }
+
+        if (card) {
+          card.classList.toggle("kio-tooltip-active", shouldOpen);
+        }
+
+        event.preventDefault();
+        event.stopPropagation();
+        return;
+      }
+
+      if (!event.target.closest(".kio-plan-tooltip")) {
+        closeAllTooltips();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        closeAllTooltips();
+      }
+    });
+  })();
+</script>
+
+<!-- Comparison Renderer -->
+<script>
+  (function () {
+    const tableBody = document.getElementById("compare-table-body");
+    const mobileBody = document.getElementById("compare-mobile-body");
+
+    if (!tableBody || !mobileBody) {
+      return;
+    }
+
+    const plans = ["Prospect", "Growth", "Organize", "Scale"];
+
+    const groups = [
+      {
+        title: "Field Sales",
+        rows: [
+          ["Unlimited Territories & Campaigns", ["check", "check", "empty", "check"]],
+          ["Route Planning & Optimization", ["check", "check", "empty", "check"]],
+          ["Pre-Knocked Data (15¢ per address)", ["check", "check", "empty", "check"]],
+          ["Real-time Rep Tracking", ["check", "check", "empty", "check"]],
+          ["Presentations", ["check", "check", "empty", "check"]]
+        ]
+      },
+      {
+        title: "CRM & Operations",
+        rows: [
+          ["Pipelines & Lead Management", ["empty", "check", "check", "check"]],
+          ["Digital Contracts & E-Signature", ["check", "check", "check", "check"]],
+          ["Granular Permissions", ["empty", "check", "check", "check"]],
+          ["Email Communication", ["empty", "check", "check", "check"]],
+          ["Estimates & Work Orders", ["empty", "check", "check", "check"]],
+          ["Invoices & Payments", ["empty", "check", "check", "check"]],
+          ["Product & Inventory Management", ["empty", "check", "check", "check"]],
+          ["Unlimited Workspaces", ["empty", "check", "empty", "check"]]
+        ]
+      },
+      {
+        title: "Automation & Productivity",
+        rows: [
+          ["Native Automation Builder", ["check", "check", "check", "check"]],
+          ["Task Management & Appointment Scheduling", ["check", "check", "check", "check"]],
+          ["Zapier & FlowChef Integrations", ["check", "check", "check", "check"]]
+        ]
+      },
+      {
+        title: "Onboarding & Support",
+        rows: [
+          ["Onboarding & Account Setup", ["Free", "Free", "Free", "White-Glove"]],
+          ["Dedicated Success Manager", ["empty", "check", "empty", "check"]],
+          ["Priority Support", ["empty", "empty", "empty", "check"]]
+        ]
+      },
+      {
+        title: "Enterprise",
+        rows: [
+          ["Custom Per-Seat Volume Rates", ["empty", "empty", "empty", "check"]],
+          ["Direct Product Roadmap Input", ["empty", "empty", "empty", "check"]],
+          ["Custom Enterprise Workspaces & Security", ["empty", "empty", "empty", "check"]]
+        ]
+      },
+      {
+        title: "Add-On",
+        rows: [
+          ["Engage Phone Numbers ($15/number/mo)", ["Available", "Available", "Available", "Available"]]
+        ]
+      }
+    ];
+
+    function valueHTML(value) {
+      if (value === "check") {
+        return '<span class="inline-flex items-center justify-center text-primary-500"><i class="fa-solid fa-check text-base"></i></span>';
+      }
+
+      if (value === "empty") {
+        return '<span class="inline-flex items-center justify-center text-neutral-300"><i class="fa-solid fa-minus text-base"></i></span>';
+      }
+
+      if (value === "White-Glove") {
+        return '<span class="inline-flex items-center justify-center gap-1.5 text-sm font-semibold text-neutral-900"><i class="fa-solid fa-star text-primary-500"></i><span class="whitespace-nowrap">White-Glove</span></span>';
+      }
+
+      return '<span class="text-sm font-semibold text-neutral-900">' + value + '</span>';
+    }
+
+    function renderDesktop() {
+      tableBody.innerHTML = groups.map(function (group, groupIndex) {
+        const isFirstGroup = groupIndex === 0;
+        const groupPadding = isFirstGroup ? "pt-4 pb-2" : "pt-6 pb-2";
+        const groupCellClass = "border-b border-solid border-neutral-200 bg-white px-5 " + groupPadding + " text-sm font-bold text-neutral-950";
+
+        const rows = group.rows.map(function ([feature, values]) {
+          return `
+            <tr>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-sm font-medium text-neutral-900">${feature}</td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center">${valueHTML(values[0])}</td>
+              <td class="border-b border-r border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center">${valueHTML(values[1])}</td>
+              <td class="border-b border-r border-solid border-neutral-200 px-5 py-3.5 text-center">${valueHTML(values[2])}</td>
+              <td class="border-b border-solid border-neutral-200 bg-primary-500/[0.025] px-5 py-3.5 text-center">${valueHTML(values[3])}</td>
+            </tr>
+          `;
+        }).join("");
+
+        return `
+          <tr class="compare-group-start">
+            <td class="${groupCellClass} border-r border-neutral-200">${group.title}</td>
+            <td class="${groupCellClass} border-r border-neutral-200"></td>
+            <td class="${groupCellClass} border-r border-neutral-200 bg-[#f8fbf7]"></td>
+            <td class="${groupCellClass} border-r border-neutral-200"></td>
+            <td class="${groupCellClass} bg-[#f8fbf7]"></td>
+          </tr>
+          ${rows}
+        `;
+      }).join("");
+    }
+
+    function renderMobile() {
+      mobileBody.innerHTML = groups.map(function (group) {
+        return `
+          <div class="rounded-2xl border border-solid border-neutral-200 bg-white shadow-sm">
+            <div class="border-b border-solid border-neutral-200 bg-white px-4 py-4">
+              <h3 class="text-base font-bold text-neutral-950">${group.title}</h3>
+            </div>
+
+            <div class="divide-y divide-neutral-200">
+              ${group.rows.map(function ([feature, values]) {
+                return `
+                  <div class="p-4">
+                    <h4 class="mb-3 text-sm font-semibold text-neutral-900">${feature}</h4>
+                    <div class="space-y-2">
+                      ${values.map(function (value, index) {
+                        return `
+                          <div class="flex items-center justify-between gap-3 rounded-xl border border-solid border-neutral-200 bg-white px-3 py-3">
+                            <span class="text-sm font-semibold text-neutral-900">${plans[index]}</span>
+                            <span class="text-right">${valueHTML(value)}</span>
+                          </div>
+                        `;
+                      }).join("")}
+                    </div>
+                  </div>
+                `;
+              }).join("")}
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    renderDesktop();
+    renderMobile();
+  })();
+</script>
+
+<!-- Calculator -->
+<script>
+  (function () {
+    var RATES = {
+      prospect: { rate_1_4: 25, rate_5p: 20 },
+      growth: { rate_1_4: 60, rate_5p: 45 },
+      organize: { rate_1_4: 35, rate_5p: 30 }
+    };
+
+    var ENGAGE_RATE = 15;
+
+    function formatPrice(number) {
+      return "$" + (Math.round(number * 100) / 100).toLocaleString("en-US", {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 2
+      });
+    }
+
+    function calculateCalculator(calculator) {
+      var usersInput = calculator.querySelector("[data-kio-users]");
+      var planInput = calculator.querySelector("[data-kio-plan]");
+      var linesInput = calculator.querySelector("[data-kio-lines]");
+      var totalElement = calculator.querySelector("[data-kio-total]");
+      var breakdownElement = calculator.querySelector("[data-kio-breakdown]");
+      var billingLabel = calculator.querySelector("[data-kio-billing-label]");
+
+      if (!usersInput || !planInput || !linesInput || !totalElement || !breakdownElement) {
+        return;
+      }
+
+      var users = Math.max(1, parseInt(usersInput.value, 10) || 1);
+      var lines = Math.max(0, parseInt(linesInput.value, 10) || 0);
+      var plan = planInput.value;
+
+      usersInput.value = users;
+      linesInput.value = lines;
+
+      if (plan === "scale") {
+        totalElement.textContent = "Custom pricing";
+        breakdownElement.textContent = "Scale includes custom per-seat volume rates for field teams with 100+ users.";
+
+        if (billingLabel) {
+          billingLabel.textContent = "Book a demo for a custom quote";
+        }
+
+        return;
+      }
+
+      if (!RATES[plan]) {
+        return;
+      }
+
+      var rate = users >= 5 ? RATES[plan].rate_5p : RATES[plan].rate_1_4;
+      var total = users * rate + lines * ENGAGE_RATE;
+
+      totalElement.textContent = formatPrice(total) + " / mo";
+
+      var breakdown = users + " user" + (users === 1 ? "" : "s") + " × " + formatPrice(rate);
+
+      if (lines > 0) {
+        breakdown += " + " + lines + " phone number" + (lines === 1 ? "" : "s") + " × " + formatPrice(ENGAGE_RATE);
+      }
+
+      breakdownElement.textContent = breakdown;
+
+      if (billingLabel) {
+        billingLabel.textContent = "Billed monthly";
+      }
+    }
+
+    function initializeCalculator(calculator) {
+      calculator.querySelectorAll("[data-kio-users], [data-kio-plan], [data-kio-lines]").forEach(function (field) {
+        field.addEventListener("input", function () {
+          calculateCalculator(calculator);
+        });
+
+        field.addEventListener("change", function () {
+          calculateCalculator(calculator);
+        });
+      });
+
+      calculateCalculator(calculator);
+    }
+
+    document.querySelectorAll("[data-kio-calc]").forEach(initializeCalculator);
+  })();
+</script>
+
+<!-- Checkout and Demo Redirect Tracking -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var trackingParameters = [
+      "gclid",
+      "utm_source",
+      "utm_medium",
+      "utm_campaign",
+      "utm_term",
+      "utm_content"
+    ];
+
+    function getParameter(name) {
+      return new URLSearchParams(window.location.search).get(name);
+    }
+
+    function getSource() {
+      return getParameter("source") || getParameter("utm_source") || "direct";
+    }
+
+    function appendTrackingParameters(url) {
+      trackingParameters.forEach(function (parameter) {
+        var value = getParameter(parameter);
+
+        if (value) {
+          url.searchParams.set(parameter, value);
+        }
+      });
+
+      url.searchParams.set("source", getSource());
+      return url;
+    }
+
+    function buildCheckoutUrl(packageId) {
+      var checkoutUrl = new URL("https://checkout.knockio.com/");
+      checkoutUrl.searchParams.set("users", "5");
+
+      if (packageId) {
+        checkoutUrl.searchParams.set("package", packageId);
+      }
+
+      appendTrackingParameters(checkoutUrl);
+      return checkoutUrl.toString();
+    }
+
+    function buildDemoUrl(demoUrl) {
+      var url = new URL(demoUrl || "https://knockio.com/book-a-demo/");
+      appendTrackingParameters(url);
+      return url.toString();
+    }
+
+    document.addEventListener("click", function (event) {
+      var checkoutButton = event.target.closest(".knockio-checkout-btn");
+
+      if (checkoutButton) {
+        event.preventDefault();
+        window.location.href = buildCheckoutUrl(checkoutButton.getAttribute("data-package"));
+        return;
+      }
+
+      var demoButton = event.target.closest(".knockio-demo-btn");
+
+      if (demoButton) {
+        event.preventDefault();
+        window.location.href = buildDemoUrl(demoButton.getAttribute("data-demo-url"));
+      }
+    });
+  });
+</script></div>
+
+
+<section class="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden">
+    <div class="my-container mx-auto mb-10 lg:mb-16 text-center">
+      <!-- Header -->
+      <p class="text-primary-500 text-sm md:text-2xl leading-7 font-inter mb-4">
+        Customer Reviews
+      </p> 
+      <h2 class="text-3xl leading-tight sm:text-4xl lg:text-[42px] xl:text-5xl 2xl:text-[56px] lg:leading-none font-bold text-neutral-950 mb-8">
+        What Field Service and Sales<br>
+        Teams Say About Knockio
+      </h2>
+
+      <!-- Google Review Badge -->
+      <img decoding="async" src="https://knockio.com/wp-content/uploads/2026/05/google-5-star.webp" alt="google review badge" class="mx-auto h-auto w-[150px] sm:w-[183px]">
+    </div>
+
+    <!-- SLIDER WRAPPER -->
+    <div class="space-y-8 mt-7">
+
+      <!-- Row 1: Left Moving -->
+      <div class="testimonial-track-container flex overflow-hidden">
+        <div class="testimonial-track flex gap-4 sm:gap-6 animate-marquee-left hover:pause">
+          <!-- Card Set 1 -->
+          <div class="flex gap-4 sm:gap-6 card-set">
+            <!-- Card 1 -->
+            <div class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group">
+              <p class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]">
+                This app is the best thing that has happened to our company! Asad is absolutely amazing! He is so responsive, it doesn't matter what time of day he is on it! I highly recommend this company add this app!
+
+              </p> 
+              <div class="flex items-center gap-4 relative z-10">
+                <img decoding="async" src="https://lh3.googleusercontent.com/a/ACg8ocId1IkoE1t-ar3lqC29ee12_WQLVvnZek_ySrpB9ZIoQGXHcLQ=w40-h40-c-rp-mo-ba3-br100" alt="Lacey Jackson" class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                <div>
+                  <h5 class="font-bold text-neutral-950 mb-1">Lacey Jackson</h5>
+                  <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p> 
+                </div>
+              </div>
+              <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
+            </div>
+            <!-- Card 2 -->
+            <div class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group">
+              <p class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]">
+                Knockio is a great product! We use it for our roofing sales canvassing. Their support team is responsive and fixes issues immediately. Highly recommend!
+              </p> 
+              <div class="flex items-center gap-4 relative z-10">
+                <img decoding="async" src="https://lh3.googleusercontent.com/a/ACg8ocLlweG5QsNIRodIE_qY6_wcpgZAmhOueKzzroi4T8ZCumGjcg=w40-h40-c-rp-mo-br100" alt="Ben Loveland" class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                <div>
+                  <h5 class="font-bold text-neutral-950 mb-1">Ben Loveland</h5>
+                  <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p> 
+                </div>
+              </div>
+              <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
+            </div>
+            <!-- Card 3 -->
+            <div class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group">
+              <p class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]">
+                The support team is awesome. The live tracking feature is very useful. The pricing is fair as well!
+              </p> 
+              <div class="flex items-center gap-4 relative z-10">
+                <img decoding="async" src="https://lh3.googleusercontent.com/a/ACg8ocK_WvRfKm7Y7oUvEBypx1mjvcMFptvWvTQ0jX9WGAg-h-Atdw=w40-h40-c-rp-mo-ba2-br100" alt="Bar Galanti" class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                <div>
+                  <h5 class="font-bold text-neutral-950 mb-1">Bar Galanti</h5>
+                  <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p> 
+                </div>
+              </div>
+              <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
+            </div>
+          </div>
+          <!-- Duplicate Set for loop -->
+          <div class="flex gap-4 sm:gap-6 card-set" aria-hidden="true">
+            <!-- Card 1 -->
+            <div class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group">
+              <p class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]">
+                This app is the best thing that has happened to our company! Asad is absolutely amazing! He is so responsive, it doesn't matter what time of day he is on it! I highly recommend this company add this app!
+
+              </p> 
+              <div class="flex items-center gap-4 relative z-10">
+                <img decoding="async" src="https://lh3.googleusercontent.com/a/ACg8ocId1IkoE1t-ar3lqC29ee12_WQLVvnZek_ySrpB9ZIoQGXHcLQ=w40-h40-c-rp-mo-ba3-br100" alt="Lacey Jackson" class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                <div>
+                  <h5 class="font-bold text-neutral-950 mb-1">Lacey Jackson</h5>
+                  <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p> 
+                </div>
+              </div>
+              <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
+            </div>
+            <!-- Card 2 -->
+            <div class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group">
+              <p class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]">
+                Knockio is a great product! We use it for our roofing sales canvassing. Their support team is responsive and fixes issues immediately. Highly recommend!
+              </p> 
+              <div class="flex items-center gap-4 relative z-10">
+                <img decoding="async" src="https://lh3.googleusercontent.com/a/ACg8ocLlweG5QsNIRodIE_qY6_wcpgZAmhOueKzzroi4T8ZCumGjcg=w40-h40-c-rp-mo-br100" alt="Ben Loveland" class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                <div>
+                  <h5 class="font-bold text-neutral-950 mb-1">Ben Loveland</h5>
+                  <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p> 
+                </div>
+              </div>
+              <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
+            </div>
+            <!-- Card 3 -->
+            <div class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group">
+              <p class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]">
+                The support team is awesome. The live tracking feature is very useful. The pricing is fair as well!
+              </p> 
+              <div class="flex items-center gap-4 relative z-10">
+                <img decoding="async" src="https://lh3.googleusercontent.com/a/ACg8ocK_WvRfKm7Y7oUvEBypx1mjvcMFptvWvTQ0jX9WGAg-h-Atdw=w40-h40-c-rp-mo-ba2-br100" alt="Bar Galanti" class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                <div>
+                  <h5 class="font-bold text-neutral-950 mb-1">Bar Galanti</h5>
+                  <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p> 
+                </div>
+              </div>
+              <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: Right Moving -->
+      <div class="testimonial-track-container flex overflow-hidden">
+        <div class="testimonial-track flex gap-4 sm:gap-6 animate-marquee-right hover:pause">
+          <!-- Card Set 2 -->
+          <div class="flex gap-4 sm:gap-6 card-set">
+            <!-- Card 4 -->
+            <div class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group">
+              <p class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]">
+                Knockio is the best! My team and I absolutely love using it - it is so user friendly and simple. Support is brilliant too, nothing is ever too much trouble. The best on the market. Thanks Knockio!
+              </p> 
+              <div class="flex items-center gap-4 relative z-10">
+                <img decoding="async" src="https://lh3.googleusercontent.com/a/ACg8ocKA66zdCpxUw0n7RVizkZ0gCKF609Xpo-GCGgfWmti73l6h3w=w40-h40-c-rp-mo-br100" alt="Georgia Hancocks" class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                <div>
+                  <h5 class="font-bold text-neutral-950 mb-1">Georgia Hancocks</h5>
+                  <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p> 
+                </div>
+              </div>
+              <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
+            </div>
+            <!-- Card 5 -->
+            <div class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group">
+              <p class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]">
+                We love Knockio so far! It is solving a lot of the issues of the other canvassing apps. The team have worked with us providing excellent fast support. Highly recommend if you're seeing people face to face.
+              </p> 
+              <div class="flex items-center gap-4 relative z-10">
+                <img decoding="async" src="https://lh3.googleusercontent.com/a/ACg8ocKSJsnf9lwFYUjQbnhFVtIrJ0XYdi6v5K_6tiTg_bec0n3C=w40-h40-c-rp-mo-br100" alt="Sarah Bennett" class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                <div>
+                  <h5 class="font-bold text-neutral-950 mb-1">Sarah Bennett</h5>
+                  <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p> 
+                </div>
+              </div>
+              <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
+            </div>
+            <!-- Card 6 -->
+            <div class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group">
+              <p class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]">
+                Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.
+
+              </p> 
+              <div class="flex items-center gap-4 relative z-10">
+                <img decoding="async" src="https://lh3.googleusercontent.com/a-/ALV-UjVUHu6ErzBhJd6Hyz_HgEivECY33TPOT3RLHCHu54k0L_ayj-B-=w40-h40-c-rp-mo-ba2-br100" alt="Ayana Hall" class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                <div>
+                  <h5 class="font-bold text-neutral-950 mb-1">Ayana Hall</h5>
+                  <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p> 
+                </div>
+              </div>
+              <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
+            </div>
+          </div>
+          <!-- Duplicate Set for loop -->
+          <div class="flex gap-4 sm:gap-6 card-set" aria-hidden="true">
+            <!-- Card 4 -->
+            <div class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group">
+              <p class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]">
+                Knockio is the best! My team and I absolutely love using it - it is so user friendly and simple. Support is brilliant too, nothing is ever too much trouble. The best on the market. Thanks Knockio!
+              </p> 
+              <div class="flex items-center gap-4 relative z-10">
+                <img decoding="async" src="https://lh3.googleusercontent.com/a/ACg8ocKA66zdCpxUw0n7RVizkZ0gCKF609Xpo-GCGgfWmti73l6h3w=w40-h40-c-rp-mo-br100" alt="Georgia Hancocks" class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                <div>
+                  <h5 class="font-bold text-neutral-950 mb-1">Georgia Hancocks</h5>
+                  <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p> 
+                </div>
+              </div>
+              <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
+            </div>
+            <!-- Card 5 -->
+            <div class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group">
+              <p class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]">
+                We love Knockio so far! It is solving a lot of the issues of the other canvassing apps. The team have worked with us providing excellent fast support. Highly recommend if you're seeing people face to face.
+              </p> 
+              <div class="flex items-center gap-4 relative z-10">
+                <img decoding="async" src="https://lh3.googleusercontent.com/a/ACg8ocKSJsnf9lwFYUjQbnhFVtIrJ0XYdi6v5K_6tiTg_bec0n3C=w40-h40-c-rp-mo-br100" alt="Sarah Bennett" class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                <div>
+                  <h5 class="font-bold text-neutral-950 mb-1">Sarah Bennett</h5>
+                  <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p> 
+                </div>
+              </div>
+              <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
+            </div>
+            <!-- Card 6 -->
+            <div class="w-[300px] sm:w-[380px] lg:w-[450px] flex-shrink-0 bg-neutral-50 p-5 sm:p-6 lg:p-8 rounded-2xl border border-neutral-200 relative group">
+              <p class="text-neutral-700 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 relative z-10 italic min-h-[168px]">
+                Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.
+
+              </p> 
+              <div class="flex items-center gap-4 relative z-10">
+                <img decoding="async" src="https://lh3.googleusercontent.com/a-/ALV-UjVUHu6ErzBhJd6Hyz_HgEivECY33TPOT3RLHCHu54k0L_ayj-B-=w40-h40-c-rp-mo-ba2-br100" alt="Ayana Hall" class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                <div>
+                  <h5 class="font-bold text-neutral-950 mb-1">Ayana Hall</h5>
+                  <p class="text-sm text-neutral-500">⭐⭐⭐⭐⭐</p> 
+                </div>
+              </div>
+              <i class="fa-solid fa-quote-right absolute bottom-6 right-8 text-5xl sm:text-6xl lg:text-7xl text-primary-500/10"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

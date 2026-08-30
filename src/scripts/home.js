@@ -774,7 +774,7 @@ requestAnimationFrame(raf);
   // Calculator
   var RATES = {
     prospect: { rate_1_4: 25, rate_5p: 20 },
-    organise: { rate_1_4: 35, rate_5p: 30 },
+    organize: { rate_1_4: 35, rate_5p: 30 },
     growth: { rate_1_4: 60, rate_5p: 45 },
   };
   var ENGAGE_RATE = 15;
@@ -792,6 +792,7 @@ requestAnimationFrame(raf);
     var linesInput = calcEl.querySelector("[data-kio-lines]");
     var totalEl = calcEl.querySelector("[data-kio-total]");
     var breakdownEl = calcEl.querySelector("[data-kio-breakdown]");
+    var billingLabel = calcEl.querySelector("[data-kio-billing-label]");
     if (!usersInput || !planInput || !linesInput || !totalEl || !breakdownEl) return;
 
     var usersRaw = usersInput.value.trim();
@@ -800,14 +801,24 @@ requestAnimationFrame(raf);
 
     var usersEmpty = usersRaw === "";
     var linesEmpty = linesRaw === "";
-    var users = usersEmpty ? 0 : Math.max(0, parseInt(usersRaw, 10) || 0);
+    var users = usersEmpty ? 0 : Math.max(1, parseInt(usersRaw, 10) || 1);
     var lines = linesEmpty ? 0 : Math.max(0, parseInt(linesRaw, 10) || 0);
+
+    if (plan === "scale") {
+      totalEl.textContent = "Custom pricing";
+      breakdownEl.textContent = "Scale includes custom per-seat volume rates for field teams with 100+ users.";
+      if (billingLabel) billingLabel.textContent = "Book a demo for a custom quote";
+      return;
+    }
 
     if (usersEmpty) {
       totalEl.textContent = "$25 / mo";
       breakdownEl.textContent = "1 user × $25";
+      if (billingLabel) billingLabel.textContent = "Billed monthly";
       return;
     }
+
+    if (!RATES[plan]) return;
 
     var rate = users >= 5 ? RATES[plan].rate_5p : RATES[plan].rate_1_4;
     var total = users * rate + lines * ENGAGE_RATE;
@@ -816,6 +827,7 @@ requestAnimationFrame(raf);
     var breakdown = users + " user" + (users === 1 ? "" : "s") + " × " + fmt(rate);
     if (lines > 0) breakdown += " + " + lines + " phone number" + (lines === 1 ? "" : "s") + " × " + fmt(ENGAGE_RATE);
     breakdownEl.textContent = breakdown;
+    if (billingLabel) billingLabel.textContent = "Billed monthly";
   }
 
   function initCalculator(calcEl) {
@@ -827,6 +839,22 @@ requestAnimationFrame(raf);
   }
 
   document.querySelectorAll("[data-kio-calc]").forEach(initCalculator);
+
+  // Demo button
+  document.addEventListener("click", function (e) {
+    var demoBtn = e.target.closest(".knockio-demo-btn");
+    if (!demoBtn) return;
+    e.preventDefault();
+    var demoUrl = demoBtn.getAttribute("data-demo-url") || "https://knockio.com/book-a-demo/";
+    var url = new URL(demoUrl);
+    var source = getParam("source") || getParam("utm_source") || "direct";
+    ["gclid", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"].forEach(function (p) {
+      var v = getParam(p);
+      if (v) url.searchParams.set(p, v);
+    });
+    url.searchParams.set("source", source);
+    window.location.href = url.toString();
+  });
 })();
 
 

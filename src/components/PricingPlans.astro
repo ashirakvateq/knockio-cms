@@ -1,0 +1,201 @@
+---
+import { defaultPlans, type PricingPlan, type FeatureIcon } from "../data/pricing-plans";
+import {
+  Check,
+  Phone,
+  Plug,
+  Shield,
+  Star,
+  Map,
+  ChartLine,
+  Boxes,
+  Building,
+  BriefcaseBusiness,
+} from "lucide-astro";
+
+interface Props {
+  plans?: PricingPlan[];
+  variant?: "home" | "pricing";
+}
+
+const {
+  plans = defaultPlans,
+  variant = "pricing",
+} = Astro.props;
+
+const isHome = variant === "home";
+
+const planIconMap: Record<string, { fa: string; color: string; bg: string }> = {
+  Prospect: { fa: "fa-map", color: "text-blue-600", bg: "bg-blue-50" },
+  Growth: { fa: "fa-chart-line", color: "text-primary-400", bg: "bg-primary-500/15" },
+  Organize: { fa: "fa-boxes", color: "text-orange-600", bg: "bg-orange-50" },
+  Scale: { fa: "fa-building", color: "text-white", bg: "bg-primary-500" },
+};
+
+const planHomeIconMap: Record<string, any> = {
+  Prospect: Map,
+  Growth: ChartLine,
+  Organize: Boxes,
+  Scale: Building,
+};
+
+function getFeatureIconComponent(icon: FeatureIcon | undefined) {
+  const cls = "mr-3 mt-1 shrink-0";
+  switch (icon) {
+    case "phone": return { component: Phone, cls: `text-primary-500 ${cls}` };
+    case "plug": return { component: Plug, cls: `text-neutral-400 ${cls}` };
+    case "user-tie": return { component: BriefcaseBusiness, cls: `text-primary-500 ${cls}` };
+    case "shield": return { component: Shield, cls: `text-primary-500 ${cls}` };
+    case "star": return { component: Star, cls: `text-primary-500 ${cls}` };
+    default: return { component: Check, cls: `text-primary-500 ${cls}` };
+  }
+}
+
+function getPricingIconHtml(icon: FeatureIcon | undefined): string {
+  const cls = "mr-3 mt-1 shrink-0";
+  switch (icon) {
+    case "phone": return `<i class="fas fa-phone ${cls} text-primary-500"></i>`;
+    case "user-tie": return `<i class="fas fa-user-tie ${cls} text-primary-500"></i>`;
+    case "shield": return `<i class="fas fa-shield-alt ${cls} text-primary-500"></i>`;
+    case "star": return `<i class="fas fa-star ${cls} text-primary-500"></i>`;
+    default: return `<i class="fas fa-check ${cls} text-primary-500"></i>`;
+  }
+}
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-7 max-w-[1500px] mx-auto items-stretch pt-6 overflow-visible">
+  {plans.map((plan) => {
+    const pIcon = planIconMap[plan.title] || planIconMap.Prospect;
+    const HomeIcon = planHomeIconMap[plan.title] || Map;
+    const isDark = plan.title === "Growth";
+    const isScale = plan.title === "Scale";
+
+    const cardClass = isHome
+      ? `group relative flex flex-col rounded-3xl border border-solid ${isDark ? 'border-[#0f172a] bg-[#0f172a]' : isScale ? 'border-primary-500 bg-[#f5faf3]' : 'border-neutral-200 bg-white'} p-8 max-md:p-6 transition duration-150 ease-out hover:scale-[1.03] overflow-visible`
+      : `kio-pricing-card flex flex-col rounded-3xl border border-solid ${isDark ? 'border-[#0f172a] bg-[#0f172a] shadow-xl shadow-neutral-900/10 relative' : isScale ? 'border-primary-500 bg-[#f5faf3] relative' : 'border-neutral-200 bg-white'} p-7 transition duration-150 ease-out hover:-translate-y-1 hover:shadow-xl max-md:p-6`;
+
+    const titleClass = isDark ? "text-white" : "text-neutral-900";
+    const descClass = isDark ? "text-neutral-300" : isHome ? "text-neutral-700" : "text-neutral-600";
+    const featListClass = isDark ? "text-neutral-300" : "text-neutral-700";
+    const priceClass = isDark ? "text-white" : "text-neutral-900";
+    const priceUnitClass = isDark ? "text-neutral-400" : "text-neutral-500";
+    const sublineClass = isDark ? "text-primary-400" : "text-primary-600";
+    const noteClass = isDark ? "text-neutral-400" : "text-neutral-500";
+
+    const pricePriceClass = isScale ? "mb-2 text-3xl font-bold leading-tight text-neutral-900" : "text-5xl font-bold max-md:text-4xl";
+    const priceSublineClass = isScale ? "mb-6 text-sm font-semibold leading-6 text-primary-600" : `mb-1 text-sm font-semibold ${sublineClass}`;
+
+    return (
+      <div class={cardClass}>
+        {plan.badge && (
+          <div class={`absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-solid px-7 py-1.5 text-sm font-semibold ${isDark ? 'border-neutral-300 bg-primary-500 text-white' : isScale ? 'border-primary-500 bg-white text-primary-600' : 'border-neutral-300 bg-primary-500 text-white'}`}>
+            {plan.badge}
+          </div>
+        )}
+
+        {isHome ? (
+          <div class="flex items-center gap-4 mb-3">
+            <HomeIcon size="1em" class={`text-xl ${pIcon.color}`} aria-hidden="true" />
+            <h3 class={`text-3xl max-xl:text-2xl font-bold ${titleClass}`}>{plan.title}</h3>
+          </div>
+        ) : (
+          <div class="mb-3 flex items-start justify-between gap-4">
+            <div class="flex items-center gap-4">
+              <span class={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${pIcon.bg} ${pIcon.color}`}>
+                <i class={`fas ${pIcon.fa} text-lg`}></i>
+              </span>
+              <div>
+                <p class={`mb-1 text-xs font-bold uppercase tracking-wider ${isDark ? "text-primary-400" : isScale ? "text-primary-600" : pIcon.color}`}>
+                  {plan.category}
+                </p>
+                <h3 class={`text-3xl font-bold max-xl:text-2xl ${titleClass}`}>{plan.title}</h3>
+              </div>
+            </div>
+            <div class="kio-plan-info">
+              <button type="button" class={`kio-plan-info-button ${isDark ? "kio-plan-info-button-dark" : ""}`} aria-label={`View ${plan.title} plan details`} aria-expanded="false" aria-controls={`${plan.title.toLowerCase()}-plan-tooltip`}>
+                <i class="fa-regular fa-eye" aria-hidden="true"></i>
+              </button>
+              <div id={`${plan.title.toLowerCase()}-plan-tooltip`} class="kio-plan-tooltip" role="tooltip" aria-hidden="true">
+                {plan.description}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {!isHome && (
+          <div class="mb-5 min-h-[76px]">
+            <p class={`text-sm font-semibold leading-6 ${titleClass}`}>Who it's for:</p>
+            <p class={`text-sm leading-6 ${descClass}`}>{plan.description}</p>
+          </div>
+        )}
+
+        {isHome && (
+          <p class={`text-base leading-7 mb-5 max-md:mb-4 ${descClass}`}>{plan.description}</p>
+        )}
+
+        {plan.tagline && !isHome && (
+          <p class="mb-6 rounded-xl border border-solid border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-semibold text-white">
+            {plan.tagline}
+          </p>
+        )}
+
+        <div class={`mb-1 flex flex-wrap items-end ${priceClass}`}>
+          <span class={pricePriceClass}>{plan.price}</span>
+          {plan.priceUnit && <span class={`mb-1 ml-2 text-base font-normal ${priceUnitClass}`}>{plan.priceUnit}</span>}
+        </div>
+
+        {plan.priceSubline && (
+          <p class={priceSublineClass}>{plan.priceSubline}</p>
+        )}
+
+        {plan.priceNote && (
+          <p class={`mb-6 text-sm ${noteClass}`}>{plan.priceNote}</p>
+        )}
+
+        {plan.packageId ? (
+          <button
+            type="button"
+            data-package={plan.packageId}
+            aria-label={`Start ${plan.title} plan`}
+            class={`knockio-checkout-btn mb-8 w-full cursor-pointer rounded-xl px-5 py-3.5 font-semibold transition-colors duration-200 ${isDark ? 'bg-primary-500 text-white hover:bg-primary-700' : 'bg-white border border-solid border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white'}`}
+          >
+            Start {plan.title}
+          </button>
+        ) : plan.demoUrl ? (
+          <a
+            href={plan.demoUrl}
+            data-demo-url={plan.demoUrl}
+            class="knockio-demo-btn mb-8 inline-flex w-full items-center justify-center rounded-xl bg-primary-500 px-5 py-3.5 font-semibold text-white transition-colors duration-200 hover:bg-primary-700"
+          >
+            Book a demo
+          </a>
+        ) : null}
+
+        <h4 class={`mb-4 font-semibold ${isHome ? 'text-xl max-md:text-lg max-md:mb-3' : 'text-lg'} ${isDark && !isHome ? 'text-white' : 'text-neutral-900'}`}>
+          Features {isHome ? "Included:" : "included:"}
+        </h4>
+
+        <ul class={`flex-1 ${isHome ? 'space-y-3.5' : 'space-y-3'} ${featListClass}`}>
+          {plan.features.map((feature) => {
+            if (isHome) {
+              const { component: IconComp, cls } = getFeatureIconComponent(feature.icon);
+              return (
+                <li class={`flex items-start text-base leading-7 max-md:text-[15px] ${feature.bold ? 'font-semibold' : ''}`}>
+                  <IconComp size="1em" class={cls} aria-hidden="true" />
+                  <span class={feature.icon === "plug" ? "text-neutral-500" : ""}>{feature.text}</span>
+                </li>
+              );
+            }
+            const iconHtml = getPricingIconHtml(feature.icon);
+            return (
+              <li class={`flex items-start text-[15px] leading-6 ${feature.bold ? 'font-semibold' : ''}`}>
+                <span set:html={iconHtml} />
+                <span>{feature.text}</span>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    );
+  })}
+</div>
