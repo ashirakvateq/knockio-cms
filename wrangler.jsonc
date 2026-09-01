@@ -10,11 +10,13 @@
   "routes": [
     {
       "pattern": "knockio.com/*",
-      "zone_name": "knockio.com"
+      // "zone_name": "knockio.com",
+      "zone_id": "23fbc7f6274f85d5d4284c8487838f70"
     },
     {
       "pattern": "www.knockio.com/*",
-      "zone_name": "knockio.com"
+      // "zone_name": "knockio.com",
+      "zone_id": "23fbc7f6274f85d5d4284c8487838f70"
     }
   ]
 }
