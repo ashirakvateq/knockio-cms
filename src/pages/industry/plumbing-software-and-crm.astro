@@ -1,6 +1,8 @@
 ---
 import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
 import "../../styles/industry-page.css";
+import OperatingModels from "../../components/industry/OperatingModels.astro";
+import OldStackComparison from "../../components/industry/OldStackComparison.astro";
 import {
   ChevronRight,
   Crosshair,
@@ -202,26 +204,26 @@ const trustBadges = [
 ];
 
 const faqs = [
-	{
-		q: "What should I look for in plumbing software?",
-		a: "Look for scheduling and dispatch, full job history per address, detailed estimating, work orders with parts, e-contracts, and flexible billing, all tied to one customer record. The platform should carry both emergency service and planned installs without forcing you into two tools. Knockio was built to run both from the same system.",
-	},
-	{
-		q: "Which software is best for a small plumbing business?",
-		a: "Knockio helps field service teams manage the full workflow. Teams can Manage Customers and Jobs, store customer details, create estimates, schedule jobs, assign crews, track job progress, upload photos, send invoices, and follow up with customers. This helps reduce manual work and keeps everyone updated.",
-	},
-	{
-		q: "Can Knockio bill a large job in stages?",
-		a: "Yes. Knockio supports milestone-based payment collection, so you can take a deposit, bill progress draws as each phase completes, and collect the final balance at the end, all tied to the job.",
-	},
-	{
-		q: "Can Knockio track plumbing parts and materials?",
-		a: "Yes. Work orders carry a material takeoff, and inventory management tracks pipe, fittings, valves, and fixtures with low-stock alerts, so each job is cost against what it actually used.",
-	},
-	{
-		q: "Can Knockio track my plumbers in the field?",
-		a: "Yes. Knockio includes live GPS tracking with proximity intelligence, so you can confirm how close a plumber was to a property when they marked a job.",
-	},
+  {
+    q: "What should I look for in plumbing contractor software?",
+    a: "Look for scheduling and dispatch, full job history per address, flat-rate price book estimating, work orders with material takeoffs, e-contracts, and flexible on-site billing—all tied to one customer record. The platform should carry both emergency leak service and permitted repipe projects without forcing you into two tools. Knockio was built to run both from the same system.",
+  },
+  {
+    q: "Can plumbers quote from a flat-rate price book on site?",
+    a: "Yes. Plumbers can present clear, flat-rate pricing directly from an integrated flat-rate price book on a mobile tablet. They can quote the exact job price after diagnosis—before turning a wrench—and capture digital customer approval on the spot.",
+  },
+  {
+    q: "Can Knockio store sewer camera inspection videos and photos?",
+    a: "Yes. Technicians can attach high-resolution sewer camera inspection videos, annotated photos of corroded pipes, and shut-off valve locations directly to the customer property record so customers, office staff, and insurance adjusters see undeniable visual proof.",
+  },
+  {
+    q: "Can Knockio bill a large repipe job in stages?",
+    a: "Yes. Knockio supports staged invoicing (a deposit up front, then additional invoices as the job progresses), so you can take an initial deposit for materials, send additional invoices as rough-in inspection phases complete, and collect the final balance upon completion—all tied to the project record.",
+  },
+  {
+    q: "How is Knockio different from ServiceTitan, Jobber, or Housecall Pro for plumbing companies?",
+    a: "ServiceTitan is heavy and priced for large enterprise shops, while Jobber and Housecall Pro often require paid add-ons for advanced sales and proposal features. Knockio brings emergency dispatch, flat-rate price book quoting, sewer video attachments, work orders, and payments together in one flat-rate platform—adding live GPS tracking, automated territory canvassing, and personalized support.",
+  },
 ];
 
 const reviewsRow1 = [
@@ -265,6 +267,67 @@ const reviewsRow2 = [
       "Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.",
   },
 ];
+
+const operatingModelsData = {
+  pillTag: "OPERATING MODEL FLEXIBILITY",
+  title: "Built for How Your Plumbing Business Actually Operates",
+  subtitle:
+    "An emergency drain-cleaning business and a commercial new-construction plumber share a trade name, but run completely different workflows. Knockio adapts to your specific dispatch model, flat-rate pricing, and project draws out of the box.",
+  cards: [
+    {
+      icon: "faucet-drip",
+      title: "Emergency Service & Repair",
+      text: "Designed for fast-paced leak and drain triage. Quote trip fees at booking, assign the nearest available plumber using the live rep map, present flat-rate repair quotes from your price book, and collect payment on completion.",
+      pills: ["GPS Emergency Dispatch", "Flat-Rate Price Books", "On-Site Payment Collection"],
+    },
+    {
+      icon: "tools",
+      title: "Trenchless Sewer & Underground",
+      text: "Manage high-ticket residential and commercial sewer line replacements. Attach video inspection files, build tiered repair-vs-replacement proposals, and present the financing you offer for major excavation work.",
+      pills: ["Sewer Camera Video Logs", "Good/Better/Best Tiers", "Financing Docs on File"],
+    },
+    {
+      icon: "house-flood",
+      title: "Residential Repipe & Remodel",
+      text: "Streamline whole-home water and gas repipes. Track municipal building permits, manage staged material takeoffs (copper, PEX), and collect staged payments as inspection phases complete.",
+      pills: ["Municipal Permit Tracking", "Invoicing", "Declined-Repair Waivers"],
+    },
+    {
+      icon: "building",
+      title: "Commercial & Water Treatment",
+      text: "Manage multi-family HOA contracts, restaurant grease-trap schedules, and commercial filtration/softener installations. Track mandatory municipal backflow testing certifications and annual maintenance plans.",
+      pills: ["Backflow Test Compliance", "Commercial PMA Accounts", "Multi-Property Billing"],
+    },
+  ],
+};
+
+const oldStackComparisonData = {
+  title: "How Knockio Replaces Your Taped-Together Plumbing Stack",
+  subtitle:
+    "Stop paying for basic calendar dispatch apps, paper price books, and manual invoicing spreadsheets. Knockio brings your plumbers, drain techs, and office into one platform.",
+  rows: [
+    {
+      stage: "Scheduling & Dispatch",
+      oldStack: "Using whiteboards or basic calendar apps with no live GPS plumber tracking or emergency routing.",
+      knockio: "Visual drag-and-drop dispatch board with real-time GPS plumber tracking and emergency routing.",
+    },
+    {
+      stage: "Estimating & Quoting",
+      oldStack: "Flipping through paper price books or writing hourly estimates on invoices after the job is done.",
+      knockio: "Digital flat-rate price book quoting and interactive Good/Better/Best proposals presented on site.",
+    },
+    {
+      stage: "Proof & Compliance",
+      oldStack: "Sewer camera inspection videos stored on SD cards that customers and adjusters can never access.",
+      knockio: "High-res camera inspection videos, photos, and backflow test forms attached right to the customer record.",
+    },
+    {
+      stage: "Invoicing & Payments",
+      oldStack: "Handwriting paper invoices in the truck and waiting days for customers to mail checks.",
+      knockio: "Automated digital invoices, on-site payment / Text-to-Pay collection.",
+    },
+  ],
+};
 
 const heroImage = asset("inner-industry-plumbing-software-software.webp");
 
@@ -533,6 +596,21 @@ const jsonLd = {
           </div>
       </div>
     </section>
+
+    <!-- ========== Operating Models (4-Card Grid) ========== -->
+    <OperatingModels
+      pillTag={operatingModelsData.pillTag}
+      title={operatingModelsData.title}
+      subtitle={operatingModelsData.subtitle}
+      cards={operatingModelsData.cards}
+    />
+
+    <!-- ========== Old Stack vs. Knockio Comparison ========== -->
+    <OldStackComparison
+      title={oldStackComparisonData.title}
+      subtitle={oldStackComparisonData.subtitle}
+      rows={oldStackComparisonData.rows}
+    />
 
     <!-- ========== Organized (dark) ========== -->
     <section

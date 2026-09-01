@@ -1,6 +1,8 @@
 ---
 import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
 import "../../styles/industry-page.css";
+import OperatingModels from "../../components/industry/OperatingModels.astro";
+import OldStackComparison from "../../components/industry/OldStackComparison.astro";
 import {
   ChevronRight,
   Crosshair,
@@ -241,24 +243,24 @@ const trustBadges = [
 
 const faqs = [
   {
-    q: "What should I look for in landscaping software?",
-    a: "Look for a platform that handles both recurring maintenance and full design-build projects: recurring scheduling, detailed estimating, material tracking, e-contracts, and milestone billing, all tied to one customer record. Most tools do one side well and the other poorly. Knockio was built to run both from the same system.",
+    q: "What should I look for in landscaping business software?",
+    a: "Look for a platform that handles both recurring maintenance and full design-build projects: route density optimization, detailed estimating, material tracking, e-contracts, and staged invoicing—all tied to one customer record. Most tools do one side well and the other poorly. Knockio was built to run both from the same system.",
   },
   {
-    q: "Which software is best for a landscaping business that does both maintenance and installs?",
-    a: "Knockio helps field service teams manage the full workflow. Teams can Land the Project, store customer details, create estimates, schedule jobs, assign crews, track job progress, upload photos, send invoices, and follow up with customers. This helps reduce manual work and keeps everyone updated.",
+    q: "Can Knockio optimize routes for weekly mowing crews?",
+    a: "Yes. Knockio includes visual route planning and GPS tracking that clusters stops by neighborhood to maximize route density—reducing windshield time, fuel costs, and unnecessary driving across town.",
   },
   {
-    q: "Can Knockio bill a project in stages?",
-    a: "Yes. Knockio supports milestone-based payment collection, so you can take a deposit, bill progress draws as each phase completes, and collect the final balance at cleanup, all tied to the project.",
+    q: "Can technicians log chemical lawn fertilization and pesticide applications?",
+    a: "Yes. Technicians can log commercial pesticide applicator license numbers, N-P-K fertilizer ratios, application quantities, and weather conditions directly into the property record to satisfy state agricultural compliance.",
   },
   {
-    q: "Can Knockio track plants and materials per project?",
-    a: "Yes. Work orders carry a material takeoff, and inventory management tracks plants, hardscape, and irrigation parts with low-stock alerts, so each project is cost against what it actually used.",
+    q: "Does Knockio support staged invoicing for large hardscape projects?",
+    a: "Yes. While maintenance routes use recurring invoicing, large design-build projects can be billed via invoices—capturing initial material deposits, mid-job draws, and final payment upon completion.",
   },
   {
-    q: "Can Knockio track my crews in the field?",
-    a: "Yes. Knockio includes live GPS tracking with proximity intelligence, so you can confirm how close a crew was to a property when they marked a job started or completed.",
+    q: "How is Knockio different from Aspire, LMN, or Jobber for landscaping companies?",
+    a: "Aspire and LMN are complex systems built primarily for large commercial bidding, while Jobber focuses on basic residential scheduling without native sales canvassing. Knockio combines D2D neighborhood canvassing, route density planning, chemical logging, and design-build invoices in one flat-rate platform.",
   },
 ];
 
@@ -303,6 +305,67 @@ const reviewsRow2 = [
       "Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.",
   },
 ];
+
+const operatingModelsData = {
+  pillTag: "OPERATING MODEL FLEXIBILITY",
+  title: "Built for How Your Landscaping Business Actually Operates",
+  subtitle:
+    "A weekly lawn mowing route and a $50,000 hardscape design-build project share a trade name, but run completely different workflows. Knockio adapts to your specific route density, chemical turf care, and seasonal snow removal out of the box.",
+  cards: [
+    {
+      icon: "leaf",
+      title: "Recurring Lawn Maintenance",
+      text: "Engineered for high-density weekly and bi-weekly mowing routes (the largest share of trade revenue). Optimize route clustering, store gate codes on mobile route sheets, and trigger recurring invoicing upon completion.",
+      pills: ["Route Density Optimization", "Recurring Invoicing", "Gate Code & Pet Alerts"],
+    },
+    {
+      icon: "spray-can",
+      title: "Chemical Lawn Care & Turf",
+      text: "Manage fertilizer, weed control, and pesticide application routes. Ensure compliance by logging commercial pesticide applicator license numbers, N-P-K ratios, and chemical dilution rates on customer receipts.",
+      pills: ["Pesticide Applicator Logs", "Turf Application Receipts", "D2D Neighborhood Sales"],
+    },
+    {
+      icon: "trowel",
+      title: "Design-Build & Hardscaping",
+      text: "Streamline high-ticket patio, retaining wall, and outdoor living installations. Manage staged material takeoffs (pavers, stone, sod), bilateral change orders for scope additions, and invoices.",
+      pills: ["Invoicing", "Bilateral Change Orders", "Paver & Nursery POs"],
+    },
+    {
+      icon: "snowflake",
+      title: "Winter Snow & Event Lighting",
+      text: "Toggle operational modes seamlessly when seasons change. Pivot maintenance crews to commercial snow/ice removal contracts or Q4 architectural holiday lighting leases with warehouse bin storage tracking.",
+      pills: ["Seasonal Pivot Mode", "Snow & Ice Dispatch", "Holiday Lighting Storage"],
+    },
+  ],
+};
+
+const oldStackComparisonData = {
+  title: "How Knockio Replaces Your Taped-Together Landscaping Stack",
+  subtitle:
+    "Stop paying for basic routing apps, standalone estimating software, and manual spreadsheet billing. Knockio brings your maintenance crews, hardscape installers, and office into one platform.",
+  rows: [
+    {
+      stage: "Canvassing & Sales",
+      oldStack: "Using standalone door apps (SalesRabbit) to sell lawn care without visibility into existing crew route density.",
+      knockio: "Built-in D2D canvassing that targets streets adjacent to your existing routes to maximize density.",
+    },
+    {
+      stage: "Route Scheduling",
+      oldStack: "Juggling spreadsheets or basic calendars that fail to optimize stop order or store gate codes and pet alerts.",
+      knockio: "Visual route optimization that clusters neighborhoods and displays clear property notes on mobile.",
+    },
+    {
+      stage: "Design-Build & Scope",
+      oldStack: "Handwriting hardscape estimates and relying on verbal agreements when clients ask for extra landscaping mid-job.",
+      knockio: "Tiered Good/Better/Best proposals and digital dual-signature change orders captured on a tablet.",
+    },
+    {
+      stage: "Invoicing & Payments",
+      oldStack: "Printing paper invoices for mowing clients and chasing overdue checks at the end of every month.",
+      knockio: "Automated recurring invoicing for maintenance and invoices for installations.",
+    },
+  ],
+};
 
 const heroImage = asset(
   "inner-landscaping-software-and-crm-what-should-landscaping-companies-look-for-in-a-crm-and-project-platform.webp",
@@ -596,6 +659,21 @@ const jsonLd = {
           </div>
       </div>
     </section>
+
+    <!-- ========== Operating Models (4-Card Grid) ========== -->
+    <OperatingModels
+      pillTag={operatingModelsData.pillTag}
+      title={operatingModelsData.title}
+      subtitle={operatingModelsData.subtitle}
+      cards={operatingModelsData.cards}
+    />
+
+    <!-- ========== Old Stack vs. Knockio Comparison ========== -->
+    <OldStackComparison
+      title={oldStackComparisonData.title}
+      subtitle={oldStackComparisonData.subtitle}
+      rows={oldStackComparisonData.rows}
+    />
 
     <!-- ========== Organized (dark) ========== -->
     <section

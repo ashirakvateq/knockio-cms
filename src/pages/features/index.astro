@@ -133,7 +133,24 @@ const jsonLd = [
   whiteBg={true}
 >
   <main>
-    <section class="hero">
+    <style>
+      /* These styles ONLY apply to this component. Auto-scoped. */
+      .hub-hero {
+        padding: 8rem 0 4rem;
+      }
+
+      .hub-hero h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 800;
+        line-height: 1.15;
+        color: #0f172a;
+        margin: 0 0 1rem;
+        max-width: 720px;
+      }
+
+    </style>
+    
+    <section class="hub-hero">
       <div class="wrap">
         <span class="kicker">Knockio features</span>
         <h1>Everything you need to manage field sales and service.</h1>

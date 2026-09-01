@@ -1,6 +1,8 @@
 ---
 import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
 import "../../styles/industry-page.css";
+import OperatingModels from "../../components/industry/OperatingModels.astro";
+import OldStackComparison from "../../components/industry/OldStackComparison.astro";
 import {
   ChevronRight,
   Crosshair,
@@ -204,24 +206,24 @@ const trustBadges = [
 const faqs = [
   {
     q: "What should I look for in pool service software?",
-    a: "Look for recurring scheduling, route planning, tech tracking, chemical and reading logs, on-site quoting, and payment collection, all tied to one pool record. The platform should make a weekly route easy to run instead of forcing you to rebook every account by hand. Knockio was built around exactly this kind of recurring, route-based service.",
+    a: "Look for recurring scheduling, route density planning, GPS technician tracking, LSI chemical dosing logs, before-and-after photo proof of service, on-site repair quoting, and recurring invoicing—all tied to one pool record. The platform should make a weekly route effortless to run instead of forcing you to rebook every account by hand. Knockio was built around exactly this kind of recurring, route-based service.",
   },
   {
-    q: "Which software is best for a small pool cleaning business?",
-    a: "Knockio helps field service teams manage the full workflow. Teams can Best for Pool Jobs, store customer details, create estimates, schedule jobs, assign crews, track job progress, upload photos, send invoices, and follow up with customers. This helps reduce manual work and keeps everyone updated.",
+    q: "Can technicians calculate LSI and log water chemistry on their mobile device?",
+    a: "Yes. Knockio includes an integrated LSI (Langelier Saturation Index) chemistry calculator where technicians input pH, free chlorine, alkalinity, cyanuric acid, calcium hardness, and water temperature to log exact chemical dosages into the pool record.",
   },
   {
-    q: "Can Knockio log chemical readings for each pool?",
-    a: "Yes. Techs can record pH, chlorine, and other readings along with what was dosed on every stop, saved to the pool record, so you keep a clean chemistry history per account.",
+    q: "Does Knockio send after-service photo reports to homeowners?",
+    a: "Yes. Technicians capture timestamped photos of the clean pool, emptied skimmer baskets, and brushed waterlines. Knockio automatically sends a branded digital service report to the homeowner, eliminating \"the tech never showed up\" billing disputes.",
   },
   {
-    q: "Can Knockio track my techs and confirm stops were completed?",
-    a: "Yes. Knockio includes live GPS tracking with proximity intelligence, so you can confirm how close a tech actually was to a pool when they marked the stop.",
+    q: "Can Knockio gate recurring invoicing until proof of service is completed?",
+    a: "Yes. You can automatically send the recurring invoice when the service is marked complete.",
   },
   {
-    q: "Does Knockio handle equipment repairs and parts?",
-    a: "Yes. Work orders carry tasks, a budget, and a material takeoff, with inventory management and vendor bills, so a pump or heater replacement ties straight to the job and your real costs.",
-  }
+    q: "How is Knockio different from Skimmer, Pool Brain, or Jobber for pool service companies?",
+    a: "Skimmer and Pool Brain are strong on basic route management but lack native door-to-door sales canvassing, while Jobber is generic across all trades. Knockio combines neighborhood D2D canvassing, LSI chemistry logging, before/after photo proof of service, equipment POs, and recurring invoicing in one flat-rate platform.",
+  },
 ];
 
 const reviewsRow1 = [
@@ -265,6 +267,67 @@ const reviewsRow2 = [
       "Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.",
   },
 ];
+
+const operatingModelsData = {
+  pillTag: "OPERATING MODEL FLEXIBILITY",
+  title: "Built for How Your Pool Service Business Actually Operates",
+  subtitle:
+    "A weekly residential cleaning route and a commercial HOA pool maintenance contract share a trade name, but run completely different workflows. Knockio adapts to your specific LSI chemistry logs, equipment repairs, and leak detection out of the box.",
+  cards: [
+    {
+      icon: "water-ladder",
+      title: "Recurring Weekly Maintenance",
+      text: "Engineered for high-density weekly cleaning routes. Optimize route clustering, calculate LSI water chemistry in-app, capture before/after clean photos, and trigger recurring invoicing upon proof of service.",
+      pills: ["LSI Chemistry Calculator", "Before/After Photo Proof", "Route Density Planning"],
+    },
+    {
+      icon: "cog",
+      title: "Equipment Repair & Upgrades",
+      text: "Maximize profit margins on equipment repairs. Quote variable-speed pumps, automation systems, heaters, and salt cells with instant SMS customer approval, supplier PO tracking, and invoices.",
+      pills: ["Instant SMS Quoting", "POOLCORP / SCP POs", "Variable-Speed Pump Quotes"],
+    },
+    {
+      icon: "droplet",
+      title: "Leak Detection & Testing",
+      text: "Streamline specialized acoustic listening and pressure-testing leak detection services ($350–$800 diagnostic fees). Generate structured diagnostic finding reports that convert directly into repair excavation quotes.",
+      pills: ["Acoustic Diagnostic Reports", "Underwater Photo Proof", "Repair Excavation Quotes"],
+    },
+    {
+      icon: "hotel",
+      title: "Commercial HOA & Hotel Pools",
+      text: "Serve hotels, gyms, and HOA community pools requiring daily or multi-weekly maintenance. Log CPO (Certified Pool Operator) credentials, maintain health department chemical records, and handle commercial billing.",
+      pills: ["CPO Compliance Logging", "Health Dept Audit Trails", "Multi-Day Route Schedules"],
+    },
+  ],
+};
+
+const oldStackComparisonData = {
+  title: "How Knockio Replaces Your Taped-Together Pool Service Stack",
+  subtitle:
+    "Stop paying for separate route apps, standalone chemical calculators, and manual invoicing spreadsheets. Knockio brings your cleaning technicians, repair specialists, and office into one platform.",
+  rows: [
+    {
+      stage: "Canvassing & Routes",
+      oldStack: "Paying per seat for standalone door apps without visibility into where your existing weekly pool routes are clustered.",
+      knockio: "Built-in D2D canvassing that targets streets adjacent to your existing routes to maximize route density.",
+    },
+    {
+      stage: "Chemistry & Proof",
+      oldStack: "Technicians guessing chemical dosages or writing readings on paper slips without capturing visual proof of a clean pool.",
+      knockio: "Mobile LSI chemistry calculator, chemical dosing logs, and timestamped before/after photo proof of service.",
+    },
+    {
+      stage: "Equipment Repairs",
+      oldStack: "Texting pump model numbers to the office and waiting days to email formal repair quotes to homeowners.",
+      knockio: "Fast mobile quoting for pumps and filters sent via SMS for instant digital customer approval.",
+    },
+    {
+      stage: "Recurring Billing",
+      oldStack: "Chasing monthly paper checks or manually running credit cards after route technicians turn in paper checklists.",
+      knockio: "Automated recurring invoicing triggered immediately after chemical logs and service photos are uploaded.",
+    },
+  ],
+};
 
 const heroImage = asset("inner-industry-pool-service-software.webp");
 
@@ -533,6 +596,21 @@ const jsonLd = {
         </div>
       </div>
     </section>
+
+    <!-- ========== Operating Models (4-Card Grid) ========== -->
+    <OperatingModels
+      pillTag={operatingModelsData.pillTag}
+      title={operatingModelsData.title}
+      subtitle={operatingModelsData.subtitle}
+      cards={operatingModelsData.cards}
+    />
+
+    <!-- ========== Old Stack vs. Knockio Comparison ========== -->
+    <OldStackComparison
+      title={oldStackComparisonData.title}
+      subtitle={oldStackComparisonData.subtitle}
+      rows={oldStackComparisonData.rows}
+    />
 
     <!-- ========== Organized (dark) ========== -->
     <section

@@ -1,6 +1,8 @@
 ---
 import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
 import "../../styles/industry-page.css";
+import OperatingModels from "../../components/industry/OperatingModels.astro";
+import OldStackComparison from "../../components/industry/OldStackComparison.astro";
 import {
   ChevronRight,
   Crosshair,
@@ -234,24 +236,24 @@ const trustBadges = [
 
 const faqs = [
   {
-    q: "Can Knockio track equipment history per customer?",
-    a: "Yes. Each customer record holds the property's full service and equipment history, so a tech sees what is installed and what was done on past visits before arriving.",
+    q: "Can technicians build Good/Better/Best estimates directly from a tablet or phone?",
+    a: "Yes. Knockio's native iOS and Android apps allow technicians and comfort advisors to generate multi-option Good/Better/Best proposals in the field. They can pull pre-saved equipment templates, apply member discounts, and capture digital signatures on the spot.",
   },
   {
-    q: "Can Knockio dispatch and track my techs in the field?",
-    a: "Knockio helps field service teams manage the full workflow. Teams can Manage Customers and Jobs, store customer details, create estimates, schedule jobs, assign crews, track job progress, upload photos, send invoices, and follow up with customers. This helps reduce manual work and keeps everyone updated.",
+    q: "How does Knockio handle recurring Preventive Maintenance Agreements (PMAs)?",
+    a: "Knockio automates your entire PMA workflow. You can set up monthly, quarterly, or annual billing cycles with automatic card processing, track member-only repair discounts, and trigger automated SMS or email reminders when a customer is due for their seasonal tune-up.",
   },
   {
-    q: "Does Knockio handle work orders and parts for installs?",
-    a: "Yes. Work orders carry tasks, a budget, and a material takeoff, and you can raise a purchase order straight from the work order when a part runs short, with low-stock alerts to warn you first.",
+    q: "Does Knockio track equipment serial numbers and warranty dates?",
+    a: "Yes. Every property record in Knockio maintains a dedicated equipment history log where technicians can record model numbers, serial tags, installation dates, filter sizes, EPA 608 refrigerant types, and manufacturer warranty expiration dates.",
   },
   {
-    q: "Does Knockio support digital contracts and on-site payment?",
-    a: "Yes. You can build estimates and service agreements, send them for e-signature, and collect payment through tap to pay, text to pay, card, or ACH, all tied to the job.",
+    q: "How is Knockio different from ServiceTitan, Housecall Pro, or FieldEdge for HVAC companies?",
+    a: "ServiceTitan is built and priced for large enterprise operations with heavy overhead, while Housecall Pro relies on paid add-ons for advanced sales features. Knockio brings dispatch, equipment history, Good/Better/Best estimating, work orders, and payments together in one flat-rate system—adding live GPS tracking, automated territory canvassing for changeout campaigns, and personalized support.",
   },
   {
-    q: "How is Knockio different from FieldPulse, FieldBoss, or ServiceTitan for HVAC companies?",
-    a: "ServiceTitan is heavy and priced for large shops, while FieldPulse and FieldBoss focus mostly on service management. Knockio brings dispatch, equipment history, estimates, work orders, and payments together, then adds live tech tracking, a fully customizable pipeline with unlimited boards, automated territory creation by zip and city, personalized support, and pricing that does not punish a growing company. It is one connected system built around the way HVAC service and install work actually runs.",
+    q: "Does Knockio connect with the tools I already use?",
+    a: "Yes. Knockio connects your customer records, invoices, and payments to the tools you use via Zapier and webhooks. You can also present the monthly financing you offer and store the signed lender agreement (GreenSky, Service Finance, Wisetack, and the like) on the customer record.",
   },
 ];
 
@@ -296,6 +298,67 @@ const reviewsRow2 = [
       "Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.",
   },
 ];
+
+const operatingModelsData = {
+  pillTag: "OPERATING MODEL FLEXIBILITY",
+  title: "Built for How Your HVAC Business Actually Operates",
+  subtitle:
+    "An emergency repair business and a commercial refrigeration contractor share a trade name, but run completely different workflows. Knockio adapts to your specific dispatch model, maintenance agreements, and install pipeline out of the box.",
+  cards: [
+    {
+      icon: "truck-fast",
+      title: "Emergency Service & Repair",
+      text: "Designed for fast-paced diagnostic dispatching. Quote trip fees at booking, assign the nearest available technician using the live rep map, present flat-rate repair quotes on a tablet, and collect payment before leaving the driveway.",
+      pills: ["Live GPS Rep Tracking", "Flat-Rate Price Books", "On-Site Payment Collection"],
+    },
+    {
+      icon: "calendar-check",
+      title: "Preventive Maintenance Plans",
+      text: "Build a predictable recurring revenue engine. Manage seasonal spring and fall tune-up agreements, automate member-only discount pricing, and bill recurring membership fees via recurring invoicing and add state-compliant renewal notices to your agreements.",
+      pills: ["Recurring Invoicing", "Seasonal Tune-Up Routes", "Member Discount Tracking"],
+    },
+    {
+      icon: "thermometer",
+      title: "Residential Replacement & Retrofits",
+      text: "Convert aging systems into high-efficiency replacements. Build interactive Good/Better/Best tiered proposals, present the monthly financing you offer (GreenSky/Wisetack and the like), and track municipal permit inspections.",
+      pills: ["Good/Better/Best Tiers", "Financing Docs on File", "Declined-Repair Waivers"],
+    },
+    {
+      icon: "snowflake",
+      title: "IAQ & Commercial Refrigeration",
+      text: "Manage complex multi-system commercial HVAC and refrigeration contracts alongside residential Indoor Air Quality (IAQ) dehumidifier, HEPA filtration, and duct-sealing installations.",
+      pills: ["EPA 608 Compliance Logs", "Commercial Asset Tracking", "IAQ System Upgrades"],
+    },
+  ],
+};
+
+const oldStackComparisonData = {
+  title: "How Knockio Replaces Your Taped-Together HVAC Stack",
+  subtitle:
+    "Stop paying for basic calendar dispatch apps, standalone proposal builders, and manual spreadsheet maintenance tracking. Knockio brings your technicians and office into one platform.",
+  rows: [
+    {
+      stage: "Scheduling & Dispatch",
+      oldStack: "Using basic calendar apps or whiteboards with zero live GPS tech tracking.",
+      knockio: "Visual drag-and-drop dispatch board with real-time GPS technician tracking and routing.",
+    },
+    {
+      stage: "Estimating & Sales",
+      oldStack: "Handwritten paper quotes or basic PDFs with no tiered Good/Better/Best pricing options.",
+      knockio: "Interactive Good/Better/Best proposals with optional add-on line items and the financing you offer.",
+    },
+    {
+      stage: "Maintenance & Billing",
+      oldStack: "Spreadsheets tracking tune-up dates and manual invoicing for recurring service contracts.",
+      knockio: "Automated PMA memberships with recurring invoicing and seasonal maintenance reminders.",
+    },
+    {
+      stage: "Equipment & History",
+      oldStack: "Technicians calling the office to ask what filter size or condenser unit the house has installed.",
+      knockio: "Permanent property records storing model numbers, serial tags, EPA logs, and warranty dates.",
+    },
+  ],
+};
 
 const heroImage = asset(
   "inner-hvac-software-and-crm-what-should-hvac-contractors-look-for-in-a-crm-and-service-platform.webp",
@@ -587,6 +650,21 @@ const jsonLd = {
           </div>
       </div>
     </section>
+
+    <!-- ========== Operating Models (4-Card Grid) ========== -->
+    <OperatingModels
+      pillTag={operatingModelsData.pillTag}
+      title={operatingModelsData.title}
+      subtitle={operatingModelsData.subtitle}
+      cards={operatingModelsData.cards}
+    />
+
+    <!-- ========== Old Stack vs. Knockio Comparison ========== -->
+    <OldStackComparison
+      title={oldStackComparisonData.title}
+      subtitle={oldStackComparisonData.subtitle}
+      rows={oldStackComparisonData.rows}
+    />
 
     <!-- ========== Organized (dark) ========== -->
     <section

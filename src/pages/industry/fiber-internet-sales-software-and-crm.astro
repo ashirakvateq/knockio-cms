@@ -1,6 +1,8 @@
 ---
 import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
 import "../../styles/industry-page.css";
+import OperatingModels from "../../components/industry/OperatingModels.astro";
+import OldStackComparison from "../../components/industry/OldStackComparison.astro";
 import {
   ChevronRight,
   Crosshair,
@@ -235,23 +237,23 @@ const trustBadges = [
 const faqs = [
   {
     q: "What should I look for in fiber door-to-door sales software?",
-    a: "Look for automated territory assignment, live GPS rep tracking, fast address-level lead capture, full communication history per door, e-contracts, and a customizable pipeline. The platform should match the speed of a live build map, not slow a rep down with office-style data entry. Knockio was built around exactly this kind of field workflow.",
+    a: "Look for automated territory assignment, live GPS rep tracking, build-status tracking on every address, FCC Broadband Facts label disclosures, e-contracts, 811 locate tracking, and recurring invoicing—all tied to one subscriber record. The platform should match the speed of a live build map without slowing reps down with office data entry. Knockio was built around exactly this kind of field workflow.",
   },
   {
-    q: "Which software is best for managing a door-to-door fiber team?",
-    a: "Knockio helps field service teams manage the full workflow. Teams can Own the Map, store customer details, create estimates, schedule jobs, assign crews, track job progress, upload photos, send invoices, and follow up with customers. This helps reduce manual work and keeps everyone updated.",
+    q: "Can Knockio tag each address's build status at the door?",
+    a: "Yes. Knockio lets door-to-door canvassers verify property serviceability instantly. Addresses are categorized as Serviceable Now (ready for same-day or next-day ONT installation) or placed into a Pre-Build Queue until outside plant (OSP) construction completes.",
   },
   {
-    q: "Can Knockio create canvassing territories automatically?",
-    a: "Yes. Knockio can build territories automatically from zip codes and cities, so the day a neighborhood goes live you can split it up and get reps knocking fast, without drawing boundaries by hand.",
+    q: "Are FCC Broadband Facts labels included during the doorstep sale?",
+    a: "Yes. To comply with federal transparency rules, Knockio displays standardized FCC Broadband Facts labels—clearly showing monthly prices, speed tiers, introductory terms, and Early Termination Fees (ETFs) before the customer signs.",
   },
   {
-    q: "Can Knockio track my reps and verify which doors were worked?",
-    a: "Yes. Knockio includes live GPS tracking plus pin drop verification, so you can confirm how close a rep was to an address when they marked it worked.",
+    q: "Can technicians log 811 utility locate numbers and ONT dBm light levels?",
+    a: "Yes. Drop technicians can log mandatory 811 call-before-you-dig locate ticket numbers before burying underground optical fiber, and record optical laser dBm signal-loss readings (< -25 dBm) at the premise demarc to verify fiber integrity.",
   },
   {
-    q: "Does Knockio keep a record of every conversation with a homeowner?",
-    a: "Yes. Communication history saves every call, text, and email tied to a lead on the record, so any rep following up sees the full back-and-forth instead of starting cold.",
+    q: "How is Knockio different from SalesRabbit, SPOTIO, or Sonar for fiber ISPs?",
+    a: "SalesRabbit and SPOTIO are standalone canvassing apps without a build-status view or subscriber billing, while Sonar is a backend ISP billing/OSS platform that lacks native D2D canvassing tools. Knockio combines neighborhood D2D canvassing, address build-status tracking, FCC broadband disclosures, ONT light-level logging, and recurring invoicing in one flat-rate platform.",
   },
 ];
 
@@ -296,6 +298,67 @@ const reviewsRow2 = [
       "Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.",
   },
 ];
+
+const operatingModelsData = {
+  pillTag: "OPERATING MODEL FLEXIBILITY",
+  title: "Built for How Your Fiber & ISP Business Actually Operates",
+  subtitle:
+    "A single-family door-to-door fiber sales rep and a multi-dwelling unit (MDU) bulk-contract integrator share an industry, but run completely different workflows. Knockio adapts to your specific address serviceability, 811 locates, and MDU deployments out of the box.",
+  cards: [
+    {
+      icon: "house-signal",
+      title: "Single-Family Unit (SFU) D2D",
+      text: "Engineered for high-velocity D2D residential canvassing (~12–24 month term contracts). Streamline build-status tracking on every address, FCC Broadband Facts disclosures, and recurring invoicing sign-ups.",
+      pills: ["Address Build-Status Field", "FCC Broadband Labels", "12–24 Month Recurring Invoicing"],
+    },
+    {
+      icon: "building",
+      title: "MDU & Bulk-Contract Deployments",
+      text: "Streamline apartments, condos, and HOA community fiber builds. Manage property-level bulk right-of-entry agreements, coordinate unit-by-unit ONT installations, and track multi-tenant activations.",
+      pills: ["MDU Right-of-Entry Agmts", "Unit-by-Unit Scheduling", "Bulk Property Billing"],
+    },
+    {
+      icon: "map-pin",
+      title: "Greenfield vs. Brownfield Builds",
+      text: "Maximize penetration across different infrastructure states. Differentiate immediate same-day installs in live brownfield footprints from pre-build address queues waiting on OSP construction completion.",
+      pills: ["Live Brownfield Installs", "Greenfield Pre-Build Queue", "811 Utility Locate Tracking"],
+    },
+    {
+      icon: "factory",
+      title: "BEAD & Rural Grant-Funded Builds",
+      text: "Serve federally subsidized rural broadband expansions (BEAD / RDOF grants). Track field labor records, manage labor record-keeping, and document grant project activations.",
+      pills: ["Grant Project Tracking", "Wage Docs on File", "Rural Premise Notes"],
+    },
+  ],
+};
+
+const oldStackComparisonData = {
+  title: "How Knockio Replaces Your Taped-Together Fiber Sales Stack",
+  subtitle:
+    "Stop paying for separate door-knocking apps, generic CRMs, and disconnected serviceability spreadsheets. Knockio brings your D2D canvassers, drop technicians, and ISP office into one platform.",
+  rows: [
+    {
+      stage: "D2D Canvassing",
+      oldStack: "Paying per seat for standalone door apps (SalesRabbit/SPOTIO) without a build-status view tied to your canvassing routes.",
+      knockio: "Built-in D2D canvassing with build-status tracking on every address (Serviceable vs. Pre-Build Queue).",
+    },
+    {
+      stage: "Contract Disclosures",
+      oldStack: "Handwriting service terms on paper forms without displaying mandatory FCC Broadband Facts transparency labels.",
+      knockio: "Digital 12–24 month e-contracts displaying FCC Broadband labels and FTC 3-day cancellation notices.",
+    },
+    {
+      stage: "Drop & Activation",
+      oldStack: "Technicians installing ONTs without recording 811 utility locate tickets or laser dBm light-level readings.",
+      knockio: "Mandatory 811 call-before-you-dig ticket logging and optical ONT dBm signal-loss verification (< -25 dBm).",
+    },
+    {
+      stage: "Recurring Billing",
+      oldStack: "Manually transferring subscriber payment details into ISP billing software after installation sheets are turned in.",
+      knockio: "Automated recurring invoicing triggered immediately after ONT light levels are verified on site.",
+    },
+  ],
+};
 
 const heroImage = asset(
   "inner-fiber-internet-sales-software-and-crm-what-should-fiber-sales-teams-look-for-in-a-canvassing-and-sales-platform.webp",
@@ -596,6 +659,21 @@ const jsonLd = {
         </div>
       </div>
     </section>
+
+    <!-- ========== Operating Models (4-Card Grid) ========== -->
+    <OperatingModels
+      pillTag={operatingModelsData.pillTag}
+      title={operatingModelsData.title}
+      subtitle={operatingModelsData.subtitle}
+      cards={operatingModelsData.cards}
+    />
+
+    <!-- ========== Old Stack vs. Knockio Comparison ========== -->
+    <OldStackComparison
+      title={oldStackComparisonData.title}
+      subtitle={oldStackComparisonData.subtitle}
+      rows={oldStackComparisonData.rows}
+    />
 
     <!-- ========== Organized (dark) ========== -->
     <section

@@ -1,6 +1,8 @@
 ---
 import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
 import "../../styles/industry-page.css";
+import OperatingModels from "../../components/industry/OperatingModels.astro";
+import OldStackComparison from "../../components/industry/OldStackComparison.astro";
 import {
   ChevronRight,
   Crosshair,
@@ -206,23 +208,23 @@ const trustBadges = [
 const faqs = [
   {
     q: "What should I look for in window cleaning software?",
-    a: "Look for recurring scheduling, route planning, crew tracking, on-site quoting, e-contracts, and payment collection, all tied to one customer record. The platform should make repeat business easy to manage instead of forcing you to rebook every account by hand. Knockio was built around exactly this kind of recurring, route-based work.",
+    a: "Look for recurring scheduling, route density planning, crew tracking, on-site quoting, e-contracts, and payment collection—all tied to one customer record. The platform should make repeat business easy to manage instead of forcing you to rebook every account by hand. Knockio was built around exactly this kind of recurring, route-based work.",
   },
   {
-    q: "Which software is best for a small window cleaning business?",
-    a: "Knockio helps field service teams manage the full workflow. Teams can Centralized Data, store customer details, create estimates, schedule jobs, assign crews, track job progress, upload photos, send invoices, and follow up with customers. This helps reduce manual work and keeps everyone updated.",
+    q: "Can Knockio handle recurring quarterly cleanings automatically?",
+    a: "Yes. You can set up monthly, quarterly, or semi-annual service cadences that automatically re-populate on your route board so regular cleanings rebook themselves without manual selling or calendar tracking.",
   },
   {
-    q: "Can Knockio handle recurring cleans automatically?",
-    a: "Yes. You can set up monthly, quarterly, or custom recurring visits, and the schedule builds itself out so renewals stay on the calendar instead of getting forgotten.",
+    q: "How does Knockio protect my business from glass scratch claims?",
+    a: "Knockio lets you enforce a mandatory Pre-Existing Glass Defect Acknowledgment on your digital estimates. Cleaners can document broken thermal seals, hard-water stains, and fabrication debris before washing, capturing customer e-signature approval on site.",
   },
   {
-    q: "Can Knockio track my crews and confirm jobs were done?",
-    a: "Yes. Knockio includes live GPS tracking with proximity intelligence, so you can confirm how close a crew actually was to a property when they marked a job complete.",
+    q: "Can Knockio bundle window cleaning with gutter cleaning or pressure washing?",
+    a: "Yes. You can build multi-service estimates and work orders that combine window washing with adjacent home exterior services like gutter vacuuming, house soft-washing, or solar panel cleaning—all billed under one customer invoice.",
   },
   {
-    q: "Does Knockio let crews take before-and-after photos?",
-    a: "Yes. Crews can capture before-and-after photos at each stop and annotate them with notes right on the image, all saved to the customer record.",
+    q: "How is Knockio different from ResponsiBid, Jobber, or Housecall Pro for window cleaners?",
+    a: "ResponsiBid focuses primarily on instant website calculators, while Jobber and Housecall Pro are generic field service tools without native door-to-door canvassing. Knockio combines neighborhood D2D canvassing, route density optimization, glass defect waivers, multi-service bundling, and recurring invoicing in one flat-rate platform.",
   },
 ];
 
@@ -267,6 +269,67 @@ const reviewsRow2 = [
       "Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.",
   },
 ];
+
+const operatingModelsData = {
+  pillTag: "OPERATING MODEL FLEXIBILITY",
+  title: "Built for How Your Window Cleaning Business Actually Operates",
+  subtitle:
+    "A residential quarterly window cleaning route and a high-rise commercial rope-access contractor share a trade name, but run completely different workflows. Knockio adapts to your specific route density, glass scratch waivers, and multi-service bundling out of the box.",
+  cards: [
+    {
+      icon: "house",
+      title: "Routine Residential & Low-Rise",
+      text: "Engineered for high-density residential routes (the bulk of the market). Automate quarterly and semi-annual rebooking schedules, optimize neighborhood route clustering, and process recurring invoicing upon job completion.",
+      pills: ["Quarterly Route Rebooking", "Recurring Invoicing", "Pane Count Quoting"],
+    },
+    {
+      icon: "broom",
+      title: "Bundled Home Exterior Services",
+      text: "Maximize average ticket sizes by cross-selling adjacent exterior services. Create unified multi-service work orders combining window washing, gutter cleaning, pressure washing, soft-washing, and solar panel deionization.",
+      pills: ["Multi-Service Work Orders", "Gutter & Pressure Wash Add-Ons", "Solar Panel Cleaning"],
+    },
+    {
+      icon: "shield-halved",
+      title: "Glass Scratch & Defect Protection",
+      text: "Document pre-existing glass conditions to reduce disputes over glass-damage claims. Enforce digital Pre-Existing Glass Defect Acknowledgments on estimates to document broken thermal seals, hard-water stains, and fabrication debris before washing.",
+      pills: ["Glass Defect Waivers", "Broken Seal Documentation", "Timestamped Photo Proof"],
+    },
+    {
+      icon: "building",
+      title: "High-Rise Commercial & OSHA",
+      text: "Manage commercial office and multi-story window cleaning contracts. Store OSHA fall-protection checklists, roof anchor-point inspection logs, and IRATA/SPRAT rope-access technician certifications on the building record.",
+      pills: ["OSHA Fall-Protection Logs", "IRATA/SPRAT Certifications", "Commercial Building Bids"],
+    },
+  ],
+};
+
+const oldStackComparisonData = {
+  title: "How Knockio Replaces Your Taped-Together Window Cleaning Stack",
+  subtitle:
+    "Stop paying for standalone route apps, basic quoting software, and manual invoicing spreadsheets. Knockio brings your cleaners, canvassers, and office into one platform.",
+  rows: [
+    {
+      stage: "Canvassing & Routes",
+      oldStack: "Paying per seat for standalone door apps without visibility into where your existing quarterly window routes are clustered.",
+      knockio: "Built-in D2D canvassing that targets streets adjacent to your existing routes to maximize route density.",
+    },
+    {
+      stage: "Quoting & Waivers",
+      oldStack: "Sending simple email quotes without requiring customers to sign a pre-existing glass scratch and broken thermal seal waiver.",
+      knockio: "Detailed pane-count quoting with mandatory digital Pre-Existing Glass Defect Acknowledgment e-signatures.",
+    },
+    {
+      stage: "Service Bundling",
+      oldStack: "Using separate calendars and invoices when a window washing client adds gutter cleaning or house soft-washing.",
+      knockio: "Unified multi-service work orders combining windows, gutters, and pressure washing under one customer record.",
+    },
+    {
+      stage: "Recurring Billing",
+      oldStack: "Chasing monthly paper checks or manually running credit cards after cleaning crews turn in paper completion sheets.",
+      knockio: "Automated recurring invoicing triggered immediately after completion photos are uploaded to the job record.",
+    },
+  ],
+};
 
 const heroImage = asset("inner-industry-window-cleaning-software.webp");
 
@@ -558,6 +621,21 @@ const jsonLd = {
           </div>
       </div>
     </section>
+
+    <!-- ========== Operating Models (4-Card Grid) ========== -->
+    <OperatingModels
+      pillTag={operatingModelsData.pillTag}
+      title={operatingModelsData.title}
+      subtitle={operatingModelsData.subtitle}
+      cards={operatingModelsData.cards}
+    />
+
+    <!-- ========== Old Stack vs. Knockio Comparison ========== -->
+    <OldStackComparison
+      title={oldStackComparisonData.title}
+      subtitle={oldStackComparisonData.subtitle}
+      rows={oldStackComparisonData.rows}
+    />
 
     <!-- ========== Organized (dark) ========== -->
     <section

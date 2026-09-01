@@ -1,6 +1,8 @@
 ---
 import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
 import "../../styles/industry-page.css";
+import OperatingModels from "../../components/industry/OperatingModels.astro";
+import OldStackComparison from "../../components/industry/OldStackComparison.astro";
 import {
   ChevronRight,
   Crosshair,
@@ -202,26 +204,26 @@ const trustBadges = [
 ];
 
 const faqs = [
-	{
-		q: "What should I look for in electrician software?",
-		a: "Look for scheduling and dispatch, full job history per address, detailed estimating, work orders with parts, e-contracts, and flexible billing, all tied to one customer record. The platform should carry both service calls and install projects without forcing you into two tools. Knockio was built to run both from the same system.",
-	},
-	{
-		q: "Which software is best for a small electrical contractor?",
-		a: "Knockio helps field service teams manage the full workflow. Teams can Manage Customers and Jobs, store customer details, create estimates, schedule jobs, assign crews, track job progress, upload photos, send invoices, and follow up with customers. This helps reduce manual work and keeps everyone updated.",
-	},
-	{
-		q: "Can Knockio bill a large job in stages?",
-		a: "Yes. Knockio supports milestone-based payment collection, so you can take a deposit, bill progress draws as each phase completes, and collect the final balance at inspection, all tied to the job.",
-	},
-	{
-		q: "Can Knockio track electrical parts and materials?",
-		a: "Yes. Work orders carry a material takeoff, and inventory management tracks wire, breakers, fixtures, and devices with low-stock alerts, so each job is cost against what it actually used.",
-	},
-	{
-		q: "Can Knockio track my electricians in the field?",
-		a: "Yes. Knockio includes live GPS tracking with proximity intelligence, so you can confirm how close an electrician was to a property when they marked a job.",
-	},
+  {
+    q: "What should I look for in electrician software?",
+    a: "Look for scheduling and dispatch, full job history per address, detailed estimating, work orders with material takeoffs, e-contracts, and flexible billing—all tied to one customer record. The platform should carry both same-day service calls and permitted installation projects without forcing you into two tools. Knockio was built to run both from the same system.",
+  },
+  {
+    q: "Can electricians quote from a flat-rate price book on site?",
+    a: "Yes. Electricians can present clear, flat-rate pricing directly from an integrated price book on a mobile tablet. They can quote the exact repair price after diagnosis—before turning a screwdriver—and capture digital customer approval on the spot.",
+  },
+  {
+    q: "Can Knockio track municipal electrical permits and AHJ inspections?",
+    a: "Yes. Knockio features customizable project pipelines where you can track jobs through AHJ permit submission, NEC code checklists, rough-in inspection sign-offs, and final building inspector approval so your billing never stalls.",
+  },
+  {
+    q: "Can Knockio bill a large electrical project in stages?",
+    a: "Yes. Knockio supports staged invoicing (a deposit up front, then additional invoices as the job progresses), so you can take an initial deposit for hardware, send additional invoices as rough-in inspection phases complete, and collect the final balance upon completion—all tied to the project record.",
+  },
+  {
+    q: "How is Knockio different from ServiceTitan, Housecall Pro, or Jobber for electrical contractors?",
+    a: "ServiceTitan is built and priced for large enterprise operations with heavy overhead, while Housecall Pro and Jobber often require paid add-ons for advanced proposal and sales features. Knockio brings emergency dispatch, flat-rate price book quoting, AHJ inspection tracking, work orders, and payments together in one flat-rate platform—adding live GPS tracking, automated territory canvassing for panel upgrade campaigns, and personalized support.",
+  },
 ];
 
 const reviewsRow1 = [
@@ -265,6 +267,67 @@ const reviewsRow2 = [
       "Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.",
   },
 ];
+
+const operatingModelsData = {
+  pillTag: "OPERATING MODEL FLEXIBILITY",
+  title: "Built for How Your Electrical Business Actually Operates",
+  subtitle:
+    "A residential same-day service electrician and a commercial generator installer share a trade name, but run completely different workflows. Knockio adapts to your specific dispatch model, permitted projects, and electrification niche out of the box.",
+  cards: [
+    {
+      icon: "zap",
+      title: "Residential Service & Repair",
+      text: "Designed for fast-paced service dispatching. Quote trip fees at booking, assign the nearest available electrician using the live rep map, present flat-rate repair quotes on a mobile tablet, and collect payment before leaving the driveway.",
+      pills: ["Live GPS Rep Tracking", "Flat-Rate Price Books", "On-Site Payment Collection"],
+    },
+    {
+      icon: "charging-station",
+      title: "Electrification & Panel Upgrades",
+      text: "Capitalize on the home electrification boom. Manage 200-amp Main Panel Upgrades (MPUs), Level 2 EV charging stations, solar tie-ins, and battery microgrid installations with tiered Good/Better/Best proposals.",
+      pills: ["200-Amp MPU Tracking", "EV Charger Estimating", "Good/Better/Best Tiers"],
+    },
+    {
+      icon: "plug-bolt",
+      title: "Standby Generators & Microgrids",
+      text: "Streamline high-ticket Generac and Kohler standby generator installations. Manage multi-trade permits (electrical AHJ + gas/plumbing), coordinate concrete pad prep, and track annual maintenance service plans.",
+      pills: ["Multi-Trade Permit Tracking", "Generator PMAs", "Financing Docs on File"],
+    },
+    {
+      icon: "building",
+      title: "Commercial & New Construction",
+      text: "Manage multi-phase commercial wiring, retail tenant improvements, and new residential builder/GC contracts. Track NEC compliance checklists, invoice tracking, and AHJ inspection sign-offs.",
+      pills: ["AHJ Inspection Tracking", "NEC Compliance Logs", "Invoices Schedules"],
+    },
+  ],
+};
+
+const oldStackComparisonData = {
+  title: "How Knockio Replaces Your Taped-Together Electrical Stack",
+  subtitle:
+    "Stop paying for basic calendar dispatch apps, standalone proposal builders, and manual permitting spreadsheets. Knockio brings your electricians, estimators, and office into one platform.",
+  rows: [
+    {
+      stage: "Scheduling & Dispatch",
+      oldStack: "Using whiteboards or basic calendar apps with no live GPS electrician tracking.",
+      knockio: "Visual drag-and-drop dispatch board with real-time GPS electrician tracking and emergency routing.",
+    },
+    {
+      stage: "Estimating & Sales",
+      oldStack: "Writing hourly estimates on clipboards or sending plain PDFs with no tiered Good/Better/Best options.",
+      knockio: "Interactive Good/Better/Best proposals with optional EV/generator add-ons and the financing you offer.",
+    },
+    {
+      stage: "Permits & Inspections",
+      oldStack: "Spreadsheets tracking municipal electrical permits and rough-in inspection dates across separate folders.",
+      knockio: "Visual Kanban boards tracking AHJ permit pulls, NEC checklists, rough-in inspections, and final sign-offs.",
+    },
+    {
+      stage: "Invoicing & Payments",
+      oldStack: "Handwriting paper invoices on site and chasing progress draw checks from general contractors.",
+      knockio: "Automated digital invoices, invoices, on-site payment collection.",
+    },
+  ],
+};
 
 const heroImage = asset("inner-industry-electrical-contractor-software.webp");
 
@@ -533,6 +596,21 @@ const jsonLd = {
           </div>
       </div>
     </section>
+
+    <!-- ========== Operating Models (4-Card Grid) ========== -->
+    <OperatingModels
+      pillTag={operatingModelsData.pillTag}
+      title={operatingModelsData.title}
+      subtitle={operatingModelsData.subtitle}
+      cards={operatingModelsData.cards}
+    />
+
+    <!-- ========== Old Stack vs. Knockio Comparison ========== -->
+    <OldStackComparison
+      title={oldStackComparisonData.title}
+      subtitle={oldStackComparisonData.subtitle}
+      rows={oldStackComparisonData.rows}
+    />
 
     <!-- ========== Organized (dark) ========== -->
     <section

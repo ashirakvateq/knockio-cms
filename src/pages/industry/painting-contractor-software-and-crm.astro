@@ -1,6 +1,8 @@
 ---
 import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
 import "../../styles/industry-page.css";
+import OperatingModels from "../../components/industry/OperatingModels.astro";
+import OldStackComparison from "../../components/industry/OldStackComparison.astro";
 import {
   ChevronRight,
   Crosshair,
@@ -204,24 +206,24 @@ const trustBadges = [
 const faqs = [
   {
     q: "What should I look for in painting contractor software?",
-    a: "Look for detailed estimating that breaks out prep and coats, crew scheduling, material tracking, e-contracts, and payment collection, all tied to one customer record. The platform should carry a job from the walk-through to final payment instead of leaving you to stitch the pieces together. Knockio was built around exactly this kind of estimate-to-completion workflow.",
+    a: "Look for detailed estimating that breaks out prep and coats, crew scheduling, paint SKU and sheen tracking, e-contracts, and staged invoicing—all tied to one customer record. The platform should carry a job from the initial walk-through to final payment instead of leaving you to stitch pieces together. Knockio was built around exactly this kind of estimate-to-completion workflow.",
   },
   {
-    q: "Which software is best for a small painting business?",
-    a: "Knockio helps field service teams manage the full workflow. Teams can Win the Job, store customer details, create estimates, schedule jobs, assign crews, track job progress, upload photos, send invoices, and follow up with customers. This helps reduce manual work and keeps everyone updated.",
+    q: "Can Knockio track paint SKUs, sheens, and color formulas for each job?",
+    a: "Yes. Every property record in Knockio maintains a dedicated color and finish log where you can store manufacturer paint codes (Sherwin-Williams, Benjamin Moore, PPG), sheens, and custom touch-up formulas per room or exterior elevation.",
   },
   {
-    q: "Can Knockio track paint and materials per job?",
-    a: "Yes. Work orders carry a material takeoff, and inventory management tracks paint, primer, and supplies with low-stock alerts, so each job is cost against what it actually used.",
+    q: "Does Knockio support EPA RRP lead-safe compliance documentation?",
+    a: "Yes. For pre-1978 residential homes, Knockio lets you add the mandatory EPA \"Renovate Right\" lead hazard disclosures to your digital e-contracts and lets crews upload photos of plastic containment and HEPA vacuum setups to the job record.",
   },
   {
-    q: "Can Knockio handle change orders mid-job?",
-    a: "Yes. You can send change orders for digital signature the same way as the original agreement, so an added room or an upgraded finish is documented and priced instead of handled loosely.",
+    q: "Can Knockio require a signed punch list before releasing final payment?",
+    a: "Yes. You can conduct a joint final walkthrough with the homeowner, check off completed punch-list items, and capture a digital Certificate of Completion e-signature on a tablet—immediately triggering on-site payment collection for the final balance.",
   },
   {
-    q: "Does Knockio track my crews in the field?",
-    a: "Yes. Knockio includes live GPS tracking with proximity intelligence, so you can confirm how close a crew was to a property when they marked a job started or completed.",
-  }
+    q: "How is Knockio different from PaintScout, Jobber, or Housecall Pro for painting contractors?",
+    a: "PaintScout focuses purely on estimating, while Jobber and Housecall Pro are generic field service tools without native door-to-door sales canvassing. Knockio combines D2D neighborhood canvassing, detailed prep-and-coat estimating, paint SKU tracking, EPA RRP compliance, and staged invoicing in one flat-rate platform.",
+  },
 ];
 
 const reviewsRow1 = [
@@ -265,6 +267,67 @@ const reviewsRow2 = [
       "Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.",
   },
 ];
+
+const operatingModelsData = {
+  pillTag: "OPERATING MODEL FLEXIBILITY",
+  title: "Built for How Your Painting Business Actually Operates",
+  subtitle:
+    "A residential repaint contractor and an industrial coatings applicator share a trade name, but run completely different workflows. Knockio adapts to your specific prep scopes, EPA RRP lead-safe rules, and cabinet refinishing out of the box.",
+  cards: [
+    {
+      icon: "house",
+      title: "Residential Interior & Exterior",
+      text: "Engineered for residential repaint contractors (the majority of trade revenue). Build marketing and D2D canvassing pipelines, quote detailed surface prep and coat counts, and collect invoices as work advances.",
+      pills: ["Detailed Prep & Coat Quotes", "D2D Exterior Canvassing", "Invoicing"],
+    },
+    {
+      icon: "paint-roller",
+      title: "Fine Finish & Cabinet Refinishing",
+      text: "Manage high-margin spray shop cabinetry and architectural millwork projects. Track specialty lacquer and urethane formulas, manage off-site door spraying schedules, and quote premium per-piece finishing rates.",
+      pills: ["Cabinetry Finishing Rates", "Off-Site Spray Schedules", "Specialty Lacquer SKUs"],
+    },
+    {
+      icon: "shield-halved",
+      title: "EPA RRP Lead-Safe Painting",
+      text: "Stay compliant when disturbing paint on pre-1978 residential homes. Add the mandatory EPA \"Renovate Right\" disclosures to e-contracts and store photo proof of plastic containment and HEPA setups.",
+      pills: ["EPA RRP Disclosures", "Lead Containment Photo Logs", "Certified Renovator IDs"],
+    },
+    {
+      icon: "building",
+      title: "Commercial & Multi-Family HOAs",
+      text: "Serve retail centers, office buildings, and multi-family HOA complexes. Manage multi-building painting schedules, send bulk SMS tenant parking notices, and handle formal commercial bidding and draw schedules.",
+      pills: ["Multi-Building Schedules", "Bulk Tenant SMS Notices", "Commercial RFP Bidding"],
+    },
+  ],
+};
+
+const oldStackComparisonData = {
+  title: "How Knockio Replaces Your Taped-Together Painting Stack",
+  subtitle:
+    "Stop paying for standalone canvassing apps, basic quoting software, and manual paint color spreadsheets. Knockio brings your painters, estimators, and office into one platform.",
+  rows: [
+    {
+      stage: "Canvassing & Leads",
+      oldStack: "Paying per seat for standalone door apps (SalesRabbit) to canvass neighborhoods without syncing with estimator calendars.",
+      knockio: "Built-in D2D canvassing, territory cutting, and direct appointment booking onto estimator calendars.",
+    },
+    {
+      stage: "Estimating & Colors",
+      oldStack: "Writing lump-sum estimates on PDFs and losing Sherwin-Williams paint SKUs and sheen finishes in scattered text messages.",
+      knockio: "Detailed estimating separating prep and coats, with exact paint SKU, sheen, and color history per room.",
+    },
+    {
+      stage: "Compliance & Scope",
+      oldStack: "Forgetting required EPA RRP lead-safe forms on older homes and arguing over mid-job drywall repair additions.",
+      knockio: "Automatic EPA \"Renovate Right\" disclosures and digital dual-signature change orders captured on site.",
+    },
+    {
+      stage: "Closeout & Payments",
+      oldStack: "Chasing final payment checks days after painters leave without a formal signed completion punch list.",
+      knockio: "Co-signed digital Punch-List Certificate of Completion that immediately sends the final invoice for payment.",
+    },
+  ],
+};
 
 const heroImage = asset("inner-industry-painting-contractor-software.webp");
 
@@ -536,6 +599,21 @@ const jsonLd = {
         </div>
       </div>
     </section>
+
+    <!-- ========== Operating Models (4-Card Grid) ========== -->
+    <OperatingModels
+      pillTag={operatingModelsData.pillTag}
+      title={operatingModelsData.title}
+      subtitle={operatingModelsData.subtitle}
+      cards={operatingModelsData.cards}
+    />
+
+    <!-- ========== Old Stack vs. Knockio Comparison ========== -->
+    <OldStackComparison
+      title={oldStackComparisonData.title}
+      subtitle={oldStackComparisonData.subtitle}
+      rows={oldStackComparisonData.rows}
+    />
 
     <!-- ========== Organized (dark) ========== -->
     <section

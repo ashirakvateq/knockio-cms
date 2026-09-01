@@ -1,6 +1,8 @@
 ---
 import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
 import "../../styles/industry-page.css";
+import OperatingModels from "../../components/industry/OperatingModels.astro";
+import OldStackComparison from "../../components/industry/OldStackComparison.astro";
 import {
   ChevronRight,
   Crosshair,
@@ -202,26 +204,26 @@ const trustBadges = [
 ];
 
 const faqs = [
-	{
-		q: "What should I look for in restoration software?",
-		a: "Look for fast damage documentation, full job history per address, work orders with equipment and materials, e-contracts for authorizations, and flexible billing, all tied to one job record. The platform should hold everything an adjuster might ask for in one place. Knockio was built to run mitigation and rebuild from the same system.",
-	},
-	{
-		q: "Which software is best for a small restoration company?",
-		a: "Knockio helps field service teams manage the full workflow. Teams can Centralized Records, store customer details, create estimates, schedule jobs, assign crews, track job progress, upload photos, send invoices, and follow up with customers. This helps reduce manual work and keeps everyone updated.",
-	},
-	{
-		q: "Can Knockio document damage for insurance claims?",
-		a: "Yes. Knockio captures annotated photos, notes, surveys, and readings on the job record, and stores the estimate, drying logs, and signed authorizations together, so the documentation an adjuster needs is in one place.",
-	},
-	{
-		q: "Can Knockio bill a job in stages?",
-		a: "Yes. Knockio supports milestone-based payment collection, so you can take a deposit, bill progress draws as mitigation and rebuild phases complete, and collect the final balance at closeout, all tied to the job.",
-	},
-	{
-		q: "Can Knockio track my crews and equipment?",
-		a: "Yes. Knockio includes live GPS tracking with proximity intelligence for crews, and inventory management tracks air movers, dehumidifiers, and supplies, so you know who and what is assigned to each job.",
-	},
+  {
+    q: "What should I look for in restoration job management software?",
+    a: "Look for 24/7 emergency dispatching, complete loss history per address, Direction to Pay and work authorization e-contracts, daily IICRC S500 psychrometric moisture logs, equipment barcode scanning, and flexible billing—all tied to one job record. The platform should carry both mitigation and reconstruction without forcing you into two tools. Knockio was built to run both from the same system.",
+  },
+  {
+    q: "Can technicians log IICRC S500 psychrometric moisture readings on their phone?",
+    a: "Yes. Technicians can record daily relative humidity (RH), temperature, GPP (grains per pound), and moisture meter percentage readings across affected rooms directly into the permanent loss record to satisfy insurance adjusters.",
+  },
+  {
+    q: "Does Knockio protect my business against banned Assignment of Benefits (AOB) laws?",
+    a: "Yes. In reform states like Florida (SB 2-A) where post-loss Assignment of Benefits (AOB) agreements are prohibited, Knockio automatically gates your template library—substituting legally compliant Direction to Pay forms and Contingency Agreements.",
+  },
+  {
+    q: "Can Knockio track daily per-diem rental billing for drying equipment?",
+    a: "Yes. Technicians can scan barcodes or QR codes on dehumidifiers, air movers, and HEPA scrubbers left on site. Knockio logs the exact deployment and removal dates, automating daily equipment rental counts to support your Xactimate billing.",
+  },
+  {
+    q: "How is Knockio different from DASH, Encircle, or Jobber for restoration companies?",
+    a: "DASH is a legacy enterprise system with complex overhead, Encircle focuses primarily on field documentation without full CRM invoicing, and Jobber lacks restoration-specific workflows like psychrometric moisture logging and Direction to Pay forms. Knockio combines 24/7 GPS dispatching, IICRC moisture logs, barcode equipment tracking, and e-contracts in one flat-rate platform.",
+  },
 ];
 
 const reviewsRow1 = [
@@ -265,6 +267,67 @@ const reviewsRow2 = [
       "Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.",
   },
 ];
+
+const operatingModelsData = {
+  pillTag: "OPERATING MODEL FLEXIBILITY",
+  title: "Built for How Your Restoration Business Actually Operates",
+  subtitle:
+    "A water mitigation contractor and a contents pack-out specialist share a trade name, but run completely different workflows. Knockio adapts to your specific psychrometric logs, TPA programs, and rebuild pipelines out of the box.",
+  cards: [
+    {
+      icon: "house-flood",
+      title: "Water Mitigation & Drying",
+      text: "Engineered for emergency water mitigation (a large share of trade revenue). Dispatch 24/7 FNOL crews, capture Direction to Pay forms on site, log 3-to-5-day IICRC S500 psychrometric drying data, and scan equipment.",
+      pills: ["24/7 Emergency FNOL", "IICRC Psychrometric Logs", "Direction to Pay Forms"],
+    },
+    {
+      icon: "trowel",
+      title: "Reconstruction & Remodel",
+      text: "Manage the rebuild phase after mitigation completes. Build itemized reconstruction estimates, coordinate in-house or 1099 subcontractor framing/drywall crews, and collect additional invoices as repairs advance.",
+      pills: ["Mitigation-to-Rebuild Flow", "1099 Subcontractor MSAs", "Bilateral Change Orders"],
+    },
+    {
+      icon: "boxes",
+      title: "Contents Pack-Out & Storage",
+      text: "Manage personal property restoration. Streamline digital pack-out logging with barcode/QR room itemization, tracking damaged belongings through off-site ultrasonic cleaning, warehousing vaults, and return delivery.",
+      pills: ["Barcode/QR Room Logging", "Warehouse Vault Tracking", "Chain-of-Custody Proof"],
+    },
+    {
+      icon: "factory",
+      title: "Commercial & CAT Large-Loss",
+      text: "Serve commercial properties, hospitals, and multi-family HOAs (the majority of trade revenue). Streamline TPA program compliance (Alacrity, Sedgwick), track multi-building drying logs, and mobilize for storm catastrophes.",
+      pills: ["TPA Program SLA Compliance", "Multi-Building Moisture Logs", "Catastrophe (CAT) Mobilization"],
+    },
+  ],
+};
+
+const oldStackComparisonData = {
+  title: "How Knockio Replaces Your Taped-Together Restoration Stack",
+  subtitle:
+    "Stop paying for separate emergency dispatch apps, standalone moisture logging tools, and disconnected CRM spreadsheets. Knockio brings your mitigation crews and office into one platform.",
+  rows: [
+    {
+      stage: "24/7 Dispatch",
+      oldStack: "Using basic calendar apps without live GPS crew tracking or emergency scheduling for 2 AM flood calls.",
+      knockio: "Visual drag-and-drop dispatch board with real-time GPS crew tracking and 24/7 scheduling.",
+    },
+    {
+      stage: "Work Authorizations",
+      oldStack: "Chasing paper signatures or using generic e-sign apps that accidentally include restricted AOB forms in Florida.",
+      knockio: "Native e-contracts with automatic Direction to Pay forms and jurisdiction-gated AOB compliance.",
+    },
+    {
+      stage: "Moisture Logging",
+      oldStack: "Technicians writing psychrometric atmospheric readings on paper charts that get lost before billing Xactimate.",
+      knockio: "Digital IICRC S500 psychrometric drying logs and moisture scans saved directly to the permanent loss record.",
+    },
+    {
+      stage: "Equipment Billing",
+      oldStack: "Guessing how many days dehumidifiers and air movers sat on site, leaving rental dollars off the carrier invoice.",
+      knockio: "Barcode/QR equipment scanning left on site that automates daily per-diem rental billing against the claim.",
+    },
+  ],
+};
 
 const heroImage = asset("inner-industry-restoration-job-software.webp");
 
@@ -538,6 +601,21 @@ const jsonLd = {
           </div>
       </div>
     </section>
+
+    <!-- ========== Operating Models (4-Card Grid) ========== -->
+    <OperatingModels
+      pillTag={operatingModelsData.pillTag}
+      title={operatingModelsData.title}
+      subtitle={operatingModelsData.subtitle}
+      cards={operatingModelsData.cards}
+    />
+
+    <!-- ========== Old Stack vs. Knockio Comparison ========== -->
+    <OldStackComparison
+      title={oldStackComparisonData.title}
+      subtitle={oldStackComparisonData.subtitle}
+      rows={oldStackComparisonData.rows}
+    />
 
     <!-- ========== Organized (dark) ========== -->
     <section

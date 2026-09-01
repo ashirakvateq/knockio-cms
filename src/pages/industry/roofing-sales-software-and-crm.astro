@@ -1,6 +1,8 @@
 ---
 import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
 import "../../styles/industry-page.css";
+import OperatingModels from "../../components/industry/OperatingModels.astro";
+import OldStackComparison from "../../components/industry/OldStackComparison.astro";
 import {
   ChevronRight,
   Crosshair,
@@ -253,27 +255,19 @@ const faqs = [
   },
   {
     q: "Can Knockio create canvassing territories automatically?",
-    a: "Yes. Our built-in roofing canvassing app can build territories automatically from zip codes and cities, so you can split up a storm-hit area and get reps knocking fast, without drawing every boundary by hand.",
+    a: "Yes. Our built-in roofing canvassing app can build territories automatically from ZIP codes and cities, so you can split up a storm-hit area and get reps knocking fast, without drawing every boundary by hand.",
   },
   {
     q: "Can Knockio build estimates from EagleView measurement reports?",
-    a: "Yes. Knockio lets you create roof estimates using measurement data from EagleView or other measurement providers, so pricing is based on accurate roof data instead of a rough guess.",
+    a: "Yes. Knockio lets you create roof estimates using measurements from your EagleView, or entered from your Hover or GAF QuickMeasure report, so pricing is based on accurate roof data instead of a rough guess.",
   },
   {
     q: "Does Knockio handle work orders and materials for production?",
     a: "Yes. Functioning as a full roofing project management software, Knockio ensures work orders carry tasks, a budget, and a material takeoff. You can even raise a purchase order straight from the work order when materials run short, with low-stock alerts to warn you first.",
   },
   {
-    q: "How is Knockio different from Jobber or JobNimbus for roofing companies?",
-    a: "Knockio gives you the estimating, scheduling, and invoicing you would expect from tools like Jobber or JobNimbus, but as an all-in-one roofer software, it natively adds live rep tracking and automated territory creation for your sales team. It is one connected system built around the way a job actually runs, from the first knock to the final payment, backed by personalized support and pricing that does not punish a growing crew.",
-  },
-  {
-    q: "Is Knockio a roofing CRM or a door-to-door sales app?",
-    a: "Both, in one system. Knockio pairs door-to-door sales tools, like automatic canvassing territories, live GPS rep tracking, and route planning, with a full roofing CRM: job pipelines, crew scheduling, estimates, e-contracts, and payments. You do not need a separate canvassing app running alongside your CRM.",
-  },
-  {
-    q: "How is Knockio different from AccuLynx for roofing companies?",
-    a: "AccuLynx is built mainly for production and job management. Knockio adds native door-to-door sales tools on top of the CRM, including automated territory creation, live rep tracking on a map, and route planning, so sales and production run in one system instead of stitching a canvassing app onto your CRM.",
+    q: "How is Knockio different from AccuLynx, JobNimbus, or Jobber for roofing companies?",
+    a: "AccuLynx and JobNimbus are built mainly for production and job management, while Jobber focuses on basic residential scheduling. Knockio gives you estimating, work orders, and invoicing, but natively adds live rep tracking and automated territory creation for your sales team. It is one connected system built around the way a roofing job actually runs, from the first knock to the final payment.",
   },
 ];
 
@@ -318,6 +312,67 @@ const reviewsRow2 = [
       "Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.",
   },
 ];
+
+const operatingModelsData = {
+  pillTag: "OPERATING MODEL FLEXIBILITY",
+  title: "Built for How Your Roofing Business Actually Operates",
+  subtitle:
+    "A storm-chasing insurance roofer and a retail cash-replacement roofer share a trade name, but run completely different workflows. Knockio adapts to your specific funding model, sales posture, and installation pipeline out of the box.",
+  cards: [
+    {
+      icon: "house",
+      title: "Residential Retail Replacement",
+      text: "Homeowner-initiated replacements driven by age, leaks, or aesthetics. Build marketing-led pipelines, present Good/Better/Best shingle tiers, and present the monthly financing you offer and keep the signed agreement on the job record.",
+      pills: ["Good/Better/Best Tiers", "Financing Docs on File", "Marketing-Led Pipeline"],
+    },
+    {
+      icon: "cloud-lightning",
+      title: "Storm & Insurance Restoration",
+      text: "Designed for hail and wind claims where the adjuster controls the scope. Manage contingency agreements, adjuster roof meetings, ACV/RCV check endorsements, and insurance supplements without missing a dollar.",
+      pills: ["Contingency Agreements", "ACV / RCV Claim Tracking", "Direction to Pay Workflows"],
+    },
+    {
+      icon: "layers",
+      title: "Full Exterior Envelope (Siding & Gutters)",
+      text: "Storm contractors rarely replace just a roof. Manage multi-trade scopes under a single insurance claim—coordinating roofing, gutters, siding, window wraps, and solar detach-and-reset crews on one parent work order.",
+      pills: ["Multi-Trade Work Orders", "Solar Detach & Reset", "Siding & Gutter Takeoffs"],
+    },
+    {
+      icon: "building",
+      title: "Commercial Flat & TPO Roofing",
+      text: "Manage low-slope commercial projects, GC relationships, and HOA/property management bids. Track complex material orders (TPO, EPDM, metal), safety compliance, and multi-month invoice tracking.",
+      pills: ["GC & Property Mgmt Bids", "TPO & EPDM Estimating", "Invoices Schedules"],
+    },
+  ],
+};
+
+const oldStackComparisonData = {
+  title: "How Knockio Replaces Your Taped-Together Roofing Stack",
+  subtitle:
+    "Stop paying for separate door-knocking apps, production CRMs, and custom spreadsheets. Knockio brings your canvassers, project managers, and install crews into one platform.",
+  rows: [
+    {
+      stage: "Door Canvassing",
+      oldStack: "Paying per seat for SalesRabbit or SPOTIO just to track door knocks and storm pins.",
+      knockio: "Built-in D2D mapping, automated ZIP/city territory cutting, and live GPS rep tracking.",
+    },
+    {
+      stage: "Storm & Claim Tracking",
+      oldStack: "Texting Xactimate scopes and adjuster dates through group chats where details get buried.",
+      knockio: "Centralized job records holding insurance claim numbers, adjuster dates, and roof photos.",
+    },
+    {
+      stage: "Production & Ordering",
+      oldStack: "Re-entering estimate numbers by hand into AccuLynx or JobNimbus to schedule install crews.",
+      knockio: "Seamless conversion from estimate to work order, shingle material takeoffs, and crew dispatch.",
+    },
+    {
+      stage: "Contracts & Payments",
+      oldStack: "Using separate e-sign apps for contingency forms and waiting weeks for paper checks.",
+      knockio: "Native e-contracts, FTC 3-day cancel disclosures, and mobile deductible collection on site.",
+    },
+  ],
+};
 
 const heroImage = asset("inner-industry-roofing-sales-software.webp");
 
@@ -620,6 +675,21 @@ const jsonLd = {
           </div>
       </div>
     </section>
+
+    <!-- ========== Operating Models (4-Card Grid) ========== -->
+    <OperatingModels
+      pillTag={operatingModelsData.pillTag}
+      title={operatingModelsData.title}
+      subtitle={operatingModelsData.subtitle}
+      cards={operatingModelsData.cards}
+    />
+
+    <!-- ========== Old Stack vs. Knockio Comparison ========== -->
+    <OldStackComparison
+      title={oldStackComparisonData.title}
+      subtitle={oldStackComparisonData.subtitle}
+      rows={oldStackComparisonData.rows}
+    />
 
     <!-- ========== Organized (dark) ========== -->
     <section

@@ -1,6 +1,8 @@
 ---
 import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
 import "../../styles/industry-page.css";
+import OperatingModels from "../../components/industry/OperatingModels.astro";
+import OldStackComparison from "../../components/industry/OldStackComparison.astro";
 import {
   ChevronRight,
   Crosshair,
@@ -241,24 +243,24 @@ const trustBadges = [
 
 const faqs = [
   {
-    q: "What should I look for in garage door software?",
-    a: "Look for scheduling and dispatch, full job history per address, detailed estimating, work orders with parts, e-contracts, and on-site payment, all tied to one customer record. The platform should carry both quick repairs and planned installs without forcing you into two tools. Knockio was built to run both from the same system.",
+    q: "What should I look for in garage door service software?",
+    a: "Look for scheduling and dispatch, full job history per address, detailed itemized estimating, work orders with hardware takeoffs, e-contracts, and flexible on-site payment—all tied to one customer record. The platform should carry both quick same-day repairs and custom door installations without forcing you into two tools. Knockio was built to run both from the same system.",
   },
   {
-    q: "Which software is best for a small garage door business?",
-    a: "Knockio helps field service teams manage the full workflow. Teams can Manage Customers and Jobs, store customer details, create estimates, schedule jobs, assign crews, track job progress, upload photos, send invoices, and follow up with customers. This helps reduce manual work and keeps everyone updated.",
+    q: "Can Knockio track custom factory door orders and lead times?",
+    a: "Yes. When ordering custom carriage house or architectural wood doors, you can generate purchase orders to manufacturers like Clopay or Amarr straight from the job record. Knockio tracks 8-to-14-week factory lead times so your installation schedules stay perfectly aligned.",
   },
   {
-    q: "Can Knockio track garage door parts and inventory?",
-    a: "Yes. Work orders carry a material takeoff, and inventory management tracks springs, rollers, cables, openers, and panels with low-stock alerts, so each job is cost against what it actually used.",
+    q: "Does Knockio protect my business when customers decline spring replacements?",
+    a: "Yes. When a homeowner replaces only one broken torsion spring on a dual-spring door or declines frayed cable replacement, Knockio lets you capture a digital Declined-Repair Liability Waiver e-signature on site to protect your company from future damage claims.",
   },
   {
-    q: "Can Knockio collect payment on site?",
-    a: "Yes. Knockio processes tap to pay, text to pay, card, and ACH through its own payment platform, and supports milestone billing for larger installs, all tied to the job.",
+    q: "Can technicians log torsion spring safety calibration data?",
+    a: "Yes. Technicians can record spring wire diameter, inner diameter, length, and exact turn counts during balancing directly into the property record to prove professional installation and code compliance.",
   },
   {
-    q: "Can Knockio track my techs in the field?",
-    a: "Yes. Knockio includes live GPS tracking with proximity intelligence, so you can confirm how close a tech was to a property when they marked a job.",
+    q: "How is Knockio different from ServiceTitan, Housecall Pro, or Jobber for garage door companies?",
+    a: "ServiceTitan is heavy and priced for large enterprise shops, while Housecall Pro and Jobber lack specialized garage door workflows like custom factory PO lead-time tracking and spring calibration logging. Knockio combines same-day scheduling, itemized repair quoting, Declined-Repair Waivers, and Good/Better/Best estimating in one flat-rate platform.",
   },
 ];
 
@@ -303,6 +305,67 @@ const reviewsRow2 = [
       "Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.",
   },
 ];
+
+const operatingModelsData = {
+  pillTag: "OPERATING MODEL FLEXIBILITY",
+  title: "Built for How Your Garage Door Business Actually Operates",
+  subtitle:
+    "A same-day residential spring repair business and a commercial loading-dock contractor share a trade name, but run completely different workflows. Knockio adapts to your specific diagnostic fees, custom factory POs, and dock contracts out of the box.",
+  cards: [
+    {
+      icon: "wrench",
+      title: "Residential Same-Day Repair",
+      text: "Engineered for single-visit emergency repairs (springs, cables, openers). Quote diagnostic trip fees at booking, run multi-point safety inspections, quote itemized repairs on a tablet, and collect payment same-day.",
+      pills: ["Single-Visit Repair Flow", "Torsion Spring Safety Logs", "On-Site Payment Collection"],
+    },
+    {
+      icon: "warehouse",
+      title: "Custom Residential Installation",
+      text: "Streamline new door installations from consultation to install. Manage Good/Better/Best panel options, track 8-to-14-week custom factory PO lead times (Clopay/Amarr), and collect staged non-refundable deposits.",
+      pills: ["8–14 Week Factory POs", "Staged 50% Deposits", "Good/Better/Best Tiers"],
+    },
+    {
+      icon: "building",
+      title: "Commercial Docks & Rolling Steel",
+      text: "Serve commercial warehouses, fire stations, and retail centers. Manage rolling-steel doors, sectional gates, loading-dock levelers, and high-cycle operators with recurring preventive maintenance contracts.",
+      pills: ["Rolling-Steel Maintenance", "Loading-Dock Leveler Logs", "B2B Service Contracts"],
+    },
+    {
+      icon: "badge-check",
+      title: "New Construction & Builders",
+      text: "Manage multi-home builder and general contractor accounts. Coordinate volume door installations across residential developments, manage bulk factory orders, and track progress billing against GC schedules.",
+      pills: ["Builder Volume Scheduling", "Bulk Manufacturer POs", "GC Progress Billing"],
+    },
+  ],
+};
+
+const oldStackComparisonData = {
+  title: "How Knockio Replaces Your Taped-Together Garage Door Stack",
+  subtitle:
+    "Stop paying for basic scheduling calendars, standalone quoting apps, and manual factory order spreadsheets. Knockio brings your technicians, installers, and office into one platform.",
+  rows: [
+    {
+      stage: "Scheduling & Dispatch",
+      oldStack: "Using basic calendar apps without live GPS technician tracking or scheduling for emergency spring repairs.",
+      knockio: "Visual drag-and-drop dispatch board with real-time GPS tech tracking and same-day emergency routing.",
+    },
+    {
+      stage: "Estimating & Quoting",
+      oldStack: "Writing lump-sum estimates on paper invoices without offering Good/Better/Best door replacement tiers.",
+      knockio: "Interactive Good/Better/Best proposals with optional hardware add-ons and integrated consumer financing.",
+    },
+    {
+      stage: "Factory PO Tracking",
+      oldStack: "Losing track of custom carriage house door orders in manufacturer portals without alerting installation teams.",
+      knockio: "Integrated purchase orders tracking 8-to-14-week factory lead times linked directly to the job stage.",
+    },
+    {
+      stage: "Safety & Waivers",
+      oldStack: "Replacing single torsion springs without requiring customers to sign a digital Declined-Repair Waiver.",
+      knockio: "Mandatory digital Declined-Repair Liability Waivers and torsion spring safety calibration logs saved on site.",
+    },
+  ],
+};
 
 const heroImage = asset("inner-industry-garage-door-software.webp");
 
@@ -594,6 +657,21 @@ const jsonLd = {
           </div>
       </div>
     </section>
+
+    <!-- ========== Operating Models (4-Card Grid) ========== -->
+    <OperatingModels
+      pillTag={operatingModelsData.pillTag}
+      title={operatingModelsData.title}
+      subtitle={operatingModelsData.subtitle}
+      cards={operatingModelsData.cards}
+    />
+
+    <!-- ========== Old Stack vs. Knockio Comparison ========== -->
+    <OldStackComparison
+      title={oldStackComparisonData.title}
+      subtitle={oldStackComparisonData.subtitle}
+      rows={oldStackComparisonData.rows}
+    />
 
     <!-- ========== Organized (dark) ========== -->
     <section

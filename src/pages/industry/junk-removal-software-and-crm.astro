@@ -1,6 +1,8 @@
 ---
 import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
 import "../../styles/industry-page.css";
+import OperatingModels from "../../components/industry/OperatingModels.astro";
+import OldStackComparison from "../../components/industry/OldStackComparison.astro";
 import {
   ChevronRight,
   Crosshair,
@@ -235,23 +237,23 @@ const trustBadges = [
 const faqs = [
   {
     q: "What should I look for in junk removal software?",
-    a: "Look for fast booking, on-site volume-based quoting, truck routing, before-and-after photos, and payment that closes the moment the load is gone, all tied to one customer record. The platform should keep trucks turning instead of slowing crews with office data entry. Knockio was built around exactly this kind of high-volume, same-day work.",
+    a: "Look for fast same-day booking, on-site volume-based quoting, GPS truck routing, before-and-after photo capture, prohibited hazmat waivers, and payment collection that closes the moment the load is swept clean—all tied to one customer record. The platform should keep trucks turning instead of slowing crews with office data entry. Knockio was built around exactly this kind of high-velocity, same-day work.",
   },
   {
-    q: "Which software is best for a small junk removal business?",
-    a: "Knockio helps field service teams manage the full workflow. Teams can Book the Job, store customer details, create estimates, schedule jobs, assign crews, track job progress, upload photos, send invoices, and follow up with customers. This helps reduce manual work and keeps everyone updated.",
+    q: "Can crews quote by truck volume directly on site?",
+    a: "Yes. Junk removal pricing is visual. Knockio allows crews to present firm, all-inclusive prices from minimum loads to full trucks on a mobile tablet upon arrival, capturing instant customer e-signature approval before loading begins.",
   },
   {
-    q: "Can Knockio handle same-day bookings and dispatch?",
-    a: "Yes. Knockio captures bookings from phone, web, and referrals, drops them onto the schedule, and uses live GPS tracking with proximity intelligence so dispatch routes the closest truck to the next pickup.",
+    q: "Does Knockio protect my business from prohibited hazmat loads?",
+    a: "Yes. Before loading starts, Knockio lets you require customers to sign a digital Prohibited-Items Indemnification—confirming the load contains no wet paint, biohazards, asbestos, chemicals, or pressurized tanks.",
   },
   {
-    q: "Can crews take before-and-after photos and collect payment on site?",
-    a: "Yes. Crews capture annotated before-and-after photos on the job record and collect through tap to pay, text to pay, card, or ACH the moment the truck is loaded.",
+    q: "Can Knockio track transfer-station dumping fees and weight tickets?",
+    a: "Yes. Hauling crews can snap photos of transfer-station scale tickets and log dumping fees directly against the job record. This gives your office exact job-costing and net profitability per truckload without missing paper receipts.",
   },
   {
-    q: "Can Knockio manage a small fleet of trucks and crews?",
-    a: "Yes. Knockio assigns crews and trucks to jobs, tracks them on the live map, and keeps every booking, photo, and payment tied to the job record.",
+    q: "How is Knockio different from Jobber, Housecall Pro, or Workiz for junk removal companies?",
+    a: "Jobber and Housecall Pro are general-purpose tools that lack specialized junk hauling workflows like on-site volume quoting, hazmat indemnification waivers, and scale-ticket costing. Knockio combines same-day scheduling, visual truck-volume pricing, light demolition waivers, and on-site payment in one flat-rate platform.",
   },
 ];
 
@@ -296,6 +298,67 @@ const reviewsRow2 = [
       "Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.",
   },
 ];
+
+const operatingModelsData = {
+  pillTag: "OPERATING MODEL FLEXIBILITY",
+  title: "Built for How Your Junk Removal Business Actually Operates",
+  subtitle:
+    "A residential garage cleanout and an estate hoarding cleanup share a trade name, but run completely different workflows. Knockio adapts to your specific truck-volume pricing, light demolition safety, and transfer-station costing out of the box.",
+  cards: [
+    {
+      icon: "truck-ramp",
+      title: "Residential Junk & Hauling",
+      text: "Engineered for residential cleanouts (a large share of trade revenue). Dispatch same-day bookings, present firm on-site volume quotes based on truck space, and collect payment the moment the load is swept clean.",
+      pills: ["On-Site Volume Quoting", "Same-Day Scheduling", "Text-to-Pay Collection"],
+    },
+    {
+      icon: "hammer",
+      title: "Light Demolition & Teardown",
+      text: "Manage sheds, decks, hot tubs, and above-ground pool teardowns. Enforce mandatory Light Demolition Structural Hold-Harmless Waivers, track power tool safety checklists, and account for heavy debris weight limits.",
+      pills: ["Light Demolition Waivers", "Teardown Safety Checklists", "Heavy Debris Weight Tracking"],
+    },
+    {
+      icon: "building",
+      title: "Commercial & Property Management",
+      text: "Streamline repeat business with apartment complexes, real estate investors, and retail centers. Manage recurring eviction cleanouts, dumpster overflow cleanups, and monthly commercial invoicing.",
+      pills: ["Property Management Billing", "Eviction Cleanout Scheduling", "Dumpster Overflow Routes"],
+    },
+    {
+      icon: "house-circle",
+      title: "Estate & Hoarding Cleanouts",
+      text: "Manage sensitive, multi-day cleanout projects requiring high labor hours. Track phased room-by-room progress, enforce prohibited hazmat inspection checklists, and generate detailed multi-load invoicing.",
+      pills: ["Multi-Day Cleanout Scheduling", "Prohibited Hazmat Checklists", "Phased Multi-Load Invoicing"],
+    },
+  ],
+};
+
+const oldStackComparisonData = {
+  title: "How Knockio Replaces Your Taped-Together Junk Removal Stack",
+  subtitle:
+    "Stop paying for basic booking calendars, standalone estimating apps, and manual expense spreadsheets. Knockio brings your booking agents, hauling crews, and office into one platform.",
+  rows: [
+    {
+      stage: "Booking & Dispatch",
+      oldStack: "Using basic calendar apps without live GPS truck tracking or scheduling for same-day pickups.",
+      knockio: "Visual drag-and-drop dispatch board with real-time GPS truck tracking and same-day scheduling.",
+    },
+    {
+      stage: "On-Site Quoting",
+      oldStack: "Handwriting lump-sum prices on paper invoices without requiring a signed prohibited-items hazmat waiver.",
+      knockio: "On-site visual truck-volume quoting with mandatory digital Prohibited-Items Indemnification e-signatures.",
+    },
+    {
+      stage: "Dump Job-Costing",
+      oldStack: "Losing paper scale tickets from transfer stations and guessing true job profit at the end of the month.",
+      knockio: "Mobile photo upload of transfer-station weight tickets logged directly against the job for exact costing.",
+    },
+    {
+      stage: "Invoicing & Payments",
+      oldStack: "Chasing payments after the truck drives away or manually typing card numbers into a disconnected terminal.",
+      knockio: "On-site Text-to-Pay, card, or ACH processing captured before crews leave the property.",
+    },
+  ],
+};
 
 const heroImage = asset("inner-industry-junk-removal-software.webp");
 
@@ -585,6 +648,21 @@ const jsonLd = {
           </div>
       </div>
     </section>
+
+    <!-- ========== Operating Models (4-Card Grid) ========== -->
+    <OperatingModels
+      pillTag={operatingModelsData.pillTag}
+      title={operatingModelsData.title}
+      subtitle={operatingModelsData.subtitle}
+      cards={operatingModelsData.cards}
+    />
+
+    <!-- ========== Old Stack vs. Knockio Comparison ========== -->
+    <OldStackComparison
+      title={oldStackComparisonData.title}
+      subtitle={oldStackComparisonData.subtitle}
+      rows={oldStackComparisonData.rows}
+    />
 
     <!-- ========== Organized (dark) ========== -->
     <section

@@ -1,0 +1,61 @@
+---
+type ComparisonRow = {
+  stage: string;
+  oldStack: string;
+  knockio: string;
+};
+
+type Props = {
+  title: string;
+  subtitle: string;
+  rows: ComparisonRow[];
+};
+
+const { title, subtitle, rows } = Astro.props;
+---
+
+<section class="bg-white py-16 sm:py-20 lg:py-24">
+  <div class="my-container mx-auto max-w-[1120px]">
+    <div class="mb-10 text-center">
+      <h2 class="mb-4 text-3xl font-bold text-neutral-950 sm:text-4xl">
+        {title}
+      </h2>
+      <p class="mx-auto max-w-2xl text-base text-neutral-600 sm:text-lg">
+        {subtitle}
+      </p>
+    </div>
+
+    <div class="overflow-x-auto rounded-2xl border border-solid border-neutral-200 shadow-sm">
+      <table class="w-full border-collapse text-left">
+        <thead>
+          <tr class="border-b border-solid border-neutral-200 bg-neutral-50">
+            <th class="w-1/4 p-4 text-xs font-bold uppercase tracking-wider text-neutral-500 sm:p-5">
+              Workflow Stage
+            </th>
+            <th class="w-3/8 bg-red-50/50 p-4 text-xs font-bold uppercase tracking-wider text-red-600 sm:p-5">
+              Old Taped-Together Stack
+            </th>
+            <th class="w-3/8 bg-primary-50/50 p-4 text-xs font-bold uppercase tracking-wider text-primary-700 sm:p-5">
+              With Knockio All-in-One
+            </th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-neutral-200 text-sm sm:text-base">
+          {rows.map((row) => (
+            <tr>
+              <td class="p-4 font-semibold text-neutral-900 sm:p-5">
+                {row.stage}
+              </td>
+              <td class="p-4 text-neutral-600 sm:p-5">
+                {row.oldStack}
+              </td>
+              <td class="bg-primary-50/20 p-4 font-medium text-neutral-900 sm:p-5">
+                {row.knockio}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

@@ -1,6 +1,8 @@
 ---
 import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
 import "../../styles/industry-page.css";
+import OperatingModels from "../../components/industry/OperatingModels.astro";
+import OldStackComparison from "../../components/industry/OldStackComparison.astro";
 import {
   ChevronRight,
   Crosshair,
@@ -239,24 +241,24 @@ const trustBadges = [
 
 const faqs = [
   {
-    q: "Can Knockio keep all my deal history in one record?",
-    a: "Yes. Every deal record holds the property's contacts, photos, notes, documents, and full activity history, so anyone on your team sees the whole story instead of piecing it together from texts and email.",
+    q: "How does Knockio handle the handoff between setters and closers?",
+    a: "Knockio links setters and closers to the exact same customer record. When a setter schedules an appointment at the door, the closer receives an instant notification with the roof photos, shading notes, and utility bill attached—eliminating pre-appointment confusion and blind presentations.",
   },
   {
-    q: "Can Knockio handle the setter to close the handoff?",
-    a: "Knockio helps field service teams manage the full workflow. Teams can Manage Records, store customer details, create estimates, schedule jobs, assign crews, track job progress, upload photos, send invoices, and follow up with customers. This helps reduce manual work and keeps everyone updated.",
+    q: "Can Knockio track utility interconnection and PTO stages?",
+    a: "Yes. Knockio features fully customizable project pipelines that let you track deals through site survey, engineering design, permitting, HOA approval, installation, municipal inspection, utility interconnection submission, and final Permission to Operate (PTO).",
   },
   {
-    q: "Can Knockio create canvassing territories automatically?",
-    a: "Yes. Knockio can build territories automatically from zip codes and cities, so you can split up a target market and get setters knocking fast, without drawing every boundary by hand.",
+    q: "Are door-to-door sales disclosures included in Knockio e-contracts?",
+    a: "Yes. You can add mandatory disclosures to your contract templates—such as the FTC 3-Day Notice of Cancellation for door-to-door signups—to your digital agreements, complete with timestamped audit logging.",
   },
   {
-    q: "Does Knockio support digital contracts for solar deals?",
-    a: "Yes. Knockio's native e-contract feature lets you send legally binding agreements for signature, with IP address and timestamp logging on every view and signature.",
+    q: "How is Knockio different from Solargraf, Sunbase, or SalesRabbit for solar companies?",
+    a: "Solargraf leans into design and proposal work, and SalesRabbit leans into canvassing, but Knockio brings canvassing, automated territory creation, live setter tracking, estimates, digital contracts, work orders, and payments into one connected system. Add deep deal history per property, a fully customizable pipeline with unlimited boards, personalized support, and pricing that does not punish a growing team, and you have one platform that runs the deal from the first knock to permission to operate.",
   },
   {
-    q: "How is Knockio different from Solargraf or Sales Rabbit for solar companies?",
-    a: "Solargraf leans into design and proposal work, and Sales Rabbit leans into canvassing, but Knockio brings canvassing, automated territory creation, live setter tracking, estimates, digital contracts, work orders, and payments into one connected system. Add deep deal history per property, a fully customizable pipeline with unlimited boards, personalized support, and pricing that does not punish a growing team, and you have one platform that runs the deal from the first knock to permission to operate.",
+    q: "Does Knockio connect with the tools I already use?",
+    a: "Knockio connects your customer records, invoices, and payments to the tools you use via Zapier and webhooks. It also connects via Zapier and webhooks with Google Calendar, HubSpot, GoHighLevel (GHL), and Salesforce.",
   },
 ];
 
@@ -305,6 +307,91 @@ const reviewsRow2 = [
 const heroImage = asset(
   "inner-solar-sales-software-and-crm-what-should-solar-companies-look-for-in-a-crm-and-sales-platform.webp",
 );
+
+const operatingModelsData = {
+  pillTag: "OPERATING MODEL FLEXIBILITY",
+  title: "Built for How Your Solar Business Actually Operates",
+  subtitle:
+    "A $0-down PPA installer and a residential cash sales team share an industry, but run completely different workflows. Knockio adapts to your specific financial model, sales posture, and installation pipeline out of the box.",
+  cards: [
+    {
+      icon: "sun",
+      title: "Residential Cash & Solar Loans",
+      text: "Engineered for high-velocity D2D sales teams and regional installers selling customer-owned systems. Track invoices from M1 install through final M2 PTO funding and keep each lender's signed agreement on the deal.",
+      pills: [
+        "GoodLeap / Mosaic Docs on File",
+        "Deposit + Invoicing",
+        "High-Speed D2D Canvassing",
+      ],
+    },
+    {
+      icon: "file-text",
+      title: "Third-Party Leases & PPAs",
+      text: "Streamline $0-down solar agreements where a third-party finance partner owns the equipment. Manage 20-to-25 year lease approvals, customer credit status records, and long-term production monitoring seamlessly.",
+      pills: [
+        "$0-Down Agreement Flow",
+        "3rd-Party Owner Approvals",
+        "Production Guarantees",
+      ],
+    },
+    {
+      icon: "battery-full",
+      title: "Battery Storage & NEM 3.0 Retrofits",
+      text: "Adapt to modern net-metering changes. Run dedicated, rapid-turnaround pipelines for adding battery storage (Tesla Powerwall, Enphase, FranklinWH) and EV chargers to existing residential arrays.",
+      pills: [
+        "Rapid Non-PTO Pipelines",
+        "Storage Add-On Quotes",
+        "Main Panel Upgrade (MPU) Tracking",
+      ],
+    },
+    {
+      icon: "building",
+      title: "Commercial Solar & O&M Contracts",
+      text: "Manage Commercial & Industrial (C&I) multi-roof projects alongside recurring Operations & Maintenance (O&M) service contracts, routine panel washing, inverter replacements, and system health audits.",
+      pills: [
+        "B2B & RFP Bidding",
+        "Recurring O&M Agreements",
+        "Commercial Equipment Logging",
+      ],
+    },
+  ],
+};
+
+const oldStackComparisonData = {
+  title: "How Knockio Replaces Your Taped-Together Solar Stack",
+  subtitle:
+    "Stop paying for separate door-knocking apps, generic CRMs, and custom spreadsheets. Knockio brings your sales floor and install crews into one platform.",
+  rows: [
+    {
+      stage: "Door Canvassing",
+      oldStack:
+        "Paying per seat for a standalone door app (SalesRabbit/SPOTIO) that doesn't sync with office calendars.",
+      knockio:
+        "Built-in D2D mapping, PIN-verification, and direct calendar dispatch to closers.",
+    },
+    {
+      stage: "Sales Handoff",
+      oldStack:
+        "Texting roof photos and utility bills through group chats where details get lost.",
+      knockio:
+        "Centralized deal records holding site photos, shading notes, and utility bills in one view.",
+    },
+    {
+      stage: "Interconnection & PTO",
+      oldStack:
+        "Spreadsheets tracking permit and net-metering approvals across separate departments.",
+      knockio:
+        "Visual Kanban boards tracking HOA approvals, permits, utility grid ties, and PTO sign-offs.",
+    },
+    {
+      stage: "Contracts & Payments",
+      oldStack:
+        "Chasing paper signatures and manual invoice checks across multiple systems.",
+      knockio:
+        "Native e-contracts, 3-day cancellation notices you add to your templates, and mobile deposit collection.",
+    },
+  ],
+};
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -592,6 +679,21 @@ const jsonLd = {
           </div>
       </div>
     </section>
+
+    <!-- ========== Operating Models (4-Card Grid) ========== -->
+    <OperatingModels
+      pillTag={operatingModelsData.pillTag}
+      title={operatingModelsData.title}
+      subtitle={operatingModelsData.subtitle}
+      cards={operatingModelsData.cards}
+    />
+
+    <!-- ========== Old Stack vs. Knockio Comparison ========== -->
+    <OldStackComparison
+      title={oldStackComparisonData.title}
+      subtitle={oldStackComparisonData.subtitle}
+      rows={oldStackComparisonData.rows}
+    />
 
     <!-- ========== Organized (dark) ========== -->
     <section

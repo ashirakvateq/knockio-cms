@@ -1,6 +1,8 @@
 ---
 import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
 import "../../styles/industry-page.css";
+import OperatingModels from "../../components/industry/OperatingModels.astro";
+import OldStackComparison from "../../components/industry/OldStackComparison.astro";
 import {
   ChevronRight,
   Crosshair,
@@ -241,24 +243,24 @@ const trustBadges = [
 
 const faqs = [
   {
-    q: "Can Knockio handle recurring service schedules?",
-    a: "Yes. You can set up quarterly, monthly, or custom recurring visits, and the schedule builds itself out so renewals and re-services stay on the calendar instead of getting forgotten.",
+    q: "Can Knockio handle recurring quarterly service schedules automatically?",
+    a: "Yes. Knockio automates your recurring service cadences. You can set up monthly, quarterly, or seasonal billing and visit cycles that automatically populate on your route board so renewals and re-services never drop off the calendar.",
   },
   {
-    q: "Can Knockio log treatments for each visit?",
-    a: "Knockio helps field service teams manage the full workflow. Teams can Centralized Data, store customer details, create estimates, schedule jobs, assign crews, track job progress, upload photos, send invoices, and follow up with customers. This helps reduce manual work and keeps everyone updated.",
+    q: "Can technicians log EPA chemical dilution rates and target pests on their mobile device?",
+    a: "Yes. Knockio's mobile app includes a dedicated chemical logging interface where technicians record EPA registration numbers, dilution rates, quantities applied, target pests, and weather conditions directly into the customer's permanent record.",
   },
   {
-    q: "Can Knockio route and track my techs?",
-    a: "Yes. Knockio includes route planning plus live GPS tracking, with pin drop verification to confirm a stop was actually worked at the property.",
+    q: "Does Knockio collect recurring invoicing upon service completion?",
+    a: "Yes. You can automatically send the recurring invoice when the service is marked complete.",
   },
   {
-    q: "Does Knockio collect recurring payments?",
-    a: "Yes. You can collect one-time and recurring balances through tap to pay, text to pay, card, or ACH, all tied directly to the account.",
+    q: "How is Knockio different from FieldRoutes, PestPac, or GorillaDesk for pest control companies?",
+    a: "FieldRoutes and PestPac are built for massive enterprises with complex administrative overhead, while GorillaDesk is lightweight but thin on door-to-door sales tools. Knockio sits in the sweet spot—combining native D2D canvassing, automated territory creation, recurring routing, EPA chemical logging, and recurring invoicing in one flat-rate platform.",
   },
   {
-    q: "How is Knockio different from GorillaDesk, PestPac, or FieldRoutes for pest control companies?",
-    a: "PestPac and FieldRoutes are built for large operations and can feel heavy, while GorillaDesk keeps things light but thin on deeper job tracking. Knockio sits in the middle: recurring scheduling, routing, treatment logging, work orders, and payments in one connected system, with live tech tracking, a fully customizable pipeline with unlimited boards, automated territory creation by zip and city, personalized support, and pricing that does not punish a growing route.",
+    q: "Can Knockio generate WDO and termite inspection reports?",
+    a: "Yes. Knockio supports state-mandated Wood-Destroying Organism (WDO) inspection reports (such as Florida FDACS-13645) and stores annual termite protection guarantees and retreatment disclosures directly on the property record.",
   },
 ];
 
@@ -303,6 +305,67 @@ const reviewsRow2 = [
       "Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.",
   },
 ];
+
+const operatingModelsData = {
+  pillTag: "OPERATING MODEL FLEXIBILITY",
+  title: "Built for How Your Pest Control Business Actually Operates",
+  subtitle:
+    "A general household pest route and a wildlife exclusion contractor share a trade name, but run completely different workflows. Knockio adapts to your specific subscription cadences, termite guarantees, and commercial compliance out of the box.",
+  cards: [
+    {
+      icon: "bug",
+      title: "General Household Pest Routes",
+      text: "Engineered for high-density quarterly subscription routes sold door-to-door. Fast sign-to-service loops, automated recurring route rebooking, and recurring invoicing tied to proof of service.",
+      pills: ["Quarterly Recurring Invoicing Billing", "High-Density Route Planning", "D2D Summer Sales Tools"],
+    },
+    {
+      icon: "house-circle",
+      title: "Termite & WDO Protection Plans",
+      text: "Manage state-mandated Wood-Destroying Organism (WDO) inspections and annual termite guarantees. Explicitly declare statutory \"Retreatment Only\" versus \"Repair and Retreatment\" coverage limits on contracts.",
+      pills: ["WDO State Inspection Forms", "Termite Bond Guarantees", "Annual Renewal Tracking"],
+    },
+    {
+      icon: "paw",
+      title: "Wildlife Exclusion & Trapping",
+      text: "Streamline one-off wildlife trapping, structural exclusion repairs, and attic decontamination projects. Manage DNR trapping permit numbers, multi-day trap check schedules, and custom repair estimates.",
+      pills: ["DNR Trapping Permit Logs", "Exclusion Repair Estimates", "Multi-Day Trap Schedules"],
+    },
+    {
+      icon: "building-shield",
+      title: "Commercial Compliance & Food Safety",
+      text: "Serve restaurants, warehouses, and multi-family HOAs requiring strict audit trails. Generate detailed chemical application logs, rodent station trend reports, and health department compliance documentation.",
+      pills: ["Health Inspection Audit Logs", "Rodent Trend Reporting", "Commercial PMA Billing"],
+    },
+  ],
+};
+
+const oldStackComparisonData = {
+  title: "How Knockio Replaces Your Taped-Together Pest Control Stack",
+  subtitle:
+    "Stop paying for separate door-knocking apps, heavy legacy FSMs, and standalone chemical log sheets. Knockio brings your sales reps and route technicians into one platform.",
+  rows: [
+    {
+      stage: "Door Canvassing",
+      oldStack: "Paying per seat for standalone door apps (SalesRabbit/SPOTIO) that don't sync with your scheduling board.",
+      knockio: "Built-in D2D canvassing, territory cutting, and instant initial-service scheduling at the door.",
+    },
+    {
+      stage: "Route Scheduling",
+      oldStack: "Spending hours manually rebooking quarterly accounts onto route sheets across scattered spreadsheets.",
+      knockio: "Automated recurring route generation that clusters neighborhoods for maximum route density.",
+    },
+    {
+      stage: "Chemical Logging",
+      oldStack: "Technicians filling out paper chemical usage logs that get lost or illegible before reaching the office.",
+      knockio: "Mobile EPA chemical, dilution rate, and target pest entry saved directly to the account record.",
+    },
+    {
+      stage: "Recurring Billing",
+      oldStack: "Chasing overdue checks or manually running credit cards after route technicians turn in paper tickets.",
+      knockio: "Automated recurring invoicing triggered immediately upon proof-of-service upload.",
+    },
+  ],
+};
 
 const heroImage = asset(
   "inner-pest-control-software-and-crm-what-should-pest-control-companies-look-for-in-a-crm-and-routing-platform.webp",
@@ -594,6 +657,21 @@ const jsonLd = {
           </div>
       </div>
     </section>
+
+    <!-- ========== Operating Models (4-Card Grid) ========== -->
+    <OperatingModels
+      pillTag={operatingModelsData.pillTag}
+      title={operatingModelsData.title}
+      subtitle={operatingModelsData.subtitle}
+      cards={operatingModelsData.cards}
+    />
+
+    <!-- ========== Old Stack vs. Knockio Comparison ========== -->
+    <OldStackComparison
+      title={oldStackComparisonData.title}
+      subtitle={oldStackComparisonData.subtitle}
+      rows={oldStackComparisonData.rows}
+    />
 
     <!-- ========== Organized (dark) ========== -->
     <section

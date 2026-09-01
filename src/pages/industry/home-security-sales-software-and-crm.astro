@@ -1,6 +1,8 @@
 ---
 import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
 import "../../styles/industry-page.css";
+import OperatingModels from "../../components/industry/OperatingModels.astro";
+import OldStackComparison from "../../components/industry/OldStackComparison.astro";
 import {
   ChevronRight,
   Crosshair,
@@ -242,23 +244,23 @@ const trustBadges = [
 const faqs = [
   {
     q: "What should I look for in door-to-door home security sales software?",
-    a: "Look for automated territory assignment, live GPS rep tracking, fast signup capture, full communication history per door, e-contracts, and a customizable pipeline. The platform should match the speed of a canvassing push, not slow a rep down with office-style data entry. Knockio was built around exactly this kind of field workflow.",
+    a: "Look for automated territory assignment, live GPS rep tracking, credit status record-keeping, 36-to-60-month RMR e-contracts with FTC 3-day cancellation notices, same-day install dispatching, and recurring invoicing—all tied to one customer record. The platform should match the speed of a summer sales push without slowing reps down with office data entry. Knockio was built around exactly this kind of high-velocity D2D workflow.",
   },
   {
-    q: "Which software is best for managing a door-to-door security sales team?",
-    a: "Knockio helps field service teams manage the full workflow. Teams can Own the Territory, store customer details, create estimates, schedule jobs, assign crews, track job progress, upload photos, send invoices, and follow up with customers. This helps reduce manual work and keeps everyone updated.",
+    q: "Can Knockio handle same-day alarm installation scheduling at the door?",
+    a: "Yes. When a door-to-door sales rep closes a monitored security agreement, they can view live technician availability and book a same-day installation directly onto an installer's calendar—beating buyer's remorse by installing while the pitch is fresh.",
   },
   {
-    q: "Can Knockio create canvassing territories automatically?",
-    a: "Yes. Knockio can build territories automatically from zip codes and cities, so when you enter a new market you can split it up and get reps knocking fast, without drawing boundaries by hand.",
+    q: "Are FTC 3-day cancellation notices automatically included in e-contracts?",
+    a: "Yes. To comply with federal door-to-door sales regulations, You can add the mandatory FTC 3-Day Notice of Cancellation to your contract templates, which appends it to every digital monitoring agreement, recording IP address and timestamp audit trails.",
   },
   {
-    q: "Can Knockio track my reps and verify which doors were worked?",
-    a: "Yes. Knockio includes live GPS tracking with proximity intelligence, so you can confirm how close a rep was to an address when they marked it worked.",
+    q: "Can technicians log municipal false-alarm permit numbers and signal tests?",
+    a: "Yes. Technicians can record local police and fire municipal alarm permit numbers directly on the property record to prevent customer fines, and check off mandatory central-station panic signal testing before leaving the home.",
   },
   {
-    q: "Does Knockio keep a record of every conversation with a homeowner?",
-    a: "Yes. Communication history saves every call, text, and email tied to a lead on the record, so any rep following up sees the full back-and-forth instead of starting cold.",
+    q: "How is Knockio different from SalesRabbit, SPOTIO, or SedonaOffice for alarm dealers?",
+    a: "SalesRabbit and SPOTIO are standalone canvassing apps that drop off after the doorstep sale, while SedonaOffice is a back-office dealer billing system without native D2D tools. Knockio combines neighborhood D2D canvassing, credit status record-keeping, same-day install dispatching, FTC-compliant e-contracts, and RMR recurring invoicing in one flat-rate platform.",
   },
 ];
 
@@ -303,6 +305,67 @@ const reviewsRow2 = [
       "Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.",
   },
 ];
+
+const operatingModelsData = {
+  pillTag: "OPERATING MODEL FLEXIBILITY",
+  title: "Built for How Your Home Security Business Actually Operates",
+  subtitle:
+    "A door-to-door monitored alarm dealer and a commercial access-control integrator share a trade name, but run completely different workflows. Knockio adapts to your specific multi-year RMR contracts, credit status records, and takeover deals out of the box.",
+  cards: [
+    {
+      icon: "shield-halved",
+      title: "Pro-Installed Monitored RMR",
+      text: "Engineered for D2D summer sales dealers selling 36-to-60-month monitoring agreements. Streamline credit status record-keeping, same-day installation dispatching, and central-station signal verification.",
+      pills: ["36–60 Month RMR Contracts", "Credit Status Records", "Same-Day Install Dispatch"],
+    },
+    {
+      icon: "repeat",
+      title: "Takeover & System Upgrades",
+      text: "Maximize low-CAC growth by adopting existing residential alarm hardware. Log pre-existing sensor compatibility, swap control panel communicators (Alarm.com / Alula), and switch the monitoring account.",
+      pills: ["Existing Hardware Adoption", "Communicator Panel Swaps", "Low-CAC RMR Conversion"],
+    },
+    {
+      icon: "lock",
+      title: "Commercial Access Control & VSaaS",
+      text: "Serve multi-family HOAs, gated communities, and commercial office buildings. Manage cloud badge readers, gate intercoms, and AI video surveillance with per-door or per-camera SaaS billing.",
+      pills: ["Cloud Access Control Bids", "VSaaS Per-Camera Billing", "Commercial System Audits"],
+    },
+    {
+      icon: "house-signal",
+      title: "Smart-Home Automation Bundles",
+      text: "Expand average contract value by bundling intrusion alarms with Z-Wave smart-home automation. Quote and install smart door locks, video doorbells, automated thermostats, and lighting controls.",
+      pills: ["Z-Wave Automation Upsells", "Video Doorbell Quoting", "Smart-Home RMR Add-Ons"],
+    },
+  ],
+};
+
+const oldStackComparisonData = {
+  title: "How Knockio Replaces Your Taped-Together Security Stack",
+  subtitle:
+    "Stop paying for separate door-knocking apps, generic CRMs, and manual RMR billing spreadsheets. Knockio brings your summer sales reps, alarm installers, and office into one platform.",
+  rows: [
+    {
+      stage: "D2D Canvassing",
+      oldStack: "Paying per seat for standalone door apps (SalesRabbit/SPOTIO) that don't sync with same-day install calendars.",
+      knockio: "Built-in D2D canvassing, territory cutting, and direct same-day installer calendar dispatching.",
+    },
+    {
+      stage: "Credit & Sign-Up",
+      oldStack: "Recording credit status in one place and handwriting contract details into separate e-signature applications.",
+      knockio: "Credit status record-keeping 36–60 month RMR e-contracts on a mobile tablet.",
+    },
+    {
+      stage: "Signal Verification",
+      oldStack: "Installers calling central station on personal phones without storing digital signal verification proof on the account.",
+      knockio: "Central-station panic signal testing checklists and false-alarm permit numbers stored on the record.",
+    },
+    {
+      stage: "RMR Recurring Invoicing",
+      oldStack: "Manually entering customer bank accounts into disconnected dealer billing systems after paper contracts are turned in.",
+      knockio: "Recurring invoicing for monthly RMR billing triggered immediately upon signal verification.",
+    },
+  ],
+};
 
 const heroImage = asset(
   "inner-home-security-sales-software-and-crm-what-should-home-security-sales-teams-look-for-in-a-canvassing-and-sales-platfor.webp",
@@ -596,6 +659,21 @@ const jsonLd = {
           </div>
       </div>
     </section>
+
+    <!-- ========== Operating Models (4-Card Grid) ========== -->
+    <OperatingModels
+      pillTag={operatingModelsData.pillTag}
+      title={operatingModelsData.title}
+      subtitle={operatingModelsData.subtitle}
+      cards={operatingModelsData.cards}
+    />
+
+    <!-- ========== Old Stack vs. Knockio Comparison ========== -->
+    <OldStackComparison
+      title={oldStackComparisonData.title}
+      subtitle={oldStackComparisonData.subtitle}
+      rows={oldStackComparisonData.rows}
+    />
 
     <!-- ========== Organized (dark) ========== -->
     <section
