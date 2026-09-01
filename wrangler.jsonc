@@ -1,12 +1,20 @@
 {
   "name": "xyz-astro-site",
+  "main": "src/worker.ts",
   "compatibility_date": "2026-07-01",
-  // If a server endpoint is added later (e.g. /api/lead-submit), add
-  // "run_worker_first": ["/api/*"] here and switch the Astro adapter to
-  // @astrojs/cloudflare with output: 'server', keeping individual pages
-  // statically prerendered via `export const prerender = true`.
   "assets": {
     "directory": "./dist",
-    "not_found_handling": "404-page"
-  }
+    "not_found_handling": "none",
+    "html_handling": "auto-trailing-slash"
+  },
+  "routes": [
+    {
+      "pattern": "knockio.com/*",
+      "zone_name": "knockio.com"
+    },
+    {
+      "pattern": "www.knockio.com/*",
+      "zone_name": "knockio.com"
+    }
+  ]
 }

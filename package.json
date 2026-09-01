@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "0.9.10",
+    "@cloudflare/workers-types": "^5.20260831.1",
     "typescript": "^6"
   }
 }
