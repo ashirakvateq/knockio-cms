@@ -1,0 +1,1047 @@
+---
+import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
+import "../../styles/feature-page.css";
+import {
+  ArrowRight,
+  Camera,
+  ChevronDown,
+  ChevronRight,
+  Link2,
+  Quote,
+  RefreshCw,
+  ShieldCheck,
+  Users,
+} from "lucide-astro";
+
+const title = "Photo and Media Management Software | Knockio";
+const description =
+  "Capture, annotate, and organize job photos, videos, and documents in one record. See why field teams trust Knockio to keep every job visually documented.";
+
+const asset = (name: string) => `/assets/cfw/${name}`;
+
+const proposalGroups = [
+  {
+    key: "capture",
+    title: "Capture Media However the Job Requires It",
+    icon: "camera" as const,
+    items: [
+      {
+        label: "Photos From the Job Site",
+        title: "Photos From the Job Site",
+        text: "Technicians and reps upload inspection photos, damage evidence, measurements, before-and-after shots, completion proof, and project video straight from the job site, no separate camera app required.",
+        image: asset(
+          "inner-photo-media-capture-photos-from-job-site.webp",
+        ),
+      },
+      {
+        label: "Built-In Photo Annotation",
+        title: "Built-In Photo Annotation",
+        text: "Draw, highlight, add arrows, and drop notes directly on an image to point out a problem area, a measurement, or a scope change without writing a paragraph to explain it.",
+        image: asset(
+          "inner-photo-media-capture-built-in-photo-annotation.webp",
+        ),
+      },
+      {
+        label: "Documents Alongside Photos",
+        title: "Documents Alongside Photos",
+        text: "Store contracts, permits, inspection reports, and other job files next to the photos and videos for that job, so nobody has to hunt through email to find one document.",
+        image: asset(
+          "inner-photo-media-capture-documents-alongside-photos.webp",
+        ),
+      },
+    ],
+  },
+  {
+    key: "connected",
+    title: "Media Connected to Every Job Record",
+    icon: "link" as const,
+    items: [
+      {
+        label: "Files Tied to the Job",
+        title: "Files Tied to the Job",
+        text: "Every photo, video, and document lives inside the specific lead, customer, work order, or project it belongs to, instead of a shared folder someone has to sort through later.",
+        image: asset(
+          "inner-photo-media-connected-files-tied-to-job.webp",
+        ),
+      },
+      {
+        label: "One Job History",
+        title: "One Job History",
+        text: "Contracts, estimates, invoices, and service reports stay connected to the same job history as the media, so the full story of a job is in one place.",
+        image: asset(
+          "inner-photo-media-connected-one-job-history.webp",
+        ),
+      },
+      {
+        label: "Sharper Estimates and Inspections",
+        title: "Sharper Estimates and Inspections",
+        text: "Use marked-up images to support inspections, build more accurate estimates, and give crews clear work instructions before they ever step on site.",
+        image: asset(
+          "inner-photo-media-connected-sharper-estimates-and-inspections.webp",
+        ),
+      },
+    ],
+  },
+  {
+    key: "trail",
+    title: "A Media Trail That Protects Your Business",
+    icon: "shield" as const,
+    items: [
+      {
+        label: "Instant Accountability",
+        title: "Instant Accountability",
+        text: "Every upload stamps and attaches to its job automatically, giving managers clear proof that field crews documented the work properly without chasing anyone for missing shots.",
+        image: asset(
+          "inner-photo-media-trail-instant-accountability.webp",
+        ),
+      },
+      {
+        label: "Faster Approvals",
+        title: "Faster Approvals",
+        text: "Paired before-and-after images hand customers, adjusters, and warranty reviewers the visual proof they need, so sign-offs and payments move ahead instead of stalling on requests.",
+        image: asset(
+          "inner-photo-media-trail-faster-approvals.webp",
+        ),
+      },
+      {
+        label: "Searchable for Years",
+        title: "Searchable for Years",
+        text: "When a customer questions the work or a claim needs backup, a dated, annotated photo history gives you something to point to.",
+        image: asset(
+          "inner-photo-media-trail-searchable-for-years.webp",
+        ),
+      },
+    ],
+  },
+];
+
+const initialItem = proposalGroups[0].items[0];
+
+const trustBadges = [
+  {
+    href: "https://www.capterra.com/p/10018264/Knockio/",
+    src: asset("badge-new-capterra.webp"),
+    alt: "Knockio Capterra rating badge",
+    label: "View Knockio reviews on Capterra",
+  },
+  {
+    href: "https://www.softwareadvice.com/field-sales/knockio-profile/",
+    src: asset("badge-new-software-advice.webp"),
+    alt: "Knockio Software Advice rating badge",
+    label: "View Knockio reviews on Software Advice",
+  },
+  {
+    href: "https://www.getapp.com/all-software/a/knockio/",
+    src: asset("badge-new-get-app.webp"),
+    alt: "Knockio GetApp rating badge",
+    label: "View Knockio reviews on GetApp",
+  },
+  {
+    href: "https://www.g2.com/products/knockio-by-knockio/reviews",
+    src: asset("badge-new-g2.webp"),
+    alt: "Knockio G2 rating badge",
+    label: "View Knockio reviews on G2",
+  },
+];
+
+const faqs = [
+  {
+    q: "Can field service businesses manage job photos, videos, and documents in one place?",
+    a: "Yes. Knockio includes built-in media management that lets field teams upload photos, videos, and documents directly from the job site, mark up images with annotation tools, and keep every file attached to the correct lead, work order, or customer record. Nothing gets buried in a text thread or a personal camera roll, and nothing has to be re-uploaded into a separate storage tool.",
+  },
+  {
+    q: "Does Knockio include photo and media management?",
+    a: "Yes. Knockio has built-in media management that lets you upload, organize, and annotate photos, videos, and documents, with everything tied to the correct job record.",
+  },
+  {
+    q: "Can technicians annotate photos directly on their phone?",
+    a: "Yes. Field teams can draw, highlight, add arrows, and leave notes on photos from the mobile app while they're still on site.",
+  },
+  {
+    q: "Are photos and documents connected to the job, or stored separately?",
+    a: "They're connected. Every photo, video, and document attaches to the relevant lead, customer, work order, or project record instead of sitting in an unrelated folder or app.",
+  },
+  {
+    q: "How does media management help with insurance claims or customer disputes?",
+    a: "By keeping a dated, annotated photo and document history attached to each job, Knockio gives you a clear visual record to reference if an adjuster, a customer, or your own team needs proof of what happened and when.",
+  },
+];
+
+const reviewsRow1 = [
+  {
+    name: "Lacey Jackson",
+    avatar: asset("avatar-lacey-jackson.webp"),
+    quote:
+      "This app is the best thing that has happened to our company! Asad is absolutely amazing! He is so responsive, it doesn't matter what time of day he is on it! I highly recommend this company add this app!",
+  },
+  {
+    name: "Ben Loveland",
+    avatar: asset("avatar-ben-loveland.webp"),
+    quote:
+      "Knockio is a great product! We use it for our roofing sales canvassing. Their support team is responsive and fixes issues immediately. Highly recommend!",
+  },
+  {
+    name: "Bar Galanti",
+    avatar: asset("avatar-bar-galanti.webp"),
+    quote:
+      "The support team is awesome. The live tracking feature is very useful. The pricing is fair as well!",
+  },
+];
+
+const reviewsRow2 = [
+  {
+    name: "Georgia Hancocks",
+    avatar: asset("avatar-georgia-hancocks.webp"),
+    quote:
+      "Knockio is the best! My team and I absolutely love using it - it is so user friendly and simple. Support is brilliant too, nothing is ever too much trouble. The best on the market. Thanks Knockio!",
+  },
+  {
+    name: "Sarah Bennett",
+    avatar: asset("avatar-sarah-bennett.webp"),
+    quote:
+      "We love Knockio so far! It is solving a lot of the issues of the other canvassing apps. The team have worked with us providing excellent fast support. Highly recommend if you're seeing people face to face.",
+  },
+  {
+    name: "Ayana Hall",
+    avatar: asset("avatar-ayana-hall.webp"),
+    quote:
+      "Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.",
+  },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id":
+        "https://knockio.com/features/photo-and-media-management/#webpage",
+      url: "https://knockio.com/features/photo-and-media-management/",
+      name: "Photo and Media Management Software | Knockio",
+      headline:
+        "Photo and Media Management Built for the Way Field Teams Actually Document a Job",
+      description,
+      isPartOf: { "@id": "https://knockio.com/#website" },
+      about: { "@id": "https://knockio.com/#software" },
+      mainEntity: { "@id": "https://knockio.com/#software" },
+      mainContentOfPage: {
+        "@type": "WebPageElement",
+        name: "Photo and Media Management Built for the Way Field Teams Actually Document a Job",
+        text: "Your crew takes forty photos on a roof, texts half to the office, and the rest sit on a personal phone. When a customer questions the invoice or an adjuster asks for proof, nobody can find the one photo that matters. Knockio keeps every photo, video, and document tied directly to the job, with annotation tools built in.",
+      },
+      hasPart: [
+        {
+          "@type": "WebPageElement",
+          name: "Quick Answer: Can field service businesses manage job photos, videos, and documents in one place?",
+          text: "Yes. Knockio includes built-in media management that lets field teams upload photos, videos, and documents directly from the job site, mark up images with annotation tools, and keep every file attached to the correct lead, work order, or customer record. Nothing gets buried in a text thread or a personal camera roll, and nothing has to be re-uploaded into a separate storage tool.",
+        },
+        {
+          "@type": "WebPageElement",
+          name: "Everything You Need, Built Into One Platform",
+        },
+        {
+          "@type": "WebPageElement",
+          name: "Capture Media However the Job Requires It",
+          hasPart: [
+            {
+              "@type": "WebPageElement",
+              name: "Photos From the Job Site",
+              text: "Technicians and reps upload inspection photos, damage evidence, measurements, before-and-after shots, completion proof, and project video straight from the job site, no separate camera app required.",
+            },
+            {
+              "@type": "WebPageElement",
+              name: "Built-In Photo Annotation",
+              text: "Draw, highlight, add arrows, and drop notes directly on an image to point out a problem area, a measurement, or a scope change without writing a paragraph to explain it.",
+            },
+            {
+              "@type": "WebPageElement",
+              name: "Documents Alongside Photos",
+              text: "Store contracts, permits, inspection reports, and other job files next to the photos and videos for that job, so nobody has to hunt through email to find one document.",
+            },
+          ],
+        },
+        {
+          "@type": "WebPageElement",
+          name: "Media Connected to Every Job Record",
+          hasPart: [
+            {
+              "@type": "WebPageElement",
+              name: "Files Tied to the Job",
+              text: "Every photo, video, and document lives inside the specific lead, customer, work order, or project it belongs to, instead of a shared folder someone has to sort through later.",
+            },
+            {
+              "@type": "WebPageElement",
+              name: "One Job History",
+              text: "Contracts, estimates, invoices, and service reports stay connected to the same job history as the media, so the full story of a job is in one place.",
+            },
+            {
+              "@type": "WebPageElement",
+              name: "Sharper Estimates and Inspections",
+              text: "Use marked-up images to support inspections, build more accurate estimates, and give crews clear work instructions before they ever step on site.",
+            },
+          ],
+        },
+        {
+          "@type": "WebPageElement",
+          name: "A Media Trail That Protects Your Business",
+          hasPart: [
+            {
+              "@type": "WebPageElement",
+              name: "Instant Accountability",
+              text: "Every upload stamps and attaches to its job automatically, giving managers clear proof that field crews documented the work properly without chasing anyone for missing shots.",
+            },
+            {
+              "@type": "WebPageElement",
+              name: "Faster Approvals",
+              text: "Paired before-and-after images hand customers, adjusters, and warranty reviewers the visual proof they need, so sign-offs and payments move ahead instead of stalling on requests.",
+            },
+            {
+              "@type": "WebPageElement",
+              name: "Searchable for Years",
+              text: "When a customer questions the work or a claim needs backup, a dated, annotated photo history gives you something to point to.",
+            },
+          ],
+        },
+        {
+          "@type": "WebPageElement",
+          name: "One Visual Record From Inspection to Completion",
+          text: "Stop wondering whether the crew actually documented the damage, or whether that one photo the customer is asking about still exists somewhere. Knockio gives owners and office staff one connected view of every photo, video, and document tied to a job, from the first walkthrough to the final invoice.",
+          hasPart: [
+            {
+              "@type": "WebPageElement",
+              name: "Real-Time Job Updates",
+              text: "The moment a technician uploads a photo or video from the field, it attaches to the job automatically. Nobody has to email it, text it separately, or remember to forward it to the office later.",
+            },
+            {
+              "@type": "WebPageElement",
+              name: "Everyone on the Same Page",
+              text: "Marked-up photos travel with the job to estimates, work orders, and crew instructions, so a subcontractor arriving on day three sees the same notes the inspector left on day one.",
+            },
+            {
+              "@type": "WebPageElement",
+              name: "Proof That Reduces Disputes",
+              text: "Having a dated, organized record of every photo and document tied to a job gives customers confidence that the work was documented properly, and gives your team something solid to point to if a question ever comes up.",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://knockio.com/#software",
+      name: "Knockio",
+      applicationCategory: "BusinessApplication",
+      applicationSubCategory: "Photo and media management for service business",
+      operatingSystem: "Web, iOS, Android",
+      description:
+        "Knockio includes built-in media management that lets field teams upload photos, videos, and documents directly from the job site, mark up images with annotation tools, and keep every file attached to the correct lead, work order, or customer record.",
+      featureList: [
+        "Upload inspection photos, damage evidence, measurements, before-and-after shots, completion proof, and project video straight from the job site",
+        "Built-in photo annotation to draw, highlight, add arrows, and drop notes directly on an image",
+        "Store contracts, permits, inspection reports, and other job files next to the photos and videos for that job",
+        "Attach every photo, video, and document to the specific lead, customer, work order, or project it belongs to",
+        "Keep contracts, estimates, invoices, and service reports connected to the same job history as the media",
+        "Use marked-up images to support inspections, build more accurate estimates, and give crews clear work instructions",
+        "Automatic stamping and attachment of every upload to its job",
+        "Paired before-and-after images for customers, adjusters, and warranty reviewers",
+        "Dated, annotated photo history that stays searchable for years",
+        "Real-time job updates as technicians upload photos or video from the field",
+        "Marked-up photos that travel with the job to estimates, work orders, and crew instructions",
+      ],
+    },
+    {
+      "@type": "ItemList",
+      "@id":
+        "https://knockio.com/features/photo-and-media-management/#media-types",
+      name: "Media and file types managed in Knockio",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Inspection photos" },
+        { "@type": "ListItem", position: 2, name: "Damage evidence photos" },
+        { "@type": "ListItem", position: 3, name: "Measurement photos" },
+        {
+          "@type": "ListItem",
+          position: 4,
+          name: "Before-and-after shots",
+        },
+        {
+          "@type": "ListItem",
+          position: 5,
+          name: "Completion proof photos",
+        },
+        { "@type": "ListItem", position: 6, name: "Project video" },
+        { "@type": "ListItem", position: 7, name: "Contracts" },
+        { "@type": "ListItem", position: 8, name: "Permits" },
+        { "@type": "ListItem", position: 9, name: "Inspection reports" },
+      ],
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id":
+        "https://knockio.com/features/photo-and-media-management/#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://knockio.com/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Features",
+          item: "https://knockio.com/features/",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Photo and Media Management",
+          item: "https://knockio.com/features/photo-and-media-management/",
+        },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://knockio.com/features/photo-and-media-management/#faq",
+      mainEntity: faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
+      })),
+    },
+  ],
+};
+
+const tabIconClass =
+  "inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-primary-500 sm:h-10 sm:w-10";
+---
+
+<KnockioHomeLayout
+  title={title}
+  description={description}
+  ogImage={asset("inner-photo-and-media-management-hero.webp")}
+  jsonLd={jsonLd}
+  whiteBg={true}
+>
+  <main id="feature-page">
+    <!-- ========== Hero ========== -->
+    <section
+      class="overflow-hidden border-b border-solid border-[#7fc271] bg-white pt-[64px]"
+    >
+      <div
+        class="grid min-h-0 lg:min-h-[610px] lg:grid-cols-[50%_50%] xl:min-h-[720px]"
+      >
+        <div
+          class="relative flex flex-col justify-center px-[5%] py-12 sm:py-16 lg:min-h-[600px] lg:px-0 lg:py-0 lg:pb-[72px] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-[42px] xl:pr-[70px]"
+        >
+          <div class="max-w-[810px]">
+            <h1
+              class="mb-7 text-[32px] font-bold leading-[38px] text-neutral-950 sm:text-[38px] sm:leading-[44px] xl:text-[48px] xl:leading-[54px] 2xl:text-[56px] 2xl:leading-[60px]"
+            >
+              Photo and Media Management Built for the Way Field Teams Actually
+              Document a Job
+            </h1>
+            <p
+              class="mb-10 max-w-[710px] text-base font-medium text-neutral-600 lg:text-lg"
+            >
+              Your crew takes forty photos on a roof, texts half to the office,
+              and the rest sit on a personal phone. When a customer questions the
+              invoice or an adjuster asks for proof, nobody can find the one
+              photo that matters. Knockio keeps every photo, video, and document
+              tied directly to the job, with annotation tools built in.
+            </p>
+            <a
+              href="#cal-sec"
+              class="inline-flex w-full items-center justify-center rounded-lg bg-primary-500 px-6 py-3.5 text-sm font-medium text-white hover:bg-primary-600 sm:w-auto sm:px-10 sm:py-4 sm:text-base lg:px-12"
+            >
+              Schedule a Demo
+            </a>
+          </div>
+
+          <div
+            id="kioSummaryPanel"
+            class="kio-summary-panel z-[18] mt-6 rounded-xl border border-solid border-primary-500/35 bg-white/95 px-[5%] py-5 text-base leading-7 text-neutral-600 lg:absolute lg:inset-x-0 lg:bottom-[72px] lg:mt-0 lg:px-0 lg:py-[22px] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-10 lg:shadow-[0_-18px_45px_rgba(15,23,42,0.08)]"
+          >
+            <h3
+              class="mb-4 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
+            >
+              Can field service businesses manage job photos, videos, and
+              documents in one place?
+            </h3>
+            <p
+              class="max-w-[720px] text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
+            >
+              Yes. Knockio includes built-in media management that lets field
+              teams upload photos, videos, and documents directly from the job
+              site, mark up images with annotation tools, and keep every file
+              attached to the correct lead, work order, or customer record.
+              Nothing gets buried in a text thread or a personal camera roll, and
+              nothing has to be re-uploaded into a separate storage tool.
+            </p>
+          </div>
+
+          <div
+            class="z-20 mt-8 min-h-[72px] border-t border-solid border-primary-500/70 bg-[#f3faf3] lg:absolute lg:inset-x-0 lg:bottom-0 lg:mt-0"
+          >
+            <button
+              id="kioSummaryBtn"
+              class="kio-summary-button duration-250 flex min-h-[72px] w-full items-center justify-between gap-5 px-[5%] text-neutral-950 transition-colors hover:bg-[#edf8ed] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-10"
+              type="button"
+              aria-expanded="false"
+              aria-controls="kioSummaryPanel"
+            >
+              <span class="text-lg font-medium leading-6">Quick summary</span>
+              <ChevronRight
+                class="summary-chevron size-5 shrink-0"
+                aria-hidden="true"
+              />
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="hero-feature-visual relative flex min-h-[320px] items-end justify-center overflow-hidden px-4 sm:min-h-[400px] lg:min-h-full lg:px-0"
+        >
+          <img
+            src={asset("inner-photo-and-media-management-hero.webp")}
+            alt="Photo and media management software preview"
+            width="830"
+            height="560"
+            decoding="async"
+            loading="eager"
+            fetchpriority="high"
+            class="relative z-10 w-[min(92%,720px)] max-w-[830px] object-contain object-bottom lg:-mb-3 lg:w-[min(92%,830px)] lg:animate-kio-float"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Everything You Need ========== -->
+    <section
+      class="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-[130px]"
+    >
+      <div
+        class="pointer-events-none absolute inset-0 opacity-[0.35] [background-image:radial-gradient(#0f172a_0.7px,transparent_0.7px)] [background-size:18px_18px]"
+      >
+      </div>
+
+      <div class="my-container relative z-10">
+        <div class="mx-auto mb-14 max-w-[900px] text-center lg:mb-16">
+          <h2
+            class="text-center text-[31px] font-bold leading-[39px] text-neutral-950 sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+          >
+            Everything You Need, <br class="hidden md:block" />
+            Built Into One Platform
+          </h2>
+        </div>
+
+        <div
+          class="mx-auto grid max-w-[1450px] items-start gap-10 lg:grid-cols-[500px_minmax(0,1fr)] lg:gap-16 xl:grid-cols-[540px_minmax(0,1fr)] xl:gap-20"
+        >
+          <div class="grid w-full max-w-[540px] content-start gap-4">
+            {
+              proposalGroups.map((group, groupIndex) => (
+                <div
+                  class:list={[
+                    "proposal-tab overflow-hidden rounded-2xl border border-solid border-[#e1e8de] bg-white shadow-sm transition-all duration-300 [&.is-active]:border-[#0f172a]",
+                    groupIndex === 0 && "is-active",
+                  ]}
+                  data-tab={group.key}
+                >
+                  <button
+                    class="proposal-tab-header flex w-full cursor-pointer items-center justify-between gap-4 rounded-2xl bg-white px-5 py-4 text-left text-[#0f172a] transition-all duration-300 [&[aria-expanded='true']]:rounded-b-none [&[aria-expanded='true']]:bg-[#0f172a] [&[aria-expanded='true']]:text-white sm:px-6 sm:py-5"
+                    type="button"
+                    aria-expanded={groupIndex === 0 ? "true" : "false"}
+                  >
+                    <span class="flex items-center gap-4">
+                      <span class={tabIconClass}>
+                        {group.icon === "camera" && (
+                          <Camera class="size-[22px]" aria-hidden="true" />
+                        )}
+                        {group.icon === "link" && (
+                          <Link2 class="size-[22px]" aria-hidden="true" />
+                        )}
+                        {group.icon === "shield" && (
+                          <ShieldCheck
+                            class="size-[22px]"
+                            aria-hidden="true"
+                          />
+                        )}
+                      </span>
+                      <span class="text-xl font-bold leading-7 sm:text-lg sm:leading-8">
+                        {group.title}
+                      </span>
+                    </span>
+                    <ChevronDown
+                      class="proposal-chevron size-[18px] shrink-0"
+                      aria-hidden="true"
+                    />
+                  </button>
+
+                  <div class="proposal-panel">
+                    <div class="grid gap-3 rounded-b-2xl border border-t-0 border-solid border-[#e1e8de] bg-white px-5 py-5 sm:px-6">
+                      {group.items.map((item, itemIndex) => (
+                        <button
+                          class:list={[
+                            "proposal-subitem grid w-full grid-cols-[24px_1fr] items-start gap-3 rounded-xl px-3 py-2.5 text-left text-base font-semibold leading-6 text-[#0f172a] transition-all duration-300 hover:bg-[#f2f8f0] sm:text-[18px] sm:leading-7 [&.is-active]:bg-primary-500 [&.is-active]:text-white",
+                            groupIndex === 0 &&
+                              itemIndex === 0 &&
+                              "is-active",
+                          ]}
+                          type="button"
+                          data-tab={group.key}
+                          data-index={String(itemIndex)}
+                          data-title={item.title}
+                          data-text={item.text}
+                          data-image={item.image}
+                        >
+                          <ArrowRight
+                            class="mt-1 size-[17px]"
+                            aria-hidden="true"
+                          />
+                          <span>{item.label}</span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+
+          <div class="w-full self-start">
+            <div
+              id="proposalVisual"
+              class="proposal-visual-card relative overflow-hidden"
+            >
+              <img
+                id="proposalVisualImage"
+                src={initialItem.image}
+                alt={initialItem.title}
+                width="714"
+                height="386"
+                decoding="async"
+                loading="lazy"
+                class="relative z-10 h-full w-full object-contain"
+              />
+            </div>
+            <div class="mt-7 max-w-[760px]">
+              <p
+                id="proposalVisualTitle"
+                class="mb-4 text-[24px] font-bold leading-8 text-[#0f172a] sm:text-[32px] sm:leading-[40px]"
+              >
+                {initialItem.title}
+              </p>
+              <p
+                id="proposalVisualText"
+                class="text-base font-normal leading-7 text-neutral-700 sm:text-lg sm:leading-8"
+              >
+                {initialItem.text}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sr-only">
+          {
+            proposalGroups.map((group) => (
+              <div>
+                <h3>{group.title}</h3>
+                <div>
+                  {group.items.map((item) => (
+                    <article>
+                      <h3>{item.title}</h3>
+                      <p>{item.text}</p>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Trusted ========== -->
+    <section
+      class="relative overflow-hidden bg-[#0F172A] py-24 sm:py-28 lg:py-[150px]"
+    >
+      <div
+        class="pointer-events-none absolute inset-0 opacity-[0.22] [background-image:radial-gradient(rgba(255,255,255,0.65)_0.8px,transparent_0.8px)] [background-size:18px_18px]"
+      >
+      </div>
+      <div
+        class="pointer-events-none absolute top-16 left-1/2 h-[420px] w-[860px] -translate-x-1/2 rounded-full bg-primary-500/10 blur-3xl"
+      >
+      </div>
+
+      <div class="my-container relative z-10">
+        <div class="mx-auto mb-16 max-w-[1040px] text-center lg:mb-20">
+          <h2
+            class="mb-6 text-center text-[31px] font-bold leading-[39px] text-white sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+          >
+            Trusted by 100&rsquo;s of customers
+          </h2>
+          <p
+            class="mx-auto max-w-[800px] text-base leading-7 text-white/80 sm:text-lg sm:leading-8"
+          >
+            Join hundreds of growing teams using Knockio to manage leads, sales,
+            field teams, and customer relationships.
+          </p>
+        </div>
+
+        <div
+          class="mx-auto grid max-w-[1120px] grid-cols-1 justify-items-center gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10"
+        >
+          {
+            trustBadges.map((badge) => (
+              <a
+                href={badge.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={badge.label}
+                class="group block rounded-3xl focus:ring-2 focus:ring-primary-500 focus:ring-offset-4 focus:ring-offset-[#0F172A] focus:outline-none"
+              >
+                <img
+                  src={badge.src}
+                  alt={badge.alt}
+                  width="203"
+                  height="280"
+                  decoding="async"
+                  loading="lazy"
+                  class="w-full max-w-[200px] object-contain transition duration-300 group-hover:-translate-y-2 group-hover:drop-shadow-[0_24px_34px_rgba(255,255,255,0.12)]"
+                />
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== One Visual Record ========== -->
+    <section
+      class="relative overflow-hidden bg-white py-24 sm:py-28 lg:py-[150px]"
+    >
+      <div
+        class="pointer-events-none absolute top-32 left-1/2 h-[420px] w-[900px] -translate-x-1/2 rounded-full bg-primary-500/5 blur-3xl"
+      >
+      </div>
+
+      <div class="my-container relative z-10">
+        <div class="mx-auto mb-14 max-w-[1120px] text-center lg:mb-20">
+          <h2
+            class="mb-6 text-center text-[31px] font-bold leading-[39px] text-neutral-950 sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+          >
+            One Visual Record From<br class="hidden lg:block" />
+            Inspection to Completion
+          </h2>
+          <p
+            class="mx-auto max-w-[800px] text-base leading-6 text-neutral-700 sm:text-lg sm:leading-6"
+          >
+            Stop wondering whether the crew actually documented the damage, or
+            whether that one photo the customer is asking about still exists
+            somewhere. Knockio gives owners and office staff one connected view
+            of every photo, video, and document tied to a job, from the first
+            walkthrough to the final invoice.
+          </p>
+        </div>
+
+        <div class="mx-auto grid max-w-[1380px] gap-6 lg:grid-cols-3 lg:gap-8">
+          <article
+            class="group relative overflow-hidden rounded-[28px] border border-solid border-neutral-200 bg-white p-7 shadow-[0_18px_50px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-primary-500/40 hover:shadow-[0_28px_70px_rgba(15,23,42,0.09)] sm:p-8 lg:p-9"
+          >
+            <div
+              class="absolute top-0 right-0 h-32 w-32 translate-x-10 -translate-y-10 rounded-full bg-primary-500/10"
+            >
+            </div>
+            <div class="relative mb-8 flex items-start justify-between gap-5">
+              <div
+                class="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-500/10 text-primary-500 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white"
+              >
+                <RefreshCw class="size-7" aria-hidden="true" />
+              </div>
+            </div>
+            <h3
+              class="relative mb-5 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
+            >
+              Real-Time Job Updates
+            </h3>
+            <p
+              class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
+            >
+              The moment a technician uploads a photo or video from the field,
+              it attaches to the job automatically. Nobody has to email it, text
+              it separately, or remember to forward it to the office later.
+            </p>
+          </article>
+
+          <article
+            class="group relative overflow-hidden rounded-[28px] border border-solid border-[#0F172A] bg-[#0F172A] p-7 shadow-[0_24px_70px_rgba(15,23,42,0.20)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_34px_90px_rgba(15,23,42,0.26)] sm:p-8 lg:p-9"
+          >
+            <div
+              class="absolute top-0 right-0 h-40 w-40 translate-x-12 -translate-y-12 rounded-full bg-primary-500/20"
+            >
+            </div>
+            <div
+              class="absolute bottom-0 left-0 h-32 w-32 -translate-x-12 translate-y-12 rounded-full bg-white/10"
+            >
+            </div>
+            <div class="relative mb-8 flex items-start justify-between gap-5">
+              <div
+                class="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-500 text-white"
+              >
+                <Users class="size-7" aria-hidden="true" />
+              </div>
+            </div>
+            <h3
+              class="relative mb-5 text-[21px] font-semibold leading-[27px] text-white sm:text-2xl sm:leading-7"
+            >
+              Everyone on the Same Page
+            </h3>
+            <p
+              class="relative text-[15px] leading-6 text-white/75 sm:text-base sm:leading-6"
+            >
+              Marked-up photos travel with the job to estimates, work orders,
+              and crew instructions, so a subcontractor arriving on day three
+              sees the same notes the inspector left on day one.
+            </p>
+          </article>
+
+          <article
+            class="group relative overflow-hidden rounded-[28px] border border-solid border-neutral-200 bg-white p-7 shadow-[0_18px_50px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-primary-500/40 hover:shadow-[0_28px_70px_rgba(15,23,42,0.09)] sm:p-8 lg:p-9"
+          >
+            <div
+              class="absolute top-0 right-0 h-32 w-32 translate-x-10 -translate-y-10 rounded-full bg-primary-500/10"
+            >
+            </div>
+            <div class="relative mb-8 flex items-start justify-between gap-5">
+              <div
+                class="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-500/10 text-primary-500 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white"
+              >
+                <ShieldCheck class="size-7" aria-hidden="true" />
+              </div>
+            </div>
+            <h3
+              class="relative mb-5 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
+            >
+              Proof That Reduces Disputes
+            </h3>
+            <p
+              class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
+            >
+              Having a dated, organized record of every photo and document tied
+              to a job gives customers confidence that the work was documented
+              properly, and gives your team something solid to point to if a
+              question ever comes up.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="bg-white py-16 sm:py-20 lg:py-24">
+      <div class="my-container mx-auto">
+        <div class="grid gap-10 lg:grid-cols-2 lg:gap-20">
+          <div>
+            <p
+              class="mb-4 text-sm leading-7 font-medium text-primary-500 md:text-2xl"
+            >
+              Frequently Asked Questions
+            </p>
+            <h2
+              class="mb-8 w-full max-w-3xl text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:max-w-none lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+            >
+              Everything Teams Ask About Photo and Media Management
+            </h2>
+            <p
+              class="mb-6 w-full max-w-3xl text-sm leading-6 font-normal text-neutral-800 sm:text-base sm:leading-7 md:mb-8 md:text-lg md:leading-8"
+            >
+              Job photos and documents are only useful if everyone can find
+              them — here's how Knockio keeps media tied to the work.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            {
+              faqs.map((faq) => (
+                <div class="faq-item overflow-hidden rounded-2xl border border-solid border-neutral-200 transition-all duration-300">
+                  <button
+                    class="faq-button group flex w-full items-center justify-between p-4 text-left sm:p-6"
+                    type="button"
+                  >
+                    <span class="text-base font-medium text-neutral-950 transition-colors group-hover:text-primary-500 sm:text-lg lg:text-xl">
+                      {faq.q}
+                    </span>
+                    <div class="faq-icon ml-4 flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary-500">
+                      <svg
+                        class="icon-minus hidden h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M20 12H4"
+                        />
+                      </svg>
+                      <svg
+                        class="icon-plus h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 4v16m8-8H4"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                  <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="p-4 pt-0 text-sm leading-relaxed text-neutral-600 sm:p-6 sm:pt-0 sm:text-base">
+                      {faq.a}
+                    </div>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Customer Reviews ========== -->
+    <section class="overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
+      <div class="my-container mx-auto mb-10 text-center lg:mb-16">
+        <p
+          class="mb-4 text-sm leading-7 font-medium text-primary-500 md:text-2xl"
+        >
+          Customer Reviews
+        </p>
+        <h2
+          class="mb-8 text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+        >
+          What Field Service and Sales<br />
+          Teams Say About Knockio
+        </h2>
+        <img
+          src={asset("google-5-star.webp")}
+          alt="google review badge"
+          width="183"
+          height="60"
+          decoding="async"
+          loading="lazy"
+          class="mx-auto h-auto w-[150px] sm:w-[183px]"
+        />
+      </div>
+
+      <div class="mt-7 space-y-8">
+        <div class="testimonial-track-container flex overflow-hidden">
+          <div
+            class="testimonial-track hover:pause flex animate-marquee-left gap-4 sm:gap-6"
+          >
+            {
+              [0, 1].map((dup) => (
+                <div
+                  class="card-set flex gap-4 sm:gap-6"
+                  aria-hidden={dup === 1 ? "true" : undefined}
+                >
+                  {reviewsRow1.map((review) => (
+                    <div class="relative w-[300px] flex-shrink-0 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 group sm:w-[380px] sm:p-6 lg:w-[450px] lg:p-8">
+                      <p class="relative z-10 mb-6 min-h-[168px] text-sm italic leading-relaxed text-neutral-700 sm:mb-8 sm:text-base lg:text-lg">
+                        {review.quote}
+                      </p>
+                      <div class="relative z-10 flex items-center gap-4">
+                        <img
+                          src={review.avatar}
+                          alt={review.name}
+                          width="48"
+                          height="48"
+                          decoding="async"
+                          loading="lazy"
+                          class="h-12 w-12 rounded-full object-cover grayscale transition-all group-hover:grayscale-0"
+                        />
+                        <div>
+                          <h3 class="mb-1 text-base font-bold text-neutral-950">
+                            {review.name}
+                          </h3>
+                          <p
+                            class="text-sm text-neutral-500"
+                            aria-label="5 out of 5 stars"
+                          >
+                            ⭐⭐⭐⭐⭐
+                          </p>
+                        </div>
+                      </div>
+                      <Quote
+                        class="pointer-events-none absolute right-8 bottom-6 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <div class="testimonial-track-container flex overflow-hidden">
+          <div
+            class="testimonial-track hover:pause flex animate-marquee-right gap-4 sm:gap-6"
+          >
+            {
+              [0, 1].map((dup) => (
+                <div
+                  class="card-set flex gap-4 sm:gap-6"
+                  aria-hidden={dup === 1 ? "true" : undefined}
+                >
+                  {reviewsRow2.map((review) => (
+                    <div class="relative w-[300px] flex-shrink-0 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 group sm:w-[380px] sm:p-6 lg:w-[450px] lg:p-8">
+                      <p class="relative z-10 mb-6 min-h-[168px] text-sm italic leading-relaxed text-neutral-700 sm:mb-8 sm:text-base lg:text-lg">
+                        {review.quote}
+                      </p>
+                      <div class="relative z-10 flex items-center gap-4">
+                        <img
+                          src={review.avatar}
+                          alt={review.name}
+                          width="48"
+                          height="48"
+                          decoding="async"
+                          loading="lazy"
+                          class="h-12 w-12 rounded-full object-cover grayscale transition-all group-hover:grayscale-0"
+                        />
+                        <div>
+                          <h3 class="mb-1 text-base font-bold text-neutral-950">
+                            {review.name}
+                          </h3>
+                          <p
+                            class="text-sm text-neutral-500"
+                            aria-label="5 out of 5 stars"
+                          >
+                            ⭐⭐⭐⭐⭐
+                          </p>
+                        </div>
+                      </div>
+                      <Quote
+                        class="pointer-events-none absolute right-8 bottom-6 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../../scripts/feature-page.js"></script>
+</KnockioHomeLayout>

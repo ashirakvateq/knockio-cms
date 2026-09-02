@@ -1,0 +1,1053 @@
+---
+import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
+import "../../styles/feature-page.css";
+import {
+  ArrowRight,
+  Check,
+  ChevronDown,
+  ChevronRight,
+  LayoutDashboard,
+  Link2,
+  ListChecks,
+  Map,
+  Quote,
+  TrendingUp,
+  Users,
+} from "lucide-astro";
+
+const title = "Route Planning and Dispatching Software | Knockio";
+const description =
+  "Build routes, assign crews, and dispatch the right technician from one screen. See why field service teams stop juggling maps, calendars, and CRMs with Knockio.";
+
+const asset = (name: string) => `/assets/cfw/${name}`;
+
+const proposalGroups = [
+  {
+    key: "planning",
+    title: "Plan the Day Without Switching Tools",
+    icon: "map" as const,
+    items: [
+      {
+        label: "Daily Routes",
+        title: "Daily Routes",
+        text: "Build routes for leads, customers, inspections, jobs, and recurring service stops in one view, instead of piecing together a plan across a map app and a spreadsheet.",
+        image: asset(
+          "inner-route-planning-plan-the-day-daily-routes.webp",
+        ),
+      },
+      {
+        label: "Assigned Stop Details",
+        title: "Assigned Stop Details",
+        text: "Reps and crews see each stop's customer information, visit status, notes, and photos alongside the next action expected of them, so nobody arrives without context.",
+        image: asset(
+          "inner-route-planning-plan-the-day-assigned-stop-details.webp",
+        ),
+      },
+      {
+        label: "Recurring Stops",
+        title: "Recurring Stops",
+        text: "Set up routes for repeat service visits so maintenance and inspection stops do not need to be rebuilt from scratch every cycle.",
+        image: asset(
+          "inner-route-planning-plan-the-day-recurring-stops.webp",
+        ),
+      },
+    ],
+  },
+  {
+    key: "dispatch",
+    title: "Dispatch the Right Person, Fast",
+    icon: "users" as const,
+    items: [
+      {
+        label: "Job Scheduling",
+        title: "Job Scheduling",
+        text: "Office teams schedule jobs and assign technicians or crews from the same screen where the route was built, cutting out the back-and-forth between calendar and dispatch board.",
+        image: asset(
+          "inner-route-planning-dispatch-job-scheduling.webp",
+        ),
+      },
+      {
+        label: "Skill-Based Assignment",
+        title: "Skill-Based Assignment",
+        text: "Dispatch based on who is qualified, available, and positioned to take the job, rather than guessing from memory who is free.",
+        image: asset(
+          "inner-route-planning-dispatch-skill-based-assignment.webp",
+        ),
+      },
+      {
+        label: "Live Reassignment",
+        title: "Live Reassignment",
+        text: "When a job changes or a technician/crew runs long, dispatch a different crew without rebuilding the route or losing the job's history.",
+        image: asset(
+          "inner-route-planning-dispatch-live-reassignment.webp",
+        ),
+      },
+    ],
+  },
+  {
+    key: "records",
+    title: "Keep Everyone on the Same Record",
+    icon: "link" as const,
+    items: [
+      {
+        label: "Connected Job History",
+        title: "Connected Job History",
+        text: "Route activity, visit status, and dispatch decisions stay tied to the customer and job record, so a stop completed in the field updates the same file the office is looking at.",
+        image: asset(
+          "inner-route-planning-records-connected-job-history.webp",
+        ),
+      },
+      {
+        label: "Route Progress Visibility",
+        title: "Route Progress Visibility",
+        text: "Managers see which stops are done, which are in progress, and which still need attention, without calling the field for an update.",
+        image: asset(
+          "inner-route-planning-records-route-progress-visibility.webp",
+        ),
+      },
+      {
+        label: "Fewer Missed Stops",
+        title: "Fewer Missed Stops",
+        text: "Because routing, scheduling, and dispatch share one system, conflicting assignments, duplicate visits, and forgotten stops are easier to catch before they cost a day.",
+        image: asset(
+          "inner-route-planning-records-fewer-missed-stops.webp",
+        ),
+      },
+    ],
+  },
+];
+
+const initialItem = proposalGroups[0].items[0];
+
+const trustBadges = [
+  {
+    href: "https://www.capterra.com/p/10018264/Knockio/",
+    src: asset("badge-new-capterra.webp"),
+    alt: "Knockio Capterra rating badge",
+    label: "View Knockio reviews on Capterra",
+  },
+  {
+    href: "https://www.softwareadvice.com/field-sales/knockio-profile/",
+    src: asset("badge-new-software-advice.webp"),
+    alt: "Knockio Software Advice rating badge",
+    label: "View Knockio reviews on Software Advice",
+  },
+  {
+    href: "https://www.getapp.com/all-software/a/knockio/",
+    src: asset("badge-new-get-app.webp"),
+    alt: "Knockio GetApp rating badge",
+    label: "View Knockio reviews on GetApp",
+  },
+  {
+    href: "https://www.g2.com/products/knockio-by-knockio/reviews",
+    src: asset("badge-new-g2.webp"),
+    alt: "Knockio G2 rating badge",
+    label: "View Knockio reviews on G2",
+  },
+];
+
+const faqs = [
+  {
+    q: "Can Knockio plan routes and dispatch crews on the same platform as the CRM?",
+    a: "Yes. Knockio lets office staff build daily routes for leads, jobs, inspections, and recurring service stops, then dispatch technicians or crews without leaving the platform. Because routing and dispatch pull from the same customer and job records used across sales and service, a reassignment does not require re-entering information in a separate mapping or calendar tool.",
+  },
+  {
+    q: "Does Knockio handle both route planning and dispatching, or are they separate tools?",
+    a: "Both live in the same platform. Office teams build the route and assign technicians or crews from the same screen, without exporting data to a separate dispatch tool.",
+  },
+  {
+    q: "Can I build routes for recurring service visits, not just one-time jobs?",
+    a: "Yes. Routes can include recurring stops for repeat service, maintenance, or inspection visits alongside one-time jobs and leads.",
+  },
+  {
+    q: "What can technicians and crews see when they're out on their route?",
+    a: "They can view each stop's customer information, visit status, notes, and photos, along with the next action expected at that stop.",
+  },
+  {
+    q: "What happens if I need to reassign a job mid-day?",
+    a: "Dispatch can reassign a job to a different technician or crew without rebuilding the route, and the job's history stays connected to the customer record.",
+  },
+  {
+    q: "Do route and dispatch activities connect to the rest of the customer record?",
+    a: "Yes. Route activity and dispatch decisions stay tied to the customer and job record used across the platform, so office staff and field teams are working from the same information.",
+  },
+  {
+    q: "What is route planning and dispatching software?",
+    a: "Route planning and dispatching tool helps field businesses organize where teams need to go and who should handle each stop. It also keeps the information needed to complete the visit close to the work. Route planning arranges leads, customers, inspections, jobs, and repeat service stops. Dispatching assigns those stops to a representative, technician, or crew and keeps the schedule visible to the office and field. Knockio connects both parts of the workflow. Each stop can stay tied to its lead, customer, appointment, job, or work order, so the route carries more than an address.",
+  },
+];
+
+const reviewsRow1 = [
+  {
+    name: "Lacey Jackson",
+    avatar: asset("avatar-lacey-jackson.webp"),
+    quote:
+      "This app is the best thing that has happened to our company! Asad is absolutely amazing! He is so responsive, it doesn't matter what time of day he is on it! I highly recommend this company add this app!",
+  },
+  {
+    name: "Ben Loveland",
+    avatar: asset("avatar-ben-loveland.webp"),
+    quote:
+      "Knockio is a great product! We use it for our roofing sales canvassing. Their support team is responsive and fixes issues immediately. Highly recommend!",
+  },
+  {
+    name: "Bar Galanti",
+    avatar: asset("avatar-bar-galanti.webp"),
+    quote:
+      "The support team is awesome. The live tracking feature is very useful. The pricing is fair as well!",
+  },
+];
+
+const reviewsRow2 = [
+  {
+    name: "Georgia Hancocks",
+    avatar: asset("avatar-georgia-hancocks.webp"),
+    quote:
+      "Knockio is the best! My team and I absolutely love using it - it is so user friendly and simple. Support is brilliant too, nothing is ever too much trouble. The best on the market. Thanks Knockio!",
+  },
+  {
+    name: "Sarah Bennett",
+    avatar: asset("avatar-sarah-bennett.webp"),
+    quote:
+      "We love Knockio so far! It is solving a lot of the issues of the other canvassing apps. The team have worked with us providing excellent fast support. Highly recommend if you're seeing people face to face.",
+  },
+  {
+    name: "Ayana Hall",
+    avatar: asset("avatar-ayana-hall.webp"),
+    quote:
+      "Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.",
+  },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id":
+        "https://knockio.com/features/route-planning-and-dispatching/#webpage",
+      url: "https://knockio.com/features/route-planning-and-dispatching/",
+      name: "Route Planning and Dispatching Software | Knockio",
+      headline: "Route Planning and Dispatching That Runs From One Screen",
+      description,
+      isPartOf: { "@id": "https://knockio.com/#website" },
+      about: { "@id": "https://knockio.com/#software" },
+      mainEntity: { "@id": "https://knockio.com/#software" },
+      mainContentOfPage: {
+        "@type": "WebPageElement",
+        name: "Route Planning and Dispatching That Runs From One Screen",
+        text: "Your crews are scattered across town, the calendar lives in one app, the map lives in another, and every reassignment means a phone call to whoever is closest to the next stop. Knockio puts route planning and dispatching inside the same platform as your leads, jobs, and customer records, so building a route and assigning the right person to it does not mean switching tools.",
+      },
+      hasPart: [
+        {
+          "@type": "WebPageElement",
+          name: "Quick Answer: Can Knockio plan routes and dispatch crews on the same platform as the CRM?",
+          text: "Yes. Knockio lets office staff build daily routes for leads, jobs, inspections, and recurring service stops, then dispatch technicians or crews without leaving the platform. Because routing and dispatch pull from the same customer and job records used across sales and service, a reassignment does not require re-entering information in a separate mapping or calendar tool.",
+        },
+        {
+          "@type": "WebPageElement",
+          name: "Plan the Day Without Switching Tools",
+          hasPart: [
+            {
+              "@type": "WebPageElement",
+              name: "Daily Routes",
+              text: "Build routes for leads, customers, inspections, jobs, and recurring service stops in one view, instead of piecing together a plan across a map app and a spreadsheet.",
+            },
+            {
+              "@type": "WebPageElement",
+              name: "Assigned Stop Details",
+              text: "Reps and crews see each stop's customer information, visit status, notes, and photos alongside the next action expected of them, so nobody arrives without context.",
+            },
+            {
+              "@type": "WebPageElement",
+              name: "Recurring Stops",
+              text: "Set up routes for repeat service visits so maintenance and inspection stops do not need to be rebuilt from scratch every cycle.",
+            },
+          ],
+        },
+        {
+          "@type": "WebPageElement",
+          name: "Dispatch the Right Person, Fast",
+          hasPart: [
+            {
+              "@type": "WebPageElement",
+              name: "Job Scheduling",
+              text: "Office teams schedule jobs and assign technicians or crews from the same screen where the route was built, cutting out the back-and-forth between calendar and dispatch board.",
+            },
+            {
+              "@type": "WebPageElement",
+              name: "Skill-Based Assignment",
+              text: "Dispatch based on who is qualified, available, and positioned to take the job, rather than guessing from memory who is free.",
+            },
+            {
+              "@type": "WebPageElement",
+              name: "Live Reassignment",
+              text: "When a job changes or a technician/crew runs long, dispatch a different crew without rebuilding the route or losing the job's history.",
+            },
+          ],
+        },
+        {
+          "@type": "WebPageElement",
+          name: "Keep Everyone on the Same Record",
+          hasPart: [
+            {
+              "@type": "WebPageElement",
+              name: "Connected Job History",
+              text: "Route activity, visit status, and dispatch decisions stay tied to the customer and job record, so a stop completed in the field updates the same file the office is looking at.",
+            },
+            {
+              "@type": "WebPageElement",
+              name: "Route Progress Visibility",
+              text: "Managers see which stops are done, which are in progress, and which still need attention, without calling the field for an update.",
+            },
+            {
+              "@type": "WebPageElement",
+              name: "Fewer Missed Stops",
+              text: "Because routing, scheduling, and dispatch share one system, conflicting assignments, duplicate visits, and forgotten stops are easier to catch before they cost a day.",
+            },
+          ],
+        },
+        {
+          "@type": "WebPageElement",
+          name: "Why Route Planning and Dispatching Belong in One Platform",
+          text: "Field service delays rarely come from a bad route. They come from the gap between the route, the calendar, and whoever is deciding who goes where. When those three things live in separate tools, a single change, a cancellation, a sick technician, or a job that runs long means someone has to manually update a map, a calendar, and a CRM, in that order, before the next crew even knows their day changed.",
+          hasPart: [
+            {
+              "@type": "WebPageElement",
+              name: "One Screen for Planning and Dispatch",
+              text: "Building the route and assigning the work happen in the same place, so office staff are not exporting a route plan into a separate dispatch board.",
+            },
+            {
+              "@type": "WebPageElement",
+              name: "Field Teams See the Full Picture",
+              text: "Technicians and reps view their stops alongside the customer's history, prior notes, and photos, cutting down on calls back to the office just to get context on a job.",
+            },
+            {
+              "@type": "WebPageElement",
+              name: "Managers Track the Day in Real Time",
+              text: "Route progress updates as stops are completed, giving managers a current view of coverage and delays instead of waiting for end-of-day recaps.",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://knockio.com/#software",
+      name: "Knockio",
+      applicationCategory: "BusinessApplication",
+      applicationSubCategory: "Route planning and dispatching software",
+      operatingSystem: "Web, iOS, Android",
+      description:
+        "Knockio lets office staff build daily routes for leads, jobs, inspections, and recurring service stops, then dispatch technicians or crews without leaving the platform, with routing and dispatch pulling from the same customer and job records used across sales and service.",
+      featureList: [
+        "Build daily routes for leads, customers, inspections, jobs, and recurring service stops in one view",
+        "Show reps and crews each stop's customer information, visit status, notes, and photos alongside the next expected action",
+        "Set up routes for repeat service, maintenance, and inspection visits without rebuilding them each cycle",
+        "Schedule jobs and assign technicians or crews from the same screen where the route was built",
+        "Skill-based assignment by who is qualified, available, and positioned to take the job",
+        "Live reassignment to a different crew without rebuilding the route or losing the job's history",
+        "Keep route activity, visit status, and dispatch decisions tied to the customer and job record",
+        "Route progress visibility showing which stops are done, in progress, or still need attention",
+        "Catch conflicting assignments, duplicate visits, and forgotten stops before they cost a day",
+      ],
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id":
+        "https://knockio.com/features/route-planning-and-dispatching/#definition",
+      name: "Route planning and dispatching software",
+      description:
+        "Route planning and dispatching tool helps field businesses organize where teams need to go and who should handle each stop. It also keeps the information needed to complete the visit close to the work. Route planning arranges leads, customers, inspections, jobs, and repeat service stops. Dispatching assigns those stops to a representative, technician, or crew and keeps the schedule visible to the office and field.",
+      inDefinedTermSet: { "@id": "https://knockio.com/#website" },
+    },
+    {
+      "@type": "ItemList",
+      "@id":
+        "https://knockio.com/features/route-planning-and-dispatching/#stop-types",
+      name: "Stop types Knockio can route and dispatch",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Leads" },
+        { "@type": "ListItem", position: 2, name: "Customers" },
+        { "@type": "ListItem", position: 3, name: "Inspections" },
+        { "@type": "ListItem", position: 4, name: "Jobs" },
+        {
+          "@type": "ListItem",
+          position: 5,
+          name: "Recurring service stops",
+        },
+        { "@type": "ListItem", position: 6, name: "Maintenance visits" },
+        { "@type": "ListItem", position: 7, name: "Work orders" },
+      ],
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id":
+        "https://knockio.com/features/route-planning-and-dispatching/#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://knockio.com/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Features",
+          item: "https://knockio.com/features/",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Route Planning and Dispatching",
+          item: "https://knockio.com/features/route-planning-and-dispatching/",
+        },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://knockio.com/features/route-planning-and-dispatching/#faq",
+      mainEntity: faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
+      })),
+    },
+  ],
+};
+
+const tabIconClass =
+  "inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-primary-500 sm:h-10 sm:w-10";
+---
+
+<KnockioHomeLayout
+  title={title}
+  description={description}
+  ogImage={asset("inner-route-planning-and-dispatching-hero.webp")}
+  jsonLd={jsonLd}
+  whiteBg={true}
+>
+  <main id="feature-page">
+    <!-- ========== Hero ========== -->
+    <section
+      class="overflow-hidden border-b border-solid border-[#7fc271] bg-white pt-[64px]"
+    >
+      <div
+        class="grid min-h-0 lg:min-h-[610px] lg:grid-cols-[50%_50%] xl:min-h-[720px]"
+      >
+        <div
+          class="relative flex flex-col justify-center px-[5%] py-12 sm:py-16 lg:min-h-[600px] lg:px-0 lg:py-0 lg:pb-[72px] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-[42px] xl:pr-[70px]"
+        >
+          <div class="max-w-[810px]">
+            <h1
+              class="mb-7 text-[34px] font-bold leading-[42px] text-neutral-950 sm:text-[40px] sm:leading-[48px] xl:text-[52px] xl:leading-[60px] 2xl:text-[60px] 2xl:leading-[68px]"
+            >
+              Route Planning and Dispatching{" "}
+              <br class="hidden sm:block" />
+              That Runs From One Screen
+            </h1>
+            <p
+              class="mb-10 max-w-[710px] text-base font-medium text-neutral-600 lg:text-lg"
+            >
+              Your crews are scattered across town, the calendar lives in one
+              app, the map lives in another, and every reassignment means a
+              phone call to whoever is closest to the next stop. Knockio puts
+              route planning and dispatching inside the same platform as your
+              leads, jobs, and customer records, so building a route and
+              assigning the right person to it does not mean switching tools.
+            </p>
+            <a
+              href="#cal-sec"
+              class="inline-flex w-full items-center justify-center rounded-lg bg-primary-500 px-6 py-3.5 text-sm font-medium text-white hover:bg-primary-600 sm:w-auto sm:px-10 sm:py-4 sm:text-base lg:px-12"
+            >
+              Schedule a Demo
+            </a>
+          </div>
+
+          <div
+            id="kioSummaryPanel"
+            class="kio-summary-panel z-[18] mt-6 rounded-xl border border-solid border-primary-500/35 bg-white/95 px-[5%] py-5 text-base leading-7 text-neutral-600 lg:absolute lg:inset-x-0 lg:bottom-[72px] lg:mt-0 lg:px-0 lg:py-[22px] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-10 lg:shadow-[0_-18px_45px_rgba(15,23,42,0.08)]"
+          >
+            <h3
+              class="mb-4 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
+            >
+              Can Knockio plan routes and dispatch crews on the same platform as
+              the CRM?
+            </h3>
+            <p
+              class="max-w-[720px] text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
+            >
+              Yes. Knockio lets office staff build daily routes for leads, jobs,
+              inspections, and recurring service stops, then dispatch
+              technicians or crews without leaving the platform. Because routing
+              and dispatch pull from the same customer and job records used
+              across sales and service, a reassignment does not require
+              re-entering information in a separate mapping or calendar tool.
+            </p>
+          </div>
+
+          <div
+            class="z-20 mt-8 min-h-[72px] border-t border-solid border-primary-500/70 bg-[#f3faf3] lg:absolute lg:inset-x-0 lg:bottom-0 lg:mt-0"
+          >
+            <button
+              id="kioSummaryBtn"
+              class="kio-summary-button duration-250 flex min-h-[72px] w-full items-center justify-between gap-5 px-[5%] text-neutral-950 transition-colors hover:bg-[#edf8ed] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-10"
+              type="button"
+              aria-expanded="false"
+              aria-controls="kioSummaryPanel"
+            >
+              <span class="text-lg font-medium leading-6">Quick summary</span>
+              <ChevronRight
+                class="summary-chevron size-5 shrink-0"
+                aria-hidden="true"
+              />
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="hero-feature-visual relative flex min-h-[320px] items-end justify-center overflow-hidden px-4 sm:min-h-[400px] lg:min-h-full lg:px-0"
+        >
+          <img
+            src={asset("inner-route-planning-and-dispatching-hero.webp")}
+            alt="Route planning and dispatching software preview"
+            width="830"
+            height="560"
+            decoding="async"
+            loading="eager"
+            fetchpriority="high"
+            class="relative z-10 w-[min(92%,720px)] max-w-[830px] object-contain object-bottom lg:-mb-3 lg:w-[min(92%,830px)] lg:animate-kio-float"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Everything You Need ========== -->
+    <section
+      class="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-[130px]"
+    >
+      <div
+        class="pointer-events-none absolute inset-0 opacity-[0.35] [background-image:radial-gradient(#0f172a_0.7px,transparent_0.7px)] [background-size:18px_18px]"
+      >
+      </div>
+
+      <div class="my-container relative z-10">
+        <div class="mx-auto mb-14 max-w-[900px] text-center lg:mb-16">
+          <h2
+            class="text-center text-[31px] font-bold leading-[39px] text-neutral-950 sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+          >
+            Everything You Need, <br class="hidden md:block" />
+            Built Into One Platform
+          </h2>
+        </div>
+
+        <div
+          class="mx-auto grid max-w-[1450px] items-start gap-10 lg:grid-cols-[500px_minmax(0,1fr)] lg:gap-16 xl:grid-cols-[540px_minmax(0,1fr)] xl:gap-20"
+        >
+          <div class="grid w-full max-w-[540px] content-start gap-4">
+            {
+              proposalGroups.map((group, groupIndex) => (
+                <div
+                  class:list={[
+                    "proposal-tab overflow-hidden rounded-2xl border border-solid border-[#e1e8de] bg-white shadow-sm transition-all duration-300 [&.is-active]:border-[#0f172a]",
+                    groupIndex === 0 && "is-active",
+                  ]}
+                  data-tab={group.key}
+                >
+                  <button
+                    class="proposal-tab-header flex w-full cursor-pointer items-center justify-between gap-4 rounded-2xl bg-white px-5 py-4 text-left text-[#0f172a] transition-all duration-300 [&[aria-expanded='true']]:rounded-b-none [&[aria-expanded='true']]:bg-[#0f172a] [&[aria-expanded='true']]:text-white sm:px-6 sm:py-5"
+                    type="button"
+                    aria-expanded={groupIndex === 0 ? "true" : "false"}
+                  >
+                    <span class="flex items-center gap-4">
+                      <span class={tabIconClass}>
+                        {group.icon === "map" && (
+                          <Map class="size-[22px]" aria-hidden="true" />
+                        )}
+                        {group.icon === "users" && (
+                          <Users class="size-[22px]" aria-hidden="true" />
+                        )}
+                        {group.icon === "link" && (
+                          <Link2 class="size-[22px]" aria-hidden="true" />
+                        )}
+                      </span>
+                      <span class="text-xl font-bold leading-7 sm:text-lg sm:leading-8">
+                        {group.title}
+                      </span>
+                    </span>
+                    <ChevronDown
+                      class="proposal-chevron size-[18px] shrink-0"
+                      aria-hidden="true"
+                    />
+                  </button>
+
+                  <div class="proposal-panel">
+                    <div class="grid gap-3 rounded-b-2xl border border-t-0 border-solid border-[#e1e8de] bg-white px-5 py-5 sm:px-6">
+                      {group.items.map((item, itemIndex) => (
+                        <button
+                          class:list={[
+                            "proposal-subitem grid w-full grid-cols-[24px_1fr] items-start gap-3 rounded-xl px-3 py-2.5 text-left text-base font-semibold leading-6 text-[#0f172a] transition-all duration-300 hover:bg-[#f2f8f0] sm:text-[18px] sm:leading-7 [&.is-active]:bg-primary-500 [&.is-active]:text-white",
+                            groupIndex === 0 &&
+                              itemIndex === 0 &&
+                              "is-active",
+                          ]}
+                          type="button"
+                          data-tab={group.key}
+                          data-index={String(itemIndex)}
+                          data-title={item.title}
+                          data-text={item.text}
+                          data-image={item.image}
+                        >
+                          <ArrowRight
+                            class="mt-1 size-[17px]"
+                            aria-hidden="true"
+                          />
+                          <span>{item.label}</span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+
+          <div class="w-full self-start">
+            <div
+              id="proposalVisual"
+              class="proposal-visual-card relative overflow-hidden"
+            >
+              <img
+                id="proposalVisualImage"
+                src={initialItem.image}
+                alt={initialItem.title}
+                width="714"
+                height="386"
+                decoding="async"
+                loading="lazy"
+                class="relative z-10 h-full w-full object-contain"
+              />
+            </div>
+            <div class="mt-7 max-w-[760px]">
+              <p
+                id="proposalVisualTitle"
+                class="mb-4 text-[24px] font-bold leading-8 text-[#0f172a] sm:text-[32px] sm:leading-[40px]"
+              >
+                {initialItem.title}
+              </p>
+              <p
+                id="proposalVisualText"
+                class="text-base font-normal leading-7 text-neutral-700 sm:text-lg sm:leading-8"
+              >
+                {initialItem.text}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sr-only">
+          {
+            proposalGroups.map((group) => (
+              <div>
+                <h3>{group.title}</h3>
+                <div>
+                  {group.items.map((item) => (
+                    <article>
+                      <h3>{item.title}</h3>
+                      <p>{item.text}</p>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Trusted ========== -->
+    <section
+      class="relative overflow-hidden bg-[#0F172A] py-24 sm:py-28 lg:py-[150px]"
+    >
+      <div
+        class="pointer-events-none absolute inset-0 opacity-[0.22] [background-image:radial-gradient(rgba(255,255,255,0.65)_0.8px,transparent_0.8px)] [background-size:18px_18px]"
+      >
+      </div>
+      <div
+        class="pointer-events-none absolute top-16 left-1/2 h-[420px] w-[860px] -translate-x-1/2 rounded-full bg-primary-500/10 blur-3xl"
+      >
+      </div>
+
+      <div class="my-container relative z-10">
+        <div class="mx-auto mb-16 max-w-[1040px] text-center lg:mb-20">
+          <h2
+            class="mb-6 text-center text-[31px] font-bold leading-[39px] text-white sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+          >
+            Trusted by 100&rsquo;s of customers
+          </h2>
+          <p
+            class="mx-auto max-w-[800px] text-base leading-7 text-white/80 sm:text-lg sm:leading-8"
+          >
+            Join hundreds of growing teams using Knockio to manage leads, sales,
+            field teams, and customer relationships.
+          </p>
+        </div>
+
+        <div
+          class="mx-auto grid max-w-[1120px] grid-cols-1 justify-items-center gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10"
+        >
+          {
+            trustBadges.map((badge) => (
+              <a
+                href={badge.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={badge.label}
+                class="group block rounded-3xl focus:ring-2 focus:ring-primary-500 focus:ring-offset-4 focus:ring-offset-[#0F172A] focus:outline-none"
+              >
+                <img
+                  src={badge.src}
+                  alt={badge.alt}
+                  width="203"
+                  height="280"
+                  decoding="async"
+                  loading="lazy"
+                  class="w-full max-w-[200px] object-contain transition duration-300 group-hover:-translate-y-2 group-hover:drop-shadow-[0_24px_34px_rgba(255,255,255,0.12)]"
+                />
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Why One Platform ========== -->
+    <section
+      class="relative overflow-hidden bg-white py-24 sm:py-28 lg:py-[150px]"
+    >
+      <div
+        class="pointer-events-none absolute top-32 left-1/2 h-[420px] w-[900px] -translate-x-1/2 rounded-full bg-primary-500/5 blur-3xl"
+      >
+      </div>
+
+      <div class="my-container relative z-10">
+        <div class="mx-auto mb-14 max-w-[1120px] text-center lg:mb-20">
+          <h2
+            class="mb-6 text-center text-[31px] font-bold leading-[39px] text-neutral-950 sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+          >
+            Why Route Planning and Dispatching<br class="hidden lg:block" />
+            Belong in One Platform
+          </h2>
+          <p
+            class="mx-auto max-w-[800px] text-base leading-6 text-neutral-700 sm:text-lg sm:leading-6"
+          >
+            Field service delays rarely come from a bad route. They come from the
+            gap between the route, the calendar, and whoever is deciding who
+            goes where. When those three things live in separate tools, a single
+            change — a cancellation, a sick technician, or a job that runs long
+            — means someone has to manually update a map, a calendar, and a CRM,
+            in that order, before the next crew even knows their day changed.
+          </p>
+        </div>
+
+        <div class="mx-auto grid max-w-[1380px] gap-6 lg:grid-cols-3 lg:gap-8">
+          <article
+            class="group relative overflow-hidden rounded-[28px] border border-solid border-neutral-200 bg-white p-7 shadow-[0_18px_50px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-primary-500/40 hover:shadow-[0_28px_70px_rgba(15,23,42,0.09)] sm:p-8 lg:p-9"
+          >
+            <div
+              class="absolute top-0 right-0 h-32 w-32 translate-x-10 -translate-y-10 rounded-full bg-primary-500/10"
+            >
+            </div>
+            <div class="relative mb-8 flex items-start justify-between gap-5">
+              <div
+                class="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-500/10 text-primary-500 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white"
+              >
+                <LayoutDashboard class="size-7" aria-hidden="true" />
+              </div>
+            </div>
+            <h3
+              class="relative mb-5 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
+            >
+              One Screen for Planning and Dispatch
+            </h3>
+            <p
+              class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
+            >
+              Building the route and assigning the work happen in the same
+              place, so office staff are not exporting a route plan into a
+              separate dispatch board.
+            </p>
+          </article>
+
+          <article
+            class="group relative overflow-hidden rounded-[28px] border border-solid border-[#0F172A] bg-[#0F172A] p-7 shadow-[0_24px_70px_rgba(15,23,42,0.20)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_34px_90px_rgba(15,23,42,0.26)] sm:p-8 lg:p-9"
+          >
+            <div
+              class="absolute top-0 right-0 h-40 w-40 translate-x-12 -translate-y-12 rounded-full bg-primary-500/20"
+            >
+            </div>
+            <div
+              class="absolute bottom-0 left-0 h-32 w-32 -translate-x-12 translate-y-12 rounded-full bg-white/10"
+            >
+            </div>
+            <div class="relative mb-8 flex items-start justify-between gap-5">
+              <div
+                class="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-500 text-white"
+              >
+                <Users class="size-7" aria-hidden="true" />
+              </div>
+            </div>
+            <h3
+              class="relative mb-5 text-[21px] font-semibold leading-[27px] text-white sm:text-2xl sm:leading-7"
+            >
+              Field Teams See the Full Picture
+            </h3>
+            <p
+              class="relative text-[15px] leading-6 text-white/75 sm:text-base sm:leading-6"
+            >
+              Technicians and reps view their stops alongside the customer's
+              history, prior notes, and photos, cutting down on calls back to
+              the office just to get context on a job.
+            </p>
+          </article>
+
+          <article
+            class="group relative overflow-hidden rounded-[28px] border border-solid border-neutral-200 bg-white p-7 shadow-[0_18px_50px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-primary-500/40 hover:shadow-[0_28px_70px_rgba(15,23,42,0.09)] sm:p-8 lg:p-9"
+          >
+            <div
+              class="absolute top-0 right-0 h-32 w-32 translate-x-10 -translate-y-10 rounded-full bg-primary-500/10"
+            >
+            </div>
+            <div class="relative mb-8 flex items-start justify-between gap-5">
+              <div
+                class="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-500/10 text-primary-500 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white"
+              >
+                <TrendingUp class="size-7" aria-hidden="true" />
+              </div>
+            </div>
+            <h3
+              class="relative mb-5 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
+            >
+              Managers Track the Day in Real Time
+            </h3>
+            <p
+              class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
+            >
+              Route progress updates as stops are completed, giving managers a
+              current view of coverage and delays instead of waiting for
+              end-of-day recaps.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="bg-white py-16 sm:py-20 lg:py-24">
+      <div class="my-container mx-auto">
+        <div class="grid gap-10 lg:grid-cols-2 lg:gap-20">
+          <div>
+            <p
+              class="mb-4 text-sm leading-7 font-medium text-primary-500 md:text-2xl"
+            >
+              Frequently Asked Questions
+            </p>
+            <h2
+              class="mb-8 w-full max-w-3xl text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:max-w-none lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+            >
+              Everything Teams Ask About Route Planning and Dispatching
+            </h2>
+            <p
+              class="mb-6 w-full max-w-3xl text-sm leading-6 font-normal text-neutral-800 sm:text-base sm:leading-7 md:mb-8 md:text-lg md:leading-8"
+            >
+              Routing and dispatch touch every part of the day — here's how
+              Knockio keeps planning, assignment, and customer records in one
+              place.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            {
+              faqs.map((faq) => (
+                <div class="faq-item overflow-hidden rounded-2xl border border-solid border-neutral-200 transition-all duration-300">
+                  <button
+                    class="faq-button group flex w-full items-center justify-between p-4 text-left sm:p-6"
+                    type="button"
+                  >
+                    <span class="text-base font-medium text-neutral-950 transition-colors group-hover:text-primary-500 sm:text-lg lg:text-xl">
+                      {faq.q}
+                    </span>
+                    <div class="faq-icon ml-4 flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary-500">
+                      <svg
+                        class="icon-minus hidden h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M20 12H4"
+                        />
+                      </svg>
+                      <svg
+                        class="icon-plus h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 4v16m8-8H4"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                  <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="p-4 pt-0 text-sm leading-relaxed text-neutral-600 sm:p-6 sm:pt-0 sm:text-base">
+                      {faq.a}
+                    </div>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Customer Reviews ========== -->
+    <section class="overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
+      <div class="my-container mx-auto mb-10 text-center lg:mb-16">
+        <p
+          class="mb-4 text-sm leading-7 font-medium text-primary-500 md:text-2xl"
+        >
+          Customer Reviews
+        </p>
+        <h2
+          class="mb-8 text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+        >
+          What Field Service and Sales<br />
+          Teams Say About Knockio
+        </h2>
+        <img
+          src={asset("google-5-star.webp")}
+          alt="google review badge"
+          width="183"
+          height="60"
+          decoding="async"
+          loading="lazy"
+          class="mx-auto h-auto w-[150px] sm:w-[183px]"
+        />
+      </div>
+
+      <div class="mt-7 space-y-8">
+        <div class="testimonial-track-container flex overflow-hidden">
+          <div
+            class="testimonial-track hover:pause flex animate-marquee-left gap-4 sm:gap-6"
+          >
+            {
+              [0, 1].map((dup) => (
+                <div
+                  class="card-set flex gap-4 sm:gap-6"
+                  aria-hidden={dup === 1 ? "true" : undefined}
+                >
+                  {reviewsRow1.map((review) => (
+                    <div class="relative w-[300px] flex-shrink-0 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 group sm:w-[380px] sm:p-6 lg:w-[450px] lg:p-8">
+                      <p class="relative z-10 mb-6 min-h-[168px] text-sm italic leading-relaxed text-neutral-700 sm:mb-8 sm:text-base lg:text-lg">
+                        {review.quote}
+                      </p>
+                      <div class="relative z-10 flex items-center gap-4">
+                        <img
+                          src={review.avatar}
+                          alt={review.name}
+                          width="48"
+                          height="48"
+                          decoding="async"
+                          loading="lazy"
+                          class="h-12 w-12 rounded-full object-cover grayscale transition-all group-hover:grayscale-0"
+                        />
+                        <div>
+                          <h3 class="mb-1 text-base font-bold text-neutral-950">
+                            {review.name}
+                          </h3>
+                          <p
+                            class="text-sm text-neutral-500"
+                            aria-label="5 out of 5 stars"
+                          >
+                            ⭐⭐⭐⭐⭐
+                          </p>
+                        </div>
+                      </div>
+                      <Quote
+                        class="pointer-events-none absolute right-8 bottom-6 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <div class="testimonial-track-container flex overflow-hidden">
+          <div
+            class="testimonial-track hover:pause flex animate-marquee-right gap-4 sm:gap-6"
+          >
+            {
+              [0, 1].map((dup) => (
+                <div
+                  class="card-set flex gap-4 sm:gap-6"
+                  aria-hidden={dup === 1 ? "true" : undefined}
+                >
+                  {reviewsRow2.map((review) => (
+                    <div class="relative w-[300px] flex-shrink-0 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 group sm:w-[380px] sm:p-6 lg:w-[450px] lg:p-8">
+                      <p class="relative z-10 mb-6 min-h-[168px] text-sm italic leading-relaxed text-neutral-700 sm:mb-8 sm:text-base lg:text-lg">
+                        {review.quote}
+                      </p>
+                      <div class="relative z-10 flex items-center gap-4">
+                        <img
+                          src={review.avatar}
+                          alt={review.name}
+                          width="48"
+                          height="48"
+                          decoding="async"
+                          loading="lazy"
+                          class="h-12 w-12 rounded-full object-cover grayscale transition-all group-hover:grayscale-0"
+                        />
+                        <div>
+                          <h3 class="mb-1 text-base font-bold text-neutral-950">
+                            {review.name}
+                          </h3>
+                          <p
+                            class="text-sm text-neutral-500"
+                            aria-label="5 out of 5 stars"
+                          >
+                            ⭐⭐⭐⭐⭐
+                          </p>
+                        </div>
+                      </div>
+                      <Quote
+                        class="pointer-events-none absolute right-8 bottom-6 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../../scripts/feature-page.js"></script>
+</KnockioHomeLayout>

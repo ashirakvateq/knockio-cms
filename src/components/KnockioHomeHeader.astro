@@ -45,6 +45,8 @@ import {
   Menu,
   X,
   ArrowRight,
+  Camera,
+  Brain,
 } from "lucide-astro";
 
 interface Props {
@@ -131,6 +133,26 @@ const features = [
     href: "/features/gps-tracking-software/",
     icon: Crosshair,
     label: "GPS Tracking",
+  },
+  {
+    href: "/features/route-planning-and-dispatching/",
+    icon: Truck,
+    label: "Route Planning",
+  },
+  {
+    href: "/features/photo-and-media-management/",
+    icon: Camera,
+    label: "Photo & Media",
+  },
+  {
+    href: "/features/campaign-management/",
+    icon: Megaphone,
+    label: "Campaign Management",
+  },
+  {
+    href: "/features/product-management/",
+    icon: Boxes,
+    label: "Product Management",
   },
   {
     href: "/features/business-automation-software/",
@@ -224,6 +246,7 @@ const industries = [
 
 const marketing = [
   { icon: Headphones, label: "AI Receptionist" },
+  { icon: Brain, label: "AI Assistant" },
   { icon: Bot, label: "AI Chatbot" },
   { icon: Filter, label: "Lead Generation" },
 ];
