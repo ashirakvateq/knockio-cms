@@ -1,0 +1,1014 @@
+---
+import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
+import "../../styles/feature-page.css";
+import {
+  ArrowRight,
+  ChevronDown,
+  ChevronRight,
+  DollarSign,
+  Link2,
+  Package,
+  Quote,
+  RefreshCw,
+  TrendingUp,
+} from "lucide-astro";
+
+const title = "Product Management Software for Field Service Businesses | Knockio";
+const description =
+  "One product catalog for estimates, work orders, purchase orders, and invoices. See how Knockio keeps pricing consistent across every job and every crew.";
+
+const asset = (name: string) => `/assets/cfw/${name}`;
+
+const proposalGroups = [
+  {
+    key: "catalog",
+    title: "Build Your Product Catalog",
+    icon: "package" as const,
+    items: [
+      {
+        label: "Products, Variants, SKUs",
+        title: "Products, Variants, SKUs",
+        text: "Create every product and service your business sells, along with the variants and individual SKUs that make up your real-world offering. No more guessing which version of a product a rep quoted.",
+        image: asset("inner-product-catalog-products-variants-skus.webp"),
+      },
+      {
+        label: "Cost And Selling Price",
+        title: "Cost And Selling Price",
+        text: "Attach a cost value and a selling price to every item in the catalog, so the difference between what a job costs and what it earns is never a mystery.",
+        image: asset("inner-product-catalog-cost-and-selling-price.webp"),
+      },
+      {
+        label: "Markup Rules Built In",
+        title: "Markup Rules Built In",
+        text: "Set markup rules once and apply them consistently, instead of leaving margin decisions to whoever happens to be building the estimate that day.",
+        image: asset("inner-product-catalog-markup-rules-built-in.webp"),
+      },
+    ],
+  },
+  {
+    key: "everywhere",
+    title: "One Catalog, Everywhere",
+    icon: "link" as const,
+    items: [
+      {
+        label: "Connected To Every Estimate",
+        title: "Connected To Every Estimate",
+        text: "The same catalog your team builds feeds directly into estimates, so reps and account managers are always quoting from current pricing, not a saved PDF from last quarter.",
+        image: asset("inner-product-catalog-connected-to-every-estimate.webp"),
+      },
+      {
+        label: "Linked to Work Orders",
+        title: "Linked to Work Orders",
+        text: "Work orders pull products and services straight from the catalog, keeping material takeoffs and job scope tied to accurate, current pricing.",
+        image: asset("inner-product-catalog-linked-to-work-orders.webp"),
+      },
+      {
+        label: "Tied To Invoices Too",
+        title: "Tied To Invoices Too",
+        text: "When a job is complete, invoices draw from the same product records used at the estimate stage, so the numbers match from quote to final bill.",
+        image: asset("inner-product-catalog-tied-to-invoices-too.webp"),
+      },
+    ],
+  },
+  {
+    key: "pricing",
+    title: "Consistent Pricing, Less Rework",
+    icon: "dollar" as const,
+    items: [
+      {
+        label: "Same Prices, Every Time",
+        title: "Same Prices, Every Time",
+        text: "Whether a quote comes from a canvasser in the field or an account manager in the office, pricing pulls from the same source, so customers get consistent numbers.",
+        image: asset("inner-product-pricing-same-prices-every-time.webp"),
+      },
+      {
+        label: "Consistent Pricing Across Jobs",
+        title: "Consistent Pricing Across Jobs",
+        text: "Costs, markups, and selling prices live in one catalog, so every estimate, work order, and invoice pulls the same current numbers instead of whatever a rep remembered.",
+        image: asset("inner-product-pricing-consistent-pricing-across-jobs.webp"),
+      },
+      {
+        label: "Fewer Pricing Mistakes",
+        title: "Fewer Pricing Mistakes",
+        text: "A shared catalog reduces the chance that someone quotes an outdated price or misses a markup rule on a job.",
+        image: asset("inner-product-pricing-fewer-pricing-mistakes.webp"),
+      },
+    ],
+  },
+];
+
+const initialItem = proposalGroups[0].items[0];
+
+const trustBadges = [
+  {
+    href: "https://www.capterra.com/p/10018264/Knockio/",
+    src: asset("badge-new-capterra.webp"),
+    alt: "Knockio Capterra rating badge",
+    label: "View Knockio reviews on Capterra",
+  },
+  {
+    href: "https://www.softwareadvice.com/field-sales/knockio-profile/",
+    src: asset("badge-new-software-advice.webp"),
+    alt: "Knockio Software Advice rating badge",
+    label: "View Knockio reviews on Software Advice",
+  },
+  {
+    href: "https://www.getapp.com/all-software/a/knockio/",
+    src: asset("badge-new-get-app.webp"),
+    alt: "Knockio GetApp rating badge",
+    label: "View Knockio reviews on GetApp",
+  },
+  {
+    href: "https://www.g2.com/products/knockio-by-knockio/reviews",
+    src: asset("badge-new-g2.webp"),
+    alt: "Knockio G2 rating badge",
+    label: "View Knockio reviews on G2",
+  },
+];
+
+const faqs = [
+  {
+    q: "Does Knockio let field service businesses manage products, pricing, and SKUs in one place?",
+    a: "Yes. Knockio includes built-in Product Management that lets home service and field sales businesses build a centralized catalog of products, services, variants, and SKUs, complete with cost values, selling prices, and markup rules. That same catalog feeds estimates, work orders, purchase orders, invoices, and job records, so pricing stays consistent no matter who builds the quote or who writes the invoice.",
+  },
+  {
+    q: "Does Knockio let me create product variants and individual SKUs?",
+    a: "Yes. You can build out products, product variants, and individual SKUs within the catalog, so different sizes, models, or configurations of the same product stay organized and easy to quote.",
+  },
+  {
+    q: "Can I set different markup rules for different products or services?",
+    a: "Yes. Markup rules can be applied within the product catalog, giving you control over margin without recalculating pricing on every job.",
+  },
+  {
+    q: "Does the product catalog connect to my estimates and invoices automatically?",
+    a: "Yes. The same catalog used to build the product records feeds estimates, work orders, purchase orders, and invoices, so pricing carries through the job without being re-entered.",
+  },
+  {
+    q: "Will my field reps and office staff see the same product information?",
+    a: "Yes. Product Management gives both field and office teams access to the same current catalog, which keeps quotes, work orders, and job records consistent across the business.",
+  },
+];
+
+const reviewsRow1 = [
+  {
+    name: "Lacey Jackson",
+    avatar: asset("avatar-lacey-jackson.webp"),
+    quote:
+      "This app is the best thing that has happened to our company! Asad is absolutely amazing! He is so responsive, it doesn't matter what time of day he is on it! I highly recommend this company add this app!",
+  },
+  {
+    name: "Ben Loveland",
+    avatar: asset("avatar-ben-loveland.webp"),
+    quote:
+      "Knockio is a great product! We use it for our roofing sales canvassing. Their support team is responsive and fixes issues immediately. Highly recommend!",
+  },
+  {
+    name: "Bar Galanti",
+    avatar: asset("avatar-bar-galanti.webp"),
+    quote:
+      "The support team is awesome. The live tracking feature is very useful. The pricing is fair as well!",
+  },
+];
+
+const reviewsRow2 = [
+  {
+    name: "Georgia Hancocks",
+    avatar: asset("avatar-georgia-hancocks.webp"),
+    quote:
+      "Knockio is the best! My team and I absolutely love using it - it is so user friendly and simple. Support is brilliant too, nothing is ever too much trouble. The best on the market. Thanks Knockio!",
+  },
+  {
+    name: "Sarah Bennett",
+    avatar: asset("avatar-sarah-bennett.webp"),
+    quote:
+      "We love Knockio so far! It is solving a lot of the issues of the other canvassing apps. The team have worked with us providing excellent fast support. Highly recommend if you're seeing people face to face.",
+  },
+  {
+    name: "Ayana Hall",
+    avatar: asset("avatar-ayana-hall.webp"),
+    quote:
+      "Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.",
+  },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://knockio.com/features/product-management/#webpage",
+      url: "https://knockio.com/features/product-management/",
+      name: "Product Management Software for Field Service Businesses | Knockio",
+      headline: "Product Management Tool",
+      description,
+      isPartOf: { "@id": "https://knockio.com/#website" },
+      about: { "@id": "https://knockio.com/#software" },
+      mainEntity: { "@id": "https://knockio.com/#software" },
+      mainContentOfPage: {
+        "@type": "WebPageElement",
+        name: "Product Management Tool",
+        text: "Your estimator prices a job one way, the office invoices it another way, and nobody can say for sure which number is correct. That happens when pricing lives in someone's memory, an old spreadsheet, or three different tools that never talk to each other. Knockio's Product Management brings every product, service, SKU, and price into one catalog that estimates, work orders, purchase orders, and invoices all pull from directly.",
+      },
+      hasPart: [
+        {
+          "@type": "WebPageElement",
+          name: "Quick Answer: Does Knockio let field service businesses manage products, pricing, and SKUs in one place?",
+          text: "Yes. Knockio includes built-in Product Management that lets home service and field sales businesses build a centralized catalog of products, services, variants, and SKUs, complete with cost values, selling prices, and markup rules. That same catalog feeds estimates, work orders, purchase orders, invoices, and job records, so pricing stays consistent no matter who builds the quote or who writes the invoice.",
+        },
+        {
+          "@type": "WebPageElement",
+          name: "Everything You Need, Built Into One Catalog",
+        },
+        {
+          "@type": "WebPageElement",
+          name: "Build Your Product Catalog",
+          hasPart: [
+            {
+              "@type": "WebPageElement",
+              name: "Products, Variants, SKUs",
+              text: "Create every product and service your business sells, along with the variants and individual SKUs that make up your real-world offering. No more guessing which version of a product a rep quoted.",
+            },
+            {
+              "@type": "WebPageElement",
+              name: "Cost And Selling Price",
+              text: "Attach a cost value and a selling price to every item in the catalog, so the difference between what a job costs and what it earns is never a mystery.",
+            },
+            {
+              "@type": "WebPageElement",
+              name: "Markup Rules Built In",
+              text: "Set markup rules once and apply them consistently, instead of leaving margin decisions to whoever happens to be building the estimate that day.",
+            },
+          ],
+        },
+        {
+          "@type": "WebPageElement",
+          name: "One Catalog, Everywhere",
+          hasPart: [
+            {
+              "@type": "WebPageElement",
+              name: "Connected To Every Estimate",
+              text: "The same catalog your team builds feeds directly into estimates, so reps and account managers are always quoting from current pricing, not a saved PDF from last quarter.",
+            },
+            {
+              "@type": "WebPageElement",
+              name: "Linked to Work Orders",
+              text: "Work orders pull products and services straight from the catalog, keeping material takeoffs and job scope tied to accurate, current pricing.",
+            },
+            {
+              "@type": "WebPageElement",
+              name: "Tied To Invoices Too",
+              text: "When a job is complete, invoices draw from the same product records used at the estimate stage, so the numbers match from quote to final bill.",
+            },
+          ],
+        },
+        {
+          "@type": "WebPageElement",
+          name: "Consistent Pricing, Less Rework",
+          hasPart: [
+            {
+              "@type": "WebPageElement",
+              name: "Same Prices, Every Time",
+              text: "Whether a quote comes from a canvasser in the field or an account manager in the office, pricing pulls from the same source, so customers get consistent numbers.",
+            },
+            {
+              "@type": "WebPageElement",
+              name: "Consistent Pricing Across Jobs",
+              text: "Costs, markups, and selling prices live in one catalog, so every estimate, work order, and invoice pulls the same current numbers instead of whatever a rep remembered.",
+            },
+            {
+              "@type": "WebPageElement",
+              name: "Fewer Pricing Mistakes",
+              text: "A shared catalog reduces the chance that someone quotes an outdated price or misses a markup rule on a job.",
+            },
+          ],
+        },
+        {
+          "@type": "WebPageElement",
+          name: "From Catalog To Job Profit",
+          text: "A product catalog only matters if it makes the rest of the job easier to run. Knockio connects catalog data to estimating, purchasing, and invoicing, so the work of pricing a job happens once and carries through to every stage that follows.",
+          hasPart: [
+            {
+              "@type": "WebPageElement",
+              name: "Faster Estimate Building",
+              text: "Reps build estimates faster when products, services, and pricing already exist in the catalog. There is no need to look up a price sheet or ask the office to confirm a number before sending a quote.",
+            },
+            {
+              "@type": "WebPageElement",
+              name: "Smarter Purchasing Decisions",
+              text: "Because the same catalog connects to purchase orders and material requirements, ordering the right products at the right cost becomes part of the normal job workflow instead of a separate task.",
+            },
+            {
+              "@type": "WebPageElement",
+              name: "Clearer Job Profitability",
+              text: "When cost, markup, and selling price all live in one place, owners and office managers can see which jobs are actually profitable, not just which ones closed.",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://knockio.com/#software",
+      name: "Knockio",
+      applicationCategory: "BusinessApplication",
+      applicationSubCategory:
+        "Product management software for field service businesses",
+      operatingSystem: "Web, iOS, Android",
+      description:
+        "Knockio includes built-in Product Management that lets home service and field sales businesses build a centralized catalog of products, services, variants, and SKUs, complete with cost values, selling prices, and markup rules, feeding estimates, work orders, purchase orders, invoices, and job records.",
+      featureList: [
+        "Create every product and service your business sells, along with variants and individual SKUs",
+        "Attach a cost value and a selling price to every item in the catalog",
+        "Set markup rules once and apply them consistently across estimates",
+        "Feed the same catalog directly into estimates so reps quote from current pricing",
+        "Pull products and services into work orders for accurate material takeoffs and job scope",
+        "Draw invoices from the same product records used at the estimate stage",
+        "Keep pricing consistent whether a quote comes from the field or the office",
+        "Reduce outdated prices and missed markup rules with a shared catalog",
+        "Connect the catalog to purchase orders and material requirements",
+        "See job profitability with cost, markup, and selling price in one place",
+      ],
+    },
+    {
+      "@type": "ItemList",
+      "@id":
+        "https://knockio.com/features/product-management/#catalog-connections",
+      name: "Records the Knockio product catalog feeds",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Estimates" },
+        { "@type": "ListItem", position: 2, name: "Work orders" },
+        { "@type": "ListItem", position: 3, name: "Purchase orders" },
+        { "@type": "ListItem", position: 4, name: "Invoices" },
+        { "@type": "ListItem", position: 5, name: "Job records" },
+        { "@type": "ListItem", position: 6, name: "Material requirements" },
+      ],
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://knockio.com/features/product-management/#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://knockio.com/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Features",
+          item: "https://knockio.com/features/",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Product Management",
+          item: "https://knockio.com/features/product-management/",
+        },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://knockio.com/features/product-management/#faq",
+      mainEntity: faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
+      })),
+    },
+  ],
+};
+
+const tabIconClass =
+  "inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-primary-500 sm:h-10 sm:w-10";
+---
+
+<KnockioHomeLayout
+  title={title}
+  description={description}
+  ogImage={asset("inner-product-management-hero.webp")}
+  jsonLd={jsonLd}
+  whiteBg={true}
+>
+  <main id="feature-page">
+    <!-- ========== Hero ========== -->
+    <section
+      class="overflow-hidden border-b border-solid border-[#7fc271] bg-white pt-[64px]"
+    >
+      <div
+        class="grid min-h-0 lg:min-h-[610px] lg:grid-cols-[50%_50%] xl:min-h-[720px]"
+      >
+        <div
+          class="relative flex flex-col justify-center px-[5%] py-12 sm:py-16 lg:min-h-[600px] lg:px-0 lg:py-0 lg:pb-[72px] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-[42px] xl:pr-[70px]"
+        >
+          <div class="max-w-[810px]">
+            <h1
+              class="mb-7 text-[34px] font-bold leading-[42px] text-neutral-950 sm:text-[40px] sm:leading-[48px] xl:text-[52px] xl:leading-[60px] 2xl:text-[60px] 2xl:leading-[68px]"
+            >
+              Product Management Tool
+            </h1>
+            <p
+              class="mb-10 max-w-[710px] text-base font-medium text-neutral-600 lg:text-lg"
+            >
+              Your estimator prices a job one way, the office invoices it another
+              way, and nobody can say for sure which number is correct. That
+              happens when pricing lives in someone's memory, an old spreadsheet,
+              or three different tools that never talk to each other. Knockio's
+              Product Management brings every product, service, SKU, and price
+              into one catalog that estimates, work orders, purchase orders, and
+              invoices all pull from directly.
+            </p>
+            <a
+              href="#cal-sec"
+              class="inline-flex w-full items-center justify-center rounded-lg bg-primary-500 px-6 py-3.5 text-sm font-medium text-white hover:bg-primary-600 sm:w-auto sm:px-10 sm:py-4 sm:text-base lg:px-12"
+            >
+              Schedule a Demo
+            </a>
+          </div>
+
+          <div
+            id="kioSummaryPanel"
+            class="kio-summary-panel z-[18] mt-6 rounded-xl border border-solid border-primary-500/35 bg-white/95 px-[5%] py-5 text-base leading-7 text-neutral-600 lg:absolute lg:inset-x-0 lg:bottom-[72px] lg:mt-0 lg:px-0 lg:py-[22px] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-10 lg:shadow-[0_-18px_45px_rgba(15,23,42,0.08)]"
+          >
+            <h3
+              class="mb-4 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
+            >
+              Does Knockio let field service businesses manage products,
+              pricing, and SKUs in one place?
+            </h3>
+            <p
+              class="max-w-[720px] text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
+            >
+              Yes. Knockio includes built-in Product Management that lets home
+              service and field sales businesses build a centralized catalog of
+              products, services, variants, and SKUs, complete with cost values,
+              selling prices, and markup rules. That same catalog feeds
+              estimates, work orders, purchase orders, invoices, and job
+              records, so pricing stays consistent no matter who builds the
+              quote or who writes the invoice.
+            </p>
+          </div>
+
+          <div
+            class="z-20 mt-8 min-h-[72px] border-t border-solid border-primary-500/70 bg-[#f3faf3] lg:absolute lg:inset-x-0 lg:bottom-0 lg:mt-0"
+          >
+            <button
+              id="kioSummaryBtn"
+              class="kio-summary-button duration-250 flex min-h-[72px] w-full items-center justify-between gap-5 px-[5%] text-neutral-950 transition-colors hover:bg-[#edf8ed] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-10"
+              type="button"
+              aria-expanded="false"
+              aria-controls="kioSummaryPanel"
+            >
+              <span class="text-lg font-medium leading-6">Quick summary</span>
+              <ChevronRight
+                class="summary-chevron size-5 shrink-0"
+                aria-hidden="true"
+              />
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="hero-feature-visual relative flex min-h-[320px] items-end justify-center overflow-hidden px-4 sm:min-h-[400px] lg:min-h-full lg:px-0"
+        >
+          <img
+            src={asset("inner-product-management-hero.webp")}
+            alt="Product management software preview"
+            width="830"
+            height="560"
+            decoding="async"
+            loading="eager"
+            fetchpriority="high"
+            class="relative z-10 w-[min(92%,720px)] max-w-[830px] object-contain object-bottom lg:-mb-3 lg:w-[min(92%,830px)] lg:animate-kio-float"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Everything You Need ========== -->
+    <section
+      class="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-[130px]"
+    >
+      <div
+        class="pointer-events-none absolute inset-0 opacity-[0.35] [background-image:radial-gradient(#0f172a_0.7px,transparent_0.7px)] [background-size:18px_18px]"
+      >
+      </div>
+
+      <div class="my-container relative z-10">
+        <div class="mx-auto mb-14 max-w-[900px] text-center lg:mb-16">
+          <h2
+            class="text-center text-[31px] font-bold leading-[39px] text-neutral-950 sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+          >
+            Everything You Need, <br class="hidden md:block" />
+            Built Into One Catalog
+          </h2>
+        </div>
+
+        <div
+          class="mx-auto grid max-w-[1450px] items-start gap-10 lg:grid-cols-[500px_minmax(0,1fr)] lg:gap-16 xl:grid-cols-[540px_minmax(0,1fr)] xl:gap-20"
+        >
+          <div class="grid w-full max-w-[540px] content-start gap-4">
+            {
+              proposalGroups.map((group, groupIndex) => (
+                <div
+                  class:list={[
+                    "proposal-tab overflow-hidden rounded-2xl border border-solid border-[#e1e8de] bg-white shadow-sm transition-all duration-300 [&.is-active]:border-[#0f172a]",
+                    groupIndex === 0 && "is-active",
+                  ]}
+                  data-tab={group.key}
+                >
+                  <button
+                    class="proposal-tab-header flex w-full cursor-pointer items-center justify-between gap-4 rounded-2xl bg-white px-5 py-4 text-left text-[#0f172a] transition-all duration-300 [&[aria-expanded='true']]:rounded-b-none [&[aria-expanded='true']]:bg-[#0f172a] [&[aria-expanded='true']]:text-white sm:px-6 sm:py-5"
+                    type="button"
+                    aria-expanded={groupIndex === 0 ? "true" : "false"}
+                  >
+                    <span class="flex items-center gap-4">
+                      <span class={tabIconClass}>
+                        {group.icon === "package" && (
+                          <Package class="size-[22px]" aria-hidden="true" />
+                        )}
+                        {group.icon === "link" && (
+                          <Link2 class="size-[22px]" aria-hidden="true" />
+                        )}
+                        {group.icon === "dollar" && (
+                          <DollarSign
+                            class="size-[22px]"
+                            aria-hidden="true"
+                          />
+                        )}
+                      </span>
+                      <span class="text-xl font-bold leading-7 sm:text-lg sm:leading-8">
+                        {group.title}
+                      </span>
+                    </span>
+                    <ChevronDown
+                      class="proposal-chevron size-[18px] shrink-0"
+                      aria-hidden="true"
+                    />
+                  </button>
+
+                  <div class="proposal-panel">
+                    <div class="grid gap-3 rounded-b-2xl border border-t-0 border-solid border-[#e1e8de] bg-white px-5 py-5 sm:px-6">
+                      {group.items.map((item, itemIndex) => (
+                        <button
+                          class:list={[
+                            "proposal-subitem grid w-full grid-cols-[24px_1fr] items-start gap-3 rounded-xl px-3 py-2.5 text-left text-base font-semibold leading-6 text-[#0f172a] transition-all duration-300 hover:bg-[#f2f8f0] sm:text-[18px] sm:leading-7 [&.is-active]:bg-primary-500 [&.is-active]:text-white",
+                            groupIndex === 0 &&
+                              itemIndex === 0 &&
+                              "is-active",
+                          ]}
+                          type="button"
+                          data-tab={group.key}
+                          data-index={String(itemIndex)}
+                          data-title={item.title}
+                          data-text={item.text}
+                          data-image={item.image}
+                        >
+                          <ArrowRight
+                            class="mt-1 size-[17px]"
+                            aria-hidden="true"
+                          />
+                          <span>{item.label}</span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+
+          <div class="w-full self-start">
+            <div
+              id="proposalVisual"
+              class="proposal-visual-card relative overflow-hidden"
+            >
+              <img
+                id="proposalVisualImage"
+                src={initialItem.image}
+                alt={initialItem.title}
+                width="714"
+                height="386"
+                decoding="async"
+                loading="lazy"
+                class="relative z-10 h-full w-full object-contain"
+              />
+            </div>
+            <div class="mt-7 max-w-[760px]">
+              <p
+                id="proposalVisualTitle"
+                class="mb-4 text-[24px] font-bold leading-8 text-[#0f172a] sm:text-[32px] sm:leading-[40px]"
+              >
+                {initialItem.title}
+              </p>
+              <p
+                id="proposalVisualText"
+                class="text-base font-normal leading-7 text-neutral-700 sm:text-lg sm:leading-8"
+              >
+                {initialItem.text}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sr-only">
+          {
+            proposalGroups.map((group) => (
+              <div>
+                <h3>{group.title}</h3>
+                <div>
+                  {group.items.map((item) => (
+                    <article>
+                      <h3>{item.title}</h3>
+                      <p>{item.text}</p>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Trusted ========== -->
+    <section
+      class="relative overflow-hidden bg-[#0F172A] py-24 sm:py-28 lg:py-[150px]"
+    >
+      <div
+        class="pointer-events-none absolute inset-0 opacity-[0.22] [background-image:radial-gradient(rgba(255,255,255,0.65)_0.8px,transparent_0.8px)] [background-size:18px_18px]"
+      >
+      </div>
+      <div
+        class="pointer-events-none absolute top-16 left-1/2 h-[420px] w-[860px] -translate-x-1/2 rounded-full bg-primary-500/10 blur-3xl"
+      >
+      </div>
+
+      <div class="my-container relative z-10">
+        <div class="mx-auto mb-16 max-w-[1040px] text-center lg:mb-20">
+          <h2
+            class="mb-6 text-center text-[31px] font-bold leading-[39px] text-white sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+          >
+            Trusted by 100&rsquo;s of customers
+          </h2>
+          <p
+            class="mx-auto max-w-[800px] text-base leading-7 text-white/80 sm:text-lg sm:leading-8"
+          >
+            Join hundreds of growing teams using Knockio to manage leads, sales,
+            field teams, and customer relationships.
+          </p>
+        </div>
+
+        <div
+          class="mx-auto grid max-w-[1120px] grid-cols-1 justify-items-center gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10"
+        >
+          {
+            trustBadges.map((badge) => (
+              <a
+                href={badge.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={badge.label}
+                class="group block rounded-3xl focus:ring-2 focus:ring-primary-500 focus:ring-offset-4 focus:ring-offset-[#0F172A] focus:outline-none"
+              >
+                <img
+                  src={badge.src}
+                  alt={badge.alt}
+                  width="203"
+                  height="280"
+                  decoding="async"
+                  loading="lazy"
+                  class="w-full max-w-[200px] object-contain transition duration-300 group-hover:-translate-y-2 group-hover:drop-shadow-[0_24px_34px_rgba(255,255,255,0.12)]"
+                />
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== From Catalog To Job Profit ========== -->
+    <section
+      class="relative overflow-hidden bg-white py-24 sm:py-28 lg:py-[150px]"
+    >
+      <div
+        class="pointer-events-none absolute top-32 left-1/2 h-[420px] w-[900px] -translate-x-1/2 rounded-full bg-primary-500/5 blur-3xl"
+      >
+      </div>
+
+      <div class="my-container relative z-10">
+        <div class="mx-auto mb-14 max-w-[1120px] text-center lg:mb-20">
+          <h2
+            class="mb-6 text-center text-[31px] font-bold leading-[39px] text-neutral-950 sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
+          >
+            From Catalog To Job Profit
+          </h2>
+          <p
+            class="mx-auto max-w-[800px] text-base leading-6 text-neutral-700 sm:text-lg sm:leading-6"
+          >
+            A product catalog only matters if it makes the rest of the job
+            easier to run. Knockio connects catalog data to estimating,
+            purchasing, and invoicing, so the work of pricing a job happens once
+            and carries through to every stage that follows.
+          </p>
+        </div>
+
+        <div class="mx-auto grid max-w-[1380px] gap-6 lg:grid-cols-3 lg:gap-8">
+          <article
+            class="group relative overflow-hidden rounded-[28px] border border-solid border-neutral-200 bg-white p-7 shadow-[0_18px_50px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-primary-500/40 hover:shadow-[0_28px_70px_rgba(15,23,42,0.09)] sm:p-8 lg:p-9"
+          >
+            <div
+              class="absolute top-0 right-0 h-32 w-32 translate-x-10 -translate-y-10 rounded-full bg-primary-500/10"
+            >
+            </div>
+            <div class="relative mb-8 flex items-start justify-between gap-5">
+              <div
+                class="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-500/10 text-primary-500 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white"
+              >
+                <RefreshCw class="size-7" aria-hidden="true" />
+              </div>
+            </div>
+            <h3
+              class="relative mb-5 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
+            >
+              Faster Estimate Building
+            </h3>
+            <p
+              class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
+            >
+              Reps build estimates faster when products, services, and pricing
+              already exist in the catalog. There is no need to look up a price
+              sheet or ask the office to confirm a number before sending a quote.
+            </p>
+          </article>
+
+          <article
+            class="group relative overflow-hidden rounded-[28px] border border-solid border-[#0F172A] bg-[#0F172A] p-7 shadow-[0_24px_70px_rgba(15,23,42,0.20)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_34px_90px_rgba(15,23,42,0.26)] sm:p-8 lg:p-9"
+          >
+            <div
+              class="absolute top-0 right-0 h-40 w-40 translate-x-12 -translate-y-12 rounded-full bg-primary-500/20"
+            >
+            </div>
+            <div
+              class="absolute bottom-0 left-0 h-32 w-32 -translate-x-12 translate-y-12 rounded-full bg-white/10"
+            >
+            </div>
+            <div class="relative mb-8 flex items-start justify-between gap-5">
+              <div
+                class="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-500 text-white"
+              >
+                <Package class="size-7" aria-hidden="true" />
+              </div>
+            </div>
+            <h3
+              class="relative mb-5 text-[21px] font-semibold leading-[27px] text-white sm:text-2xl sm:leading-7"
+            >
+              Smarter Purchasing Decisions
+            </h3>
+            <p
+              class="relative text-[15px] leading-6 text-white/75 sm:text-base sm:leading-6"
+            >
+              Because the same catalog connects to purchase orders and material
+              requirements, ordering the right products at the right cost becomes
+              part of the normal job workflow instead of a separate task.
+            </p>
+          </article>
+
+          <article
+            class="group relative overflow-hidden rounded-[28px] border border-solid border-neutral-200 bg-white p-7 shadow-[0_18px_50px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-primary-500/40 hover:shadow-[0_28px_70px_rgba(15,23,42,0.09)] sm:p-8 lg:p-9"
+          >
+            <div
+              class="absolute top-0 right-0 h-32 w-32 translate-x-10 -translate-y-10 rounded-full bg-primary-500/10"
+            >
+            </div>
+            <div class="relative mb-8 flex items-start justify-between gap-5">
+              <div
+                class="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-500/10 text-primary-500 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white"
+              >
+                <TrendingUp class="size-7" aria-hidden="true" />
+              </div>
+            </div>
+            <h3
+              class="relative mb-5 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
+            >
+              Clearer Job Profitability
+            </h3>
+            <p
+              class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
+            >
+              When cost, markup, and selling price all live in one place, owners
+              and office managers can see which jobs are actually profitable, not
+              just which ones closed.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="bg-white py-16 sm:py-20 lg:py-24">
+      <div class="my-container mx-auto">
+        <div class="grid gap-10 lg:grid-cols-2 lg:gap-20">
+          <div>
+            <p
+              class="mb-4 text-sm leading-7 font-medium text-primary-500 md:text-2xl"
+            >
+              Frequently Asked Questions
+            </p>
+            <h2
+              class="mb-8 w-full max-w-3xl text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:max-w-none lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+            >
+              Everything Teams Ask About Product Management
+            </h2>
+            <p
+              class="mb-6 w-full max-w-3xl text-sm leading-6 font-normal text-neutral-800 sm:text-base sm:leading-7 md:mb-8 md:text-lg md:leading-8"
+            >
+              A shared product catalog only works if pricing stays consistent
+              from estimate to invoice — here's how Knockio keeps it that way.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            {
+              faqs.map((faq) => (
+                <div class="faq-item overflow-hidden rounded-2xl border border-solid border-neutral-200 transition-all duration-300">
+                  <button
+                    class="faq-button group flex w-full items-center justify-between p-4 text-left sm:p-6"
+                    type="button"
+                  >
+                    <span class="text-base font-medium text-neutral-950 transition-colors group-hover:text-primary-500 sm:text-lg lg:text-xl">
+                      {faq.q}
+                    </span>
+                    <div class="faq-icon ml-4 flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary-500">
+                      <svg
+                        class="icon-minus hidden h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M20 12H4"
+                        />
+                      </svg>
+                      <svg
+                        class="icon-plus h-6 w-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 4v16m8-8H4"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                  <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="p-4 pt-0 text-sm leading-relaxed text-neutral-600 sm:p-6 sm:pt-0 sm:text-base">
+                      {faq.a}
+                    </div>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Customer Reviews ========== -->
+    <section class="overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
+      <div class="my-container mx-auto mb-10 text-center lg:mb-16">
+        <p
+          class="mb-4 text-sm leading-7 font-medium text-primary-500 md:text-2xl"
+        >
+          Customer Reviews
+        </p>
+        <h2
+          class="mb-8 text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+        >
+          What Field Service and Sales<br />
+          Teams Say About Knockio
+        </h2>
+        <img
+          src={asset("google-5-star.webp")}
+          alt="google review badge"
+          width="183"
+          height="60"
+          decoding="async"
+          loading="lazy"
+          class="mx-auto h-auto w-[150px] sm:w-[183px]"
+        />
+      </div>
+
+      <div class="mt-7 space-y-8">
+        <div class="testimonial-track-container flex overflow-hidden">
+          <div
+            class="testimonial-track hover:pause flex animate-marquee-left gap-4 sm:gap-6"
+          >
+            {
+              [0, 1].map((dup) => (
+                <div
+                  class="card-set flex gap-4 sm:gap-6"
+                  aria-hidden={dup === 1 ? "true" : undefined}
+                >
+                  {reviewsRow1.map((review) => (
+                    <div class="relative w-[300px] flex-shrink-0 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 group sm:w-[380px] sm:p-6 lg:w-[450px] lg:p-8">
+                      <p class="relative z-10 mb-6 min-h-[168px] text-sm italic leading-relaxed text-neutral-700 sm:mb-8 sm:text-base lg:text-lg">
+                        {review.quote}
+                      </p>
+                      <div class="relative z-10 flex items-center gap-4">
+                        <img
+                          src={review.avatar}
+                          alt={review.name}
+                          width="48"
+                          height="48"
+                          decoding="async"
+                          loading="lazy"
+                          class="h-12 w-12 rounded-full object-cover grayscale transition-all group-hover:grayscale-0"
+                        />
+                        <div>
+                          <h3 class="mb-1 text-base font-bold text-neutral-950">
+                            {review.name}
+                          </h3>
+                          <p
+                            class="text-sm text-neutral-500"
+                            aria-label="5 out of 5 stars"
+                          >
+                            ⭐⭐⭐⭐⭐
+                          </p>
+                        </div>
+                      </div>
+                      <Quote
+                        class="pointer-events-none absolute right-8 bottom-6 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <div class="testimonial-track-container flex overflow-hidden">
+          <div
+            class="testimonial-track hover:pause flex animate-marquee-right gap-4 sm:gap-6"
+          >
+            {
+              [0, 1].map((dup) => (
+                <div
+                  class="card-set flex gap-4 sm:gap-6"
+                  aria-hidden={dup === 1 ? "true" : undefined}
+                >
+                  {reviewsRow2.map((review) => (
+                    <div class="relative w-[300px] flex-shrink-0 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 group sm:w-[380px] sm:p-6 lg:w-[450px] lg:p-8">
+                      <p class="relative z-10 mb-6 min-h-[168px] text-sm italic leading-relaxed text-neutral-700 sm:mb-8 sm:text-base lg:text-lg">
+                        {review.quote}
+                      </p>
+                      <div class="relative z-10 flex items-center gap-4">
+                        <img
+                          src={review.avatar}
+                          alt={review.name}
+                          width="48"
+                          height="48"
+                          decoding="async"
+                          loading="lazy"
+                          class="h-12 w-12 rounded-full object-cover grayscale transition-all group-hover:grayscale-0"
+                        />
+                        <div>
+                          <h3 class="mb-1 text-base font-bold text-neutral-950">
+                            {review.name}
+                          </h3>
+                          <p
+                            class="text-sm text-neutral-500"
+                            aria-label="5 out of 5 stars"
+                          >
+                            ⭐⭐⭐⭐⭐
+                          </p>
+                        </div>
+                      </div>
+                      <Quote
+                        class="pointer-events-none absolute right-8 bottom-6 size-12 text-primary-500/10 sm:size-14 lg:size-16"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../../scripts/feature-page.js"></script>
+</KnockioHomeLayout>
