@@ -1,0 +1,992 @@
+---
+import KnockioHomeLayout from "../layouts/KnockioHomeLayout.astro";
+import "../styles/salesrabbit-alternatives.css";
+import { Check, X, Quote, WandSparkles, Route } from "lucide-astro";
+
+const title = "SalesRabbit Alternative - Knockio";
+const description =
+  "Knockio is a better SalesRabbit alternative for businesses that want field sales software with deeper CRM functionality at highly affordable pricing.";
+const ogImage = "/assets/cfw/all-devices-view-knockio-1024x390.webp";
+
+type CellValue = boolean | "addon";
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://knockio.com/salesrabbit-alternatives/#webpage",
+    url: "https://knockio.com/salesrabbit-alternatives/",
+    name: "SalesRabbit Alternative - Knockio",
+    description,
+    isPartOf: {
+      "@id": "https://knockio.com/#website",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://knockio.com/salesrabbit-alternatives/#breadcrumb",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://knockio.com/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "SalesRabbit Alternative",
+        item: "https://knockio.com/salesrabbit-alternatives/",
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://knockio.com/salesrabbit-alternatives/#faq",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Is Knockio a good alternative to SalesRabbit?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. Knockio provides the exact same high-performance territory mapping, GPS tracking, and lead capture as SalesRabbit, but natively hardwires it into a heavy-duty field service CRM. You get to keep your elite canvassing tools while ditching the extra software subscriptions for invoicing and dispatch",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What does SalesRabbit do well?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "SalesRabbit is a good tool for knocking doors but that's where it stops. When a lead says 'yes,' your reps are forced to manually copy that data into a separate CRM to build a quote. Knockio gives you the exact same elite territory mapping and live-rep tracking as SalesRabbit, plus the ability to instantly dispatch a crew, send a contract, and collect payment.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Why would a team switch from SalesRabbit to Knockio?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: 'Teams switch to Knockio to eliminate the "Duct-Tape Tax." Instead of paying two expensive monthly subscriptions for a separate canvassing app and a service CRM, Knockio consolidates your tech stack into one highly cost-effective platform. A lead captured at the door instantly becomes a scheduled job, a signed contract, and a paid invoice with zero manual double-data entry.',
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is Knockio better for companies that need both sales and service workflows?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Absolutely. If your business actually has to perform the work you sell (like roofing, HVAC, or pest control), Knockio is built specifically for you. It seamlessly hands off closed deals from your outside sales reps directly to your office scheduling and installation crews.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What makes Knockio a stronger alternative to SalesRabbit?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "SalesRabbit only handles the front half of your business. Knockio handles the whole thing. By combining field sales execution with back-office management, Knockio closes the gap between your sales reps and your service crews.",
+        },
+      },
+    ],
+  },
+];
+
+const comparisonRows: {
+  feature: string;
+  knockio: CellValue;
+  salesrabbit: CellValue;
+}[] = [
+  { feature: "Door to door sales", knockio: true, salesrabbit: true },
+  { feature: "Territory management", knockio: true, salesrabbit: true },
+  { feature: "Route optimization", knockio: true, salesrabbit: true },
+  { feature: "Lead management", knockio: true, salesrabbit: true },
+  { feature: "Real time rep activity tracking", knockio: true, salesrabbit: true },
+  { feature: "DataGrid AI", knockio: false, salesrabbit: true },
+  { feature: "E contracts and e signatures", knockio: true, salesrabbit: "addon" },
+  { feature: "Invoicing and payment tracking", knockio: true, salesrabbit: false },
+  { feature: "Sales to service handoff", knockio: true, salesrabbit: false },
+  { feature: "Field service CRM", knockio: true, salesrabbit: false },
+  { feature: "Notification preferences", knockio: true, salesrabbit: false },
+  { feature: "From Sales Lead to Job Completion", knockio: true, salesrabbit: false },
+  { feature: "Deep Financial Module", knockio: true, salesrabbit: false },
+  { feature: "Prorated Billing", knockio: true, salesrabbit: false },
+  { feature: "Minimum User Requirement", knockio: false, salesrabbit: true },
+];
+
+const reviewsRow1 = [
+  {
+    name: "Lacey Jackson",
+    avatar: "/assets/cfw/avatar-lacey-jackson.webp",
+    quote:
+      "This app is the best thing that has happened to our company! Asad is absolutely amazing! He is so responsive, it doesn't matter what time of day he is on it! I highly recommend this company add this app!",
+  },
+  {
+    name: "Ben Loveland",
+    avatar: "/assets/cfw/avatar-ben-loveland.webp",
+    quote:
+      "Knockio is a great product! We use it for our roofing sales canvassing. Their support team is responsive and fixes issues immediately. Highly recommend!",
+  },
+  {
+    name: "Bar Galanti",
+    avatar: "/assets/cfw/avatar-bar-galanti.webp",
+    quote:
+      "The support team is awesome. The live tracking feature is very useful. The pricing is fair as well!",
+  },
+];
+
+const reviewsRow2 = [
+  {
+    name: "Georgia Hancocks",
+    avatar: "/assets/cfw/avatar-georgia-hancocks.webp",
+    quote:
+      "Knockio is the best! My team and I absolutely love using it - it is so user friendly and simple. Support is brilliant too, nothing is ever too much trouble. The best on the market. Thanks Knockio!",
+  },
+  {
+    name: "Sarah Bennett",
+    avatar: "/assets/cfw/avatar-sarah-bennett.webp",
+    quote:
+      "We love Knockio so far! It is solving a lot of the issues of the other canvassing apps. The team have worked with us providing excellent fast support. Highly recommend if you're seeing people face to face.",
+  },
+  {
+    name: "Ayana Hall",
+    avatar: "/assets/cfw/avatar-ayana-hall.webp",
+    quote:
+      "Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.",
+  },
+];
+---
+
+<KnockioHomeLayout
+  title={title}
+  description={description}
+  ogImage={ogImage}
+  jsonLd={jsonLd}
+>
+  <main class="sra-page overflow-hidden bg-white">
+    <!-- HERO -->
+    <section class="sra-hero">
+      <div class="my-container mx-auto">
+        <div class="text-white">
+          <h1
+            class="mb-6 text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-[64px]"
+          >
+            The SalesRabbit Alternative That Actually Finishes the Job
+          </h1>
+
+          <p
+            class="mb-8 w-full max-w-[926px] text-sm font-normal leading-6 text-neutral-300 sm:text-base sm:leading-7 md:text-lg md:leading-8"
+          >
+            SalesRabbit is built to map territories and track knocks, but what
+            happens when the customer says 'yes'? Stop forcing your reps to
+            juggle multiple apps. Knockio combines elite door-to-door mapping
+            with a complete field service CRM, so you can hunt and farm from one
+            single platform.
+          </p>
+
+          <div class="flex flex-col gap-4 sm:flex-row">
+            <a
+              href="#cal-sec"
+              class="inline-flex w-full items-center justify-center rounded-lg bg-primary-500 px-6 py-3.5 text-sm font-medium hover:bg-primary-600 sm:w-auto sm:px-10 sm:py-4 sm:text-base lg:px-12"
+            >
+              Schedule a Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- G2 BADGES + COMPARISON -->
+    <section class="overflow-hidden bg-white py-16 sm:py-20 lg:py-28">
+      <div class="my-container mx-auto">
+        <div
+          class="mx-auto mb-14 grid max-w-[820px] grid-cols-2 items-center justify-center gap-5 sm:gap-7 lg:grid-cols-4"
+        >
+          <img
+            src="/assets/cfw/g2-leader-badge-1.webp"
+            alt="G2 Leader Badge"
+            width="447"
+            height="558"
+            decoding="async"
+            loading="eager"
+            class="mx-auto h-auto w-full max-w-[118px] sm:max-w-[145px] lg:max-w-[170px]"
+          />
+          <img
+            src="/assets/cfw/g2-high-performer-badge-1.webp"
+            alt="G2 High Performer Badge"
+            width="447"
+            height="558"
+            decoding="async"
+            loading="eager"
+            class="mx-auto h-auto w-full max-w-[118px] sm:max-w-[145px] lg:max-w-[170px]"
+          />
+          <img
+            src="/assets/cfw/g2-best-support-badge-1.webp"
+            alt="G2 Best Support Badge"
+            width="447"
+            height="558"
+            decoding="async"
+            loading="lazy"
+            class="mx-auto h-auto w-full max-w-[118px] sm:max-w-[145px] lg:max-w-[170px]"
+          />
+          <img
+            src="/assets/cfw/g2-best-roi-badge-1.webp"
+            alt="G2 Best ROI Badge"
+            width="447"
+            height="558"
+            decoding="async"
+            loading="lazy"
+            class="mx-auto h-auto w-full max-w-[118px] sm:max-w-[145px] lg:max-w-[170px]"
+          />
+        </div>
+
+        <div class="mx-auto mb-8 max-w-[846px] text-center">
+          <h2
+            class="mb-3 text-3xl font-bold leading-tight text-neutral-950 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+          >
+            Knockio <span class="text-primary-500">vs</span> SalesRabbit
+          </h2>
+          <p
+            class="text-sm font-normal leading-6 text-neutral-600 sm:text-base sm:leading-7 md:text-lg md:leading-8"
+          >
+            We don't compromise on the knock. See how Knockio gives your reps the
+            exact field tools they expect, while eliminating the need for a
+            separate back-office CRM.
+          </p>
+        </div>
+
+        <!-- Desktop / Tablet Table -->
+        <div class="mx-auto hidden max-w-[1180px] overflow-hidden rounded-t-2xl md:block">
+          <table class="w-full border-collapse text-left">
+            <thead>
+              <tr class="bg-neutral-100 text-neutral-950">
+                <th class="w-[58%] rounded-tl-2xl px-5 py-4 text-sm font-bold">
+                  MAIN FEATURE COMPARISON
+                </th>
+                <th class="w-[21%] px-5 py-4 text-center text-sm font-bold">
+                  Knockio
+                </th>
+                <th class="w-[21%] rounded-tr-2xl px-5 py-4 text-center text-sm font-bold">
+                  SalesRabbit
+                </th>
+              </tr>
+            </thead>
+            <tbody class="text-sm font-semibold text-neutral-950">
+              {
+                comparisonRows.map((row, index) => (
+                  <tr class={index % 2 === 0 ? "bg-white" : "bg-primary-50"}>
+                    <td class="px-5 py-3">{row.feature}</td>
+                    <td class="px-5 py-3 text-center">
+                      {row.knockio === "addon" ? (
+                        "Add-on"
+                      ) : row.knockio ? (
+                        <span class="sra-check text-xl" aria-label="Yes">
+                          <Check aria-hidden="true" />
+                        </span>
+                      ) : (
+                        <span class="sra-xmark text-xl" aria-label="No">
+                          <X aria-hidden="true" />
+                        </span>
+                      )}
+                    </td>
+                    <td class="px-5 py-3 text-center">
+                      {row.salesrabbit === "addon" ? (
+                        "Add-on"
+                      ) : row.salesrabbit ? (
+                        <span class="sra-check text-xl" aria-label="Yes">
+                          <Check aria-hidden="true" />
+                        </span>
+                      ) : (
+                        <span class="sra-xmark text-xl" aria-label="No">
+                          <X aria-hidden="true" />
+                        </span>
+                      )}
+                    </td>
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Mobile Table Cards -->
+        <div class="grid gap-3 md:hidden">
+          <div class="rounded-2xl border border-neutral-200 bg-neutral-50 p-4">
+            <div
+              class="mb-3 grid grid-cols-[1fr_64px_64px] gap-3 text-xs font-bold text-neutral-950"
+            >
+              <span>MAIN FEATURE COMPARISON</span>
+              <span class="text-center">Knockio</span>
+              <span class="text-center">SalesRabbit</span>
+            </div>
+
+            <div class="space-y-2 text-sm font-semibold text-neutral-950">
+              {
+                comparisonRows.map((row, index) => (
+                  <div
+                    class:list={[
+                      "grid grid-cols-[1fr_64px_64px] gap-3 rounded-xl p-3",
+                      index % 2 === 0 ? "bg-white" : "bg-primary-50",
+                    ]}
+                  >
+                    <span>{row.feature}</span>
+                    <span class="text-center">
+                      {row.knockio === "addon" ? (
+                        <span class="text-xs font-bold">Add-on</span>
+                      ) : row.knockio ? (
+                        <span class="sra-check" aria-label="Yes">
+                          <Check aria-hidden="true" />
+                        </span>
+                      ) : (
+                        <span class="sra-xmark" aria-label="No">
+                          <X aria-hidden="true" />
+                        </span>
+                      )}
+                    </span>
+                    <span class="text-center">
+                      {row.salesrabbit === "addon" ? (
+                        <span class="text-xs font-bold">Add-on</span>
+                      ) : row.salesrabbit ? (
+                        <span class="sra-check" aria-label="Yes">
+                          <Check aria-hidden="true" />
+                        </span>
+                      ) : (
+                        <span class="sra-xmark" aria-label="No">
+                          <X aria-hidden="true" />
+                        </span>
+                      )}
+                    </span>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DARK ROUTE SECTION -->
+    <section class="sra-dark-band overflow-hidden py-14 sm:py-20 lg:py-28">
+      <div class="my-container mx-auto">
+        <div
+          class="grid grid-cols-1 items-center gap-10 md:grid-cols-12 md:gap-8 xl:gap-0"
+        >
+          <div class="text-center md:col-span-7 md:text-left xl:col-span-7">
+            <p
+              class="mb-3 text-sm font-medium leading-7 text-primary-500 sm:text-base md:text-2xl font-inter"
+            >
+              CRM Powered Sales Growth
+            </p>
+
+            <h2
+              class="mb-5 text-3xl font-bold leading-tight text-neutral-100 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+            >
+              Knockio Helps Teams Do More Than Canvass
+            </h2>
+
+            <p
+              class="mx-auto mb-8 max-w-[760px] text-sm font-normal leading-6 text-neutral-200 sm:text-base sm:leading-7 md:mx-0 md:text-lg md:leading-8"
+            >
+              SalesRabbit is built to do one thing: map territories and track
+              knocks. But that is exactly where their software stops. Knockio
+              brings together elite route planning and rep tracking with customer
+              records, proposals, contracts, and follow-through in one place. You
+              get the canvassing firepower you need, without the bottleneck of
+              switching apps to close the deal.
+            </p>
+
+            <div
+              class="mx-auto grid max-w-[650px] grid-cols-1 gap-5 sm:gap-6 md:mx-0 md:gap-7"
+            >
+              <div
+                class="flex items-start gap-4 rounded-2xl border border-neutral-200 p-5 text-left sm:gap-5 sm:p-6 md:border-0 md:bg-transparent md:p-0 lg:gap-6"
+              >
+                <span class="sra-feature-icon" aria-hidden="true">
+                  <WandSparkles />
+                </span>
+                <div class="min-w-0">
+                  <h3
+                    class="mb-2 text-xl font-bold leading-tight text-white lg:text-2xl"
+                  >
+                    Start selling with more control
+                  </h3>
+                  <p
+                    class="text-sm font-normal leading-6 text-white sm:text-base sm:leading-7"
+                  >
+                    Manage routes, territories, leads, and rep activity with
+                    better visibility across the full sales process.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="flex items-start gap-4 rounded-2xl border border-neutral-200 p-5 text-left sm:gap-5 sm:p-6 md:border-0 md:bg-transparent md:p-0 lg:gap-6"
+              >
+                <span class="sra-feature-icon" aria-hidden="true">
+                  <Route />
+                </span>
+                <div class="min-w-0">
+                  <h3
+                    class="mb-2 text-xl font-bold leading-tight text-white lg:text-2xl"
+                  >
+                    Start closing with more tools
+                  </h3>
+                  <p
+                    class="text-sm font-normal leading-6 text-white sm:text-base sm:leading-7"
+                  >
+                    Turn lead capture into proposals, contracts, and next-step
+                    actions in one connected workflow built for growing teams.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center md:col-span-5 xl:col-span-5">
+            <img
+              src="/assets/cfw/lead-detail-mobile-full.webp"
+              alt="Lead Detail Mobile Screen"
+              width="315"
+              height="640"
+              decoding="async"
+              loading="lazy"
+              class="h-auto w-full max-w-[220px] object-contain sm:max-w-[260px] md:max-w-[300px] lg:max-w-[330px] xl:max-w-[360px]"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOVE BEYOND / DUCT-TAPE TAX -->
+    <section class="overflow-hidden bg-white py-16 sm:py-20 lg:py-28">
+      <div class="my-container mx-auto">
+        <div
+          class="grid grid-cols-1 items-center gap-10 md:grid-cols-12 md:gap-8 xl:gap-0"
+        >
+          <div
+            class="order-2 flex justify-center md:order-1 md:col-span-5 md:justify-start xl:col-span-5"
+          >
+            <img
+              src="/assets/cfw/route-midpoint-mobile-full.webp"
+              alt="Midpoints Selection Mobile Screen"
+              width="313"
+              height="640"
+              decoding="async"
+              loading="lazy"
+              class="h-auto w-full max-w-[220px] object-contain sm:max-w-[260px] md:max-w-[300px] lg:max-w-[330px] xl:max-w-[360px]"
+            />
+          </div>
+
+          <div class="hidden md:order-2 md:col-span-1 md:block xl:col-span-1"></div>
+
+          <div
+            class="order-1 text-center md:order-3 md:col-span-6 md:text-left xl:col-span-6"
+          >
+            <p
+              class="mb-3 text-sm font-medium leading-7 text-primary-500 sm:text-base md:text-2xl font-inter"
+            >
+              CRM Depth &amp; Business Workflow
+            </p>
+
+            <h2
+              class="mb-5 text-3xl font-bold leading-tight text-neutral-950 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+            >
+              Give Your Team More Than{" "}
+              <br class="hidden md:block" />
+              Basic Field Sales Tools
+            </h2>
+
+            <p
+              class="mx-auto mb-8 max-w-[790px] text-sm font-normal leading-6 text-neutral-600 sm:text-base sm:leading-7 md:mx-0 md:text-lg md:leading-8"
+            >
+              If you are using SalesRabbit, you are likely paying their monthly
+              fee plus another $60 to $100 per user for a field service CRM (like
+              Jobber or ServiceTitan) just to handle your scheduling and billing.
+              This is the "
+              <a href="/blog/cost-of-separate-canvassing-and-field-service-software/">
+                Duct-Tape Tax
+              </a>
+              ", the hidden cost of paying for multiple subscriptions and wasting
+              hours on double-data entry. Knockio connects your entire operation
+              on one unified database for a fraction of the combined cost.
+            </p>
+
+            <div
+              class="mx-auto grid max-w-[650px] grid-cols-1 gap-5 sm:gap-6 md:mx-0 md:gap-7"
+            >
+              <div
+                class="flex items-start gap-4 rounded-2xl border border-neutral-200 bg-white p-5 text-left sm:gap-5 sm:p-6 md:border-0 md:bg-transparent md:p-0 lg:gap-6"
+              >
+                <span class="sra-feature-icon" aria-hidden="true">
+                  <WandSparkles />
+                </span>
+                <div class="min-w-0">
+                  <h3
+                    class="mb-2 text-xl font-bold leading-tight text-neutral-950 lg:text-2xl"
+                  >
+                    Start managing with more visibility
+                  </h3>
+                  <p
+                    class="text-sm font-normal leading-6 text-neutral-600 sm:text-base sm:leading-7"
+                  >
+                    See territories, rep activity, customer records, follow ups,
+                    and deal progress in one place with clearer control across the
+                    workflow.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="flex items-start gap-4 rounded-2xl border border-neutral-200 bg-white p-5 text-left sm:gap-5 sm:p-6 md:border-0 md:bg-transparent md:p-0 lg:gap-6"
+              >
+                <span class="sra-feature-icon" aria-hidden="true">
+                  <Route />
+                </span>
+                <div class="min-w-0">
+                  <h3
+                    class="mb-2 text-xl font-bold leading-tight text-neutral-950 lg:text-2xl"
+                  >
+                    Start scaling with more connection
+                  </h3>
+                  <p
+                    class="text-sm font-normal leading-6 text-neutral-600 sm:text-base sm:leading-7"
+                  >
+                    Keep sales, contracts, invoicing, and post-sale work connected
+                    in one platform as your team grows.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="bg-white py-16 sm:py-20 lg:py-24">
+      <div class="my-container mx-auto">
+        <div class="grid gap-10 lg:grid-cols-2 lg:gap-20">
+          <div>
+            <p class="mb-4 text-sm leading-7 text-primary-500 md:text-2xl font-inter">
+              Common Questions
+            </p>
+            <h2
+              class="mb-8 w-full max-w-xl text-3xl font-bold leading-tight text-neutral-950 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+            >
+              SalesRabbit Alternative FAQs
+            </h2>
+          </div>
+
+          <div class="space-y-4">
+            <div
+              class="faq-item overflow-hidden rounded-2xl border border-solid border-neutral-200 transition-all duration-300"
+            >
+              <button
+                type="button"
+                class="faq-button group flex w-full items-center justify-between p-4 text-left sm:p-6"
+              >
+                <span
+                  class="text-base font-medium text-neutral-950 transition-colors group-hover:text-primary-500 sm:text-lg lg:text-xl"
+                >
+                  Is Knockio a good alternative to SalesRabbit?
+                </span>
+                <div
+                  class="faq-icon ml-4 flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary-500"
+                >
+                  <svg
+                    class="icon-minus hidden h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M20 12H4"></path>
+                  </svg>
+                  <svg
+                    class="icon-plus h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div
+                  class="p-4 pt-0 text-sm leading-relaxed text-neutral-600 sm:p-6 sm:pt-0 sm:text-base"
+                >
+                  Yes. Knockio provides the exact same high-performance territory
+                  mapping, GPS tracking, and lead capture as SalesRabbit, but
+                  natively hardwires it into a heavy-duty field service CRM. You
+                  get to keep your elite canvassing tools while ditching the extra
+                  software subscriptions for invoicing and dispatch
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="faq-item overflow-hidden rounded-2xl border border-solid border-neutral-200 transition-all duration-300"
+            >
+              <button
+                type="button"
+                class="faq-button group flex w-full items-center justify-between p-4 text-left sm:p-6"
+              >
+                <span
+                  class="text-base font-medium text-neutral-950 transition-colors group-hover:text-primary-500 sm:text-lg lg:text-xl"
+                >
+                  What does SalesRabbit do well?
+                </span>
+                <div
+                  class="faq-icon ml-4 flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary-500"
+                >
+                  <svg
+                    class="icon-minus hidden h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M20 12H4"></path>
+                  </svg>
+                  <svg
+                    class="icon-plus h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div
+                  class="p-4 pt-0 text-sm leading-relaxed text-neutral-600 sm:p-6 sm:pt-0 sm:text-base"
+                >
+                  SalesRabbit is a good tool for knocking doors but that's where
+                  it stops. When a lead says 'yes,' your reps are forced to
+                  manually copy that data into a separate CRM to build a quote.
+                  Knockio gives you the exact same elite territory mapping and
+                  live-rep tracking as SalesRabbit, plus the ability to instantly
+                  dispatch a crew, send a contract, and collect payment.
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="faq-item overflow-hidden rounded-2xl border border-solid border-neutral-200 transition-all duration-300"
+            >
+              <button
+                type="button"
+                class="faq-button group flex w-full items-center justify-between p-4 text-left sm:p-6"
+              >
+                <span
+                  class="text-base font-medium text-neutral-950 transition-colors group-hover:text-primary-500 sm:text-lg lg:text-xl"
+                >
+                  Why would a team switch from SalesRabbit to Knockio?
+                </span>
+                <div
+                  class="faq-icon ml-4 flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary-500"
+                >
+                  <svg
+                    class="icon-minus hidden h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M20 12H4"></path>
+                  </svg>
+                  <svg
+                    class="icon-plus h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div
+                  class="p-4 pt-0 text-sm leading-relaxed text-neutral-600 sm:p-6 sm:pt-0 sm:text-base"
+                >
+                  Teams switch to Knockio to eliminate the "Duct-Tape Tax."
+                  Instead of paying two expensive monthly subscriptions for a
+                  separate canvassing app and a service CRM, Knockio consolidates
+                  your tech stack into one highly cost-effective platform. A lead
+                  captured at the door instantly becomes a scheduled job, a signed
+                  contract, and a paid invoice with zero manual double-data entry.
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="faq-item overflow-hidden rounded-2xl border border-solid border-neutral-200 transition-all duration-300"
+            >
+              <button
+                type="button"
+                class="faq-button group flex w-full items-center justify-between p-4 text-left sm:p-6"
+              >
+                <span
+                  class="text-base font-medium text-neutral-950 transition-colors group-hover:text-primary-500 sm:text-lg lg:text-xl"
+                >
+                  Is Knockio better for companies that need both sales and
+                  service workflows?
+                </span>
+                <div
+                  class="faq-icon ml-4 flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary-500"
+                >
+                  <svg
+                    class="icon-minus hidden h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M20 12H4"></path>
+                  </svg>
+                  <svg
+                    class="icon-plus h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div
+                  class="p-4 pt-0 text-sm leading-relaxed text-neutral-600 sm:p-6 sm:pt-0 sm:text-base"
+                >
+                  Absolutely. If your business actually has to perform the work
+                  you sell (like roofing, HVAC, or pest control), Knockio is built
+                  specifically for you. It seamlessly hands off closed deals from
+                  your outside sales reps directly to your office scheduling and
+                  installation crews.
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="faq-item overflow-hidden rounded-2xl border border-solid border-neutral-200 transition-all duration-300"
+            >
+              <button
+                type="button"
+                class="faq-button group flex w-full items-center justify-between p-4 text-left sm:p-6"
+              >
+                <span
+                  class="text-base font-medium text-neutral-950 transition-colors group-hover:text-primary-500 sm:text-lg lg:text-xl"
+                >
+                  What makes Knockio a stronger alternative to SalesRabbit?
+                </span>
+                <div
+                  class="faq-icon ml-4 flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary-500"
+                >
+                  <svg
+                    class="icon-minus hidden h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M20 12H4"></path>
+                  </svg>
+                  <svg
+                    class="icon-plus h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div
+                  class="p-4 pt-0 text-sm leading-relaxed text-neutral-600 sm:p-6 sm:pt-0 sm:text-base"
+                >
+                  SalesRabbit only handles the front half of your business.
+                  Knockio handles the whole thing. By combining field sales
+                  execution with back-office management, Knockio closes the gap
+                  between your sales reps and your service crews.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CUSTOMER REVIEWS -->
+    <section class="overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
+      <div class="my-container mx-auto mb-10 text-center lg:mb-16">
+        <p class="mb-4 text-sm leading-7 text-primary-500 md:text-2xl font-inter">
+          Customer Reviews
+        </p>
+        <h2
+          class="mb-8 text-3xl font-bold leading-tight text-neutral-950 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+        >
+          What Field Service and Sales<br />
+          Teams Say About Knockio
+        </h2>
+
+        <img
+          src="/assets/cfw/google-5-star.webp"
+          alt="google review badge"
+          width="183"
+          height="60"
+          decoding="async"
+          loading="lazy"
+          class="mx-auto h-auto w-[150px] sm:w-[183px]"
+        />
+      </div>
+
+      <div class="mt-7 space-y-8">
+        <div class="testimonial-track-container flex overflow-hidden">
+          <div
+            class="testimonial-track hover:pause flex animate-marquee-left gap-4 sm:gap-6"
+          >
+            {
+              [0, 1].map((dup) => (
+                <div
+                  class="card-set flex gap-4 sm:gap-6"
+                  aria-hidden={dup === 1 ? "true" : undefined}
+                >
+                  {reviewsRow1.map((review) => (
+                    <div class="group relative w-[300px] flex-shrink-0 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 sm:w-[380px] sm:p-6 lg:w-[450px] lg:p-8">
+                      <p class="relative z-10 mb-6 min-h-[168px] text-sm italic text-neutral-700 sm:mb-8 sm:text-base lg:text-lg">
+                        {review.quote}
+                      </p>
+                      <div class="relative z-10 flex items-center gap-4">
+                        <img
+                          src={review.avatar}
+                          alt={review.name}
+                          width="48"
+                          height="48"
+                          decoding="async"
+                          loading="lazy"
+                          class="h-12 w-12 rounded-full object-cover grayscale transition-all group-hover:grayscale-0"
+                        />
+                        <div>
+                          <h5 class="mb-1 font-bold text-neutral-950">
+                            {review.name}
+                          </h5>
+                          <p
+                            class="text-sm text-neutral-500"
+                            aria-label="5 out of 5 stars"
+                          >
+                            ⭐⭐⭐⭐⭐
+                          </p>
+                        </div>
+                      </div>
+                      <Quote
+                        size="1em"
+                        class="pointer-events-none absolute right-8 bottom-6 text-5xl text-primary-500/10 sm:text-6xl lg:text-7xl"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <div class="testimonial-track-container flex overflow-hidden">
+          <div
+            class="testimonial-track hover:pause flex animate-marquee-right gap-4 sm:gap-6"
+          >
+            {
+              [0, 1].map((dup) => (
+                <div
+                  class="card-set flex gap-4 sm:gap-6"
+                  aria-hidden={dup === 1 ? "true" : undefined}
+                >
+                  {reviewsRow2.map((review) => (
+                    <div class="group relative w-[300px] flex-shrink-0 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 sm:w-[380px] sm:p-6 lg:w-[450px] lg:p-8">
+                      <p class="relative z-10 mb-6 min-h-[168px] text-sm italic text-neutral-700 sm:mb-8 sm:text-base lg:text-lg">
+                        {review.quote}
+                      </p>
+                      <div class="relative z-10 flex items-center gap-4">
+                        <img
+                          src={review.avatar}
+                          alt={review.name}
+                          width="48"
+                          height="48"
+                          decoding="async"
+                          loading="lazy"
+                          class="h-12 w-12 rounded-full object-cover grayscale transition-all group-hover:grayscale-0"
+                        />
+                        <div>
+                          <h5 class="mb-1 font-bold text-neutral-950">
+                            {review.name}
+                          </h5>
+                          <p
+                            class="text-sm text-neutral-500"
+                            aria-label="5 out of 5 stars"
+                          >
+                            ⭐⭐⭐⭐⭐
+                          </p>
+                        </div>
+                      </div>
+                      <Quote
+                        size="1em"
+                        class="pointer-events-none absolute right-8 bottom-6 text-5xl text-primary-500/10 sm:text-6xl lg:text-7xl"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</KnockioHomeLayout>
