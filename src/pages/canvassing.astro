@@ -1,6 +1,6 @@
 ---
-import KnockioHomeLayout from '../layouts/KnockioHomeLayout.astro';
-import '../styles/canvassing/index.css';
+import KnockioHomeLayout from "../layouts/KnockioHomeLayout.astro";
+import "../styles/canvassing/index.css";
 import {
   ChartLine,
   Check,
@@ -12,121 +12,121 @@ import {
   Plug,
   Quote,
   UserRound,
-} from 'lucide-astro';
+} from "lucide-astro";
 
-const title = 'Best Door to Door Canvassing Software & D2D Sales App | Knockio';
+const title = "Best Door to Door Canvassing App & D2D Sales App";
 const description =
-  "Knockio's door-to-door canvassing app equips field reps with territory mapping, live tracking, route optimization, and lead capture. Knock more doors close more deals.";
+  "Grow your door-to-door sales with a powerful canvassing app for territory management, lead tracking, team performance, route planning, and faster D2D sales.";
 
 const jsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      '@type': 'WebApplication',
-      '@id': 'https://knockio.com/canvassing/#software',
-      name: 'Knockio Canvassing',
-      url: 'https://knockio.com/canvassing/',
-      applicationCategory: 'BusinessApplication',
+      "@type": "WebApplication",
+      "@id": "https://knockio.com/canvassing/#software",
+      name: "Knockio Canvassing",
+      url: "https://knockio.com/canvassing/",
+      applicationCategory: "BusinessApplication",
       applicationSubCategory:
-        'Door-to-Door Canvassing App, Field Sales Software',
-      operatingSystem: 'Web, iOS, Android',
+        "Door-to-Door Canvassing App, Field Sales Software",
+      operatingSystem: "Web, iOS, Android",
       description:
         "Knockio's canvassing app for door-to-door field sales teams \u2014 territory mapping, route planning, live rep tracking, and lead capture.",
       provider: {
-        '@id': 'https://knockio.com/#organization',
+        "@id": "https://knockio.com/#organization",
       },
       isPartOf: {
-        '@id': 'https://knockio.com/#software',
+        "@id": "https://knockio.com/#software",
       },
       featureList: [
-        'Territory mapping',
-        'Route planning',
-        'Live rep tracking',
-        'Lead capture',
-        'Lead status updates',
-        'Follow-up reminders',
+        "Territory mapping",
+        "Route planning",
+        "Live rep tracking",
+        "Lead capture",
+        "Lead status updates",
+        "Follow-up reminders",
       ],
       offers: {
-        '@type': 'AggregateOffer',
-        lowPrice: '20.00',
-        highPrice: '25.00',
-        priceCurrency: 'USD',
-        url: 'https://knockio.com/pricing/',
+        "@type": "AggregateOffer",
+        lowPrice: "20.00",
+        highPrice: "25.00",
+        priceCurrency: "USD",
+        url: "https://knockio.com/pricing/",
       },
     },
     {
-      '@type': 'WebPage',
-      '@id': 'https://knockio.com/canvassing/#webpage',
-      url: 'https://knockio.com/canvassing/',
-      name: 'Best Door to Door Canvassing Software & D2D Sales App | Knockio',
+      "@type": "WebPage",
+      "@id": "https://knockio.com/canvassing/#webpage",
+      url: "https://knockio.com/canvassing/",
+      name: "Best Door to Door Canvassing Software & D2D Sales App | Knockio",
       description:
         "Knockio's door-to-door canvassing app equips field reps with territory mapping, live tracking, route optimization, and lead capture. Knock more doors close more deals.",
       isPartOf: {
-        '@id': 'https://knockio.com/#website',
+        "@id": "https://knockio.com/#website",
       },
       about: {
-        '@id': 'https://knockio.com/canvassing/#software',
+        "@id": "https://knockio.com/canvassing/#software",
       },
     },
     {
-      '@type': 'BreadcrumbList',
-      '@id': 'https://knockio.com/canvassing/#breadcrumb',
+      "@type": "BreadcrumbList",
+      "@id": "https://knockio.com/canvassing/#breadcrumb",
       itemListElement: [
         {
-          '@type': 'ListItem',
+          "@type": "ListItem",
           position: 1,
-          name: 'Home',
-          item: 'https://knockio.com/',
+          name: "Home",
+          item: "https://knockio.com/",
         },
         {
-          '@type': 'ListItem',
+          "@type": "ListItem",
           position: 2,
-          name: 'Canvassing',
-          item: 'https://knockio.com/canvassing/',
+          name: "Canvassing",
+          item: "https://knockio.com/canvassing/",
         },
       ],
     },
     {
-      '@type': 'FAQPage',
-      '@id': 'https://knockio.com/canvassing/#faq',
+      "@type": "FAQPage",
+      "@id": "https://knockio.com/canvassing/#faq",
       mainEntity: [
         {
-          '@type': 'Question',
-          name: 'What is Knockio canvassing software?',
+          "@type": "Question",
+          name: "What is Knockio canvassing software?",
           acceptedAnswer: {
-            '@type': 'Answer',
+            "@type": "Answer",
             text: "Knockio's canvassing app helps field sales teams plan routes, map territories, capture leads at the door, and track rep activity in real time \u2014 everything a door-to-door team needs in one place.",
           },
         },
         {
-          '@type': 'Question',
-          name: 'Is Knockio only for door-to-door sales teams?',
+          "@type": "Question",
+          name: "Is Knockio only for door-to-door sales teams?",
           acceptedAnswer: {
-            '@type': 'Answer',
+            "@type": "Answer",
             text: "Knockio's canvassing app is built specifically for door-to-door reps. Territory mapping, route planning, and lead capture are designed around how canvassing actually works in the field.",
           },
         },
         {
-          '@type': 'Question',
-          name: 'How does Knockio help managers track canvassing teams?',
+          "@type": "Question",
+          name: "How does Knockio help managers track canvassing teams?",
           acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Managers can see live rep locations, monitor territory coverage, review lead status by stage, and track follow-up activity \u2014 without calling reps for updates throughout the day.',
+            "@type": "Answer",
+            text: "Managers can see live rep locations, monitor territory coverage, review lead status by stage, and track follow-up activity \u2014 without calling reps for updates throughout the day.",
           },
         },
         {
-          '@type': 'Question',
-          name: 'How is Knockio different from other canvassing apps like SPOTIO or SalesRabbit?',
+          "@type": "Question",
+          name: "How is Knockio different from other canvassing apps like SPOTIO or SalesRabbit?",
           acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Knockio combines territory mapping, route planning, live rep tracking, and lead capture in one canvassing app \u2014 built for teams who want a faster, simpler alternative to juggling multiple field sales tools.',
+            "@type": "Answer",
+            text: "Knockio combines territory mapping, route planning, live rep tracking, and lead capture in one canvassing app \u2014 built for teams who want a faster, simpler alternative to juggling multiple field sales tools.",
           },
         },
         {
-          '@type': 'Question',
-          name: 'Does Knockio work on mobile?',
+          "@type": "Question",
+          name: "Does Knockio work on mobile?",
           acceptedAnswer: {
-            '@type': 'Answer',
+            "@type": "Answer",
             text: "Yes \u2014 reps can use Knockio's canvassing app from the field on mobile devices to capture leads, update visit status, and add notes or photos in real time.",
           },
         },
@@ -884,7 +884,9 @@ const jsonLd = {
     <!-- FAQ SECTION -->
     <section class="py-16 sm:py-20 lg:py-24 bg-white overflow-x-hidden">
       <div class="my-container mx-auto">
-        <div class="grid gap-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:gap-20">
+        <div
+          class="grid gap-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:gap-20"
+        >
           <!-- Left Side: Content -->
           <div>
             <p
@@ -895,7 +897,9 @@ const jsonLd = {
             <h2
               class="text-3xl leading-tight sm:text-4xl lg:text-[42px] xl:text-5xl 2xl:text-[56px] lg:leading-none font-bold text-neutral-950 mb-8 w-full max-w-3xl xl:max-w-none"
             >
-              <span class="whitespace-nowrap max-sm:whitespace-normal">Everything Teams Ask Before</span> Using Knockio Canvassing
+              <span class="whitespace-nowrap max-sm:whitespace-normal"
+                >Everything Teams Ask Before</span
+              > Using Knockio Canvassing
             </h2>
             <p
               class="text-neutral-800 text-sm leading-6 sm:text-base sm:leading-7 md:text-lg md:leading-8 font-normal mb-6 md:mb-8 w-full max-w-3xl"
