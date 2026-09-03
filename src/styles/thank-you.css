@@ -1,0 +1,44 @@
+/* ═══════════════════════════════════════════════
+   THANK YOU — PAGE STYLES
+   Modular CSS for /thank-you/
+   Tailwind utilities carry most layout/typography.
+   ═══════════════════════════════════════════════ */
+
+/* ── HERO ICON SIZING (Lucide ↔ Font Awesome parity) ── */
+.ty-badge-icon svg {
+  width: 0.6875rem;
+  height: 0.6875rem;
+}
+
+.ty-chip-icon svg {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.ty-status-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.ty-step-icon svg {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.ty-info-icon svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.ty-quote-icon {
+  width: 1em;
+  height: 1em;
+}
+
+/* ── REDUCED MOTION ──────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .ty-page .animate-marquee-left,
+  .ty-page .animate-marquee-right {
+    animation: none !important;
+  }
+}
