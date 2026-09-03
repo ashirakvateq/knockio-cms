@@ -15,14 +15,15 @@ export default {
     originHeaders.set("X-Forwarded-For", request.headers.get("CF-Connecting-IP") || "");
     originHeaders.set("X-Real-IP", request.headers.get("CF-Connecting-IP") || "");
 
+    const hasBody = request.method !== "GET" && request.method !== "HEAD";
+    const body = hasBody ? await request.arrayBuffer() : undefined;
+
     try {
       const originResponse = await fetch(originUrl, {
         method: request.method,
         headers: originHeaders,
-        body: request.method !== "GET" && request.method !== "HEAD"
-          ? request.body
-          : undefined,
-        redirect: "follow",
+        body,
+        redirect: "manual",
       });
 
       const response = new Response(originResponse.body, originResponse);

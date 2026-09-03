@@ -1,5 +1,4 @@
 import { defineConfig, fontProviders } from 'astro/config';
-import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
 // TODO: Confirm the current WordPress permalink style before the first deploy.
@@ -9,7 +8,6 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   site: "https://knockio.com",
   trailingSlash: "always",
-  integrations: [sitemap()],
   fonts: [
     {
       provider: fontProviders.fontsource(),

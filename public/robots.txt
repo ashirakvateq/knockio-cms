@@ -1,4 +1,208 @@
-User-agent: *
+# ===============================================================
+# KNOCKIO.COM - ROBOTS.TXT
+# ===============================================================
+
+# ---------------------------------------------------------------
+# 1. PRIMARY SEARCH ENGINES (Google & Bing)
+# Unblocked for /llms-full.txt; Media & LLM files explicitly allowed
+# ---------------------------------------------------------------
+User-agent: Googlebot
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Disallow: /wp-json/
+Disallow: /*?s=*
+Disallow: /*?*utm_*
+Disallow: */feed/
+Disallow: */trackback/
+Disallow: */comments/
+Allow: /wp-content/uploads/
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Bingbot
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Disallow: /wp-json/
+Disallow: /*?s=*
+Disallow: /*?*utm_*
+Disallow: */feed/
+Disallow: */trackback/
+Disallow: */comments/
+Allow: /wp-content/uploads/
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+# ---------------------------------------------------------------
+# 2. LIVE AI SEARCH, ANSWER ENGINES & USER AGENTS
+# (Allowed to fetch & cite Knockio in real-time AI answers.
+#  Same hygiene rules as section 1: real content is open, junk
+#  paths like wp-admin/feed/trackback/comments are not.)
+# ---------------------------------------------------------------
+User-agent: OAI-SearchBot
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Disallow: /wp-json/
+Disallow: /*?s=*
+Disallow: /*?*utm_*
+Disallow: */feed/
+Disallow: */trackback/
+Disallow: */comments/
 Allow: /
 
-Sitemap: https://example.com/sitemap-index.xml
+User-agent: ChatGPT-User
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Disallow: /wp-json/
+Disallow: /*?s=*
+Disallow: /*?*utm_*
+Disallow: */feed/
+Disallow: */trackback/
+Disallow: */comments/
+Allow: /
+
+User-agent: PerplexityBot
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Disallow: /wp-json/
+Disallow: /*?s=*
+Disallow: /*?*utm_*
+Disallow: */feed/
+Disallow: */trackback/
+Disallow: */comments/
+Allow: /
+
+User-agent: Perplexity-User
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Disallow: /wp-json/
+Disallow: /*?s=*
+Disallow: /*?*utm_*
+Disallow: */feed/
+Disallow: */trackback/
+Disallow: */comments/
+Allow: /
+
+User-agent: Claude-SearchBot
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Disallow: /wp-json/
+Disallow: /*?s=*
+Disallow: /*?*utm_*
+Disallow: */feed/
+Disallow: */trackback/
+Disallow: */comments/
+Allow: /
+
+User-agent: Claude-User
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Disallow: /wp-json/
+Disallow: /*?s=*
+Disallow: /*?*utm_*
+Disallow: */feed/
+Disallow: */trackback/
+Disallow: */comments/
+Allow: /
+
+User-agent: Applebot
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Disallow: /wp-json/
+Disallow: /*?s=*
+Disallow: /*?*utm_*
+Disallow: */feed/
+Disallow: */trackback/
+Disallow: */comments/
+Allow: /
+
+User-agent: Applebot-Extended
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Disallow: /wp-json/
+Disallow: /*?s=*
+Disallow: /*?*utm_*
+Disallow: */feed/
+Disallow: */trackback/
+Disallow: */comments/
+Allow: /
+
+User-agent: Google-Extended
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Disallow: /wp-json/
+Disallow: /*?s=*
+Disallow: /*?*utm_*
+Disallow: */feed/
+Disallow: */trackback/
+Disallow: */comments/
+Allow: /
+
+# ---------------------------------------------------------------
+# 3. EXISTING BLOCKED SCRAPERS & REGIONAL BOTS
+# (Blocked from HTML/WP pages, allowed to ingest LLM files only)
+# ---------------------------------------------------------------
+User-agent: Bytespider
+Disallow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: CCBot
+Disallow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Baiduspider
+Disallow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: PetalBot
+Disallow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Amazonbot
+Disallow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: YandexBot
+Disallow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Diffbot
+Disallow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Meta-ExternalFetcher
+Disallow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+# ---------------------------------------------------------------
+# 4. DEFAULT FALLBACK (Catches GPTBot, ClaudeBot, and all others)
+# ---------------------------------------------------------------
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Disallow: /wp-json/
+Disallow: /*?s=*
+Disallow: /*?*utm_*
+Disallow: */feed/
+Disallow: */trackback/
+Disallow: */comments/
+Allow: /wp-content/uploads/
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+# ---------------------------------------------------------------
+# 5. SITEMAP DECLARATION
+# ---------------------------------------------------------------
+Sitemap: https://knockio.com/sitemap_index.xml

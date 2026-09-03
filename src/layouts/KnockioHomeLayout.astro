@@ -10,6 +10,7 @@ import FbAnalytics from "../components/FbAnalytics.astro";
 import KnockioHomeHeader from "../components/KnockioHomeHeader.astro";
 import KnockioHomeFooter from "../components/KnockioHomeFooter.astro";
 import CalcomEmbed from "../components/CalcomEmbed.astro";
+import ExitIntentModal from "../components/ExitIntentModal.astro";
 
 interface Props {
   title: string;
@@ -95,8 +96,10 @@ const {
 
     <ThirdPartyWidgets />
     <FbAnalytics />
+    <ExitIntentModal />
     <script src="../scripts/home.js" ></script>
     <script src="../scripts/lp-cal-inline.js" ></script>
     <script src="../scripts/calendar-cta.js"></script>
+    <script src="../scripts/exit-intent.js"></script>
   </body>
 </html>
