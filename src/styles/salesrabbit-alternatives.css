@@ -1,11 +1,11 @@
 /* ═══════════════════════════════════════════════
-   SPOTIO ALTERNATIVE — PAGE STYLES
-   Modular CSS for /spotio-alternative/
+   SALESRABBIT ALTERNATIVES — PAGE STYLES
+   Modular CSS for /salesrabbit-alternatives/
    Tailwind utilities carry most layout/typography.
    ═══════════════════════════════════════════════ */
 
 /* ── HERO ────────────────────────────────────── */
-.sa-hero {
+.sra-hero {
   background-image: linear-gradient(270deg, rgba(18, 35, 20, 0.9) 0%, #122314 100%),
     url("/assets/cfw/inner-industry-hero-bg.webp");
   background-size: cover;
@@ -19,26 +19,26 @@
 }
 
 @media (min-width: 640px) {
-  .sa-hero {
+  .sra-hero {
     padding: 9rem 0;
   }
 }
 
 @media (min-width: 1024px) {
-  .sa-hero {
+  .sra-hero {
     min-height: 100vh;
     padding: 0;
   }
 }
 
 /* ── DARK FEATURE BAND ───────────────────────── */
-.sa-dark-band {
+.sra-dark-band {
   background-image: linear-gradient(90deg, #0b1f12 0%, #0f2a17 100%);
   color: #ffffff;
 }
 
 /* ── FEATURE ICON TILES ──────────────────────── */
-.sa-feature-icon {
+.sra-feature-icon {
   display: flex !important;
   flex-shrink: 0;
   align-items: center;
@@ -48,60 +48,60 @@
   color: #43aa35;
 }
 
-.sa-feature-icon svg {
+.sra-feature-icon svg {
   width: 1.875rem;
   height: 1.875rem;
 }
 
 @media (min-width: 640px) {
-  .sa-feature-icon {
+  .sra-feature-icon {
     width: 3.5rem;
     height: 3.5rem;
   }
 
-  .sa-feature-icon svg {
+  .sra-feature-icon svg {
     width: 2.25rem;
     height: 2.25rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .sa-feature-icon svg {
+  .sra-feature-icon svg {
     width: 3rem;
     height: 3rem;
   }
 }
 
 /* ── COMPARISON TABLE ICONS ──────────────────── */
-.sa-check {
+.sra-check {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   color: #43aa35;
 }
 
-.sa-xmark {
+.sra-xmark {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   color: #ef4444;
 }
 
-.sa-check svg,
-.sa-xmark svg {
+.sra-check svg,
+.sra-xmark svg {
   width: 1.25rem;
   height: 1.25rem;
 }
 
 @media (min-width: 768px) {
-  .sa-check svg,
-  .sa-xmark svg {
+  .sra-check svg,
+  .sra-xmark svg {
     width: 1.25rem;
     height: 1.25rem;
   }
 
-  td .sa-check svg,
-  td .sa-xmark svg {
+  td .sra-check svg,
+  td .sra-xmark svg {
     width: 1.25rem;
     height: 1.25rem;
   }
@@ -109,8 +109,8 @@
 
 /* ── REDUCED MOTION ──────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
-  .sa-page .animate-marquee-left,
-  .sa-page .animate-marquee-right {
+  .sra-page .animate-marquee-left,
+  .sra-page .animate-marquee-right {
     animation: none !important;
   }
 }

@@ -1,0 +1,1070 @@
+---
+import KnockioHomeLayout from "../layouts/KnockioHomeLayout.astro";
+import "../styles/snow-removal-software.css";
+import {
+  MapPin,
+  CalendarCheck,
+  MapPinned,
+  ChartArea,
+  Quote,
+} from "lucide-astro";
+
+const title = "The #1 Snow Removal Software For Business Management";
+const description =
+  "Simplify operations with the #1 snow removal software for scheduling, routing, and team management—all in one easy dashboard.";
+const ogImage = "/assets/cfw/industry-solar-new-image.webp";
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://knockio.com/snow-removal-software/#webpage",
+    url: "https://knockio.com/snow-removal-software/",
+    name: "The #1 Snow Removal Software For Business Management",
+    description:
+      "Simplify operations with the #1 snow removal software for scheduling, routing, and team management—all in one easy dashboard.",
+    isPartOf: {
+      "@id": "https://knockio.com/#website",
+    },
+    about: {
+      "@id": "https://knockio.com/#software",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://knockio.com/snow-removal-software/#breadcrumb",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://knockio.com/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Snow Removal Software with Service CRM",
+        item: "https://knockio.com/snow-removal-software/",
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://knockio.com/snow-removal-software/#faq",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What is snow removal software?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Snow removal software helps companies manage customers, estimates, routes, crews, invoices, payments, and field updates during winter service. Knockio also adds CRM, dispatching, service records, proof of service, automation, data management, and mobile field access.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How does snow removal software work?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Snow removal software works by keeping customer requests, property notes, estimates, schedules, routes, crew updates, invoices, and payments in one workflow. Knockio helps teams move work from first request to assigned crew, completed service, and final billing.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What features should snow removal software include?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Snow removal software requirements should include customer management, estimates, scheduling, dispatching, route zones, crew tracking, role management, service records, proof of service, invoices, payments, reports, automation, mobile access, support, and integrations.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How much does snow removal software cost?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Snow removal software cost depends on users, service areas, route size, dispatch needs, mobile access, reporting, integrations, setup, and support. Small businesses may start with CRM, scheduling, invoices, and field updates before adding advanced automation.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is Knockio an alternative to Jobber, WorkWave, or Orderry?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Snow removal companies comparing Jobber, WorkWave, Orderry, or spreadsheets may choose Knockio when they need CRM, sales tools, crew dispatch, route planning, GPS tracking, estimates, invoices, payments, automation, and field service workflows in one platform.",
+        },
+      },
+    ],
+  },
+];
+
+const reviewsRow1 = [
+  {
+    name: "Lacey Jackson",
+    avatar: "/assets/cfw/avatar-lacey-jackson.webp",
+    quote:
+      "This app is the best thing that has happened to our company! Asad is absolutely amazing! He is so responsive, it doesn't matter what time of day he is on it! I highly recommend this company add this app!",
+  },
+  {
+    name: "Ben Loveland",
+    avatar: "/assets/cfw/avatar-ben-loveland.webp",
+    quote:
+      "Knockio is a great product! We use it for our roofing sales canvassing. Their support team is responsive and fixes issues immediately. Highly recommend!",
+  },
+  {
+    name: "Bar Galanti",
+    avatar: "/assets/cfw/avatar-bar-galanti.webp",
+    quote:
+      "The support team is awesome. The live tracking feature is very useful. The pricing is fair as well!",
+  },
+];
+
+const reviewsRow2 = [
+  {
+    name: "Georgia Hancocks",
+    avatar: "/assets/cfw/avatar-georgia-hancocks.webp",
+    quote:
+      "Knockio is the best! My team and I absolutely love using it - it is so user friendly and simple. Support is brilliant too, nothing is ever too much trouble. The best on the market. Thanks Knockio!",
+  },
+  {
+    name: "Sarah Bennett",
+    avatar: "/assets/cfw/avatar-sarah-bennett.webp",
+    quote:
+      "We love Knockio so far! It is solving a lot of the issues of the other canvassing apps. The team have worked with us providing excellent fast support. Highly recommend if you're seeing people face to face.",
+  },
+  {
+    name: "Ayana Hall",
+    avatar: "/assets/cfw/avatar-ayana-hall.webp",
+    quote:
+      "Amazing app! Definitely has helped out my team a whole lot from our previous canvassing software. They identified what we were struggling with and needed, and everything has been addressed. Highly recommend.",
+  },
+];
+
+---
+
+<KnockioHomeLayout
+  title={title}
+  description={description}
+  ogImage={ogImage}
+  jsonLd={jsonLd}
+>
+  <main class="snow-page overflow-hidden bg-white">
+    <!-- HERO -->
+    <section class="snow-hero">
+      <div class="my-container mx-auto">
+        <div class="text-white">
+          <p
+            class="mb-3 text-sm font-medium text-primary-500 md:text-2xl font-inter"
+          >
+            Control Storm Work Without the Morning Scramble
+          </p>
+
+          <h1
+            class="mb-6 text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-[64px]"
+          >
+            Snow Removal Software with <br />
+            Service CRM
+          </h1>
+
+          <p
+            class="mb-8 w-full max-w-[926px] text-sm font-normal leading-6 text-neutral-300 sm:text-base sm:leading-7 md:text-lg md:leading-8"
+          >
+            Knockio is <b>snow removal software,</b> a service CRM, and a{" "}
+            <b>snow removal platform built for</b> snow and ice management
+            contractors, commercial landscaping businesses, property managers,
+            and municipalities. Capture leads, manage customers, assign crews,
+            plan storm routes, send estimates, create invoices, track service
+            status, and move each request from first call to completed winter
+            service.
+          </p>
+
+          <div class="flex flex-col gap-4 sm:flex-row">
+            <a
+              href="#cal-sec"
+              class="inline-flex w-full items-center justify-center rounded-lg bg-primary-500 px-6 py-3.5 text-sm font-medium hover:bg-primary-600 sm:w-auto sm:px-10 sm:py-4 sm:text-base lg:px-12"
+            >
+              Schedule a Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MANAGE PROPERTIES, CREWS, AND STORM JOBS -->
+    <section class="bg-neutral-50 py-16 sm:py-20 lg:py-36">
+      <div class="my-container mx-auto">
+        <div class="mx-auto mb-10 max-w-[846px] text-center lg:mb-14">
+          <p
+            class="mb-3 text-sm font-medium leading-7 text-primary-500 md:text-2xl font-inter"
+          >
+            Built for winter routes, crews, and property service
+          </p>
+
+          <h2
+            class="mb-5 text-3xl font-bold leading-tight text-neutral-950 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+          >
+            Manage Properties, Crews,{" "}
+            <br class="hidden md:block" />
+            and Storm Jobs
+          </h2>
+
+          <p
+            class="text-sm font-normal leading-6 text-neutral-600 sm:text-base sm:leading-7 md:text-lg md:leading-8"
+          >
+            Most winter service teams lose time when routes live in spreadsheets,
+            updates come through phone calls, and crews start the storm without
+            clear property notes. Knockio helps teams manage customer management,
+            crew schedules, route zones, service records, invoices, and
+            follow-ups in one clear workflow.
+          </p>
+        </div>
+
+        <div class="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <div
+            class="w-full overflow-hidden rounded-3xl bg-neutral-100 px-4 pt-6 sm:px-8 sm:pt-10 lg:rounded-[40px] lg:px-10 lg:pt-12"
+          >
+            <img
+              src="/assets/cfw/industry-solar-new-image.webp"
+              alt="Dashboard Preview"
+              width="732"
+              height="378"
+              decoding="async"
+              loading="eager"
+              class="h-auto w-full max-w-3xl"
+            />
+          </div>
+
+          <div class="grid gap-8 sm:grid-cols-2 lg:gap-10">
+            <div>
+              <div class="snow-feature-icon" aria-hidden="true">
+                <MapPin />
+              </div>
+              <h3 class="mb-2 text-xl font-semibold text-neutral-900">
+                Property CRM
+              </h3>
+              <p class="text-sm leading-normal text-neutral-600">
+                Store customer details, property notes, lot size, driveway
+                access, salt needs, photos, service history, and follow-up tasks
+                before each storm starts.
+              </p>
+            </div>
+
+            <div>
+              <div class="snow-feature-icon" aria-hidden="true">
+                <CalendarCheck />
+              </div>
+              <h3 class="mb-2 text-xl font-semibold text-neutral-900">
+                Crew Roles
+              </h3>
+              <p class="text-sm leading-normal text-neutral-600">
+                Use user management and role management to assign office users,
+                crew leads, drivers, sales reps, and managers with the right
+                access.
+              </p>
+            </div>
+
+            <div>
+              <div class="snow-feature-icon" aria-hidden="true">
+                <MapPinned />
+              </div>
+              <h3 class="mb-2 text-xl font-semibold text-neutral-900">
+                Route Zones
+              </h3>
+              <p class="text-sm leading-normal text-neutral-600">
+                Use territory management, smart routing, real-time navigation,
+                and proximity intelligence to help crews cover the right service
+                areas with less backtracking.
+              </p>
+            </div>
+
+            <div>
+              <div class="snow-feature-icon" aria-hidden="true">
+                <ChartArea />
+              </div>
+              <h3 class="mb-2 text-xl font-semibold text-neutral-900">
+                Service Pipeline
+              </h3>
+              <p class="text-sm leading-normal text-neutral-600">
+                Track each winter job from new request to estimate, approval,
+                scheduled service, field update, invoice, payment, and completed
+                work.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORM SERVICE ESTIMATES -->
+    <section class="snow-dark-band py-16 sm:py-20 lg:py-28">
+      <div class="my-container mx-auto">
+        <div class="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <p
+              class="mb-3 text-sm font-medium leading-7 text-primary-500 md:text-2xl font-inter"
+            >
+              Storm Service Estimates
+            </p>
+
+            <h2
+              class="mb-5 text-3xl font-bold leading-tight text-neutral-100 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+            >
+              Quote Snow and Ice{" "}
+              <br class="hidden md:block" />
+              Work Clearly
+            </h2>
+
+            <p
+              class="mb-4 text-sm font-normal leading-6 text-neutral-200 sm:text-base sm:leading-7 md:text-lg md:leading-8"
+            >
+              Create estimates using property size, service type, trigger depth,
+              salt needs, equipment use, labor, visit frequency, and seasonal
+              terms. Knockio helps teams send clear quotes, review job value, and
+              turn approved work into scheduled service without losing customer
+              or property data.
+            </p>
+
+            <a
+              href="#cal-sec"
+              class="inline-flex w-full items-center justify-center rounded-lg bg-primary-500 px-6 py-3.5 text-sm font-medium hover:bg-primary-600 sm:w-auto sm:px-10 sm:py-4 sm:text-base lg:px-12"
+            >
+              Schedule a Demo
+            </a>
+          </div>
+
+          <div class="w-full">
+            <img
+              src="/assets/cfw/industry-inner-estimate.webp"
+              alt="Snow removal estimate preview"
+              width="858"
+              height="566"
+              decoding="async"
+              loading="lazy"
+              class="h-auto w-full object-contain"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WINTER DISPATCH -->
+    <section class="bg-white py-16 sm:py-20 lg:py-36">
+      <div class="my-container mx-auto">
+        <div class="grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
+          <div class="w-full">
+            <img
+              src="/assets/cfw/industry-inner-route.webp"
+              alt="Smart Routing Dashboard"
+              width="858"
+              height="566"
+              decoding="async"
+              loading="lazy"
+              class="h-auto w-full object-contain"
+            />
+          </div>
+
+          <div>
+            <p
+              class="mb-4 text-sm font-medium leading-7 text-primary-500 md:text-2xl font-inter"
+            >
+              Winter Dispatch
+            </p>
+
+            <h2
+              class="mb-6 text-3xl font-bold leading-tight text-neutral-950 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+            >
+              Send Crews to the Right Properties
+            </h2>
+
+            <p
+              class="mb-10 text-sm font-normal leading-6 text-neutral-600 sm:text-base sm:leading-7 md:text-lg md:leading-8"
+            >
+              When dispatchers manage 10 or more crews by calls and texts, wrong
+              addresses, missed lots, and late updates can happen fast. Knockio
+              works as dispatching software for snow and ice teams, helping
+              managers assign crews, update routes, share service details, and
+              track progress during active storms.
+            </p>
+
+            <div class="space-y-8">
+              <div class="flex items-start gap-3 sm:gap-4">
+                <div
+                  class="snow-dispatch-icon flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl"
+                >
+                  <svg
+                    class="h-12 w-12 sm:h-[75px] sm:w-[75px]"
+                    width="75"
+                    height="75"
+                    viewBox="0 0 45 45"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 36L20 28L28 36L38 24"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                    <circle cx="12" cy="36" r="3" fill="currentColor"></circle>
+                    <circle cx="20" cy="28" r="3" fill="currentColor"></circle>
+                    <circle cx="28" cy="36" r="3" fill="currentColor"></circle>
+                    <path
+                      d="M38 18L40 22L44 20L40 18L42 14L38 16L34 14L36 18L32 20L36 22L38 18Z"
+                      fill="currentColor"></path>
+                  </svg>
+                </div>
+                <div class="max-w-full">
+                  <h4 class="mb-1 text-xl font-bold text-neutral-950 sm:text-2xl">
+                    Assign Crews
+                  </h4>
+                  <p class="text-base font-normal leading-relaxed text-neutral-600">
+                    Send crews to properties with access notes, service type, lot
+                    instructions, photos, task lists, route order, and scheduled
+                    time.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 sm:gap-4">
+                <div
+                  class="snow-dispatch-icon flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl"
+                >
+                  <svg
+                    class="h-12 w-12 sm:h-[75px] sm:w-[75px]"
+                    width="75"
+                    height="75"
+                    viewBox="0 0 45 45"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 36L20 28L28 36L38 24"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                    <circle cx="12" cy="36" r="3" fill="currentColor"></circle>
+                    <circle cx="20" cy="28" r="3" fill="currentColor"></circle>
+                    <circle cx="28" cy="36" r="3" fill="currentColor"></circle>
+                    <path
+                      d="M38 18L40 22L44 20L40 18L42 14L38 16L34 14L36 18L32 20L36 22L38 18Z"
+                      fill="currentColor"></path>
+                  </svg>
+                </div>
+                <div class="max-w-full">
+                  <h4 class="mb-1 text-xl font-bold text-neutral-950 sm:text-2xl">
+                    Proof of Service
+                  </h4>
+                  <p class="text-base font-normal leading-relaxed text-neutral-600">
+                    Let crews upload photos, record completed work, add service
+                    notes, and update status so managers can confirm each
+                    property was handled.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INVOICE & PAYMENTS -->
+    <section class="snow-dark-band py-16 sm:py-20 lg:py-28">
+      <div class="my-container mx-auto">
+        <div class="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <p
+              class="mb-3 text-sm font-medium leading-7 text-primary-500 md:text-2xl font-inter"
+            >
+              Invoice &amp; Payments
+            </p>
+
+            <h2
+              class="mb-5 text-3xl font-bold leading-tight text-neutral-100 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+            >
+              Bill Customers After{" "}
+              <br class="hidden md:block" />
+              Each Storm
+            </h2>
+
+            <p
+              class="mb-4 text-sm font-normal leading-6 text-neutral-200 sm:text-base sm:leading-7 md:text-lg md:leading-8"
+            >
+              Knockio helps winter service companies create invoices, track
+              payment status, and manage billing after plowing, salting,
+              de-icing, seasonal work, and emergency service.
+            </p>
+
+            <p
+              class="mb-8 text-sm font-normal leading-6 text-neutral-200 sm:text-base sm:leading-7 md:text-lg md:leading-8"
+            >
+              From approved estimate to completed work, invoice, and payment,
+              owners can see what was done, what is due, and which customers
+              still need follow-up.
+            </p>
+
+            <a
+              href="#cal-sec"
+              class="inline-flex w-full items-center justify-center rounded-lg bg-primary-500 px-6 py-3.5 text-sm font-medium hover:bg-primary-600 sm:w-auto sm:px-10 sm:py-4 sm:text-base lg:px-12"
+            >
+              Schedule a Demo
+            </a>
+          </div>
+
+          <div class="w-full">
+            <img
+              src="/assets/cfw/industry-inner-invoice-and-payment.webp"
+              alt="Invoice and payment preview"
+              width="858"
+              height="566"
+              decoding="async"
+              loading="lazy"
+              class="h-auto w-full object-contain"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SMARTER WINTER SERVICE WORKFLOWS -->
+    <section class="bg-neutral-50 py-16 sm:py-20 lg:py-36">
+      <div class="my-container mx-auto">
+        <div class="mx-auto mb-10 max-w-[846px] text-center lg:mb-14">
+          <p
+            class="mb-3 text-sm font-medium leading-7 text-primary-500 md:text-2xl font-inter"
+          >
+            Keep storm work, crews, and customers connected
+          </p>
+
+          <h2
+            class="mb-5 text-3xl font-bold leading-tight text-neutral-950 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+          >
+            Smarter Winter Service{" "}
+            <br class="hidden md:block" /> Workflows
+          </h2>
+
+          <p
+            class="text-sm font-normal leading-6 text-neutral-600 sm:text-base sm:leading-7 md:text-lg md:leading-8"
+          >
+            Knockio combines snow removal CRM software, field service CRM, and a
+            snow removal tool for teams that need better control over routes,
+            crews, service records, billing, and storm updates.
+          </p>
+        </div>
+
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-14">
+          <div class="rounded-2xl border border-neutral-200 p-6 sm:p-8 lg:p-10">
+            <div class="snow-workflow-badge" aria-hidden="true">
+              <span>1</span>
+            </div>
+            <h3 class="mb-2 text-xl font-semibold text-neutral-900">
+              Live Crew Tracking
+            </h3>
+            <p class="text-sm leading-normal text-neutral-600">
+              Track crews and sales reps in real time. See routes, property
+              visits, field activity, service status, and daily storm progress.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-neutral-200 p-6 sm:p-8 lg:p-10">
+            <div class="snow-workflow-badge" aria-hidden="true">
+              <span>2</span>
+            </div>
+            <h3 class="mb-2 text-xl font-semibold text-neutral-900">
+              Salt Usage
+            </h3>
+            <p class="text-sm leading-normal text-neutral-600">
+              Track salt, de-icer, equipment, tools, product categories, and
+              materials used on each job so billing and planning stay more
+              accurate.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-neutral-200 p-6 sm:p-8 lg:p-10">
+            <div class="snow-workflow-badge" aria-hidden="true">
+              <span>3</span>
+            </div>
+            <h3 class="mb-2 text-xl font-semibold text-neutral-900">
+              Data Management
+            </h3>
+            <p class="text-sm leading-normal text-neutral-600">
+              Keep property records, service history, photos, messages, invoices,
+              customer updates, and follow-ups connected to each account.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-neutral-200 p-6 sm:p-8 lg:p-10">
+            <div class="snow-workflow-badge" aria-hidden="true">
+              <span>4</span>
+            </div>
+            <h3 class="mb-2 text-xl font-semibold text-neutral-900">
+              Team Communication
+            </h3>
+            <p class="text-sm leading-normal text-neutral-600">
+              Use in-app messages, calls, emails, voice notes, and service
+              updates to keep office staff, managers, and crews aligned during
+              storms.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-neutral-200 p-6 sm:p-8 lg:p-10">
+            <div class="snow-workflow-badge" aria-hidden="true">
+              <span>5</span>
+            </div>
+            <h3 class="mb-2 text-xl font-semibold text-neutral-900">
+              Flow Automation
+            </h3>
+            <p class="text-sm leading-normal text-neutral-600">
+              Use Knockio’s native Flow Builder to automate reminders, follow-ups,
+              task updates, route actions, customer messages, and field service
+              workflows.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-neutral-200 p-6 sm:p-8 lg:p-10">
+            <div class="snow-workflow-badge" aria-hidden="true">
+              <span>6</span>
+            </div>
+            <h3 class="mb-2 text-xl font-semibold text-neutral-900">
+              Reports &amp; Integrations
+            </h3>
+            <p class="text-sm leading-normal text-neutral-600">
+              Review revenue, lead sources, crew activity, job completion, and
+              field reports. Connect Salesforce, HubSpot, GoHighLevel, Google
+              Calendar, Zapier, Flow Chef, API access, and other tools.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="bg-white py-16 sm:py-20 lg:py-24">
+      <div class="my-container mx-auto">
+        <div class="grid gap-10 lg:grid-cols-2 lg:gap-20">
+          <div>
+            <p class="mb-4 text-sm leading-7 text-primary-500 md:text-2xl font-inter">
+              Common Questions
+            </p>
+            <h2
+              class="mb-8 w-full max-w-xl text-3xl font-bold leading-tight text-neutral-950 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+            >
+              What Snow and Ice Teams Ask Before Choosing Knockio
+            </h2>
+          </div>
+
+          <div class="space-y-4">
+            <div
+              class="faq-item overflow-hidden rounded-2xl border border-solid border-neutral-200 transition-all duration-300"
+            >
+              <button
+                type="button"
+                class="faq-button group flex w-full items-center justify-between p-4 text-left sm:p-6"
+              >
+                <span
+                  class="text-base font-medium text-neutral-950 transition-colors group-hover:text-primary-500 sm:text-lg lg:text-xl"
+                >
+                  What is snow removal software?
+                </span>
+                <div
+                  class="faq-icon ml-4 flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary-500"
+                >
+                  <svg
+                    class="icon-minus hidden h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M20 12H4"></path>
+                  </svg>
+                  <svg
+                    class="icon-plus h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div
+                  class="p-4 pt-0 text-sm leading-relaxed text-neutral-600 sm:p-6 sm:pt-0 sm:text-base"
+                >
+                  Snow removal software helps companies manage customers,
+                  estimates, routes, crews, invoices, payments, and field updates
+                  during winter service. Knockio also adds CRM, dispatching,
+                  service records, proof of service, automation, data management,
+                  and mobile field access.
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="faq-item overflow-hidden rounded-2xl border border-solid border-neutral-200 transition-all duration-300"
+            >
+              <button
+                type="button"
+                class="faq-button group flex w-full items-center justify-between p-4 text-left sm:p-6"
+              >
+                <span
+                  class="text-base font-medium text-neutral-950 transition-colors group-hover:text-primary-500 sm:text-lg lg:text-xl"
+                >
+                  How does snow removal software work?
+                </span>
+                <div
+                  class="faq-icon ml-4 flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary-500"
+                >
+                  <svg
+                    class="icon-minus hidden h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M20 12H4"></path>
+                  </svg>
+                  <svg
+                    class="icon-plus h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div
+                  class="p-4 pt-0 text-sm leading-relaxed text-neutral-600 sm:p-6 sm:pt-0 sm:text-base"
+                >
+                  Snow removal software works by keeping customer requests,
+                  property notes, estimates, schedules, routes, crew updates,
+                  invoices, and payments in one workflow. Knockio helps teams
+                  move work from first request to assigned crew, completed
+                  service, and final billing.
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="faq-item overflow-hidden rounded-2xl border border-solid border-neutral-200 transition-all duration-300"
+            >
+              <button
+                type="button"
+                class="faq-button group flex w-full items-center justify-between p-4 text-left sm:p-6"
+              >
+                <span
+                  class="text-base font-medium text-neutral-950 transition-colors group-hover:text-primary-500 sm:text-lg lg:text-xl"
+                >
+                  What features should snow removal software include?
+                </span>
+                <div
+                  class="faq-icon ml-4 flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary-500"
+                >
+                  <svg
+                    class="icon-minus hidden h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M20 12H4"></path>
+                  </svg>
+                  <svg
+                    class="icon-plus h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div
+                  class="p-4 pt-0 text-sm leading-relaxed text-neutral-600 sm:p-6 sm:pt-0 sm:text-base"
+                >
+                  Snow removal software requirements should include customer
+                  management, estimates, scheduling, dispatching, route zones,
+                  crew tracking, role management, service records, proof of
+                  service, invoices, payments, reports, automation, mobile access,
+                  support, and integrations.
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="faq-item overflow-hidden rounded-2xl border border-solid border-neutral-200 transition-all duration-300"
+            >
+              <button
+                type="button"
+                class="faq-button group flex w-full items-center justify-between p-4 text-left sm:p-6"
+              >
+                <span
+                  class="text-base font-medium text-neutral-950 transition-colors group-hover:text-primary-500 sm:text-lg lg:text-xl"
+                >
+                  How much does snow removal software cost?
+                </span>
+                <div
+                  class="faq-icon ml-4 flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary-500"
+                >
+                  <svg
+                    class="icon-minus hidden h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M20 12H4"></path>
+                  </svg>
+                  <svg
+                    class="icon-plus h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div
+                  class="p-4 pt-0 text-sm leading-relaxed text-neutral-600 sm:p-6 sm:pt-0 sm:text-base"
+                >
+                  Snow removal software cost depends on users, service areas,
+                  route size, dispatch needs, mobile access, reporting,
+                  integrations, setup, and support. Small businesses may start
+                  with CRM, scheduling, invoices, and field updates before adding
+                  advanced automation.
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="faq-item overflow-hidden rounded-2xl border border-solid border-neutral-200 transition-all duration-300"
+            >
+              <button
+                type="button"
+                class="faq-button group flex w-full items-center justify-between p-4 text-left sm:p-6"
+              >
+                <span
+                  class="text-base font-medium text-neutral-950 transition-colors group-hover:text-primary-500 sm:text-lg lg:text-xl"
+                >
+                  Is Knockio an alternative to Jobber, WorkWave, or Orderry?
+                </span>
+                <div
+                  class="faq-icon ml-4 flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary-500"
+                >
+                  <svg
+                    class="icon-minus hidden h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M20 12H4"></path>
+                  </svg>
+                  <svg
+                    class="icon-plus h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4v16m8-8H4"></path>
+                  </svg>
+                </div>
+              </button>
+              <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div
+                  class="p-4 pt-0 text-sm leading-relaxed text-neutral-600 sm:p-6 sm:pt-0 sm:text-base"
+                >
+                  Snow removal companies comparing Jobber, WorkWave, Orderry, or
+                  spreadsheets may choose Knockio when they need CRM, sales tools,
+                  crew dispatch, route planning, GPS tracking, estimates,
+                  invoices, payments, automation, and field service workflows in
+                  one platform.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CUSTOMER REVIEWS -->
+    <section class="overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
+      <div class="my-container mx-auto mb-10 text-center lg:mb-16">
+        <p class="mb-4 text-sm leading-7 text-primary-500 md:text-2xl font-inter">
+          Customer Reviews
+        </p>
+        <h2
+          class="mb-8 text-3xl font-bold leading-tight text-neutral-950 sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+        >
+          What Field Service and Sales<br />
+          Teams Say About Knockio
+        </h2>
+
+        <img
+          src="/assets/cfw/google-5-star.webp"
+          alt="google review badge"
+          width="183"
+          height="60"
+          decoding="async"
+          loading="lazy"
+          class="mx-auto h-auto w-[150px] sm:w-[183px]"
+        />
+      </div>
+
+      <div class="mt-7 space-y-8">
+        <div class="testimonial-track-container flex overflow-hidden">
+          <div
+            class="testimonial-track hover:pause flex animate-marquee-left gap-4 sm:gap-6"
+          >
+            {
+              [0, 1].map((dup) => (
+                <div
+                  class="card-set flex gap-4 sm:gap-6"
+                  aria-hidden={dup === 1 ? "true" : undefined}
+                >
+                  {reviewsRow1.map((review) => (
+                    <div class="group relative w-[300px] flex-shrink-0 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 sm:w-[380px] sm:p-6 lg:w-[450px] lg:p-8">
+                      <p class="relative z-10 mb-6 min-h-[168px] text-sm italic leading-relaxed text-neutral-700 sm:mb-8 sm:text-base lg:text-lg">
+                        {review.quote}
+                      </p>
+                      <div class="relative z-10 flex items-center gap-4">
+                        <img
+                          src={review.avatar}
+                          alt={review.name}
+                          width="48"
+                          height="48"
+                          decoding="async"
+                          loading="lazy"
+                          class="h-12 w-12 rounded-full object-cover grayscale transition-all group-hover:grayscale-0"
+                        />
+                        <div>
+                          <h5 class="mb-1 font-bold text-neutral-950">
+                            {review.name}
+                          </h5>
+                          <p
+                            class="text-sm text-neutral-500"
+                            aria-label="5 out of 5 stars"
+                          >
+                            ⭐⭐⭐⭐⭐
+                          </p>
+                        </div>
+                      </div>
+                      <Quote
+                        size="1em"
+                        class="pointer-events-none absolute right-8 bottom-6 text-5xl text-primary-500/10 sm:text-6xl lg:text-7xl"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <div class="testimonial-track-container flex overflow-hidden">
+          <div
+            class="testimonial-track hover:pause flex animate-marquee-right gap-4 sm:gap-6"
+          >
+            {
+              [0, 1].map((dup) => (
+                <div
+                  class="card-set flex gap-4 sm:gap-6"
+                  aria-hidden={dup === 1 ? "true" : undefined}
+                >
+                  {reviewsRow2.map((review) => (
+                    <div class="group relative w-[300px] flex-shrink-0 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 sm:w-[380px] sm:p-6 lg:w-[450px] lg:p-8">
+                      <p class="relative z-10 mb-6 min-h-[168px] text-sm italic leading-relaxed text-neutral-700 sm:mb-8 sm:text-base lg:text-lg">
+                        {review.quote}
+                      </p>
+                      <div class="relative z-10 flex items-center gap-4">
+                        <img
+                          src={review.avatar}
+                          alt={review.name}
+                          width="48"
+                          height="48"
+                          decoding="async"
+                          loading="lazy"
+                          class="h-12 w-12 rounded-full object-cover grayscale transition-all group-hover:grayscale-0"
+                        />
+                        <div>
+                          <h5 class="mb-1 font-bold text-neutral-950">
+                            {review.name}
+                          </h5>
+                          <p
+                            class="text-sm text-neutral-500"
+                            aria-label="5 out of 5 stars"
+                          >
+                            ⭐⭐⭐⭐⭐
+                          </p>
+                        </div>
+                      </div>
+                      <Quote
+                        size="1em"
+                        class="pointer-events-none absolute right-8 bottom-6 text-5xl text-primary-500/10 sm:text-6xl lg:text-7xl"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</KnockioHomeLayout>
