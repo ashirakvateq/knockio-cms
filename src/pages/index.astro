@@ -2851,7 +2851,7 @@ const jsonLd = {
         <div
           id="hpCapScrollTrack"
           class="h-[calc(100vh+(var(--scroll-steps,5)-1)*45vh)] max-lg:h-auto motion-reduce:h-auto"
-          style="--scroll-steps: 5"
+          style="--scroll-steps: 6"
         >
           <div
             class="contents lg:flex lg:sticky lg:top-0 lg:z-20 lg:h-[min(calc(100vh-2rem),880px)] lg:flex-col lg:bg-white/95 lg:pt-1 3xl:h-[min(calc(100vh-3rem),920px)] motion-reduce:h-auto motion-reduce:static"
@@ -2899,7 +2899,14 @@ const jsonLd = {
                   data-hp-scroll-step="4"
                   class="hpTabs1_btn relative z-10 shrink-0 rounded-full border-2 border-dashed border-neutral-300 px-5 py-2.5 text-lg font-bold text-neutral-700 transition-colors hover:border-primary-500/40 hover:text-primary-500 max-xl:px-4 max-xl:py-2 max-xl:text-base max-md:text-sm"
                 >
-                  Documents and Media
+                  Files & Communication
+                </button>
+                <button
+                  type="button"
+                  data-hp-scroll-step="5"
+                  class="hpTabs1_btn relative z-10 shrink-0 rounded-full border-2 border-dashed border-neutral-300 px-5 py-2.5 text-lg font-bold text-neutral-700 transition-colors hover:border-primary-500/40 hover:text-primary-500 max-xl:px-4 max-xl:py-2 max-xl:text-base max-md:text-sm"
+                >
+                  Automate & Run the Business
                 </button>
               </div>
             </div>
@@ -3362,20 +3369,19 @@ const jsonLd = {
                         <h5
                           class="text-3xl max-2xl:text-2xl max-md:text-lg font-bold text-neutral-900 mb-3 max-md:mb-1"
                         >
-                          Video & File Storage
+                          Photo & Video Uploads
                         </h5>
                         <p
                           class="text-base max-md:text-sm font-normal text-neutral-900 max-w-72 max-lg:max-w-full"
                         >
-                          Keep videos, documents, customer files, and job
-                          records organized inside the CRM, so teams find
-                          details quickly.
+                          Upload job photos, videos, before-and-after shots, and
+                          annotations straight to each customer record.
                         </p>
                       </div>
                       <img
                         class="pointer-events-none z-0 max-md:hidden max-lg:mt-auto max-lg:ml-auto max-lg:mr-0 max-lg:block max-lg:self-end max-lg:max-h-[min(42vh,340px)] max-lg:w-[96%] max-lg:object-contain max-lg:object-right-bottom lg:max-[1439px]:relative lg:max-[1439px]:mt-auto lg:max-[1439px]:ml-auto lg:max-[1439px]:mr-0 lg:max-[1439px]:h-auto lg:max-[1439px]:max-h-[68%] lg:max-[1439px]:w-[96%] lg:max-[1439px]:max-w-full lg:max-[1439px]:object-contain lg:max-[1439px]:object-right-bottom min-[1440px]:absolute min-[1440px]:-bottom-3 min-[1440px]:-right-5 min-[1440px]:h-[80%] min-[1440px]:w-auto min-[1440px]:max-w-[680px] min-[1440px]:object-contain min-[1440px]:object-right-bottom 2xl:h-[78%] 2xl:max-w-[720px] 2xl:w-[110%]"
-                        src="/assets/cfw/platform-capabilities-document-and-media-tab-video-and-file-storage.webp"
-                        alt="Knockio image, video and file storage screen attaching job media to a customer record"
+                        src="/assets/cfw/platform-capabilities-document-and-media-tab-photo-upload.webp"
+                        alt="Knockio photo and video upload screen attaching job media to a customer record"
                       />
                     </div>
                     <div
@@ -3385,20 +3391,20 @@ const jsonLd = {
                         <h5
                           class="text-3xl max-2xl:text-2xl max-md:text-lg font-bold text-neutral-900 mb-3 max-md:mb-1"
                         >
-                          Photo Uploads
+                          Customer Documents & Files
                         </h5>
                         <p
                           class="text-base max-md:text-sm font-normal text-neutral-900"
                         >
-                          Upload job photos, site images, before-and-after
-                          pictures, annotations, and proof of work to each
-                          customer record.
+                          Store contracts, estimates, invoices, and field
+                          paperwork in one place, tied to the right customer and
+                          job.
                         </p>
                       </div>
                       <img
                         class="mx-auto mt-auto block w-auto max-w-full shrink-0 object-contain object-bottom max-md:hidden max-lg:mt-auto max-lg:w-[92%] max-lg:max-w-[420px] max-lg:object-center max-lg:max-h-[min(38vh,300px)] lg:max-h-[58%] lg:max-[1439px]:max-h-[65%]"
-                        src="/assets/cfw/platform-capabilities-document-and-media-tab-photo-upload.webp"
-                        alt="Knockio photo upload screen for capturing before-and-after job site photos"
+                        src="/assets/cfw/platform-capabilities-document-and-media-tab-customer-document.webp"
+                        alt="Knockio customer documents screen storing contracts and field paperwork on a job record"
                       />
                     </div>
                     <div
@@ -3413,9 +3419,8 @@ const jsonLd = {
                         <p
                           class="text-base max-md:text-sm font-normal text-neutral-900"
                         >
-                          Create reports for jobs, customers, completed work,
-                          and field service performance to keep managers
-                          informed.
+                          Create reports for jobs, customers, and completed work
+                          so managers always know where things stand.
                         </p>
                       </div>
                       <img
@@ -3433,20 +3438,124 @@ const jsonLd = {
                         <h5
                           class="text-3xl max-2xl:text-2xl max-md:text-lg font-bold text-neutral-900 mb-3 max-md:mb-1"
                         >
-                          Customer Documents
+                          Calls, Texts & Email
                         </h5>
                         <p
                           class="text-base max-md:text-sm font-normal text-neutral-900 max-w-72 max-lg:max-w-full"
                         >
-                          Store contracts, estimates, invoices, service files,
-                          reports, and field paperwork in one place for daily
-                          job management.
+                          Call, text, and email customers from the job record,
+                          and every conversation lands on the timeline.
                         </p>
                       </div>
                       <img
                         class="pointer-events-none z-0 max-md:hidden max-lg:mt-auto max-lg:ml-auto max-lg:mr-0 max-lg:block max-lg:self-end max-lg:max-h-[min(42vh,340px)] max-lg:w-[96%] max-lg:object-contain max-lg:object-right-bottom lg:max-[1439px]:relative lg:max-[1439px]:mt-auto lg:max-[1439px]:ml-auto lg:max-[1439px]:mr-0 lg:max-[1439px]:h-auto lg:max-[1439px]:max-h-[68%] lg:max-[1439px]:w-[96%] lg:max-[1439px]:max-w-full lg:max-[1439px]:object-contain lg:max-[1439px]:object-right-bottom min-[1440px]:absolute min-[1440px]:-bottom-3 min-[1440px]:-right-5 min-[1440px]:h-[80%] min-[1440px]:w-auto min-[1440px]:max-w-[680px] min-[1440px]:object-contain min-[1440px]:object-right-bottom 2xl:h-[78%] 2xl:max-w-[720px] 2xl:w-[110%]"
-                        src="/assets/cfw/platform-capabilities-document-and-media-tab-customer-document.webp"
-                        alt="Knockio customer document screen attached to a lead storing signed forms and job paperwork"
+                        src="/assets/cfw/platform-capabilities-files-communication-tab-calls-texts-email.webp"
+                        alt="Knockio calls, texts, and email screen logging customer conversations on the job timeline"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="hpTabs1_tab6"
+                  class="hpTabs1_content scroll-mt-24 lg:absolute lg:inset-0 lg:flex lg:h-full lg:flex-col lg:gap-3 lg:overflow-hidden opacity-0 invisible pointer-events-none transition-opacity duration-300 max-lg:static max-lg:mb-10 max-lg:h-auto max-lg:overflow-visible max-lg:opacity-100 max-lg:visible max-lg:pointer-events-auto motion-reduce:static motion-reduce:h-auto motion-reduce:opacity-100 motion-reduce:visible motion-reduce:pointer-events-auto"
+                >
+                  <div
+                    class="grid grid-cols-1 gap-4 lg:min-h-0 lg:flex-1 lg:grid-cols-5 lg:grid-rows-2 lg:gap-3"
+                  >
+                    <div
+                      class="hp-cap-card relative flex min-h-0 flex-col overflow-hidden opacity-0 translate-y-3 transition-all duration-300 ease-[cubic-bezier(0.22,0.61,0.36,1)] max-[1439px]:min-h-[300px] max-[1439px]:flex-col min-[1440px]:block lg:col-span-3 lg:row-start-1 lg:h-full max-lg:min-h-[72vh] max-lg:shrink-0 max-lg:justify-between max-lg:pb-4 max-md:min-h-0 max-lg:opacity-100 max-lg:translate-y-0 motion-reduce:translate-y-0 motion-reduce:opacity-100 bg-neutral-100/60 border border-neutral-200 border-solid rounded-[20px] max-md:rounded-xl"
+                    >
+                      <div
+                        class="relative z-10 max-w-full shrink-0 p-7 max-xl:p-6 max-md:p-5 max-[1439px]:max-w-full lg:max-[1439px]:pb-0 min-[1440px]:max-w-[50%]"
+                      >
+                        <h5
+                          class="text-3xl max-2xl:text-2xl max-md:text-lg font-bold text-neutral-900 mb-3 max-md:mb-1"
+                        >
+                          Workflow Automation
+                        </h5>
+                        <p
+                          class="text-base max-md:text-sm font-normal text-neutral-900 max-w-72 max-lg:max-w-full"
+                        >
+                          Build no-code automations for follow-ups, reminders,
+                          status updates, and invoicing, so routine work runs
+                          without anyone touching it.
+                        </p>
+                      </div>
+                      <img
+                        class="pointer-events-none z-0 max-md:hidden max-lg:mt-auto max-lg:ml-auto max-lg:mr-0 max-lg:block max-lg:self-end max-lg:max-h-[min(42vh,340px)] max-lg:w-[96%] max-lg:object-contain max-lg:object-right-bottom lg:max-[1439px]:relative lg:max-[1439px]:mt-auto lg:max-[1439px]:ml-auto lg:max-[1439px]:mr-0 lg:max-[1439px]:h-auto lg:max-[1439px]:max-h-[68%] lg:max-[1439px]:w-[96%] lg:max-[1439px]:max-w-full lg:max-[1439px]:object-contain lg:max-[1439px]:object-right-bottom min-[1440px]:absolute min-[1440px]:-bottom-3 min-[1440px]:-right-5 min-[1440px]:h-[80%] min-[1440px]:w-auto min-[1440px]:max-w-[680px] min-[1440px]:object-contain min-[1440px]:object-right-bottom 2xl:h-[78%] 2xl:max-w-[720px] 2xl:w-[110%]"
+                        src="/assets/cfw/platform-capabilities-automate-tab-workflow-automation.webp"
+                        alt="Knockio workflow automation builder screen creating no-code follow-up and reminder rules"
+                      />
+                    </div>
+                    <div
+                      class="hp-cap-card flex min-h-0 flex-col overflow-hidden p-7 opacity-0 translate-y-3 transition-all duration-300 ease-[cubic-bezier(0.22,0.61,0.36,1)] max-xl:p-6 lg:col-span-2 lg:row-start-1 lg:h-full max-lg:min-h-[72vh] max-lg:shrink-0 max-lg:justify-between max-lg:p-6 max-md:min-h-0 max-lg:opacity-100 max-lg:translate-y-0 max-md:p-5 motion-reduce:translate-y-0 motion-reduce:opacity-100 bg-neutral-100/60 border border-neutral-200 border-solid rounded-[20px] max-md:rounded-xl"
+                    >
+                      <div class="shrink-0">
+                        <h5
+                          class="text-3xl max-2xl:text-2xl max-md:text-lg font-bold text-neutral-900 mb-3 max-md:mb-1"
+                        >
+                          Reports & Analytics
+                        </h5>
+                        <p
+                          class="text-base max-md:text-sm font-normal text-neutral-900"
+                        >
+                          Track conversions, revenue, payments, and rep
+                          performance with custom reports you build on your own
+                          rules.
+                        </p>
+                      </div>
+                      <img
+                        class="mx-auto mt-auto block w-auto max-w-full shrink-0 object-contain object-bottom max-md:hidden max-lg:mt-auto max-lg:w-[92%] max-lg:max-w-[420px] max-lg:object-center max-lg:max-h-[min(38vh,300px)] lg:max-h-[58%] lg:max-[1439px]:max-h-[65%]"
+                        src="/assets/cfw/platform-capabilities-automate-tab-reports-analytics.webp"
+                        alt="Knockio reports and analytics screen tracking conversions, revenue, and rep performance"
+                      />
+                    </div>
+                    <div
+                      class="hp-cap-card flex min-h-0 flex-col overflow-hidden p-7 opacity-0 translate-y-3 transition-all duration-300 ease-[cubic-bezier(0.22,0.61,0.36,1)] max-xl:p-6 lg:col-span-2 lg:row-start-2 lg:h-full max-lg:min-h-[72vh] max-lg:shrink-0 max-lg:justify-between max-lg:p-6 max-md:min-h-0 max-lg:opacity-100 max-lg:translate-y-0 max-md:p-5 motion-reduce:translate-y-0 motion-reduce:opacity-100 bg-neutral-100/60 border border-neutral-200 border-solid rounded-[20px] max-md:rounded-xl"
+                    >
+                      <div class="shrink-0">
+                        <h5
+                          class="text-3xl max-2xl:text-2xl max-md:text-lg font-bold text-neutral-900 mb-3 max-md:mb-1"
+                        >
+                          Inventory & Purchase Orders
+                        </h5>
+                        <p
+                          class="text-base max-md:text-sm font-normal text-neutral-900"
+                        >
+                          Track SKUs, costs, and stock levels, and raise a
+                          purchase order from a work order when materials run
+                          short.
+                        </p>
+                      </div>
+                      <img
+                        class="mx-auto mt-auto block w-auto max-w-full shrink-0 object-contain object-bottom max-md:hidden max-lg:mt-auto max-lg:w-[92%] max-lg:max-w-[420px] max-lg:object-center max-lg:max-h-[min(38vh,300px)] lg:max-h-[58%] lg:max-[1439px]:max-h-[65%]"
+                        src="/assets/cfw/platform-capabilities-automate-tab-inventory-purchase-orders.webp"
+                        alt="Knockio inventory screen tracking stock levels and raising purchase orders from work orders"
+                      />
+                    </div>
+                    <div
+                      class="hp-cap-card relative flex min-h-0 flex-col overflow-hidden opacity-0 translate-y-3 transition-all duration-300 ease-[cubic-bezier(0.22,0.61,0.36,1)] max-[1439px]:min-h-[300px] max-[1439px]:flex-col min-[1440px]:block lg:col-span-3 lg:row-start-2 lg:h-full max-lg:min-h-[72vh] max-lg:shrink-0 max-lg:justify-between max-lg:pb-4 max-md:min-h-0 max-lg:opacity-100 max-lg:translate-y-0 motion-reduce:translate-y-0 motion-reduce:opacity-100 bg-neutral-100/60 border border-neutral-200 border-solid rounded-[20px] max-md:rounded-xl"
+                    >
+                      <div
+                        class="relative z-10 max-w-full shrink-0 p-7 max-xl:p-6 max-md:p-5 max-[1439px]:max-w-full lg:max-[1439px]:pb-0 min-[1440px]:max-w-[50%]"
+                      >
+                        <h5
+                          class="text-3xl max-2xl:text-2xl max-md:text-lg font-bold text-neutral-900 mb-3 max-md:mb-1"
+                        >
+                          Roles & Permissions
+                        </h5>
+                        <p
+                          class="text-base max-md:text-sm font-normal text-neutral-900 max-w-72 max-lg:max-w-full"
+                        >
+                          Control what each person sees with role-based access,
+                          so sales, office staff, and subcontractors get only
+                          what they need.
+                        </p>
+                      </div>
+                      <img
+                        class="pointer-events-none z-0 max-md:hidden max-lg:mt-auto max-lg:ml-auto max-lg:mr-0 max-lg:block max-lg:self-end max-lg:max-h-[min(42vh,340px)] max-lg:w-[96%] max-lg:object-contain max-lg:object-right-bottom lg:max-[1439px]:relative lg:max-[1439px]:mt-auto lg:max-[1439px]:ml-auto lg:max-[1439px]:mr-0 lg:max-[1439px]:h-auto lg:max-[1439px]:max-h-[68%] lg:max-[1439px]:w-[96%] lg:max-[1439px]:max-w-full lg:max-[1439px]:object-contain lg:max-[1439px]:object-right-bottom min-[1440px]:absolute min-[1440px]:-bottom-3 min-[1440px]:-right-5 min-[1440px]:h-[80%] min-[1440px]:w-auto min-[1440px]:max-w-[680px] min-[1440px]:object-contain min-[1440px]:object-right-bottom 2xl:h-[78%] 2xl:max-w-[720px] 2xl:w-[110%]"
+                        src="/assets/cfw/platform-capabilities-automate-tab-roles-permissions.webp"
+                        alt="Knockio roles and permissions screen controlling access for sales, office staff, and subcontractors"
                       />
                     </div>
                   </div>
@@ -3466,25 +3575,26 @@ const jsonLd = {
     class="relative py-10 min-lg:py-20"
   >
     <div class="my-container">
-      <div id="workflowHeader" class="text-left mb-10 lg:hidden">
-        <h3 class="text-primary-500 text-2xl max-xl:text-lg font-medium mb-0">
+      <div id="workflowHeader" class="mb-10 text-left lg:hidden">
+        <h3 class="mb-0 text-2xl font-medium text-primary-500 max-xl:text-lg">
           Workflow
         </h3>
         <h2
-          class="text-4xl max-md:text-3xl font-bold text-neutral-900 leading-tight mb-4 max-w-4xl font-inter"
+          class="mb-4 max-w-4xl font-inter text-4xl font-bold leading-tight text-neutral-900 max-md:text-3xl max-2xl:text-5xl max-xl:text-4xl"
         >
           From First Lead to Final Invoice, One Connected Workflow
         </h2>
-        <p class="text-base text-neutral-600 max-w-3xl">
-          Knockio keeps these steps connected, so your team does not lose the
-          thread.
+        <p class="max-w-3xl text-base text-neutral-600 max-xl:text-lg">
+          Field service work moves through a lot of small steps between the
+          first lead and the final invoice. Knockio keeps them connected so
+          your team never loses track of any of them.
         </p>
       </div>
 
       <div
         id="workflowScrollTrack"
         class="max-lg:hidden h-[calc(100vh+(var(--scroll-steps,5)-1)*55vh)] motion-reduce:h-auto"
-        style="--scroll-steps: 5"
+        style="--scroll-steps: 6"
       >
         <div
           id="workflow-scroll-stage"
@@ -3492,375 +3602,543 @@ const jsonLd = {
         >
           <div id="workflowHeaderSticky" class="shrink-0 text-left">
             <h3
-              class="text-primary-500 text-2xl max-xl:text-lg font-medium mb-0"
+              class="mb-0 text-2xl font-medium text-primary-500 max-xl:text-lg"
             >
               Workflow
             </h3>
             <h2
-              class="text-[56px] max-2xl:text-5xl max-xl:text-4xl font-bold text-neutral-900 leading-[68px] mb-4 max-w-4xl font-inter"
+              class="mb-4 max-w-4xl font-inter text-[56px] font-bold leading-[68px] text-neutral-900 max-2xl:text-5xl max-xl:text-4xl max-xl:leading-[52px]"
             >
               From First Lead to Final Invoice, One Connected Workflow
             </h2>
-            <p class="text-lg max-xl:text-base text-neutral-600 mb-4">
+            <p class="max-w-3xl text-lg text-neutral-600 max-xl:text-base">
               Field service work moves through a lot of small steps between the
-              first lead and the final invoice.
-            </p>
-            <p class="text-lg max-xl:text-base text-neutral-600">
-              Knockio keeps them connected so your team doesn't lose track of
-              any of them.
+              first lead and the final invoice. Knockio keeps them connected so
+              your team never loses track of any of them.
             </p>
           </div>
 
-          <div class="workflow-steps-row flex gap-8 items-center">
-            <div
-              id="workflow-content-section"
-              class="relative min-w-0 w-[85%] flex-grow"
+          <nav
+            id="workflowRail"
+            class="mb-5 flex shrink-0 items-stretch gap-2 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            aria-label="Workflow steps"
+          >
+            <button
+              type="button"
+              data-hp-scroll-step="0"
+              aria-current="step"
+              class="wf-pill flex min-w-[9rem] flex-1 shrink-0 items-center gap-2.5 rounded-2xl border-2 border-dashed border-neutral-300 bg-white px-5 py-2.5 text-left font-bold opacity-60 shadow-sm transition-all duration-300 hover:border-primary-500/40 hover:opacity-90 max-xl:px-4 max-xl:py-2 aria-[current=step]:border-solid aria-[current=step]:border-primary-500 aria-[current=step]:bg-[#F9FFF8] aria-[current=step]:opacity-100"
+              style="--step-accent: #9ACFFF"
             >
-              <div id="workflowPanels" class="relative w-full shrink-0">
+              <span
+                class="shrink-0 text-lg font-extrabold max-xl:text-base"
+                style="color: #9ACFFF">01</span
+              >
+              <span
+                class="text-base font-bold leading-tight text-neutral-700 max-xl:text-sm max-[820px]:hidden"
+                >Capture lead</span
+              >
+            </button>
+            <button
+              type="button"
+              data-hp-scroll-step="1"
+              class="wf-pill flex min-w-[9rem] flex-1 shrink-0 items-center gap-2.5 rounded-2xl border-2 border-dashed border-neutral-300 bg-white px-5 py-2.5 text-left font-bold opacity-60 shadow-sm transition-all duration-300 hover:border-primary-500/40 hover:opacity-90 max-xl:px-4 max-xl:py-2 aria-[current=step]:border-solid aria-[current=step]:border-primary-500 aria-[current=step]:bg-[#F9FFF8] aria-[current=step]:opacity-100"
+              style="--step-accent: #FF7272"
+            >
+              <span
+                class="shrink-0 text-lg font-extrabold max-xl:text-base"
+                style="color: #FF7272">02</span
+              >
+              <span
+                class="text-base font-bold leading-tight text-neutral-700 max-xl:text-sm max-[820px]:hidden"
+                >Qualify &amp; book</span
+              >
+            </button>
+            <button
+              type="button"
+              data-hp-scroll-step="2"
+              class="wf-pill flex min-w-[9rem] flex-1 shrink-0 items-center gap-2.5 rounded-2xl border-2 border-dashed border-neutral-300 bg-white px-5 py-2.5 text-left font-bold opacity-60 shadow-sm transition-all duration-300 hover:border-primary-500/40 hover:opacity-90 max-xl:px-4 max-xl:py-2 aria-[current=step]:border-solid aria-[current=step]:border-primary-500 aria-[current=step]:bg-[#F9FFF8] aria-[current=step]:opacity-100"
+              style="--step-accent: #76C551"
+            >
+              <span
+                class="shrink-0 text-lg font-extrabold max-xl:text-base"
+                style="color: #76C551">03</span
+              >
+              <span
+                class="text-base font-bold leading-tight text-neutral-700 max-xl:text-sm max-[820px]:hidden"
+                >Estimate &amp; win</span
+              >
+            </button>
+            <button
+              type="button"
+              data-hp-scroll-step="3"
+              class="wf-pill flex min-w-[9rem] flex-1 shrink-0 items-center gap-2.5 rounded-2xl border-2 border-dashed border-neutral-300 bg-white px-5 py-2.5 text-left font-bold opacity-60 shadow-sm transition-all duration-300 hover:border-primary-500/40 hover:opacity-90 max-xl:px-4 max-xl:py-2 aria-[current=step]:border-solid aria-[current=step]:border-primary-500 aria-[current=step]:bg-[#F9FFF8] aria-[current=step]:opacity-100"
+              style="--step-accent: #6979F8"
+            >
+              <span
+                class="shrink-0 text-lg font-extrabold max-xl:text-base"
+                style="color: #6979F8">04</span
+              >
+              <span
+                class="text-base font-bold leading-tight text-neutral-700 max-xl:text-sm max-[820px]:hidden"
+                >Dispatch &amp; route</span
+              >
+            </button>
+            <button
+              type="button"
+              data-hp-scroll-step="4"
+              class="wf-pill flex min-w-[9rem] flex-1 shrink-0 items-center gap-2.5 rounded-2xl border-2 border-dashed border-neutral-300 bg-white px-5 py-2.5 text-left font-bold opacity-60 shadow-sm transition-all duration-300 hover:border-primary-500/40 hover:opacity-90 max-xl:px-4 max-xl:py-2 aria-[current=step]:border-solid aria-[current=step]:border-primary-500 aria-[current=step]:bg-[#F9FFF8] aria-[current=step]:opacity-100"
+              style="--step-accent: #A855F7"
+            >
+              <span
+                class="shrink-0 text-lg font-extrabold max-xl:text-base"
+                style="color: #A855F7">05</span
+              >
+              <span
+                class="text-base font-bold leading-tight text-neutral-700 max-xl:text-sm max-[820px]:hidden"
+                >Execute on site</span
+              >
+            </button>
+            <button
+              type="button"
+              data-hp-scroll-step="5"
+              class="wf-pill flex min-w-[9rem] flex-1 shrink-0 items-center gap-2.5 rounded-2xl border-2 border-dashed border-neutral-300 bg-white px-5 py-2.5 text-left font-bold opacity-60 shadow-sm transition-all duration-300 hover:border-primary-500/40 hover:opacity-90 max-xl:px-4 max-xl:py-2 aria-[current=step]:border-solid aria-[current=step]:border-primary-500 aria-[current=step]:bg-[#F9FFF8] aria-[current=step]:opacity-100"
+              style="--step-accent: #FF7272"
+            >
+              <span
+                class="shrink-0 text-lg font-extrabold max-xl:text-base"
+                style="color: #FF7272">06</span
+              >
+              <span
+                class="text-base font-bold leading-tight text-neutral-700 max-xl:text-sm max-[820px]:hidden"
+                >Invoice &amp; collect</span
+              >
+            </button>
+          </nav>
+
+          <div class="relative w-full shrink-0">
+            <div
+              class="pointer-events-none absolute inset-x-0 top-0 z-0 h-[var(--wf-panel-height)] scale-[0.985] translate-y-3.5 rounded-3xl border border-neutral-200 bg-white opacity-50"
+              aria-hidden="true"></div>
+            <div id="workflowPanels" class="relative z-[1] w-full shrink-0">
                 <div
                   id="step-content-1"
-                  class="workflow-step-panel content-card is-active flex h-full min-h-0 items-stretch gap-10 pt-14 max-xl:pt-8 max-xl:gap-5 mb-0 bg-[#EDF6FF] border border-[#9ACFFF] border-solid rounded-3xl"
-                  style="--step-border: #9ACFFF"
+                  class="workflow-step-panel is-active grid h-full grid-cols-1 items-stretch overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-[0_1px_2px_rgba(15,23,42,0.05),0_18px_40px_rgba(15,23,42,0.08)] lg:grid-cols-2"
+                  style="--step-accent: #9ACFFF"
                 >
                   <div
-                    class="wf-step-text pl-11 max-xl:pl-6 max-w-lg max-2xl:max-w-sm max-xl:max-w-xs"
+                    class="wf-step-text flex h-full min-h-0 min-w-0 flex-col justify-center self-stretch p-7 max-xl:p-6 max-md:p-5"
                   >
-                    <span
-                      class="text-[#9ACFFF] text-3xl max-xl:text-2xl mb-4 block"
-                      ><Pin size="1em" aria-hidden="true" /></span
-                    >
+                    <div
+                      class="mb-4 text-6xl font-extrabold leading-none text-[#9ACFFF] max-2xl:text-5xl max-md:text-4xl"
+                    >01</div>
                     <h4
-                      class="text-4xl max-2xl:text-2xl max-xl:text-xl font-semibold mb-4 text-neutral-900"
+                      class="mb-3 text-3xl font-bold text-neutral-900 max-2xl:text-2xl max-md:mb-1 max-md:text-lg"
                     >
                       Capture the Lead or Service Request
                     </h4>
                     <p
-                      class="text-base max-xl:text-sm font-light text-neutral-700"
+                      class="mb-8 max-w-md text-base font-normal text-neutral-900 max-lg:mb-0 max-md:text-sm max-lg:max-w-full"
                     >
                       Capture door-to-door leads, service requests, web leads,
-                      or call-in customers with contact details, notes, photos,
-                      and source info.
+                      and call-in customers with contact details, notes, photos,
+                      and source info. Every lead lands in the same pipeline
+                      from the first touch, so no one re-types it later or works
+                      off a sticky note on the dashboard.
                     </p>
                   </div>
                   <div
-                    class="wf-step-media w-full flex min-h-0 flex-1 items-end"
+                    class="wf-step-media flex h-full min-h-0 min-w-0 items-end justify-end overflow-hidden border-t border-neutral-100 max-lg:pt-5 lg:border-t-0 lg:border-l lg:border-neutral-100"
                   >
                     <img
                       src="/assets/cfw/workflow-capture-the-lead-or-service-request.webp"
                       alt="Lead capture"
-                      class="max-w-full w-full rounded-br-[26px]"
+                      class="block h-full w-auto max-w-none object-contain object-right-bottom"
                     />
                   </div>
                 </div>
                 <div
                   id="step-content-2"
-                  class="workflow-step-panel content-card flex h-full min-h-0 items-stretch gap-10 pt-14 max-xl:pt-8 max-xl:gap-5 mb-0 bg-[#F9EBEB] border border-[#FF7272] border-solid rounded-3xl"
-                  style="--step-border: #FF7272"
+                  class="workflow-step-panel grid h-full grid-cols-1 items-stretch overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-[0_1px_2px_rgba(15,23,42,0.05),0_18px_40px_rgba(15,23,42,0.08)] lg:grid-cols-2"
+                  style="--step-accent: #FF7272"
                 >
                   <div
-                    class="wf-step-text pl-11 max-xl:pl-6 max-w-lg max-2xl:max-w-sm max-xl:max-w-xs"
+                    class="wf-step-text flex h-full min-h-0 min-w-0 flex-col justify-center self-stretch p-7 max-xl:p-6 max-md:p-5"
                   >
-                    <span
-                      class="text-[#FF7272] text-3xl max-xl:text-2xl mb-4 block"
-                      ><HardHat size="1em" aria-hidden="true" /></span
-                    >
+                    <div
+                      class="mb-4 text-6xl font-extrabold leading-none text-[#FF7272] max-2xl:text-5xl max-md:text-4xl"
+                    >02</div>
                     <h4
-                      class="text-4xl max-2xl:text-2xl max-xl:text-xl font-semibold mb-4 text-neutral-900"
+                      class="mb-3 text-3xl font-bold text-neutral-900 max-2xl:text-2xl max-md:mb-1 max-md:text-lg"
                     >
-                      Schedule the Job and Dispatch a Technician
+                      Qualify and Book the Appointment
                     </h4>
                     <p
-                      class="text-base max-xl:text-sm font-light text-neutral-700"
+                      class="mb-8 max-w-md text-base font-normal text-neutral-900 max-lg:mb-0 max-md:text-sm max-lg:max-w-full"
                     >
-                      Book appointments, assign crews, set reminders, and keep
-                      the office and field team clear on what happens next.
+                      Move the lead into the pipeline and book an inspection or
+                      sales visit straight onto the right calendar. The setter
+                      hands off to the closer with the address, notes, and
+                      history already attached, so whoever shows up walks in
+                      prepared instead of blind.
                     </p>
                   </div>
                   <div
-                    class="wf-step-media w-full flex min-h-0 flex-1 items-end"
+                    class="wf-step-media flex h-full min-h-0 min-w-0 items-end justify-end overflow-hidden border-t border-neutral-100 max-lg:pt-5 lg:border-t-0 lg:border-l lg:border-neutral-100"
                   >
                     <img
-                      src="/assets/cfw/workflow-schedule-the-job-and-dispatch-a-technician.webp"
-                      alt="Schedule"
-                      class="max-w-full w-full rounded-br-[26px]"
+                      src="/assets/cfw/workflow-qualify-and-book-the-appointment.webp"
+                      alt="Appointment booking"
+                      class="block h-full w-auto max-w-none object-contain object-right-bottom"
                     />
                   </div>
                 </div>
                 <div
                   id="step-content-3"
-                  class="workflow-step-panel content-card flex h-full min-h-0 items-stretch gap-10 pt-14 max-xl:pt-8 max-xl:gap-5 mb-0 bg-[#E7F6E0] border border-[#76C551] border-solid rounded-3xl"
-                  style="--step-border: #76C551"
+                  class="workflow-step-panel grid h-full grid-cols-1 items-stretch overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-[0_1px_2px_rgba(15,23,42,0.05),0_18px_40px_rgba(15,23,42,0.08)] lg:grid-cols-2"
+                  style="--step-accent: #76C551"
                 >
                   <div
-                    class="wf-step-text pl-11 max-xl:pl-6 max-w-lg max-2xl:max-w-sm max-xl:max-w-xs"
+                    class="wf-step-text flex h-full min-h-0 min-w-0 flex-col justify-center self-stretch p-7 max-xl:p-6 max-md:p-5"
                   >
-                    <span
-                      class="text-[#76C551] text-3xl max-xl:text-2xl mb-4 block"
-                      ><Route size="1em" aria-hidden="true" /></span
-                    >
+                    <div
+                      class="mb-4 text-6xl font-extrabold leading-none text-[#76C551] max-2xl:text-5xl max-md:text-4xl"
+                    >03</div>
                     <h4
-                      class="text-4xl max-2xl:text-2xl max-xl:text-xl font-semibold mb-4 text-neutral-900"
+                      class="mb-3 text-3xl font-bold text-neutral-900 max-2xl:text-2xl max-md:mb-1 max-md:text-lg"
                     >
-                      Navigate to the Job with Optimized Routing
+                      Estimate, Propose, and Win the Job
                     </h4>
                     <p
-                      class="text-base max-xl:text-sm font-light text-neutral-700"
+                      class="mb-8 max-w-md text-base font-normal text-neutral-900 max-lg:mb-0 max-md:text-sm max-lg:max-w-full"
                     >
-                      Guide reps or crews to the right location with route
-                      planning, territory mapping, and field activity
-                      visibility.
+                      Build an estimate from your product catalog, send a
+                      proposal the customer can review on their phone, and
+                      collect an e-signed contract before the work starts. The
+                      pricing, scope, and signed agreement all stay on the job
+                      record instead of scattered across email and text.
                     </p>
                   </div>
                   <div
-                    class="wf-step-media w-full flex min-h-0 flex-1 items-end"
+                    class="wf-step-media flex h-full min-h-0 min-w-0 items-end justify-end overflow-hidden border-t border-neutral-100 max-lg:pt-5 lg:border-t-0 lg:border-l lg:border-neutral-100"
                   >
                     <img
-                      src="/assets/cfw/workflow-navigate-to-the-job-with-optimized-routing.webp"
-                      alt="Routing"
-                      class="max-w-full w-full rounded-br-[26px]"
+                      src="/assets/cfw/workflow-estimate-propose-and-win-the-job.webp"
+                      alt="Estimate and proposal"
+                      class="block h-full w-auto max-w-none object-contain object-right-bottom"
                     />
                   </div>
                 </div>
                 <div
                   id="step-content-4"
-                  class="workflow-step-panel content-card flex h-full min-h-0 items-stretch gap-10 pt-14 max-xl:pt-8 max-xl:gap-5 mb-0 bg-[#DFE3FF] border border-[#6979F8] border-solid rounded-3xl"
-                  style="--step-border: #6979F8"
+                  class="workflow-step-panel grid h-full grid-cols-1 items-stretch overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-[0_1px_2px_rgba(15,23,42,0.05),0_18px_40px_rgba(15,23,42,0.08)] lg:grid-cols-2"
+                  style="--step-accent: #6979F8"
                 >
                   <div
-                    class="wf-step-text pl-11 max-xl:pl-6 max-w-lg max-2xl:max-w-sm max-xl:max-w-xs"
+                    class="wf-step-text flex h-full min-h-0 min-w-0 flex-col justify-center self-stretch p-7 max-xl:p-6 max-md:p-5"
                   >
-                    <span
-                      class="text-[#6979F8] text-3xl max-xl:text-2xl mb-4 block"
-                      ><Signature size="1em" aria-hidden="true" /></span
-                    >
+                    <div
+                      class="mb-4 text-6xl font-extrabold leading-none text-[#6979F8] max-2xl:text-5xl max-md:text-4xl"
+                    >04</div>
                     <h4
-                      class="text-4xl max-2xl:text-2xl max-xl:text-xl font-semibold mb-4 text-neutral-900"
+                      class="mb-3 text-3xl font-bold text-neutral-900 max-2xl:text-2xl max-md:mb-1 max-md:text-lg"
                     >
-                      Execute the Job, Capture Photos, Get Signature
+                      Schedule, Dispatch, and Route the Crew
                     </h4>
                     <p
-                      class="text-base max-xl:text-sm font-light text-neutral-700"
+                      class="mb-8 max-w-md text-base font-normal text-neutral-900 max-lg:mb-0 max-md:text-sm max-lg:max-w-full"
                     >
-                      Upload photos, videos, annotations, notes, signatures, and
-                      job updates while the work is being completed.
+                      Book the job, assign a crew, and guide them to the door
+                      with optimized routing and territory mapping. Everyone
+                      reads the same schedule and route, which keeps two people
+                      off the same job and cuts wasted drive time between stops.
                     </p>
                   </div>
                   <div
-                    class="wf-step-media w-full flex min-h-0 flex-1 items-end"
+                    class="wf-step-media flex h-full min-h-0 min-w-0 items-end justify-end overflow-hidden border-t border-neutral-100 max-lg:pt-5 lg:border-t-0 lg:border-l lg:border-neutral-100"
                   >
                     <img
-                      src="/assets/cfw/workflow-execute-the-job-capture-photos-get-signature.webp"
-                      alt="Job proof"
-                      class="max-w-full w-full rounded-br-[26px]"
+                      src="/assets/cfw/workflow-schedule-dispatch-and-route-the-crew.webp"
+                      alt="Schedule and routing"
+                      class="block h-full w-auto max-w-none object-contain object-right-bottom"
                     />
                   </div>
                 </div>
                 <div
                   id="step-content-5"
-                  class="workflow-step-panel content-card flex h-full min-h-0 items-stretch gap-10 pt-14 max-xl:pt-8 max-xl:gap-5 mb-0 bg-[#F9EBEB] border border-[#FF7272] border-solid rounded-3xl"
-                  style="--step-border: #FF7272"
+                  class="workflow-step-panel grid h-full grid-cols-1 items-stretch overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-[0_1px_2px_rgba(15,23,42,0.05),0_18px_40px_rgba(15,23,42,0.08)] lg:grid-cols-2"
+                  style="--step-accent: #A855F7"
                 >
                   <div
-                    class="wf-step-text pl-11 max-xl:pl-6 max-w-lg max-2xl:max-w-sm max-xl:max-w-xs"
+                    class="wf-step-text flex h-full min-h-0 min-w-0 flex-col justify-center self-stretch p-7 max-xl:p-6 max-md:p-5"
                   >
-                    <span
-                      class="text-[#FF7272] text-3xl max-xl:text-2xl mb-4 block"
-                      ><FileText size="1em" aria-hidden="true" /></span
-                    >
+                    <div
+                      class="mb-4 text-6xl font-extrabold leading-none text-[#A855F7] max-2xl:text-5xl max-md:text-4xl"
+                    >05</div>
                     <h4
-                      class="text-4xl max-2xl:text-2xl max-xl:text-xl font-semibold mb-4 text-neutral-900"
+                      class="mb-3 text-3xl font-bold text-neutral-900 max-2xl:text-2xl max-md:mb-1 max-md:text-lg"
                     >
-                      Send the Invoice and Collect Payment
+                      Execute on Site, Capture Photos, Get the Signature
                     </h4>
                     <p
-                      class="text-base max-xl:text-sm font-light text-neutral-700"
+                      class="mb-8 max-w-md text-base font-normal text-neutral-900 max-lg:mb-0 max-md:text-sm max-lg:max-w-full"
                     >
-                      Send the invoice, track payment status, follow up faster,
-                      and keep billing connected to the customer and job record.
+                      Upload photos, videos, annotations, notes, and signatures
+                      while the work is being done. The proof of work attaches
+                      to the job in real time, ready for the invoice, the
+                      customer, or an insurance claim later.
                     </p>
                   </div>
                   <div
-                    class="wf-step-media w-full flex min-h-0 flex-1 items-end"
+                    class="wf-step-media flex h-full min-h-0 min-w-0 items-end justify-end overflow-hidden border-t border-neutral-100 max-lg:pt-5 lg:border-t-0 lg:border-l lg:border-neutral-100"
+                  >
+                    <img
+                      src="/assets/cfw/workflow-execute-the-job-capture-photos-get-signature.webp"
+                      alt="Job proof"
+                      class="block h-full w-auto max-w-none object-contain object-right-bottom"
+                    />
+                  </div>
+                </div>
+                <div
+                  id="step-content-6"
+                  class="workflow-step-panel grid h-full grid-cols-1 items-stretch overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-[0_1px_2px_rgba(15,23,42,0.05),0_18px_40px_rgba(15,23,42,0.08)] lg:grid-cols-2"
+                  style="--step-accent: #FF7272"
+                >
+                  <div
+                    class="wf-step-text flex h-full min-h-0 min-w-0 flex-col justify-center self-stretch p-7 max-xl:p-6 max-md:p-5"
+                  >
+                    <div
+                      class="mb-4 text-6xl font-extrabold leading-none text-[#FF7272] max-2xl:text-5xl max-md:text-4xl"
+                    >06</div>
+                    <h4
+                      class="mb-3 text-3xl font-bold text-neutral-900 max-2xl:text-2xl max-md:mb-1 max-md:text-lg"
+                    >
+                      Invoice and Collect Payment
+                    </h4>
+                    <p
+                      class="mb-8 max-w-md text-base font-normal text-neutral-900 max-lg:mb-0 max-md:text-sm max-lg:max-w-full"
+                    >
+                      Send the invoice, then collect by card, ACH, tap-to-pay,
+                      or text-to-pay, on site or remotely. Automations follow up
+                      on anything left unpaid, so cash flow does not wait on a
+                      check in the mail.
+                    </p>
+                  </div>
+                  <div
+                    class="wf-step-media flex h-full min-h-0 min-w-0 items-end justify-end overflow-hidden border-t border-neutral-100 max-lg:pt-5 lg:border-t-0 lg:border-l lg:border-neutral-100"
                   >
                     <img
                       src="/assets/cfw/workflow-send-the-invoice-and-collect-payment.webp"
                       alt="Invoice"
-                      class="max-w-full w-full rounded-br-[26px]"
+                      class="block h-full w-auto max-w-none object-contain object-right-bottom"
                     />
                   </div>
                 </div>
               </div>
-            </div>
 
-            <aside
-              id="workflowStepsNav"
-              class="w-[15%] flex-shrink-0 self-center h-fit"
-              aria-label="Workflow steps"
+            <div
+              class="relative z-[1] mt-4 flex items-center gap-3.5 rounded-2xl border border-primary-200 bg-[#F9FFF8] px-5 py-4"
             >
-              <ul class="space-y-3 !list-none !pl-0 !m-0">
-                <li
-                  id="step-1"
-                  data-hp-scroll-step="0"
-                  class="step-item"
-                  style="--step-accent: #9ACFFF"
-                >
-                  <span class="wf-step-num">01</span>
-                  <span class="wf-nav-label"
-                    ><Pin size="1em" class="wf-nav-icon mr-1.5 text-neutral-400" aria-hidden="true" />Lead Capture</span
-                  >
-                </li>
-                <li
-                  id="step-2"
-                  data-hp-scroll-step="1"
-                  class="step-item"
-                  style="--step-accent: #FF7272"
-                >
-                  <span class="wf-step-num">02</span>
-                  <span class="wf-nav-label"
-                    ><HardHat size="1em" class="wf-nav-icon mr-1.5 text-neutral-400" aria-hidden="true" />Schedule</span
-                  >
-                </li>
-                <li
-                  id="step-3"
-                  data-hp-scroll-step="2"
-                  class="step-item"
-                  style="--step-accent: #76C551"
-                >
-                  <span class="wf-step-num">03</span>
-                  <span class="wf-nav-label"
-                    ><Route size="1em" class="wf-nav-icon mr-1.5 text-neutral-400" aria-hidden="true" />Routing</span
-                  >
-                </li>
-                <li
-                  id="step-4"
-                  data-hp-scroll-step="3"
-                  class="step-item"
-                  style="--step-accent: #6979F8"
-                >
-                  <span class="wf-step-num">04</span>
-                  <span class="wf-nav-label"
-                    ><Signature size="1em" class="wf-nav-icon mr-1.5 text-neutral-400" aria-hidden="true" />Job Proof</span
-                  >
-                </li>
-                <li
-                  id="step-5"
-                  data-hp-scroll-step="4"
-                  class="step-item"
-                  style="--step-accent: #FF7272"
-                >
-                  <span class="wf-step-num">05</span>
-                  <span class="wf-nav-label"
-                    ><FileText size="1em" class="wf-nav-icon mr-1.5 text-neutral-400" aria-hidden="true" />Invoice</span
-                  >
-                </li>
-              </ul>
-            </aside>
+              <span
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary-50 text-primary-500"
+                aria-hidden="true"
+                ><Zap size="21" /></span
+              >
+              <p class="m-0 text-base font-normal text-neutral-700 max-md:text-sm">
+                <strong class="font-bold text-neutral-900"
+                  >Automations run between every step.</strong
+                > Appointment reminders, status-based texts, and an invoice that
+                sends itself on completion keep the whole flow moving, so nothing
+                falls through the cracks.
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="w-full lg:hidden space-y-8 mt-4">
         <div
-          class="content-card flex flex-col gap-8 pt-10 pl-6 bg-[#EDF6FF] rounded-3xl mb-6"
+          class="mb-6 overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-[0_1px_2px_rgba(15,23,42,0.05),0_6px_18px_rgba(15,23,42,0.05)]"
         >
-          <div>
-            <span class="text-[#9ACFFF] text-2xl block mb-2"
-              ><Pin size="1em" aria-hidden="true" /></span
+          <div class="p-6 pb-5">
+            <div
+              class="mb-4 text-5xl font-extrabold leading-none text-[#9ACFFF] max-md:text-4xl"
             >
-            <h4 class="text-2xl font-semibold text-neutral-900 mb-2">
-              Capture the lead
+              01
+            </div>
+            <h4
+              class="mb-3 text-3xl font-bold text-neutral-900 max-md:mb-1 max-md:text-lg"
+            >
+              Capture the lead or service request
             </h4>
-            <p class="text-sm text-neutral-700">
-              Capture leads with contact details, notes, photos, and source
-              info.
+            <p class="text-base font-normal text-neutral-900 max-md:text-sm">
+              Capture door-to-door leads, service requests, web leads, and
+              call-in customers with contact details, notes, photos, and source
+              info. Every lead lands in the same pipeline from the first touch.
             </p>
           </div>
+          <div class="border-t border-neutral-100 pt-5">
           <img
             src="/assets/cfw/workflow-capture-the-lead-or-service-request.webp"
-            alt="Screenshot of captured leads & service requests in the field on map view"
-            class="w-full rounded-br-xl"
+            alt="Screenshot of captured leads and service requests in the field on map view"
+            class="w-full"
           />
+          </div>
         </div>
         <div
-          class="content-card flex flex-col gap-8 pt-10 pl-6 bg-[#F9EBEB] rounded-3xl mb-6"
+          class="mb-6 overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-[0_1px_2px_rgba(15,23,42,0.05),0_6px_18px_rgba(15,23,42,0.05)]"
         >
-          <div>
-            <span class="text-[#FF7272] text-2xl block mb-2"
-              ><HardHat size="1em" aria-hidden="true" /></span
+          <div class="p-6 pb-5">
+            <div
+              class="mb-4 text-5xl font-extrabold leading-none text-[#FF7272] max-md:text-4xl"
             >
-            <h4 class="text-2xl font-semibold text-neutral-900 mb-2">
-              Schedule
+              02
+            </div>
+            <h4
+              class="mb-3 text-3xl font-bold text-neutral-900 max-md:mb-1 max-md:text-lg"
+            >
+              Qualify and book the appointment
             </h4>
-            <p class="text-sm text-neutral-700">
-              Book appointments, assign crews, and set reminders.
+            <p class="text-base font-normal text-neutral-900 max-md:text-sm">
+              Move the lead into the pipeline and book an inspection or sales
+              visit onto the right calendar, with address, notes, and history
+              already attached.
             </p>
           </div>
+          <div class="border-t border-neutral-100 pt-5">
           <img
-            src="/assets/cfw/workflow-schedule-the-job-and-dispatch-a-technician.webp"
-            alt="Screenshot of Knockio lead detailed view scheduling a job and dispatching a technician"
-            class="w-full rounded-br-xl"
+            src="/assets/cfw/workflow-qualify-and-book-the-appointment.webp"
+            alt="Screenshot of Knockio booking an inspection or sales visit on the calendar"
+            class="w-full"
           />
+          </div>
         </div>
         <div
-          class="content-card flex flex-col gap-8 pt-10 pl-6 bg-[#E7F6E0] rounded-3xl mb-6"
+          class="mb-6 overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-[0_1px_2px_rgba(15,23,42,0.05),0_6px_18px_rgba(15,23,42,0.05)]"
         >
-          <div>
-            <span class="text-[#76C551] text-2xl block mb-2"
-              ><Route size="1em" aria-hidden="true" /></span
+          <div class="p-6 pb-5">
+            <div
+              class="mb-4 text-5xl font-extrabold leading-none text-[#76C551] max-md:text-4xl"
             >
-            <h4 class="text-2xl font-semibold text-neutral-900 mb-2">
-              Routing
+              03
+            </div>
+            <h4
+              class="mb-3 text-3xl font-bold text-neutral-900 max-md:mb-1 max-md:text-lg"
+            >
+              Estimate, propose, and win the job
             </h4>
-            <p class="text-sm text-neutral-700">
-              Route planning, territory mapping, and field visibility.
+            <p class="text-base font-normal text-neutral-900 max-md:text-sm">
+              Build an estimate from your product catalog, send a proposal, and
+              collect an e-signed contract before the work starts.
             </p>
           </div>
+          <div class="border-t border-neutral-100 pt-5">
           <img
-            src="/assets/cfw/workflow-navigate-to-the-job-with-optimized-routing.webp"
-            alt="Screenshot of Knockio navigating to a job site with optimized routing"
-            class="w-full rounded-br-xl"
+            src="/assets/cfw/workflow-estimate-propose-and-win-the-job.webp"
+            alt="Screenshot of Knockio estimate and proposal screen for winning the job"
+            class="w-full"
           />
+          </div>
         </div>
         <div
-          class="content-card flex flex-col gap-8 pt-10 pl-6 bg-[#DFE3FF] rounded-3xl mb-6"
+          class="mb-6 overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-[0_1px_2px_rgba(15,23,42,0.05),0_6px_18px_rgba(15,23,42,0.05)]"
         >
-          <div>
-            <span class="text-[#6979F8] text-2xl block mb-2"
-              ><Signature size="1em" aria-hidden="true" /></span
+          <div class="p-6 pb-5">
+            <div
+              class="mb-4 text-5xl font-extrabold leading-none text-[#6979F8] max-md:text-4xl"
             >
-            <h4 class="text-2xl font-semibold text-neutral-900 mb-2">
-              Job proof
+              04
+            </div>
+            <h4
+              class="mb-3 text-3xl font-bold text-neutral-900 max-md:mb-1 max-md:text-lg"
+            >
+              Schedule, dispatch, and route the crew
             </h4>
-            <p class="text-sm text-neutral-700">
-              Photos, signatures, and job updates on site.
+            <p class="text-base font-normal text-neutral-900 max-md:text-sm">
+              Book the job, assign a crew, and guide them with optimized routing
+              and territory mapping.
             </p>
           </div>
+          <div class="border-t border-neutral-100 pt-5">
+          <img
+            src="/assets/cfw/workflow-schedule-dispatch-and-route-the-crew.webp"
+            alt="Screenshot of Knockio scheduling, dispatching, and routing a crew to the job"
+            class="w-full"
+          />
+          </div>
+        </div>
+        <div
+          class="mb-6 overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-[0_1px_2px_rgba(15,23,42,0.05),0_6px_18px_rgba(15,23,42,0.05)]"
+        >
+          <div class="p-6 pb-5">
+            <div
+              class="mb-4 text-5xl font-extrabold leading-none text-[#A855F7] max-md:text-4xl"
+            >
+              05
+            </div>
+            <h4
+              class="mb-3 text-3xl font-bold text-neutral-900 max-md:mb-1 max-md:text-lg"
+            >
+              Execute on site, capture photos, get the signature
+            </h4>
+            <p class="text-base font-normal text-neutral-900 max-md:text-sm">
+              Upload photos, videos, annotations, notes, and signatures while the
+              work is being done. Proof of work attaches to the job in real time.
+            </p>
+          </div>
+          <div class="border-t border-neutral-100 pt-5">
           <img
             src="/assets/cfw/workflow-execute-the-job-capture-photos-get-signature.webp"
-            alt="Screenshot of Knockio job execution screen capturing photos and keeping the conversation in the lead/job itself"
-            class="w-full rounded-br-xl"
+            alt="Screenshot of Knockio job execution screen capturing photos and signatures on site"
+            class="w-full"
           />
+          </div>
         </div>
         <div
-          class="content-card flex flex-col gap-8 pt-10 pl-6 bg-[#F9EBEB] rounded-3xl"
+          class="overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-[0_1px_2px_rgba(15,23,42,0.05),0_6px_18px_rgba(15,23,42,0.05)]"
         >
-          <div>
-            <span class="text-[#FF7272] text-2xl block mb-2"
-              ><FileText size="1em" aria-hidden="true" /></span
+          <div class="p-6 pb-5">
+            <div
+              class="mb-4 text-5xl font-extrabold leading-none text-[#FF7272] max-md:text-4xl"
             >
-            <h4 class="text-2xl font-semibold text-neutral-900 mb-2">
-              Invoice
+              06
+            </div>
+            <h4
+              class="mb-3 text-3xl font-bold text-neutral-900 max-md:mb-1 max-md:text-lg"
+            >
+              Invoice and collect payment
             </h4>
-            <p class="text-sm text-neutral-700">
-              Send invoices, track payments, and follow up faster.
+            <p class="text-base font-normal text-neutral-900 max-md:text-sm">
+              Send the invoice, then collect by card, ACH, tap-to-pay, or
+              text-to-pay. Automations follow up on anything left unpaid.
             </p>
           </div>
+          <div class="border-t border-neutral-100 pt-5">
           <img
             src="/assets/cfw/workflow-send-the-invoice-and-collect-payment.webp"
             alt="Screenshot of Knockio sending an invoice and collecting payment"
-            class="w-full rounded-br-xl"
+            class="w-full"
           />
+          </div>
         </div>
+      </div>
+
+      <div
+        class="mx-auto mt-10 flex max-w-4xl items-center gap-3.5 rounded-2xl border border-primary-200 bg-[#F9FFF8] px-5 py-4 lg:hidden"
+      >
+        <span
+          class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary-50 text-primary-500"
+          aria-hidden="true"
+          ><Zap size="21" /></span
+        >
+        <p class="m-0 text-base font-normal text-neutral-700 max-md:text-sm">
+          <strong class="font-bold text-neutral-900"
+            >Automations run between every step.</strong
+          >
+          Appointment reminders, status-based texts, and an invoice that sends
+          itself on completion keep the whole flow moving, so nothing falls
+          through the cracks.
+        </p>
       </div>
     </div>
   </section>

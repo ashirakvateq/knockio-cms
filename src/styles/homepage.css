@@ -188,57 +188,22 @@
 
 #workflow-section {
   --wf-sticky-top: 5rem;
+  --wf-rail-band: 10rem;
   --wf-stage-height: calc(100dvh - var(--wf-sticky-top));
-  --wf-panel-height: min(600px, calc(100dvh - var(--wf-sticky-top) - 1.5rem));
+  --wf-panel-height: min(
+    480px,
+    calc(100dvh - var(--wf-sticky-top) - var(--wf-rail-band) - 1.5rem)
+  );
 }
 
 @supports not (height: 100dvh) {
   #workflow-section {
     --wf-stage-height: calc(100vh - var(--wf-sticky-top));
-    --wf-panel-height: min(600px, calc(100vh - var(--wf-sticky-top) - 1.5rem));
+    --wf-panel-height: min(
+      480px,
+      calc(100vh - var(--wf-sticky-top) - var(--wf-rail-band) - 1.5rem)
+    );
   }
-}
-
-#workflow-section #workflowPanels {
-  height: var(--wf-panel-height);
-  max-height: var(--wf-panel-height);
-}
-
-#workflow-section .workflow-step-panel {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  overflow: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s, box-shadow 0.4s ease;
-}
-
-#workflow-section .workflow-step-panel.is-active {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  position: relative;
-  box-shadow: 0 24px 64px -16px color-mix(in srgb, var(--step-border) 40%, transparent);
-}
-
-#workflow-section .wf-step-text,
-#workflow-section .wf-step-media {
-  opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 0.45s ease, transform 0.45s ease;
-}
-
-#workflow-section .wf-step-text.wf-in,
-#workflow-section .wf-step-media.wf-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-#workflow-section .workflow-step-panel .wf-step-media img {
-  max-height: 100%;
-  object-fit: contain;
-  object-position: right bottom;
 }
 
 #workflow-scroll-stage {
@@ -268,62 +233,58 @@
   filter: blur(calc(3px * var(--wf-header-progress)));
 }
 
-#workflow-scroll-stage .workflow-steps-row {
-  flex: 0 0 auto;
-  width: 100%;
-}
-
-#workflow-section .step-item {
+#workflow-section #workflowPanels {
   position: relative;
-  list-style: none;
-  padding: 0.75rem 0.875rem 0.75rem 1rem;
-  border-radius: 1rem;
-  cursor: pointer;
-  border: 1px solid transparent;
-  border-left: 3px solid transparent;
-  color: #737373;
-  opacity: 0.75;
-  transition: all 0.3s ease;
+  z-index: 1;
+  height: var(--wf-panel-height);
+  max-height: var(--wf-panel-height);
 }
 
-#workflow-section .step-item:hover {
+#workflow-section .workflow-step-panel {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  overflow: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s;
+}
+
+#workflow-section .workflow-step-panel.is-active {
   opacity: 1;
-  background: #fff;
-  border-color: #f5f5f5;
+  visibility: visible;
+  pointer-events: auto;
+  position: relative;
 }
 
-#workflow-section .step-item.is-nav-active {
+#workflow-section .wf-step-text,
+#workflow-section .wf-step-media {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+#workflow-section .wf-step-text.wf-in,
+#workflow-section .wf-step-media.wf-in {
   opacity: 1;
-  background: #fff;
-  color: #171717;
-  font-weight: 500;
-  border-left-color: var(--step-accent);
-  border-color: color-mix(in srgb, var(--step-accent) 22%, #fff);
-  box-shadow: 0 4px 20px -6px color-mix(in srgb, var(--step-accent) 25%, transparent);
+  transform: translateY(0);
 }
 
-#workflow-section .step-item.is-nav-active .wf-nav-icon {
-  color: var(--step-accent);
-}
-
-#workflow-section .wf-step-num {
-  display: block;
-  font-size: 0.6875rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  color: var(--step-accent);
-  margin-bottom: 0.15rem;
-}
-
-#workflow-section .wf-nav-label {
-  font-size: 0.9375rem;
-  line-height: 1.3;
+#workflow-section .workflow-step-panel .wf-step-media img {
+  width: auto;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+  object-position: right bottom;
 }
 
 @media (max-height: 800px) {
-  #workflow-section .workflow-step-panel {
-    padding-top: 2rem;
-    gap: 1.25rem;
+  #workflow-section {
+    --wf-rail-band: 9rem;
+    --wf-panel-height: min(
+      400px,
+      calc(100dvh - var(--wf-sticky-top) - var(--wf-rail-band) - 1rem)
+    );
   }
 }
 

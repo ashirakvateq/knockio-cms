@@ -626,7 +626,7 @@ requestAnimationFrame(raf);
   var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var mobileQuery = window.matchMedia("(max-width: 1023px)");
   var panels = track.querySelectorAll(".workflow-step-panel");
-  var navItems = document.querySelectorAll("#workflowStepsNav .step-item");
+  var navItems = document.querySelectorAll("#workflowRail .wf-pill");
   var stage = document.getElementById("workflow-scroll-stage");
   var header = document.getElementById("workflowHeaderSticky");
   var steps = panels.length;
@@ -664,7 +664,6 @@ requestAnimationFrame(raf);
 
   function setNavItemActive(item, active) {
     if (!item) return;
-    item.classList.toggle("is-nav-active", active);
     item.setAttribute("aria-current", active ? "step" : "false");
   }
 
