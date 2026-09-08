@@ -29,144 +29,116 @@ type CapCard = {
 
 const capabilityTabs: { label: string; cards: CapCard[] }[] = [
   {
-    label: "Manage Records",
+    label: "Manage Deals",
     cards: [
       {
-        title: "Customer and Property Records in One Place",
-        text: "Manage records during every single visit, log outcomes, add detailed notes or quick voice memos, and move qualified prospects steadily into a clear, organized CRM pipeline your whole team can trust today.",
-        image: asset(
-          "inner-solar-sales-software-and-crm-customer-and-property-records-in-one-place.webp",
-        ),
+        title: "Customer & Property Records in One Place",
+        text: "Manage records during every visit, log outcomes, attach roof shading notes, and store utility bill history. When a homeowner calls back, your team sees the full conversation instead of digging through personal phones.",
+        image: asset("inner-solar-sales-software-and-crm-customer-and-property-records-in-one-place.webp"),
         alt: "Door-to-door canvassing in Knockio",
       },
       {
-        title: "Dynamic Sales Pipeline for Solar Project Stages",
-        text: "Move deals through clear stages like lead, appointment, survey, design, permitting, install, and PTO. Statuses stay fully customizable, so every board matches your exact sales-to-install process and each team sees what matters.",
-        image: asset(
-          "inner-solar-sales-software-and-crm-dynamic-pipeline-for-solar-stages.webp",
-        ),
+        title: "Dynamic Pipeline for Solar Stages",
+        text: "Move deals through clear stages: Lead, Site Survey, Design, HOA Approval, Permitting, Install, Inspection, and PTO. Fully customize statuses to match your exact sales-to-install workflow.",
+        image: asset("inner-solar-sales-software-and-crm-dynamic-pipeline-for-solar-stages.webp"),
         alt: "Lead management in Knockio",
       },
       {
-        title: "Setter to Closer Handoff and Scheduling",
-        text: "Assign appointments from setters to closers, track who showed and who sat, and keep the sales floor and the field reading the same calendar instead of two versions that drift apart by midday.",
-        image: asset(
-          "inner-solar-sales-software-and-crm-setter-to-closer-handoff-and-scheduling.webp",
-        ),
+        title: "Setter to Closer Handoffs",
+        text: "Book appointments at the door straight onto a closer's calendar. Automatically attach 12-month kWh usage graphs, electrical panel photos, and decision-maker details so closers never arrive blind.",
+        image: asset("inner-solar-sales-software-and-crm-setter-to-closer-handoff-and-scheduling.webp"),
         alt: "Kanban-style sales pipeline in Knockio",
       },
     ],
   },
   {
-    label: "Track the Field",
+    label: "Track Setters",
     cards: [
       {
-        title: "Automated Territory Creation by Zip Code and City",
-        text: "Build canvassing territories automatically from zip codes and cities, instead of drawing every boundary by hand. You can carve up a target market and get setters knocking in minutes, not hours. Most solar CRMs simply do not do this.",
-        image: asset(
-          "inner-solar-sales-software-and-crm-automated-territory-creation-by-zip-code-and-city.webp",
-        ),
+        title: "Automated Territory Creation by ZIP & City",
+        text: "Build canvassing territories automatically from ZIP codes and cities instead of drawing boundaries by hand. Carve up a target neighborhood and get setters knocking doors in minutes.",
+        image: asset("inner-solar-sales-software-and-crm-automated-territory-creation-by-zip-code-and-city.webp"),
         alt: "Route planning in Knockio",
       },
       {
-        title: "Live GPS Tracking of Every Field Setter",
-        text: "See exactly where every setter is in real time, which helps accountability, safety, and knowing who works which neighborhood right now. Pin drop verification confirms how close reps stood when marking doors.",
-        image: asset(
-          "inner-solar-sales-software-and-crm-live-gps-tracking-of-every-setter.webp",
-        ),
+        title: "Live GPS Tracking of Field Setters",
+        text: "See where every setter is in real time to balance coverage across a build area. Pin-drop verification confirms exactly how close a rep stood to an address when marking a door worked.",
+        image: asset("inner-solar-sales-software-and-crm-live-gps-tracking-of-every-setter.webp"),
         alt: "Territory management in Knockio",
       },
       {
-        title: "Smarter Route Planning for Busy Field Reps",
-        text: "Plan smarter, tighter routes so your reps cover far more doors in much less time each day, instead of crisscrossing the very same streets over and over again and burning valuable daylight.",
+        title: "Smarter Route Planning",
+        text: "Plan tighter routes so reps cover more doors in less time each day—eliminating crisscrossing across the same blocks and saving valuable daylight hours.",
         image: asset("inner-solar-sales-software-and-crm-route-planning.webp"),
         alt: "Field activity log in Knockio",
       },
     ],
   },
   {
-    label: "Work Orders and Materials",
+    label: "Work Orders & Equipment",
     cards: [
       {
-        title: "Solar Work Orders With Tasks and Materials",
-        text: "Track solar work orders from lead to service with notes, status updates, documents, customer details, and clear next steps, so every install job stays organized and nothing important slips through the cracks.",
-        image: asset(
-          "inner-solar-sales-software-and-crm-work-orders-with-tasks-budget-and-materials.webp",
-        ),
+        title: "Solar Work Orders With Takeoffs",
+        text: "Track work orders from lead to service with clear equipment takeoffs. Attach panel models, inverter SKUs, racking specs, and safety notes so install crews always arrive prepared.",
+        image: asset("inner-solar-sales-software-and-crm-work-orders-with-tasks-budget-and-materials.webp"),
         alt: "Job management in Knockio",
       },
       {
-        title: "Purchase Orders When Solar Equipment Runs Short",
-        text: "When panels, inverters, or racking fall out of inventory, raise a purchase order straight from the work order. Knockio tracks products, variants, SKUs, cost, and markup, flagging low stock before you run short.",
-        image: asset(
-          "inner-solar-sales-software-and-crm-purchase-orders-when-equipment-runs-short.webp",
-        ),
+        title: "Purchase Orders for Solar Equipment",
+        text: "When panels, microinverters, or rails run short, fire off a purchase order straight from the work order. Knockio flags low stock before your crew runs out mid-install.",
+        image: asset("inner-solar-sales-software-and-crm-purchase-orders-when-equipment-runs-short.webp"),
         alt: "Crew dispatching in Knockio",
       },
       {
-        title: "Assign Solar Installs to Crews or Subcontractors",
-        text: "Send solar work orders directly to your own install crew or to a trusted subcontractor, with tasks, notes, photos, and the full schedule attached, so whoever does the work always has the complete picture.",
-        image: asset(
-          "inner-solar-sales-software-and-crm-assign-solar-installs-to-crews-or-subcontractors.webp",
-        ),
+        title: "Assign Installs to Subcontractors",
+        text: "Route work orders directly to your in-house crew or a trusted 1099 subcontractor. Attach satellite layouts, MPU photos, and schedules while stripping out sensitive customer pricing.",
+        image: asset("inner-solar-sales-software-and-crm-assign-solar-installs-to-crews-or-subcontractors.webp"),
         alt: "Work orders in Knockio",
       },
     ],
   },
   {
-    label: "Documents and Media",
+    label: "Interconnection & PTO",
     cards: [
       {
-        title: "Site Photos and System Media in One Place",
-        text: "Upload roof photos, electrical panel shots, and site survey images straight to the deal. Your design team, install crew, and the customer all get the full visual record together in one shared spot.",
-        image: asset(
-          "inner-solar-sales-software-and-crm-site-photos-and-system-media-in-one-place.webp",
-        ),
+        title: "Interconnection & PTO Status Tracking",
+        text: "Don't let cash flow wait on permitting. Track municipal permit approvals, utility net-metering applications, and final Permission to Operate (PTO) letters in explicit wait-stage boards.",
+        image: asset("inner-solar-sales-software-and-crm-site-photos-and-system-media-in-one-place.webp"),
         alt: "Smart estimates in Knockio",
       },
       {
-        title: "E-Contracts for Solar Agreements",
-        text: "Send install contracts for digital signature with a documented audit trail, so financing partners and homeowners alike have a clean legal record. Every view and signature is logged with IP address and timestamp.",
-        image: asset(
-          "inner-solar-sales-software-and-crm-e-contracts-for-solar-agreements.webp",
-        ),
+        title: "HOA & Architectural Review Gating",
+        text: "Prevent expensive mid-install stop-work fines. Store HOA Architectural Review Board (ARB) approval letters directly on the record before scheduling crew dispatch.",
+        image: asset("inner-solar-sales-software-and-crm-e-contracts-for-solar-agreements.webp"),
         alt: "Proposals in Knockio",
       },
       {
-        title: "Centralized File Storage Per Solar Deal",
-        text: "Keep utility bills, interconnection paperwork, and permits attached right to the customer record, not scattered across inboxes and a shared drive nobody can ever navigate, so the whole team finds documents fast.",
-        image: asset(
-          "inner-solar-sales-software-and-crm-centralized-file-storage-per-deal.webp",
-        ),
+        title: "Site Survey Media & MPU Documentation",
+        text: "Site surveyors upload roof condition photos, attic framing measurements, and main panel breaker ratings straight to the deal—preventing engineering redesigns.",
+        image: asset("inner-solar-sales-software-and-crm-centralized-file-storage-per-deal.webp"),
         alt: "Digital contracts in Knockio",
       },
     ],
   },
   {
-    label: "Quote and Get Paid",
+    label: "Proposals & Payments",
     cards: [
       {
-        title: "Solar Estimate and Quote Builder",
-        text: "Create estimates with system size, equipment, and clear line-item pricing built in, so homeowners compare real numbers instead of squinting at a handwritten napkin estimate. Add optional line items like battery storage, save templates, and pull from a product catalog.",
-        image: asset(
-          "inner-solar-sales-software-and-crm-solar-estimate-and-quote-builder-1.webp",
-        ),
+        title: "Solar Proposal & Quote Builder",
+        text: "Create clean proposals with system size (kW), offset projections, and line-item equipment specs. Add optional battery storage line items and compare Cash vs. Loan pricing.",
+        image: asset("inner-solar-sales-software-and-crm-solar-estimate-and-quote-builder-1.webp"),
         alt: "Video and file storage in Knockio",
       },
       {
-        title: "Digital Solar Contracts With E-Signatures",
-        text: "Once the homeowner is ready, send the install contract for digital signature with a documented audit trail. Change orders work exactly the same way, so any mid-deal adjustment is logged and tracked cleanly instead of handled loosely over text message.",
-        image: asset(
-          "inner-solar-sales-software-and-crm-digital-contracts-with-e-signatures.webp",
-        ),
+        title: "E-Contracts With 3-Day Cancellation Disclosures",
+        text: "Send install agreements for digital signature with IP timestamp logging. You can add the mandatory FTC 3-Day Notice of Cancellation to your contract templates, which appends it to door-to-door deals.",
+        image: asset("inner-solar-sales-software-and-crm-digital-contracts-with-e-signatures.webp"),
         alt: "Photo uploads in Knockio",
       },
       {
-        title: "Flexible Payment Collection Options",
-        text: "Collect deposits, milestone payments, and final balances through tap to pay, text to pay, card, or ACH, all tied directly to the job through Knockio's own payment processing. Cash flow no longer waits around on a paper check showing up later.",
-        image: asset(
-          "inner-solar-sales-software-and-crm-flexible-payment-collection.webp",
-        ),
+        title: "On-Site Payment Collection",
+        text: "Collect deposits, MPU upgrade fees, and invoices through Text-to-Pay, card, or ACH. Cash flow keeps pace with installation progress.",
+        image: asset("inner-solar-sales-software-and-crm-flexible-payment-collection.webp"),
         alt: "Service reports in Knockio",
       },
     ],
@@ -176,37 +148,37 @@ const capabilityTabs: { label: string; cards: CapCard[] }[] = [
 const organizedItems = [
   {
     title: "Live Field Tracking",
-    text: "Monitor setters in real time with GPS tracking. It helps with accountability, safety, and knowing exactly who is working in which neighborhood right now.",
+    text: "Monitor setters in real time with GPS tracking. It helps with accountability, safety, and knowing exactly who is working which neighborhood right now.",
     href: "https://knockio.com/features/gps-tracking-software/",
     icon: "crosshair" as const,
   },
   {
     title: "Flow Automation",
-    text: "Automatically handle the repetitive work like follow ups, callbacks, and appointment confirmations, so a deal does not go cold while your closers are out running other appointments.",
+    text: "Automatically handle the daily grind like follow-ups, callbacks, and appointment confirmations so a deal does not go cold while closers are out running other appointments.",
     href: "https://knockio.com/features/business-automation-software/",
     icon: "sparkles" as const,
   },
   {
-    title: "Media and Measurements",
-    text: "See every deal's photos, site survey details, and notes in one view, so the office and the field are looking at the same record instead of asking each other for it.",
+    title: "Media & Site Audits",
+    text: "See every deal's photos, site survey details, electrical panel shots, and notes in one view, so engineering and the field read the same record.",
     href: null,
     icon: "ruler" as const,
   },
   {
     title: "E-Contracts",
-    text: "Create digital contracts, collect signatures, and move approved jobs forward faster without printing, scanning, chasing updates, or losing important details.",
+    text: "Create digital contracts, add mandatory 3-day cancellation notices to your templates, collect signatures, and move approved jobs forward without paperwork delays.",
     href: "https://knockio.com/e-contracts/",
     icon: "file" as const,
   },
   {
     title: "CRM Integrations",
-    text: "Connect Knockio to Salesforce, HubSpot, Google Calendar, and GHL, then reach thousands more apps through Zapier, FlowChef, and webhooks, keeping every solar deal in sync.",
+    text: "Knockio connects your customer records, invoices, and payments to the tools you use via Zapier and webhooks. It also connects natively or via Zapier and webhooks with Google Calendar, HubSpot, GoHighLevel (GHL), and Salesforce.",
     href: "https://knockio.com/knockio-integrations/",
     icon: "zap" as const,
   },
   {
     title: "Team Communication",
-    text: "Knockio links setters, closers, and ops to the same deal record through assignees and notes, so handoffs never depend on a forwarded text.",
+    text: "Link setters, closers, and ops to the same deal record through assignees and notes, so handoffs never depend on a forwarded text.",
     href: "https://knockio.com/features/business-texting-and-calling-software/",
     icon: "message" as const,
   },
@@ -258,7 +230,7 @@ const faqs = [
   },
   {
     q: "Does Knockio connect with the tools I already use?",
-    a: "Knockio connects your customer records, invoices, and payments to the tools you use via Zapier and webhooks. It also connects via Zapier and webhooks with Google Calendar, HubSpot, GoHighLevel (GHL), and Salesforce.",
+    a: "Knockio connects your customer records, invoices, and payments to the tools you use via Zapier and webhooks. It also connects natively or via Zapier and webhooks with Google Calendar, HubSpot, GoHighLevel (GHL), and Salesforce.",
   },
 ];
 
@@ -466,17 +438,12 @@ const jsonLd = {
             <h1
               class="mb-7 text-[36px] font-bold leading-[44px] text-neutral-950 sm:text-[44px] sm:leading-[54px] xl:text-[58px] xl:leading-[66px] 2xl:text-[64px] 2xl:leading-[74px]"
             >
-              Solar Sales Software and CRM
+              Solar Sales Software & CRM Built for Canvassers and Installers
             </h1>
             <p
               class="mb-10 max-w-[760px] text-base font-medium leading-8 text-neutral-600 sm:text-lg sm:leading-9"
             >
-              Knockio is solar sales software and CRM built for installers who
-              need one place to hold customer records, manage reps, set
-              appointments, track every project stage, build estimates, send
-              digital contracts, and collect deposits. No more working off three
-              different spreadsheets that never quite agree on where a deal
-              actually stands.
+              Solar deals don't happen behind a desk. They start on a doorstep, advance through a technical site audit, navigate weeks of permitting and HOA limbo, and only turn into revenue when the utility issues Permission to Operate (PTO). Knockio connects your door-to-door solar canvassing tracking directly to your back-office operations—helping setters, closers, and install crews move deals faster.
             </p>
             <a
               href="#cal-sec"
@@ -498,17 +465,7 @@ const jsonLd = {
             <p
               class="max-w-[760px] text-[15px] leading-7 text-neutral-600 sm:text-base sm:leading-7"
             >
-              A solar company should look for a CRM that carries the deal the
-              whole way, from the first knock to a working system on the roof.
-              That means complete customer records, door-to-door lead capture, a
-              pipeline that matches solar stages, appointment setting between
-              setters and closers, clear estimates, digital contracts, and
-              deposit collection. Knockio handles all of it in one platform. It
-              also adds live GPS tracking of setters and automated territory
-              creation by zip code and city, so a deal's full history lives in a
-              single record. That depth, plus affordable pricing and support
-              that actually understands solar, is what a generic CRM built for
-              another industry leaves out.
+              A true solar project management software carries the deal from first knock to a working system on the roof. That means complete property records, setter-to-closer appointment handoffs, a pipeline matching solar stages, utility PTO tracking, e-contracts, and deposit collection. Knockio handles all of it in one platform—adding live GPS tracking of field reps and automated territory creation by ZIP and city so your deal history lives in a single record.
             </p>
           </div>
 
@@ -560,12 +517,7 @@ const jsonLd = {
           <p
             class="mx-auto max-w-[960px] text-base font-normal leading-8 text-neutral-600 sm:text-lg sm:leading-9"
           >
-            Knockio helps solar companies manage customer records, appointments,
-            reps, projects, products, payments, and install progress. From the
-            setter's first knock to the closer's signed deal to the crew's final
-            sign-off, it all sits in one connected platform. Owners run the
-            sales floor and the field without losing track of where each deal
-            really stands.
+            Knockio is solar sales software and CRM built for installers who need one place to hold customer records, manage reps, set appointments, track every project stage, build proposals, send digital contracts, and collect deposits. No more working off three spreadsheets that never agree on where a deal stands.
           </p>
         </div>
 

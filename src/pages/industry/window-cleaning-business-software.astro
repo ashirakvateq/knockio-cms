@@ -22,27 +22,27 @@ const asset = (name: string) => `/assets/cfw/${name}`;
 
 const capabilityTabs = [
   {
-    label: "Centralized Data",
+    label: "Manage Accounts & Routes",
     cards: [
       {
-        title: "One Record for Every Property",
-        text: "Centralize customer data during every visit, log outcomes, add notes or voice notes, and move prospects into a clear CRM pipeline, so nothing important ever slips.",
+        title: "Pane Counts & Property Access Profiles",
+        text: "Every property record logs window pane counts, story heights, screen/track details, water-fed pole (WFP) tap locations, gate codes, and dog warnings. Cleaning crews arrive knowing exact job requirements before unloading their equipment.",
         image: asset(
           "inner-window-cleaning-software-and-crm-one-record-for-every-property.webp",
         ),
         alt: "Door-to-door canvassing in Knockio",
       },
       {
-        title: "Communication History",
-        text: "Every call, text, and email tied to a customer is saved on the record, so when someone asks to move their next clean, the whole back-and-forth is right there instead of buried in a phone.",
+        title: "Dynamic Pipeline for Cleaning Stages",
+        text: "Move accounts through clear stages: Lead, Instant Quote Sent, Scheduled, Weekly/Quarterly Route Active, Post-Construction Cleaning, and Annual Renewal. Separate boards for residential window washing versus high-rise commercial jobs.",
         image: asset(
           "inner-window-cleaning-software-and-crm-communication-history-per-customer.webp",
         ),
         alt: "Lead management in Knockio",
       },
       {
-        title: "Lifetime Activity Tracking",
-        text: "Every status change, note, quote, and payment lands on a running timeline, so you can see the full story of an account at a glance, which helps when a customer questions a charge or asks what you did last time.",
+        title: "Recurring Quarterly Service Schedules",
+        text: "Turn window cleaning into predictable recurring revenue. Set up monthly, quarterly, or semi-annual service cadences that automatically re-populate on your route board so regular cleanings rebook themselves without manual selling.",
         image: asset(
           "inner-window-cleaning-business-software-lifetime-activity-tracking.webp",
         ),
@@ -51,27 +51,27 @@ const capabilityTabs = [
     ],
   },
   {
-    label: "Schedule and Route",
+    label: "Track & Route",
     cards: [
       {
-        title: "Recurring Service Scheduling",
-        text: "Set up monthly, quarterly, or custom recurring cleans, and let the schedule build itself out so the office is not rebooking every account by hand. Renewals stay on the calendar instead of slipping away.",
+        title: "Smarter Route Density Planning",
+        text: "Window cleaning margins are won on route density. Optimize daily schedules for technicians running 8 to 12 residential properties a day—clustering neighborhood stops to eliminate crisscrossing and save fuel across your fleet.",
         image: asset(
           "inner-window-cleaning-software-and-crm-recurring-service-scheduling.webp",
         ),
         alt: "Route planning in Knockio",
       },
       {
-        title: "Tight Route Planning",
-        text: "Plan smarter routes so crews cover more stops in less time, instead of crossing town twice for two houses that sit a few blocks apart.",
+        title: "Auto Territory Creation by ZIP & City",
+        text: "Build canvassing territories automatically from ZIP codes and cities. Target dense residential subdivisions with spring window washing, gutter cleaning, or holiday lighting door-to-door canvassing campaigns.",
         image: asset(
           "inner-window-cleaning-software-and-crm-tight-route-planning.webp",
         ),
         alt: "Territory management in Knockio",
       },
       {
-        title: "Automated Territory Creation",
-        text: "Carve your service area into territories automatically from zip codes and cities, instead of mapping every boundary by hand. As you expand into a new part of town, you can stand up a route in minutes.",
+        title: "Live GPS Tracking & Pin-Drop Verification",
+        text: "Monitor cleaning crews in real time on a live map. Pin-drop verification confirms exactly when a crew arrived and departed a property, providing clear proof of service to commercial property managers and homeowners.",
         image: asset(
           "inner-window-cleaning-software-and-crm-automated-territory-creation-by-zip-code-and-city.webp",
         ),
@@ -80,27 +80,27 @@ const capabilityTabs = [
     ],
   },
   {
-    label: "Keep Crews Accountable",
+    label: "Work Orders & Equipment",
     cards: [
       {
-        title: "Live GPS Tracking With Proximity",
-        text: "Keep Crews Accountable from lead to service with notes, status updates, documents, customer details, and clear next steps.",
+        title: "Window Cleaning Work Orders & Tasks",
+        text: "Build detailed work orders tracking interior/exterior pane counts, screen washing, track detailing, and hard-water stain removal tasks. Cleaners view itemized checklists and special property notes directly on their mobile app.",
         image: asset(
           "inner-window-cleaning-software-and-crm-live-gps-tracking-with-proximity-intelligence.webp",
         ),
         alt: "Job management in Knockio",
       },
       {
-        title: "Photo Annotations",
-        text: "Snap before-and-after photos at each stop, mark them up with notes and arrows on the image, so the customer sees the result and the next crew knows about that problem gutter.",
+        title: "Water-Fed Pole & Equipment Tracking",
+        text: "Track deionized pure-water pole systems, replacement resin beads, squeegee rubbers, and pressure washing rigs across individual service vans so crews never arrive at a jobsite with worn-out equipment.",
         image: asset(
           "inner-window-cleaning-software-and-crm-photo-annotation-for-before-and-after.webp",
         ),
         alt: "Crew dispatching in Knockio",
       },
       {
-        title: "Job Notes and Surveys on Site",
-        text: "Drop detailed notes on every clean and use built-in surveys to capture conditions or extra work spotted, saved straight to the account instead of a paper ticket lost in the van.",
+        title: "Bundled Home-Services Work Orders",
+        text: "Easily combine window cleaning with adjacent exterior services. Create multi-task work orders that include gutter vacuuming, house soft-washing, solar panel cleaning, or seasonal holiday lighting installation under one job.",
         image: asset(
           "inner-window-cleaning-software-and-crm-job-notes-and-surveys-on-site.webp",
         ),
@@ -109,27 +109,56 @@ const capabilityTabs = [
     ],
   },
   {
-    label: "Quote and Get Paid",
+    label: "Documents & Compliance",
     cards: [
       {
-        title: "On-Site Quotes and Estimates",
-        text: "Build estimates with optional line items, so a screen cleaning or a gutter add-on goes on the quote without a second visit. Save templates and pull from a service catalog so pricing stays consistent across every crew.",
+        title: "Pre-Existing Glass Scratch & Defect Waivers",
+        text: "Protect your company from expensive glass-damage claims. Enforce a mandatory Pre-Existing Glass Defect Acknowledgment on estimates—documenting broken thermal seals, hard-water stains, or fabrication debris scratches before washing.",
         image: asset(
           "inner-window-cleaning-business-software-on-site-quotes-and-estimates.webp",
         ),
         alt: "Smart estimates in Knockio",
       },
       {
-        title: "Service Agreement with E-Signs",
-        text: "Send service agreements for digital signature with a documented audit trail, so a recurring plan is locked in with a clean legal record instead of a verbal handshake.",
+        title: "High-Rise OSHA & Rope-Access Checklists",
+        text: "For commercial high-rise window cleaning, store mandatory OSHA fall-protection checklists, roof anchor-point certifications, and IRATA/SPRAT rope-access technician credentials attached directly to the building record.",
         image: asset(
           "inner-window-cleaning-software-and-crm-flexible-payment-collection-with-e-signatures.webp",
         ),
         alt: "Proposals in Knockio",
       },
       {
-        title: "Flexible Payment Collection",
-        text: "Collect one-time and recurring balances through tap to pay, text to pay, card, or ACH, all tied directly to the account through Knockio's own payment processing, so cash flow keeps pace with the route.",
+        title: "Before & After Window Photo Proof",
+        text: "Technicians snap timestamped photos of clean glass, cleared gutters, and spotless sills—automatically saving visual service reports to the customer record to prove job completion and quality.",
+        image: asset(
+          "inner-window-cleaning-software-and-crm-flexible-payment-collection.webp",
+        ),
+        alt: "Digital contracts in Knockio",
+      },
+    ],
+  },
+  {
+    label: "Quote & Get Paid",
+    cards: [
+      {
+        title: "Fast Pane-Count Quoting & Bundling",
+        text: "Build fast, accurate estimates based on pane counts, story heights, and screen cleaning add-ons. Offer bundled packages combining exterior window washing with gutter cleaning and house washing for higher average tickets.",
+        image: asset(
+          "inner-window-cleaning-business-software-on-site-quotes-and-estimates.webp",
+        ),
+        alt: "Smart estimates in Knockio",
+      },
+      {
+        title: "E-Contracts With Liability Hold-Harmless",
+        text: "Send recurring window cleaning agreements that embed mandatory liability hold-harmless waivers—documenting pre-existing window frame or glass conditions with timestamped IP audit trails.",
+        image: asset(
+          "inner-window-cleaning-software-and-crm-flexible-payment-collection-with-e-signatures.webp",
+        ),
+        alt: "Proposals in Knockio",
+      },
+      {
+        title: "Recurring Invoicing",
+        text: "Record the payment method on the account during booking. Automatically trigger recurring invoices the moment a technician marks a quarterly cleaning complete, or collect on site via mobile Text-to-Pay.",
         image: asset(
           "inner-window-cleaning-software-and-crm-flexible-payment-collection.webp",
         ),
@@ -142,37 +171,37 @@ const capabilityTabs = [
 const organizedItems = [
   {
     title: "Live Field Tracking",
-    text: "Monitor crews in real time with GPS tracking and proximity intelligence. It helps with routing, accountability, and giving customers a straight answer about arrival times.",
+    text: "Monitor cleaning crews in real time with GPS tracking. Verify jobsite arrival and departure times with pin-drop proximity to provide proof of service.",
     href: "https://knockio.com/features/gps-tracking-software/",
     icon: "crosshair" as const,
   },
   {
-    title: "Native Automation Builder",
-    text: "Build your own automations without code: text a customer when the crew is on the way, send a review request after a completed clean, or remind an account that their quarterly is due. The office stops chasing the same tasks by hand.",
+    title: "Flow Automation",
+    text: "Automatically handle the daily grind like quarterly cleaning reminders, rain-reschedule notices, and payment receipts so your office runs smoothly.",
     href: "https://knockio.com/features/business-automation-software/",
     icon: "sparkles" as const,
   },
   {
-    title: "Service History and Media",
-    text: "See every account's annotated photos, notes, and survey answers in one view, so the office and the field are looking at the same record instead of asking each other for it.",
+    title: "Media & Measurements",
+    text: "See every property's pane counts, water-fed pole tap locations, before/after photos, and signed glass defect waivers in one centralized view.",
     href: null,
     icon: "ruler" as const,
   },
   {
     title: "E-Contracts",
-    text: "Keep every contract digital, organized, and ready to sign so approved deals never get stuck in paperwork or missed communication.",
+    text: "Send recurring window cleaning agreements and bundled exterior service proposals for digital signature with built-in legal hold-harmless protection.",
     href: "https://knockio.com/e-contracts/",
     icon: "file" as const,
   },
   {
     title: "CRM Integrations",
-    text: "Sync Knockio with Salesforce, HubSpot, Google Calendar, and GHL, and connect thousands of apps through Zapier, FlowChef, and webhooks, keeping every account in one place.",
+    text: "Knockio connects your customer records, invoices, and payments to the tools you use via Zapier and webhooks. It also connects via Zapier and webhooks with Google Calendar, HubSpot, GoHighLevel (GHL), and Salesforce.",
     href: "https://knockio.com/knockio-integrations/",
     icon: "zap" as const,
   },
   {
     title: "Team Communication",
-    text: "Knockio keeps office staff and crews on the same job record through assignees and internal notes, so a reschedule never catches anyone off guard.",
+    text: "Link D2D canvassers, route foremen, and office dispatchers to the same customer record so gate access codes and screen instructions never get missed.",
     href: "https://knockio.com/features/business-texting-and-calling-software/",
     icon: "message" as const,
   },
@@ -408,18 +437,19 @@ const jsonLd = {
             <h1
               class="mb-7 text-[36px] font-bold leading-[44px] text-neutral-950 sm:text-[44px] sm:leading-[54px] xl:text-[58px] xl:leading-[66px] 2xl:text-[64px] 2xl:leading-[74px]"
             >
-              Window Cleaning Business Software
+              Window Cleaning Business Software & CRM Built for Cleaners
             </h1>
             <p
               class="mb-10 max-w-[760px] text-base font-medium leading-8 text-neutral-600 sm:text-lg sm:leading-9"
             >
-              Window cleaning runs on repeat customers and a route that has to
-              stay tight. A first-time quote turns into a quarterly account, the
-              crew works a neighborhood in one efficient loop, and the invoice
-              goes out before they pull away from the curb. Knockio is window
-              cleaning business software and CRM built for owners who need one
-              place to hold customer records, schedule recurring cleans, route
-              crews, send quotes, and collect payment.
+              Window cleaning is a recurring route business where profitability
+              depends on tight neighborhood scheduling, multi-service bundling
+              (gutters, pressure washing), and protecting your business against
+              pre-existing glass defect claims. Knockio connects your
+              door-to-door canvassers, route managers, and cleaning crews into
+              one platform—giving window cleaning businesses the tools to
+              optimize recurring routes, send instant quotes, require glass
+              scratch waivers, and capture recurring invoicing on completion.
             </p>
             <a
               href="#cal-sec"
@@ -436,22 +466,21 @@ const jsonLd = {
             <p
               class="mb-4 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
-              What should window cleaning businesses look for in a CRM and
-              scheduling platform?
+              What should window cleaners look for in a CRM and route
+              platform?
             </p>
             <p
               class="max-w-[760px] text-[15px] leading-7 text-neutral-600 sm:text-base sm:leading-7"
             >
-              A window cleaning business should look for a CRM that carries the
-              customer the whole way, from the first quote to a steady recurring
-              plan. That means full customer and property records, recurring
-              scheduling, route planning, crew tracking, on-site quotes, and
-              payment collection. Knockio handles all of it in one platform. It
-              adds live GPS tracking with proximity intelligence and automated
-              territory creation by zip code and city, so route assignments and
-              job history live in the same record. That depth, plus affordable
-              pricing and support that actually picks up, is what a generic CRM
-              built for another industry leaves out.
+              A true window cleaning business software makes recurring quarterly
+              routes effortless to run while supporting multi-service residential
+              bundling and high-rise OSHA compliance. That means complete
+              property records with pane counts and water-fed pole (WFP) access
+              notes, automated neighborhood canvassing, route density
+              optimization, pre-existing glass defect waivers, and recurring
+              invoicing. Knockio handles all of it in one platform—adding live
+              GPS tracking of cleaning crews so your entire service history
+              lives in a single record.
             </p>
           </div>
 
@@ -479,7 +508,7 @@ const jsonLd = {
         >
           <img
             src={heroImage}
-            alt="What should window cleaning businesses look for in a crm and scheduling platform"
+            alt="What should window cleaners look for in a CRM and route platform"
             width="830"
             height="560"
             decoding="async"

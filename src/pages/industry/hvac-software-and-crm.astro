@@ -22,147 +22,117 @@ const asset = (name: string) => `/assets/cfw/${name}`;
 
 const capabilityTabs = [
   {
-    label: "Manage Jobs",
+    label: "Manage Jobs & History",
     cards: [
       {
-        title: "Customer and Equipment History in One Record",
-        text: "Manage Customers and Jobs during every visit, log outcomes, add notes or voice notes, and move prospects into a clear CRM pipeline.",
-        image: asset(
-          "inner-hvac-software-and-crm-customer-and-equipment-history-in-one-record.webp",
-        ),
-        alt: "Door-to-door canvassing in Knockio",
+        title: "Equipment & Property Service History",
+        text: "Every property record logs condenser model numbers, air handler serial tags, filter sizes, warranty expiration dates, and past repair history. Technicians arrive knowing the home's mechanical background before they step out of the van.",
+        image: asset("inner-hvac-software-and-crm-customer-and-equipment-history-in-one-record.webp"),
+        alt: "Equipment history in Knockio",
       },
       {
-        title: "Dynamic Job Pipeline for HVAC Stages",
-        text: "Move jobs through clear stages like new call, scheduled, dispatched, diagnosed, estimate sent, approved, installed, and invoiced. Statuses are fully customizable for better workflow.",
-        image: asset(
-          "inner-hvac-software-and-crm-dynamic-job-pipeline-for-hvac-stages.webp",
-        ),
-        alt: "Lead management in Knockio",
+        title: "Dynamic Pipeline for HVAC Stages",
+        text: "Move jobs through clear stages: Emergency Dispatch, Diagnosing, Estimate Sent, Proposal Approved, Equipment Ordered, Install Scheduled, Inspection, and Completed. Customize boards for service repairs versus residential changeouts.",
+        image: asset("inner-hvac-software-and-crm-dynamic-job-pipeline-for-hvac-stages.webp"),
+        alt: "Job pipeline in Knockio",
       },
       {
-        title: "Scheduling and Dispatch That Match the Board",
-        text: "Assign service calls and install jobs to the right tech or crew, and keep the office and the field reading the same schedule instead of two versions that drift apart by mid-morning.",
-        image: asset(
-          "inner-hvac-software-and-crm-scheduling-and-dispatch-that-match-the-board-1.webp",
-        ),
-        alt: "Kanban-style sales pipeline in Knockio",
+        title: "Preventive Maintenance Agreements (PMAs)",
+        text: "Turn seasonal spring and fall tune-ups into predictable recurring revenue. Manage PMA memberships, track member-only repair discounts, and process recurring invoicing and let you add state auto-renewal disclosures to your agreements.",
+        image: asset("inner-hvac-software-and-crm-scheduling-and-dispatch-that-match-the-board-1.webp"),
+        alt: "Maintenance agreements in Knockio",
       },
     ],
   },
   {
-    label: "Track the Field",
+    label: "Track & Dispatch",
     cards: [
       {
-        title: "Live GPS Tracking of Every Tech",
-        text: "See where every tech is in real time, so dispatch routes the closest person to the next emergency instead of guessing. Pin drop verification confirms how close a tech was when marking a job worked.",
-        image: asset(
-          "inner-hvac-software-and-crm-live-gps-tracking-of-every-tech.webp",
-        ),
+        title: "Live GPS Tracking & Emergency Dispatch",
+        text: "View every technician's live GPS location on a visual map. Use the live rep map to assign the nearest available tech to an emergency no-heat or no-cool call instantly, reducing windshield time.",
+        image: asset("inner-hvac-software-and-crm-live-gps-tracking-of-every-tech.webp"),
+        alt: "GPS tracking in Knockio",
+      },
+      {
+        title: "Auto Territory Creation by ZIP & City",
+        text: "Carve out service territories or door-to-door replacement canvassing zones automatically by ZIP code and city. Perfect for comfort advisors running seasonal changeout campaigns in aging neighborhoods.",
+        image: asset("inner-hvac-software-and-crm-route-planning-for-service-days.webp"),
+        alt: "Territory creation in Knockio",
+      },
+      {
+        title: "Smarter HVAC Route Planning",
+        text: "Optimize daily routes for maintenance technicians running 6 to 8 seasonal tune-ups a day. Reduce backtracking across town and keep technicians on time for scheduled arrival windows.",
+        image: asset("inner-hvac-software-and-crm-automated-territory-creation-by-zip-code-and-city.webp"),
         alt: "Route planning in Knockio",
       },
-      {
-        title: "Route Planning for Service Days",
-        text: "Plan smarter, tighter routes so your techs cover more calls in a single day, instead of crossing town twice for two jobs that sit only three blocks apart and burning fuel, time, and daylight doing it.",
-        image: asset(
-          "inner-hvac-software-and-crm-route-planning-for-service-days.webp",
-        ),
-        alt: "Territory management in Knockio",
-      },
-      {
-        title: "Automated Territory Creation",
-        text: "If you run maintenance memberships or new-system sales by area, build territories automatically from zip codes and cities instead of mapping every boundary by hand. Most HVAC tools simply do not do this.",
-        image: asset(
-          "inner-hvac-software-and-crm-automated-territory-creation-by-zip-code-and-city.webp",
-        ),
-        alt: "Field activity log in Knockio",
-      },
     ],
   },
   {
-    label: "Work Orders and Parts",
+    label: "Work Orders & Parts",
     cards: [
       {
-        title: "Work Orders With Tasks, Budget, and Materials",
-        text: "Track work orders and parts from lead to service with notes, status updates, documents, customer details, photos, and clear next steps, so every HVAC job stays organized from the first call to the final invoice.",
-        image: asset(
-          "inner-hvac-software-and-crm-work-orders-with-tasks-budget-and-materials.webp",
-        ),
-        alt: "Job management in Knockio",
-      },
-      {
-        title: "Purchase Orders When Parts Run Short",
-        text: "When a part is not in inventory, fire off a purchase order straight from the work order. Knockio tracks products, variants, SKUs, cost, and markup, and flags low stock before you run out mid-job.",
-        image: asset(
-          "inner-hvac-software-and-crm-purchase-orders-when-parts-run-short.webp",
-        ),
-        alt: "Crew dispatching in Knockio",
-      },
-      {
-        title: "Assign Jobs to Crews or Subcontractors",
-        text: "Work orders can go to your own install crew or to a subcontractor, with tasks, notes, photos, and the schedule all attached, so whoever does the work has the full picture.",
-        image: asset(
-          "inner-hvac-software-and-crm-assign-jobs-to-crews-or-subcontractors-1.webp",
-        ),
+        title: "HVAC Work Orders With Material Takeoffs",
+        text: "Build detailed work orders tracking line-set sizes, copper fittings, whip disconnects, pad sizes, and thermostat wire against real job costs. Install crews see exact equipment takeoffs on their mobile app.",
+        image: asset("inner-hvac-software-and-crm-work-orders-with-tasks-budget-and-materials.webp"),
         alt: "Work orders in Knockio",
       },
-    ],
-  },
-  {
-    label: "Documents and Media",
-    cards: [
       {
-        title: "Job Photos and Equipment Media in One Place",
-        text: "Upload before-and-after photos, model and serial shots, and problem images straight to the job. The next tech, the office, and the customer all get the full visual record.",
-        image: asset(
-          "inner-hvac-software-and-crm-job-photos-and-equipment-media-in-one-place.webp",
-        ),
-        alt: "Smart estimates in Knockio",
+        title: "Purchase Orders to Supply Houses",
+        text: "When condensers, coils, or refrigerant cylinders run short, fire off a purchase order for your supplier such as Ferguson, Johnstone Supply, or Lennox. Flag low stock before parts delay an install.",
+        image: asset("inner-hvac-software-and-crm-purchase-orders-when-parts-run-short.webp"),
+        alt: "Purchase orders in Knockio",
       },
       {
-        title: "E-Contracts With Legal Protection",
-        text: "Send service agreements and approvals for digital signature with IP address and timestamp logging built in, so you have a documented trail if a job is ever disputed.",
-        image: asset(
-          "inner-hvac-software-and-crm-e-contracts-with-legal-protection.webp",
-        ),
-        alt: "Proposals in Knockio",
-      },
-      {
-        title: "Centralized File Storage Per Job",
-        text: "Keep warranties, permits, manuals, and invoices attached right to the customer record, not scattered across email and a folder nobody can find when the warranty claim comes up.",
-        image: asset(
-          "inner-hvac-software-and-crm-centralized-file-storage-per-job.webp",
-        ),
-        alt: "Digital contracts in Knockio",
+        title: "EPA 608 Refrigerant Tracking Logs",
+        text: "Stay compliant with federal regulations. Technicians log refrigerant types (R-410A, R-32, R-454B), recovery cylinder numbers, and pressure testing weights directly into the customer's permanent job record.",
+        image: asset("inner-hvac-software-and-crm-assign-jobs-to-crews-or-subcontractors-1.webp"),
+        alt: "EPA tracking in Knockio",
       },
     ],
   },
   {
-    label: "Quote and Get Paid",
+    label: "Documents & Media",
     cards: [
       {
-        title: "Estimates and Service Agreements",
-        text: "Build clean estimates with optional line items, so a customer can add a surge protector or a better filter without a second visit. Save templates for your common repairs and installs, and pull from a product and service catalog so pricing stays consistent across every tech.",
-        image: asset(
-          "inner-hvac-software-and-crm-estimates-and-service-agreements.webp",
-        ),
-        alt: "Video and file storage in Knockio",
+        title: "Before & After Equipment Photo Proof",
+        text: "Technicians snap photos of corroded evaporator coils, burnt contactors, and clean data plates, annotating images with arrows right in the app to justify repair quotes to homeowners and landlords.",
+        image: asset("inner-hvac-software-and-crm-job-photos-and-equipment-media-in-one-place.webp"),
+        alt: "Photo documentation in Knockio",
       },
       {
-        title: "Digital Contracts With E-Signatures",
-        text: "Send an estimate or service agreement the customer reviews and signs from their phone, with a documented audit trail. Change orders work the same way, so a mid-job upsell is logged instead of scribbled on a clipboard.",
-        image: asset(
-          "inner-hvac-software-and-crm-digital-contracts-with-e-signatures.webp",
-        ),
-        alt: "Photo uploads in Knockio",
+        title: "Declined-Recommendation Liability Waivers",
+        text: "When a homeowner declines a recommended system replacement and opts for a temporary patch, capture a digital Declined-Repair Waiver e-signature on site to document that the customer declined the recommended repair.",
+        image: asset("inner-hvac-software-and-crm-e-contracts-with-legal-protection.webp"),
+        alt: "Liability waivers in Knockio",
       },
       {
-        title: "Flexible Payment Collection",
-        text: "Collect deposits, milestone payments, and final balances through tap to pay, text to pay, card, or ACH, all tied directly to the job through Knockio's own payment processing. The tech leaves with the money instead of mailing an invoice and waiting.",
-        image: asset(
-          "inner-hvac-software-and-crm-flexible-payment-collection.webp",
-        ),
-        alt: "Service reports in Knockio",
+        title: "Manual J Load Calcs & Inspection Files",
+        text: "Store Manual J sizing calculations, AHRI matched system certificates, municipal mechanical permits, and manufacturer warranty registrations attached directly to the job record for easy retrieval.",
+        image: asset("inner-hvac-software-and-crm-centralized-file-storage-per-job.webp"),
+        alt: "File storage in Knockio",
+      },
+    ],
+  },
+  {
+    label: "Quote & Get Paid",
+    cards: [
+      {
+        title: "Good / Better / Best Tiered Proposals",
+        text: "Build interactive Good/Better/Best estimates comparing 14 SEER2 base systems against variable-speed heat pumps. Let homeowners select optional add-ons like UV purifiers or smart thermostats from their phone.",
+        image: asset("inner-hvac-software-and-crm-estimates-and-service-agreements.webp"),
+        alt: "Tiered proposals in Knockio",
+      },
+      {
+        title: "Consumer Financing Documents",
+        text: "Present monthly payment framing first. Present the monthly financing you offer, then import and e-sign the lender agreement (GreenSky, Service Finance, Wisetack, and the like) right on the job so the paperwork lives with the record.",
+        image: asset("inner-hvac-software-and-crm-digital-contracts-with-e-signatures.webp"),
+        alt: "Financing documents in Knockio",
+      },
+      {
+        title: "Collect on Site",
+        text: "Collect diagnostic fees, tune-up balances, and installation deposits the moment the tool bag is packed using Text-to-Pay, credit card readers, or ACH processing in the field.",
+        image: asset("inner-hvac-software-and-crm-flexible-payment-collection.webp"),
+        alt: "Payment collection in Knockio",
       },
     ],
   },
@@ -171,37 +141,37 @@ const capabilityTabs = [
 const organizedItems = [
   {
     title: "Live Field Tracking",
-    text: "Monitor techs in real time with GPS tracking. It helps with dispatch, accountability, and knowing exactly who is on which call right now.",
+    text: "Monitor technicians in real time with GPS tracking. Use the live rep map to assign the nearest available van to emergency no-heat or no-cool calls.",
     href: "https://knockio.com/features/gps-tracking-software/",
     icon: "crosshair" as const,
   },
   {
     title: "Flow Automation",
-    text: "Automatically handle the repetitive office work like maintenance reminders, follow ups, and appointment confirmations, so a customer due for a tune-up does not slip through the cracks.",
+    text: "Automatically handle the daily grind like seasonal tune-up reminders, booking confirmations, and invoice follow-ups so your dispatchers can focus on incoming calls.",
     href: "https://knockio.com/features/business-automation-software/",
     icon: "sparkles" as const,
   },
   {
     title: "Media and Measurements",
-    text: "See every job's photos, equipment details, and service notes in one view, so the office and the field are looking at the same record instead of asking each other for it.",
+    text: "See every job's equipment photos, data plates, Manual J sizing, and refrigerant logs in one view, so technicians arrive prepared for the repair.",
     href: null,
     icon: "ruler" as const,
   },
   {
     title: "E-Contracts",
-    text: "Build, send, review, and sign contracts in one workflow so approved deals move ahead without paperwork or repeated follow-up delays.",
+    text: "Send installation agreements and Declined-Recommendation Waivers for digital signature with IP timestamp logging to protect your business against disputes.",
     href: "https://knockio.com/e-contracts/",
     icon: "file" as const,
   },
   {
     title: "CRM Integrations",
-    text: "Knockio links your HVAC customer and dispatch data to Salesforce, HubSpot, Google Calendar, and GHL, with thousands more apps through Zapier, FlowChef, and webhooks.",
+    text: "Knockio connects your customer records, invoices, and payments to the tools you use via Zapier and webhooks. It also connects via Zapier and webhooks with Google Calendar, HubSpot, GoHighLevel (GHL), and Salesforce.",
     href: "https://knockio.com/knockio-integrations/",
     icon: "zap" as const,
   },
   {
     title: "Team Communication",
-    text: "Knockio connects dispatchers, techs, and office staff to every job through shared assignees and internal notes, so nothing gets lost between shifts.",
+    text: "Link comfort advisors, installation crews, and dispatchers to the same job record through assignees and notes, so install specs never get lost.",
     href: "https://knockio.com/features/business-texting-and-calling-software/",
     icon: "message" as const,
   },
@@ -435,17 +405,12 @@ const jsonLd = {
             <h1
               class="mb-7 text-[36px] font-bold leading-[44px] text-neutral-950 sm:text-[44px] sm:leading-[54px] xl:text-[58px] xl:leading-[66px] 2xl:text-[64px] 2xl:leading-[74px]"
             >
-              HVAC Software for Service &amp; Install
+              HVAC Software &amp; CRM Built for Service and Installation Contractors
             </h1>
             <p
               class="mb-10 max-w-[760px] text-base font-medium leading-8 text-neutral-600 sm:text-lg sm:leading-9"
             >
-              Knockio is HVAC software and CRM built for contractors who need
-              one place to book calls, dispatch techs, hold customer and
-              equipment history, build estimates, schedule installs, and collect
-              payment in the field. No more working off a whiteboard, a text
-              thread, and a paper invoice that never make it back to the same
-              desk.
+              HVAC contractors live in two different worlds: emergency no-cool repairs that demand instant GPS dispatching, and planned system replacements requiring Good/Better/Best proposals and Manual J sizing. Knockio connects your field technicians and comfort advisors directly to your office—giving heating and cooling contractors one platform to schedule calls, build tiered estimates, manage maintenance agreements, and collect on site.
             </p>
             <a
               href="#cal-sec"
@@ -462,24 +427,13 @@ const jsonLd = {
             <p
               class="mb-4 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
-              What should HVAC contractors look for in a CRM and service
+              What should HVAC contractors look for in a CRM and field service
               platform?
             </p>
             <p
               class="max-w-[760px] text-[15px] leading-7 text-neutral-600 sm:text-base sm:leading-7"
             >
-              An HVAC contractor should look for a CRM that carries the whole
-              job, from the booked call to the paid invoice. That means customer
-              and equipment records, scheduling and dispatch, technician
-              tracking, estimates and service agreements, work orders with
-              parts, e-signed approvals, and on-site payment. Knockio handles
-              all of it in one platform. It also adds live GPS tracking of techs
-              and full job history per address, so the next visit starts with
-              everything the last tech already learned. That depth of service
-              record, plus affordable pricing and support that actually knows
-              the trade, is what a generic CRM built for another industry leaves
-              out, and it is what makes an HVAC CRM for contractors worth
-              keeping in the truck.
+              A true HVAC contractor software carries both fast service calls and multi-day installations. That means complete property records with equipment serial numbers, drag-and-drop dispatching, interactive Good/Better/Best proposals, EPA Section 608 refrigerant tracking, automated Preventive Maintenance Agreements (PMAs), and mobile billing. Knockio handles all of it in one platform—adding live GPS tracking of technicians and automated territory creation so your service history lives in a single record.
             </p>
           </div>
 
@@ -526,17 +480,12 @@ const jsonLd = {
           <h2
             class="mb-5 text-center text-[34px] font-bold leading-[42px] text-neutral-950 sm:text-4xl sm:leading-[48px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
           >
-            Why HVAC Contractors Choose Knockio
+            Why HVAC Teams Choose Knockio
           </h2>
           <p
             class="mx-auto max-w-[960px] text-base font-normal leading-8 text-neutral-600 sm:text-lg sm:leading-9"
           >
-            Knockio helps HVAC companies manage customers, equipment history,
-            scheduling, dispatch, techs, estimates, parts, invoices, and
-            payments. From the first service call to the signed-off install, it
-            all sits in one connected platform. Owners run the board and the
-            field without losing track of who is where, what was done, and what
-            still needs billing.
+            Knockio is HVAC software and CRM built for contractors who need one place to hold customer records, dispatch technicians, track equipment history, build Good/Better/Best estimates, manage maintenance agreements, and collect payments. No more switching between calendar apps and standalone quoting tools.
           </p>
         </div>
 
