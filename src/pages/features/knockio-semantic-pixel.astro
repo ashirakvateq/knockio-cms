@@ -1,0 +1,1565 @@
+---
+import LandingPagesLayout from '../../layouts/LandingPagesLayout.astro';
+import CalendarLoadingCopy from '../../components/CalendarLoadingCopy.astro';
+import '../../styles/knockio-semantic-pixel.css';
+import {
+  ArrowRight,
+  CalendarDays,
+  CalendarX,
+  CheckCircle,
+  CheckCircle2,
+  FileSignature,
+  Minus,
+  Plus,
+} from 'lucide-astro';
+import {
+  stormFaqs,
+  stormTestimonial,
+  stormTrustLogos,
+} from '../../data/stormRestoration';
+import { stats } from '../../data/canvassingApp';
+
+const title = 'Knockio Semantic Pixel | Pin-Drop Verification for Field Teams';
+const description =
+  'Knockio Semantic Pixel records how far a rep was from the property when they logged a knock. Distance, status, and the job record in one stamp.';
+
+const asset = (name: string) => `/assets/cfw/${name}`;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://knockio.com/#organization',
+      name: 'Knockio',
+      url: 'https://knockio.com/',
+      logo: 'https://knockio.com/assets/cfw/knockio-logo.webp',
+      sameAs: [
+        'https://www.facebook.com/knockioapp',
+        'https://www.linkedin.com/company/knockio',
+        'https://x.com/knockioapp',
+        'https://www.youtube.com/@knockioapp',
+      ],
+    },
+    {
+      '@type': 'WebPage',
+      '@id': 'https://knockio.com/features/knockio-semantic-pixel/#webpage',
+      url: 'https://knockio.com/features/knockio-semantic-pixel/',
+      name: title,
+      description,
+      isPartOf: { '@id': 'https://knockio.com/#website' },
+      inLanguage: 'en-US',
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://knockio.com/features/knockio-semantic-pixel/#faq',
+      mainEntity: stormFaqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+      })),
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://knockio.com/features/knockio-semantic-pixel/#breadcrumb',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://knockio.com/',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Features',
+          item: 'https://knockio.com/features/',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Knockio Semantic Pixel',
+          item: 'https://knockio.com/features/knockio-semantic-pixel/',
+        },
+      ],
+    },
+  ],
+};
+---
+
+<LandingPagesLayout
+  title={title}
+  description={description}
+  ogImage={asset('inner-gps-tracking-hero.webp')}
+  bodyClass="storm-page pixel-page"
+  jsonLd={jsonLd}
+  noHeader
+  preloadImages={[
+    { href: asset('inner-gps-tracking-hero.webp') },
+    { href: '/assets/cfw/green-name-640.webp' },
+  ]}
+>
+  <section class="storm-hero">
+    <div
+      class="hero-section grid items-center gap-10 pt-[50px] lg:grid-cols-[0.85fr_1.15fr]"
+    >
+      <div class="storm-reveal max-lg:text-center pb-[20px]">
+        <a href="/" aria-label="Knockio home" class="mb-6 inline-block">
+          <img
+            src="/assets/cfw/green-name-640.webp"
+            alt="Knockio"
+            width="1280"
+            height="193"
+            class="h-auto w-56 sm:w-72 xl:w-80"
+            decoding="async"
+          />
+        </a>
+
+        <h1 class="storm-hero-heading">
+          Know If They Were At The Door<br class="hidden sm:block" />
+          <span class="text-primary-600">Not Just That They Dropped A Pin</span>
+        </h1>
+
+        <p class="storm-hero-subtitle">
+          Knockio Semantic Pixel records how far a rep's device was from the
+          property the moment they logged a knock. Distance, status, and the job
+          record in one stamp — so windshield knocks are obvious, not buried in
+          a report.
+        </p>
+
+        <div
+          class="storm-reveal-cta mt-8 flex flex-col gap-3 sm:flex-row max-lg:justify-center"
+        >
+          <a
+            href="#landing-pricing"
+            class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary-500 px-6 py-4 text-base font-bold text-white shadow-lg shadow-primary-500/25 transition hover:bg-primary-600 hover:shadow-primary-500/35"
+          >
+            Get Started
+            <ArrowRight size={18} aria-hidden="true" />
+          </a>
+          <a
+            href="#landing-calender"
+            class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary-500 px-6 py-4 text-base font-bold text-white shadow-lg shadow-primary-500/25 transition hover:bg-primary-600 hover:shadow-primary-500/35"
+          >
+            Book a Free Demo
+            <ArrowRight size={18} aria-hidden="true" />
+          </a>
+        </div>
+
+        <ul
+          class="storm-hero-checklist mt-7 space-y-3 text-left max-lg:mx-auto max-lg:max-w-xl"
+        >
+          <li class="flex items-start gap-3">
+            <CheckCircle2
+              class="mt-1 shrink-0 text-primary-500"
+              size={20}
+              aria-hidden="true"
+            />
+            <span
+              >No contract, cancel anytime or book a demo if you'd like a
+              walkthrough first.</span
+            >
+          </li>
+        </ul>
+
+        <div class="mt-7 flex flex-wrap gap-4 max-lg:justify-center">
+          <a
+            href="https://play.google.com/store/apps/details?id=com.knockio.crm&hl=en"
+            target="_blank"
+            rel="noopener"
+            aria-label="Download Knockio on Google Play"
+            class="shadow-md transition hover:opacity-90"
+          >
+            <img
+              src="/assets/cfw/google-play-button.webp"
+              alt="Get it on Google Play"
+              width="520"
+              height="154"
+              class="h-auto w-36 xl:w-44 lg:w-[145px]"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a
+            href="https://apps.apple.com/us/app/knockio-field-service-crm/id6756485440"
+            target="_blank"
+            rel="noopener"
+            aria-label="Download Knockio on the App Store"
+            class="shadow-md transition hover:opacity-90"
+          >
+            <img
+              src="/assets/cfw/apple-store-button.webp"
+              alt="Download on the App Store"
+              width="520"
+              height="154"
+              class="h-auto w-36 xl:w-44 lg:w-[145px]"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="storm-reveal storm-hero-img-wrap self-end"
+        style="--reveal-delay: 120ms"
+      >
+        <img
+          src={asset('inner-gps-tracking-hero.webp')}
+          alt="Knockio Semantic Pixel showing pin-drop distance from the property on a live field map"
+          width="802"
+          height="638"
+          fetchpriority="high"
+          loading="eager"
+          decoding="async"
+          class="mx-auto h-auto w-full max-w-5xl"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="trusted-heading" class="storm-trust-section">
+    <div class="my-container text-center">
+      <h2 id="trusted-heading">
+        Trusted by 1,000+ field sales teams from Roofing and Solar to Pest
+        Control, HVAC, and beyond.
+      </h2>
+      <div class="storm-trust-logos">
+        {
+          stormTrustLogos.map((logo) => (
+            <img
+              class="storm-trust-logo"
+              src={logo.src}
+              alt={logo.alt}
+              width="139"
+              height="56"
+              loading="lazy"
+              decoding="async"
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-section lg:py-36">
+    <div class="my-container">
+          <h2 class="section-heading">Why Field Teams Choose Semantic Pixel</h2>
+      <div class="stats-row grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+        {
+          stats.map(([value, label]) => (
+            <article class="stat-blurb">
+              <div>
+                <h4>
+                  <span>{value}</span>
+                </h4>
+                <p>{label}</p>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="features-section">
+    <div class="my-container">
+      <h2 class="section-heading">
+        Pin-Drop Verification Built Into The Same Platform
+      </h2>
+      <div class="features-grid">
+        <article class="feature-card">
+          <img
+            src={asset(
+              'inner-gps-tracking-verify-field-activity-not-just-claims-honest-reporting.webp',
+            )}
+            alt="Knockio map showing pin-drop distance from each property"
+            width="1428"
+            height="772"
+            class="feature-img"
+            loading="lazy"
+            decoding="async"
+          />
+          <h3 class="feature-heading">Distance On Every Pin</h3>
+          <p class="feature-desc">
+            When a representative creates a property pin, Knockio records how far
+            the device was from the address at that moment. A windshield knock is
+            obvious instead of buried in a report.
+          </p>
+        </article>
+        <article class="feature-card">
+          <img
+            src={asset(
+              'inner-gps-tracking-know-where-your-team-is-right-now-real-time-visibility.webp',
+            )}
+            alt="Live GPS tracking of field reps on the Knockio map"
+            width="1428"
+            height="773"
+            class="feature-img"
+            loading="lazy"
+            decoding="async"
+          />
+          <h3 class="feature-heading">Live Location, Same Map</h3>
+          <p class="feature-desc">
+            Watch pins populate in real time and see each rep on the map, with
+            movement history you can review by day or range. Semantic Pixel sits
+            on the same view as the work.
+          </p>
+        </article>
+        <article class="feature-card">
+          <img
+            src={asset(
+              'inner-gps-tracking-built-for-field-first-businesses-connected-to-the-job.webp',
+            )}
+            alt="Location data attached to the Knockio job record"
+            width="1428"
+            height="772"
+            class="feature-img"
+            loading="lazy"
+            decoding="async"
+          />
+          <h3 class="feature-heading">Tied To The Job Record</h3>
+          <p class="feature-desc">
+            Location data sits on the actual lead and job records, not floating
+            in a separate tracking app. The verified pin carries through estimate,
+            work order, and invoice.
+          </p>
+        </article>
+        <article class="feature-card">
+          <img
+            src={asset(
+              'inner-gps-tracking-verify-field-activity-not-just-claims-accountability.webp',
+            )}
+            alt="Field activity verification for honest reporting"
+            width="1428"
+            height="772"
+            class="feature-img"
+            loading="lazy"
+            decoding="async"
+          />
+          <h3 class="feature-heading">Honest Field Reporting</h3>
+          <p class="feature-desc">
+            Managers review field records, spot location discrepancies, and keep
+            territory data consistent — without calling every rep to ask if they
+            were actually there.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="storm-testimonial-section">
+    <div class="my-container">
+      <div class="mt-5 mb-10 flex justify-center">
+        <a
+          href="#landing-calender"
+          class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary-500 px-7 py-4 font-bold text-white shadow-lg shadow-primary-500/25 transition hover:bg-primary-600 hover:shadow-primary-500/35"
+        >
+          Book a Free Demo
+          <ArrowRight size={18} aria-hidden="true" />
+        </a>
+      </div>
+      <div class="storm-testimonial-quote-wrap mt-8">
+        <p>
+          &ldquo;{stormTestimonial.quote}&rdquo;
+        </p>
+      </div>
+      <div class="storm-testimonial-author">
+        <img
+          src={stormTestimonial.image}
+          alt=""
+          width="80"
+          loading="lazy"
+          decoding="async"
+        />
+        <div>
+          <h6>{stormTestimonial.name}</h6>
+          <p>{stormTestimonial.role}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="kn-cycle mt-8">
+    <div class="kn-wrap">
+      <h2 class="kn-title">
+        Not just a pin. The full <em>verification trail</em>.
+      </h2>
+      <div class="kn-stages">
+        <article class="kn-stage">
+          <h3 class="kn-stage-name">Drop</h3>
+          <ul>
+            <li>
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+              Log a knock, callback, or sale at the door
+            </li>
+            <li>
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+              Custom pin status, color, and required fields
+            </li>
+            <li>
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+              Notes, photos, and contact on the same pin
+            </li>
+            <li>
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+              Under 10 seconds from the porch
+            </li>
+          </ul>
+        </article>
+        <article class="kn-stage">
+          <h3 class="kn-stage-name">Stamp</h3>
+          <ul>
+            <li>
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+              Semantic Pixel records device-to-property distance
+            </li>
+            <li>
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+              Timestamped against the exact pin drop
+            </li>
+            <li>
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+              Lives on the lead, not a separate tracking app
+            </li>
+            <li>
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+              No extra tap from the rep
+            </li>
+          </ul>
+        </article>
+        <article class="kn-stage">
+          <h3 class="kn-stage-name">Review</h3>
+          <ul>
+            <li>
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+              See who was at the door vs. in the car
+            </li>
+            <li>
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+              Live map plus movement history
+            </li>
+            <li>
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+              Fair performance reviews from real field data
+            </li>
+            <li>
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+              Territory coverage you can actually trust
+            </li>
+          </ul>
+        </article>
+        <article class="kn-stage">
+          <h3 class="kn-stage-name">Keep</h3>
+          <ul>
+            <li>
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+              Verified pin stays on the job forever
+            </li>
+            <li>
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+              Estimate, work order, and invoice on the same record
+            </li>
+            <li>
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+              Data stays when a rep leaves
+            </li>
+            <li>
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+              One trail from knock to payment
+            </li>
+          </ul>
+        </article>
+      </div>
+
+      <h3 class="kn-checklist-head">
+        Stop guessing from the office. Here's what <em>Semantic Pixel</em> puts on every knock:
+      </h3>
+
+      <div class="kn-lower">
+        <div class="kn-checklist">
+          <ul>
+            <li>
+              <CheckCircle class="hoverable-check mt-1 shrink-0 text-primary-500" size={18} aria-hidden="true" />
+              Device-to-property distance stamped at pin drop
+            </li>
+            <li>
+              <CheckCircle class="hoverable-check mt-1 shrink-0 text-primary-500" size={18} aria-hidden="true" />
+              Live GPS of every rep on the same map as the pins
+            </li>
+            <li>
+              <CheckCircle class="hoverable-check mt-1 shrink-0 text-primary-500" size={18} aria-hidden="true" />
+              Custom pin statuses with required fields at the door
+            </li>
+            <li>
+              <CheckCircle class="hoverable-check mt-1 shrink-0 text-primary-500" size={18} aria-hidden="true" />
+              Photos, notes, and contact tied to the verified pin
+            </li>
+            <li>
+              <CheckCircle class="hoverable-check mt-1 shrink-0 text-primary-500" size={18} aria-hidden="true" />
+              Movement history by day or date range
+            </li>
+            <li>
+              <CheckCircle class="hoverable-check mt-1 shrink-0 text-primary-500" size={18} aria-hidden="true" />
+              Verified activity that follows the job into estimates and invoices
+            </li>
+            <li>
+              <CheckCircle class="hoverable-check mt-1 shrink-0 text-primary-500" size={18} aria-hidden="true" />
+              Territory reporting that matches what actually happened in the field
+            </li>
+            <li>
+              <CheckCircle class="hoverable-check mt-1 shrink-0 text-primary-500" size={18} aria-hidden="true" />
+              No extra tracking app, no extra data entry
+            </li>
+            <li>
+              <CheckCircle class="hoverable-check mt-1 shrink-0 text-primary-500" size={18} aria-hidden="true" />
+              Field records that stay in your account when a rep moves on
+            </li>
+          </ul>
+        </div>
+
+        <figure class="kn-visual">
+          <img
+            src={asset('canvassing-asset-2.webp')}
+            alt="Knockio field app showing live tracking and pin-drop verification"
+            width="751"
+            height="751"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+      </div>
+      <div class="mt-9 flex justify-center">
+        <a
+          href="#landing-calender"
+          class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary-500 px-7 py-4 font-bold text-white shadow-lg shadow-primary-500/25 transition hover:bg-primary-600 hover:shadow-primary-500/35"
+          >Book a Free Demo<svg
+            xmlns="http://www.w3.org/2000/svg"
+            stroke-width="2"
+            width="18"
+            height="18"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            fill="none"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            class="lucide lucide-arrow-right"
+            ><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg
+          ></a
+        >
+      </div>
+    </div>
+  </section>
+
+  <section class="onboarding-section">
+    <div class="container">
+      <div class="editorial-header">
+        <!-- Headline Column -->
+        <div class="headline-column">
+          <!-- <h2 class="onboarding-main-headline">
+              Switching<br />
+              <span class="headline-sub">to Knockio is</span><br />
+              <span class="headline-accent">Easy.</span>
+            </h2> -->
+          <h2 class="onboarding-main-headline">
+            Switching<br />
+            to <span class="headline-accent">Knockio</span> is <br />
+            <span class="headline-accent">Easy.</span>
+          </h2>
+        </div>
+
+        <!-- Intro / Pull-Quote Column -->
+        <div class="intro-column">
+          <p class="onboarding-pull-quote">
+            Most canvassing apps stop at a pin on a map. Semantic Pixel is the
+            part they leave out: how far the rep actually was from the house when
+            they logged it.
+            <br /><br />
+            <span class="pull-quote-strong"
+              >Distance, status, and the job record. One stamp. No extra app.</span
+            >
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <!-- Process Subhead -->
+        <h3 class="process-subhead">Here's how it works</h3>
+
+        <!-- 3-Column Grid for Steps -->
+        <div class="steps-grid">
+          <!-- Step 01 -->
+          <div class="step-card">
+            <div class="step-number">01</div>
+            <h4 class="step-title">Guided Onboarding</h4>
+            <p class="step-description">
+              Most teams are running live campaigns within the hour. Territory
+              setup, rep accounts, and first campaign included.
+              <span class="step-description-highlight"
+                >No consultant needed.</span
+              >
+            </p>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="step-card">
+            <div class="step-number">02</div>
+            <h4 class="step-title">Import Your Data</h4>
+            <p class="step-description">
+              Bring over lead lists, pre-knocked address data, and customer
+              records via CSV or direct migration. Your history doesn't
+              disappear when you switch, and it
+              <span class="step-italic">never</span> gets held hostage.
+            </p>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="step-card">
+            <div class="step-number">03</div>
+            <h4 class="step-title">Handshake Support</h4>
+            <p class="step-description">
+              Get help from the people who build and run Knockio. No chatbots,
+              no ticket queues, no handoffs between tiers. You talk to a person
+              who can actually fix it. Most issues resolved the same day.
+              <span class="step-description-highlight"
+                >Most issues resolved same day.</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="calender-section py-24 lg:py-36">
+    <div class="my-container">
+      <h2 class="section-heading">See Semantic Pixel On A Live Demo</h2>
+      <p class="section-copy">
+        No pitch deck. No scripted walkthrough. No pressure. A live session
+        built around your vertical and team size, so you can see exactly how it
+        handles your workflow before you decide.
+      </p>
+
+      <div class="calender-wrapper mt-8">
+        <div class="calender-wrapper-div">
+          <CalendarDays size={28} class="text-[#53aa38]" aria-hidden="true" />
+          <span>Month to Month</span>
+        </div>
+        <div class="calender-wrapper-div">
+          <FileSignature size={28} class="text-[#53aa38]" aria-hidden="true" />
+          <span>No contract</span>
+        </div>
+        <div class="calender-wrapper-div">
+          <CalendarX size={28} class="text-[#53aa38]" aria-hidden="true" />
+          <span>Cancel anytime</span>
+        </div>
+      </div>
+
+      <div
+        id="landing-calender"
+        class="cal-shell mx-auto mt-12 max-w-5xl p-2 sm:p-3 lg:p-4"
+      >
+        <CalendarLoadingCopy />
+        <div
+          id="my-cal-inline"
+          class="cal-placeholder grid place-items-center overflow-hidden"
+          aria-live="polite"
+          aria-busy="false"
+          aria-label="Book a demo"
+          role="region"
+        >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    id="landing-pricing"
+    class="pricing-section relative z-10 py-20 max-xl:py-16 max-lg:py-14"
+  >
+    <div class="my-container">
+      <div class="mb-10 text-center max-md:mb-7">
+        <h2
+          class="mx-auto mb-4 max-w-3xl text-[56px] font-bold leading-tight text-neutral-900 max-2xl:text-5xl max-xl:text-4xl max-md:text-3xl"
+        >
+          Straightforward pricing. No surprises.
+        </h2><p
+          class="mx-auto max-w-2xl text-lg text-neutral-600 max-xl:text-base"
+        >
+          Choose the tools your team needs today, or combine your entire
+          field-sales and service operation in one connected platform.
+        </p>
+      </div><div class="mb-12 flex flex-wrap items-center justify-center gap-3">
+        <div
+          class="flex items-center rounded-full border border-solid border-neutral-200 px-5 py-2.5 text-sm text-neutral-900"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            stroke-width="2"
+            width="24"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            fill="none"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            class="lucide lucide-check mr-2 size-4 shrink-0 text-primary-500"
+            ><path d="M20 6 9 17l-5-5"></path></svg
+          ><span>Pro-rated billing</span>
+        </div><div
+          class="flex items-center rounded-full border border-solid border-neutral-200 px-5 py-2.5 text-sm text-neutral-900"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            stroke-width="2"
+            width="24"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            fill="none"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            class="lucide lucide-check mr-2 size-4 shrink-0 text-primary-500"
+            ><path d="M20 6 9 17l-5-5"></path></svg
+          ><span>No setup fee</span>
+        </div><div
+          class="flex items-center rounded-full border border-solid border-neutral-200 px-5 py-2.5 text-sm text-neutral-900"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            stroke-width="2"
+            width="24"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            fill="none"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            class="lucide lucide-check mr-2 size-4 shrink-0 text-primary-500"
+            ><path d="M20 6 9 17l-5-5"></path></svg
+          ><span>No contracts</span>
+        </div><a
+          href="https://knockio.com/pricing/#pricing-compare"
+          class="flex items-center rounded-full border border-solid border-primary-200 px-5 py-2.5 text-sm font-medium text-primary-600 transition-colors hover:bg-primary-50"
+          >Compare plans in detail<svg
+            xmlns="http://www.w3.org/2000/svg"
+            stroke-width="2"
+            width="24"
+            height="24"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            fill="none"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            class="lucide lucide-arrow-down ml-2 size-3"
+            ><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg
+          ></a
+        >
+      </div><div
+        class="mx-auto grid w-full max-w-[1200px] grid-cols-1 items-stretch justify-center gap-7 lg:grid-cols-3"
+      >
+        <div
+          class="kio-pricing-card flex flex-col rounded-3xl border border-solid border-neutral-200 bg-white p-7 transition duration-150 ease-out hover:-translate-y-1 hover:shadow-xl max-md:p-6"
+        >
+          <div class="mb-3 flex items-start justify-between gap-4">
+            <div class="flex items-center gap-4">
+              <span
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke-width="2"
+                  width="24"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  class="lucide lucide-map size-5"
+                  ><path
+                    d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"
+                  ></path><path d="M15 5.764v15"></path><path d="M9 3.236v15"
+                  ></path></svg
+                ></span
+              ><div>
+                <p
+                  class="mb-1 text-xs font-bold uppercase tracking-wider text-blue-600"
+                >
+                  Field Sales
+                </p><h3
+                  class="text-3xl font-bold text-neutral-900 max-xl:text-2xl"
+                >
+                  Prospect
+                </h3>
+              </div>
+            </div><div class="kio-plan-info">
+              <button
+                type="button"
+                class="kio-plan-info-button"
+                aria-label="View Prospect plan details"
+                aria-expanded="false"
+                aria-controls="prospect-plan-tooltip"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke-width="2"
+                  width="24"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  class="lucide lucide-eye size-4"
+                  ><path
+                    d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"
+                  ></path><circle cx="12" cy="12" r="3"></circle></svg
+                ></button
+              ><div
+                id="prospect-plan-tooltip"
+                class="kio-plan-tooltip"
+                role="tooltip"
+                aria-hidden="true"
+              >
+                Everything your reps need to knock doors, log, and close.
+                Unlimited territories, live tracking, route planning, lead
+                capture, and digital contracts from the first door to the signed
+                agreement.
+              </div>
+            </div>
+          </div><div class="mb-5 min-h-[76px]">
+            <p class="text-sm font-semibold leading-6 text-neutral-900">
+              Who it’s for:
+            </p><p class="text-sm leading-6 text-neutral-600">
+              For field sales teams running door-to-door campaigns.
+            </p>
+          </div><div class="mb-1 flex flex-wrap items-end text-neutral-900">
+            <span class="text-5xl font-bold max-md:text-4xl">$20</span><span
+              class="mb-1 ml-2 text-base font-normal text-neutral-500"
+              >/user/mo</span
+            >
+          </div><p class="mb-1 text-sm font-semibold text-primary-600">
+            5+ users
+          </p><p class="mb-6 text-sm text-neutral-500">
+            $25/user/mo for 1–4 users
+          </p><button
+            type="button"
+            data-checkout-package="4"
+            data-package="4"
+            aria-label="Start Prospect plan"
+            class="knockio-checkout-btn mb-8 w-full cursor-pointer rounded-xl border border-solid border-primary-500 bg-white px-5 py-3.5 font-semibold text-primary-500 transition-colors duration-200 hover:bg-primary-500 hover:text-white"
+            >Start Prospect</button
+          ><h4 class="mb-4 text-lg font-semibold text-neutral-900">
+            Features included:
+          </h4><ul class="flex-1 space-y-3 text-neutral-700">
+            <li class="flex items-start text-[15px] leading-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="2"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="lucide lucide-check mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                ><path d="M20 6 9 17l-5-5"></path></svg
+              ><span>Unlimited Territories &amp; Campaigns</span>
+            </li><li class="flex items-start text-[15px] leading-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="2"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="lucide lucide-check mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                ><path d="M20 6 9 17l-5-5"></path></svg
+              ><span>Route Planning &amp; Optimization</span>
+            </li><li class="flex items-start text-[15px] leading-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="2"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="lucide lucide-check mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                ><path d="M20 6 9 17l-5-5"></path></svg
+              ><span>Pre-Knocked Data (15¢ per address)</span>
+            </li><li class="flex items-start text-[15px] leading-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="2"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="lucide lucide-check mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                ><path d="M20 6 9 17l-5-5"></path></svg
+              ><span>Real-time Rep Tracking</span>
+            </li><li class="flex items-start text-[15px] leading-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="2"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="lucide lucide-check mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                ><path d="M20 6 9 17l-5-5"></path></svg
+              ><span>Presentations</span>
+            </li><li class="flex items-start text-[15px] leading-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="2"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="lucide lucide-check mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                ><path d="M20 6 9 17l-5-5"></path></svg
+              ><span>Digital Contracts &amp; E-Signature</span>
+            </li><li class="flex items-start text-[15px] leading-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="2"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="lucide lucide-check mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                ><path d="M20 6 9 17l-5-5"></path></svg
+              ><span>Native Automation Builder</span>
+            </li><li class="flex items-start text-[15px] leading-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="2"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="lucide lucide-check mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                ><path d="M20 6 9 17l-5-5"></path></svg
+              ><span>Task Management &amp; Appointment Scheduling</span>
+            </li><li class="flex items-start text-[15px] leading-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="2"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="lucide lucide-check mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                ><path d="M20 6 9 17l-5-5"></path></svg
+              ><span>Zapier &amp; FlowChef Integrations</span>
+            </li><li class="flex items-start text-[15px] leading-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="2"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="lucide lucide-check mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                ><path d="M20 6 9 17l-5-5"></path></svg
+              ><span>Free Onboarding &amp; Support</span>
+            </li><li class="flex items-start text-[15px] leading-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="2"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="lucide lucide-phone mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                ><path
+                  d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"
+                ></path></svg
+              ><span>Engage Add-On ($15/number/mo)</span>
+            </li>
+          </ul>
+        </div><div
+          class="kio-pricing-card relative flex flex-col rounded-3xl border border-solid border-[#0f172a] bg-[#0f172a] p-7 shadow-xl shadow-neutral-900/10 transition duration-150 ease-out hover:-translate-y-1 max-md:p-6"
+        >
+          <div
+            class="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-solid border-neutral-300 bg-primary-500 px-7 py-1.5 text-sm font-semibold text-white"
+          >
+            Recommended
+          </div><div class="mb-3 mt-2 flex items-start justify-between gap-4">
+            <div class="flex items-center gap-4">
+              <span
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary-500/15 text-primary-400"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke-width="2"
+                  width="24"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  class="lucide lucide-chart-line size-5"
+                  ><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path
+                    d="m19 9-5 5-4-4-3 3"></path></svg
+                ></span
+              ><div>
+                <p
+                  class="mb-1 text-xs font-bold uppercase tracking-wider text-primary-400"
+                >
+                  All-In-One
+                </p><h3 class="text-3xl font-bold text-white max-xl:text-2xl">
+                  Growth
+                </h3>
+              </div>
+            </div><div class="kio-plan-info">
+              <button
+                type="button"
+                class="kio-plan-info-button kio-plan-info-button-dark"
+                aria-label="View Growth plan details"
+                aria-expanded="false"
+                aria-controls="growth-plan-tooltip"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke-width="2"
+                  width="24"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  class="lucide lucide-eye size-4"
+                  ><path
+                    d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"
+                  ></path><circle cx="12" cy="12" r="3"></circle></svg
+                ></button
+              ><div
+                id="growth-plan-tooltip"
+                class="kio-plan-tooltip"
+                role="tooltip"
+                aria-hidden="true"
+              >
+                The complete end-to-end platform. Includes everything in
+                Prospect &amp; Organize combined into one seamless workflow—plus
+                inventory tracking, granular team permissions, and a dedicated
+                success manager.
+              </div>
+            </div>
+          </div><div class="mb-5 min-h-[76px]">
+            <p class="text-sm font-semibold leading-6 text-white">
+              Who it’s for:
+            </p><p class="text-sm leading-6 text-neutral-300">
+              For contractors and field teams running the entire business—from
+              first knock to final payment.
+            </p>
+          </div><!-- <p
+              class="mb-6 rounded-xl border border-solid border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-semibold text-white"
+            >
+              Sell the job. Run the job. Get paid.
+            </p> -->
+          <div class="mb-1 flex flex-wrap items-end text-white">
+            <span class="text-5xl font-bold max-md:text-4xl">$45</span><span
+              class="mb-1 ml-2 text-base font-normal text-neutral-400"
+              >/user/mo</span
+            >
+          </div><p class="mb-1 text-sm font-semibold text-primary-400">
+            5+ users
+          </p><p class="mb-6 text-sm text-neutral-400">
+            $60/user/mo for 1–4 users
+          </p><button
+            type="button"
+            data-checkout-package="6"
+            data-package="6"
+            aria-label="Start Growth plan"
+            class="knockio-checkout-btn mb-8 w-full cursor-pointer rounded-xl bg-primary-500 px-5 py-3.5 font-semibold text-white transition-colors duration-200 hover:bg-primary-700"
+            >Start Growth</button
+          ><h4 class="mb-4 text-lg font-semibold text-white">
+            Features included:
+          </h4><ul class="flex-1 space-y-3 text-neutral-300">
+            <li class="flex items-start text-[15px] font-semibold leading-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="2"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="lucide lucide-check mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                ><path d="M20 6 9 17l-5-5"></path></svg
+              ><span>Everything in Prospect</span>
+            </li><li class="flex items-start text-[15px] leading-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="2"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="lucide lucide-check mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                ><path d="M20 6 9 17l-5-5"></path></svg
+              ><span>Unlimited Workspaces</span>
+            </li><li class="flex items-start text-[15px] leading-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="2"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="lucide lucide-check mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                ><path d="M20 6 9 17l-5-5"></path></svg
+              ><span>Pipelines &amp; Lead Management</span>
+            </li><li class="flex items-start text-[15px] leading-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="2"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="lucide lucide-check mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                ><path d="M20 6 9 17l-5-5"></path></svg
+              ><span>Granular Permissions</span>
+            </li><li class="flex items-start text-[15px] leading-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="2"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="lucide lucide-check mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                ><path d="M20 6 9 17l-5-5"></path></svg
+              ><span>Email Communication</span>
+            </li><li class="flex items-start text-[15px] leading-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="2"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="lucide lucide-check mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                ><path d="M20 6 9 17l-5-5"></path></svg
+              ><span>Estimates &amp; Work Orders</span>
+            </li><li class="flex items-start text-[15px] leading-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="2"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="lucide lucide-check mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                ><path d="M20 6 9 17l-5-5"></path></svg
+              ><span>Invoices &amp; Payments</span>
+            </li><li class="flex items-start text-[15px] leading-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="2"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="lucide lucide-check mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                ><path d="M20 6 9 17l-5-5"></path></svg
+              ><span>Product &amp; Inventory Management</span>
+            </li><li class="flex items-start text-[15px] leading-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="2"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="lucide lucide-check mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                ><path d="M20 6 9 17l-5-5"></path></svg
+              ><span>Native Automation Builder</span>
+            </li><li class="flex items-start text-[15px] leading-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="2"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="lucide lucide-check mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                ><path d="M20 6 9 17l-5-5"></path></svg
+              ><span>Zapier &amp; FlowChef Integrations</span>
+            </li><li class="flex items-start text-[15px] leading-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="2"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="lucide lucide-user-round mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                ><circle cx="12" cy="8" r="5"></circle><path
+                  d="M20 21a8 8 0 0 0-16 0"></path></svg
+              ><span>Dedicated Success Manager</span>
+            </li><li class="flex items-start text-[15px] leading-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="2"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="lucide lucide-check mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                ><path d="M20 6 9 17l-5-5"></path></svg
+              ><span>Free Onboarding &amp; Account Setup</span>
+            </li><li class="flex items-start text-[15px] leading-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="2"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="lucide lucide-phone mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                ><path
+                  d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"
+                ></path></svg
+              ><span>Engage Add-On ($15/number/mo)</span>
+            </li>
+          </ul>
+        </div><div
+          class="kio-pricing-card relative flex flex-col rounded-3xl border border-solid border-primary-500 bg-[#f5faf3] p-7 transition duration-150 ease-out hover:-translate-y-1 hover:shadow-xl max-md:p-6"
+        >
+          <div
+            class="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-solid border-primary-500 bg-white px-7 py-1.5 text-sm font-semibold text-primary-600"
+          >
+            100+ Users
+          </div><div class="mb-3 mt-2 flex items-start justify-between gap-4">
+            <div class="flex items-center gap-4">
+              <span
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary-500 text-white"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke-width="2"
+                  width="24"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  class="lucide lucide-building-2 size-5"
+                  ><path d="M10 12h4"></path><path d="M10 8h4"></path><path
+                    d="M14 21v-3a2 2 0 0 0-4 0v3"></path><path
+                    d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"
+                  ></path><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"
+                  ></path></svg
+                ></span
+              ><div>
+                <p
+                  class="mb-1 text-xs font-bold uppercase tracking-wider text-primary-600"
+                >
+                  Enterprise
+                </p><h3
+                  class="text-3xl font-bold text-neutral-900 max-xl:text-2xl"
+                >
+                  Scale
+                </h3>
+              </div>
+            </div><div class="kio-plan-info">
+              <button
+                type="button"
+                class="kio-plan-info-button"
+                aria-label="View Scale plan details"
+                aria-expanded="false"
+                aria-controls="scale-plan-tooltip"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke-width="2"
+                  width="24"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  class="lucide lucide-eye size-4"
+                  ><path
+                    d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"
+                  ></path><circle cx="12" cy="12" r="3"></circle></svg
+                ></button
+              ><div
+                id="scale-plan-tooltip"
+                class="kio-plan-tooltip"
+                role="tooltip"
+                aria-hidden="true"
+              >
+                Everything in Growth, engineered for your exact operational
+                scale. Get custom volume pricing, white-glove team onboarding,
+                priority support, and a direct line to our product team for
+                feature requests. If an off-the-shelf plan isn’t enough, we’ll
+                build this around you.
+              </div>
+            </div>
+          </div><div class="mb-5 min-h-[76px]">
+            <p class="text-sm font-semibold leading-6 text-neutral-900">
+              Who it’s for:
+            </p><p class="text-sm leading-6 text-neutral-600">
+              Built for multi-location contractors and enterprise operations
+              running 100+ reps in the field.
+            </p>
+          </div><div
+            class="mb-2 text-3xl font-bold leading-tight text-neutral-900"
+          >
+            Custom Pricing
+          </div><p
+            class="mb-6 text-sm font-semibold leading-6 text-primary-600"
+          >
+            Volume rates for large field teams
+          </p><a
+            href="#landing-calender"
+            class="mb-8 inline-flex w-full items-center justify-center rounded-xl bg-primary-500 px-5 py-3.5 font-semibold text-white transition-colors duration-200 hover:bg-primary-700"
+            >Book a demo</a
+          ><h4 class="mb-4 text-lg font-semibold text-neutral-900">
+            Features included:
+          </h4><ul class="flex-1 space-y-3 text-neutral-700">
+            <li class="flex items-start text-[15px] font-semibold leading-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="2"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="lucide lucide-check mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                ><path d="M20 6 9 17l-5-5"></path></svg
+              ><span>Everything in Growth</span>
+            </li><li class="flex items-start text-[15px] leading-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="2"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="lucide lucide-check mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                ><path d="M20 6 9 17l-5-5"></path></svg
+              ><span>Custom Per-Seat Volume Rates</span>
+            </li><li class="flex items-start text-[15px] leading-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="2"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="lucide lucide-check mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                ><path d="M20 6 9 17l-5-5"></path></svg
+              ><span>White-Glove Onboarding &amp; Account Setup</span>
+            </li><li class="flex items-start text-[15px] leading-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="2"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="lucide lucide-user-round mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                ><circle cx="12" cy="8" r="5"></circle><path
+                  d="M20 21a8 8 0 0 0-16 0"></path></svg
+              ><span>Dedicated Success Manager &amp; Priority Support</span>
+            </li><li class="flex items-start text-[15px] leading-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="2"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="lucide lucide-check mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                ><path d="M20 6 9 17l-5-5"></path></svg
+              ><span>Direct Input on Product Roadmap &amp; Features</span>
+            </li><li class="flex items-start text-[15px] leading-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke-width="2"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="lucide lucide-shield mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                ><path
+                  d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                ></path></svg
+              ><span>Custom Enterprise Workspaces &amp; Security</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section py-24 lg:py-36" aria-labelledby="faq-heading">
+    <div class="my-container">
+      <p
+        class="faq-heading-text text-center text-sm font-bold uppercase tracking-[0.18em] text-primary-500 md:text-2xl"
+      >
+        Common Questions
+      </p>
+
+      <div class="faq-container space-y-4">
+        {
+          stormFaqs.map(
+            (faq: { question: string; answer: string }, index: number) => (
+              <details
+                class="faq-item rounded-2xl border border-slate-200 bg-white transition"
+                data-faq-item={faq.question}
+                open={index === 0}
+              >
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-5 text-left sm:p-6">
+                  <span class="text-lg font-bold text-slate-950 sm:text-xl">
+                    {faq.question}
+                  </span>
+                  <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-primary-50 text-primary-600">
+                    <Plus class="faq-plus" size={20} aria-hidden="true" />
+                    <Minus class="faq-minus" size={20} aria-hidden="true" />
+                  </span>
+                </summary>
+                <div class="px-5 pb-6 text-base leading-8 text-slate-600 sm:px-6">
+                  {faq.answer}
+                </div>
+              </details>
+            ),
+          )
+        }
+      </div>
+    </div>
+  </section>
+</LandingPagesLayout>

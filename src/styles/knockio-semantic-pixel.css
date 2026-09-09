@@ -1,0 +1,55 @@
+/* ═══════════════════════════════════════════════
+   KNOCKIO SEMANTIC PIXEL
+   /features/knockio-semantic-pixel/
+
+   Shared landing chrome (hero, trust, stats, cycle,
+   onboarding, calendar, pricing, FAQ) is imported from
+   roofing.css so calendar, pricing, FAQ, and footer
+   match storm-restoration-roofing exactly.
+
+   Tailwind utilities in the Astro page own layout and
+   type where they already exist. This file only adds
+   page-specific modules that utilities cannot express.
+   ═══════════════════════════════════════════════ */
+
+@import "./roofing.css";
+
+/* ── PAGE SHELL ──────────────────────────────── */
+.pixel-page {
+  background: #ffffff;
+}
+
+.pixel-page .storm-hero-img-wrap {
+  width: min(100%, 44rem);
+}
+
+.pixel-page .storm-hero-img-wrap img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+/* ── FEATURE GRID IMAGES ─────────────────────── */
+.pixel-page .features-section .feature-img {
+  aspect-ratio: 1428 / 772;
+  object-fit: contain;
+  background: transparent;
+}
+
+/* ── CYCLE VISUAL ────────────────────────────── */
+.pixel-page .kn-visual img {
+  width: 100%;
+  height: auto;
+}
+
+/* ── REDUCED MOTION ──────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .pixel-page .storm-reveal,
+  .pixel-page .kio-pricing-card {
+    transition: none;
+  }
+
+  .pixel-page .kio-pricing-card:hover {
+    transform: none;
+  }
+}
