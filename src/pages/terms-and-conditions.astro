@@ -41,13 +41,29 @@ const jsonLd = [
 ];
 ---
 
-<KnockioHomeLayout title={title} description={description} jsonLd={jsonLd}>
+<KnockioHomeLayout
+  title={title}
+  description={description}
+  jsonLd={jsonLd}
+  exitIntent={false}
+>
   <main>
+      <style>
+      a {
+        all: revert !important;
+      }
+    </style>
     <!-- Hero Section -->
-    <section class="terms-hero bg-[linear-gradient(270deg,#122314E6_0%,#122314_100%),url('/assets/cfw/inner-industry-hero-bg.webp')] bg-cover bg-center bg-no-repeat min-h-[500px] flex items-center py-32 sm:py-36 lg:py-0 mt-[-80px]">
+    <section
+      class="terms-hero bg-[linear-gradient(270deg,#122314E6_0%,#122314_100%),url('/assets/cfw/inner-industry-hero-bg.webp')] bg-cover bg-center bg-no-repeat min-h-[500px] flex items-center py-32 sm:py-36 lg:py-0 mt-[-80px]"
+    >
       <div class="my-container mx-auto">
         <div class="text-white">
-          <h1 class="terms-hero-title text-white text-center text-4xl sm:text-5xl lg:text-[64px] font-extrabold leading-tight mb-6" data-aos="fade-up" data-aos-delay="200">
+          <h1
+            class="terms-hero-title text-white text-center text-4xl sm:text-5xl lg:text-[64px] font-extrabold leading-tight mb-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             Terms and Conditions
           </h1>
         </div>
@@ -58,251 +74,366 @@ const jsonLd = [
     <section class="bg-white py-14 sm:py-16 lg:py-20">
       <div class="my-container mx-auto">
         <div class="terms-content-wrapper max-w-[1120px]">
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>Knockio, LLC</strong></p>
 
-          <h3 class="terms-updated-heading mb-8 text-xl font-bold leading-tight text-neutral-950 sm:text-2xl">
-            Last Updated: 29th October 2025
-          </h3>
 
-          <h2 class="terms-section-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">
-            Introduction
-          </h2>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            Welcome to Knockio! These Terms of Use (“Terms”) govern your access to and use of the Knockio mobile application, website, APIs, and any other software, products, and services provided by Knockio (collectively referred to as the “Services”). Please read these Terms carefully before using the Services. By accessing or using the Services, you agree to be legally bound by these Terms. If you do not agree to these Terms, do not access or use the Services.
-          </p>
+          <p class="terms-updated-heading"><strong>Last Updated: </strong><em>09 Sept, 2026</em><em><strong> Effective:</strong></em><em> 8 Sept, 2026 </em></p>
 
-          <h2 class="terms-section-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">
-            Eligibility
-          </h2>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            You must be at least 18 years old and able to form legally binding contracts to access or use the Services. By accessing or using the Services, you represent and warrant that you are 18 or older and have the legal authority to accept these Terms. Knockio may require proof of age at any time.
-          </p>
 
-          <h2 class="terms-section-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">
-            Account Registration
-          </h2>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            To use certain features of the Services you may be required to register for an account. When you register for an account, you agree to:
-          </p>
+          <h2 class="terms-section-heading mb-10 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">1. Introduction and Acceptance</h2>
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">Welcome to Knockio. These Terms and Conditions ("Terms") govern your access to and use of the Knockio mobile application, website, APIs, and any other software, products, and services provided by Knockio, LLC ("Knockio," "we," "us," or "our"), collectively referred to as the "Services."</p>
+
+        
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">Please read these Terms carefully. <strong>By accessing or using the Services, you agree to be legally bound by them.</strong> If you do not agree, do not access or use the Services.</p>
+
+        
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">These Terms, together with our <a href="https://knockio.com/privacy-policy/"><u>Privacy Policy</u></a> and our <a href="https://knockio.com/legal/payment-processing/"><u>Payment Processing Policy</u></a>, form the agreement between you and Knockio. Both of those policies are incorporated into these Terms by reference and form part of them.</p>
+
+        
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">Section 24 contains an agreement to arbitrate and a waiver of class actions. Please read it carefully, as it affects how disputes between you and Knockio are resolved.</p>
+
+          <h2 class="terms-section-heading mb-10 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">2. Definitions</h2>
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>"Customer"</strong> means the individual or entity that has entered into these Terms and holds a Knockio account. If you use the Services on behalf of a company, "you" means that company, and you confirm you have authority to bind it.</p>
+
+        
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>"Authorized User"</strong> means an individual the Customer permits to access the Services under the Customer's account.</p>
+
+        
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>"Customer Data"</strong> means the data, content, and information the Customer or its Authorized Users submit to, store in, or generate through the Services, including invoices, contact records, and payment records.</p>
+
+        
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>"Payer"</strong> means a person or business that receives an invoice, payment link, or payment reminder issued by a Customer through the Services.</p>
+
+        
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>"Payment Processor"</strong> means number.tech, the independent third-party payment processor described in Section 12.</p>
+
+          <h2 class="terms-section-heading mb-10 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">3. Eligibility</h2>
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">You must be at least 18 years old and able to form legally binding contracts to access or use the Services. By accessing or using the Services, you represent and warrant that you meet this requirement and that you have the legal authority to accept these Terms, including on behalf of any entity you represent. Knockio may require proof of age at any time.</p>
+
+        
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">The Services are intended for business use. They are not designed or offered for personal, family, or household purposes.</p>
+
+          <h2 class="terms-section-heading mb-10 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">4. Account Registration and Security</h2>
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">To use certain features of the Services you may need to register for an account. When you register, you agree to:</p>
+
+        
+
           <ol class="terms-list mb-6 ml-6 list-decimal space-y-3">
-            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Provide accurate, current and complete information as prompted by the registration process;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Provide accurate, current, and complete information as prompted by the registration process;</li>
             <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Maintain and promptly update your account information;</li>
             <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Maintain the security and confidentiality of your login credentials and restrict access to your account;</li>
-            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Promptly notify Knockio if you discover or suspect any unauthorized access or use of your account;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Promptly notify Knockio if you discover or suspect any unauthorized access to or use of your account;</li>
             <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Take full responsibility for all activities that occur under your account;</li>
-            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Immediately notify Knockio if you lose access to your mobile device hosting the Knockio app.</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Immediately notify Knockio if you lose access to the mobile device hosting the Knockio app; and</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Review and accept our Privacy Policy and, if you use the payment features, our <a href="https://knockio.com/legal/payment-processing/"><u>Payment Processing Policy</u></a>.</li>
           </ol>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            One account per user. You may not share accounts. Knockio reserves the right to suspend or terminate accounts that provide inaccurate or incomplete information, exhibit suspicious activity, or violate these Terms.
-          </p>
 
-          <h2 class="terms-section-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">
-            License to Use the Services
-          </h2>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            Subject to the customer’s complete and ongoing compliance with these Terms and payment of applicable fees, Knockio grants the customer and its authorized users a limited, revocable, non-exclusive, non-transferable and non-sublicensable right to access and use the Services for the customer’s lawful internal business purposes during the applicable subscription term.
-          </p>
+        
 
-          <h2 class="terms-section-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">
-            Restrictions on Use
-          </h2>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            You agree not to:
-          </p>
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">Knockio may suspend or terminate accounts that provide inaccurate or incomplete information, exhibit suspicious activity, or violate these Terms.</p>
+
+          <h2 class="terms-section-heading mb-10 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">5. Authorized Users</h2>
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">Each individual using the Services must have their own login credentials. <strong>Login credentials may not be shared between individuals.</strong> A Customer may create accounts for its Authorized Users where the Services support this.</p>
+
+        
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">The Customer is responsible for its Authorized Users' compliance with these Terms and for all activity conducted under its account, and must promptly remove access for any individual who should no longer have it.</p>
+
+          <h2 class="terms-section-heading mb-10 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">6. License to Use the Services</h2>
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">Subject to your complete and ongoing compliance with these Terms and payment of applicable fees, Knockio grants you and your Authorized Users a limited, revocable, non-exclusive, non-transferable, and non-sublicensable right to access and use the Services for your lawful internal business purposes during your subscription term.</p>
+
+          <h2 class="terms-section-heading mb-10 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">7. Restrictions on Use</h2>
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">You agree not to:</p>
+
+        
+
           <ol class="terms-list mb-6 ml-6 list-decimal space-y-3">
             <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Copy, modify, adapt, translate, reverse engineer, decompile, or disassemble the Services;</li>
             <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Rent, lease, sell, transfer, assign, sublicense, or otherwise provide access to the Services;</li>
             <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Make the functionality of the Services available to third parties;</li>
-            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Copy any content, images or designs from the Services;</li>
-            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Use the Services to conduct or promote any illegal activities;</li>
-            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Impersonate others or provide false or misleading information when using the Services;</li>
-            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Use the Services to spam, solicit money from or defraud users;</li>
-            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Interfere with or disrupt the Services;</li>
-            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Create accounts for the Services through unauthorized or automated means;</li>
-            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Use the Services to harm others or promote violence, hatred, or discrimination;</li>
-            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Do anything that violates applicable law or infringes others’ rights.</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Copy any content, images, or designs from the Services;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Use the Services to conduct or promote any illegal activity;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Impersonate others or provide false or misleading information;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Use the Services to spam, solicit money from, or defraud any person;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Send communications through the Services that are harassing, deceptive, or abusive;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Interfere with or disrupt the Services, or attempt to gain unauthorized access to them or to any related system;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Circumvent or attempt to circumvent any usage limit, security measure, or access control;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Create accounts through unauthorized or automated means;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Use the Services to harm others or to promote violence, hatred, or discrimination;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Use the Services to build a competing product or to benchmark them for a competitor; or</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Do anything that violates applicable law or infringes the rights of others.</li>
           </ol>
 
-          <h2 class="terms-section-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">
-            Intellectual Property Rights
-          </h2>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            The Services, including all content, software, images, designs, photographs, trademarks, logos, and other materials contained therein, are the property of Knockio and its licensors and protected by copyright, trademark and other intellectual property laws. You acquire no rights in the Services except as granted in these Terms. Any use of the Services not expressly permitted by these Terms is a breach of these Terms and an infringement of our rights.
-          </p>
+          <h2 class="terms-section-heading mb-10 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">8. Customer Data and User Content</h2>
 
-          <h2 class="terms-section-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">
-            User Content
-          </h2>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            You are solely responsible for any content you contribute, upload, post or otherwise transmit via the Services (“User Content”). The customer retains ownership of Customer Data. The customer grants Knockio a limited, non-exclusive right to host, copy, process, transmit and display Customer Data only as necessary to provide, secure, support and improve the Services, comply with law, and fulfil the customer’s documented instructions..
-          </p>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            Knockio does not claim ownership of your User Content. However, you grant Knockio the rights necessary to enable interoperation between the Services and third party applications and services.
-          </p>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            You represent and warrant that your User Content does not infringe any third party intellectual property rights and that you have the necessary rights to grant the licenses contained herein.
-          </p>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            Knockio may remove any User Content at any time for any reason. Knockio is not responsible for moderating User Content or monitoring User Content for compliance with law or these Terms.
-          </p>
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>8.1 Your ownership.</strong> You retain ownership of Customer Data and of any content you contribute, upload, post, or transmit via the Services ("User Content"). You are solely responsible for it.</p>
 
-          <h2 class="terms-section-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">
-            Text, Call &amp; Email Communications
-          </h2>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            By providing your phone number during account creation on knockio.com and selecting the non-pre-selected checkbox to agree to our Terms &amp; Conditions, you explicitly authorize Knockio to contact you via two-way SMS at the number provided. This includes:
-          </p>
+        
 
-          <div class="terms-callout-box mb-5 rounded-2xl border border-neutral-200 bg-neutral-50 p-5 text-[15px] font-normal leading-8 text-neutral-600 sm:p-6 sm:text-base">
-            <strong class="font-bold text-neutral-900">-Support</strong> replies to your customer queries (e.g., platform features, subscription plans, how-to guidance)
-            <br />
-            <strong class="font-bold text-neutral-900">-Product</strong> updates (new features, system improvements)
-            <br />
-            <strong class="font-bold text-neutral-900">-Service</strong> notifications (downtime alerts, account actions)
-            <br /><br />
-            <strong class="font-bold text-neutral-900">-Message</strong> frequency varies based on your usage and inquiries. Consent is not a condition of purchase.
-            Opt-out: Reply <strong class="font-bold text-neutral-900">STOP SUPPORT</strong> to any message to unsubscribe from all SMS communications. For help, reply <strong class="font-bold text-neutral-900">HELP</strong> or email hello@knockio.com. We honor opt-out requests promptly (within 72 hours).
-            <br /><br />
-            <strong class="font-bold text-neutral-900">-Eligibility:</strong> You confirm you are the authorized user of the phone number provided and are 18+ (or the age of majority in your jurisdiction).
-            <br /><br />
-            <strong class="font-bold text-neutral-900">Access:</strong> Opting out disables two-way SMS support. To re-enable, update your preferences in by replying <strong class="font-bold text-neutral-900">HELP</strong> or contact hello@knockio.com. No SMS messages will be sent without your affirmative consent via the signup checkbox.
-          </div>
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>8.2 Licence to us.</strong> You grant Knockio a limited, non-exclusive right to host, copy, process, transmit, and display Customer Data only as necessary to provide, secure, support, and improve the Services, to comply with law, and to fulfil your documented instructions. You also grant us the rights necessary to enable interoperation between the Services and third-party applications you choose to connect.</p>
 
-          <h2 class="terms-section-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">
-            Ownership; Proprietary Rights
-          </h2>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            The Services are owned and operated by Knockio. The visual interfaces, graphics, design, compilation, information, data, computer code, products, software, services, and all other elements of the Services are protected by intellectual property and other laws.
-          </p>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            Knockio grants you no right, title or interest in the Services except for the limited use rights expressly set forth in these Terms. Any rights not expressly granted herein are reserved.
-          </p>
+        
 
-          <h2 class="terms-section-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">
-            Updates and Modifications
-          </h2>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            Knockio may update or modify the Services from time to time. Where a material change substantially reduces core paid functionality, Knockio will provide reasonable prior notice when commercially practicable, except where immediate changes are required for security, legal, technical or regulatory reasons.
-          </p>
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>8.3 Your warranties.</strong> You represent and warrant that your Customer Data and User Content do not infringe any third party's rights, that you have all rights necessary to grant the licences in these Terms, and that you have any consent required by law to provide us with personal information about other people, including your Payers.</p>
 
-          <h2 class="terms-section-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">
-            Third Party Services
-          </h2>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            The Services may allow access to services provided by third parties, including the ability to connect with social networking services like Facebook and Twitter (“Third Party Services”). If you enable Third Party Services, you agree that Knockio may share certain information about you with these services in accordance with our Privacy Policy.
-          </p>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            Knockio does not own or control Third Party Services. When you enable Third Party Services you are interacting and transacting solely with the third party provider of the relevant Service. Knockio does not endorse or recommend any particular Third Party Service. You are solely responsible for your dealings with Third Party Services. Additional terms and conditions may apply to your use of Third Party Services – please read their terms of service carefully before using the Third Party Services.
-          </p>
+        
 
-          <h2 class="terms-section-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">
-            Indemnification
-          </h2>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            You will defend, fully indemnify and hold harmless Knockio, its officers, directors, employees, agents, successors and assigns from and against any and all claims, costs, damages, losses, liabilities and expenses (including reasonable attorneys’ fees) arising out of or in connection with:
-          </p>
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>8.4 Data protection roles.</strong> Where Customer Data includes personal information about your clients, contacts, or Payers, <strong>you are the controller</strong> of that information and <strong>Knockio processes it as your processor</strong>, on your documented instructions. You are responsible for having a lawful basis to collect and provide it, for giving those individuals any privacy notice required by law, and for responding to their data protection requests. Knockio acts as a controller in respect of your own account, billing, support, and usage information. See our Privacy Policy. A data processing agreement is available on request at <a href="mailto:hello@knockio.com"><u>support@knockio.com</u></a>.</p>
+
+        
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>8.5 Removal.</strong> Knockio may remove any User Content at any time where we reasonably believe it breaches these Terms or applicable law. Knockio is not responsible for moderating User Content or monitoring it for compliance.</p>
+
+        
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>8.6 Copyright complaints.</strong> If you believe content on the Services infringes your copyright, send a notice with the information required by the Digital Millennium Copyright Act to <a href="mailto:hello@knockio.com"><u>support@knockio.com</u></a>. We will respond as required by law and may remove the content and terminate repeat infringers' accounts.</p>
+
+          <h2 class="terms-section-heading mb-10 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">9. Feedback</h2>
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">If you send us suggestions, ideas, or feedback about the Services, you grant Knockio a perpetual, irrevocable, worldwide, royalty-free right to use and incorporate them without restriction or obligation to you. We are not required to keep feedback confidential.</p>
+
+          <h2 class="terms-section-heading mb-10 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">10. Subscriptions, Fees, and Billing</h2>
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>10.1 Fees.</strong> You agree to pay the fees for the plan you select, as shown at the time of purchase. Unless stated otherwise, fees are quoted and payable in U.S. dollars.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>10.2 Automatic renewal.</strong> <strong>Monthly and other recurring subscriptions renew automatically</strong> at the end of each billing period, and the payment method on file is charged the then-current fee, <strong>until you cancel.</strong> You may cancel at any time before the next billing cycle through your account settings or by contacting us at <a href="mailto:payments@knockio.com"><u>payments@knockio.com</u></a>. Cancellation takes effect at the end of the current billing period; access continues until then.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>10.3 Price changes.</strong> We may change our fees. We will give you at least 30 days' notice before a change takes effect for your subscription, and the change applies from your next billing period. If you do not agree, you may cancel before it takes effect.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>10.4 Taxes.</strong> Fees exclude sales, use, value-added, and similar taxes. You are responsible for those taxes, other than taxes on Knockio's net income.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>10.5 Failed and late payments.</strong> If a payment fails or is not made when due, we may retry the charge, suspend your access under Section 19, and recover reasonable costs of collection. Suspension for non-payment is not a breach of these Terms by Knockio.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>10.6 Lifetime subscriptions.</strong> A lifetime subscription grants access for as long as Knockio continues to offer the Services and your account remains in good standing. It does not guarantee that any particular feature or integration will remain available indefinitely.</p>
+
+          <h2 class="terms-section-heading mb-10 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">11. Refunds</h2>
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>11.1 Lifetime subscriptions.</strong> You may request a full refund of the lifetime subscription purchase price within 2 months of the original purchase date. After 2 months, due to the perpetual nature of lifetime access, no refunds will be provided.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>11.2 Monthly subscriptions.</strong> New customers may request a full refund within 7 days of the original purchase date. After 7 days, refunds will not be provided for the current or prior billing periods. You may unsubscribe at any time before the next billing cycle to avoid future charges. Monthly subscriptions are non-refundable for any months already billed and paid before cancellation.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>11.3 How to request a refund.</strong> Submit a written request to support <a href="mailto:payments@knockio.com"><u>payments@knockio.com</u></a>. Requests are processed within 30 days of receipt. Approved refunds are issued to the original payment method. Knockio may refuse a request where fraudulent activity is suspected or these Terms have been violated. All refunds are subject to verification before processing, and eligibility and timing may vary in special circumstances.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>11.4 Scope of this Section.</strong> <strong>This Section applies only to fees you pay to Knockio for use of the Services.</strong> It does <strong>not</strong> apply to payments your customers make to you through the Services. Refunds of those payments are handled between you, your customer, and the Payment Processor, as described in Section 12 and in the Payment Processing Policy.</p>
+
+          <h2 class="terms-section-heading mb-10 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">12. Payments and Third-Party Payment Processing</h2>
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>12.1</strong> The Services let you create invoices, generate payment links, send payment reminders, and record payment status. <strong>Knockio does not process payments.</strong> Payment processing is provided by number.tech, an independent third-party payment processor, under a separate agreement between you and number.tech.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>12.2</strong> Knockio is a software provider. Knockio is not a payment processor, payment facilitator, payment aggregator, money transmitter, money services business, bank, escrow agent, or debt collector. Knockio does not receive, hold, transmit, disburse, or control funds belonging to you or to any Payer at any time. Funds move directly between the Payer, number.tech, and your own settlement account.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>12.3</strong> Payment links generated through the Services are your payment links, operating under your number.tech merchant account. Payment pages are hosted and controlled by number.tech, not by Knockio.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>12.4</strong> Payment records in the Services are descriptive only. number.tech's records are authoritative. Records you enter manually are your own representation, which Knockio does not verify.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>12.5</strong> Invoices, payment links, payment reminders, and overdue notices sent through the Services are sent by you, on your behalf and at your direction. You are responsible for their content, timing, and compliance with applicable law, including debt collection, electronic communications, and consumer protection law.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>12.6</strong> Knockio receives compensation from number.tech in connection with customers who process payments through number.tech. Knockio makes no representation that number.tech offers the best available rates or terms.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>12.7</strong> Your use of the payment features is governed by the <strong>Payment Processing Policy</strong>, which is incorporated into these Terms and sets out these matters in full, including allocation of responsibility, limitations of liability, and indemnification. Please read it before using the payment features.</p>
+
+          <h2 class="terms-section-heading mb-10 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">13. Text, Call, and Email Communications</h2>
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>13.1 Your consent.</strong> By providing your phone number during account creation on knockio.com and selecting the non-pre-selected checkbox, you authorize Knockio to contact you via two-way SMS at that number. This includes:</p>
+
+
+          <ul class="terms-list terms-bullet-list mb-6 ml-6 list-disc space-y-3">
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Support replies to your queries (for example, platform features, subscription plans, how-to guidance);</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Product updates (new features, system improvements); and</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Service notifications (downtime alerts, account actions).</li>
+          </ul>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>13.2 Frequency and opt-out.</strong> Message frequency varies based on your usage and inquiries. Message and data rates may apply. Consent is not a condition of purchase. Reply <strong>STOP SUPPORT</strong> to any message to unsubscribe from all SMS communications. For help, reply <strong>HELP</strong> or email <a href="mailto:hello@knockio.com"><u>support@knockio.com</u></a>. We honor opt-out requests promptly and within 72 hours.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>13.3 Eligibility.</strong> You confirm that you are the authorized user of the phone number provided and are 18 or older, or the age of majority in your jurisdiction.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>13.4 Effect of opting out.</strong> Opting out disables two-way SMS support. To re-enable it, reply HELP or contact <a href="mailto:hello@knockio.com"><u>support@knockio.com</u></a>. No SMS messages are sent without your affirmative consent given via the signup checkbox.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>13.5 Messages to your customers.</strong> This Section governs messages Knockio sends to <strong>you</strong>. Messages sent through the Services to <strong>your customers</strong>, including invoices, payment links, and payment reminders, are sent by you, on your behalf and at your direction, and are governed by the Payment Processing Policy. <strong>You are responsible for having any consent required by applicable law before providing your customers' contact details or enabling messages to them, and for ensuring those messages comply with applicable law.</strong></p>
+
+          <h2 class="terms-section-heading mb-10 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">14. Third-Party Services and Integrations</h2>
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">The Services may allow you to connect services provided by third parties, including payment processing, communications, accounting, calendar, and social networking services ("Third Party Services"). If you enable a Third Party Service, you agree that Knockio may share information about you with it in accordance with our<a href="https://knockio.com/privacy-policy"><u> Privacy Policy</u></a>.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">Knockio does not own or control Third Party Services. When you enable one, you interact and transact solely with that third-party provider. Knockio does not endorse or recommend any particular Third Party Service and is not responsible for its availability, security, accuracy, or acts and omissions. You are solely responsible for your dealings with Third Party Services, and additional terms may apply; please read them carefully.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">If a Third Party Service becomes unavailable or changes, Knockio may modify or discontinue the corresponding integration without liability.</p>
+
+          <h2 class="terms-section-heading mb-10 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">15. Intellectual Property and Ownership</h2>
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">The Services, including all content, software, images, designs, photographs, trademarks, logos, visual interfaces, graphics, compilations, data, and computer code, are the property of Knockio and its licensors and are protected by copyright, trademark, and other intellectual property laws.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">You acquire no right, title, or interest in the Services except the limited use rights expressly granted in these Terms. All rights not expressly granted are reserved. Any use of the Services not expressly permitted by these Terms is a breach of these Terms and an infringement of our rights.</p>
+
+          <h2 class="terms-section-heading mb-10 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">16. Confidentiality</h2>
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">Each party may receive non-public information from the other in connection with the Services. Each party agrees to protect the other's confidential information with reasonable care, to use it only as necessary under these Terms, and not to disclose it to third parties except to personnel and advisers who need it and are bound by comparable obligations, or where disclosure is required by law. This does not apply to information that is public through no fault of the receiving party, was already known to it, or is independently developed by it.</p>
+
+          <h2 class="terms-section-heading mb-10 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">17. Updates and Modifications to the Services</h2>
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">Knockio may update or modify the Services from time to time. Where a material change would substantially reduce core paid functionality, Knockio will provide reasonable prior notice when commercially practicable, except where immediate changes are required for security, legal, technical, or regulatory reasons.</p>
+
+          <h2 class="terms-section-heading mb-10 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">18. Changes to These Terms</h2>
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">We may update these Terms from time to time. Where changes are material, we will give notice through the Services or by email to the address on your account at least 30 days before they take effect, unless a shorter period is required for legal or security reasons. Your continued use of the Services after the effective date means you accept the updated Terms. If you do not accept them, you must stop using the Services and may cancel under Section 10.2.</p>
+
+          <h2 class="terms-section-heading mb-10 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">19. Suspension</h2>
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">Knockio may suspend your access to the Services, in whole or in part, where: fees are past due; we reasonably believe your use poses a security risk or may harm the Services or another user; we reasonably believe you have breached these Terms or applicable law; or suspension is required by law, by a regulator, or by the Payment Processor. Where practicable and lawful we will give notice and an opportunity to resolve the issue first. Suspension under this Section is not a breach by Knockio.</p>
+
+          <h2 class="terms-section-heading mb-10 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">20. Term and Termination</h2>
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>20.1</strong> These Terms apply for as long as you use the Services.</p>
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>20.2</strong> You may stop using the Services at any time and may cancel your subscription as described in Section 10.2.</p>
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>20.3</strong> Knockio may suspend or terminate your access at any time for breach of these Terms, and may terminate on 30 days' notice if we discontinue the Services generally.</p>
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>20.4 Effect of termination.</strong> On termination, your right to access the Services ends. <strong>You are responsible for exporting your Customer Data before termination.</strong> Following termination we will make Customer Data available for export for 30 days where reasonably practicable, after which we may delete it in accordance with our Privacy Policy and applicable law. Terminating your Knockio account does not terminate, affect, or transfer your merchant account with the Payment Processor, which you must address with them separately.</p>
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>20.5 Survival.</strong> The following Sections survive termination: 2 (Definitions), 8 (Customer Data and User Content), 9 (Feedback), 10.4–10.5 (Taxes; Failed and Late Payments), 11 (Refunds), 12 (Payments and Third-Party Payment Processing), 15 (Intellectual Property and Ownership), 16 (Confidentiality), 20 (Term and Termination), 21 (Disclaimers), 22 (Limitation of Liability), 23 (Indemnification), 24 (Dispute Resolution), 25 (Governing Law and Venue), and 26 (General Provisions), together with the Payment Processing Policy and any other provision that by its nature is intended to survive.</p>
+
+          <h2 class="terms-section-heading mb-10 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">21. Disclaimers</h2>
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">THE SERVICES ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND. TO THE MAXIMUM EXTENT PERMITTED BY LAW, KNOCKIO EXPRESSLY DISCLAIMS ALL WARRANTIES AND CONDITIONS, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, TITLE, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">NO ADVICE OR INFORMATION, WHETHER ORAL OR WRITTEN, OBTAINED FROM KNOCKIO OR THROUGH THE SERVICES WILL CREATE ANY WARRANTY NOT EXPRESSLY MADE HEREIN.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">WITHOUT LIMITING THE FOREGOING, KNOCKIO MAKES NO WARRANTY THAT THE SERVICES OR ANY CONTENT WILL BE UNINTERRUPTED, SECURE, ERROR-FREE, OR FREE FROM VIRUSES OR HARMFUL CODE, AND NO WARRANTY REGARDING THE AVAILABILITY, ACCURACY, OR PERFORMANCE OF ANY THIRD PARTY SERVICE, INCLUDING THE PAYMENT PROCESSOR.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">KNOCKIO DOES NOT PROVIDE LEGAL, TAX, ACCOUNTING, OR FINANCIAL ADVICE. YOU ARE RESPONSIBLE FOR YOUR OWN COMPLIANCE, TAX, AND BUSINESS DECISIONS.</p>
+
+          <h2 class="terms-section-heading mb-10 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">22. Limitation of Liability</h2>
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">YOU USE THE SERVICES AT YOUR OWN RISK. TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL KNOCKIO, ITS DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE FOR ANY DIRECT, INDIRECT, PUNITIVE, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY DAMAGES, INCLUDING DAMAGES FOR LOSS OF PROFITS, GOODWILL, DATA, MONEY, OR USE, IN CONNECTION WITH ANY CLAIM, LOSS, DAMAGE, OR INJURY ARISING FROM OR RELATED TO THE SERVICES, INCLUDING YOUR ACCESS TO, DISPLAY OF, USE OF, OR INABILITY TO ACCESS OR USE THE SERVICES, OR RELIANCE ON ANY INFORMATION CONTAINED WITHIN THEM, REGARDLESS OF THE CAUSE OF ACTION OR THEORY OF LIABILITY, WHETHER IN TORT, CONTRACT, STRICT LIABILITY, OR OTHERWISE, AND EVEN IF KNOCKIO HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">KNOCKIO'S TOTAL LIABILITY FOR ALL CLAIMS ARISING FROM OR RELATED TO THE SERVICES IS LIMITED TO THE GREATEST OF: (A) ONE HUNDRED DOLLARS ($100); (B) THE AMOUNT YOU PAID KNOCKIO IN THE 12 MONTHS PRECEDING THE EVENT GIVING RISE TO THE CLAIM; OR (C) FOR A LIFETIME SUBSCRIPTION, THE AMOUNT YOU PAID FOR THAT SUBSCRIPTION.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF CERTAIN DAMAGES. IF THOSE LAWS APPLY TO YOU, SOME OR ALL OF THE ABOVE LIMITATIONS OR EXCLUSIONS MAY NOT APPLY.</p>
+
+          <h2 class="terms-section-heading mb-10 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">23. Indemnification</h2>
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">You will defend, indemnify, and hold harmless Knockio, its officers, directors, employees, agents, successors, and assigns from and against any and all claims, costs, damages, losses, liabilities, and expenses (including reasonable attorneys' fees) arising out of or in connection with:</p>
+
+
           <ol class="terms-list mb-6 ml-6 list-decimal space-y-3">
             <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Your access to or use of the Services;</li>
-            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Any User Content;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Any Customer Data or User Content;</li>
             <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Any violation by you of these Terms or applicable law;</li>
-            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Any dispute or issue between you and any third party.</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Any communication sent by you or at your direction through the Services;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">Any dispute between you and a Payer, a customer, or any other third party.</li>
           </ol>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            You agree to immediately notify Knockio of any third party claims related to the foregoing and cooperate with Knockio in defending such claims. Knockio reserves the right to assume exclusive control over the defense of any claim subject to indemnification by you.
-          </p>
 
-          <h2 class="terms-section-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">
-            Disclaimers
-          </h2>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            THE SERVICES ARE PROVIDED ON AN “AS IS” AND “AS AVAILABLE” BASIS WITHOUT WARRANTIES OF ANY KIND. TO THE MAXIMUM EXTENT PERMITTED BY LAW, KNOCKIO EXPRESSLY DISCLAIMS ALL WARRANTIES AND CONDITIONS, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, TITLE, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
-          </p>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            NO ADVICE OR INFORMATION, WHETHER ORAL OR WRITTEN, OBTAINED FROM KNOCKIO OR THROUGH THE SERVICES WILL CREATE ANY WARRANTY NOT EXPRESSLY MADE HEREIN.
-          </p>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            WITHOUT LIMITING THE FOREGOING, KNOCKIO MAKES NO WARRANTIES THAT THE SERVICES OR CONTENT WILL BE UNINTERRUPTED, SECURE, ERROR-FREE OR FREE FROM VIRUSES OR HARMFUL CODE.
-          </p>
 
-          <h2 class="terms-section-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">
-            Limitations of Liability
-          </h2>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            YOU USE THE SERVICES AT YOUR OWN RISK. TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL KNOCKIO, ITS DIRECTORS, EMPLOYEES OR AGENTS BE LIABLE FOR ANY DIRECT, INDIRECT, PUNITIVE, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES, INCLUDING DAMAGES FOR LOSS OF PROFITS, GOODWILL, MONEY OR USE, IN CONNECTION WITH ANY CLAIM, LOSS, DAMAGE OR INJURY ARISING FROM OR RELATED TO THE SERVICES, INCLUDING YOUR ACCESS TO, DISPLAY OF, USE OF OR INABILITY TO ACCESS OR USE THE SERVICES OR RELIANCE ON ANY INFORMATION CONTAINED WITHIN THE SERVICES, REGARDLESS OF THE CAUSE OF ACTION OR THE THEORY OF LIABILITY, WHETHER IN TORT, CONTRACT, STRICT LIABILITY OR OTHERWISE, EVEN IF KNOCKIO HAS BEEN NOTIFIED OF THE POSSIBILITY OF SUCH DAMAGES.
-          </p>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            KNOCKIO’S TOTAL LIABILITY FOR ALL CLAIMS ARISING FROM OR RELATED TO THE SERVICES IS LIMITED TO THE GREATER OF ONE HUNDRED DOLLARS ($100) OR THE AMOUNT YOU PAID KNOCKIO IN THE PRIOR 12 MONTHS.
-          </p>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF CERTAIN DAMAGES. IF THESE LAWS APPLY TO YOU, SOME OR ALL OF THE ABOVE LIMITATIONS OR EXCLUSIONS MAY NOT APPLY TO YOU.
-          </p>
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">You agree to notify Knockio promptly of any third-party claim and to cooperate in defending it. Knockio may assume exclusive control of the defense of any claim subject to indemnification by you, at your expense. Additional payment-related indemnities are set out in the Payment Processing Policy.</p>
 
-          <h2 class="terms-section-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">
-            Agreement to Arbitrate
-          </h2>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            You and Knockio agree that any dispute or claim arising out of or relating in any way to the Services or these Terms shall be determined by binding individual arbitration instead of in courts of general jurisdiction.
-          </p>
+          <h2 class="terms-section-heading mb-10 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">24. Dispute Resolution</h2>
 
-          <h2 class="terms-section-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">
-            Governing Law
-          </h2>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            These Terms are governed by the laws of the State of South Carolina without regard to conflict of law principles. You agree that any dispute arising out of or relating to the Services or these Terms shall be exclusively brought in the state or federal courts located in South Carolina.
-          </p>
 
-          <h2 class="terms-section-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">
-            Termination
-          </h2>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            You may stop using the Services at any time. Knockio may suspend or terminate your access to the Services at any time for any breach of these Terms. Sections 6, 10-15 shall survive termination of your access and use of the Services.
-          </p>
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>24.1 Informal resolution first.</strong> Before starting arbitration or any proceeding, the party bringing the claim will send the other a written description of the claim and the relief sought, to <a href="mailto:hello@knockio.com"><u>support@knockio.com</u></a> or to the email address on your account. The parties will try in good faith to resolve the claim for 30 days after that notice. This step is a condition of starting a proceeding.</p>
 
-          <h2 class="terms-section-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">
-            Entire Agreement
-          </h2>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            These Terms constitute the entire agreement between you and Knockio with respect to the subject matter hereof and supersede any prior agreements.
-          </p>
 
-          <h2 class="terms-section-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">
-            Lifetime Subscription Refunds
-          </h2>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            For lifetime subscription purchases, the customer may request a full refund of the subscription purchase price within 2 months of the original purchase date. After 2 months from the date of purchase, due to the perpetual nature of lifetime access, no refunds will be provided.
-          </p>
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>24.2 Agreement to arbitrate.</strong> Except as stated in Section 24.4, any dispute, claim, or controversy arising out of or relating in any way to the Services or these Terms — including their existence, validity, breach, or termination — will be resolved by <strong>binding individual arbitration</strong> administered by the American Arbitration Association under its Commercial Arbitration Rules, rather than in court. The arbitration will be conducted by a single arbitrator, seated in South Carolina, and may proceed by written submissions or videoconference where the arbitrator permits. Judgment on the award may be entered in any court of competent jurisdiction.</p>
 
-          <h2 class="terms-section-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">
-            Monthly Subscription Refunds
-          </h2>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            For monthly subscription purchases, new customers may request a full refund within 7 days of the original purchase date. After 7 days, refunds will not be provided for the current or prior billing periods. Customers may unsubscribe at any time before the next billing cycle to avoid future charges. Monthly subscriptions are non-refundable for any previous months already billed and paid prior to cancellation.
-          </p>
 
-          <h2 class="terms-section-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">
-            Refund Process
-          </h2>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            To request a refund, the customer must submit a written refund request to
-            <a href="mailto:payments@knockio.com" class="terms-link font-medium text-primary-500 underline underline-offset-4 transition-colors hover:text-primary-600">
-              payments@knockio.com
-            </a>. Refund requests will be processed within 30 days of receipt.
-          </p>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            Approved refunds will be issued back to the original payment method used at the time of purchase. The Company reserves the right to refuse a refund request if fraudulent activity is suspected or violations of the Terms of Service have occurred.
-          </p>
-          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            All refunds are subject to verification and investigation by the Company before being processed. Refund eligibility and timing may vary for special circumstances.
-          </p>
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>24.3 Class action waiver.</strong> <strong>Claims may be brought only in an individual capacity, and not as a plaintiff or class member in any class, collective, consolidated, or representative proceeding.</strong> The arbitrator may not consolidate claims or preside over any class or representative proceeding. If this waiver is found unenforceable as to a particular claim, that claim will be severed and heard in court, and the remaining claims will proceed in arbitration.</p>
 
-          <h2 class="terms-section-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">
-            Contact Information
-          </h2>
-          <p class="terms-paragraph mb-0 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">
-            Please direct any questions regarding these Terms to us at:
-            <a href="mailto:hello@knockio.com" class="terms-link font-medium text-primary-500 underline underline-offset-4 transition-colors hover:text-primary-600">
-              hello@knockio.com
-            </a>.
-          </p>
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>24.4 Exceptions.</strong> This Section does not require arbitration of: (a) claims that qualify for small claims court, brought individually; (b) applications to a court for temporary or preliminary injunctive relief in aid of arbitration or to protect intellectual property or confidential information; or (c) any claim that applicable law does not permit to be arbitrated.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>24.5 Fees.</strong> Filing, administrative, and arbitrator fees will be allocated under the applicable AAA rules. Each party bears its own attorneys' fees unless the arbitrator awards them where permitted by law.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>24.6 Who decides.</strong> The arbitrator has authority to decide all issues, including the scope and enforceability of this Section, <strong>except</strong> that the enforceability of the class action waiver in Section 24.3 will be decided only by a court.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>24.7 Your right to opt out.</strong> You may reject this Section 24 by emailing <a href="mailto:hello@knockio.com"><u>support@knockio.com</u></a> within 30 days of first accepting these Terms, stating your name, account email, and that you opt out of arbitration. Opting out does not affect any other part of these Terms, and Knockio will not retaliate for it.</p>
+
+          <h2 class="terms-section-heading mb-10 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">25. Governing Law and Venue</h2>
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">These Terms are governed by the laws of the State of South Carolina, without regard to conflict of law principles. <strong>Subject to Section 24 (Dispute Resolution)</strong>, and for any claim not subject to arbitration or brought to enforce an arbitration award, the state and federal courts located in South Carolina have exclusive jurisdiction, and each party submits to the personal jurisdiction and venue of those courts.</p>
+
+          <h2 class="terms-section-heading mb-10 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">26. General Provisions</h2>
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>26.1 Entire agreement.</strong> These Terms, together with the Privacy Policy and the Payment Processing Policy, each incorporated by reference, are the entire agreement between you and Knockio on their subject matter and supersede any prior or contemporaneous agreements, understandings, or representations. <strong>If there is a conflict, the Payment Processing Policy controls on payments, payment records, and payment communications; the Privacy Policy controls on the processing of personal information; and these Terms control in all other respects.</strong></p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>26.2 Severability.</strong> If any provision is held invalid or unenforceable, it will be limited or removed to the minimum extent necessary, and the remaining provisions stay in full effect.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>26.3 No waiver.</strong> Our failure to enforce any provision is not a waiver of it. A waiver is effective only if given in writing.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>26.4 Assignment.</strong> You may not assign or transfer these Terms without our prior written consent. Knockio may assign these Terms in connection with a merger, acquisition, reorganization, or sale of assets. Any attempted assignment in breach of this Section is void.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>26.5 Force majeure.</strong> Neither party is liable for any delay or failure to perform caused by events beyond its reasonable control, including natural disasters, war, terrorism, civil unrest, labor disputes, utility or internet failures, and acts of government. This does not excuse a payment obligation.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>26.6 Notices.</strong> We may give notice by email to the address on your account, or by posting within the Services. You may give notice to us at <a href="mailto:hello@knockio.com"><u>support@knockio.com</u></a>. Notice is effective when sent.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>26.7 Export and sanctions.</strong> You represent that you are not located in, and are not a national of, any country subject to comprehensive trade sanctions, and that you are not listed on any government restricted-party list. You agree to comply with applicable export control and sanctions laws.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>26.8 Independent contractors.</strong> Nothing in these Terms creates a partnership, joint venture, agency, or employment relationship between you and Knockio.</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>26.9 Headings.</strong> Headings are for convenience only and do not affect interpretation.</p>
+
+          <h2 class="terms-section-heading mb-10 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">27. Contact</h2>
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">Questions about these Terms may be directed to:</p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>Knockio, LLC</strong> 115 White Plains Rd, Pelzer, SC 29669, United States <a href="mailto:hello@knockio.com"><u>support@knockio.com</u></a></p>
+
+
+          <p class="terms-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">Billing and refund requests: <a href="mailto:payments@knockio.com"><u>Payments@knockio.com</u></a></p>
+
+
 
         </div>
       </div>

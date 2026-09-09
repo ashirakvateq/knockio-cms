@@ -1,3 +1,5 @@
+import { redirectMap } from "./data/redirects";
+
 const HOSTINGER_ORIGIN = "https://content.knockio.com";
 
 interface Env {
@@ -7,6 +9,13 @@ interface Env {
 export default {
   async fetch(request: Request, _env: Env): Promise<Response> {
     const url = new URL(request.url);
+
+    const redirectKey = url.pathname.replace(/\/+$/, "") || "/";
+    const redirectRule = redirectMap.get(redirectKey);
+    if (redirectRule) {
+      const redirectUrl = new URL(redirectRule.to, url.origin);
+      return Response.redirect(redirectUrl.toString(), redirectRule.status ?? 301);
+    }
 
     const originUrl = new URL(url.pathname + url.search, HOSTINGER_ORIGIN);
 

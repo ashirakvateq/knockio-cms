@@ -1,0 +1,286 @@
+---
+import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
+import "../../styles/payment-processing-policy.css";
+
+const title = "Payment Processing Policy | Knockio";
+const description =
+  "Read Knockio’s Payment Processing Policy to understand how payment processing, payment records, payment links, refunds, disputes, and payer communications work.";
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://knockio.com/legal/payment-processing/#webpage",
+    url: "https://knockio.com/legal/payment-processing/",
+    name: title,
+    description,
+    isPartOf: { "@id": "https://knockio.com/#website" },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://knockio.com/legal/payment-processing/#breadcrumb",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://knockio.com/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Payment Processing Policy",
+        item: "https://knockio.com/legal/payment-processing/",
+      },
+    ],
+  },
+];
+---
+
+<KnockioHomeLayout
+  title={title}
+  description={description}
+  jsonLd={jsonLd}
+  exitIntent={false}
+>
+  <main>
+    <style>
+      a {
+        all: revert !important;
+      }
+    </style>
+    <section class="payment-policy-hero">
+      <div class="my-container mx-auto">
+        <h1>Payment Processing Policy</h1>
+      </div>
+    </section>
+
+    <section class="payment-policy-content-section">
+      <div class="my-container mx-auto">
+        <article class="payment-policy-content">
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>Knockio LLC</strong></p>
+
+          <p class="payment-policy-updated"><strong>Last Updated: </strong><em>09 Sept, 2026</em><em><strong> Effective:</strong></em><em> 8 Sept, 2026 </em></p>
+
+          <h2 class="payment-policy-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">1. What this covers</h2>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">This Policy explains how payments work when you use Knockio to invoice your customers, and what Knockio is and is not responsible for.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">It forms part of the <a href="https://knockio.com/terms-and-conditions/"><u>Knockio Terms and Conditions</u></a> and is incorporated into them. Where this Policy and the Terms cover the same ground, this Policy applies to anything involving payments, payment records, and payment messages. The Terms apply to everything else.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>Words we use.</strong> "You" or "Merchant" means the business using Knockio to send invoices. "Payer" means the person or business receiving your invoice. "Number" means <a href="https://number.tech/"><u>NUMBER.tech</u></a>, the independent payment processor that handles the actual payments, a registered Payment Facilitator of KeyBank. "Report" is not used here; "Payment Record" means the information Knockio stores about an invoice, such as the amount and whether it is due, paid, overdue, voided, or refunded.</p>
+
+          <h2 class="payment-policy-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">2. Knockio is software. Knockio does not process payments.</h2>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">Knockio gives you tools to create invoices, generate payment links, send reminders, and keep track of what has been paid. <strong>The payments themselves are handled entirely by NUMBER.</strong></p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>Knockio is not</strong> a payment processor, payment facilitator, payment aggregator, money transmitter, money services business, bank, escrow agent, or debt collector.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>Knockio never:</strong></p>
+
+          <ul class="payment-policy-list mb-6 ml-6 list-disc space-y-3">
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">receives, holds, transmits, or controls your money or your Payer's money;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">authorizes, captures, settles, reverses, or refunds any payment;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">collects or stores your Payers' card numbers, security codes, or bank details;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">decides whether your payment account is approved, limited, or closed; or</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">verifies how much anyone actually owes you.</li>
+          </ul>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">Money moves between your Payer, NUMBER, and your own bank account. <strong>It never passes through Knockio.</strong></p>
+
+          <h2 class="payment-policy-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">3. Your payment account with NUMBER</h2>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">NUMBER provides payment processing to you under a separate agreement between you and NUMBER. Knockio is not a party to that agreement and has no rights or authority under it.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>How you are set up.</strong> NUMBER is a registered Payment Facilitator of KeyBank. You are boarded as a <strong>sub-merchant</strong> under NUMBER's programme, with your own merchant ID. This is not the same as having your own merchant account directly with a bank. NUMBER underwrites you, sets the terms on which you can accept payments, and carries risk to KeyBank for your activity. <strong>Please read NUMBER's sub-merchant agreement before you accept it.</strong></p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>How you get paid.</strong> Funds settle directly to the bank account you nominate.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>NUMBER can hold your funds.</strong> Under its agreement with you, <strong>NUMBER has the right to place a reserve on your account, to hold or freeze funds, and to delay funding.</strong> This can affect when, and whether, you receive money your Payers have paid. Do not treat an invoice marked paid in Knockio as money you can spend until it has reached your bank account.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>Knockio cannot step in.</strong> If NUMBER holds, freezes, delays, or reserves your funds, or limits, suspends, or closes your account, <strong>Knockio cannot reverse, appeal, or speed up that decision, and is not liable for it.</strong> Take it up with NUMBER directly.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>Closure can follow you.</strong> If NUMBER ends your account for cause, you may be reported to card industry databases kept for that purpose. That listing is made by NUMBER or the card networks, not by Knockio, and it can affect your ability to get payment processing elsewhere. Knockio has no involvement in it and no ability to change it.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>Where to ask.</strong> Questions about settlement timing, deposits, holds, reserves, funding delays, fees, underwriting, or account status go to NUMBER, not to Knockio.</p>
+
+          <h2 class="payment-policy-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">4. Payment links and payment pages</h2>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">A payment link created in Knockio is <strong>your</strong> link, running under <strong>your</strong> account with NUMBER. It is not a Knockio payment link, and nothing on it is sold by Knockio.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">When your Payer opens that link, they land on a payment page <strong>hosted and controlled by NUMBER.</strong> Knockio does not control that page (not its design, the payment methods offered, its security, its availability, or anything that goes wrong with it). Knockio's involvement ends once the link is created.</p>
+
+          <h2 class="payment-policy-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">5. What payment records mean</h2>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">Knockio stores payment records so you can track your invoicing. Those records come from two places, and they mean different things.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>Status reported by NUMBER.</strong> This is a convenience, not proof. It is not a bank statement, receipt, or evidence that money moved. <strong>If a Knockio record disagrees with NUMBER's records, NUMBER's records are correct.</strong> Status information can arrive late, twice, or not at all when there are network or system problems, so Knockio does not guarantee it is accurate, timely, or complete. An invoice marked paid means Knockio received information suggesting a payment was made, not that funds have cleared, settled, or reached you, and not that the payment cannot later be reversed.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>Status you enter yourself.</strong> You can record a payment that did not go through NUMBER — cash, cheque, or a bank transfer. <strong>That entry is your own statement, not ours.</strong> Knockio has no way to check whether such a payment was ever requested, made, or received, and does not verify it. You are responsible for its accuracy and for anything that follows from getting it wrong, including any incorrect receipt, statement, or overdue notice.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>Either way, reconcile.</strong> Check your payment activity against NUMBER's records and your own bank before relying on it for accounting, tax, or decisions about fulfilment or collections.</p>
+
+          <h2 class="payment-policy-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">6. Invoices, reminders, and messages to your customers</h2>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">Knockio can send invoices, payment links, reminders, and overdue notices to your Payers, including automatically on a schedule.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>You are the sender.</strong> These messages are sent by you, in your name, at your direction. Knockio only delivers them. Knockio is not the sender of record, is not owed anything by your Payer, and makes no statement or demand to your Payer on its own behalf.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>You control them.</strong> You decide whether they are sent, when, how often, and what they say. You can turn them off.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>You confirm you may contact these people.</strong> You confirm you have a lawful basis, and any consent the law requires, to contact each Payer at the email address, phone number, or other details you give us, and that those details are correct and belong to the intended person.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>You are responsible for compliance.</strong> That includes debt collection rules, laws on calls and text messages, email marketing laws, and consumer protection and disclosure rules. Where your Payer is an individual consumer rather than a business, more obligations may apply, and it is your job to identify and meet them.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>Knockio does not collect debts.</strong> Knockio does not assess, verify, guarantee, negotiate, settle, or enforce any amount owed, does not take assignment of any debt, and collects nothing for itself from any Payer.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>Opt-outs.</strong> If a Payer asks to stop receiving messages, or disputes an invoice, you must act on it promptly. If they contact Knockio instead, we may pass the request to you and may stop sending further messages to them, but we are not obliged to investigate or resolve it.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">Knockio may limit or stop message delivery where we reasonably believe it breaches this Policy, the Terms, or the law.</p>
+
+          <h2 class="payment-policy-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">7. Refunds, chargebacks, and disputes</h2>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>This section is about refunds to your customers. Refunds of your Knockio subscription are covered in the Terms.</strong></p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">Refunds, chargebacks, and disputes on your Payers' payments are between you, your Payer, and NUMBER, under NUMBER's terms and the card network rules.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>Knockio cannot</strong> issue or approve a refund, reverse or cancel a transaction, respond to a chargeback, or settle a dispute between you and a Payer. Knockio is not responsible for any chargeback fee, penalty, fine, or reserve charged to you.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">Marking an invoice refunded, voided, or cancelled in Knockio <strong>updates the record only. It does not move money.</strong> Action refunds with NUMBER.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">If you are a Payer, ask the business named on the invoice. Knockio cannot refund you.</p>
+
+          <h2 class="payment-policy-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">8. Card data and account security</h2>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">Your Payers enter their card or bank details directly on NUMBER's payment page. Knockio does not collect, transmit, or store card numbers, security codes, or bank account details at any time, and its systems sit outside the cardholder data environment for PCI DSS purposes.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">You remain responsible for your own PCI DSS obligations and for any payment information you handle outside Knockio.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">As under the Terms, you are responsible for keeping your Knockio login and your NUMBER account credentials secure, and for everything done using them — including payment links, records, and messages — whether or not you authorized it. Revoke and replace credentials promptly if they may have been exposed, and remove access for anyone who should no longer have it.</p>
+
+          <h2 class="payment-policy-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">9. Your responsibilities</h2>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">You are responsible for:</p>
+
+          <ul class="payment-policy-list mb-6 ml-6 list-disc space-y-3">
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">the goods or services you sell, and all customer service relating to them;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">the accuracy of every invoice and message, including amounts, currency, terms, and due dates;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">working out, collecting, reporting, and paying all applicable taxes; Knockio does none of this and gives no tax advice;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">complying with the law that applies to your business and to each transaction and message;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">complying with NUMBER's terms, acceptable use policy, prohibited business list, and the card network rules;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">everything between you and your Payers, including your own terms, privacy notices, and disputes; and</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">keeping your own records for accounting, audit, tax, and legal purposes.</li>
+          </ul>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>You may not</strong> use Knockio's payment features for anything prohibited by NUMBER, by the card network rules, or by law; to disguise or misrepresent a transaction; to collect payments for an undisclosed third party; to collect a debt you do not own or are not authorized to collect; or to send messages that are harassing, deceptive, or abusive.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">Knockio may suspend or end your access to the payment features, without notice, where we reasonably believe this Policy or the Terms have been breached, or where NUMBER, a card network, a regulator, or the law requires it.</p>
+
+          <h2 class="payment-policy-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">10. What Knockio is paid</h2>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">You pay Knockio subscription fees for the software, as set out in the Terms.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">Processing fees, interchange, chargeback and dispute fees, minimums, and reserves are set and charged by NUMBER under your agreement with them. Knockio does not set, control, or collect those amounts.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>Knockio also receives compensation from NUMBER</strong> in connection with customers who process payments through NUMBER. That compensation may be based on processing volume or on the NUMBER of customers using NUMBER. You should know three things about this:</p>
+
+          <ul class="payment-policy-list mb-6 ml-6 list-disc space-y-3">
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">It does not change Knockio's role. Knockio still never receives, holds, or controls any funds, and does not process payments.</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base"><strong>Knockio has a financial interest in you using NUMBER.</strong> Take that into account when you evaluate them.</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base"><strong>Knockio does not represent that NUMBER offers the lowest rates or the best terms</strong> for your business, and nothing Knockio says about NUMBER is a recommendation or advice. Compare them independently.</li>
+          </ul>
+
+          <h2 class="payment-policy-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">11. No warranty</h2>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">Knockio's payment features depend on NUMBER's systems and on third-party communications providers.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>Knockio does not warrant</strong> that payment links will generate, resolve, or work; that NUMBER's payment pages will be available; that any message will be delivered; or that any payment will be initiated, authorized, completed, settled, or paid out.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">If NUMBER's service, or any communications provider, is interrupted, degraded, or fails, that is <strong>not a failure of Knockio and not a breach of the Terms by Knockio.</strong></p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">As under the Terms, the payment features are provided <strong>"as is" and "as available", without warranties of any kind.</strong></p>
+
+          <h2 class="payment-policy-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">12. Limits on Knockio's liability</h2>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>To the fullest extent the law allows, and in addition to the limits in the Terms, Knockio is not liable for any loss arising from:</strong></p>
+
+          <ul class="payment-policy-list mb-6 ml-6 list-disc space-y-3">
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">anything NUMBER does or fails to do, including its negligence, breach, insolvency, or withdrawal of service;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">any payment that fails, is declined, delayed, duplicated, misdirected, incomplete, or unauthorized;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">any fraudulent or disputed transaction, or any chargeback, reversal, fine, or penalty resulting from one;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">any hold, freeze, reserve, delay, deduction, or non-payment of funds by NUMBER;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">NUMBER limiting, suspending, or closing your account, or reporting you to a card industry database;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">any error, delay, or omission in a payment record, whether it came from NUMBER or from you;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">any message sent through Knockio, including its content, timing, delivery, or non-delivery;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">anything you, a Payer, or anyone else decides or does in reliance on a payment record or a message;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">any dispute between you and a Payer; or</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">any tax, regulatory, licensing, or compliance obligation of yours.</li>
+          </ul>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>Knockio's total liability relating to payments is subject to the limits, exclusions, and monetary cap in the Terms.</strong></p>
+
+          <h2 class="payment-policy-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">13. Indemnity</h2>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">In addition to the indemnity in the Terms, you will defend, indemnify, and hold harmless Knockio and its officers, directors, employees, agents, successors, and assigns against any claim, proceeding, loss, liability, damage, fine, penalty, cost, or expense (including reasonable legal fees) arising from:</p>
+
+          <ul class="payment-policy-list mb-6 ml-6 list-disc space-y-3">
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">any claim by a Payer about a transaction, invoice, payment link, message, refund, or dispute involving you;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">any claim by NUMBER about your account, your transactions, or your breach of their terms;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">any claim or investigation by a regulator, tax authority, attorney general, card network, or similar body about your business, transactions, or messages;</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">any message sent by you or at your direction, including any alleged breach of debt collection, telephone, electronic communications, consumer protection, or data protection law; or</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base">your breach of this Policy, the Terms, or the law.</li>
+          </ul>
+
+          <h2 class="payment-policy-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">14. Data protection</h2>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>Card details.</strong> Your Payers' card and bank details are collected by NUMBER on its own pages, as an <strong>independent controller</strong> under its own privacy notice. NUMBER does not handle them for Knockio or on Knockio's instructions, and Knockio never receives them.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>Payer data in Knockio.</strong> The contact details, invoice data, payment records, and messages held in Knockio are processed by Knockio <strong>as your processor, on your instructions. You are the controller.</strong></p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>What that means for you.</strong> You are responsible for having a lawful basis to collect and give us your Payers' information, for giving them any privacy notice the law requires, for answering their data protection requests, and for the accuracy of the contact details you supply. If a Payer contacts Knockio directly, we will refer them to you.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>Your own account data</strong> (your contact, billing, and usage information) is handled by Knockio as a controller under the <a href="https://knockio.com/privacy-policy"><u>Privacy Policy</u></a>.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">A data processing agreement is available on request at <a href="mailto:support@knockio.com"><u>support@knockio.com</u></a>.</p>
+
+          <h2 class="payment-policy-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">15. If you received an invoice</h2>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">If an invoice, payment link, or reminder reached you through Knockio:</p>
+
+          <ul class="payment-policy-list mb-6 ml-6 list-disc space-y-3">
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base"><strong>The business named on the invoice is asking you to pay, not Knockio.</strong> Knockio is the software they use. Knockio is not selling you anything and you owe Knockio nothing.</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base"><strong>NUMBER processes the payment,</strong> under that business's account. Knockio never receives or holds your money.</li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base"><strong>Knockio does not store your card or bank details.</strong></li>
+            <li class="pl-2 text-[15px] leading-7 text-neutral-600 sm:text-base"><strong>Knockio has no agreement with you</strong> and cannot issue a refund, cancel a charge, settle a billing dispute, confirm what you owe, or answer questions about what you bought.</li>
+          </ul>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>Send all questions about the invoice, the amount, a refund, or your purchase to the business named on it.</strong></p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">If you think a charge is fraudulent, contact your card issuer or bank. To stop receiving messages, use the opt-out in the message or contact that business. You can also email <a href="mailto:support@knockio.com"><u>support@knockio.com</u></a> and we will pass your request on and may stop further messages to you.</p>
+
+          <h2 class="payment-policy-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">16. General</h2>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>Records when you leave.</strong> Payment records are handled as set out in the Terms and the Privacy Policy. Export what you need before your account closes. Closing your Knockio account does not close, change, or transfer your account with NUMBER — handle that with them separately.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>No advice.</strong> Nothing here is legal, tax, accounting, financial, or regulatory advice. Get your own.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>What survives.</strong> Sections 2, 3, 5, 7, 9, 10, 12, 13, 14, 15, and this Section 16 continue to apply after your account or this Policy ends, along with anything else that by its nature is meant to.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>Changes.</strong> We may update this Policy. If a change is material we will give notice through the Services or by email. Continuing to use the payment features after it takes effect means you accept it.</p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>Law.</strong> This Policy is governed by the laws of the State of South Carolina and is subject to the dispute resolution provisions in the Terms.</p>
+
+          <h2 class="payment-policy-heading mb-4 mt-10 text-2xl font-bold leading-tight text-neutral-950 sm:text-[28px]">17. Contact</h2>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base"><strong>Knockio, LLC</strong> 115 White Plains Rd, Pelzer, SC 29669, United States <a href="mailto:support@knockio.com"><u>support@knockio.com</u></a></p>
+
+          <p class="payment-policy-paragraph mb-5 text-[15px] font-normal leading-8 text-neutral-600 sm:text-base">Payment processing, settlement, holds, reserves, funding delays, fees, or account status: contact <a href="https://docs.number.tech/help/customer-support">
+              <strong>NUMBER</strong>
+            </a>
+          </p>
+          </article>
+      </div>
+    </section>
+  </main>
+</KnockioHomeLayout>

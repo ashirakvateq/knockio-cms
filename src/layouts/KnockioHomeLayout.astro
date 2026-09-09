@@ -20,6 +20,7 @@ interface Props {
   fAwsm?: boolean;
   whiteBg?: boolean;
   robots?: string;
+  exitIntent?: boolean;
 }
 
 const {
@@ -30,6 +31,7 @@ const {
   fAwsm = false,
   whiteBg = false,
   robots,
+  exitIntent = true
 } = Astro.props;
 ---
 
@@ -96,10 +98,19 @@ const {
 
     <ThirdPartyWidgets />
     <FbAnalytics />
-    <ExitIntentModal />
+    {
+      exitIntent && (
+        <ExitIntentModal />
+        )
+    }
     <script src="../scripts/home.js" ></script>
     <script src="../scripts/lp-cal-inline.js" ></script>
     <script src="../scripts/calendar-cta.js"></script>
-    <script src="../scripts/exit-intent.js"></script>
+
+        {
+      exitIntent && (
+        <script src="../scripts/exit-intent.js"></script>
+        )
+    }
   </body>
 </html>

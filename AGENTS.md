@@ -503,6 +503,23 @@ First deploy requires `bunx wrangler login`.
 
 ---
 
+## Redirects (code-based, no dashboard)
+
+All redirects live in `src/data/redirects.ts`. Add a row, commit, deploy — no Cloudflare dashboard or API access needed. They are evaluated at the top of `src/worker.ts` (before the origin proxy), so they work for both internal paths and external URLs. Matching is exact on the path (trailing slash normalized).
+
+```ts
+// src/data/redirects.ts
+export const redirects = [
+  { from: "/old-page/", to: "/new-page/", status: 301 },        // internal, permanent GET
+  { from: "/summer-sale", to: "https://partner.com/sale", status: 302 }, // external, temporary
+  { from: "/webhook-legacy", to: "https://api.knockio.com/new", status: 307 }, // POST-preserving
+];
+```
+
+`status` is **configurable per rule**: `301` permanent GET (default, SEO), `302` temporary GET, `307` temporary + preserves method/body (use for POST), `308` permanent + preserves method/body (use for POST). `Response.redirect` resolves relative and absolute `to` automatically.
+
+---
+
 ## Future: TinaCMS Integration
 
 This project will eventually integrate **TinaCMS** for content management. When that happens:

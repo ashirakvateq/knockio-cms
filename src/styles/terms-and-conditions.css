@@ -52,7 +52,7 @@
 
 .terms-section-heading {
   margin-top: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   font-size: clamp(1.5rem, 2.5vw, 1.75rem);
   font-weight: 700;
   line-height: 1.25;
@@ -77,6 +77,10 @@
   margin-bottom: 1.5rem;
   margin-left: 1.5rem;
   list-style-type: decimal;
+}
+
+.terms-list.terms-bullet-list {
+  list-style-type: disc;
 }
 
 .terms-list > li {

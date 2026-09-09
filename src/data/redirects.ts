@@ -20,9 +20,18 @@ export interface RedirectRule {
  * Matching is exact on the path (trailing slash normalized).
  */
 export const redirects: RedirectRule[] = [
-  { from: "/old-page/", to: "/new-page/", status: 301 },
-  { from: "/webhook-legacy", to: "https://api.knockio.com/new", status: 307 },
-  { from: "/summer-sale", to: "https://partner.com/sale", status: 302 },
+  { from: "/campaigns/", to: "/features/campaign-management/", status: 301 },
+  { from: "/photo-and-video/", to: "/features/photo-and-media-management/", status: 301 },
+  { from: "/route-mapping/", to: "/features/route-planning-and-dispatching/", status: 301 },
+  { from: "/knockio-roles/", to: "/features/user-management-software/", status: 301 },
+  { from: "/territories/", to: "/features/territory-management-software/", status: 301 },
+  { from: "/workflow-automation/", to: "/features/business-automation-software/", status: 301 },
+  { from: "/window-cleaning-business-software/", to: "/industry/window-cleaning-business-software/", status: 301 },
+  { from: "/job-scheduling-software/", to: "/features/business-automation-software/", status: 301 },
+  { from: "/sales-rep-tracking-software/", to: "/features/gps-tracking-software/", status: 301 },
+  { from: "/sales-rep-tracking-app/", to: "/features/gps-tracking-software/", status: 301 },
+  { from: "/salesrep-tracking-app/", to: "/features/gps-tracking-software/", status: 301 },
+  { from: "/hvac-sales-software/", to: "/hvac-sales-app-crm-software/", status: 301 },
 ];
 
 export const redirectMap = new Map<string, RedirectRule>(
