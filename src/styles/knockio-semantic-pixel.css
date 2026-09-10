@@ -1,0 +1,718 @@
+/* Knockio Semantic Pixel — modular page styles for /features/knockio-semantic-pixel/ */
+.ksp-body {
+  background: #fdfcf9;
+}
+
+.ksp-page {
+  --page: #fdfcf9;
+  --white: #ffffff;
+  --ink: #111111;
+  --muted: #4a4a4a;
+  --green: #4bae37;
+  --green-dark: #0d2b0a;
+  --soft: #f4f3f0;
+  --card: #f4f3f0;
+  --line: #e8e7e9;
+  --red: #e43126;
+  --orange: #f99300;
+  --max: 1628px;
+  --shadow: 0 10px 26px rgba(0, 0, 0, 0.09);
+  background: var(--page);
+  color: var(--ink);
+  font-family: var(--font-manrope), Manrope, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.ksp-page img {
+  display: block;
+  max-width: 100%;
+}
+
+.ksp-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ksp-page .container {
+  width: 80%;
+  max-width: 80%;
+  margin-inline: auto;
+  padding-inline: 0;
+  box-sizing: border-box;
+}
+
+.ksp-page h1,
+.ksp-page h2,
+.ksp-page h3 {
+  margin: 0;
+  font-family: var(--font-manrope), Manrope, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+}
+
+.ksp-page h1 {
+  font-size: 60px;
+}
+
+.ksp-page h2 {
+  font-size: 55px;
+}
+
+.ksp-page h3 {
+  font-size: 21px;
+}
+
+.ksp-page p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+    .ksp-page .button {
+      min-width: 188px;
+      min-height: 58px;
+      padding: 0 28px;
+      border-radius: 7px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-manrope), Manrope, Arial, sans-serif;
+      font-size: 19px;
+      font-weight: 700;
+    }
+
+    .ksp-page .button-light {
+      color: white;
+      background: var(--green);
+    }
+
+    .ksp-page .button-dark {
+      color: white;
+      background: #04841b;
+    }
+
+    .ksp-page .button-pill {
+      min-width: 250px;
+      min-height: 60px;
+      border-radius: 999px;
+      background: var(--green);
+      color: white;
+    }
+
+    .ksp-page .tick {
+      width: 22px;
+      height: 22px;
+      flex: 0 0 22px;
+      color: var(--green);
+      display: inline-grid;
+      place-items: center;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    /* SECTION 1 — HERO (aligned with storm-restoration storm-reveal / hero-section) */
+    .ksp-page .hero {
+      min-height: 0;
+      padding: 0;
+      background: var(--page);
+      overflow-x: clip;
+    }
+
+    .ksp-body .hero-section,
+    .ksp-page .hero-section {
+      width: 80%;
+      max-width: 1600px;
+      margin-inline: auto;
+      box-sizing: border-box;
+    }
+
+    .ksp-page .hero-copy {
+      position: relative;
+      z-index: 2;
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    .ksp-page .hero-copy > a {
+      max-width: 100%;
+    }
+
+    .ksp-page .hero-copy > a img {
+      display: block;
+      width: 14rem;
+      max-width: min(100%, 14rem);
+      height: auto;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 640px) {
+      .ksp-page .hero-copy > a img {
+        width: 18rem;
+        max-width: min(100%, 18rem);
+      }
+    }
+
+    @media (min-width: 1280px) {
+      .ksp-page .hero-copy > a img {
+        width: 20rem;
+        max-width: min(100%, 20rem);
+      }
+    }
+
+    .ksp-page .hero h1.storm-hero-heading {
+      max-width: 100%;
+      margin: 0 0 1.25rem;
+      font-size: clamp(2.25rem, 5vw, 3rem);
+      font-weight: 800;
+      color: #1e1d1a;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      overflow-wrap: anywhere;
+    }
+
+    .ksp-page .hero h1.storm-hero-heading .text-primary-600,
+    .ksp-page .hero h1.storm-hero-heading .green {
+      color: var(--green);
+    }
+
+    .ksp-page .hero-intro {
+      max-width: min(40rem, 100%);
+      margin-top: 0;
+      margin-inline: 0;
+      overflow-wrap: anywhere;
+    }
+
+    @media (max-width: 1023px) {
+      .ksp-page .hero-intro {
+        margin-inline: auto;
+      }
+    }
+
+    .ksp-page .hero-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 2rem 0 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 1.5rem;
+      row-gap: 0.85rem;
+      max-width: 100%;
+    }
+
+    @media (max-width: 1023px) {
+      .ksp-page .hero-bullets {
+        grid-template-columns: 1fr;
+        margin-inline: auto;
+        max-width: 24rem;
+        text-align: left;
+      }
+    }
+
+    .ksp-page .hero-bullets li {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    .ksp-page .hero-actions {
+      margin-bottom: 0;
+    }
+
+    .ksp-page .hero-actions a {
+      min-width: 0;
+      width: 100%;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    @media (min-width: 640px) {
+      .ksp-page .hero-actions a {
+        width: auto;
+      }
+    }
+
+    .ksp-page .hero-note {
+      max-width: min(34rem, 100%);
+      margin: 1.75rem 0 0;
+      color: #7a7872;
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    .ksp-page .hero-visual {
+      align-self: end;
+      margin-bottom: 0;
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    .ksp-page .hero-visual img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      margin-inline: auto;
+      display: block;
+    }
+
+    .ksp-page /* SECTION 3 — PROBLEMS */
+    .problems {
+      min-height: 1140px;
+      padding-top: 100px;
+      background: var(--page);
+    }
+
+    .ksp-page .problems-header {
+      max-width: 1000px;
+      margin: 0 auto 70px;
+      text-align: center;
+    }
+
+    .ksp-page .problems-header h2 {
+      max-width: 900px;
+      margin-inline: auto;
+    }
+
+    .ksp-page .problems-header p {
+      max-width: 1000px;
+      margin: 34px auto 0;
+    }
+
+    .ksp-page .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      align-items: stretch;
+    }
+
+    .ksp-page .problem-card {
+      background: #f4f3f0;
+      border-radius: 20px;
+      overflow: hidden;
+      min-height: 710px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 16px rgba(0,0,0,.035);
+    }
+
+    .ksp-page .problem-copy {
+      padding: 28px 28px 20px;
+    }
+
+    .ksp-page .problem-copy.bottom {
+      order: 2;
+      padding-top: 22px;
+    }
+
+    .ksp-page .problem-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .ksp-page .problem-title img {
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+    }
+
+    .ksp-page .problem-card p {
+      font-size: 18px;
+      letter-spacing: .02em;
+      line-height: 1.5;
+    }
+
+    .ksp-page .problem-visual {
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .ksp-page .problem-visual.top {
+      order: 1;
+      align-items: flex-start;
+    }
+
+    .ksp-page .problem-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .ksp-page /* SECTION 4 + 6 — FULL WIDTH GREEN BANDS */
+    .green-band {
+      height: 428px;
+      background: var(--green-dark);
+      color: white;
+      display: grid;
+      place-items: center;
+      text-align: center;
+    }
+
+    .ksp-page .green-band .eyebrow {
+      margin-bottom: 38px;
+      font-family: var(--font-manrope), Manrope, Arial, sans-serif;
+      font-size: 21px;
+      font-weight: 700;
+    }
+
+    .ksp-page .green-band h2 {
+      color: white;
+      margin-bottom: 17px;
+    }
+
+    .ksp-page .green-band p {
+      color: white;
+      font-size: 21px;
+      margin-bottom: 60px;
+    }
+
+    .ksp-page /* SECTION 5 — MANAGERS + REPS */
+    .audiences {
+      min-height: 1945px;
+      padding-top: 218px;
+      padding-bottom: 165px;
+      background: var(--page);
+    }
+
+    .ksp-page .audience-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 92px;
+      align-items: center;
+    }
+
+    .ksp-page .audience-row + .audience-row {
+      margin-top: 190px;
+    }
+
+    .ksp-page .audience-label {
+      color: var(--green);
+      font-family: var(--font-manrope), Manrope, Arial, sans-serif;
+      font-size: 21px;
+      margin-bottom: 35px;
+    }
+
+    .ksp-page .audience-copy h2 {
+      margin-bottom: 30px;
+    }
+
+    .ksp-page .audience-copy > p {
+      max-width: 760px;
+      margin-bottom: 50px;
+    }
+
+    .ksp-page .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 48px;
+      display: grid;
+      gap: 26px;
+    }
+
+    .ksp-page .feature-list li {
+      display: grid;
+      grid-template-columns: 25px 1fr;
+      gap: 13px;
+    }
+
+    .ksp-page .feature-list strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 3px;
+    }
+
+    .ksp-page .feature-list span {
+      display: block;
+      font-size: 16px;
+      line-height: 1.45;
+    }
+
+    .ksp-page .audience-visual img {
+      width: 100%;
+      max-width: 790px;
+      margin-inline: auto;
+    }
+
+    .ksp-page .knock-paid {
+      padding-top: 80px;
+      padding-bottom: 80px;
+      background: var(--page);
+      text-align: center;
+    }
+
+    .ksp-page .knock-paid .section-label {
+      color: var(--green);
+      font-family: var(--font-manrope), Manrope, Arial, sans-serif;
+      font-size: 21px;
+      margin-bottom: 32px;
+    }
+
+    .ksp-page .knock-paid h2 {
+      max-width: 1000px;
+      margin-inline: auto;
+    }
+
+    .ksp-page .knock-paid .intro {
+      margin-top: 34px;
+      font-size: 18px;
+    }
+
+    .ksp-page .knock-paid .keyword-line {
+      margin-top: 18px;
+      font-size: 18px;
+    }
+
+    .ksp-page .stage-grid {
+      max-width: 1500px;
+      margin: 64px auto 0;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 38px;
+    }
+
+    .ksp-page .stage-card {
+      min-height: 268px;
+      padding: 34px 34px 30px;
+      background: #f4f3f0;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .ksp-page .stage-card:nth-child(1) { grid-column: 1 / 3; }
+    .ksp-page .stage-card:nth-child(2) { grid-column: 3 / 5; }
+    .ksp-page .stage-card:nth-child(3) { grid-column: 5 / 7; }
+    .ksp-page .stage-card:nth-child(4) { grid-column: 2 / 4; }
+    .ksp-page .stage-card:nth-child(5) { grid-column: 4 / 6; }
+
+    .ksp-page .stage-card img {
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+
+    .ksp-page .stage-card h3 {
+      font-family: var(--font-manrope), Manrope, Arial, sans-serif;
+      font-size: 27px;
+      margin-bottom: 18px;
+    }
+
+    .ksp-page .stage-card p {
+      max-width: 390px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 1350px) {
+      .ksp-page .container {
+        width: 90%;
+        max-width: 90%;
+      }
+
+      .ksp-page h1:not(.storm-hero-heading) {
+        font-size: 52px;
+      }
+
+      .ksp-page h2 {
+        font-size: 47px;
+      }
+
+      .ksp-page .problem-grid {
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .ksp-page .container {
+        width: 92%;
+        max-width: 92%;
+      }
+
+      .ksp-page .audience-row {
+        grid-template-columns: 1fr;
+      }
+
+      .ksp-page .hero h1.storm-hero-heading br {
+        display: none;
+      }
+
+      .ksp-page .hero h1.storm-hero-heading span {
+        margin-inline: 0.5rem;
+      }
+
+      .ksp-page .problem-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .ksp-page .audiences {
+        min-height: auto;
+      }
+
+      .ksp-page .audience-row + .audience-row {
+        margin-top: 120px;
+      }
+
+      .ksp-page .audience-row.reps .audience-visual {
+        order: 2;
+      }
+
+      .ksp-page .stage-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .ksp-page .stage-card:nth-child(n) {
+        grid-column: auto;
+      }
+
+      .ksp-page .knock-paid {
+        padding-top: 64px;
+        padding-bottom: 64px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .ksp-page .container {
+        width: 92%;
+        max-width: 92%;
+      }
+
+      .ksp-page h1:not(.storm-hero-heading) {
+        font-size: 42px;
+      }
+
+      .ksp-page h2 {
+        font-size: 38px;
+      }
+
+      .ksp-page p {
+        font-size: 16px;
+      }
+
+      .ksp-page .hero-bullets {
+        grid-template-columns: 1fr;
+      }
+
+      .ksp-page .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .ksp-page .problem-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ksp-page .green-band {
+        height: auto;
+        min-height: 360px;
+        padding: 70px 20px;
+      }
+
+      .ksp-page .stage-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ksp-page .knock-paid {
+        padding-top: 48px;
+        padding-bottom: 48px;
+      }
+    }
+
+.ksp-body .calender-section {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  text-align: center;
+}
+
+.ksp-body .calender-section .section-heading {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.ksp-body .calender-section .section-copy {
+  display: block;
+  width: 100%;
+  max-width: 42rem;
+  margin-inline: auto;
+  margin-top: 1.125rem;
+  text-align: center;
+}
+
+/* Pricing intro — force centered heading/copy (roofing #landing-pricing rules can leave them looking left) */
+.ksp-body #landing-pricing > .my-container > div:first-child {
+  width: 100%;
+  text-align: center;
+}
+
+.ksp-body #landing-pricing > .my-container > div:first-child > h2,
+.ksp-body #landing-pricing > .my-container > div:first-child > p {
+  display: block;
+  width: 100%;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.ksp-body #landing-pricing > .my-container > div:first-child > h2 {
+  max-width: 56rem;
+}
+
+.ksp-body #landing-pricing > .my-container > div:first-child > p {
+  max-width: 48rem;
+}
+
+.ksp-body #landing-pricing .my-container {
+  width: 80%;
+  max-width: 80%;
+}
+
+/* Content width for calendar / pricing / FAQ */
+.ksp-body .my-container {
+  width: 80%;
+  max-width: 80%;
+  margin-inline: auto;
+  padding-inline: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .ksp-body .hero-section,
+  .ksp-page .hero-section {
+    width: 92%;
+    max-width: 92%;
+  }
+
+  .ksp-body .calender-section {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .ksp-body .my-container {
+    width: 92%;
+    max-width: 92%;
+  }
+
+  .ksp-body #landing-pricing .my-container {
+    width: 92%;
+    max-width: 92%;
+  }
+
+  .ksp-body .calender-section .section-copy {
+    max-width: 100%;
+  }
+}
+  

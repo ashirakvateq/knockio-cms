@@ -281,13 +281,6 @@ function initCalInline() {
   const target = document.getElementById('my-cal-inline');
   if (!target) return;
 
-  // Landing pages render their content as direct body sections. The exact
-  // boundary after the second section is the established Cal.com load gate.
-  const topLevelSections = Array.from(document.body.children).filter(
-    (element) => element.tagName === 'SECTION',
-  );
-  const secondSection = topLevelSections[2];
-
   // Booking CTAs must beat the normal anchor jump so the calendar begins
   // loading as soon as a visitor asks for it.
   document
@@ -302,13 +295,25 @@ function initCalInline() {
     return;
   }
 
-  if (!secondSection) return;
+  // Landing pages usually render sections as direct body children. Some pages
+  // wrap content (e.g. .ksp-page); fall back to document-order sections so the
+  // same "after third section" gate still works.
+  const topLevelSections = Array.from(document.body.children).filter(
+    (element) => element.tagName === 'SECTION',
+  );
+  const nestedSections = Array.from(document.querySelectorAll('body section'));
+  const gateSection = topLevelSections[2] || nestedSections[2] || target.closest('section') || target;
 
   const boundary = document.createElement('span');
   boundary.setAttribute('aria-hidden', 'true');
   boundary.style.cssText =
     'display:block;height:1px;width:1px;margin-top:-1px;overflow:hidden;';
-  secondSection.after(boundary);
+
+  if (gateSection.parentNode) {
+    gateSection.after(boundary);
+  } else {
+    target.before(boundary);
+  }
 
   let observer;
   const startCalendar = () => {
@@ -324,7 +329,7 @@ function initCalInline() {
     observer = new IntersectionObserver((entries) => {
       if (!entries.some((entry) => entry.isIntersecting)) return;
       startCalendar();
-    }, { threshold: 0.01 });
+    }, { rootMargin: '200px 0px', threshold: 0.01 });
     observer.observe(boundary);
   } else {
     // Old-browser fallback: use scroll, not wheel, so touch, keyboard, and
