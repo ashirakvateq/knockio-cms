@@ -32,6 +32,8 @@ export const redirects: RedirectRule[] = [
   { from: "/sales-rep-tracking-app/", to: "/features/gps-tracking-software/", status: 301 },
   { from: "/salesrep-tracking-app/", to: "/features/gps-tracking-software/", status: 301 },
   { from: "/hvac-sales-software/", to: "/hvac-sales-app-crm-software/", status: 301 },
+  { from: "/case-study/", to: "/case-studies/modern-roofing/", status: 301 },
+  { from: "/case-study/modern-roofing/", to: "/case-studies/modern-roofing/", status: 301 },
 ];
 
 export const redirectMap = new Map<string, RedirectRule>(
