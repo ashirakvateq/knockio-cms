@@ -1,4 +1,4 @@
-export const knockioSemanticsPixelFaqs = [
+export const DoorToDoorSalesAppFaqs = [
   {
     question: "Will my reps actually use it?",
     answer:

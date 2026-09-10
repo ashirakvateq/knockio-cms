@@ -1,7 +1,7 @@
 ---
 import LandingPagesLayout from "../layouts/LandingPagesLayout.astro";
 import CalendarLoadingCopy from "../components/CalendarLoadingCopy.astro";
-import "../styles/knockio-semantic-pixel.css";
+import "../styles/door-to-door-sales-app.css";
 import "../styles/roofing.css";
 import {
   ArrowRight,
@@ -12,7 +12,7 @@ import {
   Plus,
 } from "lucide-astro";
 import { stormTrustLogos } from "../data/stormRestoration";
-import { knockioSemanticsPixelFaqs } from "../data/knockioSemanticsPixel";
+import { DoorToDoorSalesAppFaqs } from "../data/DoorToDoorSalesApp";
 
 const title = "Knockio Door to Door Sales App | Semantic Pixel";
 const description =
@@ -53,7 +53,7 @@ const jsonLd = [
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "@id": "https://knockio.com/knockio-semantic-pixel/#faq",
-    mainEntity: knockioSemanticsPixelFaqs.map(
+    mainEntity: DoorToDoorSalesAppFaqs.map(
       (faq: { question: string; answer: string }) => ({
         "@type": "Question",
         name: faq.question,
@@ -117,7 +117,7 @@ const jsonLd = [
             <li><span class="tick">✓</span><span>Lead proximity on every door</span></li>
             <li><span class="tick">✓</span><span>Estimate built in the field</span></li>
             <li><span class="tick">✓</span><span>Signed on the porch</span></li>
-            <li><span class="tick">✓</span><span>Invoice and payment on the same record</span></li>
+            <li><span class="tick">✓</span><span>Invoice/payment on the same record</span></li>
           </ul>
 
           <div
@@ -187,7 +187,7 @@ const jsonLd = [
           style="--reveal-delay: 120ms"
         >
           <img
-            src="/assets/cfw/knockio-semantic-pixel-knockio-field-sales-product-visual-f1cf47c102.png"
+            src="/assets/cfw/door-to-door-sales-hero-image.webp"
             alt="Knockio field sales product visual"
             width="1780"
             height="1200"
@@ -246,7 +246,7 @@ const jsonLd = [
           <article class="problem-card">
             <div class="problem-copy">
               <div class="problem-title">
-                <img src="/assets/cfw/knockio-semantic-pixel-pixel-8-4846cde98c.png" alt="" loading="lazy" decoding="async">
+                <img src="/assets/cfw/door-to-door-icon1.webp" alt="" loading="lazy" decoding="async">
                 <h3>The Lead Lives on one Phone</h3>
               </div>
               <p>
@@ -255,17 +255,17 @@ const jsonLd = [
               </p>
             </div>
             <div class="problem-visual">
-              <img src="/assets/cfw/knockio-semantic-pixel-notes-app-showing-a-lead-stored-on-one-phone-84db8de3dc.png" alt="Notes app showing a lead stored on one phone" loading="lazy" decoding="async">
+              <img src="/assets/cfw/door-to-door-sales-img1.webp" alt="Notes app showing a lead stored on one phone" loading="lazy" decoding="async">
             </div>
           </article>
 
           <article class="problem-card">
             <div class="problem-visual top">
-              <img src="/assets/cfw/knockio-semantic-pixel-map-showing-two-reps-at-the-same-house-025afc222c.png" alt="Map showing two reps at the same house" loading="lazy" decoding="async">
+              <img src="/assets/cfw/door-to-door-sales-img2.webp" alt="Map showing two reps at the same house" loading="lazy" decoding="async">
             </div>
             <div class="problem-copy bottom">
               <div class="problem-title">
-                <img src="/assets/cfw/knockio-semantic-pixel-pixel-11-c2ba6d96d1.png" alt="" loading="lazy" decoding="async">
+                <img src="/assets/cfw/door-to-door-icon2.webp" alt="" loading="lazy" decoding="async">
                 <h3>Two reps, one house</h3>
               </div>
               <p>
@@ -278,7 +278,7 @@ const jsonLd = [
           <article class="problem-card">
             <div class="problem-copy">
               <div class="problem-title">
-                <img src="/assets/cfw/knockio-semantic-pixel-pixel-12-cec40f8bf2.png" alt="" loading="lazy" decoding="async">
+                <img src="/assets/cfw/door-to-door-icon3.webp" alt="" loading="lazy" decoding="async">
                 <h3>The follow-up nobody owns</h3>
               </div>
               <p>
@@ -286,17 +286,17 @@ const jsonLd = [
               </p>
             </div>
             <div class="problem-visual">
-              <img src="/assets/cfw/knockio-semantic-pixel-team-group-showing-an-unanswered-follow-up-49e131f0af.png" alt="Team group showing an unanswered follow-up" loading="lazy" decoding="async">
+              <img src="/assets/cfw/door-to-door-sales-img3.webp" alt="Team group showing an unanswered follow-up" loading="lazy" decoding="async">
             </div>
           </article>
 
           <article class="problem-card">
             <div class="problem-visual top">
-              <img src="/assets/cfw/knockio-semantic-pixel-estimate-sent-two-days-after-the-knock-7f12342ff3.png" alt="Estimate sent two days after the knock" loading="lazy" decoding="async">
+              <img src="/assets/cfw/door-to-door-sales-img4.webp" alt="Estimate sent two days after the knock" loading="lazy" decoding="async">
             </div>
             <div class="problem-copy bottom">
               <div class="problem-title">
-                <img src="/assets/cfw/knockio-semantic-pixel-pixel-15-00c61edeef.png" alt="" loading="lazy" decoding="async">
+                <img src="/assets/cfw/door-to-door-icon4.webp" alt="" loading="lazy" decoding="async">
                 <h3>The estimate that took two days</h3>
               </div>
               <p>
@@ -369,13 +369,13 @@ const jsonLd = [
           </div>
 
           <div class="audience-visual">
-            <img src="/assets/cfw/knockio-semantic-pixel-knockio-territory-manager-dashboard-ff53affb83.png" alt="Knockio territory manager dashboard" loading="lazy" decoding="async">
+            <img src="/assets/cfw/door-to-door-sales-img5.webp" alt="Knockio territory manager dashboard" loading="lazy" decoding="async">
           </div>
         </article>
 
         <article class="audience-row reps">
           <div class="audience-visual">
-            <img src="/assets/cfw/knockio-semantic-pixel-knockio-rep-mobile-lead-logging-interface-8d4d32262b.png" alt="Knockio rep mobile lead logging interface" loading="lazy" decoding="async">
+            <img src="/assets/cfw/door-to-door-sales-img6.webp" alt="Knockio rep mobile lead logging interface" loading="lazy" decoding="async">
           </div>
 
           <div class="audience-copy">
@@ -505,6 +505,7 @@ const jsonLd = [
         </div>
       </div>
     </section>
+  </div>
 
     <section class="calender-section">
       <div class="my-container">
@@ -552,18 +553,16 @@ const jsonLd = [
   
     <section
       id="landing-pricing"
-      class="pricing-section relative z-10 py-20 max-xl:py-16 max-lg:py-14 mt-10"
+      class="pricing-section relative z-10 py-20 max-xl:py-16 max-lg:py-14"
     >
       <div class="my-container">
         <div class="mb-10 text-center max-md:mb-7">
           <h2
-            class="mx-auto mb-4 w-full max-w-4xl text-center text-[56px] font-bold leading-tight text-neutral-900 max-2xl:text-5xl max-xl:text-4xl max-md:text-3xl"
+            class="mx-auto mb-4 max-w-3xl text-[56px] font-bold leading-tight text-neutral-900 max-2xl:text-5xl max-xl:text-4xl max-md:text-3xl"
           >
             Straightforward pricing. No surprises.
           </h2>
-          <p
-            class="mx-auto w-full max-w-3xl text-center text-lg text-neutral-600 max-xl:text-base"
-          >
+          <p class="mx-auto max-w-2xl text-lg text-neutral-600 max-xl:text-base">
             Choose the tools your team needs today, or combine your entire
             field-sales and service operation in one connected platform.
           </p>
@@ -1413,7 +1412,7 @@ const jsonLd = [
   
         <div class="faq-container space-y-4">
           {
-            knockioSemanticsPixelFaqs.map(
+            DoorToDoorSalesAppFaqs.map(
               (faq: { question: string; answer: string }, index: number) => (
                 <details
                   class="faq-item rounded-2xl border border-slate-200 bg-white transition"
@@ -1439,7 +1438,5 @@ const jsonLd = [
         </div>
       </div>
     </section>
-
-  </div>
 
 </LandingPagesLayout>

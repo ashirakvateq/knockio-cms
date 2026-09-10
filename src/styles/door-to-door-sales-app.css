@@ -1,6 +1,8 @@
 /* Knockio Semantic Pixel — modular page styles for /features/knockio-semantic-pixel/ */
 .ksp-body {
   background: #fdfcf9;
+  font-family: var(--font-manrope), Manrope, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 .ksp-page {
@@ -214,7 +216,7 @@
       display: flex;
       align-items: flex-start;
       gap: 9px;
-      font-size: 1rem;
+      font-size: 0.95rem;
       line-height: 1.4;
     }
 
@@ -293,7 +295,7 @@
       background: #f4f3f0;
       border-radius: 20px;
       overflow: hidden;
-      min-height: 710px;
+      max-height: 565px;
       display: flex;
       flex-direction: column;
       box-shadow: 0 4px 16px rgba(0,0,0,.035);
@@ -343,7 +345,7 @@
     .ksp-page .problem-visual img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      /* object-fit: cover; */
       object-position: center top;
     }
 
@@ -628,6 +630,10 @@
         padding-top: 48px;
         padding-bottom: 48px;
       }
+
+      .ksp-page .problem-card {
+        max-height: 665px;
+      }
     }
 
 .ksp-body .calender-section {
@@ -653,31 +659,107 @@
   text-align: center;
 }
 
-/* Pricing intro — force centered heading/copy (roofing #landing-pricing rules can leave them looking left) */
-.ksp-body #landing-pricing > .my-container > div:first-child {
-  width: 100%;
+/* Pricing — match hvac-field-service-software / canvassing pricing typography */
+#landing-pricing {
+  padding: 4rem 1rem;
+  background-color: var(--color-paper, #f4f3f0);
+  font-family: var(--font-manrope), Manrope, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 768px) {
+  #landing-pricing {
+    padding: 5rem 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  #landing-pricing {
+    padding: 0 1rem 6rem;
+  }
+}
+
+.ksp-body #landing-pricing .my-container,
+#landing-pricing .my-container {
+  width: min(90%, 1500px);
+  max-width: 1500px;
+  margin-inline: auto;
+  padding-inline: 0;
+}
+
+#landing-pricing h2,
+#landing-pricing h3,
+#landing-pricing h4 {
+  font-family: var(--font-manrope), Manrope, Arial, sans-serif;
+  letter-spacing: -0.025em;
+  padding: 0;
+}
+
+#landing-pricing h2 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.25;
   text-align: center;
 }
 
-.ksp-body #landing-pricing > .my-container > div:first-child > h2,
-.ksp-body #landing-pricing > .my-container > div:first-child > p {
-  display: block;
-  width: 100%;
+#landing-pricing h3 {
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+#landing-pricing h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+#landing-pricing > .my-container > div:first-child {
+  text-align: center;
+}
+
+#landing-pricing > .my-container > div:first-child > p {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.625;
   margin-inline: auto;
   text-align: center;
 }
 
-.ksp-body #landing-pricing > .my-container > div:first-child > h2 {
-  max-width: 56rem;
+#landing-pricing .kio-pricing-card {
+  font-family: var(--font-manrope), Manrope, Arial, sans-serif;
 }
 
-.ksp-body #landing-pricing > .my-container > div:first-child > p {
-  max-width: 48rem;
+#landing-pricing .kio-pricing-card p,
+#landing-pricing .kio-pricing-card li,
+#landing-pricing .kio-pricing-card span,
+#landing-pricing .kio-pricing-card button,
+#landing-pricing .kio-pricing-card a {
+  font-family: inherit;
 }
 
-.ksp-body #landing-pricing .my-container {
-  width: 80%;
-  max-width: 80%;
+@media (max-width: 1535px) {
+  #landing-pricing h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 1279px) {
+  #landing-pricing h2 {
+    font-size: 2.25rem;
+  }
+
+  #landing-pricing h3 {
+    font-size: 1.5rem;
+  }
+
+  #landing-pricing > .my-container > div:first-child > p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  #landing-pricing h2 {
+    font-size: 1.875rem;
+  }
 }
 
 /* Content width for calendar / pricing / FAQ */
@@ -706,9 +788,10 @@
     max-width: 92%;
   }
 
-  .ksp-body #landing-pricing .my-container {
-    width: 92%;
-    max-width: 92%;
+  .ksp-body #landing-pricing .my-container,
+  #landing-pricing .my-container {
+    width: min(94%, 1500px);
+    max-width: 1500px;
   }
 
   .ksp-body .calender-section .section-copy {
