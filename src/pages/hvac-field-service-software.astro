@@ -1,0 +1,1068 @@
+---
+import LandingPagesLayout from '../layouts/LandingPagesLayout.astro';
+import CalendarLoadingCopy from '../components/CalendarLoadingCopy.astro';
+import '../styles/hvac-field-service-software.css';
+import {
+  ArrowDown,
+  ArrowRight,
+  Boxes,
+  Building2,
+  CalendarDays,
+  CalendarX,
+  ChartLine,
+  Check,
+  CheckCircle,
+  CheckCircle2,
+  Eye,
+  FileSignature,
+  Map,
+  Minus,
+  Phone,
+  Plus,
+  Shield,
+  UserRound,
+} from 'lucide-astro';
+import {
+  assetBase,
+  assetBaseGlob,
+  faqs,
+  featureCards,
+  fullStackItems,
+  platformColumns,
+  pricingPlans,
+  stats,
+  trustLogos,
+} from '../data/hvacFieldServiceSoftware';
+
+const title = 'HVAC Field Service Software | Knockio';
+const description =
+  'Dispatching is not the hard part. Keeping the whole job together is. Knockio puts scheduling, dispatch, route planning, work orders, invoicing, and payment in one place, from the booked call to the paid invoice.';
+const currentYear = new Date().getFullYear();
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://knockio.com/#organization',
+      name: 'Knockio',
+      url: 'https://knockio.com/',
+      logo: 'https://knockio.com/assets/canvassing-app/knockio-logo.webp',
+      sameAs: [
+        'https://www.facebook.com/knockioapp',
+        'https://www.linkedin.com/company/knockio',
+        'https://x.com/knockioapp',
+        'https://www.youtube.com/@knockioapp',
+      ],
+    },
+    {
+      '@type': 'SoftwareApplication',
+      '@id': 'https://knockio.com/hvac-field-service-software/#software',
+      name: 'Knockio HVAC Field Service Software',
+      applicationCategory: 'BusinessApplication',
+      operatingSystem: 'Web, iOS, Android',
+      description,
+      image: 'https://knockio.com/assets/canvassing-app/hero-img-new-1280.webp',
+      brand: { '@id': 'https://knockio.com/#organization' },
+      offers: pricingPlans.map((plan) => ({
+        '@type': 'Offer',
+        name: plan.title,
+        price: plan.price.replace('$', ''),
+        priceCurrency: 'USD',
+        category: 'subscription',
+      })),
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://knockio.com/hvac-field-service-software/#faq',
+      mainEntity: faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer,
+        },
+      })),
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://knockio.com/hvac-field-service-software/#breadcrumb',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://knockio.com/',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'HVAC Field Service Software',
+          item: 'https://knockio.com/hvac-field-service-software/',
+        },
+      ],
+    },
+  ],
+};
+---
+
+<LandingPagesLayout
+  title={title}
+  description={description}
+  ogImage={`${assetBase}/hero-img-new-1280.webp`}
+  bodyClass="canvassing-page"
+  jsonLd={jsonLd}
+  robots="noindex, follow"
+  noHeader
+  preloadImages={[
+    {
+      href: `${assetBase}/hero-img-new-1280.webp`,
+      imagesrcset: `${assetBase}/hero-img-new-1280.webp 480w, ${assetBase}/hero-img-new-1280.webp 1280w`,
+      imagesizes: '(max-width: 767px) 92vw, 56vw',
+    },
+    { href: `${assetBase}/green-name-640.webp` },
+  ]}
+>
+  <!-- <section class="canvassing-hero pt-8 md:pt-12 xl:pt-16"> -->
+  <section class="storm-hero">
+    <div
+      class="hero-section grid items-center gap-10 pt-[50px] lg:grid-cols-[0.85fr_1.15fr]"
+    >
+      <div class="reveal-up max-lg:text-center">
+        <a href="/" aria-label="Knockio home" class="mb-6 inline-block">
+          <img
+            src="/assets/cfw/green-name-640.webp"
+            alt="Knockio"
+            width="1280"
+            height="193"
+            class="h-auto w-56 sm:w-72 xl:w-80"
+            decoding="async"
+          />
+        </a>
+
+        <h1 class="hero-h1">
+          HVAC Field Service Software That Runs the Whole Job
+        </h1>
+
+        <p class="hero-subtitle">
+          {description}
+        </p>
+
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row max-lg:justify-center">
+          <a
+            href="#landing-pricing"
+            class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary-500 px-6 py-4 text-base font-bold text-white shadow-lg shadow-primary-500/25 transition hover:bg-primary-600 hover:shadow-primary-500/35"
+          >
+            Get Started
+            <ArrowRight size={18} aria-hidden="true" />
+          </a>
+          <a
+            href="#landing-calender"
+            class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary-500 px-6 py-4 text-base font-bold text-white shadow-lg shadow-primary-500/25 transition hover:bg-primary-600 hover:shadow-primary-500/35"
+          >
+            Book a Free Demo
+            <ArrowRight size={18} aria-hidden="true" />
+          </a>
+        </div>
+
+        <ul
+          class="hero-checklist mt-7 space-y-3 text-left max-lg:mx-auto max-lg:max-w-xl"
+        >
+          <li class="flex items-start gap-3">
+            <CheckCircle2
+              class="mt-1 shrink-0 text-primary-500"
+              size={20}
+              aria-hidden="true"
+            />
+            <span
+              >No contract, Cancel anytime or book a demo if you'd like a
+              walkthrough first.</span
+            >
+          </li>
+        </ul>
+
+        <div class="mt-7 flex flex-wrap gap-4 max-lg:justify-center mb-4">
+          <a
+            href="https://play.google.com/store/apps/details?id=com.knockio.crm&hl=en"
+            target="_blank"
+            rel="noopener"
+            aria-label="Download Knockio on Google Play"
+            class="shadow-md transition hover:opacity-90"
+          >
+            <img
+              src={`${assetBase}/google-play-button.webp`}
+              alt="Get it on Google Play"
+              width="520"
+              height="154"
+              class="h-auto w-36 xl:w-44 lg:w-[145px]"
+              loading="eager"
+              decoding="async"
+            />
+          </a>
+          <a
+            href="https://apps.apple.com/us/app/knockio-field-service-crm/id6756485440"
+            target="_blank"
+            rel="noopener"
+            aria-label="Download Knockio on the App Store"
+            class="shadow-md transition hover:opacity-90"
+          >
+            <img
+              src={`${assetBase}/apple-store-button.webp`}
+              alt="Download on the App Store"
+              width="520"
+              height="154"
+              class="h-auto w-36 xl:w-44 lg:w-[145px]"
+              loading="eager"
+              decoding="async"
+            />
+          </a>
+        </div>
+      </div>
+
+      <div class="reveal-up hero-img-wrap" style="--reveal-delay: 120ms">
+        <picture>
+          <source
+            srcset={`${assetBase}/hvac-field-service-software-hero-image.webp`}
+            media="(max-width: 767px)"
+          />
+          <img
+            src={`${assetBase}/hvac-field-service-software-hero-image.webp`}
+            alt="Knockio canvassing dashboard and mobile field app screens"
+            width="1280"
+            height="1077"
+            fetchpriority="high"
+            loading="eager"
+            decoding="async"
+            class="mx-auto h-auto w-full max-w-5xl"
+          />
+        </picture>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="trusted-heading" class="trust-section">
+    <div class="my-container text-center">
+      <h2 id="trusted-heading">
+        Trusted by 1,000+ field sales teams from Roofing and Solar to Pest
+        Control, HVAC, and beyond.
+      </h2>
+      <div class="trust-logos">
+        {
+          trustLogos.map((logo) => (
+            <img
+              class="trust-logo"
+              src={logo.src}
+              alt={logo.alt}
+              width="139"
+              height="56"
+              loading="lazy"
+              decoding="async"
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-section lg:py-36">
+    <div class="my-container">
+      <h2 class="section-heading">Why HVAC Contractors Choose Knockio?</h2>
+      <div class="stats-row grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+        {
+          stats.map(([value, label]) => (
+            <article class="stat-blurb">
+              <div>
+                <h4>
+                  <span>{value}</span>
+                </h4>
+                <p>{label}</p>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="features-section">
+    <div class="my-container">
+      <h2 class="section-heading">The Best HVAC Field Service Software for Contractors</h2>
+      <div class="features-grid">
+        {
+          featureCards.map((feature) => (
+            <article class="feature-card" data-aos="fade-up">
+              <img
+                src={feature.image}
+                alt=""
+                width={feature.width}
+                height={feature.height}
+                class="feature-img"
+                loading="lazy"
+                decoding="async"
+              />
+              <h3 class="feature-heading">{feature.title}</h3>
+              <p class="feature-desc">{feature.copy}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonial-section py-20 lg:py-32">
+    <div class="my-container">
+      <div class="testimonial-quote-wrap">
+        <p>
+          Tracking leads has never been simpler. We can see real time updates,
+          assign follow-ups instantly, and never worry about losing information.
+          The mapping feature is a game changer it helps us plan routes smarter
+          and cover more ground in less time.
+        </p>
+      </div>
+      <div class="testi-wrapper mt-8">
+        <img
+          src={`${assetBase}/testi.png`}
+          alt=""
+          width="80"
+          loading="lazy"
+          decoding="async"
+        />
+        <div>
+          <h6>Michael Palmer</h6>
+          <p>Sales Manager - Modern Roofing</p>
+        </div>
+      </div>
+      <div class="mt-9 flex justify-center">
+        <a
+          href="#landing-calender"
+          class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary-500 px-7 py-4 font-bold text-white shadow-lg shadow-primary-500/25 transition hover:bg-primary-600 hover:shadow-primary-500/35"
+        >
+          Book a Free Demo
+          <ArrowRight size={18} aria-hidden="true" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="kn-cycle mt-16">
+    <div class="kn-wrap">
+      <!-- <h2 class="kn-title">
+        Not just a schedule. <em>The full service cycle.</em>
+      </h2> -->
+      <h2 class="kn-title">
+        Not just a <em>schedule.</em> The full service cycle.
+      </h2>
+      <div class="kn-stages">
+        {
+          platformColumns.map((column) => (
+            <article class="kn-stage">
+              <h3 class="kn-stage-name">{column.title}</h3>
+              <ul>
+                {column.items.map((item) => (
+                  <li>
+                    <svg
+                      width="19"
+                      height="19"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M20 6 9 17l-5-5" />
+                    </svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))
+        }
+      </div>
+
+      <h3 class="kn-checklist-head">
+        Stop running the business on three systems. Here's everything your field service team needs in one place:
+      </h3>
+
+      <div class="kn-lower">
+        <div class="kn-checklist">
+          <ul>
+            {
+              fullStackItems.map((li) => (
+                <li>
+                  <CheckCircle
+                    class="hoverable-check mt-1 shrink-0 text-primary-500"
+                    size={18}
+                    aria-hidden="true"
+                  />
+                  {li}
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+
+        <!-- Replace src with the WordPress media-library URL once uploaded -->
+        <figure class="kn-visual">
+          <img
+            src={`${assetBaseGlob}/hvac-image5.webp`}
+            alt="Knockio field app showing territory map and job pipeline"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+      </div>
+
+      <div class="mt-9 flex justify-center">
+        <a
+          href="#landing-calender"
+          class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary-500 px-7 py-4 font-bold text-white shadow-lg shadow-primary-500/25 transition hover:bg-primary-600 hover:shadow-primary-500/35"
+          >Book a Free Demo<svg
+            xmlns="http://www.w3.org/2000/svg"
+            stroke-width="2"
+            width="18"
+            height="18"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            fill="none"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            class="lucide lucide-arrow-right"
+            ><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg
+          ></a
+        >
+      </div>
+    </div>
+  </section>
+
+  <section class="onboarding-section">
+    <div class="container">
+      <div class="editorial-header">
+        <!-- Headline Column -->
+        <div class="headline-column">
+          <!-- <h2 class="main-headline">
+            Switching<br />
+            <span class="headline-sub">to</span>
+            <span class="headline-accent mx-1"> Knockio </span>
+            <span class="headline-sub">is</span><br />
+            <span class="headline-sub">Easy</span>
+          </h2> -->
+          <h2 class="main-headline">
+            Switching<br />
+            <span class="">to</span>
+            <span class="headline-accent mx-1"> Knockio </span>
+            <span class="">is</span><br />
+            <span class="">Easy</span>
+          </h2>
+        </div>
+
+        <!-- Intro / Pull-Quote Column -->
+        <div class="intro-column">
+          <p class="pull-quote">
+            HVAC teams looking for field service software are usually replacing more than one tool.
+            <i style="display: inline-block; font-weight: 800;">
+              A whiteboard, a shared calendar, a text thread, and an accounting tool that was never built for the field.
+            </i>
+            <br /><br />
+            <span class="pull-quote-strong">
+              Most teams come from all four, then wish they had switched sooner.</span
+            >
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <!-- Process Subhead -->
+        <h3 class="process-subhead">Here's how it works</h3>
+
+        <!-- 3-Column Grid for Steps -->
+        <div class="steps-grid">
+          <!-- Step 01 -->
+          <div class="step-card">
+            <div class="step-number">01</div>
+            <h4 class="step-title">Guided Onboarding</h4>
+            <p class="step-description">
+              Live in a day, not a quarter. Our onboarding team loads your customers, sets up your techs, and connects your accounting before you go live. ServiceTitan quotes twelve to sixteen weeks and charges five to fifty thousand to do it.
+            </p>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="step-card">
+            <div class="step-number">02</div>
+            <h4 class="step-title">Import Your Data</h4>
+            <p class="step-description">
+              Bring over customer records, job history, and pricing via CSV or direct migration. Your history doesn't disappear when you switch, and it never gets held hostage.
+            </p>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="step-card">
+            <div class="step-number">03</div>
+            <h4 class="step-title">Support That Knows the Product</h4>
+            <p class="step-description">
+              Get help from the people who build and run Knockio. No chatbots, no ticket queues, no tiers. You talk to a person who can actually fix it. Most issues resolved same day.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="calender-section py-24 lg:py-36">
+    <div class="my-container">
+      <h2 class="section-heading">Watch Your Whole Service Cycle, Live</h2>
+      <p class="section-copy">
+        No pitch deck. No scripted walkthrough. No pressure. A live session built around your team size and how you run your day, so you can see exactly how it handles your workflow before you decide.
+      </p>
+
+      <div class="calender-wrapper mt-8">
+        <div class="calender-wrapper-div">
+          <CalendarDays size={28} class="text-[#53aa38]" aria-hidden="true" />
+          <span>Month to Month</span>
+        </div>
+        <div class="calender-wrapper-div">
+          <FileSignature size={28} class="text-[#53aa38]" aria-hidden="true" />
+          <span>No contract</span>
+        </div>
+        <div class="calender-wrapper-div">
+          <CalendarX size={28} class="text-[#53aa38]" aria-hidden="true" />
+          <span>Cancel anytime</span>
+        </div>
+      </div>
+
+      <div
+        id="landing-calender"
+        class="cal-shell mx-auto mt-12 max-w-5xl p-2 sm:p-3 lg:p-4"
+      >
+        <CalendarLoadingCopy />
+        <div
+          id="my-cal-inline"
+          class="cal-placeholder grid place-items-center overflow-hidden"
+          aria-live="polite"
+          aria-busy="false"
+          aria-label="Book a demo"
+          role="region"
+        >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    id="landing-pricing"
+    class="pricing-section relative z-10 py-20 max-xl:py-16 max-lg:py-14"
+  >
+    <div class="my-container">
+      <div class="mb-10 text-center max-md:mb-7">
+        <h2
+          class="mx-auto mb-4 max-w-3xl text-[56px] font-bold leading-tight text-neutral-900 max-2xl:text-5xl max-xl:text-4xl max-md:text-3xl"
+        >
+          Straightforward pricing. No surprises.
+        </h2>
+        <p class="mx-auto max-w-2xl text-lg text-neutral-600 max-xl:text-base">
+          Choose the tools your team needs today, or combine your entire
+          field-sales and service operation in one connected platform.
+        </p>
+      </div>
+
+      <div class="mb-12 flex flex-wrap items-center justify-center gap-3">
+        <div
+          class="flex items-center rounded-full border border-solid border-neutral-200 px-5 py-2.5 text-sm text-neutral-900"
+        >
+          <Check
+            class="mr-2 size-4 shrink-0 text-primary-500"
+            aria-hidden="true"
+          />
+          <span>Pro-rated billing</span>
+        </div>
+        <div
+          class="flex items-center rounded-full border border-solid border-neutral-200 px-5 py-2.5 text-sm text-neutral-900"
+        >
+          <Check
+            class="mr-2 size-4 shrink-0 text-primary-500"
+            aria-hidden="true"
+          />
+          <span>No setup fee</span>
+        </div>
+        <div
+          class="flex items-center rounded-full border border-solid border-neutral-200 px-5 py-2.5 text-sm text-neutral-900"
+        >
+          <Check
+            class="mr-2 size-4 shrink-0 text-primary-500"
+            aria-hidden="true"
+          />
+          <span>No contracts</span>
+        </div>
+        <a
+          href="https://knockio.com/pricing/#pricing-compare"
+          class="flex items-center rounded-full border border-solid border-primary-200 px-5 py-2.5 text-sm font-medium text-primary-600 transition-colors hover:bg-primary-50"
+        >
+          Compare plans in detail
+          <ArrowDown class="ml-2 size-3" aria-hidden="true" />
+        </a>
+      </div>
+
+      <div
+        class="mx-auto grid w-full max-w-[1200px] grid-cols-1 items-stretch justify-center gap-7 lg:grid-cols-3"
+      >
+        <div
+          class="kio-pricing-card flex flex-col rounded-3xl border border-solid border-neutral-200 bg-white p-7 transition duration-150 ease-out hover:-translate-y-1 hover:shadow-xl max-md:p-6"
+        >
+          <div class="mb-3 flex items-start justify-between gap-4">
+            <div class="flex items-center gap-4">
+              <span
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600"
+              >
+                <Map class="size-5" aria-hidden="true" />
+              </span>
+              <div>
+                <p
+                  class="mb-1 text-xs font-bold uppercase tracking-wider text-blue-600"
+                >
+                  Field Sales
+                </p>
+                <h3 class="text-3xl font-bold text-neutral-900 max-xl:text-2xl">
+                  Prospect
+                </h3>
+              </div>
+            </div>
+            <div class="kio-plan-info">
+              <button
+                type="button"
+                class="kio-plan-info-button"
+                aria-label="View Prospect plan details"
+                aria-expanded="false"
+                aria-controls="prospect-plan-tooltip"
+              >
+                <Eye class="size-4" aria-hidden="true" />
+              </button>
+              <div
+                id="prospect-plan-tooltip"
+                class="kio-plan-tooltip"
+                role="tooltip"
+                aria-hidden="true"
+              >
+                Everything your reps need to knock doors, log, and close.
+                Unlimited territories, live tracking, route planning, lead
+                capture, and digital contracts from the first door to the signed
+                agreement.
+              </div>
+            </div>
+          </div>
+          <div class="mb-5 min-h-[76px]">
+            <p class="text-sm font-semibold leading-6 text-neutral-900">
+              Who it’s for:
+            </p>
+            <p class="text-sm leading-6 text-neutral-600">
+              For field sales teams running door-to-door campaigns.
+            </p>
+          </div>
+          <div class="mb-1 flex flex-wrap items-end text-neutral-900">
+            <span class="text-5xl font-bold max-md:text-4xl">$20</span>
+            <span class="mb-1 ml-2 text-base font-normal text-neutral-500"
+              >/user/mo</span
+            >
+          </div>
+          <p class="mb-1 text-sm font-semibold text-primary-600">5+ users</p>
+          <p class="mb-6 text-sm text-neutral-500">$25/user/mo for 1–4 users</p>
+          <button
+            type="button"
+            data-checkout-package="4"
+            data-package="4"
+            aria-label="Start Prospect plan"
+            class="knockio-checkout-btn mb-8 w-full cursor-pointer rounded-xl border border-solid border-primary-500 bg-white px-5 py-3.5 font-semibold text-primary-500 transition-colors duration-200 hover:bg-primary-500 hover:text-white"
+          >
+            Start Prospect
+          </button>
+          <h4 class="mb-4 text-lg font-semibold text-neutral-900">
+            Features included:
+          </h4>
+          <ul class="flex-1 space-y-3 text-neutral-700">
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Unlimited Territories & Campaigns</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Route Planning & Optimization</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Pre-Knocked Data (15¢ per address)</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Real-time Rep Tracking</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Presentations</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Digital Contracts & E-Signature</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Native Automation Builder</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Task Management & Appointment Scheduling</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Zapier & FlowChef Integrations</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Free Onboarding & Support</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Phone
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Engage Add-On ($15/number/mo)</span>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="kio-pricing-card relative flex flex-col rounded-3xl border border-solid border-[#0f172a] bg-[#0f172a] p-7 shadow-xl shadow-neutral-900/10 transition duration-150 ease-out hover:-translate-y-1 max-md:p-6"
+        >
+          <div
+            class="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-solid border-neutral-300 bg-primary-500 px-7 py-1.5 text-sm font-semibold text-white"
+          >
+            Recommended
+          </div>
+          <div class="mb-3 mt-2 flex items-start justify-between gap-4">
+            <div class="flex items-center gap-4">
+              <span
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary-500/15 text-primary-400"
+              >
+                <ChartLine class="size-5" aria-hidden="true" />
+              </span>
+              <div>
+                <p
+                  class="mb-1 text-xs font-bold uppercase tracking-wider text-primary-400"
+                >
+                  All-In-One
+                </p>
+                <h3 class="text-3xl font-bold text-white max-xl:text-2xl">
+                  Growth
+                </h3>
+              </div>
+            </div>
+            <div class="kio-plan-info">
+              <button
+                type="button"
+                class="kio-plan-info-button kio-plan-info-button-dark"
+                aria-label="View Growth plan details"
+                aria-expanded="false"
+                aria-controls="growth-plan-tooltip"
+              >
+                <Eye class="size-4" aria-hidden="true" />
+              </button>
+              <div
+                id="growth-plan-tooltip"
+                class="kio-plan-tooltip"
+                role="tooltip"
+                aria-hidden="true"
+              >
+                The complete end-to-end platform. Includes everything in
+                Prospect & Organize combined into one seamless workflow—plus
+                inventory tracking, granular team permissions, and a dedicated
+                success manager.
+              </div>
+            </div>
+          </div>
+          <div class="mb-5 min-h-[76px]">
+            <p class="text-sm font-semibold leading-6 text-white">
+              Who it’s for:
+            </p>
+            <p class="text-sm leading-6 text-neutral-300">
+              For contractors and field teams running the entire business—from
+              first knock to final payment.
+            </p>
+          </div>
+          <!-- <p
+              class="mb-6 rounded-xl border border-solid border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-semibold text-white"
+            >
+              Sell the job. Run the job. Get paid.
+            </p> -->
+          <div class="mb-1 flex flex-wrap items-end text-white">
+            <span class="text-5xl font-bold max-md:text-4xl">$45</span>
+            <span class="mb-1 ml-2 text-base font-normal text-neutral-400"
+              >/user/mo</span
+            >
+          </div>
+          <p class="mb-1 text-sm font-semibold text-primary-400">5+ users</p>
+          <p class="mb-6 text-sm text-neutral-400">$60/user/mo for 1–4 users</p>
+          <button
+            type="button"
+            data-checkout-package="6"
+            data-package="6"
+            aria-label="Start Growth plan"
+            class="knockio-checkout-btn mb-8 w-full cursor-pointer rounded-xl bg-primary-500 px-5 py-3.5 font-semibold text-white transition-colors duration-200 hover:bg-primary-700"
+          >
+            Start Growth
+          </button>
+          <h4 class="mb-4 text-lg font-semibold text-white">
+            Features included:
+          </h4>
+          <ul class="flex-1 space-y-3 text-neutral-300">
+            <li class="flex items-start text-[15px] font-semibold leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                aria-hidden="true"
+              /><span>Everything in Prospect</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                aria-hidden="true"
+              /><span>Unlimited Workspaces</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                aria-hidden="true"
+              /><span>Pipelines & Lead Management</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                aria-hidden="true"
+              /><span>Granular Permissions</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                aria-hidden="true"
+              /><span>Email Communication</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                aria-hidden="true"
+              /><span>Estimates & Work Orders</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                aria-hidden="true"
+              /><span>Invoices & Payments</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                aria-hidden="true"
+              /><span>Product & Inventory Management</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                aria-hidden="true"
+              /><span>Native Automation Builder</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                aria-hidden="true"
+              /><span>Zapier & FlowChef Integrations</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <UserRound
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                aria-hidden="true"
+              /><span>Dedicated Success Manager</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                aria-hidden="true"
+              /><span>Free Onboarding & Account Setup</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Phone
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-400"
+                aria-hidden="true"
+              /><span>Engage Add-On ($15/number/mo)</span>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="kio-pricing-card relative flex flex-col rounded-3xl border border-solid border-primary-500 bg-[#f5faf3] p-7 transition duration-150 ease-out hover:-translate-y-1 hover:shadow-xl max-md:p-6"
+        >
+          <div
+            class="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-solid border-primary-500 bg-white px-7 py-1.5 text-sm font-semibold text-primary-600"
+          >
+            100+ Users
+          </div>
+          <div class="mb-3 mt-2 flex items-start justify-between gap-4">
+            <div class="flex items-center gap-4">
+              <span
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary-500 text-white"
+              >
+                <Building2 class="size-5" aria-hidden="true" />
+              </span>
+              <div>
+                <p
+                  class="mb-1 text-xs font-bold uppercase tracking-wider text-primary-600"
+                >
+                  Enterprise
+                </p>
+                <h3 class="text-3xl font-bold text-neutral-900 max-xl:text-2xl">
+                  Scale
+                </h3>
+              </div>
+            </div>
+            <div class="kio-plan-info">
+              <button
+                type="button"
+                class="kio-plan-info-button"
+                aria-label="View Scale plan details"
+                aria-expanded="false"
+                aria-controls="scale-plan-tooltip"
+              >
+                <Eye class="size-4" aria-hidden="true" />
+              </button>
+              <div
+                id="scale-plan-tooltip"
+                class="kio-plan-tooltip"
+                role="tooltip"
+                aria-hidden="true"
+              >
+                Everything in Growth, engineered for your exact operational
+                scale. Get custom volume pricing, white-glove team onboarding,
+                priority support, and a direct line to our product team for
+                feature requests. If an off-the-shelf plan isn’t enough, we’ll
+                build this around you.
+              </div>
+            </div>
+          </div>
+          <div class="mb-5 min-h-[76px]">
+            <p class="text-sm font-semibold leading-6 text-neutral-900">
+              Who it’s for:
+            </p>
+            <p class="text-sm leading-6 text-neutral-600">
+              Built for multi-location contractors and enterprise operations
+              running 100+ reps in the field.
+            </p>
+          </div>
+          <div class="mb-2 text-3xl font-bold leading-tight text-neutral-900">
+            Custom Pricing
+          </div>
+          <p class="mb-6 text-sm font-semibold leading-6 text-primary-600">
+            Volume rates for large field teams
+          </p>
+          <a
+            href="#landing-calender"
+            class="mb-8 inline-flex w-full items-center justify-center rounded-xl bg-primary-500 px-5 py-3.5 font-semibold text-white transition-colors duration-200 hover:bg-primary-700"
+          >
+            Book a demo
+          </a>
+          <h4 class="mb-4 text-lg font-semibold text-neutral-900">
+            Features included:
+          </h4>
+          <ul class="flex-1 space-y-3 text-neutral-700">
+            <li class="flex items-start text-[15px] font-semibold leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Everything in Growth</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Custom Per-Seat Volume Rates</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>White-Glove Onboarding & Account Setup</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <UserRound
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Dedicated Success Manager & Priority Support</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Direct Input on Product Roadmap & Features</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Shield
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Custom Enterprise Workspaces & Security</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section py-24 lg:py-36" aria-labelledby="faq-heading">
+    <div class="my-container">
+      <p
+        class="faq-heading-text text-center text-sm font-bold uppercase tracking-[0.18em] text-primary-500 md:text-2xl"
+      >
+        Common Questions
+      </p>
+
+      <div class="faq-container space-y-4">
+        {
+          faqs.map((faq, index) => (
+            <details
+              class="faq-item rounded-2xl border border-slate-200 bg-white transition"
+              data-faq-item={faq.question}
+              open={index === 0}
+            >
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-5 text-left sm:p-6">
+                <span class="text-lg font-bold text-slate-950 sm:text-xl">
+                  {faq.question}
+                </span>
+                <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-primary-50 text-primary-600">
+                  <Plus class="faq-plus" size={20} aria-hidden="true" />
+                  <Minus class="faq-minus" size={20} aria-hidden="true" />
+                </span>
+              </summary>
+              <div class="px-5 pb-6 text-base leading-8 text-slate-600 sm:px-6">
+                {faq.answer}
+              </div>
+            </details>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</LandingPagesLayout>
