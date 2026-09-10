@@ -7,9 +7,8 @@ import {
   ChevronRight,
   Crosshair,
   FileSignature,
-  MessageSquare,
   Quote,
-  Map,
+  Ruler,
   Sparkles,
   Zap,
 } from "lucide-astro";
@@ -178,37 +177,37 @@ const capabilityTabs: { label: string; cards: CapCard[] }[] = [
 const organizedItems = [
   {
     title: "Live Field Tracking",
-    text: "Monitor reps in real time with GPS tracking and proximity intelligence. It helps with coverage, accountability, and knowing exactly who is working in which neighborhood right now.",
+    text: "Monitor door-to-door sales reps and alarm installers in real time with GPS tracking. Verify doorstep canvassing coverage across residential neighborhoods.",
     href: "https://knockio.com/features/gps-tracking-software/",
     icon: "crosshair" as const,
   },
   {
-    title: "Communication History",
-    text: "Every text, call, and email with a homeowner lives on their record, so any rep who picks up the account sees the full conversation instead of starting over.",
+    title: "Flow Automation",
+    text: "Automatically handle the daily grind like 3-day cancellation window confirmations, install reminders, and payment receipts so your dealership scales.",
     href: "https://knockio.com/features/business-texting-and-calling-software/",
-    icon: "message" as const,
+    icon: "sparkles" as const,
   },
   {
-    title: "Map and Disposition View",
-    text: "See who has been contacted, who signed, and who needs a revisit. The live map makes it obvious where the team should knock next.",
+    title: "Media & Measurements",
+    text: "See every property's existing alarm panel photos, Z-Wave device diagrams, false-alarm permit numbers, and central-station test logs in one view.",
     href: null,
-    icon: "map" as const,
+    icon: "ruler" as const,
   },
   {
     title: "E-Contracts",
-    text: "Manage contract creation, review, approval, and signatures digitally so your team can move deals forward with fewer delays.",
+    text: "Send 36-to-60-month monitoring agreements with FTC 3-Day Cancellation notices added from your contract templates for digital e-signature on site.",
     href: "https://knockio.com/e-contracts/",
     icon: "file" as const,
   },
   {
     title: "CRM Integrations",
-    text: "Knockio connects your security signups and rep data to Salesforce, HubSpot, Google Calendar, and GHL, plus thousands of apps through Zapier, FlowChef, and webhooks.",
+    text: "Knockio connects your customer records, invoices, and payments to the tools you use via Zapier and webhooks. It also connects via Zapier and webhooks with Google Calendar, HubSpot, GoHighLevel (GHL), and Salesforce.",
     href: "https://knockio.com/knockio-integrations/",
     icon: "zap" as const,
   },
   {
     title: "Team Communication",
-    text: "Knockio links reps, managers, and install coordinators to every signup through assignees and notes, so the deal moves forward without anyone chasing an update.",
+    text: "Link summer sales reps, same-day alarm installers, and dealer principals to the same account record so gate access codes never get missed.",
     href: "https://knockio.com/features/business-texting-and-calling-software/",
     icon: "sparkles" as const,
   },
@@ -695,11 +694,8 @@ const jsonLd = {
                   {item.icon === "crosshair" && (
                     <Crosshair class="size-[30px]" aria-hidden="true" />
                   )}
-                  {item.icon === "message" && (
-                    <MessageSquare class="size-[30px]" aria-hidden="true" />
-                  )}
-                  {item.icon === "map" && (
-                    <Map class="size-[30px]" aria-hidden="true" />
+                  {item.icon === "ruler" && (
+                    <Ruler class="size-[30px]" aria-hidden="true" />
                   )}
                   {item.icon === "file" && (
                     <FileSignature class="size-[30px]" aria-hidden="true" />
