@@ -15,7 +15,6 @@ import {
   CheckCircle2,
   Eye,
   FileSignature,
-  Map,
   Minus,
   Phone,
   Plus,
@@ -613,18 +612,18 @@ const jsonLd = {
           <div class="mb-3 flex items-start justify-between gap-4">
             <div class="flex items-center gap-4">
               <span
-                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600"
+                class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-orange-600"
               >
-                <Map class="size-5" aria-hidden="true" />
+                <Boxes class="size-5" aria-hidden="true" />
               </span>
               <div>
                 <p
-                  class="mb-1 text-xs font-bold uppercase tracking-wider text-blue-600"
+                  class="mb-1 text-xs font-bold uppercase tracking-wider text-orange-600"
                 >
-                  Field Sales
+                  Field Service
                 </p>
                 <h3 class="text-3xl font-bold text-neutral-900 max-xl:text-2xl">
-                  Prospect
+                  Organize
                 </h3>
               </div>
             </div>
@@ -632,22 +631,21 @@ const jsonLd = {
               <button
                 type="button"
                 class="kio-plan-info-button"
-                aria-label="View Prospect plan details"
+                aria-label="View Organize plan details"
                 aria-expanded="false"
-                aria-controls="prospect-plan-tooltip"
+                aria-controls="organize-plan-tooltip"
               >
                 <Eye class="size-4" aria-hidden="true" />
               </button>
               <div
-                id="prospect-plan-tooltip"
+                id="organize-plan-tooltip"
                 class="kio-plan-tooltip"
                 role="tooltip"
                 aria-hidden="true"
               >
-                Everything your reps need to knock doors, log, and close.
-                Unlimited territories, live tracking, route planning, lead
-                capture, and digital contracts from the first door to the signed
-                agreement.
+                For field service teams managing jobs, billing, and customer
+                records. Pipelines, estimates, work orders, invoices, contracts,
+                and inventory in one connected workflow.
               </div>
             </div>
           </div>
@@ -656,25 +654,26 @@ const jsonLd = {
               Who it’s for:
             </p>
             <p class="text-sm leading-6 text-neutral-600">
-              For field sales teams running door-to-door campaigns.
+              For field service teams managing jobs, billing, and customer
+              records.
             </p>
           </div>
           <div class="mb-1 flex flex-wrap items-end text-neutral-900">
-            <span class="text-5xl font-bold max-md:text-4xl">$20</span>
+            <span class="text-5xl font-bold max-md:text-4xl">$30</span>
             <span class="mb-1 ml-2 text-base font-normal text-neutral-500"
               >/user/mo</span
             >
           </div>
           <p class="mb-1 text-sm font-semibold text-primary-600">5+ users</p>
-          <p class="mb-6 text-sm text-neutral-500">$25/user/mo for 1–4 users</p>
+          <p class="mb-6 text-sm text-neutral-500">$35/user/mo for 1–4 users</p>
           <button
             type="button"
-            data-checkout-package="4"
-            data-package="4"
-            aria-label="Start Prospect plan"
+            data-checkout-package="5"
+            data-package="5"
+            aria-label="Start Organize plan"
             class="knockio-checkout-btn mb-8 w-full cursor-pointer rounded-xl border border-solid border-primary-500 bg-white px-5 py-3.5 font-semibold text-primary-500 transition-colors duration-200 hover:bg-primary-500 hover:text-white"
           >
-            Start Prospect
+            Start Organize
           </button>
           <h4 class="mb-4 text-lg font-semibold text-neutral-900">
             Features included:
@@ -684,37 +683,43 @@ const jsonLd = {
               <Check
                 class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
                 aria-hidden="true"
-              /><span>Unlimited Territories & Campaigns</span>
-            </li>
-            <li class="flex items-start text-[15px] leading-6">
-              <Check
-                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
-                aria-hidden="true"
-              /><span>Route Planning & Optimization</span>
-            </li>
-            <li class="flex items-start text-[15px] leading-6">
-              <Check
-                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
-                aria-hidden="true"
-              /><span>Pre-Knocked Data (15¢ per address)</span>
-            </li>
-            <li class="flex items-start text-[15px] leading-6">
-              <Check
-                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
-                aria-hidden="true"
-              /><span>Real-time Rep Tracking</span>
-            </li>
-            <li class="flex items-start text-[15px] leading-6">
-              <Check
-                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
-                aria-hidden="true"
-              /><span>Presentations</span>
+              /><span>Pipelines & Lead Management</span>
             </li>
             <li class="flex items-start text-[15px] leading-6">
               <Check
                 class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
                 aria-hidden="true"
               /><span>Digital Contracts & E-Signature</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Granular Permissions</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Email Communication</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Estimates & Work Orders</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Invoices & Payments</span>
+            </li>
+            <li class="flex items-start text-[15px] leading-6">
+              <Check
+                class="mr-3 mt-1 size-4 shrink-0 text-primary-500"
+                aria-hidden="true"
+              /><span>Product & Inventory Management</span>
             </li>
             <li class="flex items-start text-[15px] leading-6">
               <Check
