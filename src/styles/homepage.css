@@ -17,6 +17,14 @@
   box-sizing: border-box;
 }
 
+[data-kio-sidebar] {
+  text-align: left;
+}
+
+[data-kio-sidebar] [data-nav][disabled] {
+  pointer-events: none;
+}
+
 .kio-demo-tab-panel {
   display: none;
   height: 100%;
