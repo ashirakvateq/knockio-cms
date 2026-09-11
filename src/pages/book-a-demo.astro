@@ -1,0 +1,88 @@
+---
+import KnockioHomeLayout from "../layouts/KnockioHomeLayout.astro";
+
+const title = "Book a Demo | Field Service CRM & Sales Software | Knockio";
+const description =
+  "Book a demo of Knockio and see how to manage leads, crews, jobs, appointments, estimates, invoices, payments, & communication in one platform.";
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://knockio.com/book-a-demo/#webpage",
+    url: "https://knockio.com/book-a-demo/",
+    name: "Book a Demo | Knockio",
+    isPartOf: { "@type": "WebSite", name: "Knockio" },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://knockio.com/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Book a Demo",
+        item: "https://knockio.com/book-a-demo/",
+      },
+    ],
+  },
+];
+---
+
+<KnockioHomeLayout
+  title={title}
+  description={description}
+  jsonLd={jsonLd}
+  exitIntent={false}
+>
+  <main>
+    <!-- Hero Section -->
+    <section
+      class="book-demo-hero relative flex items-center py-28 sm:py-32 lg:py-36 min-h-[520px]"
+    >
+      <div class="my-container relative mx-auto w-full">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="mx-auto mb-10 max-w-3xl text-center max-md:mb-8">
+            <p
+              class="mb-3 text-sm font-medium leading-7 text-primary-500 md:text-2xl"
+            >
+              See Knockio In Action
+            </p>
+            <h1
+              class="mb-0 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
+            >
+              Book a Demo Now!
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute bottom-0 left-0 right-0 pointer-events-none h-[160px]"
+        style="background:linear-gradient(to bottom,transparent 0%,rgba(255,255,255,0.6) 50%,#fff 100%)"
+      >
+      </div>
+    </section>
+  </main>
+</KnockioHomeLayout>
+
+<style>
+  .book-demo-hero {
+    background-image:
+      linear-gradient(
+        to right,
+        rgba(18, 35, 20, 0.25) 0%,
+        rgba(18, 35, 20, 0.55) 35%,
+        rgba(18, 35, 20, 0.82) 65%,
+        rgba(18, 35, 20, 0.96) 100%
+      ),
+      url("/assets/book-a-demo/hero-bg.webp");
+    background-size: cover;
+    background-position: center;
+  }
+</style>

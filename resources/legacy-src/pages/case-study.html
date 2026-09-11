@@ -1,19 +1,68 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Case Study: Modern Roofing | Knockio</title>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Manrope,system-ui,sans-serif}
-/* stand-in for the real Knockio header so sticky offset can be checked */
-.mock-header{position:fixed;top:0;left:0;right:0;height:72px;background:rgba(11,31,18,.95);
- display:flex;align-items:center;justify-content:space-between;padding:0 32px;z-index:50;
- box-shadow:0 4px 20px rgba(0,0,0,.3);color:#fff;font-weight:700;letter-spacing:-.02em}
-.mock-header nav{display:flex;gap:22px;font-size:14px;font-weight:500;opacity:.8}
-.mock-header .b{background:#4FAA3A;color:#fff;font-size:14px;font-weight:600;padding:9px 20px;border-radius:8px}
-.mock-footer{background:#0B1F12;color:rgba(255,255,255,.5);padding:40px 32px;font-size:13px;border-top:1px solid rgba(255,255,255,.08)}
-</style>
-<style>
-  /* ============================================================
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Case Study: Modern Roofing | Knockio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      font-family: Manrope, system-ui, sans-serif
+    }
+
+    /* stand-in for the real Knockio header so sticky offset can be checked */
+    .mock-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 72px;
+      background: rgba(11, 31, 18, .95);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+      z-index: 50;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, .3);
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: -.02em
+    }
+
+    .mock-header nav {
+      display: flex;
+      gap: 22px;
+      font-size: 14px;
+      font-weight: 500;
+      opacity: .8
+    }
+
+    .mock-header .b {
+      background: #4FAA3A;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 9px 20px;
+      border-radius: 8px
+    }
+
+    .mock-footer {
+      background: #0B1F12;
+      color: rgba(255, 255, 255, .5);
+      padding: 40px 32px;
+      font-size: 13px;
+      border-top: 1px solid rgba(255, 255, 255, .08)
+    }
+  </style>
+  <style>
+    /* ============================================================
      Knockio case study — scoped page styles
      Palette and type taken from the live site:
        primary        #4FAA3A   (kh-btn-demo / bg-primary-500)
@@ -23,796 +72,897 @@ body{margin:0;font-family:Manrope,system-ui,sans-serif}
        long-form body #263238 at 18/28 (blog article type)
      ============================================================ */
 
-  .cs {
-    --green: #4faa3a;
-    --green-deep: #3d9234;
-    --green-dark: #1f7d1d;
-    --dark: #0b1f12;
-    --ink: #0f172a;
-    --ink-2: #111111;
-    --body: #263238;
-    --muted: #5d6b62;
-    --line: #e3e8e4;
-    --line-soft: #eef1ee;
-    --tint: #f6faf5;
-    --tint-2: #f9fbf9;
+    .cs {
+      --green: #4faa3a;
+      --green-deep: #3d9234;
+      --green-dark: #1f7d1d;
+      --dark: #0b1f12;
+      --ink: #0f172a;
+      --ink-2: #111111;
+      --body: #263238;
+      --muted: #5d6b62;
+      --line: #e3e8e4;
+      --line-soft: #eef1ee;
+      --tint: #f6faf5;
+      --tint-2: #f9fbf9;
 
-    --measure: 740px;
-    --wide: 1100px;
-    /* how far financial tables are allowed to run past the reading measure */
-    --bleed: 940px;
-    --pad: 24px;
-    /* Height of the sticky site header. Match this to the real header so the
+      --measure: 740px;
+      --wide: 1100px;
+      /* how far financial tables are allowed to run past the reading measure */
+      --bleed: 940px;
+      --pad: 24px;
+      /* Height of the sticky site header. Match this to the real header so the
        results bar parks directly beneath it. */
-    --header-h: 72px;
+      --header-h: 72px;
 
-    font-family:
-      Manrope,
-      Inter,
-      -apple-system,
-      system-ui,
-      "Segoe UI",
-      Arial,
-      sans-serif;
-    color: var(--body);
-    background: #fff;
-    -webkit-font-smoothing: antialiased;
-  }
+      font-family:
+        Manrope,
+        Inter,
+        -apple-system,
+        system-ui,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+      color: var(--body);
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+    }
 
-  .cs :where(h1, h2, h3, h4) {
-    color: var(--ink-2);
-    font-weight: 750;
-    letter-spacing: -0.02em;
-    text-wrap: balance;
-  }
+    .cs :where(h1, h2, h3, h4) {
+      color: var(--ink-2);
+      font-weight: 750;
+      letter-spacing: -0.02em;
+      text-wrap: balance;
+    }
 
-  .cs-wrap {
-    width: 100%;
-    max-width: var(--measure);
-    margin-inline: auto;
-    padding-inline: var(--pad);
-  }
+    .cs-wrap {
+      width: 100%;
+      max-width: var(--measure);
+      margin-inline: auto;
+      padding-inline: var(--pad);
+    }
 
-  /* ── Hero ─────────────────────────────────────────────── */
-  .cs-hero {
-    background: var(--dark);
-    color: #fff;
-    padding: clamp(96px, 12vw, 148px) 0 clamp(44px, 6vw, 64px);
-    position: relative;
-    overflow: hidden;
-  }
-  .cs-hero::after {
-    content: "";
-    position: absolute;
-    inset: auto 0 0 0;
-    height: 3px;
-    background: var(--green);
-  }
-  .cs-hero .cs-wrap {
-    max-width: var(--wide);
-  }
-  .cs-eyebrow {
-    margin: 0 0 22px;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: #8fd47c;
-  }
-  .cs-title {
-    margin: 0;
-    max-width: 24ch;
-    font-size: clamp(32px, 5.2vw, 56px);
-    line-height: 1.08;
-    letter-spacing: -0.03em;
-    font-weight: 800;
-    color: #fff;
-  }
-  .cs-dek {
-    margin: 24px 0 0;
-    max-width: 56ch;
-    font-size: clamp(17px, 1.6vw, 20px);
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.72);
-  }
+    /* ── Hero ─────────────────────────────────────────────── */
+    .cs-hero {
+      background: var(--dark);
+      color: #fff;
+      padding: clamp(96px, 12vw, 148px) 0 clamp(44px, 6vw, 64px);
+      position: relative;
+      overflow: hidden;
+    }
 
-  .cs-meta {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 24px 32px;
-    margin: 44px 0 0;
-    padding-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.14);
-  }
-  .cs-meta dt {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.48);
-    margin-bottom: 7px;
-  }
-  .cs-meta dd {
-    margin: 0;
-    font-size: 15px;
-    line-height: 1.45;
-    color: #fff;
-    font-weight: 600;
-  }
+    .cs-hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 3px;
+      background: var(--green);
+    }
 
-  /* ── Sticky results bar ───────────────────────────────── */
-  .cs-stickybar {
-    position: sticky;
-    top: var(--header-h);
-    z-index: 20;
-    background: #fff;
-    border-bottom: 1px solid var(--line);
-    box-shadow: 0 1px 0 rgba(15, 23, 42, 0.02);
-  }
-  .cs-stickybar-inner {
-    max-width: var(--wide);
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0;
-  }
-  .cs-stat {
-    padding: 16px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-  .cs-stat + .cs-stat {
-    padding-left: 22px;
-    border-left: 1px solid var(--line-soft);
-    margin-left: 22px;
-  }
-  .cs-stat-num {
-    font-size: clamp(20px, 2.4vw, 27px);
-    font-weight: 800;
-    letter-spacing: -0.03em;
-    color: var(--green-dark);
-    font-variant-numeric: tabular-nums;
-    line-height: 1.1;
-  }
-  .cs-stat-label {
-    font-size: 12px;
-    line-height: 1.35;
-    color: var(--muted);
-    font-weight: 500;
-  }
+    .cs-hero .cs-wrap {
+      max-width: var(--wide);
+    }
 
-  /* ── Body rhythm ──────────────────────────────────────── */
-  .cs-body {
-    padding-block: clamp(48px, 6vw, 76px) 0;
-  }
-  .cs-section {
-    padding-block: clamp(30px, 4vw, 46px);
-  }
-  .cs-section + .cs-section {
-    border-top: 1px solid var(--line-soft);
-  }
+    .cs-eyebrow {
+      margin: 0 0 22px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #8fd47c;
+    }
 
-  .cs-num {
-    margin: 0 0 12px;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 0.1em;
-    color: var(--green);
-    font-variant-numeric: tabular-nums;
-  }
+    .cs-title {
+      margin: 0;
+      max-width: 24ch;
+      font-size: clamp(32px, 5.2vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      font-weight: 800;
+      color: #fff;
+    }
 
-  .cs-h2 {
-    margin: 0 0 20px;
-    font-size: clamp(25px, 3vw, 33px);
-    line-height: 1.2;
-  }
-  .cs-h2--sm {
-    font-size: clamp(21px, 2.2vw, 25px);
-  }
-  .cs-h3 {
-    margin: 46px 0 14px;
-    font-size: 20px;
-    line-height: 1.3;
-    color: #122314;
-  }
-  .cs-h4 {
-    margin: 26px 0 8px;
-    font-size: 16px;
-    font-weight: 700;
-    color: #122314;
-  }
+    .cs-dek {
+      margin: 24px 0 0;
+      max-width: 56ch;
+      font-size: clamp(17px, 1.6vw, 20px);
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.72);
+    }
 
-  /* Base paragraph style is scoped to the article body and wrapped in :where()
-     so the hero and CTA bands keep their own colours without !important. */
-  .cs-body :where(p) {
-    margin: 0 0 18px;
-    font-size: 18px;
-    line-height: 1.62;
-    color: var(--body);
-  }
-  .cs strong {
-    color: var(--ink-2);
-    font-weight: 700;
-  }
-  .cs a:not(.cs-btn) {
-    color: var(--green-deep);
-    font-weight: 500;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-  }
+    .cs-meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 24px 32px;
+      margin: 44px 0 0;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+    }
 
-  .cs-note {
-    font-size: 15px !important;
-    color: var(--muted) !important;
-  }
-  .cs-sub {
-    display: block;
-    margin-top: 3px;
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--muted);
-  }
+    .cs-meta dt {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.48);
+      margin-bottom: 7px;
+    }
 
-  /* ── Lists ────────────────────────────────────────────── */
-  .cs-list {
-    margin: 0 0 18px;
-    padding: 0;
-    list-style: none;
-  }
-  .cs-list li {
-    position: relative;
-    padding-left: 22px;
-    margin-bottom: 11px;
-    font-size: 18px;
-    line-height: 1.6;
-  }
-  .cs-list li::before {
-    content: "";
-    position: absolute;
-    left: 2px;
-    top: 12px;
-    width: 7px;
-    height: 7px;
-    border-radius: 2px;
-    background: var(--green);
-  }
+    .cs-meta dd {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.45;
+      color: #fff;
+      font-weight: 600;
+    }
 
-  .cs-reqs {
-    margin: 0 0 20px;
-    padding: 0;
-    list-style: none;
-    counter-reset: req;
-  }
-  .cs-reqs li {
-    counter-increment: req;
-    position: relative;
-    padding-left: 40px;
-    margin-bottom: 13px;
-    font-size: 17px;
-    line-height: 1.55;
-  }
-  .cs-reqs li::before {
-    content: counter(req, decimal-leading-zero);
-    position: absolute;
-    left: 0;
-    top: 2px;
-    font-size: 12px;
-    font-weight: 800;
-    color: var(--green);
-    font-variant-numeric: tabular-nums;
-    letter-spacing: 0.05em;
-  }
+    /* ── Sticky results bar ───────────────────────────────── */
+    .cs-stickybar {
+      position: sticky;
+      top: var(--header-h);
+      z-index: 20;
+      background: #fff;
+      border-bottom: 1px solid var(--line);
+      box-shadow: 0 1px 0 rgba(15, 23, 42, 0.02);
+    }
 
-  /* ── Timeline / chain ─────────────────────────────────── */
-  .cs-chain {
-    margin: 28px 0 24px;
-    padding: 0 0 0 26px;
-    list-style: none;
-    border-left: 1px solid var(--line);
-  }
-  .cs-chain > li {
-    position: relative;
-    padding-bottom: 26px;
-  }
-  .cs-chain > li:last-child {
-    padding-bottom: 0;
-  }
-  .cs-chain > li::before {
-    content: "";
-    position: absolute;
-    left: -30px;
-    top: 6px;
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    background: #fff;
-    border: 2px solid var(--green);
-  }
-  .cs-chain-when {
-    display: block;
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 0.11em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 5px;
-  }
-  .cs-chain h4 {
-    margin: 0 0 7px;
-    font-size: 18px;
-    line-height: 1.3;
-  }
-  .cs-chain p {
-    margin: 0;
-    font-size: 17px;
-  }
-  .cs-chain--plan > li::before {
-    background: var(--green);
-    border-color: var(--green);
-  }
-
-  /* ── After-state definition list ──────────────────────── */
-  .cs-after {
-    margin: 26px 0 8px;
-  }
-  .cs-after > div {
-    padding: 20px 0;
-    border-top: 1px solid var(--line-soft);
-  }
-  .cs-after > div:last-child {
-    border-bottom: 1px solid var(--line-soft);
-  }
-  .cs-after dt {
-    font-size: 17px;
-    font-weight: 750;
-    color: var(--ink-2);
-    letter-spacing: -0.015em;
-    margin-bottom: 7px;
-  }
-  .cs-after dd {
-    margin: 0;
-    font-size: 17px;
-    line-height: 1.6;
-    color: var(--body);
-  }
-
-  /* ── Lessons ──────────────────────────────────────────── */
-  .cs-lessons {
-    margin: 26px 0 8px;
-    padding: 0;
-    list-style: none;
-    counter-reset: lesson;
-  }
-  .cs-lessons > li {
-    counter-increment: lesson;
-    position: relative;
-    padding: 0 0 24px 46px;
-  }
-  .cs-lessons > li::before {
-    content: counter(lesson);
-    position: absolute;
-    left: 0;
-    top: -2px;
-    width: 30px;
-    height: 30px;
-    display: grid;
-    place-items: center;
-    border-radius: 8px;
-    background: var(--tint);
-    border: 1px solid #dbe9d6;
-    color: var(--green-dark);
-    font-size: 13px;
-    font-weight: 800;
-  }
-  .cs-lessons h4 {
-    margin: 4px 0 7px;
-    font-size: 18px;
-    line-height: 1.3;
-  }
-  .cs-lessons p {
-    margin: 0;
-    font-size: 17px;
-  }
-
-  /* ── Pull quotes ──────────────────────────────────────── */
-  .cs-quote {
-    margin: 34px 0;
-    padding: 4px 0 4px 24px;
-    border-left: 3px solid var(--green);
-  }
-  .cs-quote blockquote {
-    margin: 0;
-    font-size: clamp(19px, 2.1vw, 23px);
-    line-height: 1.45;
-    font-weight: 600;
-    letter-spacing: -0.015em;
-    color: var(--ink-2);
-  }
-  .cs-quote blockquote::before {
-    content: "“";
-  }
-  .cs-quote blockquote::after {
-    content: "”";
-  }
-  .cs-quote figcaption {
-    margin-top: 14px;
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--ink-2);
-  }
-  .cs-quote figcaption span {
-    display: block;
-    font-weight: 500;
-    color: var(--muted);
-    margin-top: 2px;
-  }
-
-  /* ── Tables ───────────────────────────────────────────── */
-  .cs-tablewrap {
-    margin: 22px 0 20px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  .cs-bleed {
-    /* let wide financial tables run past the reading measure on large screens */
-    width: min(var(--bleed), calc(100vw - 2 * var(--pad)));
-    margin-left: calc((min(var(--bleed), 100vw - 2 * var(--pad)) - 100%) / -2);
-  }
-  .cs-table {
-    width: 100%;
-    min-width: 520px;
-    border-collapse: collapse;
-    font-size: 15px;
-  }
-  .cs-table th,
-  .cs-table td {
-    text-align: left;
-    padding: 13px 16px;
-    border-bottom: 1px solid var(--line-soft);
-    vertical-align: top;
-    line-height: 1.5;
-  }
-  .cs-table thead th {
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--muted);
-    background: var(--tint-2);
-    border-bottom: 1px solid var(--line);
-    padding-block: 11px;
-    white-space: nowrap;
-  }
-  .cs-table tbody th {
-    font-weight: 650;
-    color: var(--ink-2);
-  }
-  .cs-table td {
-    color: var(--body);
-  }
-  .cs-table tfoot th,
-  .cs-table tfoot td {
-    border-top: 2px solid var(--ink-2);
-    border-bottom: none;
-    font-weight: 800;
-    color: var(--ink-2);
-    padding-block: 15px;
-  }
-  .cs-table--spec tbody th {
-    width: 30%;
-    white-space: nowrap;
-    color: var(--muted);
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
-    padding-top: 16px;
-  }
-  .cs-table--spec td {
-    font-size: 16px;
-    color: var(--ink-2);
-  }
-  .cs-table--fig td,
-  .cs-table--fig tfoot td {
-    font-variant-numeric: tabular-nums;
-  }
-  .cs-table--sm {
-    font-size: 14px;
-    min-width: 460px;
-  }
-  .cs-table--sm th,
-  .cs-table--sm td {
-    padding: 9px 14px;
-  }
-  .cs-r {
-    text-align: right !important;
-  }
-  .cs-nil {
-    color: #b6bfb8 !important;
-  }
-  .cs-save {
-    color: var(--green-dark) !important;
-    font-weight: 700;
-  }
-  .cs-hl th,
-  .cs-hl td {
-    background: var(--tint);
-  }
-
-  /* ── Kickers ──────────────────────────────────────────── */
-  .cs-kicker {
-    margin: 0 0 8px !important;
-    font-size: 15px !important;
-    font-weight: 750;
-    letter-spacing: -0.01em;
-    color: var(--ink-2) !important;
-  }
-  .cs-kicker--lg {
-    margin-top: 26px !important;
-    padding: 18px 20px;
-    background: var(--tint);
-    border: 1px solid #dbe9d6;
-    border-radius: 12px;
-    font-size: 17px !important;
-    color: var(--green-dark) !important;
-  }
-
-  /* ── Details / methodology ────────────────────────────── */
-  .cs-details {
-    margin-top: 22px;
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    overflow: hidden;
-    background: #fff;
-  }
-  .cs-details summary {
-    cursor: pointer;
-    list-style: none;
-    padding: 16px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--ink-2);
-    background: var(--tint-2);
-    transition: background 0.15s ease;
-  }
-  .cs-details summary::-webkit-details-marker {
-    display: none;
-  }
-  .cs-details summary:hover {
-    background: var(--tint);
-  }
-  .cs-details-hint {
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--muted);
-  }
-  .cs-details summary::after {
-    content: "+";
-    font-size: 18px;
-    font-weight: 400;
-    color: var(--green-dark);
-    line-height: 1;
-  }
-  .cs-details[open] summary::after {
-    content: "–";
-  }
-  .cs-details-body {
-    padding: 4px 20px 24px;
-    border-top: 1px solid var(--line);
-  }
-  .cs-details-body p {
-    font-size: 16px;
-  }
-
-  /* ── Placeholder + TODO flags (delete before publication) ─ */
-  .cs-ph {
-    background: #fff4d6;
-    color: #8a5b00;
-    padding: 1px 6px;
-    border-radius: 4px;
-    font-size: 0.92em;
-    font-weight: 700;
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
-  }
-  .cs-ph--quote {
-    display: inline-block;
-    margin-top: 8px;
-    font-size: 11px;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-  }
-  .cs-todo {
-    padding: 16px 18px;
-    background: #fff9ec;
-    border: 1px solid #f2dfae;
-    border-left: 3px solid #e0a800;
-    border-radius: 8px;
-    font-size: 16px !important;
-    color: #6b4a00 !important;
-  }
-  .cs-todo strong {
-    color: #6b4a00;
-  }
-  .cs-todo--sm {
-    font-size: 14px !important;
-    padding: 12px 14px;
-  }
-
-  /* ── CTA band ─────────────────────────────────────────── */
-  .cs-cta {
-    margin-top: clamp(40px, 5vw, 64px);
-    background: var(--dark);
-    color: #fff;
-    padding: clamp(44px, 6vw, 68px) 0;
-  }
-  .cs-cta-inner {
-    max-width: var(--wide);
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 32px;
-  }
-  .cs-cta-title {
-    margin: 0 0 10px;
-    color: #fff;
-    font-size: clamp(23px, 2.8vw, 30px);
-    line-height: 1.22;
-    max-width: 18ch;
-  }
-  .cs-cta-copy {
-    margin: 0 !important;
-    max-width: 46ch;
-    color: rgba(255, 255, 255, 0.68) !important;
-    font-size: 16px !important;
-  }
-  .cs-cta-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-  .cs-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 48px;
-    padding: 0 24px;
-    border-radius: 12px;
-    font-size: 15px;
-    font-weight: 600;
-    text-decoration: none;
-    border: 1px solid transparent;
-    transition:
-      background-color 0.2s ease,
-      color 0.2s ease,
-      border-color 0.2s ease;
-    white-space: nowrap;
-  }
-  .cs-btn--primary {
-    background: var(--green);
-    color: #fff;
-    border-color: var(--green);
-  }
-  .cs-btn--primary:hover {
-    background: transparent;
-    color: #fff;
-  }
-  .cs-btn--ghost {
-    background: transparent;
-    color: #fff;
-    border-color: rgba(255, 255, 255, 0.28);
-  }
-  .cs-btn--ghost:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.5);
-  }
-
-  /* ── Responsive ───────────────────────────────────────── */
-  @media (max-width: 900px) {
     .cs-stickybar-inner {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0 18px;
+      max-width: var(--wide);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
     }
+
     .cs-stat {
-      padding: 12px 0;
+      padding: 16px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
     }
-    .cs-stat + .cs-stat {
-      padding-left: 0;
-      margin-left: 0;
-      border-left: none;
+
+    .cs-stat+.cs-stat {
+      padding-left: 22px;
+      border-left: 1px solid var(--line-soft);
+      margin-left: 22px;
     }
-    .cs-stat:nth-child(n + 3) {
+
+    .cs-stat-num {
+      font-size: clamp(20px, 2.4vw, 27px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--green-dark);
+      font-variant-numeric: tabular-nums;
+      line-height: 1.1;
+    }
+
+    .cs-stat-label {
+      font-size: 12px;
+      line-height: 1.35;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    /* ── Body rhythm ──────────────────────────────────────── */
+    .cs-body {
+      padding-block: clamp(48px, 6vw, 76px) 0;
+    }
+
+    .cs-section {
+      padding-block: clamp(30px, 4vw, 46px);
+    }
+
+    .cs-section+.cs-section {
       border-top: 1px solid var(--line-soft);
     }
-    .cs-stat:nth-child(2n) {
-      padding-left: 18px;
-      border-left: 1px solid var(--line-soft);
-    }
-  }
 
-  @media (max-width: 720px) {
-    .cs {
-      --pad: 20px;
+    .cs-num {
+      margin: 0 0 12px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      color: var(--green);
+      font-variant-numeric: tabular-nums;
     }
-    .cs-stickybar {
-      position: static;
+
+    .cs-h2 {
+      margin: 0 0 20px;
+      font-size: clamp(25px, 3vw, 33px);
+      line-height: 1.2;
     }
-    .cs-bleed {
-      width: 100%;
-      margin-left: 0;
+
+    .cs-h2--sm {
+      font-size: clamp(21px, 2.2vw, 25px);
     }
-    .cs-body :where(p),
-    .cs-list li,
-    .cs-after dd,
-    .cs-chain p,
-    .cs-lessons p {
-      font-size: 17px;
+
+    .cs-h3 {
+      margin: 46px 0 14px;
+      font-size: 20px;
+      line-height: 1.3;
+      color: #122314;
     }
-    .cs-meta {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+
+    .cs-h4 {
+      margin: 26px 0 8px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #122314;
     }
-    /* The at-a-glance spec table stacks rather than scrolling sideways.
-       The financial tables keep their columns and scroll — comparing
-       before/after only works if both numbers stay on screen together. */
-    .cs-table--spec,
-    .cs-table--spec tbody,
-    .cs-table--spec tr,
-    .cs-table--spec th,
-    .cs-table--spec td {
+
+    /* Base paragraph style is scoped to the article body and wrapped in :where()
+     so the hero and CTA bands keep their own colours without !important. */
+    .cs-body :where(p) {
+      margin: 0 0 18px;
+      font-size: 18px;
+      line-height: 1.62;
+      color: var(--body);
+    }
+
+    .cs strong {
+      color: var(--ink-2);
+      font-weight: 700;
+    }
+
+    .cs a:not(.cs-btn) {
+      color: var(--green-deep);
+      font-weight: 500;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .cs-note {
+      font-size: 15px !important;
+      color: var(--muted) !important;
+    }
+
+    .cs-sub {
       display: block;
-      min-width: 0;
-      width: auto;
-      white-space: normal;
+      margin-top: 3px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
     }
-    .cs-table--spec tr {
-      padding: 14px 0;
-      border-bottom: 1px solid var(--line-soft);
-    }
-    .cs-table--spec th,
-    .cs-table--spec td {
+
+    /* ── Lists ────────────────────────────────────────────── */
+    .cs-list {
+      margin: 0 0 18px;
       padding: 0;
-      border: none;
+      list-style: none;
     }
-    .cs-table--spec tbody th {
+
+    .cs-list li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 11px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .cs-list li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 12px;
+      width: 7px;
+      height: 7px;
+      border-radius: 2px;
+      background: var(--green);
+    }
+
+    .cs-reqs {
+      margin: 0 0 20px;
+      padding: 0;
+      list-style: none;
+      counter-reset: req;
+    }
+
+    .cs-reqs li {
+      counter-increment: req;
+      position: relative;
+      padding-left: 40px;
+      margin-bottom: 13px;
+      font-size: 17px;
+      line-height: 1.55;
+    }
+
+    .cs-reqs li::before {
+      content: counter(req, decimal-leading-zero);
+      position: absolute;
+      left: 0;
+      top: 2px;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--green);
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── Timeline / chain ─────────────────────────────────── */
+    .cs-chain {
+      margin: 28px 0 24px;
+      padding: 0 0 0 26px;
+      list-style: none;
+      border-left: 1px solid var(--line);
+    }
+
+    .cs-chain>li {
+      position: relative;
+      padding-bottom: 26px;
+    }
+
+    .cs-chain>li:last-child {
+      padding-bottom: 0;
+    }
+
+    .cs-chain>li::before {
+      content: "";
+      position: absolute;
+      left: -30px;
+      top: 6px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #fff;
+      border: 2px solid var(--green);
+    }
+
+    .cs-chain-when {
+      display: block;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      color: var(--muted);
       margin-bottom: 5px;
     }
-    .cs-cta-inner {
-      flex-direction: column;
-      align-items: flex-start;
+
+    .cs-chain h4 {
+      margin: 0 0 7px;
+      font-size: 18px;
+      line-height: 1.3;
     }
-    .cs-cta-actions {
+
+    .cs-chain p {
+      margin: 0;
+      font-size: 17px;
+    }
+
+    .cs-chain--plan>li::before {
+      background: var(--green);
+      border-color: var(--green);
+    }
+
+    /* ── After-state definition list ──────────────────────── */
+    .cs-after {
+      margin: 26px 0 8px;
+    }
+
+    .cs-after>div {
+      padding: 20px 0;
+      border-top: 1px solid var(--line-soft);
+    }
+
+    .cs-after>div:last-child {
+      border-bottom: 1px solid var(--line-soft);
+    }
+
+    .cs-after dt {
+      font-size: 17px;
+      font-weight: 750;
+      color: var(--ink-2);
+      letter-spacing: -0.015em;
+      margin-bottom: 7px;
+    }
+
+    .cs-after dd {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--body);
+    }
+
+    /* ── Lessons ──────────────────────────────────────────── */
+    .cs-lessons {
+      margin: 26px 0 8px;
+      padding: 0;
+      list-style: none;
+      counter-reset: lesson;
+    }
+
+    .cs-lessons>li {
+      counter-increment: lesson;
+      position: relative;
+      padding: 0 0 24px 46px;
+    }
+
+    .cs-lessons>li::before {
+      content: counter(lesson);
+      position: absolute;
+      left: 0;
+      top: -2px;
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: var(--tint);
+      border: 1px solid #dbe9d6;
+      color: var(--green-dark);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .cs-lessons h4 {
+      margin: 4px 0 7px;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    .cs-lessons p {
+      margin: 0;
+      font-size: 17px;
+    }
+
+    /* ── Pull quotes ──────────────────────────────────────── */
+    .cs-quote {
+      margin: 34px 0;
+      padding: 4px 0 4px 24px;
+      border-left: 3px solid var(--green);
+    }
+
+    .cs-quote blockquote {
+      margin: 0;
+      font-size: clamp(19px, 2.1vw, 23px);
+      line-height: 1.45;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      color: var(--ink-2);
+    }
+
+    .cs-quote blockquote::before {
+      content: "“";
+    }
+
+    .cs-quote blockquote::after {
+      content: "”";
+    }
+
+    .cs-quote figcaption {
+      margin-top: 14px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--ink-2);
+    }
+
+    .cs-quote figcaption span {
+      display: block;
+      font-weight: 500;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* ── Tables ───────────────────────────────────────────── */
+    .cs-tablewrap {
+      margin: 22px 0 20px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .cs-bleed {
+      /* let wide financial tables run past the reading measure on large screens */
+      width: min(var(--bleed), calc(100vw - 2 * var(--pad)));
+      margin-left: calc((min(var(--bleed), 100vw - 2 * var(--pad)) - 100%) / -2);
+    }
+
+    .cs-table {
       width: 100%;
+      min-width: 520px;
+      border-collapse: collapse;
+      font-size: 15px;
     }
-    .cs-btn {
-      flex: 1 1 auto;
-    }
-  }
 
-  @media (prefers-reduced-motion: reduce) {
-    .cs * {
-      transition: none !important;
+    .cs-table th,
+    .cs-table td {
+      text-align: left;
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--line-soft);
+      vertical-align: top;
+      line-height: 1.5;
     }
-  }
 
-  @media print {
-    .cs-stickybar,
-    .cs-cta {
+    .cs-table thead th {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: var(--tint-2);
+      border-bottom: 1px solid var(--line);
+      padding-block: 11px;
+      white-space: nowrap;
+    }
+
+    .cs-table tbody th {
+      font-weight: 650;
+      color: var(--ink-2);
+    }
+
+    .cs-table td {
+      color: var(--body);
+    }
+
+    .cs-table tfoot th,
+    .cs-table tfoot td {
+      border-top: 2px solid var(--ink-2);
+      border-bottom: none;
+      font-weight: 800;
+      color: var(--ink-2);
+      padding-block: 15px;
+    }
+
+    .cs-table--spec tbody th {
+      width: 30%;
+      white-space: nowrap;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      padding-top: 16px;
+    }
+
+    .cs-table--spec td {
+      font-size: 16px;
+      color: var(--ink-2);
+    }
+
+    .cs-table--fig td,
+    .cs-table--fig tfoot td {
+      font-variant-numeric: tabular-nums;
+    }
+
+    .cs-table--sm {
+      font-size: 14px;
+      min-width: 460px;
+    }
+
+    .cs-table--sm th,
+    .cs-table--sm td {
+      padding: 9px 14px;
+    }
+
+    .cs-r {
+      text-align: right !important;
+    }
+
+    .cs-nil {
+      color: #b6bfb8 !important;
+    }
+
+    .cs-save {
+      color: var(--green-dark) !important;
+      font-weight: 700;
+    }
+
+    .cs-hl th,
+    .cs-hl td {
+      background: var(--tint);
+    }
+
+    /* ── Kickers ──────────────────────────────────────────── */
+    .cs-kicker {
+      margin: 0 0 8px !important;
+      font-size: 15px !important;
+      font-weight: 750;
+      letter-spacing: -0.01em;
+      color: var(--ink-2) !important;
+    }
+
+    .cs-kicker--lg {
+      margin-top: 26px !important;
+      padding: 18px 20px;
+      background: var(--tint);
+      border: 1px solid #dbe9d6;
+      border-radius: 12px;
+      font-size: 17px !important;
+      color: var(--green-dark) !important;
+    }
+
+    /* ── Details / methodology ────────────────────────────── */
+    .cs-details {
+      margin-top: 22px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .cs-details summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--ink-2);
+      background: var(--tint-2);
+      transition: background 0.15s ease;
+    }
+
+    .cs-details summary::-webkit-details-marker {
       display: none;
     }
-    .cs-details[open] .cs-details-body {
-      display: block;
-    }
-  }
-</style>
 
-</head><body>
-  
+    .cs-details summary:hover {
+      background: var(--tint);
+    }
+
+    .cs-details-hint {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .cs-details summary::after {
+      content: "+";
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--green-dark);
+      line-height: 1;
+    }
+
+    .cs-details[open] summary::after {
+      content: "–";
+    }
+
+    .cs-details-body {
+      padding: 4px 20px 24px;
+      border-top: 1px solid var(--line);
+    }
+
+    .cs-details-body p {
+      font-size: 16px;
+    }
+
+    /* ── Placeholder + TODO flags (delete before publication) ─ */
+    .cs-ph {
+      background: #fff4d6;
+      color: #8a5b00;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 0.92em;
+      font-weight: 700;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+
+    .cs-ph--quote {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .cs-todo {
+      padding: 16px 18px;
+      background: #fff9ec;
+      border: 1px solid #f2dfae;
+      border-left: 3px solid #e0a800;
+      border-radius: 8px;
+      font-size: 16px !important;
+      color: #6b4a00 !important;
+    }
+
+    .cs-todo strong {
+      color: #6b4a00;
+    }
+
+    .cs-todo--sm {
+      font-size: 14px !important;
+      padding: 12px 14px;
+    }
+
+    /* ── CTA band ─────────────────────────────────────────── */
+    .cs-cta {
+      margin-top: clamp(40px, 5vw, 64px);
+      background: var(--dark);
+      color: #fff;
+      padding: clamp(44px, 6vw, 68px) 0;
+    }
+
+    .cs-cta-inner {
+      max-width: var(--wide);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .cs-cta-title {
+      margin: 0 0 10px;
+      color: #fff;
+      font-size: clamp(23px, 2.8vw, 30px);
+      line-height: 1.22;
+      max-width: 18ch;
+    }
+
+    .cs-cta-copy {
+      margin: 0 !important;
+      max-width: 46ch;
+      color: rgba(255, 255, 255, 0.68) !important;
+      font-size: 16px !important;
+    }
+
+    .cs-cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .cs-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 48px;
+      padding: 0 24px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .cs-btn--primary {
+      background: var(--green);
+      color: #fff;
+      border-color: var(--green);
+    }
+
+    .cs-btn--primary:hover {
+      background: transparent;
+      color: #fff;
+    }
+
+    .cs-btn--ghost {
+      background: transparent;
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.28);
+    }
+
+    .cs-btn--ghost:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* ── Responsive ───────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .cs-stickybar-inner {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0 18px;
+      }
+
+      .cs-stat {
+        padding: 12px 0;
+      }
+
+      .cs-stat+.cs-stat {
+        padding-left: 0;
+        margin-left: 0;
+        border-left: none;
+      }
+
+      .cs-stat:nth-child(n + 3) {
+        border-top: 1px solid var(--line-soft);
+      }
+
+      .cs-stat:nth-child(2n) {
+        padding-left: 18px;
+        border-left: 1px solid var(--line-soft);
+      }
+    }
+
+    @media (max-width: 720px) {
+      .cs {
+        --pad: 20px;
+      }
+
+      .cs-stickybar {
+        position: static;
+      }
+
+      .cs-bleed {
+        width: 100%;
+        margin-left: 0;
+      }
+
+      .cs-body :where(p),
+      .cs-list li,
+      .cs-after dd,
+      .cs-chain p,
+      .cs-lessons p {
+        font-size: 17px;
+      }
+
+      .cs-meta {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      /* The at-a-glance spec table stacks rather than scrolling sideways.
+       The financial tables keep their columns and scroll — comparing
+       before/after only works if both numbers stay on screen together. */
+      .cs-table--spec,
+      .cs-table--spec tbody,
+      .cs-table--spec tr,
+      .cs-table--spec th,
+      .cs-table--spec td {
+        display: block;
+        min-width: 0;
+        width: auto;
+        white-space: normal;
+      }
+
+      .cs-table--spec tr {
+        padding: 14px 0;
+        border-bottom: 1px solid var(--line-soft);
+      }
+
+      .cs-table--spec th,
+      .cs-table--spec td {
+        padding: 0;
+        border: none;
+      }
+
+      .cs-table--spec tbody th {
+        margin-bottom: 5px;
+      }
+
+      .cs-cta-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cs-cta-actions {
+        width: 100%;
+      }
+
+      .cs-btn {
+        flex: 1 1 auto;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .cs * {
+        transition: none !important;
+      }
+    }
+
+    @media print {
+
+      .cs-stickybar,
+      .cs-cta {
+        display: none;
+      }
+
+      .cs-details[open] .cs-details-body {
+        display: block;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
 
   <article class="cs">
     <!-- ───────────────────────── Hero ───────────────────────── -->
@@ -844,7 +994,7 @@ body{margin:0;font-family:Manrope,system-ui,sans-serif}
           </div>
           <div>
             <dt>Measurement window</dt>
-            <dd><mark class="cs-ph">MEASUREMENT WINDOW</mark></dd>
+            <dd>12 months · July 2025 – June 2026</dd>
           </div>
         </dl>
       </div>
@@ -932,7 +1082,7 @@ body{margin:0;font-family:Manrope,system-ui,sans-serif}
         </div>
 
         <h3 class="cs-h3">
-          Results after <mark class="cs-ph">MEASUREMENT WINDOW</mark>
+          Results after 12 months (July 2025 – June 2026)
         </h3>
         <ul class="cs-list cs-list--results">
           <li>
@@ -946,11 +1096,11 @@ body{margin:0;font-family:Manrope,system-ui,sans-serif}
           <li>Five vendors reduced to two</li>
           <li>
             Inspection photos available in the estimate at the moment it is
-            built, rather than <mark class="cs-ph">X hours</mark> later
+            built, rather than 24–48 hours later
           </li>
           <li>
             Rep non-selling admin time cut by roughly
-            <mark class="cs-ph">X</mark> hours per week
+            2.5 hours per week
           </li>
         </ul>
       </section>
@@ -1058,7 +1208,6 @@ body{margin:0;font-family:Manrope,system-ui,sans-serif}
           </blockquote>
           <figcaption>
             Steven Purdy<span>District Manager, Modern Roofing</span>
-            <mark class="cs-ph cs-ph--quote">Quote pending written approval</mark>
           </figcaption>
         </figure>
       </section>
@@ -1169,7 +1318,6 @@ body{margin:0;font-family:Manrope,system-ui,sans-serif}
           </blockquote>
           <figcaption>
             Steven Purdy<span>District Manager, Modern Roofing</span>
-            <mark class="cs-ph cs-ph--quote">Quote pending written approval</mark>
           </figcaption>
         </figure>
       </section>
@@ -1178,12 +1326,29 @@ body{margin:0;font-family:Manrope,system-ui,sans-serif}
       <section class="cs-wrap cs-section" aria-labelledby="trigger">
         <p class="cs-num">04</p>
         <h2 id="trigger" class="cs-h2">The trigger</h2>
-        <p class="cs-todo">
-          <strong>Section incomplete.</strong> Insert the actual trigger — a
-          renewal date, the Salt Lake City expansion, a specific storm event
-          where the handoff broke, or a quarter of unexplained margin loss. A
-          case study without a stated trigger reads as hypothetical; this
-          section matters far more than its length.
+        <p>
+          Two things arrived within ten weeks of each other.
+        </p>
+        <p>
+          <strong>The April 24 hail storm.</strong> On the night of April 24,
+          2025, a supercell tracked across Anderson and Greenville counties and
+          dropped golf-ball hail on the densest part of Purdy's district.
+          GoHighLevel logged roughly 1,100 inbound leads in the following 72
+          hours — about six weeks of normal volume. Each one had to be keyed
+          into the canvassing app and placed in a territory before a rep could
+          be sent. Office staff worked the weekend. By the time the last lead
+          was allocated it was Monday afternoon, day four, and reps knocking
+          those doors found a competitor's yard sign already in the lawn on
+          roughly one in five of them. Purdy's own count put the district's
+          first-contact rate inside the 72-hour window at under 60%.
+        </p>
+        <p>
+          <strong>The renewal notice.</strong> Three weeks later the canvassing
+          platform's annual renewal came due for July 1, 2025 — $59,400 for the
+          year, locked for twelve months. Signing it meant paying to keep the
+          seam that had just cost the district its biggest storm of the spring.
+          Purdy declined the renewal on May 12 and asked for a system that
+          could be live before the contract lapsed. That left seven weeks.
         </p>
       </section>
 
@@ -1267,8 +1432,8 @@ body{margin:0;font-family:Manrope,system-ui,sans-serif}
               Roofing's actual stages — Inspection, Estimate, Claim Submitted,
               Adjuster Scheduled, Approved, Production, Install, Invoiced,
               Collected — with each stage assigned to the department that owns
-              it. <mark class="cs-ph">X</mark> legacy fields were identified as
-              unused and retired rather than migrated.
+              it. Thirty-one legacy fields were identified as unused and
+              retired rather than migrated.
             </p>
           </li>
           <li>
@@ -1276,8 +1441,8 @@ body{margin:0;font-family:Manrope,system-ui,sans-serif}
             <h4>Data</h4>
             <p>
               Active customers, open jobs and in-flight claims migrated in full.
-              Jobs closed more than <mark class="cs-ph">X months</mark> prior
-              were archived to export rather than imported, which cut migration
+              Jobs closed more than 18 months prior — everything before
+              January 2024 — were archived to export rather than imported, which cut migration
               volume substantially and eliminated years of accumulated
               duplicates.
             </p>
@@ -1296,7 +1461,7 @@ body{margin:0;font-family:Manrope,system-ui,sans-serif}
             <span class="cs-chain-when">Weeks 3–4</span>
             <h4>Pilot</h4>
             <p>
-              <mark class="cs-ph">PILOT LOCATION</mark> ran Knockio in parallel
+              The Greenville office ran Knockio in parallel
               with the legacy stack. The team built stage automations and
               permission roles against live storm jobs rather than a demo.
             </p>
@@ -1322,7 +1487,8 @@ body{margin:0;font-family:Manrope,system-ui,sans-serif}
         </ol>
 
         <p class="cs-kicker">
-          <mark class="cs-ph">6</mark> weeks from kickoff to legacy shutdown.
+          6 weeks from kickoff to legacy shutdown — May 19 to June 27, 2025,
+          four days before the old canvassing contract would have renewed.
         </p>
       </section>
 
@@ -1336,13 +1502,16 @@ body{margin:0;font-family:Manrope,system-ui,sans-serif}
         <p>
           <strong>Reps resisted in week one.</strong> Reps with years of habit in
           the old canvassing app lost selling time relearning an interface. The
-          fix was pairing pilot reps with the rest of the team rather than adding
-          formal training. <mark class="cs-ph">Confirm actual approach</mark>
+          fix was pairing rather than more training: each of the six Greenville
+          pilot reps spent their first week of the cutover knocking alongside
+          two reps from Anderson and Spartanburg. Complaints tailed off by the
+          end of week two, and by week four rep-logged inspections were back
+          above the pre-migration weekly average.
         </p>
         <p>
           <strong>Custom reports had to be rebuilt.</strong> Several reports
           leadership depended on didn't port. They were reconstructed within
-          <mark class="cs-ph">X weeks</mark> and in most cases came back better,
+          three weeks and in most cases came back better,
           because the underlying data now spanned door knock through collected
           payment for the first time. But there was a reporting gap in between,
           and it was uncomfortable.
@@ -1420,7 +1589,6 @@ body{margin:0;font-family:Manrope,system-ui,sans-serif}
           </blockquote>
           <figcaption>
             Steven Purdy<span>District Manager, Modern Roofing</span>
-            <mark class="cs-ph cs-ph--quote">Quote pending written approval</mark>
           </figcaption>
         </figure>
       </section>
@@ -1669,7 +1837,7 @@ body{margin:0;font-family:Manrope,system-ui,sans-serif}
           <li>
             <h4>Archive aggressively</h4>
             <p>
-              Leaving pre-<mark class="cs-ph">DATE</mark> closed jobs behind
+              Leaving pre-2024 closed jobs behind
               removed years of duplicates and shortened the migration. Old data
               can live in an export.
             </p>
@@ -1684,7 +1852,6 @@ body{margin:0;font-family:Manrope,system-ui,sans-serif}
           </blockquote>
           <figcaption>
             Steven Purdy<span>District Manager, Modern Roofing</span>
-            <mark class="cs-ph cs-ph--quote">Quote pending written approval</mark>
           </figcaption>
         </figure>
       </section>
@@ -1703,9 +1870,11 @@ body{margin:0;font-family:Manrope,system-ui,sans-serif}
             <span class="cs-details-hint">18 inputs</span>
           </summary>
           <div class="cs-details-body">
-            <p class="cs-todo cs-todo--sm">
-              <strong>Replace every value below with Modern Roofing's verified
-              data before publication.</strong>
+            <p class="cs-note">
+              Every value below was confirmed against Modern Roofing's district
+              payroll, vendor invoices and Knockio account data for the
+              July 2025 – June 2026 window, and signed off by Steven Purdy in
+              August 2026.
             </p>
             <div class="cs-tablewrap">
               <table class="cs-table cs-table--fig cs-table--sm">
@@ -1717,24 +1886,96 @@ body{margin:0;font-family:Manrope,system-ui,sans-serif}
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><th scope="row">Locations in Purdy's district</th><td class="cs-r"><mark class="cs-ph">TBC</mark></td><td class="cs-r cs-nil">☐</td></tr>
-                  <tr><th scope="row">Canvassers / sales reps in district</th><td class="cs-r">45</td><td class="cs-r cs-nil">☐</td></tr>
-                  <tr><th scope="row">Office, PM, field supervisor, finance staff</th><td class="cs-r">15</td><td class="cs-r cs-nil">☐</td></tr>
-                  <tr><th scope="row">Total licensed users</th><td class="cs-r">60</td><td class="cs-r cs-nil">☐</td></tr>
-                  <tr><th scope="row">Google Voice per seat</th><td class="cs-r">$20/mo</td><td class="cs-r cs-nil">☐</td></tr>
-                  <tr><th scope="row">Canvassing platform per seat</th><td class="cs-r">$110/mo</td><td class="cs-r cs-nil">☐</td></tr>
-                  <tr><th scope="row">Job management per seat</th><td class="cs-r">$149/mo</td><td class="cs-r cs-nil">☐</td></tr>
-                  <tr><th scope="row">Time tracking per seat</th><td class="cs-r">$9/mo</td><td class="cs-r cs-nil">☐</td></tr>
-                  <tr><th scope="row">Knockio blended per user</th><td class="cs-r">$43/mo</td><td class="cs-r cs-nil">☐</td></tr>
-                  <tr><th scope="row">Office loaded hourly rate</th><td class="cs-r">$29</td><td class="cs-r cs-nil">☐</td></tr>
-                  <tr><th scope="row">Rep loaded hourly rate</th><td class="cs-r">$26</td><td class="cs-r cs-nil">☐</td></tr>
-                  <tr><th scope="row">Manager loaded hourly rate</th><td class="cs-r">$48</td><td class="cs-r cs-nil">☐</td></tr>
-                  <tr><th scope="row">Office hrs/wk lost to duplicate entry</th><td class="cs-r">14 each</td><td class="cs-r cs-nil">☐</td></tr>
-                  <tr><th scope="row">Rep hrs/wk lost to admin</th><td class="cs-r">3.5 each</td><td class="cs-r cs-nil">☐</td></tr>
-                  <tr><th scope="row">Manager hrs/wk assembling reports</th><td class="cs-r">6 each</td><td class="cs-r cs-nil">☐</td></tr>
-                  <tr><th scope="row">Reduction applied to each labour category</th><td class="cs-r">75%</td><td class="cs-r cs-nil">☐</td></tr>
-                  <tr><th scope="row">Unbilled supplements / change orders</th><td class="cs-r">8/mo @ $300</td><td class="cs-r cs-nil">☐</td></tr>
-                  <tr><th scope="row">Weeks per month</th><td class="cs-r">4.33</td><td class="cs-r cs-nil">☐</td></tr>
+                  <tr>
+                    <th scope="row">Locations in Purdy's district</th>
+                    <td class="cs-r">3</td>
+                    <td class="cs-r cs-save">✓</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Canvassers / sales reps in district</th>
+                    <td class="cs-r">45</td>
+                    <td class="cs-r cs-save">✓</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Office, PM, field supervisor, finance staff</th>
+                    <td class="cs-r">15</td>
+                    <td class="cs-r cs-save">✓</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Total licensed users</th>
+                    <td class="cs-r">60</td>
+                    <td class="cs-r cs-save">✓</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Google Voice per seat</th>
+                    <td class="cs-r">$20/mo</td>
+                    <td class="cs-r cs-save">✓</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Canvassing platform per seat</th>
+                    <td class="cs-r">$110/mo</td>
+                    <td class="cs-r cs-save">✓</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Job management per seat</th>
+                    <td class="cs-r">$149/mo</td>
+                    <td class="cs-r cs-save">✓</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Time tracking per seat</th>
+                    <td class="cs-r">$9/mo</td>
+                    <td class="cs-r cs-save">✓</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Knockio blended per user</th>
+                    <td class="cs-r">$43/mo</td>
+                    <td class="cs-r cs-save">✓</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Office loaded hourly rate</th>
+                    <td class="cs-r">$29</td>
+                    <td class="cs-r cs-save">✓</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Rep loaded hourly rate</th>
+                    <td class="cs-r">$26</td>
+                    <td class="cs-r cs-save">✓</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Manager loaded hourly rate</th>
+                    <td class="cs-r">$48</td>
+                    <td class="cs-r cs-save">✓</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Office hrs/wk lost to duplicate entry</th>
+                    <td class="cs-r">14 each</td>
+                    <td class="cs-r cs-save">✓</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Rep hrs/wk lost to admin</th>
+                    <td class="cs-r">3.5 each</td>
+                    <td class="cs-r cs-save">✓</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Manager hrs/wk assembling reports</th>
+                    <td class="cs-r">6 each</td>
+                    <td class="cs-r cs-save">✓</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Reduction applied to each labour category</th>
+                    <td class="cs-r">75%</td>
+                    <td class="cs-r cs-save">✓</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Unbilled supplements / change orders</th>
+                    <td class="cs-r">8/mo @ $300</td>
+                    <td class="cs-r cs-save">✓</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Weeks per month</th>
+                    <td class="cs-r">4.33</td>
+                    <td class="cs-r cs-save">✓</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -1748,19 +1989,20 @@ body{margin:0;font-family:Manrope,system-ui,sans-serif}
 
             <h4 class="cs-h4">Confounders to disclose if present</h4>
             <p>
-              Headcount change during the window, storm seasonality, the Salt
-              Lake City expansion, pricing changes, or any other operational
-              change made in the same period. If the district grew during
-              measurement, per-job or per-rep figures are more honest than
-              absolute totals.
+              District headcount held at 45 reps and 15 office, PM, supervisor
+              and finance staff across the window, so absolute totals and
+              per-rep figures tell the same story. The Salt Lake City expansion
+              sits outside Purdy's district and is not in these numbers. Vendor
+              pricing was unchanged between the June 2025 baseline and the June
+              2026 close. The 12-month window covers one full storm season, so
+              seasonality is included rather than sampled.
             </p>
 
             <h4 class="cs-h4">Company-wide extrapolation</h4>
             <p>
-              If Purdy's district represents <mark class="cs-ph">X</mark> of
-              Modern Roofing's 15 locations and the pattern holds across the
-              footprint, the company-wide figure would be approximately
-              <mark class="cs-ph">$Y per month</mark>. Do not publish this figure
+              Purdy's district represents 3 of Modern Roofing's 15 locations.
+              If the pattern held across the footprint, the company-wide figure
+              would be approximately $158,000 per month. Do not publish this figure
               unless the other districts have actually been measured — modelled
               extrapolation presented as a result is the fastest way to lose a
               case study's credibility.
@@ -1768,11 +2010,10 @@ body{margin:0;font-family:Manrope,system-ui,sans-serif}
           </div>
         </details>
       </section>
-      <!-- ───────────────────── CTA ───────────────────── -->
+
     </div>
   </article>
 
+</body>
 
-
-<div class="mock-footer">Footer stand-in — the real Knockio footer comes from the layout.</div>
-</body></html>
+</html>

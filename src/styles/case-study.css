@@ -36,12 +36,18 @@
     "Segoe UI",
     Arial,
     sans-serif;
+  font-weight: 400;
+  font-optical-sizing: auto;
   color: var(--body);
   background: #fff;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.cs :where(h1, h2, h3, h4) {
+.cs h1,
+.cs h2,
+.cs h3,
+.cs h4 {
   color: var(--ink-2);
   font-weight: 750;
   letter-spacing: -0.02em;
@@ -88,7 +94,7 @@
   line-height: 1.08;
   letter-spacing: -0.03em;
   font-weight: 800;
-  color: #fff;
+  color: #fff !important;
 }
 .cs-dek {
   margin: 24px 0 0;
