@@ -3,16 +3,9 @@ import KnockioHomeLayout from "../layouts/KnockioHomeLayout.astro";
 import PricingCalculator from "../components/PricingCalculator.astro";
 import PricingPlans from "../components/PricingPlans.astro";
 import "../styles/pricing.css";
+import { getPageSchema } from "../data/schemas";
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: "Knockio Pricing",
-  description:
-    "Straightforward pricing for Knockio field sales and service platform. Plans from $20/user/month. No contracts, no setup fees.",
-  url: "https://knockio.com/pricing/",
-  isPartOf: { "@id": "https://knockio.com/#website" },
-};
+const jsonLd = getPageSchema("/pricing/");
 ---
 
 <KnockioHomeLayout

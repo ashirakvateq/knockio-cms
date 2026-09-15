@@ -1,153 +1,13 @@
 ---
 import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
+import { getPageSchema } from "../../data/schemas";
 
 const title =
   "Knockio Features: Every Field Sales and Service Tool in One Platform";
 const description =
-  "Explore all nineteen Knockio features: sales pipeline, canvassing, territory management, route planning, photo and media management, campaign management, product management, estimates, invoicing, payments, automations, GPS tracking, and more. Included on every plan.";
+  "Explore all twenty-one Knockio features: sales pipeline, canvassing, territory management, route planning, photo and media management, campaign management, product management, estimates, invoicing, subscription billing, payments, automations, GPS tracking, integrations, and more. Included on every plan.";
 
-const jsonLd = [
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://knockio.com/",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Features",
-        item: "https://knockio.com/features/",
-      },
-    ],
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "Knockio Features",
-    numberOfItems: 19,
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Sales Pipeline",
-        url: "https://knockio.com/features/sales-pipeline-software/",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Estimates",
-        url: "https://knockio.com/features/estimate-software/",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: "Inventory",
-        url: "https://knockio.com/features/inventory-management-software/",
-      },
-      {
-        "@type": "ListItem",
-        position: 4,
-        name: "Invoicing",
-        url: "https://knockio.com/features/invoicing-software/",
-      },
-      {
-        "@type": "ListItem",
-        position: 5,
-        name: "Work Orders",
-        url: "https://knockio.com/features/work-order-management-software/",
-      },
-      {
-        "@type": "ListItem",
-        position: 6,
-        name: "Appointments",
-        url: "https://knockio.com/features/appointment-scheduling-software/",
-      },
-      {
-        "@type": "ListItem",
-        position: 7,
-        name: "Payment Processing",
-        url: "https://knockio.com/features/payment-processing/",
-      },
-      {
-        "@type": "ListItem",
-        position: 8,
-        name: "E-Contracts",
-        url: "https://knockio.com/features/e-contracts-software/",
-      },
-      {
-        "@type": "ListItem",
-        position: 9,
-        name: "Call Text and Email",
-        url: "https://knockio.com/features/business-texting-and-calling-software/",
-      },
-      {
-        "@type": "ListItem",
-        position: 10,
-        name: "User Management",
-        url: "https://knockio.com/features/user-management-software/",
-      },
-      {
-        "@type": "ListItem",
-        position: 11,
-        name: "Territory Management",
-        url: "https://knockio.com/features/territory-management-software/",
-      },
-      {
-        "@type": "ListItem",
-        position: 12,
-        name: "Sales Canvassing",
-        url: "https://knockio.com/features/sales-canvassing-software/",
-      },
-      {
-        "@type": "ListItem",
-        position: 13,
-        name: "GPS Tracking",
-        url: "https://knockio.com/features/gps-tracking-software/",
-      },
-      {
-        "@type": "ListItem",
-        position: 14,
-        name: "Route Planning and Dispatching",
-        url: "https://knockio.com/features/route-planning-and-dispatching/",
-      },
-      {
-        "@type": "ListItem",
-        position: 15,
-        name: "Automations",
-        url: "https://knockio.com/features/business-automation-software/",
-      },
-      {
-        "@type": "ListItem",
-        position: 16,
-        name: "Photo and Media Management",
-        url: "https://knockio.com/features/photo-and-media-management/",
-      },
-      {
-        "@type": "ListItem",
-        position: 17,
-        name: "Campaign Management",
-        url: "https://knockio.com/features/campaign-management/",
-      },
-      {
-        "@type": "ListItem",
-        position: 18,
-        name: "Product Management",
-        url: "https://knockio.com/features/product-management/",
-      },
-      {
-        "@type": "ListItem",
-        position: 19,
-        name: "Reports and Analytics",
-        url: "https://knockio.com/features/reporting-software/",
-      },
-    ],
-  },
-];
+const jsonLd = getPageSchema("/features/");
 ---
 
 <KnockioHomeLayout
@@ -179,9 +39,9 @@ const jsonLd = [
         <span class="kicker">Knockio features</span>
         <h1>Everything you need to manage field sales and service.</h1>
         <p class="lede">
-          Nineteen features, one connected platform. Every tool below is included
-          on every Knockio plan, from the first knock at the door to the final
-          payment, with nothing sold separately as an add on.
+          Twenty-one features, one connected platform. Every tool below is
+          included on every Knockio plan, from the first knock at the door to
+          the final payment, with nothing sold separately as an add on.
         </p>
         <div class="dir-grid">
           <a
@@ -362,6 +222,34 @@ const jsonLd = [
             <p>
               Collect payments online or on site and keep every transaction tied
               to its job.
+            </p>
+            <span class="more">Learn more &rarr;</span>
+          </a>
+          <a
+            class="dir-card"
+            href="https://knockio.com/features/subscription-billing-software/"
+          >
+            <span class="dir-ic"
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                ><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path
+                  d="M3 3v5h5"></path><path
+                  d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"></path><path
+                  d="M16 16h5v5"></path></svg
+              ></span
+            >
+            <h2>Subscription Billing</h2>
+            <p>
+              Automate recurring billing from a lead or accepted estimate, with
+              a real invoice every cycle.
             </p>
             <span class="more">Learn more &rarr;</span>
           </a>
@@ -687,6 +575,34 @@ const jsonLd = [
             <p>
               Understand sales, jobs, and team performance with reports built
               for field businesses.
+            </p>
+            <span class="more">Learn more &rarr;</span>
+          </a>
+          <a
+            class="dir-card"
+            href="https://knockio.com/features/knockio-integrations/"
+          >
+            <span class="dir-ic"
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                ><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
+                ></path><path
+                  d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
+                ></path></svg
+              ></span
+            >
+            <h2>Integrations</h2>
+            <p>
+              Connect GoHighLevel, Salesforce, HubSpot, QuickBooks, and thousands
+              of apps through Zapier and Flow Chef.
             </p>
             <span class="more">Learn more &rarr;</span>
           </a>

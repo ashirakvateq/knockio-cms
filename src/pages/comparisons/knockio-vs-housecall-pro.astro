@@ -1,47 +1,12 @@
 ---
 import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
 import "../../styles/comparisons.css";
+import { getPageSchema } from "../../data/schemas";
 
 const title = "Knockio vs Housecall Pro (2026): One Flat Price vs Add On Math";
 const description = "A sourced comparison of Knockio and Housecall Pro for home service companies: canvassing, add on costs, scheduling, invoicing, and pricing.";
 
-const jsonLd = [
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://knockio.com/" },
-      { "@type": "ListItem", position: 2, name: "Comparisons", item: "https://knockio.com/comparisons/" },
-      { "@type": "ListItem", position: 3, name: "Knockio vs Housecall Pro", item: "https://knockio.com/comparisons/knockio-vs-housecall-pro/" },
-    ],
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "Does Housecall Pro have door knocking or canvassing?",
-        acceptedAnswer: { "@type": "Answer", text: "No. It is built around inbound, dispatched jobs. Knockio includes canvassing, territories, and live rep tracking with the same scheduling and invoicing." },
-      },
-      {
-        "@type": "Question",
-        name: "How much does Housecall Pro cost?",
-        acceptedAnswer: { "@type": "Answer", text: "Basic $59, Essentials $149, MAX $299 per month billed annually, plus $35 per extra user and many paid add ons, as of July 2026. Knockio is $20 to $60 per user per month with everything included." },
-      },
-      {
-        "@type": "Question",
-        name: "Is the sales pipeline included in Housecall Pro?",
-        acceptedAnswer: { "@type": "Answer", text: "No, the pipeline and the advanced proposal tool are paid add ons. Knockio includes both in the base product." },
-      },
-      {
-        "@type": "Question",
-        name: "Which is better for an HVAC or plumbing company?",
-        acceptedAnswer: { "@type": "Answer", text: "For purely inbound work, Housecall Pro is a proven choice. If you also sell in the field or dislike add on pricing, Knockio is the stronger fit." },
-      },
-    ],
-  },
-];
+const jsonLd = getPageSchema("/comparisons/knockio-vs-housecall-pro/");
 ---
 
 <KnockioHomeLayout title={title} description={description} jsonLd={jsonLd}>

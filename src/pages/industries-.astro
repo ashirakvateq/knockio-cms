@@ -1,42 +1,11 @@
 ---
 import KnockioHomeLayout from "../layouts/KnockioHomeLayout.astro";
+import { getPageSchema } from "../data/schemas";
 
 const title = "Knockio by Industry: Software for 15 Home Service and Field Sales Trades";
 const description = "See how Knockio fits your trade: roofing, solar, HVAC, plumbing, electrical, pest control, landscaping, restoration, and more. One platform from first knock to final payment.";
 
-const jsonLd = [
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://knockio.com/" },
-      { "@type": "ListItem", position: 2, name: "Industries", item: "https://knockio.com/industries/" },
-    ],
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "Knockio Industries",
-    numberOfItems: 15,
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Fiber Internet", url: "https://knockio.com/industry/fiber-internet-sales-software-and-crm/" },
-      { "@type": "ListItem", position: 2, name: "Electrical", url: "https://knockio.com/industry/electrical-contractor-software/" },
-      { "@type": "ListItem", position: 3, name: "Home Security", url: "https://knockio.com/industry/home-security-sales-software-and-crm/" },
-      { "@type": "ListItem", position: 4, name: "Pool Service", url: "https://knockio.com/industry/pool-service-software/" },
-      { "@type": "ListItem", position: 5, name: "Junk Removal", url: "https://knockio.com/industry/junk-removal-software-and-crm/" },
-      { "@type": "ListItem", position: 6, name: "Garage Door", url: "https://knockio.com/industry/garage-door-service-software/" },
-      { "@type": "ListItem", position: 7, name: "Painting", url: "https://knockio.com/industry/painting-contractor-software-and-crm/" },
-      { "@type": "ListItem", position: 8, name: "Window Cleaning", url: "https://knockio.com/industry/window-cleaning-business-software/" },
-      { "@type": "ListItem", position: 9, name: "Landscaping", url: "https://knockio.com/industry/landscaping-business-software/" },
-      { "@type": "ListItem", position: 10, name: "Restoration", url: "https://knockio.com/industry/restoration-job-management-software/" },
-      { "@type": "ListItem", position: 11, name: "HVAC", url: "https://knockio.com/industry/hvac-software-and-crm/" },
-      { "@type": "ListItem", position: 12, name: "Pest Control", url: "https://knockio.com/industry/pest-control-software/" },
-      { "@type": "ListItem", position: 13, name: "Plumbing", url: "https://knockio.com/industry/plumbing-software-and-crm/" },
-      { "@type": "ListItem", position: 14, name: "Roofing", url: "https://knockio.com/industry/roofing-sales-software-and-crm/" },
-      { "@type": "ListItem", position: 15, name: "Solar", url: "https://knockio.com/industry/solar-sales-software-and-crm/" },
-    ],
-  },
-];
+const jsonLd = getPageSchema("/industries/");
 ---
 
 <KnockioHomeLayout title={title} description={description} jsonLd={jsonLd} whiteBg={true}>

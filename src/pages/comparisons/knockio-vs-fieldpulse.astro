@@ -1,47 +1,12 @@
 ---
 import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
 import "../../styles/comparisons.css";
+import { getPageSchema } from "../../data/schemas";
 
 const title = "Knockio vs FieldPulse (2026): The Closest Match, and the Edges That Decide It";
 const description = "A sourced comparison of Knockio and FieldPulse for home service teams: canvassing, field service features, support, and pricing transparency.";
 
-const jsonLd = [
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://knockio.com/" },
-      { "@type": "ListItem", position: 2, name: "Comparisons", item: "https://knockio.com/comparisons/" },
-      { "@type": "ListItem", position: 3, name: "Knockio vs FieldPulse", item: "https://knockio.com/comparisons/knockio-vs-fieldpulse/" },
-    ],
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "Does FieldPulse have canvassing or door knocking?",
-        acceptedAnswer: { "@type": "Answer", text: "No. It is a field service and dispatch platform. Knockio includes canvassing, territories, and live rep tracking alongside the same field service features." },
-      },
-      {
-        "@type": "Question",
-        name: "How much does FieldPulse cost?",
-        acceptedAnswer: { "@type": "Answer", text: "It does not publish prices; plans are quote only, as of July 2026. Third party estimates run roughly $99 to $399 and up per month. Knockio publishes $20 to $60 per user per month." },
-      },
-      {
-        "@type": "Question",
-        name: "How do the features compare?",
-        acceptedAnswer: { "@type": "Answer", text: "They overlap heavily on scheduling, estimates, invoicing, and mobile. Knockio adds canvassing, territory mapping, and a sales pipeline, with published pricing." },
-      },
-      {
-        "@type": "Question",
-        name: "Is FieldPulse good for large teams?",
-        acceptedAnswer: { "@type": "Answer", text: "Reviews note it scales poorly beyond roughly fifteen technicians. Knockio also fits small and midsize teams best, so match either tool to your size." },
-      },
-    ],
-  },
-];
+const jsonLd = getPageSchema("/comparisons/knockio-vs-fieldpulse/");
 ---
 
 <KnockioHomeLayout title={title} description={description} jsonLd={jsonLd}>

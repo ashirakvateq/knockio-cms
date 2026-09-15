@@ -1,47 +1,12 @@
 ---
 import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
 import "../../styles/comparisons.css";
+import { getPageSchema } from "../../data/schemas";
 
 const title = "Knockio vs ServiceTitan (2026): Enterprise Power vs Same Day Simplicity";
 const description = "A sourced comparison of Knockio and ServiceTitan. The enterprise standard against a platform built for small and midsize home service teams.";
 
-const jsonLd = [
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://knockio.com/" },
-      { "@type": "ListItem", position: 2, name: "Comparisons", item: "https://knockio.com/comparisons/" },
-      { "@type": "ListItem", position: 3, name: "Knockio vs ServiceTitan", item: "https://knockio.com/comparisons/knockio-vs-servicetitan/" },
-    ],
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "Is ServiceTitan too expensive for a small business?",
-        acceptedAnswer: { "@type": "Answer", text: "It is quote only and widely reported as high cost with minimums, as of July 2026, and the company says it is not optimized for shops with three or fewer technicians. Knockio publishes $20 to $60 per user per month for small and midsize teams." },
-      },
-      {
-        "@type": "Question",
-        name: "How long does ServiceTitan take to implement?",
-        acceptedAnswer: { "@type": "Answer", text: "Reviews commonly report six to twelve months. Knockio is designed to run the same day." },
-      },
-      {
-        "@type": "Question",
-        name: "Does ServiceTitan have canvassing?",
-        acceptedAnswer: { "@type": "Answer", text: "Not natively; it relies on third party integrations. Knockio includes canvassing, territories, and live rep tracking." },
-      },
-      {
-        "@type": "Question",
-        name: "Does Knockio replace ServiceTitan?",
-        acceptedAnswer: { "@type": "Answer", text: "For large enterprises using its full depth, not necessarily. For small and midsize contractors it covers the core sales to invoice workflow at a fraction of the cost and setup time." },
-      },
-    ],
-  },
-];
+const jsonLd = getPageSchema("/comparisons/knockio-vs-servicetitan/");
 ---
 
 <KnockioHomeLayout title={title} description={description} jsonLd={jsonLd}>
