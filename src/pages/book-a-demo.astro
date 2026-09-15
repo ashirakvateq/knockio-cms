@@ -1,38 +1,12 @@
 ---
 import KnockioHomeLayout from "../layouts/KnockioHomeLayout.astro";
+import { getPageSchema } from "../data/schemas";
 
 const title = "Book a Demo | Field Service CRM & Sales Software | Knockio";
 const description =
   "Book a demo of Knockio and see how to manage leads, crews, jobs, appointments, estimates, invoices, payments, & communication in one platform.";
 
-const jsonLd = [
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://knockio.com/book-a-demo/#webpage",
-    url: "https://knockio.com/book-a-demo/",
-    name: "Book a Demo | Knockio",
-    isPartOf: { "@type": "WebSite", name: "Knockio" },
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://knockio.com/",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Book a Demo",
-        item: "https://knockio.com/book-a-demo/",
-      },
-    ],
-  },
-];
+const jsonLd = getPageSchema("/book-a-demo/");
 ---
 
 <KnockioHomeLayout

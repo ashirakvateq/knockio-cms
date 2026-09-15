@@ -1,44 +1,13 @@
 ---
 import KnockioHomeLayout from "../layouts/KnockioHomeLayout.astro";
 import "../styles/terms-and-conditions.css";
+import { getPageSchema } from "../data/schemas";
 
 const title = "Terms and Conditions | Knockio";
 const description =
   "Review Knockio’s Terms and Conditions for account use, subscriptions, communications, refunds, and service policies.";
 
-const jsonLd = [
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://knockio.com/terms-and-conditions/#webpage",
-    url: "https://knockio.com/terms-and-conditions/",
-    name: "Terms and Conditions - Knockio",
-    description:
-      "Review Knockio’s Terms and Conditions for account use, subscriptions, communications, refunds, and service policies.",
-    isPartOf: {
-      "@id": "https://knockio.com/#website",
-    },
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "@id": "https://knockio.com/terms-and-conditions/#breadcrumb",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://knockio.com/",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Terms and Conditions",
-        item: "https://knockio.com/terms-and-conditions/",
-      },
-    ],
-  },
-];
+const jsonLd = getPageSchema("/terms-and-conditions/");
 ---
 
 <KnockioHomeLayout

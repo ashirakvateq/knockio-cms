@@ -1,0 +1,3607 @@
+{
+  "/features/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/features/#webpage",
+        "url": "https://knockio.com/features/",
+        "name": "Knockio Features: Every Field Sales and Service Tool in One Platform",
+        "description": "Explore all twenty-one Knockio features: sales pipeline, canvassing, territory management, route planning, photo and media management, campaign management, product management, estimates, invoicing, subscription billing, payments, automations, GPS tracking, integrations, and more. Included on every plan.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        },
+        "about": {
+          "@id": "https://knockio.com/#software"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/features/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Features",
+            "item": "https://knockio.com/features/"
+          }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://knockio.com/features/#itemlist",
+        "name": "Knockio Features",
+        "numberOfItems": 21,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Sales Pipeline",
+            "url": "https://knockio.com/features/sales-pipeline-software/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Estimates",
+            "url": "https://knockio.com/features/estimate-software/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Inventory",
+            "url": "https://knockio.com/features/inventory-management-software/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Invoicing",
+            "url": "https://knockio.com/features/invoicing-software/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Work Orders",
+            "url": "https://knockio.com/features/work-order-management-software/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "Appointments",
+            "url": "https://knockio.com/features/appointment-scheduling-software/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "name": "Payment Processing",
+            "url": "https://knockio.com/features/payment-processing/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "name": "E-Contracts",
+            "url": "https://knockio.com/features/e-contracts-software/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 9,
+            "name": "Call Text and Email",
+            "url": "https://knockio.com/features/business-texting-and-calling-software/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 10,
+            "name": "User Management",
+            "url": "https://knockio.com/features/user-management-software/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 11,
+            "name": "Territory Management",
+            "url": "https://knockio.com/features/territory-management-software/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 12,
+            "name": "Sales Canvassing",
+            "url": "https://knockio.com/features/sales-canvassing-software/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 13,
+            "name": "GPS Tracking",
+            "url": "https://knockio.com/features/gps-tracking-software/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 14,
+            "name": "Route Planning and Dispatching",
+            "url": "https://knockio.com/features/route-planning-and-dispatching/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 15,
+            "name": "Automations",
+            "url": "https://knockio.com/features/business-automation-software/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 16,
+            "name": "Photo and Media Management",
+            "url": "https://knockio.com/features/photo-and-media-management/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 17,
+            "name": "Campaign Management",
+            "url": "https://knockio.com/features/campaign-management/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 18,
+            "name": "Product Management",
+            "url": "https://knockio.com/features/product-management/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 19,
+            "name": "Reports and Analytics",
+            "url": "https://knockio.com/features/reporting-software/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 20,
+            "name": "Integrations",
+            "url": "https://knockio.com/features/knockio-integrations/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 21,
+            "name": "Subscription Billing",
+            "url": "https://knockio.com/features/subscription-billing-software/"
+          }
+        ]
+      }
+    ]
+  },
+  "/industries/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/industries/#webpage",
+        "url": "https://knockio.com/industries/",
+        "name": "Knockio by Industry: Software for 15 Home Service and Field Sales Trades",
+        "description": "See how Knockio fits your trade: roofing, solar, HVAC, plumbing, electrical, pest control, landscaping, restoration, and more. One platform from first knock to final payment.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        },
+        "about": {
+          "@id": "https://knockio.com/#software"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/industries/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Industries",
+            "item": "https://knockio.com/industries/"
+          }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://knockio.com/industries/#itemlist",
+        "name": "Knockio Industries",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Fiber Internet",
+            "url": "https://knockio.com/industry/fiber-internet-sales-software-and-crm/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Electrical",
+            "url": "https://knockio.com/industry/electrical-contractor-software/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Home Security",
+            "url": "https://knockio.com/industry/home-security-sales-software-and-crm/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Pool Service",
+            "url": "https://knockio.com/industry/pool-service-software/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Junk Removal",
+            "url": "https://knockio.com/industry/junk-removal-software-and-crm/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "Garage Door",
+            "url": "https://knockio.com/industry/garage-door-service-software/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "name": "Painting",
+            "url": "https://knockio.com/industry/painting-contractor-software-and-crm/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "name": "Window Cleaning",
+            "url": "https://knockio.com/industry/window-cleaning-business-software/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 9,
+            "name": "Landscaping",
+            "url": "https://knockio.com/industry/landscaping-business-software/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 10,
+            "name": "Restoration",
+            "url": "https://knockio.com/industry/restoration-job-management-software/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 11,
+            "name": "HVAC",
+            "url": "https://knockio.com/industry/hvac-software-and-crm/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 12,
+            "name": "Pest Control",
+            "url": "https://knockio.com/industry/pest-control-software/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 13,
+            "name": "Plumbing",
+            "url": "https://knockio.com/industry/plumbing-software-and-crm/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 14,
+            "name": "Roofing",
+            "url": "https://knockio.com/industry/roofing-sales-software-and-crm/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 15,
+            "name": "Solar",
+            "url": "https://knockio.com/industry/solar-sales-software-and-crm/"
+          }
+        ]
+      }
+    ]
+  },
+  "/comparisons/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/comparisons/#webpage",
+        "url": "https://knockio.com/comparisons/",
+        "name": "Knockio vs Jobber, SPOTIO, JobNimbus, ServiceTitan and More: Honest Comparisons",
+        "description": "Honest, sourced comparisons of Knockio against Jobber, SPOTIO, JobNimbus, ServiceTitan, Housecall Pro, and FieldPulse.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        },
+        "about": {
+          "@id": "https://knockio.com/#software"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Comparisons",
+            "item": "https://knockio.com/comparisons/"
+          }
+        ],
+        "@id": "https://knockio.com/comparisons/#breadcrumb"
+      },
+      {
+        "@type": "ItemList",
+        "name": "Knockio comparisons",
+        "numberOfItems": 6,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Knockio vs Jobber",
+            "url": "https://knockio.com/comparisons/knockio-vs-jobber/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Knockio vs SPOTIO",
+            "url": "https://knockio.com/comparisons/knockio-vs-spotio/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Knockio vs JobNimbus",
+            "url": "https://knockio.com/comparisons/knockio-vs-jobnimbus/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Knockio vs ServiceTitan",
+            "url": "https://knockio.com/comparisons/knockio-vs-servicetitan/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Knockio vs Housecall Pro",
+            "url": "https://knockio.com/comparisons/knockio-vs-housecall-pro/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "name": "Knockio vs FieldPulse",
+            "url": "https://knockio.com/comparisons/knockio-vs-fieldpulse/"
+          }
+        ],
+        "@id": "https://knockio.com/comparisons/#itemlist"
+      }
+    ]
+  },
+  "/comparisons/knockio-vs-jobber/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/comparisons/knockio-vs-jobber/#webpage",
+        "url": "https://knockio.com/comparisons/knockio-vs-jobber/",
+        "name": "Knockio vs Jobber (2026): Canvassing Plus Job Management Compared",
+        "description": "An honest, sourced comparison of Knockio and Jobber for home service companies: canvassing, pipeline, scheduling, invoicing, and pricing.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        },
+        "about": {
+          "@id": "https://knockio.com/#software"
+        },
+        "mentions": [
+          {
+            "@id": "https://knockio.com/#software"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Jobber",
+            "url": "https://www.getjobber.com/",
+            "applicationCategory": "BusinessApplication"
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Comparisons",
+            "item": "https://knockio.com/comparisons/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Knockio vs Jobber",
+            "item": "https://knockio.com/comparisons/knockio-vs-jobber/"
+          }
+        ],
+        "@id": "https://knockio.com/comparisons/knockio-vs-jobber/#breadcrumb"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does Jobber have door knocking or canvassing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Jobber is built for booked, inbound service work. Knockio includes canvassing, territory assignment, and live rep tracking in the same platform as job management."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Knockio cheaper than Jobber?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It depends on team size. Jobber runs $49 to $499 per month by tier with extra users at $29 each, as of July 2026. Knockio is a flat $20 to $60 per user per month with everything included. Compare on your real user count."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Jobber integrate with QuickBooks?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, QuickBooks Online sync is one of its stronger points, though some users report fixing sync errors by hand."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which is better for a roofing or exterior sales company?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "If you sell at the door and manage production, Knockio fits that motion. Jobber suits recurring residential trades like lawn care and cleaning."
+            }
+          }
+        ],
+        "@id": "https://knockio.com/comparisons/knockio-vs-jobber/#faq"
+      }
+    ]
+  },
+  "/comparisons/knockio-vs-spotio/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/comparisons/knockio-vs-spotio/#webpage",
+        "url": "https://knockio.com/comparisons/knockio-vs-spotio/",
+        "name": "Knockio vs SPOTIO (2026): Field Sales Tool vs the Whole Job",
+        "description": "A sourced comparison of Knockio and SPOTIO. Both handle canvassing, but SPOTIO stops at the sale while Knockio runs the job to the final payment.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        },
+        "about": {
+          "@id": "https://knockio.com/#software"
+        },
+        "mentions": [
+          {
+            "@id": "https://knockio.com/#software"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "SPOTIO",
+            "url": "https://spotio.com/",
+            "applicationCategory": "BusinessApplication"
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Comparisons",
+            "item": "https://knockio.com/comparisons/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Knockio vs SPOTIO",
+            "item": "https://knockio.com/comparisons/knockio-vs-spotio/"
+          }
+        ],
+        "@id": "https://knockio.com/comparisons/knockio-vs-spotio/#breadcrumb"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the main difference between Knockio and SPOTIO?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SPOTIO is a field sales specialist that ends at the sale. Knockio covers canvassing and then the whole job that follows, including scheduling, field updates, and invoicing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does SPOTIO handle invoicing or scheduling?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Those need a separate platform. Knockio includes them."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does SPOTIO cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SPOTIO does not publish prices. Plans are quote only with a five user minimum, as of July 2026. Knockio publishes $20 to $60 per user per month."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I still need a CRM with SPOTIO?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Often yes. SPOTIO is frequently layered on Salesforce or HubSpot. Knockio is built to be the system of record itself."
+            }
+          }
+        ],
+        "@id": "https://knockio.com/comparisons/knockio-vs-spotio/#faq"
+      }
+    ]
+  },
+  "/comparisons/knockio-vs-jobnimbus/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/comparisons/knockio-vs-jobnimbus/#webpage",
+        "url": "https://knockio.com/comparisons/knockio-vs-jobnimbus/",
+        "name": "Knockio vs JobNimbus (2026): Roofing CRM Comparison",
+        "description": "An honest, sourced comparison of Knockio and JobNimbus for roofing and exterior contractors: canvassing, production boards, integrations, and pricing.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        },
+        "about": {
+          "@id": "https://knockio.com/#software"
+        },
+        "mentions": [
+          {
+            "@id": "https://knockio.com/#software"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "JobNimbus",
+            "url": "https://www.jobnimbus.com/",
+            "applicationCategory": "BusinessApplication"
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Comparisons",
+            "item": "https://knockio.com/comparisons/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Knockio vs JobNimbus",
+            "item": "https://knockio.com/comparisons/knockio-vs-jobnimbus/"
+          }
+        ],
+        "@id": "https://knockio.com/comparisons/knockio-vs-jobnimbus/#breadcrumb"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does JobNimbus have door knocking or canvassing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Leads live in CRM boards, not on a knocking map. Knockio includes canvassing, territories, and live rep tracking with the same CRM features."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does JobNimbus cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It does not publish prices; the pricing page is a request form, as of July 2026. Knockio publishes $20 to $60 per user per month."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which is better for roofing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Both serve roofers. Knockio adds canvassing and a published price. JobNimbus has deeper roofing specific integrations. Choose by which matters more to how you sell."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does JobNimbus integrate with QuickBooks and aerial measurement?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. QuickBooks, EagleView, HOVER, and supplier ordering are among its stronger integrations."
+            }
+          }
+        ],
+        "@id": "https://knockio.com/comparisons/knockio-vs-jobnimbus/#faq"
+      }
+    ]
+  },
+  "/comparisons/knockio-vs-servicetitan/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/comparisons/knockio-vs-servicetitan/#webpage",
+        "url": "https://knockio.com/comparisons/knockio-vs-servicetitan/",
+        "name": "Knockio vs ServiceTitan (2026): Enterprise Power vs Same Day Simplicity",
+        "description": "A sourced comparison of Knockio and ServiceTitan. The enterprise standard against a platform built for small and midsize home service teams.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        },
+        "about": {
+          "@id": "https://knockio.com/#software"
+        },
+        "mentions": [
+          {
+            "@id": "https://knockio.com/#software"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "ServiceTitan",
+            "url": "https://www.servicetitan.com/",
+            "applicationCategory": "BusinessApplication"
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Comparisons",
+            "item": "https://knockio.com/comparisons/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Knockio vs ServiceTitan",
+            "item": "https://knockio.com/comparisons/knockio-vs-servicetitan/"
+          }
+        ],
+        "@id": "https://knockio.com/comparisons/knockio-vs-servicetitan/#breadcrumb"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is ServiceTitan too expensive for a small business?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It is quote only and widely reported as high cost with minimums, as of July 2026, and the company says it is not optimized for shops with three or fewer technicians. Knockio publishes $20 to $60 per user per month for small and midsize teams."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does ServiceTitan take to implement?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Reviews commonly report six to twelve months. Knockio is designed to run the same day."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does ServiceTitan have canvassing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not natively; it relies on third party integrations. Knockio includes canvassing, territories, and live rep tracking."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Knockio replace ServiceTitan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For large enterprises using its full depth, not necessarily. For small and midsize contractors it covers the core sales to invoice workflow at a fraction of the cost and setup time."
+            }
+          }
+        ],
+        "@id": "https://knockio.com/comparisons/knockio-vs-servicetitan/#faq"
+      }
+    ]
+  },
+  "/comparisons/knockio-vs-housecall-pro/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/comparisons/knockio-vs-housecall-pro/#webpage",
+        "url": "https://knockio.com/comparisons/knockio-vs-housecall-pro/",
+        "name": "Knockio vs Housecall Pro (2026): One Flat Price vs Add On Math",
+        "description": "A sourced comparison of Knockio and Housecall Pro for home service companies: canvassing, add on costs, scheduling, invoicing, and pricing.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        },
+        "about": {
+          "@id": "https://knockio.com/#software"
+        },
+        "mentions": [
+          {
+            "@id": "https://knockio.com/#software"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Housecall Pro",
+            "url": "https://www.housecallpro.com/",
+            "applicationCategory": "BusinessApplication"
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Comparisons",
+            "item": "https://knockio.com/comparisons/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Knockio vs Housecall Pro",
+            "item": "https://knockio.com/comparisons/knockio-vs-housecall-pro/"
+          }
+        ],
+        "@id": "https://knockio.com/comparisons/knockio-vs-housecall-pro/#breadcrumb"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does Housecall Pro have door knocking or canvassing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. It is built around inbound, dispatched jobs. Knockio includes canvassing, territories, and live rep tracking with the same scheduling and invoicing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does Housecall Pro cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Basic $59, Essentials $149, MAX $299 per month billed annually, plus $35 per extra user and many paid add ons, as of July 2026. Knockio is $20 to $60 per user per month with everything included."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the sales pipeline included in Housecall Pro?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No, the pipeline and the advanced proposal tool are paid add ons. Knockio includes both in the base product."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which is better for an HVAC or plumbing company?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For purely inbound work, Housecall Pro is a proven choice. If you also sell in the field or dislike add on pricing, Knockio is the stronger fit."
+            }
+          }
+        ],
+        "@id": "https://knockio.com/comparisons/knockio-vs-housecall-pro/#faq"
+      }
+    ]
+  },
+  "/comparisons/knockio-vs-fieldpulse/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/comparisons/knockio-vs-fieldpulse/#webpage",
+        "url": "https://knockio.com/comparisons/knockio-vs-fieldpulse/",
+        "name": "Knockio vs FieldPulse (2026): The Closest Match, and the Edges That Decide It",
+        "description": "A sourced comparison of Knockio and FieldPulse for home service teams: canvassing, field service features, support, and pricing transparency.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        },
+        "about": {
+          "@id": "https://knockio.com/#software"
+        },
+        "mentions": [
+          {
+            "@id": "https://knockio.com/#software"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "FieldPulse",
+            "url": "https://www.fieldpulse.com/",
+            "applicationCategory": "BusinessApplication"
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Comparisons",
+            "item": "https://knockio.com/comparisons/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Knockio vs FieldPulse",
+            "item": "https://knockio.com/comparisons/knockio-vs-fieldpulse/"
+          }
+        ],
+        "@id": "https://knockio.com/comparisons/knockio-vs-fieldpulse/#breadcrumb"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does FieldPulse have canvassing or door knocking?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. It is a field service and dispatch platform. Knockio includes canvassing, territories, and live rep tracking alongside the same field service features."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does FieldPulse cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It does not publish prices; plans are quote only, as of July 2026. Third party estimates run roughly $99 to $399 and up per month. Knockio publishes $20 to $60 per user per month."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do the features compare?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "They overlap heavily on scheduling, estimates, invoicing, and mobile. Knockio adds canvassing, territory mapping, and a sales pipeline, with published pricing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is FieldPulse good for large teams?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Reviews note it scales poorly beyond roughly fifteen technicians. Knockio also fits small and midsize teams best, so match either tool to your size."
+            }
+          }
+        ],
+        "@id": "https://knockio.com/comparisons/knockio-vs-fieldpulse/#faq"
+      }
+    ]
+  },
+  "/pricing/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/pricing/#webpage",
+        "url": "https://knockio.com/pricing/",
+        "name": "Knockio Pricing: Plans Starting at $20/Month | Knockio",
+        "description": "Compare Knockio pricing plans for canvassing, field service CRM, or all-in-one. Enjoy zero setup fees, no contracts, and volume discounts at 5+ users.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        },
+        "about": {
+          "@id": "https://knockio.com/#software"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/pricing/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Pricing",
+            "item": "https://knockio.com/pricing/"
+          }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "@id": "https://knockio.com/pricing/#offercatalog",
+        "name": "Knockio Plans",
+        "url": "https://knockio.com/pricing/",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Prospect (Canvassing)",
+            "priceCurrency": "USD",
+            "price": "25.00",
+            "description": "$25/user/mo, or $20/user/mo with 5+ users.",
+            "url": "https://knockio.com/pricing/"
+          },
+          {
+            "@type": "Offer",
+            "name": "Organize (Field Service CRM)",
+            "priceCurrency": "USD",
+            "price": "35.00",
+            "description": "$35/user/mo, or $30/user/mo with 5+ users.",
+            "url": "https://knockio.com/pricing/"
+          },
+          {
+            "@type": "Offer",
+            "name": "Growth (Sales + Service)",
+            "priceCurrency": "USD",
+            "price": "60.00",
+            "description": "$60/user/mo, or $45/user/mo with 5+ users.",
+            "url": "https://knockio.com/pricing/"
+          },
+          {
+            "@type": "Offer",
+            "name": "Scale (100+ Users)",
+            "description": "Custom Pricing & Volume Rates For Large Field Teams. Built for multi-location contractors and enterprise operations running 100+ reps in the field. Everything in Growth, engineered for your exact operational scale: custom per-seat volume rates, white-glove onboarding & account setup, a dedicated success manager with priority support, direct input on the product roadmap & features, and custom enterprise workspaces & security.",
+            "url": "https://knockio.com/pricing/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://knockio.com/pricing/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What does the Scale plan include for large teams?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Everything in Growth, plus custom per-seat pricing, dedicated onboarding, priority support, and a direct line to the product team for feature requests. It's built around your operation, not a standard template. Talk to sales to get started."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which plan includes automation?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "All three. The Native Automation Builder is included on Prospect, Growth, and Organize. No upgrade required."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which plans include unlimited territories?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Prospect and Growth. Organize is built for field service teams and does not include field sales tools like territory management or route planning."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does the Engage add-on cover?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Phone numbers, calling, and SMS. It is optional on all three plans at $15 per number per month. It is not required to use any core feature."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is there a minimum number of users?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Start with one user. Volume discounts apply automatically when you hit five."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I switch plans later?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. All plans are month-to-month. No annual commitment. No cancellation fee."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "/campaigns/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/campaigns/#webpage",
+        "url": "https://knockio.com/campaigns/",
+        "name": "Knockio Campaigns | Best Door-to-Door Sales Management App",
+        "description": "Launch, manage, and track effective door-to-door sales campaigns with Knockio. Streamline your field team's performance.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        },
+        "about": {
+          "@id": "https://knockio.com/#software"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/campaigns/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Campaigns",
+            "item": "https://knockio.com/campaigns/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://knockio.com/campaigns/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Knockio campaign management?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Knockio campaign management helps field teams plan, run, and track campaigns from one connected system. Teams can assign areas, manage reps, capture leads, update visit results, track follow-ups, and connect campaign activity to customer records, estimates, proposals, jobs, invoices, and service history."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What types of campaigns can teams manage in Knockio?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Teams can manage door-to-door sales campaigns, local outreach campaigns, service follow-up campaigns, inspection campaigns, lead generation campaigns, customer reactivation campaigns, and area-based field campaigns. Knockio works best for businesses that need field activity, CRM, and service workflows connected."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Knockio help managers track campaign progress?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Managers can view assigned territories, rep activity, lead status, visit updates, and campaign results from one place. This makes it easier to see which areas are covered, which reps are active, which leads need follow-up, and which campaign actions are turning into real opportunities."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can campaign leads move into the Service CRM?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Campaign leads can become customer records, estimates, proposals, contracts, scheduled jobs, invoices, and payments inside Knockio. This helps your team avoid manual re-entry and keeps the full customer journey connected from campaign activity to completed service work."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Knockio useful for sales and service campaigns?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Knockio is useful for both sales and service campaigns. Sales teams can use it to capture and follow up with leads. Service teams can use it to manage inspections, repeat visits, customer follow-ups, crew assignments, and job-related campaign activity."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "/knockio-integrations/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/knockio-integrations/#webpage",
+        "url": "https://knockio.com/knockio-integrations/",
+        "name": "Knockio Integrations | Connect Your Favorite CRM Tools",
+        "description": "Knockio seamlessly integrates with popular CRM platforms like Salesforce, Zapier, Google Calendar, HubSpot, GHL and unlimited with webhooks.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        },
+        "about": {
+          "@id": "https://knockio.com/#software"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/knockio-integrations/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Integrations",
+            "item": "https://knockio.com/knockio-integrations/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://knockio.com/knockio-integrations/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What are Knockio integrations?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Knockio integrations help your field service CRM connect with other tools your business uses. These connections can support lead capture, customer updates, calendar activity, job workflows, task creation, reporting, automation, invoices, and follow-ups, so your team does not need to copy the same data again and again."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can Knockio integrate with GoHighLevel?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Knockio can integrate with GoHighLevel to support lead management, customer follow-ups, campaign activity, and sales workflows. This helps teams connect marketing and sales activity with field service work, so leads can move into appointments, estimates, jobs, and customer records more smoothly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can Knockio integrate with Salesforce and HubSpot?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Knockio can integrate with Salesforce and HubSpot. These integrations can help teams manage leads, contacts, customer updates, sales activity, reporting, and handoffs between sales and service teams. This is useful for businesses that already use a major CRM but need stronger field service workflows."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can Knockio connect with thousands of apps?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Knockio can connect with thousands of apps through Zapier and Flow Chef. This gives teams more ways to connect forms, CRMs, calendars, spreadsheets, reporting tools, communication apps, automation tools, and other business systems with Knockio’s field service CRM."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Knockio offer API support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Knockio supports API-based connections for teams that need custom workflows or deeper system links. This can help businesses connect Knockio with internal tools, custom dashboards, reporting systems, company software, or other apps that are important to daily operations."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "/photo-and-video/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/photo-and-video/#webpage",
+        "url": "https://knockio.com/photo-and-video/",
+        "name": "Knockio's Photo and Video Management Feature",
+        "description": "Knockio’s Photo and Video Management module makes it effortless for reps to capture, upload, and organize media directly inside each lead or job.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        },
+        "about": {
+          "@id": "https://knockio.com/#software"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/photo-and-video/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Photo and Video Management",
+            "item": "https://knockio.com/photo-and-video/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://knockio.com/photo-and-video/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Knockio photo and video management?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Knockio photo and video management helps field service teams upload, save, and organize photos and videos from the field. Teams can attach visual proof to leads, customers, appointments, estimates, proposals, jobs, and service records, so important details stay connected to the right workflow."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Knockio help field teams document work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Knockio helps reps and crews add photos, videos, notes, and updates while they are working in the field. This makes it easier to show site conditions, explain service needs, record job progress, and prove completed work without relying on personal phones or scattered chats."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can photos and videos connect with customer records?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Photos and videos can stay connected with customer records inside Knockio. Your team can view past visits, site images, job progress, service notes, estimates, proposals, invoices, and follow-up details from the same customer profile. This helps everyone understand the full customer story."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can visual proof help with estimates and proposals?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Field photos and videos can make estimates and proposals clearer. Your team can show damage, property details, service needs, progress, or completed work. This helps customers understand the scope better and can make approvals easier because the proof is saved with the proposal or job."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Knockio photo and video management useful for service teams?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. It is useful for roofing, solar, HVAC, pest control, plumbing, fiber, home improvement, and other field service teams. Crews can record job proof, managers can review updates, and office staff can keep customer records complete without searching through phones, emails, or messages."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "/route-mapping/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/route-mapping/#webpage",
+        "url": "https://knockio.com/route-mapping/",
+        "name": "Knockio Routes | Optimize Your Sales Team’s Routes",
+        "description": "Boost your field sales efficiency with Knockio Routes. Smart route optimization helps reps save time, cover more leads, and close deals faster.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        },
+        "about": {
+          "@id": "https://knockio.com/#software"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/route-mapping/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Routes",
+            "item": "https://knockio.com/route-mapping/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://knockio.com/route-mapping/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Knockio route mapping?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Knockio route mapping helps field teams plan, view, and manage routes for leads, customers, jobs, and service stops. Teams can see locations on a map, plan daily visits, update stop status, add notes, upload photos, and keep route activity connected to the CRM."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Knockio help field teams save time?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Knockio helps field teams save time by keeping routes, customer details, lead records, and job updates in one place. Reps and crews do not need to jump between maps, spreadsheets, notes, and CRM tools. They can see where to go and update work from the field."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can managers track route progress in Knockio?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Managers can view route activity, stop status, field updates, and rep progress inside Knockio. This helps them understand which stops were completed, which leads need follow-up, and where the team is working during the day without constant check-in calls."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can routes connect with leads and customers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Routes can connect with lead and customer records inside Knockio. A rep can visit a stop, add notes, update status, upload photos, and set the next action. That information stays linked to the customer record for future sales or service work."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Knockio routes useful for both sales and service teams?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Sales teams can use routes for canvassing, lead visits, follow-ups, and local outreach. Service teams can use routes for job visits, inspections, repeat service, crew movement, and customer updates. Knockio keeps route work connected with the full field service CRM."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "/snow-removal-software/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/snow-removal-software/#webpage",
+        "url": "https://knockio.com/snow-removal-software/",
+        "name": "The #1 Snow Removal Software For Business Management",
+        "description": "Simplify operations with the #1 snow removal software for scheduling, routing, and team management—all in one easy dashboard.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        },
+        "about": {
+          "@id": "https://knockio.com/#software"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/snow-removal-software/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Snow Removal Software withService CRM",
+            "item": "https://knockio.com/snow-removal-software/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://knockio.com/snow-removal-software/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is snow removal software?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Snow removal software helps companies manage customers, estimates, routes, crews, invoices, payments, and field updates during winter service. Knockio also adds CRM, dispatching, service records, proof of service, automation, data management, and mobile field access."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does snow removal software work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Snow removal software works by keeping customer requests, property notes, estimates, schedules, routes, crew updates, invoices, and payments in one workflow. Knockio helps teams move work from first request to assigned crew, completed service, and final billing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What features should snow removal software include?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Snow removal software requirements should include customer management, estimates, scheduling, dispatching, route zones, crew tracking, role management, service records, proof of service, invoices, payments, reports, automation, mobile access, support, and integrations."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does snow removal software cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Snow removal software cost depends on users, service areas, route size, dispatch needs, mobile access, reporting, integrations, setup, and support. Small businesses may start with CRM, scheduling, invoices, and field updates before adding advanced automation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Knockio an alternative to Jobber, WorkWave, or Orderry?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Snow removal companies comparing Jobber, WorkWave, Orderry, or spreadsheets may choose Knockio when they need CRM, sales tools, crew dispatch, route planning, GPS tracking, estimates, invoices, payments, automation, and field service workflows in one platform."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "/blog/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Blog",
+        "@id": "https://knockio.com/blog/#blog",
+        "name": "Knockio Blog",
+        "url": "https://knockio.com/blog/",
+        "description": "Discover expert tips, strategies, and insights for sales success on the Knockio blog. Empower your knowledge to drive growth and achieve goals!",
+        "publisher": {
+          "@id": "https://knockio.com/#organization"
+        },
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/blog/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://knockio.com/blog/"
+          }
+        ]
+      }
+    ]
+  },
+  "/blog/16-tips-to-persuade-someone-to-buy-something/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/blog/16-tips-to-persuade-someone-to-buy-something/#webpage",
+        "url": "https://knockio.com/blog/16-tips-to-persuade-someone-to-buy-something/",
+        "name": "16 Tips to Persuade Someone to Buy Something",
+        "description": "The biggest sales problem is to persuade someone or convince customers to buy your product and service. Here we discuss the 16 tips.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/blog/16-tips-to-persuade-someone-to-buy-something/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://knockio.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "16 Tips to Persuade Someone to Buy Something",
+            "item": "https://knockio.com/blog/16-tips-to-persuade-someone-to-buy-something/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://knockio.com/blog/16-tips-to-persuade-someone-to-buy-something/#blogposting",
+        "headline": "16 Tips to Persuade Someone to Buy Something",
+        "description": "The biggest sales problem is to persuade someone or convince customers to buy your product and service. Here we discuss the 16 tips.",
+        "mainEntityOfPage": {
+          "@id": "https://knockio.com/blog/16-tips-to-persuade-someone-to-buy-something/#webpage"
+        },
+        "publisher": {
+          "@id": "https://knockio.com/#organization"
+        },
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Syed Junaid",
+          "jobTitle": "Marketing Lead & Content Strategist at Knockio",
+          "url": "https://www.linkedin.com/in/syed-junaid-seo/",
+          "sameAs": [
+            "https://www.linkedin.com/in/syed-junaid-seo/",
+            "https://x.com/JunaidSyed91"
+          ],
+          "worksFor": {
+            "@id": "https://knockio.com/#organization"
+          }
+        },
+        "datePublished": "2024-08-09T14:40:17Z",
+        "dateModified": "2026-07-21T17:16:34Z"
+      }
+    ]
+  },
+  "/blog/best-field-service-management-software-small-business/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/blog/best-field-service-management-software-small-business/#webpage",
+        "url": "https://knockio.com/blog/best-field-service-management-software-small-business/",
+        "name": "10 Best Field Service Management Software for Small Business",
+        "description": "Best Field Service Management Software for Small Business are Knockio, Jobber, HouseCallPro, Workiz, Service Titan, Kickserve, and more.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/blog/best-field-service-management-software-small-business/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://knockio.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "10 Best Field Service Management Software for Small Business",
+            "item": "https://knockio.com/blog/best-field-service-management-software-small-business/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://knockio.com/blog/best-field-service-management-software-small-business/#blogposting",
+        "headline": "10 Best Field Service Management Software for Small Business",
+        "description": "Best Field Service Management Software for Small Business are Knockio, Jobber, HouseCallPro, Workiz, Service Titan, Kickserve, and more.",
+        "mainEntityOfPage": {
+          "@id": "https://knockio.com/blog/best-field-service-management-software-small-business/#webpage"
+        },
+        "publisher": {
+          "@id": "https://knockio.com/#organization"
+        },
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Waqar Hussain",
+          "jobTitle": "SEO & Digital Media Manager at Knockio",
+          "url": "https://www.linkedin.com/in/mwaqarhussain/",
+          "sameAs": [
+            "https://www.linkedin.com/in/mwaqarhussain/",
+            "https://x.com/WaqarHussainSEO"
+          ],
+          "worksFor": {
+            "@id": "https://knockio.com/#organization"
+          }
+        },
+        "datePublished": "2026-06-29T15:36:01Z",
+        "dateModified": "2026-07-16T09:53:30Z"
+      }
+    ]
+  },
+  "/blog/best-sales-tracking-software/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/blog/best-sales-tracking-software/#webpage",
+        "url": "https://knockio.com/blog/best-sales-tracking-software/",
+        "name": "11 Best Sales Tracking Softwares For 2025",
+        "description": "Here are the 11 Best Sales Tracking Softwares to be Considered in 2025 are Knockio, Hubspot, Salesforce, Zoho, Pipedrive, Freshsales and more.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/blog/best-sales-tracking-software/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://knockio.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "11 Best Sales Tracking Softwares For 2025",
+            "item": "https://knockio.com/blog/best-sales-tracking-software/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://knockio.com/blog/best-sales-tracking-software/#blogposting",
+        "headline": "11 Best Sales Tracking Softwares For 2025",
+        "description": "Here are the 11 Best Sales Tracking Softwares to be Considered in 2025 are Knockio, Hubspot, Salesforce, Zoho, Pipedrive, Freshsales and more.",
+        "mainEntityOfPage": {
+          "@id": "https://knockio.com/blog/best-sales-tracking-software/#webpage"
+        },
+        "publisher": {
+          "@id": "https://knockio.com/#organization"
+        },
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Syed Junaid",
+          "jobTitle": "Marketing Lead & Content Strategist at Knockio",
+          "url": "https://www.linkedin.com/in/syed-junaid-seo/",
+          "sameAs": [
+            "https://www.linkedin.com/in/syed-junaid-seo/",
+            "https://x.com/JunaidSyed91"
+          ],
+          "worksFor": {
+            "@id": "https://knockio.com/#organization"
+          }
+        },
+        "datePublished": "2024-12-26T12:39:14Z",
+        "dateModified": "2026-07-21T17:19:21Z",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://knockio.com/wp-content/uploads/2026/05/inner-why-choose.webp",
+          "width": 732,
+          "height": 378
+        }
+      }
+    ]
+  },
+  "/blog/cost-of-separate-canvassing-and-field-service-software/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/blog/cost-of-separate-canvassing-and-field-service-software/#webpage",
+        "url": "https://knockio.com/blog/cost-of-separate-canvassing-and-field-service-software/",
+        "name": "The Real Cost of Separate Canvassing & Field Service Software",
+        "description": "Running a canvassing app and a field service CRM as separate tools has a hidden price. Here's the real cost of the \"duct-tape tax\" and what a unified workflow looks like",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/blog/cost-of-separate-canvassing-and-field-service-software/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://knockio.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "The Real Cost of Separate Canvassing & Field Service Software",
+            "item": "https://knockio.com/blog/cost-of-separate-canvassing-and-field-service-software/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://knockio.com/blog/cost-of-separate-canvassing-and-field-service-software/#blogposting",
+        "headline": "The Real Cost of Separate Canvassing & Field Service Software",
+        "description": "Running a canvassing app and a field service CRM as separate tools has a hidden price. Here's the real cost of the \"duct-tape tax\" and what a unified workflow looks like",
+        "mainEntityOfPage": {
+          "@id": "https://knockio.com/blog/cost-of-separate-canvassing-and-field-service-software/#webpage"
+        },
+        "publisher": {
+          "@id": "https://knockio.com/#organization"
+        },
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Syed Junaid",
+          "jobTitle": "Marketing Lead & Content Strategist at Knockio",
+          "url": "https://www.linkedin.com/in/syed-junaid-seo/",
+          "sameAs": [
+            "https://www.linkedin.com/in/syed-junaid-seo/",
+            "https://x.com/JunaidSyed91"
+          ],
+          "worksFor": {
+            "@id": "https://knockio.com/#organization"
+          }
+        },
+        "datePublished": "2026-07-10T18:37:47Z",
+        "dateModified": "2026-07-21T16:15:58Z"
+      }
+    ]
+  },
+  "/blog/door-to-door-insurance-sales/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/blog/door-to-door-insurance-sales/#webpage",
+        "url": "https://knockio.com/blog/door-to-door-insurance-sales/",
+        "name": "Mastering Door To Door Insurance Sales A Complete Guide",
+        "description": "Complete guide to door to door insurance sales. As a salesman your goal is to help people understand the benefits of life insurance.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/blog/door-to-door-insurance-sales/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://knockio.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Mastering Door To Door Insurance Sales A Complete Guide",
+            "item": "https://knockio.com/blog/door-to-door-insurance-sales/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://knockio.com/blog/door-to-door-insurance-sales/#blogposting",
+        "headline": "Mastering Door To Door Insurance Sales A Complete Guide",
+        "description": "Complete guide to door to door insurance sales. As a salesman your goal is to help people understand the benefits of life insurance.",
+        "mainEntityOfPage": {
+          "@id": "https://knockio.com/blog/door-to-door-insurance-sales/#webpage"
+        },
+        "publisher": {
+          "@id": "https://knockio.com/#organization"
+        },
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Syed Junaid",
+          "jobTitle": "Marketing Lead & Content Strategist at Knockio",
+          "url": "https://www.linkedin.com/in/syed-junaid-seo/",
+          "sameAs": [
+            "https://www.linkedin.com/in/syed-junaid-seo/",
+            "https://x.com/JunaidSyed91"
+          ],
+          "worksFor": {
+            "@id": "https://knockio.com/#organization"
+          }
+        },
+        "datePublished": "2024-10-03T13:27:58Z",
+        "dateModified": "2026-07-21T17:21:40Z"
+      }
+    ]
+  },
+  "/blog/door-to-door-sales-pitch/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/blog/door-to-door-sales-pitch/#webpage",
+        "url": "https://knockio.com/blog/door-to-door-sales-pitch/",
+        "name": "Best Door to door Sales Pitch Script with Examples | Knockio",
+        "description": "Start by giving your customer a friendly greeting and introducing yourself. This strategy is the best in door to door sales pitch.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/blog/door-to-door-sales-pitch/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://knockio.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Best Door to door Sales Pitch Script with Examples",
+            "item": "https://knockio.com/blog/door-to-door-sales-pitch/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://knockio.com/blog/door-to-door-sales-pitch/#blogposting",
+        "headline": "Best Door to door Sales Pitch Script with Examples",
+        "description": "Start by giving your customer a friendly greeting and introducing yourself. This strategy is the best in door to door sales pitch.",
+        "mainEntityOfPage": {
+          "@id": "https://knockio.com/blog/door-to-door-sales-pitch/#webpage"
+        },
+        "publisher": {
+          "@id": "https://knockio.com/#organization"
+        },
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Syed Junaid",
+          "jobTitle": "Marketing Lead & Content Strategist at Knockio",
+          "url": "https://www.linkedin.com/in/syed-junaid-seo/",
+          "sameAs": [
+            "https://www.linkedin.com/in/syed-junaid-seo/",
+            "https://x.com/JunaidSyed91"
+          ],
+          "worksFor": {
+            "@id": "https://knockio.com/#organization"
+          }
+        },
+        "datePublished": "2024-10-04T13:39:57Z",
+        "dateModified": "2026-07-21T17:22:51Z"
+      }
+    ]
+  },
+  "/blog/door-to-door-sales-statistics-and-history/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/blog/door-to-door-sales-statistics-and-history/#webpage",
+        "url": "https://knockio.com/blog/door-to-door-sales-statistics-and-history/",
+        "name": "The Global Door to Door Sales Statistics and History",
+        "description": "In this article, we’ll unpack many aspects of door to door sales statistics, history, markets, and the important industry for a full picture of this industry.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/blog/door-to-door-sales-statistics-and-history/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://knockio.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "The Global Door to Door Sales Statistics and History",
+            "item": "https://knockio.com/blog/door-to-door-sales-statistics-and-history/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://knockio.com/blog/door-to-door-sales-statistics-and-history/#blogposting",
+        "headline": "The Global Door to Door Sales Statistics and History",
+        "description": "In this article, we’ll unpack many aspects of door to door sales statistics, history, markets, and the important industry for a full picture of this industry.",
+        "mainEntityOfPage": {
+          "@id": "https://knockio.com/blog/door-to-door-sales-statistics-and-history/#webpage"
+        },
+        "publisher": {
+          "@id": "https://knockio.com/#organization"
+        },
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Waqar Hussain",
+          "jobTitle": "SEO & Digital Media Manager at Knockio",
+          "url": "https://www.linkedin.com/in/mwaqarhussain/",
+          "sameAs": [
+            "https://www.linkedin.com/in/mwaqarhussain/",
+            "https://x.com/WaqarHussainSEO"
+          ],
+          "worksFor": {
+            "@id": "https://knockio.com/#organization"
+          }
+        },
+        "datePublished": "2026-07-01T11:03:50Z",
+        "dateModified": "2026-07-01T11:03:52Z",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://knockio.com/wp-content/uploads/2025/08/Door-to-Door-sales-statistics-infogrpahics-4.webp",
+          "width": 1537,
+          "height": 864
+        }
+      }
+    ]
+  },
+  "/blog/importance-of-real-time-sales-team-tracking/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/blog/importance-of-real-time-sales-team-tracking/#webpage",
+        "url": "https://knockio.com/blog/importance-of-real-time-sales-team-tracking/",
+        "name": "The Importance of Real-Time Sales Team Tracking - Knockio",
+        "description": "Sales team tracking in real-time is essential for improving productivity, better teamwork, & gaining key insights into how your team is performing.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/blog/importance-of-real-time-sales-team-tracking/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://knockio.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "The Importance of Real-Time Sales Team Tracking",
+            "item": "https://knockio.com/blog/importance-of-real-time-sales-team-tracking/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://knockio.com/blog/importance-of-real-time-sales-team-tracking/#blogposting",
+        "headline": "The Importance of Real-Time Sales Team Tracking",
+        "description": "Sales team tracking in real-time is essential for improving productivity, better teamwork, & gaining key insights into how your team is performing.",
+        "mainEntityOfPage": {
+          "@id": "https://knockio.com/blog/importance-of-real-time-sales-team-tracking/#webpage"
+        },
+        "publisher": {
+          "@id": "https://knockio.com/#organization"
+        },
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Waqar Hussain",
+          "jobTitle": "SEO & Digital Media Manager at Knockio",
+          "url": "https://www.linkedin.com/in/mwaqarhussain/",
+          "sameAs": [
+            "https://www.linkedin.com/in/mwaqarhussain/",
+            "https://x.com/WaqarHussainSEO"
+          ],
+          "worksFor": {
+            "@id": "https://knockio.com/#organization"
+          }
+        },
+        "datePublished": "2026-07-13T13:49:11Z",
+        "dateModified": "2026-07-21T15:25:13Z"
+      }
+    ]
+  },
+  "/blog/key-challenges-in-sales/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/blog/key-challenges-in-sales/#webpage",
+        "url": "https://knockio.com/blog/key-challenges-in-sales/",
+        "name": "12 Key Challenges in Sales and How to Overcome Them",
+        "description": "In this article, we'll delve into 12 key challenges in sales and explore effective solutions for each challeneg in sales.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/blog/key-challenges-in-sales/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://knockio.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "12 Key Challenges in Sales and How to Overcome Them",
+            "item": "https://knockio.com/blog/key-challenges-in-sales/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://knockio.com/blog/key-challenges-in-sales/#blogposting",
+        "headline": "12 Key Challenges in Sales and How to Overcome Them",
+        "description": "In this article, we'll delve into 12 key challenges in sales and explore effective solutions for each challeneg in sales.",
+        "mainEntityOfPage": {
+          "@id": "https://knockio.com/blog/key-challenges-in-sales/#webpage"
+        },
+        "publisher": {
+          "@id": "https://knockio.com/#organization"
+        },
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Syed Junaid",
+          "jobTitle": "Marketing Lead & Content Strategist at Knockio",
+          "url": "https://www.linkedin.com/in/syed-junaid-seo/",
+          "sameAs": [
+            "https://www.linkedin.com/in/syed-junaid-seo/",
+            "https://x.com/JunaidSyed91"
+          ],
+          "worksFor": {
+            "@id": "https://knockio.com/#organization"
+          }
+        },
+        "datePublished": "2024-01-04T15:02:19Z",
+        "dateModified": "2026-07-21T17:23:57Z"
+      }
+    ]
+  },
+  "/blog/manage-a-canvassing-team/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/blog/manage-a-canvassing-team/#webpage",
+        "url": "https://knockio.com/blog/manage-a-canvassing-team/",
+        "name": "How to Manage a Canvassing Team for Sales - Knockio",
+        "description": "It gets easier to manage a canvassing team when you intentionally plan the territories with the door to door sales software.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/blog/manage-a-canvassing-team/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://knockio.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "How to Manage a Canvassing Team for Sales",
+            "item": "https://knockio.com/blog/manage-a-canvassing-team/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://knockio.com/blog/manage-a-canvassing-team/#blogposting",
+        "headline": "How to Manage a Canvassing Team for Sales",
+        "description": "It gets easier to manage a canvassing team when you intentionally plan the territories with the door to door sales software.",
+        "mainEntityOfPage": {
+          "@id": "https://knockio.com/blog/manage-a-canvassing-team/#webpage"
+        },
+        "publisher": {
+          "@id": "https://knockio.com/#organization"
+        },
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Waqar Hussain",
+          "jobTitle": "SEO & Digital Media Manager at Knockio",
+          "url": "https://www.linkedin.com/in/mwaqarhussain/",
+          "sameAs": [
+            "https://www.linkedin.com/in/mwaqarhussain/",
+            "https://x.com/WaqarHussainSEO"
+          ],
+          "worksFor": {
+            "@id": "https://knockio.com/#organization"
+          }
+        },
+        "datePublished": "2026-06-29T14:33:13Z",
+        "dateModified": "2026-06-30T19:30:23Z"
+      }
+    ]
+  },
+  "/blog/medical-device-sales-strategies/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/blog/medical-device-sales-strategies/#webpage",
+        "url": "https://knockio.com/blog/medical-device-sales-strategies/",
+        "name": "10 Effective Medical Device Sales Strategies - Knockio",
+        "description": "Product training is a vital part of medical device sales strategies. Simplified training manuals and brochures can also help in your sales efforts.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/blog/medical-device-sales-strategies/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://knockio.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "10 Effective Medical Device Sales Strategies",
+            "item": "https://knockio.com/blog/medical-device-sales-strategies/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://knockio.com/blog/medical-device-sales-strategies/#blogposting",
+        "headline": "10 Effective Medical Device Sales Strategies",
+        "description": "Product training is a vital part of medical device sales strategies. Simplified training manuals and brochures can also help in your sales efforts.",
+        "mainEntityOfPage": {
+          "@id": "https://knockio.com/blog/medical-device-sales-strategies/#webpage"
+        },
+        "publisher": {
+          "@id": "https://knockio.com/#organization"
+        },
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Syed Junaid",
+          "jobTitle": "Marketing Lead & Content Strategist at Knockio",
+          "url": "https://www.linkedin.com/in/syed-junaid-seo/",
+          "sameAs": [
+            "https://www.linkedin.com/in/syed-junaid-seo/",
+            "https://x.com/JunaidSyed91"
+          ],
+          "worksFor": {
+            "@id": "https://knockio.com/#organization"
+          }
+        },
+        "datePublished": "2024-02-06T11:21:59Z",
+        "dateModified": "2026-07-21T17:25:06Z"
+      }
+    ]
+  },
+  "/blog/mobile-sales-tools/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/blog/mobile-sales-tools/#webpage",
+        "url": "https://knockio.com/blog/mobile-sales-tools/",
+        "name": "Top 9 Mobile Sales Tools for Sales Reps and Companies",
+        "description": "In simple words, mobile sales tools are special apps on your phone that make selling stuff easier and more effective.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/blog/mobile-sales-tools/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://knockio.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Top 9 Mobile Sales Tools for Sales Reps and Companies",
+            "item": "https://knockio.com/blog/mobile-sales-tools/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://knockio.com/blog/mobile-sales-tools/#blogposting",
+        "headline": "Top 9 Mobile Sales Tools for Sales Reps and Companies",
+        "description": "In simple words, mobile sales tools are special apps on your phone that make selling stuff easier and more effective.",
+        "mainEntityOfPage": {
+          "@id": "https://knockio.com/blog/mobile-sales-tools/#webpage"
+        },
+        "publisher": {
+          "@id": "https://knockio.com/#organization"
+        },
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Syed Junaid",
+          "jobTitle": "Marketing Lead & Content Strategist at Knockio",
+          "url": "https://www.linkedin.com/in/syed-junaid-seo/",
+          "sameAs": [
+            "https://www.linkedin.com/in/syed-junaid-seo/",
+            "https://x.com/JunaidSyed91"
+          ],
+          "worksFor": {
+            "@id": "https://knockio.com/#organization"
+          }
+        },
+        "datePublished": "2024-01-24T14:21:49Z",
+        "dateModified": "2026-07-21T17:25:43Z"
+      }
+    ]
+  },
+  "/blog/outside-sales-vs-inside-sales/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/blog/outside-sales-vs-inside-sales/#webpage",
+        "url": "https://knockio.com/blog/outside-sales-vs-inside-sales/",
+        "name": "Difference Between an Inside Sales and an Outside Sales",
+        "description": "Discover the differences between inside sales and outside sales and discuss the representatives' salaries, tools, responsibilities, and structures.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/blog/outside-sales-vs-inside-sales/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://knockio.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Difference Between an Inside Sales and an Outside Sales",
+            "item": "https://knockio.com/blog/outside-sales-vs-inside-sales/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://knockio.com/blog/outside-sales-vs-inside-sales/#blogposting",
+        "headline": "Difference Between an Inside Sales and an Outside Sales",
+        "description": "Discover the differences between inside sales and outside sales and discuss the representatives' salaries, tools, responsibilities, and structures.",
+        "mainEntityOfPage": {
+          "@id": "https://knockio.com/blog/outside-sales-vs-inside-sales/#webpage"
+        },
+        "publisher": {
+          "@id": "https://knockio.com/#organization"
+        },
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Syed Junaid",
+          "jobTitle": "Marketing Lead & Content Strategist at Knockio",
+          "url": "https://www.linkedin.com/in/syed-junaid-seo/",
+          "sameAs": [
+            "https://www.linkedin.com/in/syed-junaid-seo/",
+            "https://x.com/JunaidSyed91"
+          ],
+          "worksFor": {
+            "@id": "https://knockio.com/#organization"
+          }
+        },
+        "datePublished": "2025-01-03T11:52:17Z",
+        "dateModified": "2026-07-21T17:28:03Z"
+      }
+    ]
+  },
+  "/blog/plumbing-business-management/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/blog/plumbing-business-management/#webpage",
+        "url": "https://knockio.com/blog/plumbing-business-management/",
+        "name": "Plumbing Business Management Tips: A Complete Guide",
+        "description": "We will go deep and unearth all the tips to get your plumbing business up and running like a pro by implementing new strategies, tools, and systems.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/blog/plumbing-business-management/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://knockio.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Plumbing Business Management Tips: A Complete Guide",
+            "item": "https://knockio.com/blog/plumbing-business-management/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://knockio.com/blog/plumbing-business-management/#blogposting",
+        "headline": "Plumbing Business Management Tips: A Complete Guide",
+        "description": "We will go deep and unearth all the tips to get your plumbing business up and running like a pro by implementing new strategies, tools, and systems.",
+        "mainEntityOfPage": {
+          "@id": "https://knockio.com/blog/plumbing-business-management/#webpage"
+        },
+        "publisher": {
+          "@id": "https://knockio.com/#organization"
+        },
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Waqar Hussain",
+          "jobTitle": "SEO & Digital Media Manager at Knockio",
+          "url": "https://www.linkedin.com/in/mwaqarhussain/",
+          "sameAs": [
+            "https://www.linkedin.com/in/mwaqarhussain/",
+            "https://x.com/WaqarHussainSEO"
+          ],
+          "worksFor": {
+            "@id": "https://knockio.com/#organization"
+          }
+        },
+        "datePublished": "2026-07-01T10:28:22Z",
+        "dateModified": "2026-07-01T10:28:24Z"
+      }
+    ]
+  },
+  "/blog/roofers-knocking-on-doors/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/blog/roofers-knocking-on-doors/#webpage",
+        "url": "https://knockio.com/blog/roofers-knocking-on-doors/",
+        "name": "Roofers Knocking on Doors - How to Avoid Roofing Scams",
+        "description": "Sometimes roofers knocking on doors to inform you that your roof could be damaged. Beware of this roofing scam, and solve this by reading this article.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/blog/roofers-knocking-on-doors/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://knockio.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Roofers Knocking on Doors - How to Avoid Roofing Scams",
+            "item": "https://knockio.com/blog/roofers-knocking-on-doors/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://knockio.com/blog/roofers-knocking-on-doors/#blogposting",
+        "headline": "Roofers Knocking on Doors - How to Avoid Roofing Scams",
+        "description": "Sometimes roofers knocking on doors to inform you that your roof could be damaged. Beware of this roofing scam, and solve this by reading this article.",
+        "mainEntityOfPage": {
+          "@id": "https://knockio.com/blog/roofers-knocking-on-doors/#webpage"
+        },
+        "publisher": {
+          "@id": "https://knockio.com/#organization"
+        },
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Syed Junaid",
+          "jobTitle": "Marketing Lead & Content Strategist at Knockio",
+          "url": "https://www.linkedin.com/in/syed-junaid-seo/",
+          "sameAs": [
+            "https://www.linkedin.com/in/syed-junaid-seo/",
+            "https://x.com/JunaidSyed91"
+          ],
+          "worksFor": {
+            "@id": "https://knockio.com/#organization"
+          }
+        },
+        "datePublished": "2024-10-01T12:48:50Z",
+        "dateModified": "2026-07-21T17:28:47Z"
+      }
+    ]
+  },
+  "/blog/roofing-sales-pitch-with-examples/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/blog/roofing-sales-pitch-with-examples/#webpage",
+        "url": "https://knockio.com/blog/roofing-sales-pitch-with-examples/",
+        "name": "7 Roofing Sales Pitch with Examples That Close Deals",
+        "description": "When selling a roof, it’s important to follow key steps, these 7 roofing sales pitch with examples show how you can start selling more roofing jobs.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/blog/roofing-sales-pitch-with-examples/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://knockio.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "7 Roofing Sales Pitch with Examples That Close Deals",
+            "item": "https://knockio.com/blog/roofing-sales-pitch-with-examples/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://knockio.com/blog/roofing-sales-pitch-with-examples/#blogposting",
+        "headline": "7 Roofing Sales Pitch with Examples That Close Deals",
+        "description": "When selling a roof, it’s important to follow key steps, these 7 roofing sales pitch with examples show how you can start selling more roofing jobs.",
+        "mainEntityOfPage": {
+          "@id": "https://knockio.com/blog/roofing-sales-pitch-with-examples/#webpage"
+        },
+        "publisher": {
+          "@id": "https://knockio.com/#organization"
+        },
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Syed Junaid",
+          "jobTitle": "Marketing Lead & Content Strategist at Knockio",
+          "url": "https://www.linkedin.com/in/syed-junaid-seo/",
+          "sameAs": [
+            "https://www.linkedin.com/in/syed-junaid-seo/",
+            "https://x.com/JunaidSyed91"
+          ],
+          "worksFor": {
+            "@id": "https://knockio.com/#organization"
+          }
+        },
+        "datePublished": "2024-10-31T11:31:17Z",
+        "dateModified": "2026-07-21T17:30:53Z"
+      }
+    ]
+  },
+  "/blog/roofing-sales-rep-tracking-software/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/blog/roofing-sales-rep-tracking-software/#webpage",
+        "url": "https://knockio.com/blog/roofing-sales-rep-tracking-software/",
+        "name": "Benefits of Roofing Sales Rep Tracking Software",
+        "description": "A modern roofing sales rep tracking software can light the way by showing you exactly where your team is and what they’re doing in real time.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/blog/roofing-sales-rep-tracking-software/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://knockio.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Benefits of Roofing Sales Rep Tracking Software",
+            "item": "https://knockio.com/blog/roofing-sales-rep-tracking-software/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://knockio.com/blog/roofing-sales-rep-tracking-software/#blogposting",
+        "headline": "Benefits of Roofing Sales Rep Tracking Software",
+        "description": "A modern roofing sales rep tracking software can light the way by showing you exactly where your team is and what they’re doing in real time.",
+        "mainEntityOfPage": {
+          "@id": "https://knockio.com/blog/roofing-sales-rep-tracking-software/#webpage"
+        },
+        "publisher": {
+          "@id": "https://knockio.com/#organization"
+        },
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Waqar Hussain",
+          "jobTitle": "SEO & Digital Media Manager at Knockio",
+          "url": "https://www.linkedin.com/in/mwaqarhussain/",
+          "sameAs": [
+            "https://www.linkedin.com/in/mwaqarhussain/",
+            "https://x.com/WaqarHussainSEO"
+          ],
+          "worksFor": {
+            "@id": "https://knockio.com/#organization"
+          }
+        },
+        "datePublished": "2026-07-13T11:23:59Z",
+        "dateModified": "2026-07-13T11:24:01Z"
+      }
+    ]
+  },
+  "/blog/roofing-sales-tips-and-strategies/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/blog/roofing-sales-tips-and-strategies/#webpage",
+        "url": "https://knockio.com/blog/roofing-sales-tips-and-strategies/",
+        "name": "Top Roofing Sales Tips and Strategies for Contractors",
+        "description": "Boost conversions with expert Roofing Sales Tips and Strategies. Learn proven techniques to close more deals and grow your roofing business fast.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/blog/roofing-sales-tips-and-strategies/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://knockio.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Top Roofing Sales Tips and Strategies for Contractors",
+            "item": "https://knockio.com/blog/roofing-sales-tips-and-strategies/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://knockio.com/blog/roofing-sales-tips-and-strategies/#blogposting",
+        "headline": "Top Roofing Sales Tips and Strategies for Contractors",
+        "description": "Boost conversions with expert Roofing Sales Tips and Strategies. Learn proven techniques to close more deals and grow your roofing business fast.",
+        "mainEntityOfPage": {
+          "@id": "https://knockio.com/blog/roofing-sales-tips-and-strategies/#webpage"
+        },
+        "publisher": {
+          "@id": "https://knockio.com/#organization"
+        },
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Syed Junaid",
+          "jobTitle": "Marketing Lead & Content Strategist at Knockio",
+          "url": "https://www.linkedin.com/in/syed-junaid-seo/",
+          "sameAs": [
+            "https://www.linkedin.com/in/syed-junaid-seo/",
+            "https://x.com/JunaidSyed91"
+          ],
+          "worksFor": {
+            "@id": "https://knockio.com/#organization"
+          }
+        },
+        "datePublished": "2025-05-09T14:24:43Z",
+        "dateModified": "2026-07-21T17:32:26Z",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://knockio.com/wp-content/uploads/2025/05/Communication.webp",
+          "width": 1024,
+          "height": 640
+        }
+      }
+    ]
+  },
+  "/blog/sales-territory-design/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/blog/sales-territory-design/#webpage",
+        "url": "https://knockio.com/blog/sales-territory-design/",
+        "name": "Sales Territory Design: Introduction, Importance, Challenges",
+        "description": "Sales territory design is the process of segmenting a company’s market into distinct regions or groups based on data.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/blog/sales-territory-design/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://knockio.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Sales Territory Design: Introduction, Importance, Challenges",
+            "item": "https://knockio.com/blog/sales-territory-design/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://knockio.com/blog/sales-territory-design/#blogposting",
+        "headline": "Sales Territory Design: Introduction, Importance, Challenges",
+        "description": "Sales territory design is the process of segmenting a company’s market into distinct regions or groups based on data.",
+        "mainEntityOfPage": {
+          "@id": "https://knockio.com/blog/sales-territory-design/#webpage"
+        },
+        "publisher": {
+          "@id": "https://knockio.com/#organization"
+        },
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Syed Junaid",
+          "jobTitle": "Marketing Lead & Content Strategist at Knockio",
+          "url": "https://www.linkedin.com/in/syed-junaid-seo/",
+          "sameAs": [
+            "https://www.linkedin.com/in/syed-junaid-seo/",
+            "https://x.com/JunaidSyed91"
+          ],
+          "worksFor": {
+            "@id": "https://knockio.com/#organization"
+          }
+        },
+        "datePublished": "2025-04-11T13:29:23Z",
+        "dateModified": "2026-07-21T17:33:55Z"
+      }
+    ]
+  },
+  "/blog/sales-territory-management-best-practices/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/blog/sales-territory-management-best-practices/#webpage",
+        "url": "https://knockio.com/blog/sales-territory-management-best-practices/",
+        "name": "8 Sales Territory Management Best Practices",
+        "description": "8 sales territory management best practices. include analyzing customers, setting goals, using mapping apps, and evaluating sales reps, etc.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/blog/sales-territory-management-best-practices/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://knockio.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "8 Sales Territory Management Best Practices",
+            "item": "https://knockio.com/blog/sales-territory-management-best-practices/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://knockio.com/blog/sales-territory-management-best-practices/#blogposting",
+        "headline": "8 Sales Territory Management Best Practices",
+        "description": "8 sales territory management best practices. include analyzing customers, setting goals, using mapping apps, and evaluating sales reps, etc.",
+        "mainEntityOfPage": {
+          "@id": "https://knockio.com/blog/sales-territory-management-best-practices/#webpage"
+        },
+        "publisher": {
+          "@id": "https://knockio.com/#organization"
+        },
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Syed Junaid",
+          "jobTitle": "Marketing Lead & Content Strategist at Knockio",
+          "url": "https://www.linkedin.com/in/syed-junaid-seo/",
+          "sameAs": [
+            "https://www.linkedin.com/in/syed-junaid-seo/",
+            "https://x.com/JunaidSyed91"
+          ],
+          "worksFor": {
+            "@id": "https://knockio.com/#organization"
+          }
+        },
+        "datePublished": "2023-12-19T12:30:55Z",
+        "dateModified": "2026-07-21T17:34:42Z"
+      }
+    ]
+  },
+  "/blog/selling-solar-panels/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/blog/selling-solar-panels/#webpage",
+        "url": "https://knockio.com/blog/selling-solar-panels/",
+        "name": "Selling Solar Panels - Comprehensive Guide for Solar Sellers",
+        "description": "Selling solar panels is a great opportunity. It is a growing industry but comes with challenges. Read all strategies in this post.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/blog/selling-solar-panels/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://knockio.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Selling Solar Panels - Comprehensive Guide for Solar Sellers",
+            "item": "https://knockio.com/blog/selling-solar-panels/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://knockio.com/blog/selling-solar-panels/#blogposting",
+        "headline": "Selling Solar Panels - Comprehensive Guide for Solar Sellers",
+        "description": "Selling solar panels is a great opportunity. It is a growing industry but comes with challenges. Read all strategies in this post.",
+        "mainEntityOfPage": {
+          "@id": "https://knockio.com/blog/selling-solar-panels/#webpage"
+        },
+        "publisher": {
+          "@id": "https://knockio.com/#organization"
+        },
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Syed Junaid",
+          "jobTitle": "Marketing Lead & Content Strategist at Knockio",
+          "url": "https://www.linkedin.com/in/syed-junaid-seo/",
+          "sameAs": [
+            "https://www.linkedin.com/in/syed-junaid-seo/",
+            "https://x.com/JunaidSyed91"
+          ],
+          "worksFor": {
+            "@id": "https://knockio.com/#organization"
+          }
+        },
+        "datePublished": "2024-11-26T11:37:34Z",
+        "dateModified": "2026-07-21T17:35:27Z"
+      }
+    ]
+  },
+  "/blog/solar-sales-pitch-scripts/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/blog/solar-sales-pitch-scripts/#webpage",
+        "url": "https://knockio.com/blog/solar-sales-pitch-scripts/",
+        "name": "10 Best Solar Sales Pitch Scripts with Examples for More Sales",
+        "description": "10 highly effective solar sales pitch scripts tailored to different situations, and customer. These scripts are designed to help you close more deals.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/blog/solar-sales-pitch-scripts/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://knockio.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "10 Best Solar Sales Pitch Scripts with Examples for More Sales",
+            "item": "https://knockio.com/blog/solar-sales-pitch-scripts/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://knockio.com/blog/solar-sales-pitch-scripts/#blogposting",
+        "headline": "10 Best Solar Sales Pitch Scripts with Examples for More Sales",
+        "description": "10 highly effective solar sales pitch scripts tailored to different situations, and customer. These scripts are designed to help you close more deals.",
+        "mainEntityOfPage": {
+          "@id": "https://knockio.com/blog/solar-sales-pitch-scripts/#webpage"
+        },
+        "publisher": {
+          "@id": "https://knockio.com/#organization"
+        },
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Syed Junaid",
+          "jobTitle": "Marketing Lead & Content Strategist at Knockio",
+          "url": "https://www.linkedin.com/in/syed-junaid-seo/",
+          "sameAs": [
+            "https://www.linkedin.com/in/syed-junaid-seo/",
+            "https://x.com/JunaidSyed91"
+          ],
+          "worksFor": {
+            "@id": "https://knockio.com/#organization"
+          }
+        },
+        "datePublished": "2024-12-05T11:57:02Z",
+        "dateModified": "2026-07-21T17:36:12Z"
+      }
+    ]
+  },
+  "/blog/storm-damage-expert/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/blog/storm-damage-expert/#webpage",
+        "url": "https://knockio.com/blog/storm-damage-expert/",
+        "name": "Storm Damage Expert Explained & How to Become One",
+        "description": "Discover the role of a storm damage expert, responsibilities, required skills, and how to start a career in storm damage inspection and restoration.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/blog/storm-damage-expert/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://knockio.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Storm Damage Expert Explained & How to Become One",
+            "item": "https://knockio.com/blog/storm-damage-expert/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://knockio.com/blog/storm-damage-expert/#blogposting",
+        "headline": "Storm Damage Expert Explained & How to Become One",
+        "description": "Discover the role of a storm damage expert, responsibilities, required skills, and how to start a career in storm damage inspection and restoration.",
+        "mainEntityOfPage": {
+          "@id": "https://knockio.com/blog/storm-damage-expert/#webpage"
+        },
+        "publisher": {
+          "@id": "https://knockio.com/#organization"
+        },
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Waqar Hussain",
+          "jobTitle": "SEO & Digital Media Manager at Knockio",
+          "url": "https://www.linkedin.com/in/mwaqarhussain/",
+          "sameAs": [
+            "https://www.linkedin.com/in/mwaqarhussain/",
+            "https://x.com/WaqarHussainSEO"
+          ],
+          "worksFor": {
+            "@id": "https://knockio.com/#organization"
+          }
+        },
+        "datePublished": "2026-06-30T15:10:24Z",
+        "dateModified": "2026-06-30T15:10:26Z"
+      }
+    ]
+  },
+  "/blog/territory-mapping-increases-sales/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/blog/territory-mapping-increases-sales/#webpage",
+        "url": "https://knockio.com/blog/territory-mapping-increases-sales/",
+        "name": "How Territory Mapping Increases Sales - Knockio",
+        "description": "Territory mapping is the secret weapon that makes that day-to-day work much smoother, increase your sales, and more productive.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/blog/territory-mapping-increases-sales/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://knockio.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Part 1: Understanding Territory Mapping in Field Sales",
+            "item": "https://knockio.com/blog/territory-mapping-increases-sales/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://knockio.com/blog/territory-mapping-increases-sales/#blogposting",
+        "headline": "How Territory Mapping Increases Sales",
+        "description": "Territory mapping is the secret weapon that makes that day-to-day work much smoother, increase your sales, and more productive.",
+        "mainEntityOfPage": {
+          "@id": "https://knockio.com/blog/territory-mapping-increases-sales/#webpage"
+        },
+        "publisher": {
+          "@id": "https://knockio.com/#organization"
+        },
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Waqar Hussain",
+          "jobTitle": "SEO & Digital Media Manager at Knockio",
+          "url": "https://www.linkedin.com/in/mwaqarhussain/",
+          "sameAs": [
+            "https://www.linkedin.com/in/mwaqarhussain/",
+            "https://x.com/WaqarHussainSEO"
+          ],
+          "worksFor": {
+            "@id": "https://knockio.com/#organization"
+          }
+        },
+        "datePublished": "2026-06-29T14:40:08Z",
+        "dateModified": "2026-06-30T19:48:41Z"
+      }
+    ]
+  },
+  "/blog/tips-for-canvassing-in-door-to-door-sales/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/blog/tips-for-canvassing-in-door-to-door-sales/#webpage",
+        "url": "https://knockio.com/blog/tips-for-canvassing-in-door-to-door-sales/",
+        "name": "Tips for Canvassing In Effective Door-to-Door Sales",
+        "description": "If you're looking for tips for canvassing for effective door to door sales and getting more leads while canvassing, here are 15 tips.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/blog/tips-for-canvassing-in-door-to-door-sales/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://knockio.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Tips for Canvassing In Effective Door-to-Door Sales",
+            "item": "https://knockio.com/blog/tips-for-canvassing-in-door-to-door-sales/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://knockio.com/blog/tips-for-canvassing-in-door-to-door-sales/#blogposting",
+        "headline": "Tips for Canvassing In Effective Door-to-Door Sales",
+        "description": "If you're looking for tips for canvassing for effective door to door sales and getting more leads while canvassing, here are 15 tips.",
+        "mainEntityOfPage": {
+          "@id": "https://knockio.com/blog/tips-for-canvassing-in-door-to-door-sales/#webpage"
+        },
+        "publisher": {
+          "@id": "https://knockio.com/#organization"
+        },
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Syed Junaid",
+          "jobTitle": "Marketing Lead & Content Strategist at Knockio",
+          "url": "https://www.linkedin.com/in/syed-junaid-seo/",
+          "sameAs": [
+            "https://www.linkedin.com/in/syed-junaid-seo/",
+            "https://x.com/JunaidSyed91"
+          ],
+          "worksFor": {
+            "@id": "https://knockio.com/#organization"
+          }
+        },
+        "datePublished": "2024-05-28T10:06:24Z",
+        "dateModified": "2026-07-21T17:37:07Z"
+      }
+    ]
+  },
+  "/blog/tracking-software-improves-field-sales-efficiency/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/blog/tracking-software-improves-field-sales-efficiency/#webpage",
+        "url": "https://knockio.com/blog/tracking-software-improves-field-sales-efficiency/",
+        "name": "Sales Rep Tracking Software Improves Field Sales Efficiency",
+        "description": "Sales rep tracking software improves field sales efficiency by creating a guided, data-driven approach to selling: work smarter, and sell more.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/blog/tracking-software-improves-field-sales-efficiency/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://knockio.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Sales Rep Tracking Software Improves Field Sales Efficiency",
+            "item": "https://knockio.com/blog/tracking-software-improves-field-sales-efficiency/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://knockio.com/blog/tracking-software-improves-field-sales-efficiency/#blogposting",
+        "headline": "Sales Rep Tracking Software Improves Field Sales Efficiency",
+        "description": "Sales rep tracking software improves field sales efficiency by creating a guided, data-driven approach to selling: work smarter, and sell more.",
+        "mainEntityOfPage": {
+          "@id": "https://knockio.com/blog/tracking-software-improves-field-sales-efficiency/#webpage"
+        },
+        "publisher": {
+          "@id": "https://knockio.com/#organization"
+        },
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Waqar Hussain",
+          "jobTitle": "SEO & Digital Media Manager at Knockio",
+          "url": "https://www.linkedin.com/in/mwaqarhussain/",
+          "sameAs": [
+            "https://www.linkedin.com/in/mwaqarhussain/",
+            "https://x.com/WaqarHussainSEO"
+          ],
+          "worksFor": {
+            "@id": "https://knockio.com/#organization"
+          }
+        },
+        "datePublished": "2026-07-01T11:14:29Z",
+        "dateModified": "2026-07-01T11:14:32Z"
+      }
+    ]
+  },
+  "/blog/types-of-roofing/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/blog/types-of-roofing/#webpage",
+        "url": "https://knockio.com/blog/types-of-roofing/",
+        "name": "15 Types of Roofing in the USA - Knockio",
+        "description": "We're going to look at the fifteen most popular types of roofing you'll see across the United States with a state wise breakdown.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/blog/types-of-roofing/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://knockio.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "15 Types of Roofing in the USA",
+            "item": "https://knockio.com/blog/types-of-roofing/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://knockio.com/blog/types-of-roofing/#blogposting",
+        "headline": "15 Types of Roofing in the USA",
+        "description": "We're going to look at the fifteen most popular types of roofing you'll see across the United States with a state wise breakdown.",
+        "mainEntityOfPage": {
+          "@id": "https://knockio.com/blog/types-of-roofing/#webpage"
+        },
+        "publisher": {
+          "@id": "https://knockio.com/#organization"
+        },
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Waqar Hussain",
+          "jobTitle": "SEO & Digital Media Manager at Knockio",
+          "url": "https://www.linkedin.com/in/mwaqarhussain/",
+          "sameAs": [
+            "https://www.linkedin.com/in/mwaqarhussain/",
+            "https://x.com/WaqarHussainSEO"
+          ],
+          "worksFor": {
+            "@id": "https://knockio.com/#organization"
+          }
+        },
+        "datePublished": "2026-06-30T19:47:44Z",
+        "dateModified": "2026-06-30T19:47:52Z",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://knockio.com/wp-content/uploads/2025/11/types-of-roofing-in-the-united-states-1024x819.png",
+          "width": 1024,
+          "height": 819
+        }
+      }
+    ]
+  },
+  "/blog/what-is-a-sales-campaign/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/blog/what-is-a-sales-campaign/#webpage",
+        "url": "https://knockio.com/blog/what-is-a-sales-campaign/",
+        "name": "What is a Sales Campaign and How to Run a Successful Campaign",
+        "description": "Sales campaigns are like exciting adventures in the business world. Imagine you have a favorite video game, and to win, you need a plan & strategy.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/blog/what-is-a-sales-campaign/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://knockio.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "What is a Sales Campaign and How to Run a Successful Campaign",
+            "item": "https://knockio.com/blog/what-is-a-sales-campaign/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://knockio.com/blog/what-is-a-sales-campaign/#blogposting",
+        "headline": "What is a Sales Campaign and How to Run a Successful Campaign",
+        "description": "Sales campaigns are like exciting adventures in the business world. Imagine you have a favorite video game, and to win, you need a plan & strategy.",
+        "mainEntityOfPage": {
+          "@id": "https://knockio.com/blog/what-is-a-sales-campaign/#webpage"
+        },
+        "publisher": {
+          "@id": "https://knockio.com/#organization"
+        },
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Syed Junaid",
+          "jobTitle": "Marketing Lead & Content Strategist at Knockio",
+          "url": "https://www.linkedin.com/in/syed-junaid-seo/",
+          "sameAs": [
+            "https://www.linkedin.com/in/syed-junaid-seo/",
+            "https://x.com/JunaidSyed91"
+          ],
+          "worksFor": {
+            "@id": "https://knockio.com/#organization"
+          }
+        },
+        "datePublished": "2023-12-12T16:31:57Z",
+        "dateModified": "2026-07-21T17:37:46Z"
+      }
+    ]
+  },
+  "/blog/what-is-sales-canvassing-and-dos-and-donts/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/blog/what-is-sales-canvassing-and-dos-and-donts/#webpage",
+        "url": "https://knockio.com/blog/what-is-sales-canvassing-and-dos-and-donts/",
+        "name": "What Is Sales Canvassing and Dos And Don'ts of Canvassing",
+        "description": "Sales canvassing involves reaching out to potential customers who have not previously engaged with a brand or business.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/blog/what-is-sales-canvassing-and-dos-and-donts/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://knockio.com/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "What Is Sales Canvassing and Dos And Don'ts of Canvassing",
+            "item": "https://knockio.com/blog/what-is-sales-canvassing-and-dos-and-donts/"
+          }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://knockio.com/blog/what-is-sales-canvassing-and-dos-and-donts/#blogposting",
+        "headline": "What Is Sales Canvassing and Dos And Don'ts of Canvassing",
+        "description": "Sales canvassing involves reaching out to potential customers who have not previously engaged with a brand or business.",
+        "mainEntityOfPage": {
+          "@id": "https://knockio.com/blog/what-is-sales-canvassing-and-dos-and-donts/#webpage"
+        },
+        "publisher": {
+          "@id": "https://knockio.com/#organization"
+        },
+        "inLanguage": "en-US",
+        "author": {
+          "@type": "Person",
+          "name": "Syed Junaid",
+          "jobTitle": "Marketing Lead & Content Strategist at Knockio",
+          "url": "https://www.linkedin.com/in/syed-junaid-seo/",
+          "sameAs": [
+            "https://www.linkedin.com/in/syed-junaid-seo/",
+            "https://x.com/JunaidSyed91"
+          ],
+          "worksFor": {
+            "@id": "https://knockio.com/#organization"
+          }
+        },
+        "datePublished": "2024-03-12T08:05:35Z",
+        "dateModified": "2026-07-21T17:38:50Z"
+      }
+    ]
+  },
+  "/book-a-demo/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/book-a-demo/#webpage",
+        "url": "https://knockio.com/book-a-demo/",
+        "name": "Book a Demo | Field Service CRM & Sales Software | Knockio",
+        "description": "Book a demo of Knockio and see how to manage leads, crews, jobs, appointments, estimates, invoices, payments, & communication in one platform.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        },
+        "about": {
+          "@id": "https://knockio.com/#software"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/book-a-demo/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Book a Demo | Field Service CRM & Sales Software",
+            "item": "https://knockio.com/book-a-demo/"
+          }
+        ]
+      }
+    ]
+  },
+  "/privacy-policy/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/privacy-policy/#webpage",
+        "url": "https://knockio.com/privacy-policy/",
+        "name": "Privacy Policy | Knockio",
+        "description": "Read Knockio’s Privacy Policy to learn how we collect, use, protect, store, and share personal information across our website, app, and services.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/privacy-policy/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Privacy Policy",
+            "item": "https://knockio.com/privacy-policy/"
+          }
+        ]
+      }
+    ]
+  },
+  "/support/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/support/#webpage",
+        "url": "https://knockio.com/support/",
+        "name": "Support - Knockio",
+        "description": "(404) 490-1883",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/support/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Support",
+            "item": "https://knockio.com/support/"
+          }
+        ]
+      }
+    ]
+  },
+  "/terms-and-conditions/": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://knockio.com/terms-and-conditions/#webpage",
+        "url": "https://knockio.com/terms-and-conditions/",
+        "name": "Terms and Conditions - Knockio",
+        "description": "Review Knockio’s Terms and Conditions for account use, subscriptions, communications, refunds, and service policies.",
+        "isPartOf": {
+          "@id": "https://knockio.com/#website"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://knockio.com/terms-and-conditions/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://knockio.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Terms and Conditions",
+            "item": "https://knockio.com/terms-and-conditions/"
+          }
+        ]
+      }
+    ]
+  }
+}
