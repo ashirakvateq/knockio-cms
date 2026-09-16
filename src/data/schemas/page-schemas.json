@@ -7,7 +7,7 @@
         "@id": "https://knockio.com/features/#webpage",
         "url": "https://knockio.com/features/",
         "name": "Knockio Features: Every Field Sales and Service Tool in One Platform",
-        "description": "Explore all twenty-one Knockio features: sales pipeline, canvassing, territory management, route planning, photo and media management, campaign management, product management, estimates, invoicing, subscription billing, payments, automations, GPS tracking, integrations, and more. Included on every plan.",
+        "description": "Explore all twenty-two Knockio features: sales pipeline, canvassing, territory management, route planning, photo and media management, campaign management, product management, estimates, invoicing, subscription billing, timesheets, payments, automations, GPS tracking, integrations, and more. Included on every plan.",
         "isPartOf": {
           "@id": "https://knockio.com/#website"
         },
@@ -37,7 +37,7 @@
         "@type": "ItemList",
         "@id": "https://knockio.com/features/#itemlist",
         "name": "Knockio Features",
-        "numberOfItems": 21,
+        "numberOfItems": 22,
         "itemListElement": [
           {
             "@type": "ListItem",
@@ -164,6 +164,12 @@
             "position": 21,
             "name": "Subscription Billing",
             "url": "https://knockio.com/features/subscription-billing-software/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 22,
+            "name": "Timesheet",
+            "url": "https://knockio.com/features/timesheet-management-software/"
           }
         ]
       }

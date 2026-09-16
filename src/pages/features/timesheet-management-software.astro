@@ -3,115 +3,115 @@ import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
 import "../../styles/feature-page.css";
 import {
   ArrowRight,
-  Check,
+  BarChart3,
   ChevronDown,
   ChevronRight,
-  LayoutDashboard,
-  Link2,
-  ListChecks,
-  Map,
+  Clock,
+  Layers,
   Quote,
-  TrendingUp,
+  RefreshCw,
+  ShieldCheck,
   Users,
 } from "lucide-astro";
 
-const title = "Route Planning and Dispatching Software | Knockio";
+const title = "Timesheet & Clock In Clock Out App for Field Teams | Knockio";
 const description =
-  "Build routes, assign crews, and dispatch the right technician from one screen. See why field service teams stop juggling maps, calendars, and CRMs with Knockio.";
+  "Knockio is a timesheet and clock in clock out app for field teams: start a session, track the active time, and clock out in one app. Managers get daily, weekly, and monthly team hours.";
 
 const asset = (name: string) => `/assets/cfw/${name}`;
 
 const proposalGroups = [
   {
-    key: "planning",
-    title: "Plan the Day Without Switching Tools",
-    icon: "map" as const,
+    key: "clock",
+    title: "Clock In, Work, Clock Out",
+    icon: "clock" as const,
     items: [
       {
-        label: "Daily Routes",
-        title: "Daily Routes",
-        text: "Build routes for leads, customers, inspections, jobs, and recurring service stops in one view, instead of piecing together a plan across a map app and a spreadsheet.",
-        image: asset(
-          "inner-route-planning-plan-the-day-daily-routes.webp",
-        ),
+        label: "One tap to start",
+        title: "Selecting Clock In opens a single active session",
+        text: "Selecting Clock In opens a single active session, so time starts tracking the moment work does. A user can't open a second session while one is already running.",
+        image: asset("inner-timesheet-clock-in-one-tap.webp"),
       },
       {
-        label: "Assigned Stop Details",
-        title: "Assigned Stop Details",
-        text: "Reps and crews see each stop's customer information, visit status, notes, and photos alongside the next action expected of them, so nobody arrives without context.",
-        image: asset(
-          "inner-route-planning-plan-the-day-assigned-stop-details.webp",
-        ),
+        label: "The session tracks itself",
+        title: "While clocked in, the timesheet shows the session start time",
+        text: "While clocked in, the timesheet shows the session start time, the elapsed minutes, and the total worked so far today.",
+        image: asset("inner-timesheet-clock-in-session-tracks.webp"),
       },
       {
-        label: "Recurring Stops",
-        title: "Recurring Stops",
-        text: "Set up routes for repeat service visits so maintenance and inspection stops do not need to be rebuilt from scratch every cycle.",
-        image: asset(
-          "inner-route-planning-plan-the-day-recurring-stops.webp",
-        ),
+        label: "Clock out records the entry",
+        title: "Clock Out closes the session and saves the entry",
+        text: "Clock Out closes the session and saves the clock-in time, clock-out time, work date, and duration as one clean time entry.",
+        image: asset("inner-timesheet-clock-in-clock-out-records.webp"),
       },
     ],
   },
   {
-    key: "dispatch",
-    title: "Dispatch the Right Person, Fast",
-    icon: "users" as const,
+    key: "team",
+    title: "A Team View Managers Actually Use",
+    icon: "chart" as const,
     items: [
       {
-        label: "Job Scheduling",
-        title: "Job Scheduling",
-        text: "Office teams schedule jobs and assign technicians or crews from the same screen where the route was built, cutting out the back-and-forth between calendar and dispatch board.",
-        image: asset(
-          "inner-route-planning-dispatch-job-scheduling.webp",
-        ),
+        label: "Daily, weekly, and monthly",
+        title: "Review hours by individual day, across weeks, or at a monthly level",
+        text: "Review hours by individual day, across weeks, or at a monthly level, whichever the pay period needs.",
+        image: asset("inner-timesheet-team-view-periods.webp"),
       },
       {
-        label: "Skill-Based Assignment",
-        title: "Skill-Based Assignment",
-        text: "Dispatch based on who is qualified, available, and positioned to take the job, rather than guessing from memory who is free.",
-        image: asset(
-          "inner-route-planning-dispatch-skill-based-assignment.webp",
-        ),
+        label: "Totals and sessions per person",
+        title: "See each team member's worked hours and session count",
+        text: "See each team member's worked hours and session count, and filter down to the specific people you're reviewing.",
+        image: asset("inner-timesheet-team-view-totals.webp"),
       },
       {
-        label: "Live Reassignment",
-        title: "Live Reassignment",
-        text: "When a job changes or a technician/crew runs long, dispatch a different crew without rebuilding the route or losing the job's history.",
-        image: asset(
-          "inner-route-planning-dispatch-live-reassignment.webp",
-        ),
+        label: "Fix mistakes without redoing them",
+        title: "Correct a wrong clock-in or clock-out by editing the existing entry",
+        text: "Correct a wrong clock-in or clock-out by editing the existing entry, not by creating a duplicate session.",
+        image: asset("inner-timesheet-team-view-fix-mistakes.webp"),
       },
     ],
   },
   {
-    key: "records",
-    title: "Keep Everyone on the Same Record",
-    icon: "link" as const,
+    key: "permissions",
+    title: "Permissions That Match Your Roles",
+    icon: "shield" as const,
     items: [
       {
-        label: "Connected Job History",
-        title: "Connected Job History",
-        text: "Route activity, visit status, and dispatch decisions stay tied to the customer and job record, so a stop completed in the field updates the same file the office is looking at.",
-        image: asset(
-          "inner-route-planning-records-connected-job-history.webp",
-        ),
+        label: "View versus full view",
+        title: "Timesheet View shows a user their own hours",
+        text: "Timesheet View shows a user their own hours; Timesheet Full View lets managers see and filter the whole team.",
+        image: asset("inner-timesheet-permissions-view-levels.webp"),
       },
       {
-        label: "Route Progress Visibility",
-        title: "Route Progress Visibility",
-        text: "Managers see which stops are done, which are in progress, and which still need attention, without calling the field for an update.",
-        image: asset(
-          "inner-route-planning-records-route-progress-visibility.webp",
-        ),
+        label: "Who can clock in",
+        title: "The Check-In/Out permission controls who can start and end work sessions",
+        text: "The Check-In/Out permission controls who can start and end work sessions.",
+        image: asset("inner-timesheet-permissions-clock-in.webp"),
       },
       {
-        label: "Fewer Missed Stops",
-        title: "Fewer Missed Stops",
-        text: "Because routing, scheduling, and dispatch share one system, conflicting assignments, duplicate visits, and forgotten stops are easier to catch before they cost a day.",
-        image: asset(
-          "inner-route-planning-records-fewer-missed-stops.webp",
-        ),
+        label: "Who can edit",
+        title: "Update lets a user fix their own entries",
+        text: "Update lets a user fix their own entries, and Full Update lets a manager correct team members' entries.",
+        image: asset("inner-timesheet-permissions-edit.webp"),
+      },
+    ],
+  },
+  {
+    key: "workspace",
+    title: "Built Into the Same Workspace as the Work",
+    icon: "layers" as const,
+    items: [
+      {
+        label: "Clock in from the field",
+        title: "Reps start and end sessions in the same Knockio app",
+        text: "Reps start and end sessions in the same Knockio app they use for canvassing and jobs, not a separate time clock.",
+        image: asset("inner-timesheet-workspace-clock-in-field.webp"),
+      },
+      {
+        label: "Require a clock-in to work",
+        title: "Turn on the clock-in requirement before other workspace actions",
+        text: "Turn on the clock-in requirement and a user must be clocked in before performing other workspace actions, so hours don't get missed.",
+        image: asset("inner-timesheet-workspace-require-clock-in.webp"),
       },
     ],
   },
@@ -148,32 +148,24 @@ const trustBadges = [
 
 const faqs = [
   {
-    q: "Can Knockio plan routes and dispatch crews on the same platform as the CRM?",
-    a: "Yes. Knockio lets office staff build daily routes for leads, jobs, inspections, and recurring service stops, then dispatch technicians or crews without leaving the platform. Because routing and dispatch pull from the same customer and job records used across sales and service, a reassignment does not require re-entering information in a separate mapping or calendar tool.",
+    q: "How do employees track their time?",
+    a: "They select Clock In to start a session, work while Knockio tracks the elapsed time and today's total, then select Clock Out to record the entry. Each entry keeps the clock-in time, clock-out time, work date, and duration.",
   },
   {
-    q: "Does Knockio handle both route planning and dispatching, or are they separate tools?",
-    a: "Both live in the same platform. Office teams build the route and assign technicians or crews from the same screen, without exporting data to a separate dispatch tool.",
+    q: "Can a manager see the whole team's hours?",
+    a: "Yes. With Timesheet Full View, managers and admins see team timesheets, including worked hours and session totals per person, and can filter to specific team members across daily, weekly, or monthly views.",
   },
   {
-    q: "Can I build routes for recurring service visits, not just one-time jobs?",
-    a: "Yes. Routes can include recurring stops for repeat service, maintenance, or inspection visits alongside one-time jobs and leads.",
+    q: "What happens if someone forgets to clock out?",
+    a: "An authorized user can correct the entry. Corrections edit the existing time entry rather than creating a new session, so the record stays clean. A session can also show as Auto Closed when it's ended automatically.",
   },
   {
-    q: "What can technicians and crews see when they're out on their route?",
-    a: "They can view each stop's customer information, visit status, notes, and photos, along with the next action expected at that stop.",
+    q: "Who is allowed to edit hours?",
+    a: "Permissions decide. Timesheet Update lets a user fix their own entries, and Timesheet Full Update lets a manager correct team members' entries. Viewing and clocking in and out are controlled by their own separate permissions.",
   },
   {
-    q: "What happens if I need to reassign a job mid-day?",
-    a: "Dispatch can reassign a job to a different technician or crew without rebuilding the route, and the job's history stays connected to the customer record.",
-  },
-  {
-    q: "Do route and dispatch activities connect to the rest of the customer record?",
-    a: "Yes. Route activity and dispatch decisions stay tied to the customer and job record used across the platform, so office staff and field teams are working from the same information.",
-  },
-  {
-    q: "What is route planning and dispatching software?",
-    a: "Route planning and dispatching tool helps field businesses organize where teams need to go and who should handle each stop. It also keeps the information needed to complete the visit close to the work. Route planning arranges leads, customers, inspections, jobs, and repeat service stops. Dispatching assigns those stops to a representative, technician, or crew and keeps the schedule visible to the office and field. Knockio connects both parts of the workflow. Each stop can stay tied to its lead, customer, appointment, job, or work order, so the route carries more than an address.",
+    q: "Can I require reps to clock in before they start working?",
+    a: "Yes. When the clock-in requirement is enabled for a workspace, a user must be clocked in before performing other workspace actions, so field hours get captured instead of forgotten.",
   },
 ];
 
@@ -219,171 +211,34 @@ const reviewsRow2 = [
   },
 ];
 
+const pageUrl = "https://knockio.com/features/timesheet-management-software/";
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "@id":
-        "https://knockio.com/features/route-planning-and-dispatching/#webpage",
-      url: "https://knockio.com/features/route-planning-and-dispatching/",
-      name: "Route Planning and Dispatching Software | Knockio",
-      headline: "Route Planning and Dispatching That Runs From One Screen",
+      "@id": `${pageUrl}#webpage`,
+      url: pageUrl,
+      name: title,
       description,
       isPartOf: { "@id": "https://knockio.com/#website" },
-      about: { "@id": "https://knockio.com/#software" },
-      mainEntity: { "@id": "https://knockio.com/#software" },
-      mainContentOfPage: {
-        "@type": "WebPageElement",
-        name: "Route Planning and Dispatching That Runs From One Screen",
-        text: "Your crews are scattered across town, the calendar lives in one app, the map lives in another, and every reassignment means a phone call to whoever is closest to the next stop. Knockio puts route planning and dispatching inside the same platform as your leads, jobs, and customer records, so building a route and assigning the right person to it does not mean switching tools.",
-      },
-      hasPart: [
+      about: { "@id": "https://knockio.com/field-service-crm/#software" },
+      audience: [
         {
-          "@type": "WebPageElement",
-          name: "Quick Answer: Can Knockio plan routes and dispatch crews on the same platform as the CRM?",
-          text: "Yes. Knockio lets office staff build daily routes for leads, jobs, inspections, and recurring service stops, then dispatch technicians or crews without leaving the platform. Because routing and dispatch pull from the same customer and job records used across sales and service, a reassignment does not require re-entering information in a separate mapping or calendar tool.",
+          "@type": "Audience",
+          audienceType: "Field Sales and Door-to-Door Canvassing Teams",
         },
         {
-          "@type": "WebPageElement",
-          name: "Plan the Day Without Switching Tools",
-          hasPart: [
-            {
-              "@type": "WebPageElement",
-              name: "Daily Routes",
-              text: "Build routes for leads, customers, inspections, jobs, and recurring service stops in one view, instead of piecing together a plan across a map app and a spreadsheet.",
-            },
-            {
-              "@type": "WebPageElement",
-              name: "Assigned Stop Details",
-              text: "Reps and crews see each stop's customer information, visit status, notes, and photos alongside the next action expected of them, so nobody arrives without context.",
-            },
-            {
-              "@type": "WebPageElement",
-              name: "Recurring Stops",
-              text: "Set up routes for repeat service visits so maintenance and inspection stops do not need to be rebuilt from scratch every cycle.",
-            },
-          ],
-        },
-        {
-          "@type": "WebPageElement",
-          name: "Dispatch the Right Person, Fast",
-          hasPart: [
-            {
-              "@type": "WebPageElement",
-              name: "Job Scheduling",
-              text: "Office teams schedule jobs and assign technicians or crews from the same screen where the route was built, cutting out the back-and-forth between calendar and dispatch board.",
-            },
-            {
-              "@type": "WebPageElement",
-              name: "Skill-Based Assignment",
-              text: "Dispatch based on who is qualified, available, and positioned to take the job, rather than guessing from memory who is free.",
-            },
-            {
-              "@type": "WebPageElement",
-              name: "Live Reassignment",
-              text: "When a job changes or a technician/crew runs long, dispatch a different crew without rebuilding the route or losing the job's history.",
-            },
-          ],
-        },
-        {
-          "@type": "WebPageElement",
-          name: "Keep Everyone on the Same Record",
-          hasPart: [
-            {
-              "@type": "WebPageElement",
-              name: "Connected Job History",
-              text: "Route activity, visit status, and dispatch decisions stay tied to the customer and job record, so a stop completed in the field updates the same file the office is looking at.",
-            },
-            {
-              "@type": "WebPageElement",
-              name: "Route Progress Visibility",
-              text: "Managers see which stops are done, which are in progress, and which still need attention, without calling the field for an update.",
-            },
-            {
-              "@type": "WebPageElement",
-              name: "Fewer Missed Stops",
-              text: "Because routing, scheduling, and dispatch share one system, conflicting assignments, duplicate visits, and forgotten stops are easier to catch before they cost a day.",
-            },
-          ],
-        },
-        {
-          "@type": "WebPageElement",
-          name: "Why Route Planning and Dispatching Belong in One Platform",
-          text: "Field service delays rarely come from a bad route. They come from the gap between the route, the calendar, and whoever is deciding who goes where. When those three things live in separate tools, a single change, a cancellation, a sick technician, or a job that runs long means someone has to manually update a map, a calendar, and a CRM, in that order, before the next crew even knows their day changed.",
-          hasPart: [
-            {
-              "@type": "WebPageElement",
-              name: "One Screen for Planning and Dispatch",
-              text: "Building the route and assigning the work happen in the same place, so office staff are not exporting a route plan into a separate dispatch board.",
-            },
-            {
-              "@type": "WebPageElement",
-              name: "Field Teams See the Full Picture",
-              text: "Technicians and reps view their stops alongside the customer's history, prior notes, and photos, cutting down on calls back to the office just to get context on a job.",
-            },
-            {
-              "@type": "WebPageElement",
-              name: "Managers Track the Day in Real Time",
-              text: "Route progress updates as stops are completed, giving managers a current view of coverage and delays instead of waiting for end-of-day recaps.",
-            },
-          ],
+          "@type": "Audience",
+          audienceType: "Field Service and Operations Teams",
         },
       ],
-    },
-    {
-      "@type": "SoftwareApplication",
-      "@id": "https://knockio.com/#software",
-      name: "Knockio",
-      applicationCategory: "BusinessApplication",
-      applicationSubCategory: "Route planning and dispatching software",
-      operatingSystem: "Web, iOS, Android",
-      description:
-        "Knockio lets office staff build daily routes for leads, jobs, inspections, and recurring service stops, then dispatch technicians or crews without leaving the platform, with routing and dispatch pulling from the same customer and job records used across sales and service.",
-      featureList: [
-        "Build daily routes for leads, customers, inspections, jobs, and recurring service stops in one view",
-        "Show reps and crews each stop's customer information, visit status, notes, and photos alongside the next expected action",
-        "Set up routes for repeat service, maintenance, and inspection visits without rebuilding them each cycle",
-        "Schedule jobs and assign technicians or crews from the same screen where the route was built",
-        "Skill-based assignment by who is qualified, available, and positioned to take the job",
-        "Live reassignment to a different crew without rebuilding the route or losing the job's history",
-        "Keep route activity, visit status, and dispatch decisions tied to the customer and job record",
-        "Route progress visibility showing which stops are done, in progress, or still need attention",
-        "Catch conflicting assignments, duplicate visits, and forgotten stops before they cost a day",
-      ],
-    },
-    {
-      "@type": "DefinedTerm",
-      "@id":
-        "https://knockio.com/features/route-planning-and-dispatching/#definition",
-      name: "Route planning and dispatching software",
-      description:
-        "Route planning and dispatching tool helps field businesses organize where teams need to go and who should handle each stop. It also keeps the information needed to complete the visit close to the work. Route planning arranges leads, customers, inspections, jobs, and repeat service stops. Dispatching assigns those stops to a representative, technician, or crew and keeps the schedule visible to the office and field.",
-      inDefinedTermSet: { "@id": "https://knockio.com/#website" },
-    },
-    {
-      "@type": "ItemList",
-      "@id":
-        "https://knockio.com/features/route-planning-and-dispatching/#stop-types",
-      name: "Stop types Knockio can route and dispatch",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Leads" },
-        { "@type": "ListItem", position: 2, name: "Customers" },
-        { "@type": "ListItem", position: 3, name: "Inspections" },
-        { "@type": "ListItem", position: 4, name: "Jobs" },
-        {
-          "@type": "ListItem",
-          position: 5,
-          name: "Recurring service stops",
-        },
-        { "@type": "ListItem", position: 6, name: "Maintenance visits" },
-        { "@type": "ListItem", position: 7, name: "Work orders" },
-      ],
+      mainEntity: { "@id": `${pageUrl}#faq` },
     },
     {
       "@type": "BreadcrumbList",
-      "@id":
-        "https://knockio.com/features/route-planning-and-dispatching/#breadcrumb",
+      "@id": `${pageUrl}#breadcrumb`,
       itemListElement: [
         {
           "@type": "ListItem",
@@ -400,14 +255,14 @@ const jsonLd = {
         {
           "@type": "ListItem",
           position: 3,
-          name: "Route Planning and Dispatching",
-          item: "https://knockio.com/features/route-planning-and-dispatching/",
+          name: "Timesheet Software",
+          item: pageUrl,
         },
       ],
     },
     {
       "@type": "FAQPage",
-      "@id": "https://knockio.com/features/route-planning-and-dispatching/#faq",
+      "@id": `${pageUrl}#faq`,
       mainEntity: faqs.map((faq) => ({
         "@type": "Question",
         name: faq.q,
@@ -424,7 +279,7 @@ const tabIconClass =
 <KnockioHomeLayout
   title={title}
   description={description}
-  ogImage={asset("inner-route-planning-and-dispatching-hero.webp")}
+  ogImage={asset("inner-timesheet-hero.webp")}
   jsonLd={jsonLd}
   whiteBg={true}
 >
@@ -433,29 +288,29 @@ const tabIconClass =
     <section
       class="overflow-hidden border-b border-solid border-[#7fc271] bg-white pt-[64px]"
     >
-      <div
-        class="grid min-h-0 lg:min-h-[610px] lg:grid-cols-[50%_50%] xl:min-h-[720px]"
-      >
+      <div class="grid min-h-0 lg:min-h-[610px] lg:grid-cols-[50%_50%] xl:min-h-[720px]">
         <div
           class="relative flex flex-col justify-center px-[5%] py-12 sm:py-16 lg:min-h-[600px] lg:px-0 lg:py-0 lg:pb-[72px] lg:pl-[max(6.2vw,calc((100vw-1680px)/2))] lg:pr-[42px] xl:pr-[70px]"
         >
           <div class="max-w-[810px]">
             <h1
-              class="mb-7 text-[34px] font-bold leading-[42px] text-neutral-950 sm:text-[40px] sm:leading-[48px] xl:text-[52px] xl:leading-[60px] 2xl:text-[60px] 2xl:leading-[68px]"
+              class="mb-7 text-[32px] font-bold leading-[38px] text-neutral-950 sm:text-[38px] sm:leading-[44px] xl:text-[48px] xl:leading-[54px] 2xl:text-[56px] 2xl:leading-[60px]"
             >
-              Route Planning and Dispatching{" "}
-              <br class="hidden sm:block" />
-              That Runs From One Screen
+              Timesheet Software for Field Teams
             </h1>
             <p
               class="mb-10 max-w-[710px] text-base font-medium text-neutral-600 lg:text-lg"
             >
-              Your crews are scattered across town, the calendar lives in one
-              app, the map lives in another, and every reassignment means a
-              phone call to whoever is closest to the next stop. Knockio puts
-              route planning and dispatching inside the same platform as your
-              leads, jobs, and customer records, so building a route and
-              assigning the right person to it does not mean switching tools.
+              Time tracking shouldn't live in a punch-clock app your crew
+              forgets to open. Knockio's timesheet works as a clock in clock out
+              app right inside the same workspace reps already use for
+              canvassing, jobs, and dispatch, so they clock in, work, and clock
+              out without switching tools. It covers both sides of a field
+              business: a canvasser clocking in for a day of door-knocking and a
+              service crew tracking hours on a job, on one timesheet. The session
+              tracks itself while they work, and managers see daily, weekly, and
+              monthly team hours without chasing anyone for a spreadsheet at the
+              end of the week.
             </p>
             <a
               href="#cal-sec"
@@ -472,18 +327,23 @@ const tabIconClass =
             <h3
               class="mb-4 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
-              Can Knockio plan routes and dispatch crews on the same platform as
-              the CRM?
+              What is timesheet software, and how does clocking in and out work
+              in Knockio?
             </h3>
             <p
               class="max-w-[720px] text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
-              Yes. Knockio lets office staff build daily routes for leads, jobs,
-              inspections, and recurring service stops, then dispatch
-              technicians or crews without leaving the platform. Because routing
-              and dispatch pull from the same customer and job records used
-              across sales and service, a reassignment does not require
-              re-entering information in a separate mapping or calendar tool.
+              Timesheet software — sometimes called time tracking or online
+              timesheet software — records the hours your team actually works. In
+              Knockio it doubles as a simple clock in clock out app: a user
+              selects Clock In to start one active work session, and while
+              they're on the clock the timesheet shows the start time, the
+              elapsed minutes, and the total worked today. When they select Clock
+              Out, Knockio closes the session and saves a time entry with the
+              clock-in time, clock-out time, work date, and duration. Entries
+              read as Open, Closed, or Auto Closed, and authorized managers can
+              review team hours by day, week, or month and correct entries when
+              needed.
             </p>
           </div>
 
@@ -510,8 +370,8 @@ const tabIconClass =
           class="hero-feature-visual relative flex min-h-[320px] items-end justify-center overflow-hidden px-4 sm:min-h-[400px] lg:min-h-full lg:px-0"
         >
           <img
-            src={asset("inner-route-planning-and-dispatching-hero.webp")}
-            alt="Route planning and dispatching software preview"
+            src={asset("inner-timesheet-hero.webp")}
+            alt="Timesheet and clock in clock out app preview"
             width="830"
             height="560"
             decoding="async"
@@ -562,14 +422,20 @@ const tabIconClass =
                   >
                     <span class="flex items-center gap-4">
                       <span class={tabIconClass}>
-                        {group.icon === "map" && (
-                          <Map class="size-[22px]" aria-hidden="true" />
+                        {group.icon === "clock" && (
+                          <Clock class="size-[22px]" aria-hidden="true" />
                         )}
-                        {group.icon === "users" && (
-                          <Users class="size-[22px]" aria-hidden="true" />
+                        {group.icon === "chart" && (
+                          <BarChart3 class="size-[22px]" aria-hidden="true" />
                         )}
-                        {group.icon === "link" && (
-                          <Link2 class="size-[22px]" aria-hidden="true" />
+                        {group.icon === "shield" && (
+                          <ShieldCheck
+                            class="size-[22px]"
+                            aria-hidden="true"
+                          />
+                        )}
+                        {group.icon === "layers" && (
+                          <Layers class="size-[22px]" aria-hidden="true" />
                         )}
                       </span>
                       <span class="text-xl font-bold leading-7 sm:text-lg sm:leading-8">
@@ -722,7 +588,7 @@ const tabIconClass =
       </div>
     </section>
 
-    <!-- ========== Why One Platform ========== -->
+    <!-- ========== Manage ========== -->
     <section
       class="relative overflow-hidden bg-white py-24 sm:py-28 lg:py-[150px]"
     >
@@ -736,25 +602,19 @@ const tabIconClass =
           <h2
             class="mb-6 text-center text-[31px] font-bold leading-[39px] text-neutral-950 sm:text-4xl sm:leading-[44px] xl:text-5xl xl:leading-[58px] 2xl:text-[56px] 2xl:leading-[68px]"
           >
-            Why Route Planning and Dispatching<br class="hidden lg:block" />
-            Belong in One Platform
+            Manage Team Hours From the First Clock-In
+            <br class="hidden lg:block" />
+            to the Final Total
           </h2>
           <p
             class="mx-auto max-w-[800px] text-base leading-6 text-neutral-700 sm:text-lg sm:leading-6"
           >
-            Field service delays rarely come from a bad route. They come from the
-            gap between the route, the calendar, and whoever is deciding who
-            goes where. When those three things live in separate tools, a single
-            change — a cancellation, a sick technician, or a job that runs long
-            — means someone has to manually update a map, a calendar, and a CRM,
-            in that order, before the next crew even knows their day changed.
-            Crew hours belong in the same system too — see{" "}
-            <a
-              href="/features/timesheet-management-software/"
-              class="font-medium text-primary-500 hover:text-primary-600"
-              >timesheet management</a
-            >{" "}
-            for daily, weekly, and monthly totals.
+            Timesheets in Knockio aren't a separate punch clock your team has to
+            remember to open. Clock in, work, and clock out all happen in the
+            workspace reps already use, and every session rolls up into the
+            daily, weekly, and monthly totals a manager needs — timesheet
+            management handled inside the same workspace, with corrections made
+            right on the existing record.
           </p>
         </div>
 
@@ -770,20 +630,21 @@ const tabIconClass =
               <div
                 class="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-500/10 text-primary-500 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white"
               >
-                <LayoutDashboard class="size-7" aria-hidden="true" />
+                <Users class="size-7" aria-hidden="true" />
               </div>
             </div>
             <h3
               class="relative mb-5 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
-              One Screen for Planning and Dispatch
+              One clock across sales and service
             </h3>
             <p
               class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
-              Building the route and assigning the work happen in the same
-              place, so office staff are not exporting a route plan into a
-              separate dispatch board.
+              Door-to-door canvassers and service crews track time in the same
+              system, so the hours for everyone you dispatch and manage live in
+              one place instead of a standalone app. It's the same clock whether
+              the day is spent knocking doors or running jobs.
             </p>
           </article>
 
@@ -802,20 +663,20 @@ const tabIconClass =
               <div
                 class="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-500 text-white"
               >
-                <Users class="size-7" aria-hidden="true" />
+                <BarChart3 class="size-7" aria-hidden="true" />
               </div>
             </div>
             <h3
               class="relative mb-5 text-[21px] font-semibold leading-[27px] text-white sm:text-2xl sm:leading-7"
             >
-              Field Teams See the Full Picture
+              Review without chasing anyone
             </h3>
             <p
               class="relative text-[15px] leading-6 text-white/75 sm:text-base sm:leading-6"
             >
-              Technicians and reps view their stops alongside the customer's
-              history, prior notes, and photos, cutting down on calls back to
-              the office just to get context on a job.
+              Daily, weekly, and monthly views show worked hours and session
+              counts per person, so approvals don't wait on an end-of-week
+              spreadsheet.
             </p>
           </article>
 
@@ -830,20 +691,20 @@ const tabIconClass =
               <div
                 class="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-500/10 text-primary-500 transition-all duration-300 group-hover:bg-primary-500 group-hover:text-white"
               >
-                <TrendingUp class="size-7" aria-hidden="true" />
+                <RefreshCw class="size-7" aria-hidden="true" />
               </div>
             </div>
             <h3
               class="relative mb-5 text-[21px] font-semibold leading-[27px] text-neutral-950 sm:text-2xl sm:leading-7"
             >
-              Managers Track the Day in Real Time
+              Accurate hours, corrected cleanly
             </h3>
             <p
               class="relative text-[15px] leading-6 text-neutral-600 sm:text-base sm:leading-6"
             >
-              Route progress updates as stops are completed, giving managers a
-              current view of coverage and delays instead of waiting for
-              end-of-day recaps.
+              When someone forgets to clock out, an authorized manager edits the
+              existing entry, so the record stays accurate without duplicate
+              sessions.
             </p>
           </article>
         </div>
@@ -863,14 +724,14 @@ const tabIconClass =
             <h2
               class="mb-8 w-full max-w-3xl text-3xl leading-tight font-bold text-neutral-950 sm:text-4xl lg:max-w-none lg:text-[42px] lg:leading-none xl:text-5xl 2xl:text-[56px]"
             >
-              Everything Teams Ask About Route Planning and Dispatching
+              Everything Teams Ask Before Using Knockio Service CRM
             </h2>
             <p
               class="mb-6 w-full max-w-3xl text-sm leading-6 font-normal text-neutral-800 sm:text-base sm:leading-7 md:mb-8 md:text-lg md:leading-8"
             >
-              Routing and dispatch touch every part of the day — here's how
-              Knockio keeps planning, assignment, and customer records in one
-              place.
+              Time tracking touches payroll and trust, so it's worth knowing
+              exactly how it works before you turn it on. Here's what teams ask
+              most.
             </p>
           </div>
 
