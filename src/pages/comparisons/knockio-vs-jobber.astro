@@ -1,47 +1,12 @@
 ---
 import KnockioHomeLayout from "../../layouts/KnockioHomeLayout.astro";
 import "../../styles/comparisons.css";
+import { getPageSchema } from "../../data/schemas";
 
 const title = "Knockio vs Jobber (2026): Canvassing Plus Job Management Compared";
 const description = "An honest, sourced comparison of Knockio and Jobber for home service companies: canvassing, pipeline, scheduling, invoicing, and pricing.";
 
-const jsonLd = [
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://knockio.com/" },
-      { "@type": "ListItem", position: 2, name: "Comparisons", item: "https://knockio.com/comparisons/" },
-      { "@type": "ListItem", position: 3, name: "Knockio vs Jobber", item: "https://knockio.com/comparisons/knockio-vs-jobber/" },
-    ],
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "Does Jobber have door knocking or canvassing?",
-        acceptedAnswer: { "@type": "Answer", text: "No. Jobber is built for booked, inbound service work. Knockio includes canvassing, territory assignment, and live rep tracking in the same platform as job management." },
-      },
-      {
-        "@type": "Question",
-        name: "Is Knockio cheaper than Jobber?",
-        acceptedAnswer: { "@type": "Answer", text: "It depends on team size. Jobber runs $49 to $499 per month by tier with extra users at $29 each, as of July 2026. Knockio is a flat $20 to $60 per user per month with everything included. Compare on your real user count." },
-      },
-      {
-        "@type": "Question",
-        name: "Does Jobber integrate with QuickBooks?",
-        acceptedAnswer: { "@type": "Answer", text: "Yes, QuickBooks Online sync is one of its stronger points, though some users report fixing sync errors by hand." },
-      },
-      {
-        "@type": "Question",
-        name: "Which is better for a roofing or exterior sales company?",
-        acceptedAnswer: { "@type": "Answer", text: "If you sell at the door and manage production, Knockio fits that motion. Jobber suits recurring residential trades like lawn care and cleaning." },
-      },
-    ],
-  },
-];
+const jsonLd = getPageSchema("/comparisons/knockio-vs-jobber/");
 ---
 
 <KnockioHomeLayout title={title} description={description} jsonLd={jsonLd}>

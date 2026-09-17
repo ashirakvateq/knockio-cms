@@ -33,6 +33,7 @@ import {
   Boxes,
   Wrench,
   Layers,
+  Link2,
   Megaphone,
   Headphones,
   Bot,
@@ -47,6 +48,8 @@ import {
   ArrowRight,
   Camera,
   Brain,
+  RefreshCw,
+  Clock,
 } from "lucide-astro";
 
 interface Props {
@@ -105,6 +108,11 @@ const features = [
     label: "Payment Processing",
   },
   {
+    href: "/features/subscription-billing-software/",
+    icon: RefreshCw,
+    label: "Subscription Billing",
+  },
+  {
     href: "/features/e-contracts-software/",
     icon: FileSignature,
     label: "E-Contracts",
@@ -118,6 +126,11 @@ const features = [
     href: "/features/user-management-software/",
     icon: ShieldCheck,
     label: "User Management",
+  },
+  {
+    href: "/features/timesheet-management-software/",
+    icon: Clock,
+    label: "Timesheet",
   },
   {
     href: "/features/territory-management-software/",
@@ -163,6 +176,11 @@ const features = [
     href: "/features/reporting-software/",
     icon: BarChart3,
     label: "Reports and Analytics",
+  },
+  {
+    href: "/features/knockio-integrations/",
+    icon: Link2,
+    label: "Integrations",
   },
 ];
 
@@ -261,6 +279,12 @@ const resources = [
     href: "/roofing-canvassing-guide-2026/",
     icon: Home,
     label: "Roofing Canvassing Guide",
+  },
+  {
+    href: "https://knowledge.knockio.com/",
+    icon: BookOpen,
+    label: "Knowledge Base",
+    external: true,
   },
 ];
 ---
@@ -474,8 +498,13 @@ const resources = [
               </div>
               <div  class="grid grid-flow-col auto-cols-max gap-3">
                 {
-                  resources.map(({ href, icon: Icon, label }) => (
-                    <a href={href} class="kh-mega-link">
+                  resources.map(({ href, icon: Icon, label, external }) => (
+                    <a
+                      href={href}
+                      class="kh-mega-link"
+                      target={external ? "_blank" : undefined}
+                      rel={external ? "noopener noreferrer" : undefined}
+                    >
                       <span class="kh-mega-ic">
                         <Icon size={18} aria-hidden="true" />
                       </span>
@@ -746,8 +775,13 @@ const resources = [
         >
           <div class="kh-mobile-submenu-grid">
             {
-              resources.map(({ href, icon: Icon, label }) => (
-                <a href={href} class="kh-mobile-submenu-link">
+              resources.map(({ href, icon: Icon, label, external }) => (
+                <a
+                  href={href}
+                  class="kh-mobile-submenu-link"
+                  target={external ? "_blank" : undefined}
+                  rel={external ? "noopener noreferrer" : undefined}
+                >
                   <Icon size={16} aria-hidden="true" />
                   <span>{label}</span>
                 </a>

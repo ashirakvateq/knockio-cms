@@ -13,7 +13,7 @@ import {
   Quote,
 } from "lucide-astro";
 
-const title = "thank you - Knockio";
+const title = "Thank You | Knockio";
 const description =
   "We're excited to connect with you. Your meeting has been scheduled, and our team will meet you at the selected time.";
 const ogImage = "/assets/cfw/all-devices-view-knockio-1024x390.webp";
@@ -24,7 +24,7 @@ const jsonLd = [
     "@type": "WebPage",
     "@id": "https://knockio.com/thank-you/#webpage",
     url: "https://knockio.com/thank-you/",
-    name: "thank you - Knockio",
+    name: title,
     description,
     isPartOf: {
       "@id": "https://knockio.com/#website",
@@ -99,6 +99,7 @@ const reviewsRow2 = [
   description={description}
   ogImage={ogImage}
   jsonLd={jsonLd}
+  robots="noindex, nofollow"
   whiteBg={true}
 >
   <main class="ty-page overflow-hidden bg-white">

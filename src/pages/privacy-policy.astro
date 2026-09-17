@@ -1,44 +1,13 @@
 ---
 import KnockioHomeLayout from "../layouts/KnockioHomeLayout.astro";
 import "../styles/privacy-policy.css";
+import { getPageSchema } from "../data/schemas";
 
 const title = "Privacy Policy | Knockio";
 const description =
   "Read Knockio’s Privacy Policy to learn how we collect, use, protect, store, and share personal information across our website, app, and services.";
 
-const jsonLd = [
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://knockio.com/privacy-policy/#webpage",
-    url: "https://knockio.com/privacy-policy/",
-    name: "Privacy Policy | Knockio",
-    description:
-      "Read Knockio’s Privacy Policy to learn how we collect, use, protect, store, and share personal information across our website, app, and services.",
-    isPartOf: {
-      "@id": "https://knockio.com/#website",
-    },
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "@id": "https://knockio.com/privacy-policy/#breadcrumb",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://knockio.com/",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Privacy Policy",
-        item: "https://knockio.com/privacy-policy/",
-      },
-    ],
-  },
-];
+const jsonLd = getPageSchema("/privacy-policy/");
 ---
 
 <KnockioHomeLayout

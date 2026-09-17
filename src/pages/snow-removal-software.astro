@@ -1,6 +1,7 @@
 ---
 import KnockioHomeLayout from "../layouts/KnockioHomeLayout.astro";
 import "../styles/snow-removal-software.css";
+import { getPageSchema } from "../data/schemas";
 import {
   MapPin,
   CalendarCheck,
@@ -14,89 +15,7 @@ const description =
   "Simplify operations with the #1 snow removal software for scheduling, routing, and team management—all in one easy dashboard.";
 const ogImage = "/assets/cfw/industry-solar-new-image.webp";
 
-const jsonLd = [
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://knockio.com/snow-removal-software/#webpage",
-    url: "https://knockio.com/snow-removal-software/",
-    name: "The #1 Snow Removal Software For Business Management",
-    description:
-      "Simplify operations with the #1 snow removal software for scheduling, routing, and team management—all in one easy dashboard.",
-    isPartOf: {
-      "@id": "https://knockio.com/#website",
-    },
-    about: {
-      "@id": "https://knockio.com/#software",
-    },
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "@id": "https://knockio.com/snow-removal-software/#breadcrumb",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://knockio.com/",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Snow Removal Software with Service CRM",
-        item: "https://knockio.com/snow-removal-software/",
-      },
-    ],
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "@id": "https://knockio.com/snow-removal-software/#faq",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "What is snow removal software?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Snow removal software helps companies manage customers, estimates, routes, crews, invoices, payments, and field updates during winter service. Knockio also adds CRM, dispatching, service records, proof of service, automation, data management, and mobile field access.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How does snow removal software work?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Snow removal software works by keeping customer requests, property notes, estimates, schedules, routes, crew updates, invoices, and payments in one workflow. Knockio helps teams move work from first request to assigned crew, completed service, and final billing.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What features should snow removal software include?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Snow removal software requirements should include customer management, estimates, scheduling, dispatching, route zones, crew tracking, role management, service records, proof of service, invoices, payments, reports, automation, mobile access, support, and integrations.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How much does snow removal software cost?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Snow removal software cost depends on users, service areas, route size, dispatch needs, mobile access, reporting, integrations, setup, and support. Small businesses may start with CRM, scheduling, invoices, and field updates before adding advanced automation.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Is Knockio an alternative to Jobber, WorkWave, or Orderry?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Snow removal companies comparing Jobber, WorkWave, Orderry, or spreadsheets may choose Knockio when they need CRM, sales tools, crew dispatch, route planning, GPS tracking, estimates, invoices, payments, automation, and field service workflows in one platform.",
-        },
-      },
-    ],
-  },
-];
+const jsonLd = getPageSchema("/snow-removal-software/");
 
 const reviewsRow1 = [
   {

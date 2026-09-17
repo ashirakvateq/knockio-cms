@@ -30,6 +30,63 @@ requestAnimationFrame(raf);
   var TAB_DURATION = 5000;
   var MAP_ASSET_URL = "/assets/cfw/map-walnut-creek.webp";
 
+  var PANEL_SIDEBAR = {
+    leads: "leads",
+    routes: "routes",
+    boards: "boards",
+    invoices: "financials",
+    automations: "automations",
+  };
+
+  var NAV_TO_TAB = {
+    leads: "leads",
+    routes: "routes",
+    boards: "boards",
+    financials: "invoices",
+    automations: "automations",
+  };
+
+  var AVAILABLE_NAV = {
+    leads: true,
+    routes: true,
+    boards: true,
+    financials: true,
+    automations: true,
+  };
+
+  var I = function (name, cls) {
+    var P = {
+      house: '<path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>',
+      wallet: '<path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/>',
+      zap: '<path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/>',
+      globe: '<circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/>',
+      megaphone: '<path d="M11 6a13 13 0 0 0 8.4-2.8A1 1 0 0 1 21 4v12a1 1 0 0 1-1.6.8A13 13 0 0 0 11 14H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/><path d="M6 14a12 12 0 0 0 2.4 7.2 2 2 0 0 0 3.2-2.4A8 8 0 0 1 10 14"/><path d="M8 6v8"/>',
+      messagesSquare: '<path d="M16 10a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 14.286V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/><path d="M20 9a2 2 0 0 1 2 2v10.286a.71.71 0 0 1-1.212.502l-2.202-2.202A2 2 0 0 0 17.172 19H10a2 2 0 0 1-2-2v-1"/>',
+      funnel: '<path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"/>',
+      barChart3: '<path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/>',
+      columns3: '<rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/><path d="M15 3v18"/>',
+      calendarDays: '<path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/>',
+      compass: '<path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/><circle cx="12" cy="12" r="10"/>',
+      route: '<circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/>',
+      star: '<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/>',
+      headset: '<path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/><path d="M21 16v2a4 4 0 0 1-4 4h-5"/>',
+      chevronsLeft: '<path d="m11 17-5-5 5-5"/><path d="m18 17-5-5 5-5"/>',
+      chevronDown: '<path d="m6 9 6 6 6-6"/>',
+    };
+    var attrs =
+      'xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"';
+    return (
+      "<svg " +
+      attrs +
+      ' class="lucide lucide-' +
+      name +
+      (cls ? " " + cls : "") +
+      '">' +
+      (P[name] || "") +
+      "</svg>"
+    );
+  };
+
   function renderMapSvg(suffix) {
     var s = suffix || "a";
     return (
@@ -84,71 +141,91 @@ requestAnimationFrame(raf);
   }
 
   function renderSidebar(active) {
-    function item(key, iconCls, label, opts) {
+    function item(key, iconName, label, opts) {
       opts = opts || {};
       var isActive = key === active;
+      var isAvailable = !!AVAILABLE_NAV[key];
       var linkCls =
-        "group flex h-[42px] items-center gap-3 rounded-[10px] px-3 text-[14px] font-medium transition " +
-        (isActive ? "bg-primary-600 text-white" : "text-neutral-700 hover:bg-neutral-50");
-      var iconColorCls =
-        "w-[18px] shrink-0 text-center text-[15px] " +
-        (isActive ? "text-white" : "text-primary-600 group-hover:text-primary-700");
+        "group flex h-[42px] w-full items-center gap-3 rounded-[10px] px-3 text-left text-[14px] font-medium transition ";
+      var iconColorCls = "w-[18px] shrink-0 ";
       var badgeCls =
-        "shrink-0 rounded px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wide " +
-        (isActive ? "bg-white/20 text-white" : "bg-primary-50 text-primary-700");
-      var chevronCls =
-        "shrink-0 text-[10px] " + (isActive ? "text-neutral-200" : "text-neutral-400");
+        "shrink-0 rounded px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wide ";
+      var chevronCls = "shrink-0 ";
+      var disabledAttr = "";
+
+      if (isActive) {
+        linkCls += "bg-primary-600 text-white";
+        iconColorCls += "text-white";
+        badgeCls += "bg-white/20 text-white";
+        chevronCls += "text-neutral-200";
+      } else if (isAvailable) {
+        linkCls += "text-neutral-700 hover:bg-neutral-50";
+        iconColorCls += "text-primary-600 group-hover:text-primary-700";
+        badgeCls += "bg-primary-50 text-primary-700";
+        chevronCls += "text-neutral-400";
+      } else {
+        linkCls += "cursor-not-allowed text-neutral-400 opacity-50";
+        iconColorCls += "text-neutral-400";
+        badgeCls += "bg-neutral-100 text-neutral-400";
+        chevronCls += "text-neutral-300";
+        disabledAttr = ' disabled aria-disabled="true"';
+      }
+
       var trail = "";
       if (opts.badge) trail += '<span class="' + badgeCls + '">' + opts.badge + "</span>";
-      if (opts.chevron) trail += '<i class="fa-solid fa-chevron-down ' + chevronCls + (opts.badge ? " ml-1" : "") + '"></i>';
+      if (opts.chevron) trail += I("chevronDown", chevronCls + (opts.badge ? " ml-1" : ""));
       return (
-        '<button type="button" data-nav="' + key + '" class="' + linkCls + '">' +
-        '<i class="' + iconCls + " " + iconColorCls + '"></i>' +
-        '<span class="kio-nav-label min-w-0 flex-1 truncate">' + label + "</span>" +
+        '<button type="button" data-nav="' + key + '" class="' + linkCls + '"' + disabledAttr + ">" +
+        I(iconName, iconColorCls) +
+        '<span class="kio-nav-label min-w-0 flex-1 truncate text-left">' + label + "</span>" +
         (trail ? '<span class="ml-auto flex shrink-0 items-center gap-1">' + trail + "</span>" : "") +
         "</button>"
       );
     }
     return (
+      '<div class="flex h-full min-h-0 flex-col text-left">' +
       '<div class="flex h-[72px] shrink-0 items-center justify-between border-b border-solid border-neutral-200 bg-white px-5">' +
       '<img class="h-7 w-auto object-contain" src="/assets/cfw/knockio-logo.webp" alt="Knockio"/>' +
       '<button type="button" class="grid h-7 w-7 place-items-center rounded-lg text-neutral-400 transition hover:bg-neutral-100 hover:text-neutral-600" data-toast-message="Sidebar collapsed" aria-label="Collapse sidebar">' +
-      '<i class="fa-solid fa-angles-left text-[11px]"></i></button>' +
+      I("chevronsLeft", "text-[11px]") +
+      "</button>" +
       "</div>" +
       '<div class="flex-1 overflow-y-auto overflow-x-hidden px-4 py-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">' +
-      '<p class="mb-3 text-[11px] font-medium uppercase tracking-[0.12em] text-neutral-400">Main menu</p>' +
+      '<p class="mb-3 text-left text-[11px] font-medium uppercase tracking-[0.12em] text-neutral-400">Main menu</p>' +
       '<nav class="flex flex-col gap-0.5">' +
-      item("dashboard", "fa-solid fa-house", "Dashboard") +
-      item("financials", "fa-solid fa-wallet", "Financials", { chevron: true }) +
-      item("automations", "fa-solid fa-bolt", "Automations") +
-      item("territories", "fa-solid fa-earth-americas", "Territories") +
-      item("campaigns", "fa-solid fa-bullhorn", "Campaigns") +
-      item("communications", "fa-regular fa-comments", "Communications") +
-      item("leads", "fa-solid fa-filter", "Leads", { chevron: true }) +
-      item("reporting", "fa-regular fa-chart-bar", "Reporting") +
-      item("boards", "fa-solid fa-table-columns", "Boards") +
-      item("appointments", "fa-regular fa-calendar", "Appointments", { chevron: true }) +
-      item("tracking", "fa-regular fa-compass", "Tracking") +
-      item("routes", "fa-solid fa-route", "Routes") +
-      item("leaderboard", "fa-regular fa-star", "Leaderboard") +
+      item("dashboard", "house", "Dashboard") +
+      item("financials", "wallet", "Financials", { chevron: true }) +
+      item("automations", "zap", "Automations") +
+      item("territories", "globe", "Territories") +
+      item("campaigns", "megaphone", "Campaigns") +
+      item("communications", "messagesSquare", "Communications") +
+      item("leads", "funnel", "Leads", { chevron: true }) +
+      item("reporting", "barChart3", "Reporting") +
+      item("boards", "columns3", "Boards") +
+      item("appointments", "calendarDays", "Appointments", { chevron: true }) +
+      item("tracking", "compass", "Tracking") +
+      item("routes", "route", "Routes") +
+      item("leaderboard", "star", "Leaderboard") +
       "</nav>" +
       "</div>" +
       '<div class="shrink-0 border-t border-solid border-neutral-200 bg-white p-4">' +
-      '<button type="button" class="flex h-11 w-full items-center justify-center gap-2 rounded-xl bg-primary-600 text-sm font-medium text-white transition hover:bg-primary-700" data-toast-message="Support chat opened"><i class="fa-solid fa-headset"></i> Support</button>' +
+      '<button type="button" class="flex h-11 w-full items-center justify-center gap-2 rounded-xl bg-primary-600 text-sm font-medium text-white transition hover:bg-primary-700" data-toast-message="Support chat opened">' +
+      I("headset") +
+      " Support</button>" +
+      "</div>" +
       "</div>"
     );
   }
 
-  function mountSidebars(root, showToast) {
+  function mountSidebar(sidebarEl, activeKey) {
+    sidebarEl.setAttribute("data-sidebar-active", activeKey);
+    sidebarEl.innerHTML = renderSidebar(activeKey);
+  }
+
+  function syncAllSidebars(root, tabName) {
+    var activeKey = PANEL_SIDEBAR[tabName] || "leads";
     root.querySelectorAll("[data-kio-sidebar]").forEach(function (el) {
-      var active = el.getAttribute("data-sidebar-active") || "leads";
-      el.innerHTML = renderSidebar(active);
-      el.querySelectorAll("[data-nav]").forEach(function (link) {
-        link.addEventListener("click", function () {
-          var labelEl = link.querySelector(".kio-nav-label");
-          showToast("Opening " + (labelEl ? labelEl.textContent.trim() : link.textContent.trim()));
-        });
-      });
+      mountSidebar(el, activeKey);
     });
   }
 
@@ -188,7 +265,6 @@ requestAnimationFrame(raf);
       setTimeout(function () { toast.classList.remove("is-visible"); }, 1700);
     }
 
-    mountSidebars(root, showToast);
     mountMaps(root);
 
     function restartProgress() {
@@ -213,6 +289,7 @@ requestAnimationFrame(raf);
           el.classList.add("animate-kio-branch");
         });
       }
+      syncAllSidebars(root, target);
       restartProgress();
     }
 
@@ -245,6 +322,20 @@ requestAnimationFrame(raf);
     if (tabBar) tabBar.addEventListener("mouseenter", pauseDemo);
     if (appViewport) appViewport.addEventListener("mouseenter", pauseDemo);
     root.addEventListener("mouseleave", resumeDemo);
+
+    root.addEventListener("click", function (event) {
+      var navBtn = event.target.closest("[data-nav]:not([disabled])");
+      if (!navBtn || !root.contains(navBtn)) return;
+      var tabName = NAV_TO_TAB[navBtn.getAttribute("data-nav")];
+      if (!tabName) return;
+      var tabIndex = tabs.findIndex(function (tab) {
+        return tab.getAttribute("data-kio-tab") === tabName;
+      });
+      if (tabIndex >= 0) {
+        activateTab(tabIndex);
+        scheduleNextTab();
+      }
+    });
 
     root.querySelectorAll(".kio-pin[data-name]").forEach(function (pin) {
       pin.addEventListener("click", function () {
@@ -301,10 +392,11 @@ requestAnimationFrame(raf);
       });
     }
 
-    root.querySelectorAll("[data-toast-message]").forEach(function (button) {
-      button.addEventListener("click", function () {
-        showToast(button.getAttribute("data-toast-message"));
-      });
+    root.addEventListener("click", function (event) {
+      var toastBtn = event.target.closest("[data-toast-message]");
+      if (toastBtn && root.contains(toastBtn)) {
+        showToast(toastBtn.getAttribute("data-toast-message"));
+      }
     });
 
     root.querySelectorAll("[data-add-action]").forEach(function (button) {
