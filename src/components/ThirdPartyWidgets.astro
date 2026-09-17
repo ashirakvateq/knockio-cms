@@ -15,6 +15,8 @@ const TALKGENIE_SRC = "https://unpkg.com/talkgeniejs@latest/talkgeniejs.umd.js";
   >
     (function () {
       var talkgenieLoaded = false;
+      var shouldOpenTalkgenie =
+        new URLSearchParams(window.location.search).get("support") === "true";
 
       function loadTalkgenie() {
         if (talkgenieLoaded) return;
@@ -26,6 +28,17 @@ const TALKGENIE_SRC = "https://unpkg.com/talkgeniejs@latest/talkgeniejs.umd.js";
         s.src = TALKGENIE_SRC;
         s.type = "text/javascript";
         s.async = true;
+
+        if (shouldOpenTalkgenie) {
+          s.addEventListener(
+            "load",
+            function () {
+              window.Talkgenie.open();
+            },
+            { once: true },
+          );
+        }
+
         document.head.appendChild(s);
       }
 
@@ -55,6 +68,11 @@ const TALKGENIE_SRC = "https://unpkg.com/talkgeniejs@latest/talkgeniejs.umd.js";
       function arm() {
         if (isMobile && !consentSaved()) {
           armMobileConsentGate();
+          return;
+        }
+
+        if (shouldOpenTalkgenie) {
+          loadTalkgenie();
           return;
         }
 

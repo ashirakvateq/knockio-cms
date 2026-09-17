@@ -17,15 +17,14 @@
   color: #fff;
 }
 
-.canvassing-page h2,
-.canvassing-page h3,
+/* .canvassing-page h3,
 .canvassing-page h4,
 .canvassing-page h6 {
   font-family: var(--font-manrope);
   font-weight: 800;
   font-size: 3rem;
   padding: 0;
-}
+} */
 
 .hero-section {
   width: 75%;
@@ -717,6 +716,7 @@ h3.platform-fullstack-heading {
   .kio-plan-info.is-open .kio-plan-tooltip {
     transform: translateY(-50%);
   }
+
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1365,7 +1365,7 @@ h3.platform-fullstack-heading {
   }
 
   .section-heading {
-    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-size: clamp(1.5rem, 1.5vw, 1.25rem);;
     line-height: 1.22;
   }
 
@@ -1427,89 +1427,6 @@ h3.platform-fullstack-heading {
 
   .stat-blurb p br {
     display: none;
-  }
-}
-
-@media (max-width: 767px) {
-  .canvassing-hero {
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.9) 100%),
-      image-set(url("/assets/canvassing-app/home-hero-background.webp") type("image/webp"));
-  }
-
-  .hero-h1 {
-    font-size: clamp(1.5rem, 5vw, 2.25rem);
-    line-height: 1.22;
-  }
-
-  .trust-wrapper {
-    flex-wrap: wrap;
-  }
-
-  .section-heading {
-    line-height: 1.27;
-  }
-
-
-  .features-section .feature-card {
-    max-width: 100%;
-  }
-
-  .features-section .feature-img {
-    width: 90vw;
-    height: auto;
-  }
-
-  .testimonial-section {
-    padding: 0 0 1.875rem 0;
-  }
-
-  .testimonial-quote-wrap p {
-    font-size: 0.9375rem;
-  }
-
-  .platform-fullstack-heading,
-  .platform-fullstack-list,
-  .platform-section .my-container img {
-    display: none;
-  }
-
-  .platform-book-demo-btn {
-    margin-inline: auto;
-  }
-
-
-  .platform-fullstack-heading {
-    line-height: 1.78;
-  }
-
-  .platform-wrapper ul {
-    min-height: unset;
-  }
-
-  .platform-wrapper {
-    padding: 1.875rem 1.125rem;
-  }
-
-  .work-heading-row {
-    padding-bottom: 1.25rem;
-  }
-
-  .calender-wrapper {
-    flex-wrap: wrap;
-  }
-
-  .hero-logo {
-    margin-bottom: 0.5rem;
-  }
-
-  .hero-logo img {
-    width: 9.375rem;
-  }
-
-  .cal-shell {
-    min-height: 41.25rem;
-    border-radius: 1.125rem;
   }
 }
 
@@ -1582,22 +1499,6 @@ h3.platform-fullstack-heading {
   color: var(--color-ink-dark);
 }
 
-@media (min-width: 768px) {
-  .main-headline {
-    font-size: 4.5rem;
-  }
-}
-
-.headline-sub {
-  color: var(--color-ink-muted);
-  font-size: 2.25rem;
-}
-
-@media (min-width: 768px) {
-  .headline-sub {
-    font-size: 2.75rem;
-  }
-}
 
 .headline-accent {
   color: var(--color-rust);
@@ -1651,12 +1552,6 @@ h3.platform-fullstack-heading {
   gap: 48px;
 }
 
-@media (min-width: 768px) {
-  .steps-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 40px;
-  }
-}
 
 /* Steps / Typography Cards */
 .step-card {
@@ -1763,7 +1658,7 @@ h3.platform-fullstack-heading {
 
 /* ── masthead ───────────────────────────────────────────── */
 .kn-title {
-  font-size: 2.8rem !important;
+  font-size: clamp(2.8rem, 1.5vw, 1.25rem);
   font-weight: 800;
   line-height: 1.16;
   letter-spacing: -0.02em;
@@ -1958,5 +1853,122 @@ h3.kn-stage-name {
 
   .kn-lower {
     margin-top: 56px;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-headline {
+    font-size: 4.5rem;
+  }
+}
+
+.headline-sub {
+  color: var(--color-ink-muted);
+  font-size: 2.25rem;
+}
+
+@media (min-width: 768px) {
+  .headline-sub {
+    font-size: 2.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .steps-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .canvassing-hero {
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.9) 100%),
+      image-set(url("/assets/canvassing-app/home-hero-background.webp") type("image/webp"));
+  }
+
+  .hero-h1 {
+    font-size: clamp(1.5rem, 5vw, 2.25rem);
+    line-height: 1.22;
+  }
+
+  .trust-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .section-heading {
+    font-size: clamp(1.5rem, 1.5vw, 1.25rem);
+    line-height: 1.27;
+  }
+
+
+  .kn-title {
+    font-size: clamp(2rem, 1.5vw, 1.25rem);
+  }
+
+
+  .features-section .feature-card {
+    max-width: 100%;
+  }
+
+  .features-section .feature-img {
+    width: 90vw;
+    height: auto;
+  }
+
+  .testimonial-section {
+    padding: 0 0 1.875rem 0;
+  }
+
+  .testimonial-quote-wrap p {
+    font-size: 0.9375rem;
+  }
+
+  .platform-fullstack-heading,
+  .platform-fullstack-list,
+  .platform-section .my-container img {
+    display: none;
+  }
+
+  .platform-book-demo-btn {
+    margin-inline: auto;
+  }
+
+
+  .platform-fullstack-heading {
+    line-height: 1.78;
+  }
+
+  .platform-wrapper ul {
+    min-height: unset;
+  }
+
+  .platform-wrapper {
+    padding: 1.875rem 1.125rem;
+  }
+
+  .work-heading-row {
+    padding-bottom: 1.25rem;
+  }
+
+  .calender-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .hero-logo {
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-logo img {
+    width: 9.375rem;
+  }
+
+  .cal-shell {
+    min-height: 41.25rem;
+    border-radius: 1.125rem;
+  }
+
+  .stat-blurb h4 span {
+    font-size: 1.5rem;
   }
 }

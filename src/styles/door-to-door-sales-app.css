@@ -596,7 +596,7 @@
       }
 
       .ksp-page h2 {
-        font-size: 38px;
+        font-size: 1.8rem;
       }
 
       .ksp-page p {
@@ -635,12 +635,6 @@
         max-height: 665px;
       }
     }
-
-.ksp-body .calender-section {
-  padding-top: 48px;
-  padding-bottom: 48px;
-  text-align: center;
-}
 
 .ksp-body .calender-section .section-heading {
   display: block;
@@ -776,11 +770,6 @@
   .ksp-page .hero-section {
     width: 92%;
     max-width: 92%;
-  }
-
-  .ksp-body .calender-section {
-    padding-top: 32px;
-    padding-bottom: 32px;
   }
 
   .ksp-body .my-container {
