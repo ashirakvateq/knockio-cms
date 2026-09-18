@@ -490,7 +490,7 @@
     calNamespace: '30-minute', // Cal.com embed namespace
     calOrigin: 'https://cal.com',
     crmEndpoint:
-      'https://script.google.com/macros/s/AKfycbzxEoeko7Ie8i4pY_r5iTCUnrBTTPSOess9x6mZnQZSQPRnCpc32Yjh1ak1N179CuYy/exec',
+      'https://script.google.com/macros/s/AKfycbzUuE9qea7uf3KQdUIVPPYSqNT4jwt-FTfIG_sLJU8dCK04dSQmw467mZvpACdEPxE3aA/exec',
     checkoutLink: 'https://knockio.com/signup', // TODO: your self-serve signup / checkout URL
   };
 
